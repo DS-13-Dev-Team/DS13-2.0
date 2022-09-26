@@ -519,6 +519,8 @@ GLOBAL_LIST_EMPTY(station_turfs)
 
 /turf/proc/visibilityChanged()
 	GLOB.cameranet.updateVisibility(src)
+	for(var/obj/structure/marker/marker as anything in GLOB.necromorph_markers)
+		marker.markernet.updateVisibility(src)
 
 /turf/proc/burn_tile()
 	return

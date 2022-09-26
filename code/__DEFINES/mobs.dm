@@ -88,6 +88,8 @@
 #define BODYTYPE_VOX_OTHER (1<<9)
 ///The limb is small and feathery
 #define BODYTYPE_TESHARI (1<<10)
+///The limb fits necromorphs
+#define BODYTYPE_NECROMORPH (1<<11)
 
 //Defines for Species IDs
 #define SPECIES_ABDUCTOR "abductor"

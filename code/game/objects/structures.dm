@@ -21,9 +21,13 @@
 		if(smoothing_flags & SMOOTH_CORNERS)
 			icon_state = ""
 	GLOB.cameranet.updateVisibility(src)
+	for(var/obj/structure/marker/marker as anything in GLOB.necromorph_markers)
+		marker.markernet.updateVisibility(src)
 
 /obj/structure/Destroy()
 	GLOB.cameranet.updateVisibility(src)
+	for(var/obj/structure/marker/marker as anything in GLOB.necromorph_markers)
+		marker.markernet.updateVisibility(src)
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)
 	return ..()
