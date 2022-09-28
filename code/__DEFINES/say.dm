@@ -58,6 +58,8 @@
 
 #define MODE_CUSTOM_SAY_ERASE_INPUT "erase_input"
 
+#define MODE_NECROMORPH "necromorph_hive"
+
 //Spans. Robot speech, italics, etc. Applied in compose_message().
 #define SPAN_ROBOT "robot"
 #define SPAN_YELL "yell"

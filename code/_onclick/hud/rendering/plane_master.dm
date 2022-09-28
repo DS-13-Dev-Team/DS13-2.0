@@ -135,7 +135,6 @@
 	name = "darkness plane master"
 	plane = BLACKNESS_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	color = list(null, null, null, "#0000", "#000f")
 	blend_mode = BLEND_MULTIPLY
 	appearance_flags = PLANE_MASTER | NO_CLIENT_COLOR | PIXEL_SCALE
 	//byond internal end
@@ -199,6 +198,20 @@
 /atom/movable/screen/plane_master/parallax_white
 	name = "parallax whitifier plane master"
 	plane = PLANE_SPACE
+
+/atom/movable/screen/plane_master/pipecrawl
+	name = "pipecrawl plane master"
+	plane = PIPECRAWL_IMAGES_PLANE
+	appearance_flags = PLANE_MASTER
+	blend_mode = BLEND_OVERLAY
+
+/atom/movable/screen/plane_master/pipecrawl/Initialize(mapload)
+	. = ..()
+	// Makes everything on this plane slightly brighter
+	// Has a nice effect, makes thing stand out
+	color = list(1.2,0,0,0, 0,1.2,0,0, 0,0,1.2,0, 0,0,0,1, 0,0,0,0)
+	// This serves a similar purpose, I want the pipes to pop
+	add_filter("pipe_dropshadow", 1, drop_shadow_filter(x = -1, y= -1, size = 1, color = "#0000007A"))
 
 /atom/movable/screen/plane_master/camera_static
 	name = "camera static plane master"
