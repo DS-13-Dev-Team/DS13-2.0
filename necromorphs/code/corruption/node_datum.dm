@@ -154,5 +154,8 @@
 	if(QDELING(src))
 		return
 	var/parent_turf = get_turf(new_parent)
-	qdel(locate(/obj/structure/corruption) in parent_turf)
-	new /obj/structure/corruption/hardened(parent_turf, src)
+	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in parent_turf
+	if(!corrupt)
+		new /obj/structure/corruption(parent_turf, src)
+	else
+		corrupt.set_master(src)
