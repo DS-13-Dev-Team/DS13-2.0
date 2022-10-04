@@ -1,3 +1,6 @@
+#define GROWING 1
+#define DECAYING 2
+
 //TODO: Wait for Ketrai's sprites
 /obj/structure/corruption
 	name = ""
@@ -7,8 +10,8 @@
 	layer = BELOW_OPEN_DOOR_LAYER
 	//smoothing_flags = SMOOTH_BITMASK
 	anchored = TRUE
-	max_integrity = 25
-	integrity_failure = 5
+	max_integrity = 20
+	integrity_failure = 0.5
 	//Smallest alpha we can get in on_integrity_change()
 	alpha = 20
 	resistance_flags = UNACIDABLE
@@ -18,6 +21,8 @@
 	var/datum/corruption_node/master
 	/// The Marker we are part of. Mainly used by corruption to get marker net
 	var/obj/structure/marker/marker
+	/// If we are growing or decaying
+	var/state = null
 
 /obj/structure/corruption/Initialize(mapload, datum/corruption_node/new_master)
 	.=..()
@@ -27,7 +32,7 @@
 		stack_trace("multiple corruption spawned at ([loc.x], [loc.y], [loc.z])")
 		return INITIALIZE_HINT_QDEL
 
-	if(new_master)
+	if(!QDELETED(new_master))
 		set_master(new_master)
 	else
 		var/obj/structure/marker/marker = pick(GLOB.necromorph_markers)
@@ -39,7 +44,8 @@
 		if(!master)
 			return INITIALIZE_HINT_QDEL
 
-	SScorruption.growing += src
+	START_PROCESSING(SScorruption, src)
+	state = GROWING
 
 	atom_integrity = 3
 	SEND_SIGNAL(loc, COMSIG_TURF_NECRO_CORRUPTED, src)
@@ -53,9 +59,17 @@
 		master.remaining_weed_amount++
 		master.corruption -= src
 	master = null
-	SScorruption.growing -= src
-	SScorruption.decaying -= src
-	.=..()
+	STOP_PROCESSING(SScorruption, src)
+	return ..()
+
+/obj/structure/corruption/process(delta_time)
+	if(state == GROWING)
+		repair_damage(3*delta_time)
+	else if(state == DECAYING)
+		take_damage(3*delta_time)
+	else
+		. = PROCESS_KILL
+		CRASH("Corruption was processing while state was [isnull(state) ? "NULL" : state]")
 
 /obj/structure/corruption/proc/on_master_delete()
 	master.corruption -= src
@@ -65,18 +79,20 @@
 			set_master(node)
 			return
 	master = null
-	SScorruption.growing -= src
-	SScorruption.decaying += src
+	state = DECAYING
+	START_PROCESSING(SScorruption, src)
 
-/obj/structure/corruption/proc/on_integrity_change(datum/source, old_integrity, new_integrity)
+/obj/structure/corruption/proc/on_integrity_change(atom/source, old_integrity, new_integrity)
 	SIGNAL_HANDLER
 	if(master)
 		if(old_integrity >= max_integrity)
-			SScorruption.growing |= src
+			START_PROCESSING(SScorruption, src)
+			state = GROWING
 			for(var/direction in GLOB.cardinals)
 				master.remove_turf_to_spread(get_step(src, direction), direction)
 		else if(new_integrity >= max_integrity)
-			SScorruption.growing -= src
+			STOP_PROCESSING(SScorruption, src)
+			state = null
 			for(var/direction in GLOB.cardinals)
 				master.add_turf_to_spread(get_step(src, direction), direction)
 	alpha = clamp(255*new_integrity/max_integrity, 20, 215)
@@ -90,7 +106,8 @@
 	master = new_master
 	new_master.remaining_weed_amount--
 	new_master.corruption += src
-	SScorruption.decaying -= src
+	if(state == DECAYING)
+		state = GROWING
 	new_master.marker.markernet.addVisionSource(src, VISION_SOURCE_RANGE)
 
 /obj/structure/corruption/play_attack_sound(damage_amount, damage_type, damage_flag)
@@ -119,9 +136,5 @@
 /obj/structure/corruption/CanCorrupt(corruption_dir)
 	return TRUE
 
-/obj/structure/corruption/hardened
-	resistance_flags = UNACIDABLE|INDESTRUCTIBLE
-
-/obj/structure/corruption/hardened/on_master_delete()
-	..()
-	resistance_flags &= INDESTRUCTIBLE
+#undef GROWING
+#undef DECAYING

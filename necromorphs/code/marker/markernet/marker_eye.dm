@@ -18,12 +18,10 @@
 	var/list/visibleChunks
 	var/obj/structure/marker/marker
 	var/static_visibility_range = 16
-	var/atom/movable/screen/cameranet_static/cameranet_static
 
 /mob/camera/marker_signal/Initialize(mapload, obj/structure/marker/master)
 	visibleChunks = list()
 	abilities = list()
-	cameranet_static = new(null, src)
 	.=..()
 	if(master)
 		marker = master
@@ -43,6 +41,14 @@
 		else if((initial(ability.required_marker_status) & SIGNAL_ABILITY_POST_ACTIVATION) && marker.active)
 			ability.Grant(src)
 
+	for(var/datum/action/cooldown/necro/corruption/ability as anything in subtypesof(/datum/action/cooldown/necro/corruption))
+		ability = new ability(src)
+		abilities += ability
+		if((initial(ability.required_marker_status) & SIGNAL_ABILITY_PRE_ACTIVATION) && !marker.active)
+			ability.Grant(src)
+		else if((initial(ability.required_marker_status) & SIGNAL_ABILITY_POST_ACTIVATION) && marker.active)
+			ability.Grant(src)
+
 	START_PROCESSING(SSprocessing, src)
 
 /mob/camera/marker_signal/Destroy()
@@ -52,7 +58,6 @@
 	for(var/datum/markerchunk/chunk as anything in visibleChunks)
 		chunk.remove(src)
 	.=..()
-	QDEL_NULL(cameranet_static)
 
 /mob/camera/marker_signal/Login()
 	. = ..()
@@ -61,16 +66,6 @@
 	for(var/datum/markerchunk/chunk as anything in visibleChunks)
 		client.images += chunk.active_masks
 	marker.markernet.visibility(src)
-	var/view = client.view || world.view
-	cameranet_static.update_o(view)
-	cameranet_static.RegisterSignal(client, COMSIG_VIEW_SET, /atom/movable/screen/cameranet_static/proc/on_view_change)
-	client.screen += cameranet_static
-
-/mob/camera/marker_signal/Logout()
-	// Without if() this will runtime if you close dream seeker hosting the build
-	if(canon_client)
-		cameranet_static.UnregisterSignal(canon_client, COMSIG_VIEW_SET)
-	return ..()
 
 /mob/camera/marker_signal/process(delta_time)
 	change_psy_energy(psy_energy_generation)
@@ -157,10 +152,7 @@
 		var/datum/hud/marker/our_hud = hud_used
 		var/filter = our_hud.psy_energy.get_filter("alpha_filter")
 		animate(filter, x = clamp(PSYBAR_PIXEL_WIDTH*(psy_energy/psy_energy_maximum), 0, PSYBAR_PIXEL_WIDTH), time = 0.5 SECONDS)
-		var/psy_string = max(0, psy_energy)
-		if(round(psy_string, 1) == psy_string)
-			psy_string = "[psy_string].0"
-		our_hud.foreground.maptext = MAPTEXT("[psy_string]/[psy_energy_maximum] | +[psy_energy_generation] psy/seс")
+		our_hud.foreground.maptext = MAPTEXT("[round(max(0, psy_energy), 1)]/[psy_energy_maximum] | +[psy_energy_generation] psy/seс")
 
 /mob/camera/marker_signal/marker
 	name = "Marker"

@@ -1,6 +1,3 @@
-// Subsytems
-#define INIT_ORDER_CORRUPTION		27
-
 // Subsystems Fire
 #define FIRE_PRIORITY_CORRUPTION	34
 

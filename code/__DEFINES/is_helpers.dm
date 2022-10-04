@@ -163,6 +163,8 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 //Misc mobs
 #define isobserver(A) (istype(A, /mob/dead/observer))
 
+#define ismarkereye(A) (istype(A, /mob/camera/marker_signal))
+
 #define isdead(A) (istype(A, /mob/dead))
 
 #define isnewplayer(A) (istype(A, /mob/dead/new_player))

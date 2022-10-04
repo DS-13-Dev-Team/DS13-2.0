@@ -48,6 +48,11 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/cameranet_static)
 	add_overlay(new_overlays)
 	view_sized = view
 
+/mob/camera/marker_signal/reload_fullscreen()
+	if(..())
+		var/datum/hud/marker/our_hud = hud_used
+		our_hud.cameranet_static.update_o(client.view)
+
 /mob/camera/marker_signal/proc/update_static(turf/previous_turf)
 	var/turf/posobj = get_turf(client.eye)
 	if(!posobj)
@@ -63,6 +68,9 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/cameranet_static)
 
 	if(!offset_x && !offset_y && !force)
 		return
+
+	var/datum/hud/marker/our_hud = hud_used
+	var/atom/movable/screen/cameranet_static/cameranet_static = our_hud.cameranet_static
 
 	var/glide_rate = round(world.icon_size / glide_size * world.tick_lag, world.tick_lag)
 	var/largest_change = max(abs(offset_x), abs(offset_y))
