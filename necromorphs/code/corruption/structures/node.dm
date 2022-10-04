@@ -12,7 +12,7 @@
 	var/datum/corruption_node/node = new corruption_node_type(src)
 	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in loc
 	if(!corrupt)
-		corrupt = new (loc, node)
+		new /obj/structure/corruption(loc, node)
 	else
 		corrupt.set_master(node)
 

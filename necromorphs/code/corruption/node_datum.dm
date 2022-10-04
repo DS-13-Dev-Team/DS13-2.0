@@ -156,6 +156,6 @@
 	var/parent_turf = get_turf(new_parent)
 	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in parent_turf
 	if(!corrupt)
-		!new /obj/structure/corruption(parent_turf, src)
+		new /obj/structure/corruption(parent_turf, src)
 	else
 		corrupt.set_master(src)
