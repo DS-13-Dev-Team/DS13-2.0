@@ -1,9 +1,14 @@
 /datum/action/cooldown/necro/psy
-	name = "Generic psy abilities"
+	name = "Generic psy ability"
+	cooldown_time = 0.1 SECONDS
 	click_to_activate = TRUE
 	var/cost = 0
 	var/click_through_static = FALSE
 	var/required_marker_status = SIGNAL_ABILITY_PRE_ACTIVATION|SIGNAL_ABILITY_POST_ACTIVATION
+
+/datum/action/cooldown/necro/psy/New(Target, original, cooldown)
+	..()
+	name += " | Cost: [cost] psy"
 
 /// Intercepts client owner clicks to activate the ability
 /datum/action/cooldown/necro/psy/InterceptClickOn(mob/camera/marker_signal/caller, params, atom/target)
@@ -18,15 +23,12 @@
 	if(istype(target, /atom/movable/screen/cameranet_static))
 		if(!click_through_static)
 			return FALSE
-		// Find a turf below the location we clicked at
-		var/list/list_params = params2list(params)
-		var/list/view = getviewsize(caller.client.view)
-		var/list/screen_loc = splittext(list_params["screen-loc"], ",")
-		var/x = splittext(screen_loc[1], ":")
-		x = caller.x-round(view[1]*0.5, 1)+text2num(x[1])
-		var/y = splittext(screen_loc[2], ":")
-		y = caller.y-round(view[2]*0.5, 1)+text2num(y[1])
-		target = locate(x, y, caller.z)
+		var/list/modifiers = params2list(params)
+		var/new_target = parse_caught_click_modifiers(modifiers, get_turf(caller), caller.client)
+		params = list2params(modifiers)
+		if(!new_target)
+			return FALSE
+		target = new_target
 
 	// The actual action begins here
 	if(!PreActivate(target, caller))

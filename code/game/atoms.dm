@@ -2108,6 +2108,10 @@
 	if (isnull(user))
 		return
 
+	// Marker structures placement
+	if(user.mouse_move_intercept)
+		call(user.mouse_move_intercept, "mouse_movement_intercepted")(src)
+
 	// Screentips
 	var/datum/hud/active_hud = user.hud_used
 	if(active_hud)

@@ -55,6 +55,7 @@
 				client.screen |= screen
 			else
 				client.screen -= screen
+		return TRUE
 
 /atom/movable/screen/fullscreen
 	icon = 'icons/hud/screen_full.dmi'
