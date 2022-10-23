@@ -107,7 +107,7 @@
 	if(!length(turfs_to_spread))
 		STOP_PROCESSING(SScorruption, src)
 
-//One of the turs was replaced, check if we can spread
+//One of the turfs was replaced, check if we can spread
 /datum/corruption_node/proc/on_turf_changed(turf/source, flags)
 	SIGNAL_HANDLER
 	if(isgroundlessturf(source))
