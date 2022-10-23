@@ -2,10 +2,9 @@
 	create_bodyparts()
 	prepare_huds() //Prevents a nasty runtime on necro init
 	create_internal_organs()
-	ADD_TRAIT(src, TRAIT_IS_NECROMORPH, NECROMORPH_TRAIT)
 	.=..()
 
-	if(!marker_master)
+	if(!marker_master && length(GLOB.necromorph_markers))
 		marker_master = pick(GLOB.necromorph_markers)
 
 	generate_name()
@@ -24,6 +23,7 @@
 
 	create_dna()
 
+	//Should be replaced with hud as soon as possible
 	AddComponent(/datum/component/health_meter)
 	RegisterSignal(src, COMSIG_STARTED_CHARGE, .proc/start_charge)
 	RegisterSignal(src, COMSIG_FINISHED_CHARGE, .proc/end_charge)

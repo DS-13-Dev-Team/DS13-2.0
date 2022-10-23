@@ -148,4 +148,6 @@ DEFINE_BITFIELD(smoothing_flags, list(
 
 #define SMOOTH_GROUP_GAS_TANK S_OBJ(71)
 
-#define MAX_S_OBJ SMOOTH_GROUP_GAS_TANK //Always match this value with the one above it.
+#define SMOOTH_GROUP_NECROMORPHS S_OBJ(72) ///obj/structure/corruption
+
+#define MAX_S_OBJ SMOOTH_GROUP_NECROMORPHS //Always match this value with the one above it.

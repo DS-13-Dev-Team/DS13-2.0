@@ -16,8 +16,9 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	var/datum/markernet/markernet
 	var/list/marker_signals = list()
 	var/list/necromorphs = list()
-	var/invested_biomass
-	var/unavailable_biomass
+	var/biomass = 0
+	var/spent_biomass = 0
+	var/biomass_income = 0
 	var/list/datum/necro_class/necro_classes = list()
 	/// A list of all corruption nodes
 	var/list/nodes = list()
