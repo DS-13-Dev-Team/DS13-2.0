@@ -34,6 +34,13 @@
 	RegisterSignal(new_parent, COMSIG_PARENT_QDELETING, .proc/on_parent_delete)
 	RegisterSignal(new_parent, COMSIG_ATOM_BREAK, .proc/on_parent_break)
 
+	var/parent_turf = get_turf(new_parent)
+	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in parent_turf
+	if(!corrupt)
+		new /obj/structure/corruption(parent_turf, src)
+	else
+		corrupt.set_master(src)
+
 /datum/corruption_node/Destroy()
 	STOP_PROCESSING(SScorruption, src)
 	marker?.nodes -= src
@@ -148,17 +155,6 @@
 /datum/corruption_node/atom
 	remaining_weed_amount = 49
 	control_range = 7
-
-/datum/corruption_node/atom/New(atom/new_parent, obj/structure/marker/marker)
-	..()
-	if(QDELING(src))
-		return
-	var/parent_turf = get_turf(new_parent)
-	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in parent_turf
-	if(!corrupt)
-		new /obj/structure/corruption(parent_turf, src)
-	else
-		corrupt.set_master(src)
 
 /datum/corruption_node/atom/on_nearby_turf_uncorrupted(turf/source)
 	..()
