@@ -14,7 +14,7 @@
 	return ..() + 2
 
 /mob/living/carbon/necromorph/get_ear_protection()
-	return 2 //no ears
+	return INFINITY
 
 /mob/living/carbon/necromorph/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
 	skipcatch = TRUE

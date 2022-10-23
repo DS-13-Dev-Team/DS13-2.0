@@ -1,3 +1,4 @@
+GLOBAL_LIST_EMPTY(markers_signals)
 /mob/camera/marker_signal
 	name = "Signal"
 	icon_state = "markersignal-"
@@ -27,6 +28,7 @@
 		marker = master
 	else
 		return INITIALIZE_HINT_QDEL
+	GLOB.markers_signals += src
 	AddElement(/datum/element/movetype_handler)
 	icon_state += "[rand(1, 25)]"
 	master.marker_signals += src
@@ -52,6 +54,7 @@
 	START_PROCESSING(SSprocessing, src)
 
 /mob/camera/marker_signal/Destroy()
+	GLOB.markers_signals -= src
 	marker.markernet.eyes -= src
 	marker.marker_signals -= src
 	marker = null
