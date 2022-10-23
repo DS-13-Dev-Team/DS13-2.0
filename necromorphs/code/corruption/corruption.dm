@@ -68,7 +68,7 @@
 		take_damage(3*delta_time)
 	else
 		. = PROCESS_KILL
-		CRASH("Corruption was processing while state was [isnull(state) ? "NULL" : state]")
+		CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
 
 /obj/structure/corruption/proc/on_master_delete()
 	master.corruption -= src
