@@ -24,10 +24,9 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	visibleChunks = list()
 	abilities = list()
 	.=..()
-	if(master)
-		marker = master
-	else
+	if(!master)
 		return INITIALIZE_HINT_QDEL
+	marker = master
 	GLOB.markers_signals += src
 	AddElement(/datum/element/movetype_handler)
 	icon_state += "[rand(1, 25)]"
@@ -55,12 +54,13 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 /mob/camera/marker_signal/Destroy()
 	GLOB.markers_signals -= src
-	marker.markernet.eyes -= src
-	marker.marker_signals -= src
-	marker = null
+	if(marker)
+		marker.markernet.eyes -= src
+		marker.marker_signals -= src
+		marker = null
 	for(var/datum/markerchunk/chunk as anything in visibleChunks)
 		chunk.remove(src)
-	.=..()
+	return ..()
 
 /mob/camera/marker_signal/Login()
 	. = ..()
