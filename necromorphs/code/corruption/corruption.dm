@@ -32,11 +32,9 @@
 	for(var/obj/structure/corruption/corruption in loc)
 		if(corruption == src)
 			continue
-		stack_trace("multiple corruption spawned at ([loc.x], [loc.y], [loc.z])")
 		return INITIALIZE_HINT_QDEL
 
 	if(!new_master)
-		stack_trace("spawned corruption without master")
 		return INITIALIZE_HINT_QDEL
 
 	set_master(new_master)

@@ -16,6 +16,8 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/cameranet_static)
 
 /atom/movable/screen/cameranet_static/Initialize(mapload, mob/owner)
 	. = ..()
+	if(!owner)
+		return INITIALIZE_HINT_QDEL
 	if(owner.client)
 		var/view = owner.client.view || world.view
 		update_o(view)
