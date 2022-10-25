@@ -1,3 +1,4 @@
+GLOBAL_LIST_EMPTY(markers_signals)
 /mob/camera/marker_signal
 	name = "Signal"
 	icon_state = "markersignal-"
@@ -23,10 +24,10 @@
 	visibleChunks = list()
 	abilities = list()
 	.=..()
-	if(master)
-		marker = master
-	else
+	if(!master)
 		return INITIALIZE_HINT_QDEL
+	marker = master
+	GLOB.markers_signals += src
 	AddElement(/datum/element/movetype_handler)
 	icon_state += "[rand(1, 25)]"
 	master.marker_signals += src
@@ -52,12 +53,14 @@
 	START_PROCESSING(SSprocessing, src)
 
 /mob/camera/marker_signal/Destroy()
-	marker.markernet.eyes -= src
-	marker.marker_signals -= src
-	marker = null
+	GLOB.markers_signals -= src
+	if(marker)
+		marker.markernet.eyes -= src
+		marker.marker_signals -= src
+		marker = null
 	for(var/datum/markerchunk/chunk as anything in visibleChunks)
 		chunk.remove(src)
-	.=..()
+	return ..()
 
 /mob/camera/marker_signal/Login()
 	. = ..()

@@ -9,6 +9,10 @@
 
 /obj/structure/marker/Destroy()
 	GLOB.necromorph_markers -= src
+	for(var/mob/camera/marker_signal/signal as anything in marker_signals)
+		signal.show_message(span_userdanger("You feel like your connection with the Marker breaks!"))
+		qdel(signal)
+	marker_signals = null
 	QDEL_NULL(markernet)
 	.=..()
 
@@ -47,7 +51,7 @@
 				ability.Remove(eye)
 			if((ability.required_marker_status & SIGNAL_ABILITY_POST_ACTIVATION))
 				ability.Grant(eye)
-	new /datum/corruption_node/marker(src)
+	new /datum/corruption_node/atom/marker(src, src)
 
 /obj/structure/marker/CanCorrupt(corruption_dir)
 	return TRUE

@@ -5,10 +5,13 @@
 /obj/structure/corruption
 	name = ""
 	desc = "There is something scary in it."
-	icon = 'necromorphs/icons/effects/corruption.dmi'
+	icon = 'necromorphs/icons/effects/new_corruption.dmi'
 	icon_state = "corruption-1"
+	base_icon_state = "corruption"
 	layer = BELOW_OPEN_DOOR_LAYER
-	//smoothing_flags = SMOOTH_BITMASK
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_NECROMORPHS)
+	canSmoothWith = list(SMOOTH_GROUP_WALLS, SMOOTH_GROUP_NECROMORPHS)
 	anchored = TRUE
 	max_integrity = 20
 	integrity_failure = 0.5
@@ -29,20 +32,12 @@
 	for(var/obj/structure/corruption/corruption in loc)
 		if(corruption == src)
 			continue
-		stack_trace("multiple corruption spawned at ([loc.x], [loc.y], [loc.z])")
 		return INITIALIZE_HINT_QDEL
 
-	if(!QDELETED(new_master))
-		set_master(new_master)
-	else
-		var/obj/structure/marker/marker = pick(GLOB.necromorph_markers)
-		//Search for a node if we don't have any
-		for(var/datum/corruption_node/node as anything in marker.nodes)
-			if(node.remaining_weed_amount > 0 && IN_GIVEN_RANGE(src, node.parent, node.control_range))
-				set_master(node)
-				break
-		if(!master)
-			return INITIALIZE_HINT_QDEL
+	if(!new_master)
+		return INITIALIZE_HINT_QDEL
+
+	set_master(new_master)
 
 	START_PROCESSING(SScorruption, src)
 	state = GROWING
@@ -54,8 +49,10 @@
 	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, .proc/on_integrity_change)
 
 /obj/structure/corruption/Destroy()
-	SEND_SIGNAL(loc, COMSIG_TURF_NECRO_UNCORRUPTED, src)
 	if(master)
+		for(var/direction in GLOB.cardinals)
+			master.remove_turf_to_spread(get_step(src, direction), direction)
+		SEND_SIGNAL(loc, COMSIG_TURF_NECRO_UNCORRUPTED, src)
 		master.remaining_weed_amount++
 		master.corruption -= src
 	master = null
@@ -69,7 +66,7 @@
 		take_damage(3*delta_time)
 	else
 		. = PROCESS_KILL
-		CRASH("Corruption was processing while state was [isnull(state) ? "NULL" : state]")
+		CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
 
 /obj/structure/corruption/proc/on_master_delete()
 	master.corruption -= src

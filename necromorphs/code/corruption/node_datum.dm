@@ -34,6 +34,13 @@
 	RegisterSignal(new_parent, COMSIG_PARENT_QDELETING, .proc/on_parent_delete)
 	RegisterSignal(new_parent, COMSIG_ATOM_BREAK, .proc/on_parent_break)
 
+	var/parent_turf = get_turf(new_parent)
+	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in parent_turf
+	if(!corrupt)
+		new /obj/structure/corruption(parent_turf, src)
+	else
+		corrupt.set_master(src)
+
 /datum/corruption_node/Destroy()
 	STOP_PROCESSING(SScorruption, src)
 	marker?.nodes -= src
@@ -80,7 +87,7 @@
 	if(!(locate(/obj/structure/corruption) in T))
 		RegisterSignal(T, COMSIG_TURF_NECRO_CORRUPTED, .proc/on_nearby_turf_corrupted)
 		RegisterSignal(T, COMSIG_TURF_CHANGED, .proc/on_turf_changed)
-		if(isspaceturf(T) || istype(T, /turf/open/openspace))
+		if(isgroundlessturf(T))
 			return
 		RegisterSignal(T, COMSIG_ATOM_SET_DENSITY, .proc/on_turf_set_density)
 		if(!T.density)
@@ -100,10 +107,10 @@
 	if(!length(turfs_to_spread))
 		STOP_PROCESSING(SScorruption, src)
 
-//One of the turs was replaced, check if we can spread
+//One of the turfs was replaced, check if we can spread
 /datum/corruption_node/proc/on_turf_changed(turf/source, flags)
 	SIGNAL_HANDLER
-	if(isspaceturf(source) || !istype(source, /turf/open/openspace))
+	if(isgroundlessturf(source))
 		UnregisterSignal(source, COMSIG_ATOM_SET_DENSITY)
 		turfs_to_spread -= source
 		return
@@ -137,7 +144,7 @@
 	UnregisterSignal(source, COMSIG_TURF_NECRO_UNCORRUPTED)
 	RegisterSignal(source, COMSIG_TURF_NECRO_CORRUPTED, .proc/on_nearby_turf_corrupted)
 	RegisterSignal(source, COMSIG_TURF_CHANGED, .proc/on_turf_changed)
-	if(isspaceturf(source) || istype(source, /turf/open/openspace))
+	if(isgroundlessturf(source))
 		return
 	RegisterSignal(source, COMSIG_ATOM_SET_DENSITY, .proc/on_turf_set_density)
 	if(!source.density)
@@ -145,17 +152,22 @@
 		START_PROCESSING(SScorruption, src)
 
 /* SUBTYPES */
-/datum/corruption_node/marker
+/datum/corruption_node/atom
 	remaining_weed_amount = 49
 	control_range = 7
 
-/datum/corruption_node/marker/New(atom/new_parent)
+/datum/corruption_node/atom/on_nearby_turf_uncorrupted(turf/source)
 	..()
-	if(QDELING(src))
-		return
-	var/parent_turf = get_turf(new_parent)
-	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in parent_turf
-	if(!corrupt)
-		new /obj/structure/corruption(parent_turf, src)
-	else
+	if(!length(turfs_to_watch))
+		addtimer(CALLBACK(src, .proc/spawn_new_corruption), 5 MINUTES, TIMER_OVERRIDE)
+
+/datum/corruption_node/atom/proc/spawn_new_corruption()
+	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in get_turf(parent)
+	if(corrupt)
 		corrupt.set_master(src)
+	else
+		new /obj/structure/corruption(get_turf(parent), src)
+
+/datum/corruption_node/atom/marker
+	remaining_weed_amount = 49
+	control_range = 7
