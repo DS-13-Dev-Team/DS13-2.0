@@ -9,6 +9,8 @@
 
 /obj/structure/necromorph/node/Initialize(mapload, obj/structure/marker/marker)
 	.=..()
+	if(!marker)
+		return INITIALIZE_HINT_QDEL
 	var/datum/corruption_node/node = new corruption_node_type(src, marker)
 	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in loc
 	if(!corrupt)
