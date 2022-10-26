@@ -15,14 +15,20 @@
 	/// If we are growing or decaying
 	var/state = null
 
-/obj/structure/necromorph/Initialize(mapload)
+/obj/structure/necromorph/Initialize(mapload, obj/structure/corruption/new_master)
 	..()
+	if(!new_master)
+		return INITIALIZE_HINT_QDEL
 	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, .proc/on_integrity_change)
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/structure/necromorph/LateInitialize()
 	..()
 	update_signals(null, loc)
+
+/obj/structure/necromorph/Destroy()
+	master = null
+	return ..()
 
 /obj/structure/necromorph/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change)
 	..()
@@ -96,3 +102,38 @@
 
 #undef GROWING
 #undef DECAYING
+
+/client/proc/spawn_corruption_structure()
+	set category = "Debug"
+	set desc = "Spawn corruption structure"
+	set name = "Spawn Corruption Structure"
+
+	if(!check_rights(R_SPAWN))
+		return
+
+	if(!length(GLOB.necromorph_markers))
+		to_chat(mob, span_warning("There are no markers present!"))
+		return
+
+	var/list/list_to_pick = list()
+	for(var/obj/structure/necromorph/struct as anything in subtypesof(/obj/structure/necromorph))
+		list_to_pick[initial(struct.name)] = struct
+
+	var/type_to_spawn = list_to_pick[tgui_input_list(usr, "Pick a structure to spawn", "Spawning", list_to_pick)]
+	if(!type_to_spawn)
+		return
+
+	if(!length(GLOB.necromorph_markers))
+		to_chat(mob, span_warning("There are no markers present!"))
+		return
+
+	var/obj/structure/marker/marker = tgui_input_list(usr, "Pick a marker", "Marker", GLOB.necromorph_markers)
+
+	if(QDELETED(marker))
+		return
+
+	var/obj/structure/necromorph/necro = new type_to_spawn(get_turf(usr), marker)
+	necro.flags_1 |= ADMIN_SPAWNED_1
+
+	log_admin("[key_name(usr)] spawned [type_to_spawn] at [AREACOORD(usr)]")
+	SSblackbox.record_feedback("tally", "corruption_spawn", 1, "Spawn Corruption Structure") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

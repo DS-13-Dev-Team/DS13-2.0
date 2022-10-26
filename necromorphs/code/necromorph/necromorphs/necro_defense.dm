@@ -1,26 +1,26 @@
-/mob/living/carbon/necromorph/UnarmedAttack(atom/attack_target, proximity_flag, list/modifiers)
+/mob/living/carbon/human/necromorph/UnarmedAttack(atom/attack_target, proximity_flag, list/modifiers)
 	if(SEND_SIGNAL(src, COMSIG_LIVING_UNARMED_ATTACK, attack_target, proximity_flag, modifiers) & COMPONENT_CANCEL_ATTACK_CHAIN)
 		return
 	attack_target.attack_necromorph(src, modifiers)
 
-/atom/proc/attack_necromorph(mob/living/carbon/necromorph/user, list/modifiers, dealt_damage)
+/atom/proc/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(!uses_integrity || (!user.melee_damage_upper && !dealt_damage)) //No damage
 		return FALSE
 	dealt_damage = dealt_damage ? dealt_damage : rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)
 	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
 
-/mob/living/carbon/necromorph/get_eye_protection()
+/mob/living/carbon/human/necromorph/get_eye_protection()
 	return ..() + 2
 
-/mob/living/carbon/necromorph/get_ear_protection()
+/mob/living/carbon/human/necromorph/get_ear_protection()
 	return INFINITY
 
-/mob/living/carbon/necromorph/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
+/mob/living/carbon/human/necromorph/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
 	skipcatch = TRUE
 	.=..()
 
-/mob/living/attack_necromorph(mob/living/carbon/necromorph/user, list/modifiers, dealt_damage)
+/mob/living/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	dealt_damage = dealt_damage ? dealt_damage : rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)
 	playsound(loc, 'sound/weapons/slash.ogg', 50, TRUE, -1)
@@ -31,7 +31,7 @@
 	log_combat(user, src, "attacked")
 	updatehealth()
 
-/mob/living/carbon/human/attack_necromorph(mob/living/carbon/necromorph/user, list/modifiers, dealt_damage)
+/mob/living/carbon/human/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(check_shields(user, 0, "the [user.name]"))
 		visible_message(span_danger("[user] attempts to touch [src]!"), \
 						span_danger("[user] attempts to touch you!"), span_hear("You hear a swoosh!"), null, user)
@@ -63,7 +63,7 @@
 		return TRUE
 	apply_damage(damage, BRUTE, affecting, armor_block)
 
-/mob/living/carbon/necromorph/attack_hand(mob/living/carbon/human/user, list/modifiers)
+/mob/living/carbon/human/necromorph/attack_hand(mob/living/carbon/human/user, list/modifiers)
 	.=..()
 	if(.) //to allow surgery to return properly.
 		return FALSE
@@ -81,13 +81,13 @@
 	else
 		help_shake_act(user)
 
-/mob/living/carbon/necromorph/attack_paw(mob/living/carbon/human/user, list/modifiers)
+/mob/living/carbon/human/necromorph/attack_paw(mob/living/carbon/human/user, list/modifiers)
 	if(..())
 		if (stat != DEAD)
 			var/obj/item/bodypart/affecting = get_bodypart(ran_zone(user.zone_selected))
 			apply_damage(rand(1, 3), BRUTE, affecting)
 
-/mob/living/carbon/necromorph/attack_animal(mob/living/simple_animal/user, list/modifiers)
+/mob/living/carbon/human/necromorph/attack_animal(mob/living/simple_animal/user, list/modifiers)
 	.=..()
 	if(.)
 		var/damage = rand(user.melee_damage_lower, user.melee_damage_upper)
@@ -105,7 +105,7 @@
 			if(STAMINA)
 				adjustStaminaLoss(damage)
 
-/mob/living/carbon/necromorph/ex_act(severity, target, origin)
+/mob/living/carbon/human/necromorph/ex_act(severity, target, origin)
 	. = ..()
 	if (!severity || QDELETED(src))
 		return
@@ -183,17 +183,17 @@
 				if(!max_limb_loss)
 					break
 
-/mob/living/carbon/necromorph/getToxLoss()
+/mob/living/carbon/human/necromorph/getToxLoss()
 	return FALSE
 
-/mob/living/carbon/necromorph/adjustToxLoss(amount, updating_health = TRUE, forced = FALSE)
+/mob/living/carbon/human/necromorph/adjustToxLoss(amount, updating_health = TRUE, forced = FALSE)
 	return FALSE
 
-/mob/living/carbon/necromorph/adjustStaminaLoss(amount, updating_health = 1, forced = FALSE)
+/mob/living/carbon/human/necromorph/adjustStaminaLoss(amount, updating_health = 1, forced = FALSE)
 	return FALSE
 
-/mob/living/carbon/necromorph/setStaminaLoss(amount, updating_health = 1)
+/mob/living/carbon/human/necromorph/setStaminaLoss(amount, updating_health = 1)
 	return FALSE
 
-/mob/living/carbon/necromorph/soundbang_act(intensity = 1, stun_pwr = 20, damage_pwr = 5, deafen_pwr = 15)
+/mob/living/carbon/human/necromorph/soundbang_act(intensity = 1, stun_pwr = 20, damage_pwr = 5, deafen_pwr = 15)
 	return 0

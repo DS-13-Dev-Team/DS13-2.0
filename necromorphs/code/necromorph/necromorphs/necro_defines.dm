@@ -1,8 +1,7 @@
-/mob/living/carbon/necromorph
+/mob/living/carbon/human/necromorph
 	name = "Necromorph"
 	desc = "What the hell is THAT?"
 	icon = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	sight = 0
 	verb_say = "roars"
 	verb_ask = "roars"
 	verb_exclaim = "roars"
@@ -19,21 +18,11 @@
 	see_in_dark = 8
 	appearance_flags = KEEP_TOGETHER|TILE_BOUND|PIXEL_SCALE|LONG_GLIDE
 	hud_type = /datum/hud/necromorph
-	hud_possible = list(HEALTH_HUD,STATUS_HUD,ANTAG_HUD,GLAND_HUD)
 	faction = list(FACTION_NECROMORPH)
 	initial_language_holder = /datum/language_holder/necro_talk
-	light_system = MOVABLE_LIGHT
 	type_of_meat = /obj/item/food/meat/slab/human/mutant/necro
 	mob_biotypes = MOB_ORGANIC|MOB_UNDEAD|MOB_HUMANOID
 	mobility_flags = MOBILITY_MOVE|MOBILITY_STAND|MOBILITY_PULL|MOBILITY_REST|MOBILITY_LIEDOWN
-	bodyparts = list(
-		/obj/item/bodypart/chest/necromorph,
-		/obj/item/bodypart/head/necromorph,
-		/obj/item/bodypart/l_arm/necromorph,
-		/obj/item/bodypart/r_arm/necromorph,
-		/obj/item/bodypart/l_leg/necromorph,
-		/obj/item/bodypart/r_leg/necromorph,
-		)
 	base_pixel_x = -8
 	base_pixel_y = 0
 	pixel_x = -8
@@ -43,6 +32,8 @@
 	/// Necromorph class type we are using, shouldn't be a ref
 	/// Use marker?.necro_classes[class].your_var||initial(class.your_var) if you need to get a var
 	var/datum/necro_class/class = /datum/necro_class
+
+	var/necro_species = /datum/species/necromorph
 
 	var/obj/structure/marker/marker
 

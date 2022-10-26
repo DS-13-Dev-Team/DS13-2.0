@@ -13,7 +13,7 @@
 		return
 	//To ensure people won't spam
 	StartCooldown(1 SECONDS)
-	var/mob/living/carbon/necromorph/holder = owner
+	var/mob/living/carbon/human/necromorph/holder = owner
 
 	var/list/potential_turfs = RANGE_TURFS(1, holder)
 	potential_turfs -= get_turf(holder)

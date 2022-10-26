@@ -1,44 +1,32 @@
-/mob/living/carbon/necromorph/Initialize(mapload, obj/structure/marker/marker_master)
-	create_bodyparts()
-	prepare_huds() //Prevents a nasty runtime on necro init
-	create_internal_organs()
+/mob/living/carbon/human/necromorph/Initialize(mapload, obj/structure/marker/marker_master)
 	.=..()
 
-	if(!marker_master && length(GLOB.necromorph_markers))
-		marker_master = pick(GLOB.necromorph_markers)
+	if(!marker_master)
+		return INITIALIZE_HINT_QDEL
 
-	generate_name()
+	set_species(necro_species)
+	fully_replace_character_name(real_name, dna.species.random_name())
 
-	if(marker_master)
-		marker = marker_master
-		marker_master.add_necro(src)
-		var/datum/necro_class/temp = marker_master.necro_classes[class]
-		temp.load_data(src)
-		set_health(temp.max_health)
-	else
-		var/datum/necro_class/temp = new class()
-		temp.load_data(src)
-		set_health(temp.max_health)
-		QDEL_NULL(temp)
-
-	create_dna()
+	marker = marker_master
+	marker_master.add_necro(src)
+	var/datum/necro_class/temp = marker_master.necro_classes[class]
+	temp.load_data(src)
+	set_health(temp.max_health)
 
 	//Should be replaced with hud as soon as possible
 	AddComponent(/datum/component/health_meter)
 	RegisterSignal(src, COMSIG_STARTED_CHARGE, .proc/start_charge)
 	RegisterSignal(src, COMSIG_FINISHED_CHARGE, .proc/end_charge)
 
-/mob/living/carbon/necromorph/create_internal_organs()
-	internal_organs += new /obj/item/organ/eyes
-	internal_organs += new /obj/item/organ/ears
-	internal_organs += new /obj/item/organ/tongue
+/mob/living/carbon/human/necromorph/Destroy()
 	.=..()
+	marker?.remove_necro(src)
 
-/mob/living/carbon/necromorph/revive(full_heal = FALSE, admin_revive = FALSE, excess_healing = 0)
+/mob/living/carbon/human/necromorph/revive(full_heal = FALSE, admin_revive = FALSE, excess_healing = 0)
 	.=..()
 	marker?.add_necro(src)
 
-/mob/living/carbon/necromorph/update_stat()
+/mob/living/carbon/human/necromorph/update_stat()
 	. = ..()
 	if(.)
 		return
@@ -60,14 +48,22 @@
 	else if(stat == UNCONSCIOUS)
 		set_stat(CONSCIOUS)
 
-/mob/living/carbon/necromorph/set_stat(new_stat)
+/mob/living/carbon/human/necromorph/set_stat(new_stat)
 	.=..()
 	if(stat < UNCONSCIOUS)
 		see_in_dark = conscious_see_in_dark
 	else
 		see_in_dark = unconscious_see_in_dark
 
-/mob/living/carbon/necromorph/death()
+/mob/living/carbon/human/necromorph/update_sight()
+	. = ..()
+	if(stat < UNCONSCIOUS)
+		see_in_dark = conscious_see_in_dark
+	else if (stat < HARD_CRIT)
+		see_in_dark = unconscious_see_in_dark
+	//Otherwise we are dead and see_in_dark was handled in parent call
+
+/mob/living/carbon/human/necromorph/death()
 	if(stat == DEAD)
 		return
 
@@ -75,16 +71,11 @@
 
 	marker?.remove_necro(src)
 
-/mob/living/carbon/necromorph/Destroy()
-	.=..()
-	marker?.remove_necro(src)
-	UnregisterSignal(src, COMSIG_MOVABLE_MOVED)
-
 // VENTCRAWLING
 // Handles the entrance and exit on ventcrawling
 // Copy paste of the /mob/living/proc/handle_ventcrawl()
 // I've changed do_after() time and remove var/required_nudity
-/mob/living/carbon/necromorph/handle_ventcrawl(obj/machinery/atmospherics/components/ventcrawl_target)
+/mob/living/carbon/human/necromorph/handle_ventcrawl(obj/machinery/atmospherics/components/ventcrawl_target)
 	// Cache the vent_movement bitflag var from atmos machineries
 	var/vent_movement = ventcrawl_target.vent_movement
 
@@ -141,7 +132,7 @@
 				to_chat(src, span_warning("This ventilation duct is not connected to anything!"))
 
 //Called when we bump onto a mob
-/mob/living/carbon/necromorph/PushAM(atom/movable/AM, force = move_force)
+/mob/living/carbon/human/necromorph/PushAM(atom/movable/AM, force = move_force)
 	if(now_pushing)
 		return TRUE
 	if(moving_diagonally)// no pushing during diagonal moves.
@@ -199,11 +190,11 @@
 		AM.setDir(current_dir)
 	now_pushing = FALSE
 
-/mob/living/carbon/necromorph/create_dna()
+/mob/living/carbon/human/necromorph/create_dna()
 	dna = new /datum/dna(src)
 	dna.species = new /datum/species/necromorph
 
-/mob/living/carbon/necromorph/update_stat()
+/mob/living/carbon/human/necromorph/update_stat()
 	if(status_flags & GODMODE)
 		return
 	if(stat != DEAD)

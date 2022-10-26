@@ -5,7 +5,7 @@
 /datum/hud/necromorph
 	ui_style = 'icons/hud/screen_midnight.dmi'
 
-/datum/hud/necromorph/New(mob/living/carbon/necromorph/owner)
+/datum/hud/necromorph/New(mob/living/carbon/human/necromorph/owner)
 	..()
 
 	var/atom/movable/screen/using
@@ -94,7 +94,7 @@
 /datum/hud/necromorph/persistent_inventory_update()
 	if(!mymob)
 		return
-	var/mob/living/carbon/necromorph/H = mymob
+	var/mob/living/carbon/human/necromorph/H = mymob
 	if(hud_version != HUD_STYLE_NOHUD)
 		for(var/obj/item/I in H.held_items)
 			I.screen_loc = ui_hand_position(H.get_held_index_of_item(I))

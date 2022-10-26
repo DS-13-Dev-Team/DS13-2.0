@@ -13,7 +13,7 @@
 
 /datum/action/cooldown/necro/shout/Activate(atom/target)
 	StartCooldown()
-	var/mob/living/carbon/necromorph/holder = owner
+	var/mob/living/carbon/human/necromorph/holder = owner
 	holder.play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, TRUE, 2)
 	var/matrix/new_matrix = matrix(holder.transform)
 	var/shake_dir = pick(-1, 1)
@@ -42,7 +42,7 @@
 
 /datum/action/cooldown/necro/scream/Activate(atom/target)
 	StartCooldown()
-	var/mob/living/carbon/necromorph/holder = owner
+	var/mob/living/carbon/human/necromorph/holder = owner
 	holder.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_HIGH, TRUE, 2)
 	RegisterSignal(holder, COMSIG_MOVABLE_PRE_MOVE, .proc/on_move)
 	spawn(1)
@@ -60,5 +60,5 @@
 		var/duration = (7 - (distance * 0.5)) SECONDS
 		shake_camera(M, duration, intensity)
 
-/datum/action/cooldown/necro/scream/proc/on_move(mob/living/carbon/necromorph/holder)
+/datum/action/cooldown/necro/scream/proc/on_move(mob/living/carbon/human/necromorph/holder)
 	return COMPONENT_MOVABLE_BLOCK_PRE_MOVE
