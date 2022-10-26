@@ -4746,12 +4746,10 @@
 #include "necromorphs\code\necromorph\necromorphs\necromorph.dm"
 #include "necromorphs\code\necromorph\necromorphs\say.dm"
 #include "necromorphs\code\necromorph\necromorphs\species.dm"
-#include "necromorphs\code\necromorph\necromorphs\subtypes\brute.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\exploder.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\hunter.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\puker.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\slasher.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\spitter.dm"
-#include "necromorphs\code\necromorph\necromorphs\subtypes\twitcher.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\ubermorph.dm"
 // END_INCLUDE
