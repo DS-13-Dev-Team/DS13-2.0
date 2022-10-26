@@ -1,6 +1,6 @@
 /mob/living/carbon/human/necromorph/hunter
 	class = /datum/necro_class/hunter
-		necro_species = /datum/species/necromorph/hunter
+	necro_species = /datum/species/necromorph/hunter
 
 /mob/living/carbon/human/necromorph/hunter/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.hunter_sounds[audio_type]), volume, vary, extra_range)

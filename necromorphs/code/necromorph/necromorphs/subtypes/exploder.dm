@@ -1,6 +1,6 @@
 /mob/living/carbon/human/necromorph/exploder
 	class = /datum/necro_class/exploder
-		necro_species = /datum/species/necromorph/exploder
+	necro_species = /datum/species/necromorph/exploder
 
 /mob/living/carbon/human/necromorph/exploder/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.exploder_sounds[audio_type]), volume, vary, extra_range)
