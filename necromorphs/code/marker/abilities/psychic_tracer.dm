@@ -6,7 +6,7 @@
 /datum/action/cooldown/necro/psy/psychic_tracer/PreActivate(mob/living/target, mob/camera/marker_signal/caller)
 	if(!istype(target))
 		return FALSE
-	if(istype(target, /mob/living/carbon/necromorph))
+	if(istype(target, /mob/living/carbon/human/necromorph))
 		to_chat(caller, span_notice("You can't plant a psychic tracer onto a necromorph!"))
 		return FALSE
 	return ..()

@@ -79,7 +79,7 @@
 
 /datum/action/cooldown/necro/charge/proc/charge_end(datum/move_loop/source)
 	SIGNAL_HANDLER
-	var/mob/living/carbon/necromorph/charger = source.moving
+	var/mob/living/carbon/human/necromorph/charger = source.moving
 	UnregisterSignal(charger, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING))
 	SEND_SIGNAL(owner, COMSIG_FINISHED_CHARGE)
 	actively_moving = FALSE
@@ -114,7 +114,7 @@
 		hit_target(source, target)
 	SSmove_manager.stop_looping(source)
 
-/datum/action/cooldown/necro/charge/proc/hit_target(mob/living/carbon/necromorph/source, mob/living/target)
+/datum/action/cooldown/necro/charge/proc/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	target.attack_necromorph(source, dealt_damage = charge_damage)
 	if(isliving(target))
 		if(ishuman(target))
@@ -143,7 +143,7 @@
 	charge_time = 4 SECONDS
 
 /datum/action/cooldown/necro/charge/slasher/do_charge_indicator(atom/charge_target)
-	var/mob/living/carbon/necromorph/source = owner
+	var/mob/living/carbon/human/necromorph/source = owner
 	var/matrix/new_matrix = matrix(source.transform)
 	var/shake_dir = pick(-1, 1)
 	new_matrix.Turn(16*shake_dir)

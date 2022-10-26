@@ -114,7 +114,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	if(check_click_intercept(params, A))
 		return
 
-	if(istype(A, /mob/living/carbon/necromorph))
+	if(istype(A, /mob/living/carbon/human/necromorph))
 		possess_necromorph(A)
 		return
 
@@ -139,7 +139,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 	qdel(src)
 
-/mob/camera/marker_signal/verb/possess_necromorph(mob/living/carbon/necromorph/necro in world)
+/mob/camera/marker_signal/verb/possess_necromorph(mob/living/carbon/human/necromorph/necro in world)
 	set name = "Possess Necromorph"
 	set category = "Object"
 

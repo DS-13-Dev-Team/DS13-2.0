@@ -25,10 +25,10 @@
 	for(var/mob/camera/marker_signal/signal as anything in marker_signals)
 		signal.show_message(message)
 
-	for(var/mob/living/carbon/necromorph/necro as anything in necromorphs)
+	for(var/mob/living/carbon/human/necromorph/necro as anything in necromorphs)
 		necro.show_message(message)
 
-/obj/structure/marker/proc/add_necro(mob/living/carbon/necromorph/necro)
+/obj/structure/marker/proc/add_necro(mob/living/carbon/human/necromorph/necro)
 	// If the necro is part of another hivemind, they should be removed from that one first
 	if(necro.marker != src)
 		necro.marker.remove_necro(necro, TRUE)
@@ -36,7 +36,7 @@
 	necromorphs |= necro
 	markernet.addVisionSource(necro, VISION_SOURCE_VIEW, TRUE)
 
-/obj/structure/marker/proc/remove_necro(mob/living/carbon/necromorph/necro, hard=FALSE, light_mode = FALSE)
+/obj/structure/marker/proc/remove_necro(mob/living/carbon/human/necromorph/necro, hard=FALSE, light_mode = FALSE)
 	if(necro.marker != src)
 		return
 	markernet.removeVisionSource(necro)

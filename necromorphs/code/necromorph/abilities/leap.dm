@@ -82,7 +82,7 @@
 
 /datum/action/cooldown/necro/leap/proc/leap_end(datum/move_loop/source)
 	SIGNAL_HANDLER
-	var/mob/living/carbon/necromorph/leaper = source.moving
+	var/mob/living/carbon/human/necromorph/leaper = source.moving
 	REMOVE_TRAIT(src, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)
 
 	UnregisterSignal(leaper, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING))
@@ -119,7 +119,7 @@
 		hit_target(source, target)
 	SSmove_manager.stop_looping(source)
 
-/datum/action/cooldown/necro/leap/proc/hit_target(mob/living/carbon/necromorph/source, mob/living/target)
+/datum/action/cooldown/necro/leap/proc/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	target.attack_necromorph(source, dealt_damage = leap_damage)
 	if(isliving(target))
 		if(ishuman(target))

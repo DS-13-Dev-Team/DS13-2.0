@@ -1,7 +1,14 @@
+/mob/living/carbon/human/necromorph/puker
+	class = /datum/necro_class/puker
+	necro_species = /datum/species/necromorph/puker
+
+/mob/living/carbon/human/necromorph/puker/play_necro_sound(audio_type, volume, vary, extra_range)
+	playsound(src, pick(GLOB.puker_sounds[audio_type]), volume, vary, extra_range)
+
 /datum/necro_class/puker
 	display_name = "puker"
 	desc = "A tough and flexible elite who fights by dousing enemies in acid, and is effective at all ranges. Good for crowd control and direct firefights"
-	necromorph_type_path = /mob/living/carbon/necromorph/puker
+	necromorph_type_path = /mob/living/carbon/human/necromorph/puker
 	melee_damage_lower = 10
 	melee_damage_upper = 16
 	max_health = 100
@@ -9,16 +16,14 @@
 	)
 	minimap_icon = "puker"
 
-/mob/living/carbon/necromorph/puker
-	class = /datum/necro_class/puker
-	bodyparts = list(
-		/obj/item/bodypart/chest/necromorph/puker,
-		/obj/item/bodypart/head/necromorph/puker,
-		/obj/item/bodypart/l_arm/necromorph/puker,
-		/obj/item/bodypart/r_arm/necromorph/puker,
-		/obj/item/bodypart/l_leg/necromorph/puker,
-		/obj/item/bodypart/r_leg/necromorph/puker,
-		)
-
-/mob/living/carbon/necromorph/puker/play_necro_sound(audio_type, volume, vary, extra_range)
-	playsound(src, pick(GLOB.puker_sounds[audio_type]), volume, vary, extra_range)
+/datum/species/necromorph/puker
+	name = "Puker"
+	id = SPECIES_NECROMORPH_PUKER
+	bodypart_overrides = list(
+		BODY_ZONE_L_ARM = /obj/item/bodypart/l_arm/necromorph/puker,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/r_arm/necromorph/puker,
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/necromorph/puker,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/l_leg/necromorph/puker,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/necromorph/puker,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/puker,
+	)
