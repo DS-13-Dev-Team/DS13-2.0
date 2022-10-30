@@ -194,8 +194,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	verbs -= /mob/camera/marker_signal/verb/become_master
 
 /mob/camera/marker_signal/marker/Destroy()
-	marker.camera_mob = null
-	marker = null
+	marker?.camera_mob = null
 	return ..()
 
 /mob/camera/marker_signal/marker/verb/downgrade()
