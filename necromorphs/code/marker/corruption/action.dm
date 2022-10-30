@@ -1,4 +1,3 @@
-/datum/action/cooldown/necro/corruption/test
 /datum/action/cooldown/necro/corruption
 	name = "Generic corruption placement ability"
 	cooldown_time = 0.1 SECONDS
@@ -6,6 +5,7 @@
 	var/cost = 0
 	var/image/template
 	var/obj/structure/necromorph/place_structure = /obj/structure/necromorph
+	var/marker_only = FALSE
 	var/required_marker_status = SIGNAL_ABILITY_PRE_ACTIVATION|SIGNAL_ABILITY_POST_ACTIVATION
 
 /datum/action/cooldown/necro/corruption/New(Target, original, cooldown)
@@ -111,6 +111,8 @@
 	template.color = can_place(turf_loc) ? COLOR_GREEN : COLOR_RED
 
 /datum/action/cooldown/necro/corruption/proc/can_place(turf/turf_loc)
+	if(!turf_loc || turf_loc.density)
+		return
 	if(!(locate(/obj/structure/corruption) in turf_loc) || locate(/obj/structure/necromorph) in turf_loc)
 		return
 	//Remove this loop if it causes too much lag when hovering over a pile of items

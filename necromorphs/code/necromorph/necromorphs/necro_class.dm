@@ -1,8 +1,15 @@
 /datum/necro_class
 	var/display_name = ""
 	var/desc = ""
+	var/ui_icon
 
 	var/necromorph_type_path = null
+
+	///Biomass required to spawn this necromorph
+	var/biomass_cost = INFINITY
+
+	///Biomass required to unlock this necromorph
+	var/biomass_spent_required = INFINITY
 
 	// *** Melee Attacks *** //
 	///The amount of damage a necromorph will do with a 'slash' attack.

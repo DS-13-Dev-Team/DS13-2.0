@@ -10,15 +10,11 @@
 	max_integrity = 25
 	resistance_flags = UNACIDABLE
 	obj_flags = CAN_BE_HIT
-	/// Weed below this structure, if it's dying then we are dying as well
-	var/obj/structure/corruption/master
 	/// If we are growing or decaying
 	var/state = null
 
-/obj/structure/necromorph/Initialize(mapload, obj/structure/corruption/new_master)
+/obj/structure/necromorph/Initialize(mapload)
 	..()
-	if(!new_master)
-		return INITIALIZE_HINT_QDEL
 	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, .proc/on_integrity_change)
 	return INITIALIZE_HINT_LATELOAD
 
@@ -27,7 +23,6 @@
 	update_signals(null, loc)
 
 /obj/structure/necromorph/Destroy()
-	master = null
 	return ..()
 
 /obj/structure/necromorph/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change)
@@ -69,13 +64,12 @@
 
 /obj/structure/necromorph/proc/on_integrity_change(atom/source, old_integrity, new_integrity)
 	SIGNAL_HANDLER
-	if(master)
-		if((old_integrity >= new_integrity) && state != DECAYING)
-			state = GROWING
-			START_PROCESSING(SScorruption, src)
-		else if(new_integrity >= max_integrity)
-			state = null
-			STOP_PROCESSING(SScorruption, src)
+	if((old_integrity >= new_integrity) && state != DECAYING)
+		state = GROWING
+		START_PROCESSING(SScorruption, src)
+	else if(new_integrity >= max_integrity)
+		state = null
+		STOP_PROCESSING(SScorruption, src)
 
 /obj/structure/necromorph/play_attack_sound(damage_amount, damage_type, damage_flag)
 	switch(damage_type)

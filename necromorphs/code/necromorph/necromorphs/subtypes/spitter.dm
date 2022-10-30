@@ -6,8 +6,9 @@
 	playsound(src, pick(GLOB.spitter_sounds[audio_type]), volume, vary, extra_range)
 
 /datum/necro_class/spitter
-	display_name = "spitter"
+	display_name = "Spitter"
 	desc = "A midline skirmisher with the ability to spit acid at medium range. Works best when accompanied by slashers to protect it from attacks. Weak and fragile in direct combat."
+	ui_icon = 'necromorphs/icons/necromorphs/spitter.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/spitter
 	melee_damage_lower = 10
 	melee_damage_upper = 16

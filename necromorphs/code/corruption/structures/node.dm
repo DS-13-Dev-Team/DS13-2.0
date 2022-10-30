@@ -7,11 +7,11 @@
 	icon_state = "minigrowth"
 	var/corruption_node_type = /datum/corruption_node
 
-/obj/structure/necromorph/node/Initialize(mapload, obj/structure/marker/marker)
+/obj/structure/necromorph/node/Initialize(mapload, obj/structure/marker/new_master)
 	.=..()
-	if(!marker)
+	if(!new_master)
 		return INITIALIZE_HINT_QDEL
-	var/datum/corruption_node/node = new corruption_node_type(src, marker)
+	var/datum/corruption_node/node = new corruption_node_type(src, new_master)
 	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in loc
 	if(!corrupt)
 		new /obj/structure/corruption(loc, node)

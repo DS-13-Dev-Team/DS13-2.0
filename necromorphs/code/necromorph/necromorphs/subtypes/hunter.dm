@@ -6,9 +6,10 @@
 	playsound(src, pick(GLOB.hunter_sounds[audio_type]), volume, vary, extra_range)
 
 /datum/necro_class/hunter
-	display_name = "hunter"
-	desc = "A rapidly regenerating vanguard, designed to lead the charge, suffer a glorious death, then get back up and do it again.\
+	display_name = "Hunter"
+	desc = "A rapidly regenerating vanguard, designed to lead the charge, suffer a glorious death, then get back up and do it again. \
 	Avoid fire though."
+	ui_icon = 'necromorphs/icons/necromorphs/hunter.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/hunter
 	melee_damage_lower = 10
 	melee_damage_upper = 16
