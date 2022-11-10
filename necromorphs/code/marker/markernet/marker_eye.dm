@@ -329,12 +329,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		to_chat(src, span_warning("Nearby spawn location cant see this turf!"))
 
 /mob/camera/marker_signal/marker/proc/attach_necro_preview(datum/necro_class/class)
-	necro_preview = new /image{
-		layer = ABOVE_ALL_MOB_LAYER;
-		plane = ABOVE_LIGHTING_PLANE;
-		mouse_opacity = MOUSE_OPACITY_TRANSPARENT;
-		color = COLOR_BLUE_LIGHT;
-	}(class.ui_icon, null, "preview")
+	necro_preview = new /image/necromorph_subtype(class.ui_icon, null, "preview")
 	var/mob/living/carbon/human/necromorph/necro = class.necromorph_type_path
 	necro_preview.pixel_x = initial(necro.base_pixel_x)
 	necro_preview.pixel_y = initial(necro.base_pixel_y)

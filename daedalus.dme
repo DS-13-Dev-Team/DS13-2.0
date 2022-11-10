@@ -4706,6 +4706,7 @@
 #include "necromorphs\code\corruption\structures\propagator.dm"
 #include "necromorphs\code\corruption\structures\root.dm"
 #include "necromorphs\code\corruption\structures\snare.dm"
+#include "necromorphs\code\datums\images.dm"
 #include "necromorphs\code\datums\round_statics.dm"
 #include "necromorphs\code\game\atoms.dm"
 #include "necromorphs\code\game\mob.dm"

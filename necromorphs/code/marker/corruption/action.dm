@@ -10,11 +10,7 @@
 
 /datum/action/cooldown/necro/corruption/New(Target, original, cooldown)
 	..()
-	template = new /image{
-		layer = ABOVE_ALL_MOB_LAYER;
-		plane = ABOVE_LIGHTING_PLANE;
-		mouse_opacity = MOUSE_OPACITY_TRANSPARENT;
-	}(initial(place_structure.icon), null, initial(place_structure.icon_state))
+	template = new /image/necromorph_subtype(initial(place_structure.icon), null, initial(place_structure.icon_state))
 	template.layer = ABOVE_ALL_MOB_LAYER
 	template.plane = ABOVE_LIGHTING_PLANE
 	template.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
