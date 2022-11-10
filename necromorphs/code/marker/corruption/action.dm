@@ -10,7 +10,7 @@
 
 /datum/action/cooldown/necro/corruption/New(Target, original, cooldown)
 	..()
-	template = image{
+	template = new /image{
 		layer = ABOVE_ALL_MOB_LAYER;
 		plane = ABOVE_LIGHTING_PLANE;
 		mouse_opacity = MOUSE_OPACITY_TRANSPARENT;

@@ -329,7 +329,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		to_chat(src, span_warning("Nearby spawn location cant see this turf!"))
 
 /mob/camera/marker_signal/marker/proc/attach_necro_preview(datum/necro_class/class)
-	necro_preview = image{
+	necro_preview = new /image{
 		layer = ABOVE_ALL_MOB_LAYER;
 		plane = ABOVE_LIGHTING_PLANE;
 		mouse_opacity = MOUSE_OPACITY_TRANSPARENT;
