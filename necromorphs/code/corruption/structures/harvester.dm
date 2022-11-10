@@ -2,8 +2,10 @@
 
 /obj/structure/necromorph/harvester
 	name = "harvester"
-	icon = 'necromorphs/icons/effects/corruption48x48.dmi'
+	icon = 'necromorphs/icons/effects/corruption96x96.dmi'
 	icon_state = "whole"
+	pixel_x = -32
+	base_pixel_x = -32
 	var/active = FALSE
 	var/biomass_per_tick = 0
 	var/list/controlled_atoms

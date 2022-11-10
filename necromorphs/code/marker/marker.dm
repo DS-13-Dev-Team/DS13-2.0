@@ -24,7 +24,9 @@
 	.=..()
 
 /obj/structure/marker/process(delta_time)
-	biomass += biomass_income*delta_time
+	var/income = biomass_income*delta_time
+	biomass += income*(1-signal_biomass_percent)
+	signal_biomass += income*signal_biomass_percent
 
 /obj/structure/marker/proc/hive_mind_message(mob/sender, message)
 	for(var/mob/dead/observer/observer as anything in GLOB.current_observers_list)
@@ -140,3 +142,7 @@
 				return
 			camera_mob.detach_necro_preview()
 			camera_mob.attach_necro_preview(necro_classes[class])
+
+/obj/structure/marker/proc/notift_all_signals(text)
+	for(var/mob/camera/marker_signal/signal as anything in marker_signals)
+		to_chat(signal, text)

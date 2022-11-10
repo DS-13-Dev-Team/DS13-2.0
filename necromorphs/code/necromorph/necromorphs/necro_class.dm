@@ -5,6 +5,9 @@
 
 	var/necromorph_type_path = null
 
+	///If nests can spawn this necromorph
+	var/nest_allowed = FALSE
+
 	///Biomass required to spawn this necromorph
 	var/biomass_cost = INFINITY
 

@@ -1,4 +1,4 @@
-/obj/structure/necromorph/node
+/obj/structure/necromorph/node/root
 	name = "root"
 	icon = 'necromorphs/icons/effects/corruption.dmi'
 	icon_state = "minigrowth"
@@ -7,9 +7,9 @@
 
 /datum/corruption_node/root
 	remaining_weed_amount = 60
-	control_range = 12
+	control_range = 8
 
 /datum/action/cooldown/necro/corruption/root
 	name = "Root"
-	place_structure = /obj/structure/necromorph/node
+	place_structure = /obj/structure/necromorph/node/root
 	cost = 10

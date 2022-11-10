@@ -35,7 +35,12 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		forceMove(get_turf(marker))
 	master.markernet.eyes += src
 
+	var/datum/action/prey_sightings/action = new(src)
+	action.Grant(src)
+
 	for(var/datum/action/cooldown/necro/psy/ability as anything in subtypesof(/datum/action/cooldown/necro/psy))
+		if(initial(ability.marker_only) && !istype(src, /mob/camera/marker_signal/marker))
+			continue
 		ability = new ability(src)
 		abilities += ability
 		if((initial(ability.required_marker_status) & SIGNAL_ABILITY_PRE_ACTIVATION) && !marker.active)
@@ -136,6 +141,40 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	if(A.loc)
 		abstract_move(get_turf(A))
 
+/mob/camera/marker_signal/ClickOn(atom/A, params)
+	if(check_click_intercept(params,A))
+		return
+
+	var/list/modifiers = params2list(params)
+	if(LAZYACCESS(modifiers, SHIFT_CLICK))
+		if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+			ShiftMiddleClickOn(A)
+			return
+		if(LAZYACCESS(modifiers, CTRL_CLICK))
+			CtrlShiftClickOn(A)
+			return
+		ShiftClickOn(A)
+		return
+	if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+		if(LAZYACCESS(modifiers, CTRL_CLICK))
+			CtrlMiddleClickOn(A)
+		else
+			MiddleClickOn(A, params)
+		return
+	if(LAZYACCESS(modifiers, ALT_CLICK))
+		AltClickNoInteract(src, A)
+		return
+	if(LAZYACCESS(modifiers, CTRL_CLICK))
+		CtrlClickOn(A)
+		return
+
+	if(world.time <= next_move)
+		return
+	A.attack_marker_signal(src)
+
+/atom/proc/attack_marker_signal(mob/camera/marker_signal/user)
+	return FALSE
+
 /mob/camera/marker_signal/verb/leave_horde()
 	set name = "Leave the Horde"
 	set category = "Necromorph"
@@ -212,32 +251,47 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 	marker.ui_interact(src)
 
-/mob/camera/marker_signal/marker/check_click_intercept(params,A)
-	//Client level intercept
-	if(client?.click_intercept)
-		if(call(client.click_intercept, "InterceptClickOn")(src, params, A))
-			return TRUE
+/mob/camera/marker_signal/marker/ClickOn(atom/A, params)
+	if(check_click_intercept(params,A))
+		return
 
-	//Mob level intercept
-	if(click_intercept)
-		if(call(click_intercept, "InterceptClickOn")(src, params, A))
-			return TRUE
-
+	var/list/modifiers = params2list(params)
 	if(spawning_necromorph)
-		var/list/modifiers = params2list(params)
 		if(LAZYACCESS(modifiers, LEFT_CLICK))
 			if(!LAZYACCESS(modifiers, SHIFT_CLICK))
 				spawn_necromorph(A)
 				detach_necro_preview()
 			else
 				spawn_necromorph(A)
-			return TRUE
+			return
 		else if(LAZYACCESS(modifiers, RIGHT_CLICK))
-			if(LAZYACCESS(modifiers, SHIFT_CLICK))
-				return FALSE
 			detach_necro_preview()
+			return
+	if(LAZYACCESS(modifiers, SHIFT_CLICK))
+		if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+			ShiftMiddleClickOn(A)
+			return
+		if(LAZYACCESS(modifiers, CTRL_CLICK))
+			CtrlShiftClickOn(A)
+			return
+		ShiftClickOn(A)
+		return
+	if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+		if(LAZYACCESS(modifiers, CTRL_CLICK))
+			CtrlMiddleClickOn(A)
+		else
+			MiddleClickOn(A, params)
+		return
+	if(LAZYACCESS(modifiers, ALT_CLICK))
+		AltClickNoInteract(src, A)
+		return
+	if(LAZYACCESS(modifiers, CTRL_CLICK))
+		CtrlClickOn(A)
+		return
 
-	return FALSE
+	if(world.time <= next_move)
+		return
+	A.attack_marker_signal(src)
 
 /mob/camera/marker_signal/marker/proc/spawn_necromorph(turf/A)
 	if(marker.spent_biomass < marker.necro_classes[spawning_necromorph].biomass_spent_required)
@@ -277,7 +331,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 /mob/camera/marker_signal/marker/proc/attach_necro_preview(datum/necro_class/class)
 	necro_preview = image(class.ui_icon, null, "preview")
 	necro_preview.layer = ABOVE_ALL_MOB_LAYER
-	necro_preview.plane = ABOVE_GAME_PLANE
+	necro_preview.plane = ABOVE_LIGHTING_PLANE
 	necro_preview.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	necro_preview.color = COLOR_BLUE_LIGHT
 	var/mob/living/carbon/human/necromorph/necro = class.necromorph_type_path

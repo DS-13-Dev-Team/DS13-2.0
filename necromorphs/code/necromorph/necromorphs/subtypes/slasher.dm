@@ -10,6 +10,7 @@
 	desc = "The frontline soldier of the necromorph horde. Slow when not charging, but its blade arms make for powerful melee attacks"
 	ui_icon = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/slasher
+	nest_allowed = TRUE
 	biomass_cost = 50
 	biomass_spent_required = 0
 	melee_damage_lower = 10
