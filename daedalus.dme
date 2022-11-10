@@ -4710,6 +4710,7 @@
 #include "necromorphs\code\game\atoms.dm"
 #include "necromorphs\code\game\mob.dm"
 #include "necromorphs\code\game\movable.dm"
+#include "necromorphs\code\game\turf.dm"
 #include "necromorphs\code\marker\hud.dm"
 #include "necromorphs\code\marker\marker.dm"
 #include "necromorphs\code\marker\marker_defines.dm"

@@ -18,11 +18,11 @@
 	else
 		corrupt.set_master(node)
 
-/obj/structure/necromorph/node/update_signals(atom/old_loc, atom/new_loc)
+/obj/structure/necromorph/node/update_signals(atom/old_loc, turf/new_loc)
 	if(old_loc)
 		UnregisterSignal(old_loc, list(COMSIG_TURF_NECRO_UNCORRUPTED))
 	if(new_loc)
-		if(locate(/obj/structure/corruption) in loc)
+		if(istype(new_loc) && new_loc.necro_corrupted)
 			RegisterSignal(new_loc, COMSIG_TURF_NECRO_UNCORRUPTED, .proc/on_turf_uncorrupted)
 			state = GROWING
 			START_PROCESSING(SScorruption, src)

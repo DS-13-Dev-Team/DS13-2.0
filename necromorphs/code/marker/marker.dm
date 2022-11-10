@@ -13,7 +13,6 @@
 
 /obj/structure/marker/Destroy()
 	STOP_PROCESSING(SSprocessing, src)
-	necro_spawn_atoms.Cut()
 	necro_spawn_atoms = null
 	GLOB.necromorph_markers -= src
 	for(var/mob/camera/marker_signal/signal as anything in marker_signals)

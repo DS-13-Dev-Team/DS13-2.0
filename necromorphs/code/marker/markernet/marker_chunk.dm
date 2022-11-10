@@ -52,8 +52,7 @@
 	for(var/atom/source as anything in netVisionSources)
 		if(source.z != z)
 			continue
-		var/dist = get_dist(source, centre_turf)
-		if(dist < 0 || dist > CHUNK_SIZE)
+		if(!IN_GIVEN_RANGE(source, centre_turf, CHUNK_SIZE))
 			continue
 
 		var/list/visible = list()
@@ -110,8 +109,7 @@
 
 	var/turf/point = locate(src.x + (CHUNK_SIZE / 2), src.y + (CHUNK_SIZE / 2), src.z)
 	for(var/atom/source as anything in queued_for_update)
-		var/dist = get_dist(point, source)
-		if(dist < 0 || (dist > CHUNK_SIZE + (CHUNK_SIZE / 2)))
+		if(!IN_GIVEN_RANGE(point, source, CHUNK_SIZE + (CHUNK_SIZE / 2)))
 			visionSources -= source
 			rangeVisionSources -= source
 			viewVisionSources -= source

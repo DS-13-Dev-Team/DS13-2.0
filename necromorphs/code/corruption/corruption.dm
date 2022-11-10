@@ -37,6 +37,10 @@
 	if(!new_master)
 		return INITIALIZE_HINT_QDEL
 
+	var/turf/our_loc = loc
+	if(istype(our_loc))
+		our_loc.necro_corrupted = TRUE
+
 	set_master(new_master)
 
 	START_PROCESSING(SScorruption, src)
@@ -49,6 +53,9 @@
 	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, .proc/on_integrity_change)
 
 /obj/structure/corruption/Destroy()
+	var/turf/our_loc = loc
+	if(istype(our_loc))
+		our_loc.necro_corrupted = FALSE
 	if(master)
 		for(var/direction in GLOB.cardinals)
 			master.remove_turf_to_spread(get_step(src, direction), direction)
@@ -58,6 +65,14 @@
 	master = null
 	STOP_PROCESSING(SScorruption, src)
 	return ..()
+
+/obj/structure/corruption/Moved(turf/old_loc, movement_dir, forced, list/old_locs, momentum_change)
+	. = ..()
+	var/turf/our_loc = loc
+	if(istype(old_loc))
+		old_loc.necro_corrupted = FALSE
+	if(istype(our_loc))
+		our_loc.necro_corrupted = TRUE
 
 /obj/structure/corruption/process(delta_time)
 	if(state == GROWING)

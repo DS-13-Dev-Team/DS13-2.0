@@ -23,7 +23,8 @@
 /obj/structure/necromorph/harvester/LateInitialize()
 	..()
 	//If we have corruption beneath - we are growing
-	if(locate(/obj/structure/corruption) in loc)
+	var/turf/our_loc = loc
+	if(istype(our_loc) && our_loc.necro_corrupted)
 		addtimer(CALLBACK(src, .proc/activate), 3 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /obj/structure/necromorph/harvester/Destroy()
@@ -39,12 +40,12 @@
 	var/static/our_overlays
 	if (isnull(our_overlays))
 		our_overlays = list(
-			iconstate2appearance(icon, "tentacle_1"),
-			iconstate2appearance(icon, "tentacle_2"),
-			iconstate2appearance(icon, "tentacle_3"),
-			iconstate2appearance(icon, "tentacle_4"),
-			iconstate2appearance(icon, "beak_closed"),
-			iconstate2appearance(icon, "beak"),
+			mutable_appearance(icon, "tentacle_1"),
+			mutable_appearance(icon, "tentacle_2"),
+			mutable_appearance(icon, "tentacle_3"),
+			mutable_appearance(icon, "tentacle_4"),
+			mutable_appearance(icon, "beak_closed"),
+			mutable_appearance(icon, "beak"),
 		)
 	if(active)
 		. += our_overlays[1]
@@ -70,7 +71,8 @@
 	update_icon(UPDATE_OVERLAYS)
 
 /obj/structure/necromorph/harvester/proc/activate()
-	if(locate(/obj/structure/corruption) in loc)
+	var/turf/our_loc = loc
+	if(istype(our_loc) && our_loc.necro_corrupted)
 		active = TRUE
 		FOR_DVIEW(var/atom/movable/controlled, HARVESTER_CONTROL_RANGE, src, INVISIBILITY_LIGHTING)
 			if(controlled.biomass_produce && !HAS_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS))
@@ -93,7 +95,7 @@
 
 /obj/structure/necromorph/harvester/proc/on_controlled_moved(atom/movable/controlled)
 	SIGNAL_HANDLER
-	if(get_dist(src, controlled) > HARVESTER_CONTROL_RANGE)
+	if(IN_GIVEN_RANGE(src, controlled, HARVESTER_CONTROL_RANGE))
 		biomass_per_tick -= controlled.biomass_produce
 		marker.biomass_income -= controlled.biomass_produce
 		controlled_atoms -= controlled

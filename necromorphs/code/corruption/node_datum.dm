@@ -34,7 +34,7 @@
 	RegisterSignal(new_parent, COMSIG_PARENT_QDELETING, .proc/on_parent_delete)
 	RegisterSignal(new_parent, COMSIG_ATOM_BREAK, .proc/on_parent_break)
 
-	var/parent_turf = get_turf(new_parent)
+	var/turf/parent_turf = get_turf(new_parent)
 	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in parent_turf
 	if(!corrupt)
 		new /obj/structure/corruption(parent_turf, src)
@@ -84,7 +84,7 @@
 		turfs_to_watch[T] |= direction
 		return
 	turfs_to_watch[T] = direction
-	if(!(locate(/obj/structure/corruption) in T))
+	if(!T.necro_corrupted)
 		RegisterSignal(T, COMSIG_TURF_NECRO_CORRUPTED, .proc/on_nearby_turf_corrupted)
 		RegisterSignal(T, COMSIG_TURF_CHANGED, .proc/on_turf_changed)
 		if(isgroundlessturf(T))

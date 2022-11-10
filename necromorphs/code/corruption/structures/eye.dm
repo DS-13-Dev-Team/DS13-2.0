@@ -14,6 +14,8 @@
 
 /obj/structure/necromorph/eye/Initialize(mapload, obj/structure/marker/marker)
 	.=..()
+	if(!marker)
+		return INITIALIZE_HINT_QDEL
 	src.marker = marker
 	LAZYADD(marker.corruption_eyes, src)
 	marker.markernet.addVisionSource(src, VISION_SOURCE_RANGE, FALSE)
@@ -24,7 +26,8 @@
 	AddComponent(/datum/component/connect_range, src, loc_connections, 4, FALSE)
 
 /obj/structure/necromorph/eye/Destroy()
-	LAZYREMOVE(marker.corruption_eyes, src)
+	if(marker)
+		LAZYREMOVE(marker.corruption_eyes, src)
 	marker = null
 	return ..()
 

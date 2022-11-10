@@ -313,7 +313,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	//In case there was a nearby spawnloc but nest was behind a wall
 	var/spawnloc_cantsee
 	for(var/atom/spawnloc as anything in marker.necro_spawn_atoms)
-		if(get_dist(spawnloc, A) > 4)
+		if(IN_GIVEN_RANGE(spawnloc, A, 4))
 			continue
 		var/turf/turf_loc = get_turf(spawnloc)
 		if(!can_see(turf_loc, A, 4))
@@ -329,11 +329,12 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		to_chat(src, span_warning("Nearby spawn location cant see this turf!"))
 
 /mob/camera/marker_signal/marker/proc/attach_necro_preview(datum/necro_class/class)
-	necro_preview = image(class.ui_icon, null, "preview")
-	necro_preview.layer = ABOVE_ALL_MOB_LAYER
-	necro_preview.plane = ABOVE_LIGHTING_PLANE
-	necro_preview.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	necro_preview.color = COLOR_BLUE_LIGHT
+	necro_preview = image{
+		layer = ABOVE_ALL_MOB_LAYER;
+		plane = ABOVE_LIGHTING_PLANE;
+		mouse_opacity = MOUSE_OPACITY_TRANSPARENT;
+		color = COLOR_BLUE_LIGHT;
+	}(class.ui_icon, null, "preview")
 	var/mob/living/carbon/human/necromorph/necro = class.necromorph_type_path
 	necro_preview.pixel_x = initial(necro.base_pixel_x)
 	necro_preview.pixel_y = initial(necro.base_pixel_y)

@@ -10,7 +10,11 @@
 
 /datum/action/cooldown/necro/corruption/New(Target, original, cooldown)
 	..()
-	template = image(initial(place_structure.icon), null, initial(place_structure.icon_state))
+	template = image{
+		layer = ABOVE_ALL_MOB_LAYER;
+		plane = ABOVE_LIGHTING_PLANE;
+		mouse_opacity = MOUSE_OPACITY_TRANSPARENT;
+	}(initial(place_structure.icon), null, initial(place_structure.icon_state))
 	template.layer = ABOVE_ALL_MOB_LAYER
 	template.plane = ABOVE_LIGHTING_PLANE
 	template.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
@@ -62,7 +66,7 @@
 		to_chat(signal, span_warning("You don't have enough biomass!"))
 		return
 	var/turf/target_turf = get_turf(target)
-	if(!(locate(/obj/structure/corruption) in target_turf))
+	if(!target_turf.necro_corrupted)
 		to_chat(signal, span_warning("You need a turf to be corrupted to place this structure!"))
 		return
 	if(locate(/obj/structure/necromorph) in target_turf)
@@ -124,7 +128,7 @@
 /datum/action/cooldown/necro/corruption/proc/can_place(turf/turf_loc)
 	if(!turf_loc || turf_loc.density)
 		return
-	if(!(locate(/obj/structure/corruption) in turf_loc) || locate(/obj/structure/necromorph) in turf_loc)
+	if(!turf_loc.necro_corrupted || locate(/obj/structure/necromorph) in turf_loc)
 		return
 	//Remove this loop if it causes too much lag when hovering over a pile of items
 	for(var/atom/movable/movable as anything in turf_loc)
