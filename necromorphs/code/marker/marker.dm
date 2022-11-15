@@ -108,6 +108,8 @@
 	.["biomass_income"] = biomass_income
 	.["biomass_invested"] = spent_biomass
 	.["use_necroqueue"] = use_necroqueue
+	.["signal_biomass"] = signal_biomass
+	.["signal_biomass_percent"] = signal_biomass_percent
 
 /obj/structure/marker/ui_static_data(mob/user)
 	. = list()
@@ -127,7 +129,7 @@
 			"biomass_required" = class.biomass_spent_required,
 		))
 
-/obj/structure/marker/ui_act(action, params)
+/obj/structure/marker/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	if(..())
 		return
 
@@ -141,6 +143,14 @@
 				return
 			camera_mob.detach_necro_preview()
 			camera_mob.attach_necro_preview(necro_classes[class])
+		if("set_signal_biomass_percent")
+			var/percent = text2num(params["percentage"]) || 0.1
+			signal_biomass_percent = CLAMP01(percent)
+		if("change_signal_biomass")
+			var/remove_biomass = text2num(params["biomass"]) || 0
+			remove_biomass = clamp(remove_biomass, -biomass, biomass)
+			biomass -= remove_biomass
+			signal_biomass += remove_biomass
 
 /obj/structure/marker/proc/notift_all_signals(text)
 	for(var/mob/camera/marker_signal/signal as anything in marker_signals)

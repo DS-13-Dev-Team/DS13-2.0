@@ -1,5 +1,5 @@
 import { useBackend, useLocalState } from "../backend";
-import { AnimatedNumber, Box, Button, Stack } from "../components";
+import { Box, Button, ProgressBar, Stack } from "../components";
 import { Window } from "../layouts";
 
 export const NecromorphMarker = (props, context) => {
@@ -7,9 +7,11 @@ export const NecromorphMarker = (props, context) => {
   const {
     necromorphs,
     sprites,
-    biomass_invested,
     use_necroqueue,
     biomass,
+    biomass_invested,
+    signal_biomass,
+    signal_biomass_percent,
   } = data;
 
   const [chosenNecromorph, setChosenNecromorph] = useLocalState(context, 'picked_necromorph');
@@ -20,8 +22,8 @@ export const NecromorphMarker = (props, context) => {
       height={400}>
       <Window.Content>
         <Stack fill>
-          {chosenNecromorph ? (
-            <Stack.Item grow>
+          <Stack.Item grow>
+            {chosenNecromorph ? (
               <Stack vertical fill>
                 <Stack.Item grow>
                   <Stack>
@@ -35,6 +37,40 @@ export const NecromorphMarker = (props, context) => {
                   </Stack>
                 </Stack.Item>
                 <Stack.Item>
+                  <Stack vertical fill>
+                    <Stack.Item>
+                      <ProgressBar value={1} ranges={{ "red": [0, 1] }}>
+                        <Box textAlign="center">
+                          Marker Biomass | {biomass}
+                        </Box>
+                      </ProgressBar>
+                    </Stack.Item>
+                    <Stack.Item>
+                      <Stack fill>
+                        <Stack.Item>
+                          <Button onClick={() => act('change_signal_biomass', { "biomass": -100 })}>-100</Button>
+                          <Button onClick={() => act('change_signal_biomass', { "biomass": -10 })}>-10</Button>
+                          <Button onClick={() => act('change_signal_biomass', { "biomass": -1 })}>-1</Button>
+                        </Stack.Item>
+                        <Stack.Item grow>
+                          <ProgressBar value={1} ranges={{ "purple": [0, 1] }}>
+                            <Box textAlign="center">
+                              Signal Biomass | {signal_biomass}
+                            </Box>
+                          </ProgressBar>
+                        </Stack.Item>
+                        <Stack.Item>
+                          <Button onClick={() => act('change_signal_biomass', { "biomass": +1 })}>+1</Button>
+                          <Button onClick={() => act('change_signal_biomass', { "biomass": +10 })}>+10</Button>
+                          <Button onClick={() => act('change_signal_biomass', { "biomass": +100 })}>+100</Button>
+                        </Stack.Item>
+                      </Stack>
+                    </Stack.Item>
+                  </Stack>
+                </Stack.Item>
+                {
+                  /*
+                <Stack.Item>
                   <Stack fill>
                     <Stack.Item grow />
                     <Stack.Item>
@@ -44,13 +80,13 @@ export const NecromorphMarker = (props, context) => {
                     </Stack.Item>
                   </Stack>
                 </Stack.Item>
+                    */
+                }
               </Stack>
-            </Stack.Item>
-          ) : (
-            <Stack.Item grow>
-              Test
-            </Stack.Item>
-          )}
+            ) : (
+              <Box>Test</Box>
+            )}
+          </Stack.Item>
           <Stack.Item grow="0.3">
             <Stack vertical fill>
               <Stack.Item grow>
