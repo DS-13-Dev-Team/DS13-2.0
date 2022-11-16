@@ -31,10 +31,16 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	AddElement(/datum/element/movetype_handler)
 	icon_state += "[rand(1, 25)]"
 	master.marker_signals += src
-	forceMove(get_turf(marker))
+	if(!loc)
+		forceMove(get_turf(marker))
 	master.markernet.eyes += src
 
+	var/datum/action/prey_sightings/action = new(src)
+	action.Grant(src)
+
 	for(var/datum/action/cooldown/necro/psy/ability as anything in subtypesof(/datum/action/cooldown/necro/psy))
+		if(initial(ability.marker_only) && !istype(src, /mob/camera/marker_signal/marker))
+			continue
 		ability = new ability(src)
 		abilities += ability
 		if((initial(ability.required_marker_status) & SIGNAL_ABILITY_PRE_ACTIVATION) && !marker.active)
@@ -43,6 +49,8 @@ GLOBAL_LIST_EMPTY(markers_signals)
 			ability.Grant(src)
 
 	for(var/datum/action/cooldown/necro/corruption/ability as anything in subtypesof(/datum/action/cooldown/necro/corruption))
+		if(initial(ability.marker_only) && !istype(src, /mob/camera/marker_signal/marker))
+			continue
 		ability = new ability(src)
 		abilities += ability
 		if((initial(ability.required_marker_status) & SIGNAL_ABILITY_PRE_ACTIVATION) && !marker.active)
@@ -133,6 +141,40 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	if(A.loc)
 		abstract_move(get_turf(A))
 
+/mob/camera/marker_signal/ClickOn(atom/A, params)
+	if(check_click_intercept(params,A))
+		return
+
+	var/list/modifiers = params2list(params)
+	if(LAZYACCESS(modifiers, SHIFT_CLICK))
+		if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+			ShiftMiddleClickOn(A)
+			return
+		if(LAZYACCESS(modifiers, CTRL_CLICK))
+			CtrlShiftClickOn(A)
+			return
+		ShiftClickOn(A)
+		return
+	if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+		if(LAZYACCESS(modifiers, CTRL_CLICK))
+			CtrlMiddleClickOn(A)
+		else
+			MiddleClickOn(A, params)
+		return
+	if(LAZYACCESS(modifiers, ALT_CLICK))
+		AltClickNoInteract(src, A)
+		return
+	if(LAZYACCESS(modifiers, CTRL_CLICK))
+		CtrlClickOn(A)
+		return
+
+	if(world.time <= next_move)
+		return
+	A.attack_marker_signal(src)
+
+/atom/proc/attack_marker_signal(mob/camera/marker_signal/user)
+	return FALSE
+
 /mob/camera/marker_signal/verb/leave_horde()
 	set name = "Leave the Horde"
 	set category = "Necromorph"
@@ -157,6 +199,19 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		animate(filter, x = clamp(PSYBAR_PIXEL_WIDTH*(psy_energy/psy_energy_maximum), 0, PSYBAR_PIXEL_WIDTH), time = 0.5 SECONDS)
 		our_hud.foreground.maptext = MAPTEXT("[round(max(0, psy_energy), 1)]/[psy_energy_maximum] | +[psy_energy_generation] psy/seс")
 
+/mob/camera/marker_signal/verb/become_master()
+	set name = "Become master signal"
+	set category = "Necromorph"
+
+	if(marker.camera_mob)
+		to_chat(src, span_notice("There is a player controlling the marker already!"))
+	else
+		var/mob/camera/marker_signal/marker/camera = new /mob/camera/marker_signal/marker(get_turf(src), marker)
+		marker.camera_mob = camera
+		camera.real_name = camera.name
+		camera.ckey = src.ckey
+		qdel(src)
+
 /mob/camera/marker_signal/marker
 	name = "Marker"
 	icon_state = "mastersignal"
@@ -167,11 +222,127 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	interaction_range = null
 	pixel_x = -7
 	pixel_y = -7
+	///Used when spawning necromorphs
+	var/image/necro_preview
+	///Necro class of a necromorph we are going to spawn
+	var/spawning_necromorph
 
 /mob/camera/marker_signal/marker/Initialize(mapload, obj/structure/marker/master)
 	. = ..()
 	icon_state = "mastersignal"
+	verbs -= /mob/camera/marker_signal/verb/become_master
 
 /mob/camera/marker_signal/marker/Destroy()
 	marker?.camera_mob = null
 	return ..()
+
+/mob/camera/marker_signal/marker/verb/downgrade()
+	set name = "Downgrade to normal signal"
+	set category = "Necromorph"
+
+	var/mob/camera/marker_signal/signal = new /mob/camera/marker_signal(get_turf(src), marker)
+	signal.real_name = signal.name
+	signal.ckey = src.ckey
+	qdel(src)
+
+/mob/camera/marker_signal/marker/verb/open_marker_ui()
+	set name = "Open Marker UI"
+	set category = "Necromorph"
+
+	marker.ui_interact(src)
+
+/mob/camera/marker_signal/marker/ClickOn(atom/A, params)
+	if(check_click_intercept(params,A))
+		return
+
+	var/list/modifiers = params2list(params)
+	if(spawning_necromorph)
+		if(LAZYACCESS(modifiers, LEFT_CLICK))
+			if(!LAZYACCESS(modifiers, SHIFT_CLICK))
+				spawn_necromorph(A)
+				detach_necro_preview()
+			else
+				spawn_necromorph(A)
+			return
+		else if(LAZYACCESS(modifiers, RIGHT_CLICK))
+			detach_necro_preview()
+			return
+	if(LAZYACCESS(modifiers, SHIFT_CLICK))
+		if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+			ShiftMiddleClickOn(A)
+			return
+		if(LAZYACCESS(modifiers, CTRL_CLICK))
+			CtrlShiftClickOn(A)
+			return
+		ShiftClickOn(A)
+		return
+	if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+		if(LAZYACCESS(modifiers, CTRL_CLICK))
+			CtrlMiddleClickOn(A)
+		else
+			MiddleClickOn(A, params)
+		return
+	if(LAZYACCESS(modifiers, ALT_CLICK))
+		AltClickNoInteract(src, A)
+		return
+	if(LAZYACCESS(modifiers, CTRL_CLICK))
+		CtrlClickOn(A)
+		return
+
+	if(world.time <= next_move)
+		return
+	A.attack_marker_signal(src)
+
+/mob/camera/marker_signal/marker/proc/spawn_necromorph(turf/A)
+	if(marker.spent_biomass < marker.necro_classes[spawning_necromorph].biomass_spent_required)
+		to_chat(src, span_warning("You need to spend more biomass to unlock this necromorph!"))
+		return
+	if(marker.biomass < marker.necro_classes[spawning_necromorph].biomass_cost)
+		to_chat(src, span_warning("You don't have enough biomass!"))
+		return
+	A = get_turf(A)
+	if(!A)
+		return
+	if(A.density)
+		to_chat(src, span_warning("Location is dense!"))
+		return
+	for(var/atom/movable/movable as anything in A)
+		if(movable.density)
+			to_chat(src, span_warning("Location has dense objects on it!"))
+			return
+	//In case there was a nearby spawnloc but nest was behind a wall
+	var/spawnloc_cantsee
+	for(var/atom/spawnloc as anything in marker.necro_spawn_atoms)
+		if(IN_GIVEN_RANGE(spawnloc, A, 4))
+			continue
+		var/turf/turf_loc = get_turf(spawnloc)
+		if(!can_see(turf_loc, A, 4))
+			spawnloc_cantsee = TRUE
+			continue
+		marker.biomass -= marker.necro_classes[spawning_necromorph].biomass_cost
+		var/path = marker.necro_classes[spawning_necromorph].necromorph_type_path
+		new path(A, marker)
+		return
+	if(!spawnloc_cantsee)
+		to_chat(src, span_warning("There are no possible spawn locations nearby!"))
+	else
+		to_chat(src, span_warning("Nearby spawn location cant see this turf!"))
+
+/mob/camera/marker_signal/marker/proc/attach_necro_preview(datum/necro_class/class)
+	necro_preview = new /image/necromorph_subtype(class.ui_icon, null, "preview")
+	var/mob/living/carbon/human/necromorph/necro = class.necromorph_type_path
+	necro_preview.pixel_x = initial(necro.base_pixel_x)
+	necro_preview.pixel_y = initial(necro.base_pixel_y)
+	client.images += necro_preview
+	mouse_move_intercept = src
+	spawning_necromorph = class.type
+
+/mob/camera/marker_signal/marker/proc/detach_necro_preview()
+	if(mouse_move_intercept == src)
+		mouse_move_intercept = null
+	spawning_necromorph = null
+	client.images -= necro_preview
+	necro_preview = null
+
+/mob/camera/marker_signal/marker/proc/mouse_movement_intercepted(atom/intercepted)
+	necro_preview.loc = get_turf(intercepted)

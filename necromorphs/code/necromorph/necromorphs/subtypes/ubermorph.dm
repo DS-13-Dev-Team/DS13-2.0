@@ -6,8 +6,9 @@
 	playsound(src, pick(GLOB.ubermorph_sounds[audio_type]), volume, vary, extra_range)
 
 /datum/necro_class/ubermorph
-	display_name = "ubermorph"
+	display_name = "Ubermorph"
 	desc = "A juvenile hivemind. Constantly regenerating, a nigh-immortal leader of the necromorph army. "
+	ui_icon = 'necromorphs/icons/necromorphs/ubermorph.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/ubermorph
 	melee_damage_lower = 10
 	melee_damage_upper = 16

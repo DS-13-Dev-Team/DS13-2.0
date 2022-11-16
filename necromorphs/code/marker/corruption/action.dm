@@ -1,4 +1,3 @@
-/datum/action/cooldown/necro/corruption/test
 /datum/action/cooldown/necro/corruption
 	name = "Generic corruption placement ability"
 	cooldown_time = 0.1 SECONDS
@@ -6,14 +5,17 @@
 	var/cost = 0
 	var/image/template
 	var/obj/structure/necromorph/place_structure = /obj/structure/necromorph
+	var/marker_only = FALSE
 	var/required_marker_status = SIGNAL_ABILITY_PRE_ACTIVATION|SIGNAL_ABILITY_POST_ACTIVATION
 
 /datum/action/cooldown/necro/corruption/New(Target, original, cooldown)
 	..()
-	template = image(initial(place_structure.icon), null, initial(place_structure.icon_state))
+	template = new /image/necromorph_subtype(initial(place_structure.icon), null, initial(place_structure.icon_state))
 	template.layer = ABOVE_ALL_MOB_LAYER
-	template.plane = ABOVE_GAME_PLANE
+	template.plane = ABOVE_LIGHTING_PLANE
 	template.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	template.pixel_x = initial(place_structure.base_pixel_x)
+	template.pixel_y = initial(place_structure.base_pixel_y)
 
 /datum/action/cooldown/necro/corruption/Trigger(trigger_flags, atom/target)
 	if(!IsAvailable())
@@ -54,18 +56,27 @@
 	return TRUE
 
 /datum/action/cooldown/necro/corruption/Activate(atom/target)
+	var/mob/camera/marker_signal/signal = owner
+	var/current_biomass = ismarkereye(signal) ? signal.marker.biomass : signal.marker.signal_biomass
+	if(current_biomass < cost)
+		to_chat(signal, span_warning("You don't have enough biomass!"))
+		return
 	var/turf/target_turf = get_turf(target)
-	if(!(locate(/obj/structure/corruption) in target_turf))
-		to_chat(owner, span_warning("You need a turf to be corrupted to place this structure!"))
+	if(!target_turf.necro_corrupted)
+		to_chat(signal, span_warning("You need a turf to be corrupted to place this structure!"))
 		return
 	if(locate(/obj/structure/necromorph) in target_turf)
-		to_chat(owner, span_warning("There is another structure on this turf!"))
+		to_chat(signal, span_warning("There is another structure on this turf!"))
 		return
 	for(var/atom/movable/movable as anything in target_turf)
 		if(movable.density)
-			to_chat(owner, span_warning("Turf is obstructed!"))
+			to_chat(signal, span_warning("Turf is obstructed!"))
 			return
-	new place_structure(target_turf)
+	if(ismarkereye(signal))
+		signal.marker.biomass -= cost
+	else
+		signal.marker.signal_biomass -= cost
+	new place_structure(target_turf, signal.marker)
 	return TRUE
 
 /datum/action/cooldown/necro/corruption/UpdateButton(atom/movable/screen/movable/action_button/button, status_only = FALSE, force = FALSE)
@@ -111,7 +122,9 @@
 	template.color = can_place(turf_loc) ? COLOR_GREEN : COLOR_RED
 
 /datum/action/cooldown/necro/corruption/proc/can_place(turf/turf_loc)
-	if(!(locate(/obj/structure/corruption) in turf_loc) || locate(/obj/structure/necromorph) in turf_loc)
+	if(!turf_loc || turf_loc.density)
+		return
+	if(!turf_loc.necro_corrupted || locate(/obj/structure/necromorph) in turf_loc)
 		return
 	//Remove this loop if it causes too much lag when hovering over a pile of items
 	for(var/atom/movable/movable as anything in turf_loc)

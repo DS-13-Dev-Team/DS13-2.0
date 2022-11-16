@@ -6,8 +6,9 @@
 	playsound(src, pick(GLOB.exploder_sounds[audio_type]), volume, vary, extra_range)
 
 /datum/necro_class/exploder
-	display_name = "exploder"
+	display_name = "Exploder"
 	desc = "An expendable suicide bomber, the exploder's sole purpose is to go out in a blaze of glory, and hopefully take a few people with it."
+	ui_icon = 'necromorphs/icons/necromorphs/exploder/exploder.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/exploder
 	melee_damage_lower = 10
 	melee_damage_upper = 16

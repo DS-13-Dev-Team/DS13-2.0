@@ -10,15 +10,11 @@
 	max_integrity = 25
 	resistance_flags = UNACIDABLE
 	obj_flags = CAN_BE_HIT
-	/// Weed below this structure, if it's dying then we are dying as well
-	var/obj/structure/corruption/master
 	/// If we are growing or decaying
 	var/state = null
 
-/obj/structure/necromorph/Initialize(mapload, obj/structure/corruption/new_master)
+/obj/structure/necromorph/Initialize(mapload)
 	..()
-	if(!new_master)
-		return INITIALIZE_HINT_QDEL
 	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, .proc/on_integrity_change)
 	return INITIALIZE_HINT_LATELOAD
 
@@ -27,7 +23,6 @@
 	update_signals(null, loc)
 
 /obj/structure/necromorph/Destroy()
-	master = null
 	return ..()
 
 /obj/structure/necromorph/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change)
@@ -35,11 +30,11 @@
 	update_signals(old_loc, loc)
 	return TRUE
 
-/obj/structure/necromorph/proc/update_signals(atom/old_loc, atom/new_loc)
+/obj/structure/necromorph/proc/update_signals(atom/old_loc, turf/new_loc)
 	if(old_loc)
 		UnregisterSignal(old_loc, list(COMSIG_TURF_NECRO_CORRUPTED, COMSIG_TURF_NECRO_UNCORRUPTED))
 	if(new_loc)
-		if(locate(/obj/structure/corruption) in loc)
+		if(istype(new_loc) && new_loc.necro_corrupted)
 			RegisterSignal(new_loc, COMSIG_TURF_NECRO_UNCORRUPTED, .proc/on_turf_uncorrupted)
 			state = GROWING
 			START_PROCESSING(SScorruption, src)
@@ -69,13 +64,12 @@
 
 /obj/structure/necromorph/proc/on_integrity_change(atom/source, old_integrity, new_integrity)
 	SIGNAL_HANDLER
-	if(master)
-		if((old_integrity >= new_integrity) && state != DECAYING)
-			state = GROWING
-			START_PROCESSING(SScorruption, src)
-		else if(new_integrity >= max_integrity)
-			state = null
-			STOP_PROCESSING(SScorruption, src)
+	if((old_integrity >= new_integrity) && state != DECAYING)
+		state = GROWING
+		START_PROCESSING(SScorruption, src)
+	else if(new_integrity >= max_integrity)
+		state = null
+		STOP_PROCESSING(SScorruption, src)
 
 /obj/structure/necromorph/play_attack_sound(damage_amount, damage_type, damage_flag)
 	switch(damage_type)

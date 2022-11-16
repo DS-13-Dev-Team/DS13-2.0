@@ -7,12 +7,11 @@
 	return list()
 
 /atom/proc/CanCorrupt(corruption_dir)
-	if(density)
-		return
+	if(!density)
+		return TRUE
 	if(flags_1 & ON_BORDER_1)
-		if(!(corruption_dir & ~turn(dir, 180)))
-			return
-	return TRUE
+		if(corruption_dir & ~turn(dir, 180))
+			return TRUE
 
 //Considering the checks corruption does we assume turf is not dense
 //Add density checks if you will need this proc outside of corruption spreading

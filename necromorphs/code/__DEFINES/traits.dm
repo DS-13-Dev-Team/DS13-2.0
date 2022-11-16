@@ -1,5 +1,6 @@
 // common trait sources
 #define NECROMORPH_TRAIT "necromorph"
 
-/// This mob is necromorph
-#define TRAIT_IS_NECROMORPH "is_necromorph"
+///This atom produces biomass for one of the harvesters
+#define TRAIT_PRODUCES_BIOMASS "produces_biomass"
+
