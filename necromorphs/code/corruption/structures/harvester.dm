@@ -28,7 +28,7 @@
 		addtimer(CALLBACK(src, .proc/activate), 3 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /obj/structure/necromorph/harvester/Destroy()
-	marker?.biomass_income -= biomass_per_tick
+	marker?.remove_biomass_income(src, biomass_per_tick)
 	for(var/atom/movable/controlled as anything in controlled_atoms)
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 		REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
@@ -63,7 +63,7 @@
 /obj/structure/necromorph/harvester/on_turf_uncorrupted()
 	.=..()
 	active = FALSE
-	marker.biomass_income -= biomass_per_tick
+	marker.remove_biomass_income(src, biomass_per_tick)
 	for(var/atom/movable/controlled as anything in controlled_atoms)
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 		REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
@@ -82,13 +82,13 @@
 				ADD_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
 				biomass_per_tick += controlled.biomass_produce
 		FOR_DVIEW_END
-		marker.biomass_income += biomass_per_tick
+		marker.add_biomass_income(src, biomass_per_tick)
 		update_icon(UPDATE_OVERLAYS)
 
 /obj/structure/necromorph/harvester/proc/on_controlled_delete(atom/movable/controlled, force)
 	SIGNAL_HANDLER
 	biomass_per_tick -= controlled.biomass_produce
-	marker.biomass_income -= controlled.biomass_produce
+	marker.remove_biomass_income(src, controlled.biomass_produce)
 	controlled_atoms -= controlled
 	UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 	REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
@@ -97,7 +97,7 @@
 	SIGNAL_HANDLER
 	if(IN_GIVEN_RANGE(src, controlled, HARVESTER_CONTROL_RANGE))
 		biomass_per_tick -= controlled.biomass_produce
-		marker.biomass_income -= controlled.biomass_produce
+		marker.remove_biomass_income(src, controlled.biomass_produce)
 		controlled_atoms -= controlled
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 		REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)

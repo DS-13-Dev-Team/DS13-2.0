@@ -295,10 +295,10 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 /mob/camera/marker_signal/marker/proc/spawn_necromorph(turf/A)
 	if(marker.spent_biomass < marker.necro_classes[spawning_necromorph].biomass_spent_required)
-		to_chat(src, span_warning("You need to spend more biomass to unlock this necromorph!"))
+		to_chat(src, span_warning("Not enough biomass spent!"))
 		return
 	if(marker.biomass < marker.necro_classes[spawning_necromorph].biomass_cost)
-		to_chat(src, span_warning("You don't have enough biomass!"))
+		to_chat(src, span_warning("Not enough biomass!"))
 		return
 	A = get_turf(A)
 	if(!A)
@@ -321,7 +321,10 @@ GLOBAL_LIST_EMPTY(markers_signals)
 			continue
 		marker.biomass -= marker.necro_classes[spawning_necromorph].biomass_cost
 		var/path = marker.necro_classes[spawning_necromorph].necromorph_type_path
-		new path(A, marker)
+		var/mob/living/carbon/human/necromorph/mob = new path(A, marker)
+		if(marker.use_necroqueue)
+			var/mob/camera/marker_signal/signal = pick(marker.marker_signals-src)
+			signal.possess_necromorph(mob)
 		return
 	if(!spawnloc_cantsee)
 		to_chat(src, span_warning("There are no possible spawn locations nearby!"))

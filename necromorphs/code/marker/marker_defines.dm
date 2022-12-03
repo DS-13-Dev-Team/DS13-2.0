@@ -25,17 +25,23 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	var/signal_biomass = 0
 	/// Biomass marker spent since the start of the round
 	var/spent_biomass = 0
-	/// Income per tick
+	/// Biomass statically generated in each process() call
 	var/biomass_income = 0
+	/// Biomass recieve by the marker in the last process() call
+	var/last_biomass_income = 0
 	/// Percent of biomass signals recieve from marker income
 	var/signal_biomass_percent = 0.1
+	/// An assoc list of biomass income = source
+	var/list/biomass_sources = list()
 	/// An assoc list of all necro class types = their references
 	var/list/datum/necro_class/necro_classes = list()
 	/// A list of all corruption nodes
 	var/list/nodes = list()
 	/// A list of atoms that let us spawn necromorphs 6 tiles away from them
 	var/list/necro_spawn_atoms = list()
-	/// When was the last time all signals were alerted by an eye
-	var/last_eye_notify
 	/// List of eyes on the corruptions this marker has
 	var/list/corruption_eyes
+	/// When was the last time all signals were alerted by an eye
+	var/last_eye_notify
+	/// List of all maws that have mobs inside
+	var/list/active_maws

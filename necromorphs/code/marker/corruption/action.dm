@@ -59,11 +59,11 @@
 	var/mob/camera/marker_signal/signal = owner
 	var/current_biomass = ismarkereye(signal) ? signal.marker.biomass : signal.marker.signal_biomass
 	if(current_biomass < cost)
-		to_chat(signal, span_warning("You don't have enough biomass!"))
+		to_chat(signal, span_warning("Not enough biomass!"))
 		return
 	var/turf/target_turf = get_turf(target)
 	if(!target_turf.necro_corrupted)
-		to_chat(signal, span_warning("You need a turf to be corrupted to place this structure!"))
+		to_chat(signal, span_warning("Turf isn't corrupted!"))
 		return
 	if(locate(/obj/structure/necromorph) in target_turf)
 		to_chat(signal, span_warning("There is another structure on this turf!"))

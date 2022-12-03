@@ -22,10 +22,31 @@
 	QDEL_NULL(markernet)
 	.=..()
 
+/obj/structure/marker/add_biomass_income(source, biomass_per_tick = 0)
+	if(biomass_sources[source])
+		biomass_sources[source] += biomass_per_tick
+	else
+		biomass_sources[source] = biomass_per_tick
+	biomass_income += biomass_per_tick
+
+/obj/structure/marker/remove_biomass_income(source, biomass_per_tick = INFINITY)
+	if(biomass_sources[source])
+		var/difference = biomass_sources[source]
+		biomass_sources[source] -= biomass_per_tick
+		if(biomass_sources[source] < 0)
+			biomass_sources -= source
+		else
+			difference -= biomass_sources[source]
+		biomass_income -= difference
+
 /obj/structure/marker/process(delta_time)
-	var/income = biomass_income*delta_time
+	var/income = biomass_income
+	//Handles maws
+	for(var/obj/structure/necromorph/maw/maw as anything in active_maws)
+		income += maw.chew_target()
 	biomass += income*(1-signal_biomass_percent)
 	signal_biomass += income*signal_biomass_percent
+	last_biomass_income = income
 
 /obj/structure/marker/proc/hive_mind_message(mob/sender, message)
 	for(var/mob/dead/observer/observer as anything in GLOB.current_observers_list)
@@ -105,7 +126,7 @@
 /obj/structure/marker/ui_data(mob/user)
 	. = list()
 	.["biomass"] = biomass
-	.["biomass_income"] = biomass_income
+	.["biomass_income"] = last_biomass_income
 	.["biomass_invested"] = spent_biomass
 	.["use_necroqueue"] = use_necroqueue
 	.["signal_biomass"] = signal_biomass
@@ -147,10 +168,13 @@
 			var/percent = text2num(params["percentage"]) || 0.1
 			signal_biomass_percent = CLAMP01(percent)
 		if("change_signal_biomass")
-			var/remove_biomass = text2num(params["biomass"]) || 0
-			remove_biomass = clamp(remove_biomass, -biomass, biomass)
+			var/remove_biomass = text2num(params["biomass"])
+			if(!remove_biomass)
+				return
+			remove_biomass = clamp(remove_biomass, -signal_biomass, biomass)
 			biomass -= remove_biomass
 			signal_biomass += remove_biomass
+			return TRUE
 
 /obj/structure/marker/proc/notift_all_signals(text)
 	for(var/mob/camera/marker_signal/signal as anything in marker_signals)
