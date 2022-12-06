@@ -1,3 +1,6 @@
+#define CHEW_CHANCE 80
+#define BASE_DAMAGE 10
+
 /obj/structure/necromorph/maw
 	name = "maw"
 	desc = "The abyss stares back at you."
@@ -6,17 +9,8 @@
 	max_integrity = 70
 	density = FALSE
 	var/obj/structure/marker/marker
-
-	var/list/eating	//Things we're currently eating. Keep chewing as long as one is nearby
-	var/chomp_chance = 10	//The chance, per tick, per mob, to do a chomp animation. max 1 per tick
-	//Also used as the chance to damage trapped mobs
-
-	var/base_damage = 15
-	var/fail_damage = 4
-	var/base_difficulty = 60
-	var/time_to_escape = 40
-	var/target_zone
-	var/struggle_prob = 2
+	//Things we're currently eating, lazylist
+	var/list/eating
 
 /obj/structure/necromorph/maw/Initialize(mapload, obj/structure/marker/marker)
 	.=..()
@@ -31,25 +25,38 @@
 
 /obj/structure/necromorph/maw/Destroy()
 	if(marker)
-		//biomass manipulations
-
-	marker = null
+		LAZYREMOVE(marker.active_maws, src)
+		marker = null
 	return ..()
 
 /obj/structure/necromorph/maw/proc/on_entered(atom/source, mob/living/carbon/human/arrived)
 	if(ishuman(arrived) && !isnecromorph(arrived))
 		LAZYADD(eating, arrived)
-		ADD_TRAIT(arrived, TRAIT_RESTRAINED, src)
+		ADD_TRAIT(arrived, TRAIT_FLOORED, src)
+		ADD_TRAIT(arrived, TRAIT_IMMOBILIZED, src)
+		LAZYADD(marker.active_maws, src)
 
 //Returns amount of biomass obtained
-/obj/structure/necromorph/maw/proc/chew_target()
+/obj/structure/necromorph/maw/proc/chew_target(delta_time)
+	. = 0
+	for(var/mob/living/carbon/human/target as anything in eating)
+		if(DT_PROB(CHEW_CHANCE, delta_time))
+			var/obj/item/bodypart/part = pick(target.bodyparts)
+			. += part.take_damage(BASE_DAMAGE*delta_time, BRUTE, MELEE, TRUE, DOWN, 50)
+			flick("maw_v", src)
 
 /obj/structure/necromorph/maw/proc/target_moved(mob/living/carbon/human/moved)
 	if(moved.loc != src.loc)
-		REMOVE_TRAIT(moved, TRAIT_RESTRAINED, src)
+		REMOVE_TRAIT(moved, TRAIT_FLOORED, src)
+		REMOVE_TRAIT(moved, TRAIT_IMMOBILIZED, src)
 		LAZYREMOVE(eating, moved)
+		if(!eating)
+			LAZYREMOVE(marker.active_maws, src)
 
 /datum/action/cooldown/necro/corruption/maw
 	name = "Maw"
 	place_structure = /obj/structure/necromorph/maw
 	cost = 50
+
+#undef CHEW_CHANCE
+#undef BASE_DAMAGE

@@ -22,14 +22,14 @@
 	QDEL_NULL(markernet)
 	.=..()
 
-/obj/structure/marker/add_biomass_income(source, biomass_per_tick = 0)
+/obj/structure/marker/proc/add_biomass_income(source, biomass_per_tick = 0)
 	if(biomass_sources[source])
 		biomass_sources[source] += biomass_per_tick
 	else
 		biomass_sources[source] = biomass_per_tick
 	biomass_income += biomass_per_tick
 
-/obj/structure/marker/remove_biomass_income(source, biomass_per_tick = INFINITY)
+/obj/structure/marker/proc/remove_biomass_income(source, biomass_per_tick = INFINITY)
 	if(biomass_sources[source])
 		var/difference = biomass_sources[source]
 		biomass_sources[source] -= biomass_per_tick
@@ -43,7 +43,7 @@
 	var/income = biomass_income
 	//Handles maws
 	for(var/obj/structure/necromorph/maw/maw as anything in active_maws)
-		income += maw.chew_target()
+		income += maw.chew_target(delta_time)
 	biomass += income*(1-signal_biomass_percent)
 	signal_biomass += income*signal_biomass_percent
 	last_biomass_income = income

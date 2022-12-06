@@ -76,7 +76,8 @@
 		signal.marker.biomass -= cost
 	else
 		signal.marker.signal_biomass -= cost
-	new place_structure(target_turf, signal.marker)
+	var/obj/structure/necromorph/structure = new place_structure(target_turf, signal.marker)
+	structure.dir = template.dir
 	return TRUE
 
 /datum/action/cooldown/necro/corruption/UpdateButton(atom/movable/screen/movable/action_button/button, status_only = FALSE, force = FALSE)
@@ -96,7 +97,6 @@
 				button.icon = button_icon
 			if(button.icon_state != background_icon_state)
 				button.icon_state = background_icon_state
-
 		ApplyIcon(button, force)
 
 	if(!IsAvailable())
