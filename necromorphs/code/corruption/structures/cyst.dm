@@ -23,7 +23,7 @@
 	return ..()
 
 /obj/structure/necromorph/cyst/proc/on_entered(atom/source, mob/living/carbon/human/arrived)
-	if(!ready || isnecromorph(arrived))
+	if(!ready || isnecromorph(arrived) || isprojectile(arrived))
 		return
 	var/angle = SIMPLIFY_DEGREES(get_angle(src, arrived) - dir2angle(src.dir))
 	if(angle > CYST_SHOOT_ANGLE*0.5)
@@ -68,5 +68,20 @@
 	damage = 45
 	damage_type = BURN
 	armor_flag = BIO
+
+/datum/action/cooldown/necro/corruption/cyst
+	name = "Cyst"
+	place_structure = /obj/structure/necromorph/cyst
+	cost = 50
+
+/datum/action/cooldown/necro/corruption/cyst/can_place(turf/turf_loc)
+	if(!..())
+		return
+	for(var/dir in GLOB.cardinals)
+		if(template.dir & dir)
+			var/turf/T = get_step(turf_loc, turn(dir, 180))
+			if(!T?.density)
+				return
+	return TRUE
 
 #undef CYST_SHOOT_ANGLE

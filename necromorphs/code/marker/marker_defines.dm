@@ -8,6 +8,8 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	plane = ABOVE_GAME_PLANE
 	interaction_flags_atom = INTERACT_ATOM_ATTACK_HAND
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	bound_width = 96
+	bound_x = -32
 	pixel_x = -33
 	base_pixel_x = -33
 	move_resist = MOVE_FORCE_OVERPOWERING

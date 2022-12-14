@@ -13,6 +13,8 @@
 	var/list/turfs_to_watch
 	/// A list of turfs to spread
 	var/list/turfs_to_spread
+	/// Amount of turfs we corrupt per second
+	var/spread_per_second = 5
 
 /datum/corruption_node/New(atom/new_parent, obj/structure/marker/marker)
 	if(!new_parent)
@@ -51,7 +53,11 @@
 	return ..()
 
 /datum/corruption_node/process(delta_time)
+	var/turfs_to_process = min(spread_per_second*delta_time, length(turfs_to_spread))
+	var/processed_turfs = 0
 	for(var/turf/T as anything in turfs_to_spread)
+		if(processed_turfs >= turfs_to_process)
+			return
 		var/corruption_dir = turfs_to_watch[T]
 		dir_loop:
 			for(var/dir in GLOB.cardinals)
@@ -62,11 +68,13 @@
 				if(get_step(T, turned_dir).CanCorrupt(turned_dir) && T.CanCorrupt(dir))
 					if(remaining_weed_amount > 0 && IN_GIVEN_RANGE(T, parent, control_range))
 						new /obj/structure/corruption(T, src)
+						processed_turfs++
 						break dir_loop
 					else
 						for(var/datum/corruption_node/node as anything in marker.nodes)
 							if(node.remaining_weed_amount > 0 && IN_GIVEN_RANGE(T, node.parent, node.control_range))
 								new /obj/structure/corruption(T, node)
+								processed_turfs++
 								break dir_loop
 
 /datum/corruption_node/proc/on_parent_delete(atom/source)

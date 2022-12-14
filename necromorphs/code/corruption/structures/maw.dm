@@ -1,5 +1,6 @@
 #define CHEW_CHANCE 80
 #define BASE_DAMAGE 10
+#define DAMAGE_TO_BIOMASS_MULTIPLIER 0.2
 
 /obj/structure/necromorph/maw
 	name = "maw"
@@ -42,7 +43,7 @@
 	for(var/mob/living/carbon/human/target as anything in eating)
 		if(DT_PROB(CHEW_CHANCE, delta_time))
 			var/obj/item/bodypart/part = pick(target.bodyparts)
-			. += part.take_damage(BASE_DAMAGE*delta_time, BRUTE, MELEE, TRUE, DOWN, 50)
+			. += part.take_damage(BASE_DAMAGE*delta_time, BRUTE, MELEE, TRUE, DOWN, 50)*DAMAGE_TO_BIOMASS_MULTIPLIER
 			flick("maw_v", src)
 
 /obj/structure/necromorph/maw/proc/target_moved(mob/living/carbon/human/moved)
@@ -57,6 +58,8 @@
 	name = "Maw"
 	place_structure = /obj/structure/necromorph/maw
 	cost = 50
+	marker_only = TRUE
 
 #undef CHEW_CHANCE
 #undef BASE_DAMAGE
+#undef DAMAGE_TO_BIOMASS_MULTIPLIER

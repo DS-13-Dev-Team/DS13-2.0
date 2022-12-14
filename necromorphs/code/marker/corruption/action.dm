@@ -6,10 +6,10 @@
 	var/image/template
 	var/obj/structure/necromorph/place_structure = /obj/structure/necromorph
 	var/marker_only = FALSE
-	var/required_marker_status = SIGNAL_ABILITY_PRE_ACTIVATION|SIGNAL_ABILITY_POST_ACTIVATION
 
 /datum/action/cooldown/necro/corruption/New(Target, original, cooldown)
 	..()
+	name += " | Cost: [cost] bio"
 	template = new /image/necromorph_subtype(initial(place_structure.icon), null, initial(place_structure.icon_state))
 	template.layer = ABOVE_ALL_MOB_LAYER
 	template.plane = ABOVE_LIGHTING_PLANE
@@ -57,7 +57,7 @@
 
 /datum/action/cooldown/necro/corruption/Activate(atom/target)
 	var/mob/camera/marker_signal/signal = owner
-	var/current_biomass = ismarkereye(signal) ? signal.marker.biomass : signal.marker.signal_biomass
+	var/current_biomass = istype(signal, /mob/camera/marker_signal/marker) ? signal.marker.biomass : signal.marker.signal_biomass
 	if(current_biomass < cost)
 		to_chat(signal, span_warning("Not enough biomass!"))
 		return
@@ -72,7 +72,7 @@
 		if(movable.density)
 			to_chat(signal, span_warning("Turf is obstructed!"))
 			return
-	if(ismarkereye(signal))
+	if(istype(signal, /mob/camera/marker_signal/marker))
 		signal.marker.biomass -= cost
 	else
 		signal.marker.signal_biomass -= cost

@@ -15,11 +15,6 @@
 	var/charge_damage = 30
 	/// If the current move is being triggered by us or not
 	var/actively_moving = FALSE
-	/// Target dir we are moving to
-	var/tmp/target_dir = NONE
-	/// Dirs we are allowed to move during the charge
-	var/tmp/target_dir_left = NONE
-	var/tmp/target_dir_right = NONE
 
 /datum/action/cooldown/necro/charge/New(Target, cooldown, delay, time, speed, damage)
 	.=..()
@@ -33,44 +28,43 @@
 		charge_damage = damage
 
 /datum/action/cooldown/necro/charge/Activate(atom/target_atom)
+	var/turf/T = get_turf(target_atom)
+	if(!T)
+		return
+	if(!ishuman(target_atom))
+		for(var/mob/living/carbon/human/hummie in view(1, T))
+			if(!isnecromorph(hummie))
+				target_atom = hummie
+				break
+	if(target_atom == owner || isnecromorph(target_atom))
+		return
 	// Start pre-cooldown so that the ability can't come up while the charge is happening
 	StartCooldown(charge_time+charge_delay+1)
 	do_charge(owner, target_atom)
 
 /datum/action/cooldown/necro/charge/proc/do_charge(atom/movable/charger, atom/target_atom)
-	if(!target_atom || target_atom == charger)
-		return
-	var/chargeturf = get_turf(target_atom)
-	if(!chargeturf)
-		return
-	target_dir = get_dir(charger, chargeturf)
-	target_dir_left = turn(target_dir, -90)
-	target_dir_right = turn(target_dir, 90)
-
 	actively_moving = FALSE
 	SEND_SIGNAL(charger, COMSIG_STARTED_CHARGE)
 	RegisterSignal(charger, COMSIG_MOVABLE_BUMP, .proc/on_bump)
 	RegisterSignal(charger, COMSIG_MOVABLE_PRE_MOVE, .proc/on_move)
 	RegisterSignal(charger, COMSIG_MOVABLE_MOVED, .proc/on_moved)
-	charger.setDir(target_dir)
-	charger.set_dir_on_move = FALSE
+	charger.setDir(get_dir(charger, target_atom))
 	do_charge_indicator(target_atom)
 
 	SLEEP_CHECK_DEATH(charge_delay, charger)
 
-	var/datum/move_loop/move/moving_loop = SSmove_manager.move(charger, target_dir, charge_speed, charge_time, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
-	if(!moving_loop)
+	var/datum/move_loop/new_loop = SSmove_manager.home_onto(charger, target_atom, delay = charge_speed, timeout = charge_time, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
+	if(!new_loop)
 		return
-	RegisterSignal(moving_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, .proc/pre_move)
-	RegisterSignal(moving_loop, COMSIG_MOVELOOP_POSTPROCESS, .proc/post_move)
-	RegisterSignal(moving_loop, COMSIG_PARENT_QDELETING, .proc/charge_end)
+	RegisterSignal(new_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, .proc/pre_move)
+	RegisterSignal(new_loop, COMSIG_MOVELOOP_POSTPROCESS, .proc/post_move)
+	RegisterSignal(new_loop, COMSIG_PARENT_QDELETING, .proc/charge_end)
 	if(ismob(charger))
-		RegisterSignal(moving_loop, COMSIG_MOB_STATCHANGE, .proc/stat_changed)
-		RegisterSignal(moving_loop, COMSIG_LIVING_UPDATED_RESTING, .proc/update_resting)
+		RegisterSignal(new_loop, COMSIG_MOB_STATCHANGE, .proc/stat_changed)
+		RegisterSignal(new_loop, COMSIG_LIVING_UPDATED_RESTING, .proc/update_resting)
 
 /datum/action/cooldown/necro/charge/proc/pre_move(datum)
 	SIGNAL_HANDLER
-	// If you sleep in Move() you deserve what's coming to you
 	actively_moving = TRUE
 
 /datum/action/cooldown/necro/charge/proc/post_move(datum)
@@ -97,8 +91,7 @@
 
 /datum/action/cooldown/necro/charge/proc/on_move(atom/source, atom/new_loc)
 	SIGNAL_HANDLER
-	var/loc_dir = get_dir(source, new_loc)
-	if(!actively_moving && loc_dir != target_dir_left && loc_dir != target_dir_right)
+	if(!actively_moving)
 		return COMPONENT_MOVABLE_BLOCK_PRE_MOVE
 
 /datum/action/cooldown/necro/charge/proc/on_moved(atom/source)

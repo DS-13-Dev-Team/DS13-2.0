@@ -8,7 +8,7 @@
 	icon = 'necromorphs/icons/effects/new_corruption.dmi'
 	icon_state = "corruption-1"
 	base_icon_state = "corruption"
-	layer = BELOW_OPEN_DOOR_LAYER
+	layer = NECROMORPH_CORRUPTION_LAYER
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_NECROMORPHS)
 	canSmoothWith = list(SMOOTH_GROUP_WALLS, SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_NECROMORPHS)

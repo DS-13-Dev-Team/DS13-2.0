@@ -79,10 +79,15 @@
 	active = TRUE
 	for(var/mob/camera/marker_signal/eye as anything in marker_signals)
 		for(var/datum/action/cooldown/necro/psy/ability as anything in eye.abilities)
-			if((ability.required_marker_status & SIGNAL_ABILITY_PRE_ACTIVATION))
+			if((ability.marker_flags & SIGNAL_ABILITY_PRE_ACTIVATION))
 				ability.Remove(eye)
-			if((ability.required_marker_status & SIGNAL_ABILITY_POST_ACTIVATION))
+			if((ability.marker_flags & SIGNAL_ABILITY_POST_ACTIVATION))
 				ability.Grant(eye)
+		for(var/datum/action/cooldown/necro/corruption/ability as anything in subtypesof(/datum/action/cooldown/necro/corruption))
+			if(initial(ability.marker_only) && !istype(eye, /mob/camera/marker_signal/marker))
+				continue
+			ability = new ability(eye)
+			ability.Grant(eye)
 	new /datum/corruption_node/atom/marker(src, src)
 
 /obj/structure/marker/CanCorrupt(corruption_dir)

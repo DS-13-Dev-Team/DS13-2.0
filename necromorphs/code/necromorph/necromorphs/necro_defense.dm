@@ -116,7 +116,7 @@
 //200 max knockdown for EXPLODE_HEAVY
 //160 max knockdown for EXPLODE_LIGHT
 
-	var/obj/item/organ/ears/ears = getorganslot(ORGAN_SLOT_EARS)
+	var/obj/item/organ/internal/ears/ears = getorganslot(ORGAN_SLOT_EARS)
 	switch (severity)
 		if (EXPLODE_DEVASTATE)
 			if(bomb_armor < EXPLODE_GIB_THRESHOLD) //gibs the mob if their bomb armor is lower than EXPLODE_GIB_THRESHOLD
