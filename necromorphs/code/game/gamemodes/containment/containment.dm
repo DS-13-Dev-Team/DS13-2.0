@@ -15,10 +15,10 @@
 
 ///Attempts to select players for special roles the mode might have.
 /datum/game_mode/containment/pre_setup()
-	if(!length(possible_marker_locations))
+	if(!length(GLOB.possible_marker_locations))
 		return
 	//Just it for now
-	var/turf/location = pick(possible_marker_locations)
+	var/turf/location = pick(GLOB.possible_marker_locations)
 	new /obj/structure/marker(location)
 	return TRUE
 
