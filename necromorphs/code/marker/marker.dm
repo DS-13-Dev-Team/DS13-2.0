@@ -89,6 +89,12 @@
 			ability = new ability(eye)
 			ability.Grant(eye)
 	new /datum/corruption_node/atom/marker(src, src)
+	add_biomass_income(src, 5)
+	addtimer(CALLBACK(src, .proc/__add_passive_income), 10 MINUTES)
+
+/obj/structure/marker/proc/__add_passive_income()
+	add_biomass_income(src, 5)
+	addtimer(CALLBACK(src, .proc/__add_passive_income), 10 MINUTES)
 
 /obj/structure/marker/CanCorrupt(corruption_dir)
 	return TRUE
