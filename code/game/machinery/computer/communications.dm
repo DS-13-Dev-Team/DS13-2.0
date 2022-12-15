@@ -867,8 +867,7 @@
 					// We spawned some sleeper agents, nice - give them a report to kickstart the paranoia
 					priority_announce(
 							"Attention crew, it appears that someone on your station has hijacked your telecommunications, broadcasting a Syndicate radio signal to your fellow employees.",
-							"[command_name()] High-Priority Update",
-							sound_type = ANNOUNCER_CENTCOM
+							"[command_name()] High-Priority Update"
 						)
 
 #undef HACK_PIRATE
