@@ -23,30 +23,58 @@
 	wound_resistance = 5
 
 /obj/item/bodypart/l_arm/necromorph/exploder
-	name = "left blade"
+	name = "yellow pustule"
 	desc = "Did you know that the word 'sinister' stems originally from the \
 		Latin 'sinestra' (left hand), because the left hand was supposed to \
 		be possessed by the devil? This arm appears to be possessed by no \
 		one though."
 	icon_static = 'necromorphs/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "l_arm"
-	attack_verb_continuous = list("slashes", "stabs")
-	attack_verb_simple = list("slash", "stab")
 	max_damage = 50
 	max_stamina_damage = 50
 	body_damage_coeff = 0.75
 	px_x = -6
 	px_y = 0
 	wound_resistance = 0
+	integrity_failure = 0.25
+	var/list/datum/action/cooldown/necro/exploding_actions
+
+/obj/item/bodypart/l_arm/necromorph/exploder/Initialize(mapload)
+	. = ..()
+	exploding_actions = list(
+		new /datum/action/cooldown/necro/explode(src),
+		new /datum/action/cooldown/necro/charge/exploder(src),
+	)
+
+/obj/item/bodypart/l_arm/necromorph/exploder/Destroy()
+	exploding_actions = null
+	return ..()
+
+/obj/item/bodypart/l_arm/necromorph/exploder/attach_limb(mob/living/carbon/new_limb_owner, special)
+	if(..())
+		for(var/datum/action/cooldown/necro/ability as anything in exploding_actions)
+			ability.Grant(new_limb_owner)
+		return TRUE
+
+/obj/item/bodypart/l_arm/necromorph/exploder/drop_limb(special)
+	for(var/datum/action/cooldown/necro/ability as anything in exploding_actions)
+		ability.Remove(owner)
+	..()
+
+/obj/item/bodypart/l_arm/necromorph/exploder/atom_break()
+	..()
+	explode()
+
+/obj/item/bodypart/l_arm/necromorph/exploder/proc/explode()
+	explosion(get_turf(loc ? loc : owner), 0, 0, 2, 1, smoke = TRUE, explosion_cause = src)
+	qdel(src)
 
 /obj/item/bodypart/r_arm/necromorph/exploder
-	name = "right blade"
+	name = "right arm"
 	desc = "Over 87% of humans are right handed. That figure is much lower \
 		among humans missing their right arm."
 	icon_static = 'necromorphs/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "l_arm"
-	attack_verb_continuous = list("slashes", "stabs")
-	attack_verb_simple = list("slash", "stab")
 	max_damage = 50
 	body_damage_coeff = 0.75
 	px_x = 6

@@ -26,6 +26,7 @@
 	base_pixel_x = -8
 	base_pixel_y = 0
 	pixel_x = -8
+	has_human_mood = FALSE
 	var/nicknumber = 0
 
 	var/tier = 0

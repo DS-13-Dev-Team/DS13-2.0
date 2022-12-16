@@ -20,7 +20,7 @@
 	new_matrix.Turn(17*shake_dir)
 	animate(holder, transform = new_matrix, pixel_x = holder.pixel_x + 6*shake_dir, time = 1)
 	animate(transform = matrix(), pixel_x = holder.pixel_x-6*shake_dir, time = 11, easing = ELASTIC_EASING)
-	new /obj/effect/temp_visual/expanding_circle(holder.loc, 2, 3 SECONDS)	//Visual effect
+	new /obj/effect/temp_visual/expanding_circle(holder.loc, 3 SECONDS, 2) //Visual effect
 	for(var/mob/M in range(8, src))
 		var/distance = get_dist(src, M)
 		var/intensity = 5 - (distance * 0.3)

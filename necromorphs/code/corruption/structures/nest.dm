@@ -4,6 +4,11 @@
 	name = "nest"
 	icon = 'necromorphs/icons/effects/corruption64.dmi'
 	icon_state = "nest"
+	density = TRUE
+	pixel_x = -16
+	base_pixel_x = -16
+	pixel_y = -16
+	base_pixel_y = -16
 	///Type, not a reference
 	var/datum/necro_class/spawning_necromorph
 	var/biomass_spent = 0
@@ -69,7 +74,8 @@
 			var/type_to_spawn = initial(spawning_necromorph.necromorph_type_path)
 			available_necromorphs--
 			currently_active_necromorphs++
-			var/mob/living/carbon/human/necromorph/necromorph = new type_to_spawn(pick(view(4, src)))
+			var/mob/living/carbon/human/necromorph/necromorph = new type_to_spawn(get_turf(src), marker)
+			user.possess_necromorph(necromorph)
 			RegisterSignal(necromorph, list(COMSIG_PARENT_QDELETING, COMSIG_LIVING_DEATH), .proc/on_necromorph_death)
 			if((available_necromorphs+currently_active_necromorphs) < max_spawns)
 				timer_id = addtimer(CALLBACK(src, .proc/add_necromorph_to_spawn), DEFAULT_SPAWN_COOLDOWN, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_NO_HASH_WAIT)
@@ -104,5 +110,11 @@
 	available_necromorphs++
 	if((available_necromorphs+currently_active_necromorphs) < max_spawns)
 		timer_id = addtimer(CALLBACK(src, .proc/add_necromorph_to_spawn), DEFAULT_SPAWN_COOLDOWN, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_NO_HASH_WAIT)
+
+/datum/action/cooldown/necro/corruption/nest
+	name = "Nest"
+	place_structure = /obj/structure/necromorph/nest
+	cost = 110
+	marker_only = TRUE
 
 #undef DEFAULT_SPAWN_COOLDOWN

@@ -3,7 +3,7 @@
 	desc = "A context sensitive spell which does different things depending on the target. Interfaces with machines, moves items, messes with computers and office appliances."
 	cost = 100
 	cooldown_time = 2 MINUTES
-	required_marker_status = SIGNAL_ABILITY_PRE_ACTIVATION
+	marker_flags = SIGNAL_ABILITY_PRE_ACTIVATION
 
 /datum/action/cooldown/necro/psy/false_sound/Activate(turf/target, mob/camera/marker_signal/caller)
 	target = get_turf(target)
@@ -31,4 +31,4 @@
 /datum/action/cooldown/necro/psy/false_sound/after_activation
 	cost = 25
 	cooldown_time = 15 SECONDS
-	required_marker_status = SIGNAL_ABILITY_POST_ACTIVATION
+	marker_flags = SIGNAL_ABILITY_POST_ACTIVATION

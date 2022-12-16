@@ -6,10 +6,10 @@
 	var/image/template
 	var/obj/structure/necromorph/place_structure = /obj/structure/necromorph
 	var/marker_only = FALSE
-	var/required_marker_status = SIGNAL_ABILITY_PRE_ACTIVATION|SIGNAL_ABILITY_POST_ACTIVATION
 
 /datum/action/cooldown/necro/corruption/New(Target, original, cooldown)
 	..()
+	name += " | Cost: [cost] bio"
 	template = new /image/necromorph_subtype(initial(place_structure.icon), null, initial(place_structure.icon_state))
 	template.layer = ABOVE_ALL_MOB_LAYER
 	template.plane = ABOVE_LIGHTING_PLANE
@@ -57,13 +57,13 @@
 
 /datum/action/cooldown/necro/corruption/Activate(atom/target)
 	var/mob/camera/marker_signal/signal = owner
-	var/current_biomass = ismarkereye(signal) ? signal.marker.biomass : signal.marker.signal_biomass
+	var/current_biomass = istype(signal, /mob/camera/marker_signal/marker) ? signal.marker.biomass : signal.marker.signal_biomass
 	if(current_biomass < cost)
-		to_chat(signal, span_warning("You don't have enough biomass!"))
+		to_chat(signal, span_warning("Not enough biomass!"))
 		return
 	var/turf/target_turf = get_turf(target)
 	if(!target_turf.necro_corrupted)
-		to_chat(signal, span_warning("You need a turf to be corrupted to place this structure!"))
+		to_chat(signal, span_warning("Turf isn't corrupted!"))
 		return
 	if(locate(/obj/structure/necromorph) in target_turf)
 		to_chat(signal, span_warning("There is another structure on this turf!"))
@@ -72,11 +72,12 @@
 		if(movable.density)
 			to_chat(signal, span_warning("Turf is obstructed!"))
 			return
-	if(ismarkereye(signal))
+	if(istype(signal, /mob/camera/marker_signal/marker))
 		signal.marker.biomass -= cost
 	else
 		signal.marker.signal_biomass -= cost
-	new place_structure(target_turf, signal.marker)
+	var/obj/structure/necromorph/structure = new place_structure(target_turf, signal.marker)
+	structure.dir = template.dir
 	return TRUE
 
 /datum/action/cooldown/necro/corruption/UpdateButton(atom/movable/screen/movable/action_button/button, status_only = FALSE, force = FALSE)
@@ -96,7 +97,6 @@
 				button.icon = button_icon
 			if(button.icon_state != background_icon_state)
 				button.icon_state = background_icon_state
-
 		ApplyIcon(button, force)
 
 	if(!IsAvailable())

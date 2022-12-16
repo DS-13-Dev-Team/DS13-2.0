@@ -39,23 +39,22 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	action.Grant(src)
 
 	for(var/datum/action/cooldown/necro/psy/ability as anything in subtypesof(/datum/action/cooldown/necro/psy))
-		if(initial(ability.marker_only) && !istype(src, /mob/camera/marker_signal/marker))
+		if((initial(ability.marker_flags) & SIGNAL_ABILITY_MARKER_ONLY) && !istype(src, /mob/camera/marker_signal/marker))
 			continue
 		ability = new ability(src)
 		abilities += ability
-		if((initial(ability.required_marker_status) & SIGNAL_ABILITY_PRE_ACTIVATION) && !marker.active)
-			ability.Grant(src)
-		else if((initial(ability.required_marker_status) & SIGNAL_ABILITY_POST_ACTIVATION) && marker.active)
-			ability.Grant(src)
+		if(!marker.active)
+			if(initial(ability.marker_flags) & SIGNAL_ABILITY_PRE_ACTIVATION)
+				ability.Grant(src)
+		else
+			if(initial(ability.marker_flags) & SIGNAL_ABILITY_POST_ACTIVATION)
+				ability.Grant(src)
 
-	for(var/datum/action/cooldown/necro/corruption/ability as anything in subtypesof(/datum/action/cooldown/necro/corruption))
-		if(initial(ability.marker_only) && !istype(src, /mob/camera/marker_signal/marker))
-			continue
-		ability = new ability(src)
-		abilities += ability
-		if((initial(ability.required_marker_status) & SIGNAL_ABILITY_PRE_ACTIVATION) && !marker.active)
-			ability.Grant(src)
-		else if((initial(ability.required_marker_status) & SIGNAL_ABILITY_POST_ACTIVATION) && marker.active)
+	if(marker.active)
+		for(var/datum/action/cooldown/necro/corruption/ability as anything in subtypesof(/datum/action/cooldown/necro/corruption))
+			if(initial(ability.marker_only) && !istype(src, /mob/camera/marker_signal/marker))
+				continue
+			ability = new ability(src)
 			ability.Grant(src)
 
 	START_PROCESSING(SSprocessing, src)
@@ -184,11 +183,11 @@ GLOBAL_LIST_EMPTY(markers_signals)
 /mob/camera/marker_signal/verb/possess_necromorph(mob/living/carbon/human/necromorph/necro in world)
 	set name = "Possess Necromorph"
 	set category = "Object"
-
+	if(necro.stat == DEAD)
+		to_chat(src, span_notice("This vessel was damaged beyond use!"))
+		return
 	necro.controlling = src
 	mind.transfer_to(necro, TRUE)
-	//moveToNullspace()
-	//We don't want to use doMove() here
 	abstract_move(null)
 
 /mob/camera/marker_signal/proc/change_psy_energy(amount)
@@ -203,14 +202,18 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	set name = "Become master signal"
 	set category = "Necromorph"
 
+	if(!marker.active)
+		to_chat(src, span_notice("Marker is not active yet!"))
+		return
 	if(marker.camera_mob)
 		to_chat(src, span_notice("There is a player controlling the marker already!"))
-	else
-		var/mob/camera/marker_signal/marker/camera = new /mob/camera/marker_signal/marker(get_turf(src), marker)
-		marker.camera_mob = camera
-		camera.real_name = camera.name
-		camera.ckey = src.ckey
-		qdel(src)
+		return
+	var/mob/camera/marker_signal/marker/camera = new /mob/camera/marker_signal/marker(get_turf(src), marker)
+	marker.camera_mob = camera
+	camera.real_name = camera.name
+	camera.ckey = src.ckey
+	camera.psy_energy = min(psy_energy, camera.psy_energy_maximum)
+	qdel(src)
 
 /mob/camera/marker_signal/marker
 	name = "Marker"
@@ -243,6 +246,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	var/mob/camera/marker_signal/signal = new /mob/camera/marker_signal(get_turf(src), marker)
 	signal.real_name = signal.name
 	signal.ckey = src.ckey
+	signal.psy_energy = min(psy_energy, signal.psy_energy_maximum)
 	qdel(src)
 
 /mob/camera/marker_signal/marker/verb/open_marker_ui()
@@ -295,10 +299,10 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 /mob/camera/marker_signal/marker/proc/spawn_necromorph(turf/A)
 	if(marker.spent_biomass < marker.necro_classes[spawning_necromorph].biomass_spent_required)
-		to_chat(src, span_warning("You need to spend more biomass to unlock this necromorph!"))
+		to_chat(src, span_warning("Not enough biomass spent!"))
 		return
 	if(marker.biomass < marker.necro_classes[spawning_necromorph].biomass_cost)
-		to_chat(src, span_warning("You don't have enough biomass!"))
+		to_chat(src, span_warning("Not enough biomass!"))
 		return
 	A = get_turf(A)
 	if(!A)
@@ -313,7 +317,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	//In case there was a nearby spawnloc but nest was behind a wall
 	var/spawnloc_cantsee
 	for(var/atom/spawnloc as anything in marker.necro_spawn_atoms)
-		if(IN_GIVEN_RANGE(spawnloc, A, 4))
+		if(!IN_GIVEN_RANGE(spawnloc, A, 4))
 			continue
 		var/turf/turf_loc = get_turf(spawnloc)
 		if(!can_see(turf_loc, A, 4))
@@ -321,7 +325,10 @@ GLOBAL_LIST_EMPTY(markers_signals)
 			continue
 		marker.biomass -= marker.necro_classes[spawning_necromorph].biomass_cost
 		var/path = marker.necro_classes[spawning_necromorph].necromorph_type_path
-		new path(A, marker)
+		var/mob/living/carbon/human/necromorph/mob = new path(A, marker)
+		if(marker.use_necroqueue && length(marker.marker_signals-src))
+			var/mob/camera/marker_signal/signal = pick(marker.marker_signals-src)
+			signal.possess_necromorph(mob)
 		return
 	if(!spawnloc_cantsee)
 		to_chat(src, span_warning("There are no possible spawn locations nearby!"))

@@ -13,3 +13,4 @@
 	name = "Propagator"
 	place_structure = /obj/structure/necromorph/node/propagator
 	cost = 20
+	marker_only = TRUE

@@ -167,7 +167,7 @@ SUBSYSTEM_DEF(ticker)
 	to_chat(world, "<br><hr><br>")
 	var/init_start = world.timeofday
 
-	mode = new /datum/game_mode/dynamic
+	mode = new /datum/game_mode/containment
 
 	CHECK_TICK
 	//Configure mode and assign player to special mode stuff

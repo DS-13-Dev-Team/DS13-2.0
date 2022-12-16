@@ -4,8 +4,7 @@
 	click_to_activate = TRUE
 	var/cost = 0
 	var/click_through_static = FALSE
-	var/marker_only = FALSE
-	var/required_marker_status = SIGNAL_ABILITY_PRE_ACTIVATION|SIGNAL_ABILITY_POST_ACTIVATION
+	var/marker_flags = SIGNAL_ABILITY_PRE_ACTIVATION|SIGNAL_ABILITY_POST_ACTIVATION
 
 /datum/action/cooldown/necro/psy/New(Target, original, cooldown)
 	..()

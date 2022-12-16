@@ -1,5 +1,5 @@
 #define HEALTHBAR_PIXEL_WIDTH 181
-//TODO: Get rid of the component, move this into necromorph UI
+//TODO: Get rid of the component, move this to necromorph UI
 /datum/component/health_meter
 	var/atom/movable/screen/meter/background/background
 	var/atom/movable/screen/meter/health/health
