@@ -1,17 +1,8 @@
 //Still a lot of things to do
-
-/*
- * GAMEMODES (by Rastaf0)
- *
- * In the new mode system all special roles are fully supported.
- * You can have proper wizards/traitors/changelings/cultists during any mode.
- * Only two things really depends on gamemode:
- * 1. Starting roles, equipment and preparations
- * 2. Conditions of finishing the round.
- *
- */
-
 /datum/game_mode/containment
+	var/obj/structure/marker/main_marker
+	var/minimum_round_crew = 2
+	var/minimum_alive_percentage = 0.1 //0.1 = 10%
 
 ///Attempts to select players for special roles the mode might have.
 /datum/game_mode/containment/pre_setup()
@@ -19,11 +10,14 @@
 		return TRUE
 	//Just it for now
 	var/turf/location = pick(GLOB.possible_marker_locations)
-	new /obj/structure/marker(location)
+	main_marker = new /obj/structure/marker(location)
+	addtimer(CALLBACK(src, .proc/activate_marker), rand(45 MINUTES, 60 MINUTES))
 	return TRUE
 
-///Everyone should now be on the station and have their normal gear.  This is the place to give the special roles extra things
-/datum/game_mode/containment/post_setup(report) //Gamemodes can override the intercept report. Passing TRUE as the argument will force a report.
+/datum/game_mode/containment/proc/activate_marker()
+	main_marker?.activate()
+
+/datum/game_mode/containment/post_setup(report)
 	if(!report)
 		report = !CONFIG_GET(flag/no_intercept_report)
 	addtimer(CALLBACK(GLOBAL_PROC, .proc/display_roundstart_logout_report), ROUNDSTART_LOGOUT_REPORT_TIME)
@@ -53,8 +47,16 @@
 			)
 			query_round_game_mode.Execute()
 			qdel(query_round_game_mode)
+	if(report)
+		addtimer(CALLBACK(src, .proc/announce_marker), rand(1 MINUTES, 3 MINUTES))
 	return TRUE
 
+/datum/game_mode/containment/proc/announce_marker()
+	. += "<center><b><h2>CEC Corporation Report</h2></b></center><hr><br />"
+	. += "Your ship is currently in Cygnus System not far from Aegis VII planet. It is resricted area of space and you shold avoid outside contancts. Your task is to extract alien artifact on the planet surface and deliver it to the rendezvous point. Make sure Earth Government or crew without priority access will not find out about your location, task or cargo. "
+
+	print_command_report(., "CEC Corporation Report", announce=FALSE)
+	priority_announce("Thanks to the tireless efforts of our security and intelligence divisions, there are currently no credible threats to [station_name()]. All station construction projects have been authorized. Have a secure shift!", "Security Report", SSstation.announcer.get_rand_report_sound())
 
 ///Handles late-join antag assignments
 /datum/game_mode/containment/make_antag_chance(mob/living/carbon/human/character)
@@ -69,6 +71,15 @@
 		return TRUE
 	if(force_ending)
 		return TRUE
+
+	if(main_marker.active)
+		if (get_round_crew_total() >= minimum_round_crew)
+			var/minimum_living_crew = ROUND_UP(get_round_crew_total() * minimum_alive_percentage)
+			if (get_living_active_crew_on_station() < minimum_living_crew)
+				return TRUE
+
+/proc/get_round_crew_total()
+/proc/get_living_active_crew_on_station()
 
 /*
  * Generate a list of station goals available to purchase to report to the crew.
