@@ -22,6 +22,10 @@
 	QDEL_NULL(markernet)
 	.=..()
 
+/obj/structure/marker/update_icon_state()
+	icon_state = (active ? "marker_giant_dormant" : "marker_giant_active_anim")
+	return ..()
+
 /obj/structure/marker/proc/add_biomass_income(source, biomass_per_tick = 0)
 	if(biomass_sources[source])
 		biomass_sources[source] += biomass_per_tick
@@ -90,11 +94,11 @@
 			ability.Grant(eye)
 	new /datum/corruption_node/atom/marker(src, src)
 	add_biomass_income(src, 5)
-	addtimer(CALLBACK(src, .proc/__add_passive_income), 10 MINUTES)
+	addtimer(CALLBACK(src, .proc/_add_passive_income), 10 MINUTES, TIMER_LOOP)
+	update_icon(UPDATE_ICON_STATE)
 
-/obj/structure/marker/proc/__add_passive_income()
+/obj/structure/marker/proc/_add_passive_income()
 	add_biomass_income(src, 5)
-	addtimer(CALLBACK(src, .proc/__add_passive_income), 10 MINUTES)
 
 /obj/structure/marker/CanCorrupt(corruption_dir)
 	return TRUE
