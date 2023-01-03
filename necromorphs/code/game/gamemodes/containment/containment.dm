@@ -7,6 +7,7 @@
 ///Attempts to select players for special roles the mode might have.
 /datum/game_mode/containment/pre_setup()
 	if(!length(GLOB.possible_marker_locations))
+		log_mapping("No /obj/effect/marker_location was placed on the map!")
 		return TRUE
 	//Just it for now
 	var/turf/location = pick(GLOB.possible_marker_locations)
@@ -18,38 +19,9 @@
 	main_marker?.activate()
 
 /datum/game_mode/containment/post_setup(report)
-	if(!report)
-		report = !CONFIG_GET(flag/no_intercept_report)
-	addtimer(CALLBACK(GLOBAL_PROC, .proc/display_roundstart_logout_report), ROUNDSTART_LOGOUT_REPORT_TIME)
-
-	if(CONFIG_GET(flag/reopen_roundstart_suicide_roles))
-		var/delay = CONFIG_GET(number/reopen_roundstart_suicide_roles_delay)
-		if(delay)
-			delay = (delay SECONDS)
-		else
-			delay = (4 MINUTES) //default to 4 minutes if the delay isn't defined.
-		addtimer(CALLBACK(GLOBAL_PROC, .proc/reopen_roundstart_suicide_roles), delay)
-
-	if(SSdbcore.Connect())
-		var/list/to_set = list()
-		var/arguments = list()
-		if(SSticker.mode)
-			to_set += "game_mode = :game_mode"
-			arguments["game_mode"] = SSticker.mode
-		if(GLOB.revdata.originmastercommit)
-			to_set += "commit_hash = :commit_hash"
-			arguments["commit_hash"] = GLOB.revdata.originmastercommit
-		if(to_set.len)
-			arguments["round_id"] = GLOB.round_id
-			var/datum/db_query/query_round_game_mode = SSdbcore.NewQuery(
-				"UPDATE [format_table_name("round")] SET [to_set.Join(", ")] WHERE id = :round_id",
-				arguments
-			)
-			query_round_game_mode.Execute()
-			qdel(query_round_game_mode)
-	if(report)
+	if(!CONFIG_GET(flag/no_intercept_report))
 		addtimer(CALLBACK(src, .proc/announce_marker), rand(1 MINUTES, 3 MINUTES))
-	return TRUE
+	return ..()
 
 /datum/game_mode/containment/proc/announce_marker()
 	. += "<center><b><h2>CEC Corporation Report</h2></b></center><hr><br />"
@@ -62,7 +34,7 @@
 /datum/game_mode/containment/make_antag_chance(mob/living/carbon/human/character)
 	return
 
-/datum/game_mode/containment/check_finished(force_ending) //to be called by SSticker
+/datum/game_mode/containment/check_finished(force_ending)
 	if(!SSticker.setup_done)
 		return FALSE
 	if(SSshuttle.emergency && (SSshuttle.emergency.mode == SHUTTLE_ENDGAME))
@@ -72,14 +44,23 @@
 	if(force_ending)
 		return TRUE
 
-	if(main_marker.active)
-		if (get_round_crew_total() >= minimum_round_crew)
-			var/minimum_living_crew = ROUND_UP(get_round_crew_total() * minimum_alive_percentage)
+	if(main_marker?.active)
+		if(length(GLOB.joined_player_list) >= minimum_round_crew)
+			var/minimum_living_crew = ROUND_UP(length(GLOB.joined_player_list) * minimum_alive_percentage)
 			if (get_living_active_crew_on_station() < minimum_living_crew)
 				return TRUE
 
-/proc/get_round_crew_total()
 /proc/get_living_active_crew_on_station()
+	. = 0
+	for(var/mob/living/alive as anything in GLOB.alive_player_list)
+		if(!(alive.ckey in GLOB.joined_player_list))
+			continue
+		if(alive.client.is_afk())
+			continue
+		var/turf/location = get_turf(alive)
+		if(!location || !SSmapping.level_trait(location.z, ZTRAIT_STATION))
+			continue
+		. += 1
 
 /*
  * Generate a list of station goals available to purchase to report to the crew.
