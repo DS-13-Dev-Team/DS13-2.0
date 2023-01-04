@@ -42,6 +42,25 @@
 		mind.transfer_to(controlling, TRUE)
 		controlling = null
 
+/mob/living/carbon/human/necromorph/proc/add_shield()
+	dodge_shield = 5 + (maxHealth*0.15)
+	if(hud_used)
+		var/datum/hud/necromorph/hud = hud_used
+		hud.update_shieldbar(src)
+	addtimer(CALLBACK(src, .proc/remove_shield), 5 SECONDS, TIMER_OVERRIDE|TIMER_UNIQUE)
+
+/mob/living/carbon/human/necromorph/proc/remove_shield()
+	dodge_shield = 0
+	if(hud_used)
+		var/datum/hud/necromorph/hud = hud_used
+		hud.update_shieldbar(src)
+
+/mob/living/carbon/human/necromorph/proc/reduce_shield(amount)
+	dodge_shield -= amount
+	if(hud_used)
+		var/datum/hud/necromorph/hud = hud_used
+		hud.update_shieldbar(src)
+
 /client/proc/spawn_necromorph()
 	set category = "Debug"
 	set desc = "Spawn a necromorph"

@@ -97,7 +97,7 @@
 	var/datum/necro_class/class = classes[tgui_input_list(user, "Pick a necromorph nest will spawn", "Nest", classes)]
 	if(QDELING(src))
 		return
-	if(class.biomass_cost > marker.biomass)
+	if(class.biomass_cost > marker.marker_biomass)
 		to_chat(user, span_warning("You don't have enough biomass!"))
 		return
 	biomass_spent = class.biomass_cost

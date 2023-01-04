@@ -29,7 +29,9 @@
 	has_human_mood = FALSE
 	var/nicknumber = 0
 
-	var/tier = 0
+	/// "Shield" that appears after dodging. Absorbs incom
+	var/dodge_shield = 0
+
 	/// Necromorph class type we are using, shouldn't be a ref
 	/// Use marker?.necro_classes[class].your_var||initial(class.your_var) if you need to get a var
 	var/datum/necro_class/class = /datum/necro_class
@@ -41,15 +43,12 @@
 	/// whether the necromorph mobhud is activated or not.
 	var/necro_mobhud = FALSE
 
-	/// whether the necromorph has been selected by the queen as a leader.
+	/// whether the necromorph has been selected by the marker as a leader.
 	var/marker_chosen_lead
 
 	/// Notification spam controls
 	var/recent_notice = 0
 	var/notice_delay = 2 SECONDS
-
-	/// Luminosity of the current fire while burning
-	var/fire_luminosity = 0
 
 	/// The necromorph currently tracked by the necro_tracker arrow
 	var/atom/tracked

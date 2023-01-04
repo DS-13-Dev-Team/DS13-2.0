@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	var/list/marker_signals = list()
 	var/list/necromorphs = list()
 	/// Biomass stored
-	var/biomass = 0
+	var/marker_biomass = 0
 	/// Biomass signals can use
 	var/signal_biomass = 0
 	/// Biomass marker spent since the start of the round

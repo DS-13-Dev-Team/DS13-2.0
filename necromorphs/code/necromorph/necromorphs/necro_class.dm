@@ -3,6 +3,8 @@
 	var/desc = ""
 	var/ui_icon
 
+	var/tier = 0
+
 	var/necromorph_type_path = null
 
 	///If nests can spawn this necromorph

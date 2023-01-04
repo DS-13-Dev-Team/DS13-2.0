@@ -3,8 +3,9 @@
 	if(!isnull(.))
 		SEND_SIGNAL(src, COMSIG_ATOM_SET_DENSITY, ., new_value)
 
+//Should return list or nukk
 /atom/proc/can_see_marker()
-	return list()
+	return null
 
 /atom/proc/CanCorrupt(corruption_dir)
 	if(!density)

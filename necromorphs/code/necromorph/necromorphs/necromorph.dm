@@ -13,15 +13,16 @@
 	temp.load_data(src)
 	set_health(temp.max_health)
 
-	//Should be replaced with hud as soon as possible
-	AddComponent(/datum/component/health_meter)
-	RegisterSignal(src, COMSIG_STARTED_CHARGE, .proc/start_charge)
-	RegisterSignal(src, COMSIG_FINISHED_CHARGE, .proc/end_charge)
-
 /mob/living/carbon/human/necromorph/Destroy()
 	evacuate()
 	marker?.remove_necro(src)
 	return ..()
+
+/mob/living/carbon/human/necromorph/updatehealth()
+	. = ..()
+	if(hud_used)
+		var/datum/hud/necromorph/hud = hud_used
+		hud.update_healthbar(src)
 
 /mob/living/carbon/human/necromorph/revive(full_heal = FALSE, admin_revive = FALSE, excess_healing = 0)
 	.=..()

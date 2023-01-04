@@ -37,8 +37,7 @@
 	StartCooldown(leap_time+leap_delay+1)
 	do_leap(owner, target_atom)
 
-/datum/action/cooldown/necro/leap/proc/do_leap(atom/movable/leaper, atom/target_atom)
-
+/datum/action/cooldown/necro/leap/proc/do_leap(mob/living/carbon/human/necromorph/leaper, atom/target_atom)
 	if(!target_atom || target_atom == leaper)
 		return
 	var/leapturf = get_turf(target_atom)
@@ -51,7 +50,7 @@
 	actively_moving = FALSE
 	ADD_TRAIT(src, TRAIT_MOVE_FLOATING, LEAPING_TRAIT) //Throwing itself doesn't protect mobs against lava (because gulag).
 
-	SEND_SIGNAL(leaper, COMSIG_STARTED_CHARGE)
+	leaper.start_charge()
 	RegisterSignal(leaper, COMSIG_MOVABLE_BUMP, .proc/on_bump)
 	RegisterSignal(leaper, COMSIG_MOVABLE_PRE_MOVE, .proc/on_move)
 	RegisterSignal(leaper, COMSIG_MOVABLE_MOVED, .proc/on_moved)
@@ -86,7 +85,7 @@
 	REMOVE_TRAIT(src, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)
 
 	UnregisterSignal(leaper, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING))
-	SEND_SIGNAL(owner, COMSIG_FINISHED_CHARGE)
+	leaper.end_charge()
 	actively_moving = FALSE
 	leaper.set_dir_on_move = initial(leaper.set_dir_on_move)
 	StartCooldown()

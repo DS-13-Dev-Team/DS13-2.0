@@ -57,7 +57,7 @@
 
 /datum/action/cooldown/necro/corruption/Activate(atom/target)
 	var/mob/camera/marker_signal/signal = owner
-	var/current_biomass = istype(signal, /mob/camera/marker_signal/marker) ? signal.marker.biomass : signal.marker.signal_biomass
+	var/current_biomass = istype(signal, /mob/camera/marker_signal/marker) ? signal.marker.marker_biomass : signal.marker.signal_biomass
 	if(current_biomass < cost)
 		to_chat(signal, span_warning("Not enough biomass!"))
 		return
@@ -73,7 +73,7 @@
 			to_chat(signal, span_warning("Turf is obstructed!"))
 			return
 	if(istype(signal, /mob/camera/marker_signal/marker))
-		signal.marker.biomass -= cost
+		signal.marker.marker_biomass -= cost
 	else
 		signal.marker.signal_biomass -= cost
 	var/obj/structure/necromorph/structure = new place_structure(target_turf, signal.marker)

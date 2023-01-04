@@ -42,9 +42,9 @@
 	StartCooldown(charge_time+charge_delay+1)
 	do_charge(owner, target_atom)
 
-/datum/action/cooldown/necro/charge/proc/do_charge(atom/movable/charger, atom/target_atom)
+/datum/action/cooldown/necro/charge/proc/do_charge(mob/living/carbon/human/necromorph/charger, atom/target_atom)
 	actively_moving = FALSE
-	SEND_SIGNAL(charger, COMSIG_STARTED_CHARGE)
+	charger.start_charge()
 	RegisterSignal(charger, COMSIG_MOVABLE_BUMP, .proc/on_bump)
 	RegisterSignal(charger, COMSIG_MOVABLE_PRE_MOVE, .proc/on_move)
 	RegisterSignal(charger, COMSIG_MOVABLE_MOVED, .proc/on_moved)
@@ -75,7 +75,7 @@
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/charger = source.moving
 	UnregisterSignal(charger, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING))
-	SEND_SIGNAL(owner, COMSIG_FINISHED_CHARGE)
+	charger.end_charge()
 	actively_moving = FALSE
 	charger.set_dir_on_move = initial(charger.set_dir_on_move)
 	StartCooldown()
