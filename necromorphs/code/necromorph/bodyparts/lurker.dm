@@ -22,7 +22,7 @@
 	max_stamina_damage = 100
 	wound_resistance = 5
 
-/obj/item/bodypart/l_arm/necromorph/lurker
+/obj/item/bodypart/arm/left/necromorph/lurker
 	name = "left blade"
 	desc = "Did you know that the word 'sinister' stems originally from the \
 		Latin 'sinestra' (left hand), because the left hand was supposed to \
@@ -39,7 +39,7 @@
 	px_y = 0
 	wound_resistance = 0
 
-/obj/item/bodypart/r_arm/necromorph/lurker
+/obj/item/bodypart/arm/right/necromorph/lurker
 	name = "right blade"
 	desc = "Over 87% of humans are right handed. That figure is much lower \
 		among humans missing their right arm."
@@ -54,7 +54,7 @@
 	max_stamina_damage = 50
 	wound_resistance = 0
 
-/obj/item/bodypart/l_leg/necromorph/lurker
+/obj/item/bodypart/leg/left/necromorph/lurker
 	name = "left leg"
 	desc = "Some athletes prefer to tie their left shoelaces first for good \
 		luck. In this instance, it probably would not have helped."
@@ -69,7 +69,7 @@
 	max_stamina_damage = 50
 	wound_resistance = 0
 
-/obj/item/bodypart/r_leg/necromorph/lurker
+/obj/item/bodypart/leg/right/necromorph/lurker
 	name = "right leg"
 	desc = "You put your right leg in, your right leg out. In, out, in, out, \
 		shake it all about. And apparently then it detaches.\n\
