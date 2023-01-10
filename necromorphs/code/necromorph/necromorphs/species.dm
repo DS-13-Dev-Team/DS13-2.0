@@ -63,11 +63,6 @@
 	inherent_factions = list(FACTION_NECROMORPH)
 	species_mob_size = MOB_SIZE_HUMAN
 
-	attack_verb = SFX_PUNCH
-	attack_effect = ATTACK_EFFECT_PUNCH
-	attack_sound = 'sound/weapons/punch1.ogg'
-	miss_sound = 'sound/weapons/punchmiss.ogg'
-
 /datum/species/necromorph/check_roundstart_eligible()
 	return FALSE
 

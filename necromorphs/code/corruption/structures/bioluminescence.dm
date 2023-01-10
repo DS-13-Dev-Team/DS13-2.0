@@ -4,7 +4,8 @@
 	icon = 'necromorphs/icons/effects/corruption.dmi'
 	icon_state = "light"
 	light_power = 1
-	light_range = 8
+	light_inner_range = 2
+	light_outer_range = 4
 	light_color = COLOR_BRIGHT_ORANGE
 	max_integrity = 20
 

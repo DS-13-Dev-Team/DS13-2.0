@@ -370,7 +370,7 @@
 			log_wound(owner, new_wound, damage, wound_bonus, bare_wound_bonus, base_roll) // dismembering wounds are logged in the apply_wound() for loss wounds since they delete themselves immediately, these will be immediately returned
 			return new_wound
 
-/obj/item/bodypart/l_arm/necromorph
+/obj/item/bodypart/arm/left/necromorph
 	name = "left arm"
 	desc = "Did you know that the word 'sinister' stems originally from the \
 		Latin 'sinestra' (left hand), because the left hand was supposed to \
@@ -391,7 +391,7 @@
 	can_be_disabled = FALSE
 	wound_resistance = 0
 
-/obj/item/bodypart/l_arm/necromorph/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
+/obj/item/bodypart/arm/left/necromorph/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
 	SHOULD_CALL_PARENT(FALSE)
 
 	var/hit_percent = (100-blocked)/100
@@ -498,7 +498,7 @@
 			. = TRUE
 	return update_bodypart_damage_state() || .
 
-/obj/item/bodypart/l_arm/necromorph/check_wounding(woundtype, damage, wound_bonus, bare_wound_bonus, attack_direction)
+/obj/item/bodypart/arm/left/necromorph/check_wounding(woundtype, damage, wound_bonus, bare_wound_bonus, attack_direction)
 	SHOULD_CALL_PARENT(FALSE)
 
 	if(HAS_TRAIT(owner, TRAIT_NEVER_WOUNDED))
@@ -557,7 +557,7 @@
 			log_wound(owner, new_wound, damage, wound_bonus, bare_wound_bonus, base_roll) // dismembering wounds are logged in the apply_wound() for loss wounds since they delete themselves immediately, these will be immediately returned
 			return new_wound
 
-/obj/item/bodypart/r_arm/necromorph
+/obj/item/bodypart/arm/right/necromorph
 	name = "right arm"
 	desc = "Over 87% of humans are right handed. That figure is much lower \
 		among humans missing their right arm."
@@ -576,7 +576,7 @@
 	can_be_disabled = FALSE
 	wound_resistance = 0
 
-/obj/item/bodypart/r_arm/necromorph/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
+/obj/item/bodypart/arm/right/necromorph/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
 	SHOULD_CALL_PARENT(FALSE)
 
 	var/hit_percent = (100-blocked)/100
@@ -683,7 +683,7 @@
 			. = TRUE
 	return update_bodypart_damage_state() || .
 
-/obj/item/bodypart/r_arm/necromorph/check_wounding(woundtype, damage, wound_bonus, bare_wound_bonus, attack_direction)
+/obj/item/bodypart/arm/right/necromorph/check_wounding(woundtype, damage, wound_bonus, bare_wound_bonus, attack_direction)
 	SHOULD_CALL_PARENT(FALSE)
 
 	if(HAS_TRAIT(owner, TRAIT_NEVER_WOUNDED))
@@ -742,7 +742,7 @@
 			log_wound(owner, new_wound, damage, wound_bonus, bare_wound_bonus, base_roll) // dismembering wounds are logged in the apply_wound() for loss wounds since they delete themselves immediately, these will be immediately returned
 			return new_wound
 
-/obj/item/bodypart/l_leg/necromorph
+/obj/item/bodypart/leg/left/necromorph
 	name = "left leg"
 	desc = "Some athletes prefer to tie their left shoelaces first for good \
 		luck. In this instance, it probably would not have helped."
@@ -761,7 +761,7 @@
 	can_be_disabled = FALSE
 	wound_resistance = 0
 
-/obj/item/bodypart/l_leg/necromorph/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
+/obj/item/bodypart/leg/left/necromorph/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
 	SHOULD_CALL_PARENT(FALSE)
 
 	var/hit_percent = (100-blocked)/100
@@ -868,7 +868,7 @@
 			. = TRUE
 	return update_bodypart_damage_state() || .
 
-/obj/item/bodypart/l_leg/necromorph/check_wounding(woundtype, damage, wound_bonus, bare_wound_bonus, attack_direction)
+/obj/item/bodypart/leg/left/necromorph/check_wounding(woundtype, damage, wound_bonus, bare_wound_bonus, attack_direction)
 	SHOULD_CALL_PARENT(FALSE)
 
 	if(HAS_TRAIT(owner, TRAIT_NEVER_WOUNDED))
@@ -927,7 +927,7 @@
 			log_wound(owner, new_wound, damage, wound_bonus, bare_wound_bonus, base_roll) // dismembering wounds are logged in the apply_wound() for loss wounds since they delete themselves immediately, these will be immediately returned
 			return new_wound
 
-/obj/item/bodypart/r_leg/necromorph
+/obj/item/bodypart/leg/right/necromorph
 	name = "right leg"
 	desc = "You put your right leg in, your right leg out. In, out, in, out, \
 		shake it all about. And apparently then it detaches.\n\
@@ -949,7 +949,7 @@
 	can_be_disabled = FALSE
 	wound_resistance = 0
 
-/obj/item/bodypart/r_leg/necromorph/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
+/obj/item/bodypart/leg/right/necromorph/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
 	SHOULD_CALL_PARENT(FALSE)
 
 	var/hit_percent = (100-blocked)/100
@@ -1056,7 +1056,7 @@
 			. = TRUE
 	return update_bodypart_damage_state() || .
 
-/obj/item/bodypart/r_leg/necromorph/check_wounding(woundtype, damage, wound_bonus, bare_wound_bonus, attack_direction)
+/obj/item/bodypart/leg/right/necromorph/check_wounding(woundtype, damage, wound_bonus, bare_wound_bonus, attack_direction)
 	SHOULD_CALL_PARENT(FALSE)
 
 	if(HAS_TRAIT(owner, TRAIT_NEVER_WOUNDED))

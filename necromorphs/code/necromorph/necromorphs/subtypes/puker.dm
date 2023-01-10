@@ -21,10 +21,10 @@
 	name = "Puker"
 	id = SPECIES_NECROMORPH_PUKER
 	bodypart_overrides = list(
-		BODY_ZONE_L_ARM = /obj/item/bodypart/l_arm/necromorph/puker,
-		BODY_ZONE_R_ARM = /obj/item/bodypart/r_arm/necromorph/puker,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/puker,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/puker,
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/necromorph/puker,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/l_leg/necromorph/puker,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/necromorph/puker,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/necromorph/puker,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/puker,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/puker,
 	)
