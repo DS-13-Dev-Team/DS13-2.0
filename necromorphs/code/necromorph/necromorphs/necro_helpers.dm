@@ -25,14 +25,6 @@
 /mob/living/carbon/human/necromorph/proc/play_necro_sound(audio_type, volume, extra_range)
 	CRASH("play_necro_sound() wasn't overriden | Name: [name] | Type: [type]")
 
-/mob/living/carbon/human/necromorph/proc/start_charge()
-	SIGNAL_HANDLER
-	charging = TRUE
-
-/mob/living/carbon/human/necromorph/proc/end_charge()
-	SIGNAL_HANDLER
-	charging = FALSE
-
 /mob/living/carbon/human/necromorph/verb/evacuate()
 	set name = "Evacuate"
 	set category = "Necromorph"

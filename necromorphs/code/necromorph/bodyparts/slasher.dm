@@ -14,7 +14,7 @@
 	name = BODY_ZONE_HEAD
 	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	icon_state = "l_arm"
+	icon_state = "head"
 	max_damage = 200
 	px_x = 0
 	px_y = -8
@@ -22,7 +22,7 @@
 	max_stamina_damage = 100
 	wound_resistance = 5
 
-/obj/item/bodypart/l_arm/necromorph/slasher
+/obj/item/bodypart/arm/left/necromorph/slasher
 	name = "left blade"
 	desc = "Did you know that the word 'sinister' stems originally from the \
 		Latin 'sinestra' (left hand), because the left hand was supposed to \
@@ -39,7 +39,7 @@
 	px_y = 0
 	wound_resistance = 0
 
-/obj/item/bodypart/r_arm/necromorph/slasher
+/obj/item/bodypart/arm/right/necromorph/slasher
 	name = "right blade"
 	desc = "Over 87% of humans are right handed. That figure is much lower \
 		among humans missing their right arm."
@@ -54,12 +54,12 @@
 	max_stamina_damage = 50
 	wound_resistance = 0
 
-/obj/item/bodypart/l_leg/necromorph/slasher
+/obj/item/bodypart/leg/left/necromorph/slasher
 	name = "left leg"
 	desc = "Some athletes prefer to tie their left shoelaces first for good \
 		luck. In this instance, it probably would not have helped."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	icon_state = "l_arm"
+	icon_state = "l_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
@@ -69,13 +69,13 @@
 	max_stamina_damage = 50
 	wound_resistance = 0
 
-/obj/item/bodypart/r_leg/necromorph/slasher
+/obj/item/bodypart/leg/right/necromorph/slasher
 	name = "right leg"
 	desc = "You put your right leg in, your right leg out. In, out, in, out, \
 		shake it all about. And apparently then it detaches.\n\
 		The hokey pokey has certainly changed a lot since space colonisation."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	icon_state = "l_arm"
+	icon_state = "r_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50

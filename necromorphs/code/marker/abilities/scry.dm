@@ -14,7 +14,8 @@
 /obj/effect/temp_visual/scry
 	anchored = TRUE
 	light_color = "#ffff00"
-	light_range = 6
+	light_inner_range = 1
+	light_outer_range = 4
 	light_power = 1
 	duration = 1 MINUTES
 

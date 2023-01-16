@@ -40,6 +40,68 @@ GLOBAL_LIST_INIT(slasher_sounds, list(
 	)
 ))
 
+GLOBAL_LIST_INIT(leaper_sounds, list(
+	SOUND_FOOTSTEP = list(
+		'necromorphs/sound/effects/footstep/leaper_footstep_1.ogg',
+		'necromorphs/sound/effects/footstep/leaper_footstep_2.ogg',
+		'necromorphs/sound/effects/footstep/leaper_footstep_3.ogg',
+		'necromorphs/sound/effects/footstep/leaper_footstep_4.ogg',
+		'necromorphs/sound/effects/footstep/leaper_footstep_5.ogg',
+	),
+	SOUND_CLIMB = list(
+		'necromorphs/sound/effects/footstep/wall_climb_1.ogg',
+		'necromorphs/sound/effects/footstep/wall_climb_2.ogg',
+		'necromorphs/sound/effects/footstep/wall_climb_3.ogg',
+		'necromorphs/sound/effects/footstep/wall_climb_4.ogg',
+		'necromorphs/sound/effects/footstep/wall_climb_5.ogg',
+		'necromorphs/sound/effects/footstep/wall_climb_6.ogg',
+	),
+	SOUND_PAIN = list(
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_pain_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_pain_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_pain_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_pain_4.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_pain_5.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_pain_6.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_pain_7.ogg',
+	),
+	SOUND_DEATH = list(
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_death_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_death_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_death_3.ogg',
+	),
+	SOUND_ATTACK = list(
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_attack_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_attack_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_attack_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_attack_4.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_attack_5.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_attack_6.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_attack_7.ogg',
+	),
+	SOUND_SHOUT = list(
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_4.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_5.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_6.ogg',
+	),
+	SOUND_SHOUT_LONG = list(
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_long_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_long_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_long_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_long_4.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_shout_long_5.ogg',
+	),
+	SOUND_SPEECH = list(
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_speech_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_speech_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_speech_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/leaper/leaper_speech_4.ogg',
+	)
+))
+
 GLOBAL_LIST_INIT(puker_sounds, list(
 	SOUND_ATTACK = list(
 		'necromorphs/sound/effects/creatures/necromorph/puker/puker_attack_1.ogg',
@@ -103,7 +165,7 @@ GLOBAL_LIST_INIT(spitter_sounds, list(
 	),
 	SOUND_PAIN = list(
 		'necromorphs/sound/effects/creatures/necromorph/spitter/spitter_pain_1.ogg',
-	'necromorphs/sound/effects/creatures/necromorph/spitter/spitter_pain_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/spitter/spitter_pain_2.ogg',
 		'necromorphs/sound/effects/creatures/necromorph/spitter/spitter_pain_3.ogg',
 		'necromorphs/sound/effects/creatures/necromorph/spitter/spitter_pain_4.ogg',
 		'necromorphs/sound/effects/creatures/necromorph/spitter/spitter_pain_5.ogg',

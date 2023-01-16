@@ -28,12 +28,6 @@
 	infodisplay += health
 	infodisplay += shield
 	infodisplay += foreground
-
-//hands
-	build_hand_slots()
-
-	var/atom/movable/screen/using
-
 //begin buttons
 	using = new /atom/movable/screen/swap_hand()
 	using.icon = ui_style

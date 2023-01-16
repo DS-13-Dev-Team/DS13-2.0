@@ -27,10 +27,24 @@
 	name = "Slasher"
 	id = SPECIES_NECROMORPH_SLASHER
 	bodypart_overrides = list(
-		BODY_ZONE_L_ARM = /obj/item/bodypart/l_arm/necromorph/slasher,
-		BODY_ZONE_R_ARM = /obj/item/bodypart/r_arm/necromorph/slasher,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/slasher,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/slasher,
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/necromorph/slasher,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/l_leg/necromorph/slasher,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/necromorph/slasher,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/necromorph/slasher,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/slasher,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/slasher,
 	)
+
+/datum/action/cooldown/necro/charge/slasher
+	cooldown_time = 12 SECONDS
+	charge_delay = 1 SECONDS
+	charge_time = 4 SECONDS
+
+/datum/action/cooldown/necro/charge/slasher/do_charge_indicator(atom/charge_target)
+	var/mob/living/carbon/human/necromorph/source = owner
+	var/matrix/new_matrix = matrix(source.transform)
+	var/shake_dir = pick(-1, 1)
+	new_matrix.Turn(16*shake_dir)
+	animate(source, transform = new_matrix, pixel_x = source.pixel_x + 5*shake_dir, time = 1)
+	animate(transform = matrix(), pixel_x = source.pixel_x-5*shake_dir, time = 9, easing = ELASTIC_EASING)
+	source.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_HIGH, TRUE, 3)

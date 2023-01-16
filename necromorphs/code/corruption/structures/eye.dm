@@ -6,7 +6,8 @@
 	icon = 'necromorphs/icons/effects/corruption.dmi'
 	icon_state = "eye"
 	light_power = 1.5
-	light_range = 3
+	light_inner_range = 1
+	light_outer_range = 2
 	light_color = COLOR_BRIGHT_ORANGE
 	max_integrity = 30
 	var/obj/structure/marker/marker
