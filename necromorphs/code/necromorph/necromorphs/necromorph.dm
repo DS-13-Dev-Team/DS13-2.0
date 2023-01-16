@@ -15,8 +15,6 @@
 
 	//Should be replaced with hud as soon as possible
 	AddComponent(/datum/component/health_meter)
-	RegisterSignal(src, COMSIG_STARTED_CHARGE, .proc/start_charge)
-	RegisterSignal(src, COMSIG_FINISHED_CHARGE, .proc/end_charge)
 
 /mob/living/carbon/human/necromorph/Destroy()
 	evacuate()

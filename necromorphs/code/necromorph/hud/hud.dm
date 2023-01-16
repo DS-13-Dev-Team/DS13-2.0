@@ -10,9 +10,6 @@
 
 	var/atom/movable/screen/using
 
-//hands
-	build_hand_slots()
-
 //begin buttons
 
 	using = new /atom/movable/screen/swap_hand()
