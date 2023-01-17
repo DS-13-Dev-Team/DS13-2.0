@@ -17,6 +17,7 @@
 	var/bone_loss = FALSE
 	var/life_loss = FALSE
 	var/heal_delay = 10 // 1 second
+	var/self_heal_delay_modifier = 2 //healing yourself is slower than others.
 	var/flat_heal = 12.5
 	var/death_heal = 0.3 // Used for the adrenaline medipack. Big enough as to reduce the chance of immediately dying again.
 
@@ -49,7 +50,7 @@
 		user.visible_message("<span class='notice'>[user] crushes the [src] over [H], the glowing goop quickly regenerating some of [H.p_their()] injuries!</span>",
 			"<span class='notice'>You squeeze the [src], and it bursts over [H], the glowing goop regenerating some of [H.p_their()] injuries.</span>")
 	else
-		if(!do_mob(user, H, (heal_delay * 2))) // 2 second delay. Heal yourself slower than others!
+		if(!do_mob(user, H, (heal_delay * self_heal_delay_modifier))) // 2 second delay. Heal yourself slower than others!
 			return FALSE
 		user.visible_message("<span class='notice'>[user] crushes the [src] over [user.p_them()]self, the glowing goop quickly regenerating some of [user.p_their()] injuries!</span>",
 			"<span class='notice'>You squeeze the [src], and it bursts in your hand, splashing you with glowing goop which quickly regenerates some of your injuries!</span>")
@@ -89,6 +90,7 @@
 	heal_modifier = 0.45 // heals 45% of damage taken.
 	jelly_amount = 7.5 // used for a burst of healing after being healed.
 	heal_delay = 20 // 2 seconds.
+	self_heal_delay_modifier = 10 //Takes far longer to use on yourself, stick together.
 	flat_heal = 5
 
 /obj/item/medipack/large/proc/in_box_sprite()
