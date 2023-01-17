@@ -138,10 +138,7 @@
 		return
 
 	var/medipacks = 0
-	for(var/_medipack in contents)
-		var/obj/item/medipack/large/medipack = _medipack
-		if (!istype(medipack))
-			continue
+	for(var/obj/item/medipack/large/medipack in contents)
 
 		. += image(icon = initial(icon), icon_state = medipack.in_box_sprite())
 		medipacks += 1
