@@ -4021,6 +4021,7 @@
 #include "code\modules\reagents\reagent_containers\glass.dm"
 #include "code\modules\reagents\reagent_containers\hypospray.dm"
 #include "code\modules\reagents\reagent_containers\medigel.dm"
+#include "code\modules\reagents\reagent_containers\medipack.dm"
 #include "code\modules\reagents\reagent_containers\misc.dm"
 #include "code\modules\reagents\reagent_containers\patch.dm"
 #include "code\modules\reagents\reagent_containers\pill.dm"
