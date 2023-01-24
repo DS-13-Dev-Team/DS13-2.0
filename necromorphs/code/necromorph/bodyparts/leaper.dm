@@ -63,8 +63,10 @@
 	icon_state = "necromorph_tail"
 	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_EXTERNAL_TAIL
+	feature_key = "necro_tail"
+	dna_block = DNA_NECROMORPH_TAIL_BLOCK
+	layers = EXTERNAL_BEHIND
 
 /datum/sprite_accessory/necromorph/leaper
-	name = "Leaper Tail"
 	icon = 'necromorphs/icons/necromorphs/leaper.dmi'
 	icon_state = "necromorph_tail"

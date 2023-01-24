@@ -1128,5 +1128,6 @@
 	return GLOB.necromorph_tails
 
 /datum/sprite_accessory/necromorph
+	name = "Necromorph Tail"
 	em_block = TRUE
 	locked = TRUE

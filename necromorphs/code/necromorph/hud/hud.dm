@@ -29,25 +29,7 @@
 	infodisplay += shield
 	infodisplay += foreground
 //begin buttons
-	using = new /atom/movable/screen/swap_hand()
-	using.icon = ui_style
-	using.icon_state = "swap_1"
-	using.screen_loc = ui_swaphand_position(owner,1)
-	using.hud = src
-	static_inventory += using
-
-	using = new /atom/movable/screen/swap_hand()
-	using.icon = ui_style
-	using.icon_state = "swap_2"
-	using.screen_loc = ui_swaphand_position(owner,2)
-	using.hud = src
-	static_inventory += using
-
-	using = new /atom/movable/screen/human/equip()
-	using.icon = ui_style
-	using.screen_loc = ui_equip_position(mymob)
-	using.hud = src
-	static_inventory += using
+	var/atom/movable/screen/using
 
 	using = new /atom/movable/screen/mov_intent
 	using.icon = ui_style

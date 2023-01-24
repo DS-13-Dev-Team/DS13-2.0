@@ -134,6 +134,7 @@
 		"teshari_ears" = pick(GLOB.teshari_ears_list),
 		"teshari_body_feathers" = pick(GLOB.teshari_body_feathers_list),
 		"tail_teshari" = pick(GLOB.teshari_tails_list),
+		"necro_tail" = pick(GLOB.necromorph_tails),
 	))
 
 /proc/random_mutant_colors()
