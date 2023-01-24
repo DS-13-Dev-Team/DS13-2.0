@@ -5,7 +5,7 @@
 	cooldown_time = 2 MINUTES
 	marker_flags = SIGNAL_ABILITY_PRE_ACTIVATION
 
-/datum/action/cooldown/necro/psy/false_sound/Activate(turf/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/false_sound/Activate(turf/target)
 	target = get_turf(target)
 	if(!target)
 		return
@@ -15,10 +15,10 @@
 		"Puker" = GLOB.puker_sounds,
 		"Spitter" = GLOB.spitter_sounds,
 	)
-	var/list/category = possible_sounds[tgui_input_list(caller, "Pick a necromorph type", "False Sound", possible_sounds)]
+	var/list/category = possible_sounds[tgui_input_list(owner, "Pick a necromorph type", "False Sound", possible_sounds)]
 	if(!category)
 		return
-	var/list/picked_sound = tgui_input_list(caller, "Pick sound type to play", "False Sound", category)
+	var/list/picked_sound = tgui_input_list(owner, "Pick sound type to play", "False Sound", category)
 	if(!picked_sound)
 		return
 	var/volume = VOLUME_MID

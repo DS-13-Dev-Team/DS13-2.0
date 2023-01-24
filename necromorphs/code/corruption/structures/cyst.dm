@@ -12,11 +12,11 @@
 /obj/structure/necromorph/cyst/Initialize(mapload)
 	.=..()
 	var/static/list/loc_connections = list(
-		COMSIG_ATOM_ENTERED = .proc/on_entered,
-		COMSIG_ATOM_INITIALIZED_ON = .proc/on_entered,
+		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
+		COMSIG_ATOM_INITIALIZED_ON = PROC_REF(on_entered),
 	)
 	AddComponent(/datum/component/connect_range, src, loc_connections, 6, FALSE)
-	addtimer(CALLBACK(src, .proc/set_ready), 8 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(set_ready)), 8 SECONDS)
 
 /obj/structure/necromorph/cyst/update_icon_state()
 	icon_state = ready ? "cyst-full" : "cyst-empty"
@@ -54,7 +54,7 @@
 	P.def_zone = ran_zone()
 	P.preparePixelProjectile(target, src)
 	P.fire(null, target)
-	addtimer(CALLBACK(src, .proc/set_ready), 8 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(set_ready)), 8 SECONDS)
 
 /obj/structure/necromorph/cyst/proc/set_ready()
 	ready = TRUE

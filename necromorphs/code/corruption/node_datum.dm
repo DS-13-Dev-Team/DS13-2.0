@@ -33,8 +33,8 @@
 	parent = new_parent
 	src.marker = marker
 	marker.nodes += src
-	RegisterSignal(new_parent, COMSIG_PARENT_QDELETING, .proc/on_parent_delete)
-	RegisterSignal(new_parent, COMSIG_ATOM_BREAK, .proc/on_parent_break)
+	RegisterSignal(new_parent, COMSIG_PARENT_QDELETING, PROC_REF(on_parent_delete))
+	RegisterSignal(new_parent, COMSIG_ATOM_BREAK, PROC_REF(on_parent_break))
 
 	var/turf/parent_turf = get_turf(new_parent)
 	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in parent_turf
@@ -93,16 +93,16 @@
 		return
 	turfs_to_watch[T] = direction
 	if(!T.necro_corrupted)
-		RegisterSignal(T, COMSIG_TURF_NECRO_CORRUPTED, .proc/on_nearby_turf_corrupted)
-		RegisterSignal(T, COMSIG_TURF_CHANGED, .proc/on_turf_changed)
+		RegisterSignal(T, COMSIG_TURF_NECRO_CORRUPTED, PROC_REF(on_nearby_turf_corrupted))
+		RegisterSignal(T, COMSIG_TURF_CHANGED, PROC_REF(on_turf_changed))
 		if(isgroundlessturf(T))
 			return
-		RegisterSignal(T, COMSIG_ATOM_SET_DENSITY, .proc/on_turf_set_density)
+		RegisterSignal(T, COMSIG_ATOM_SET_DENSITY, PROC_REF(on_turf_set_density))
 		if(!T.density)
 			turfs_to_spread += T
 			START_PROCESSING(SScorruption, src)
 	else
-		RegisterSignal(T, COMSIG_TURF_NECRO_UNCORRUPTED, .proc/on_nearby_turf_uncorrupted)
+		RegisterSignal(T, COMSIG_TURF_NECRO_UNCORRUPTED, PROC_REF(on_nearby_turf_uncorrupted))
 
 /datum/corruption_node/proc/remove_turf_to_spread(turf/T, direction)
 	if(!T)
@@ -123,7 +123,7 @@
 		turfs_to_spread -= source
 		return
 	if(source.density)
-		RegisterSignal(source, COMSIG_ATOM_SET_DENSITY, .proc/on_turf_set_density)
+		RegisterSignal(source, COMSIG_ATOM_SET_DENSITY, PROC_REF(on_turf_set_density))
 		turfs_to_spread -= source
 		return
 	turfs_to_spread |= source
@@ -145,16 +145,16 @@
 	turfs_to_spread -= source
 	if(!length(turfs_to_spread))
 		STOP_PROCESSING(SScorruption, src)
-	RegisterSignal(source, COMSIG_TURF_NECRO_UNCORRUPTED, .proc/on_nearby_turf_uncorrupted)
+	RegisterSignal(source, COMSIG_TURF_NECRO_UNCORRUPTED, PROC_REF(on_nearby_turf_uncorrupted))
 
 /datum/corruption_node/proc/on_nearby_turf_uncorrupted(turf/source)
 	SIGNAL_HANDLER
 	UnregisterSignal(source, COMSIG_TURF_NECRO_UNCORRUPTED)
-	RegisterSignal(source, COMSIG_TURF_NECRO_CORRUPTED, .proc/on_nearby_turf_corrupted)
-	RegisterSignal(source, COMSIG_TURF_CHANGED, .proc/on_turf_changed)
+	RegisterSignal(source, COMSIG_TURF_NECRO_CORRUPTED, PROC_REF(on_nearby_turf_corrupted))
+	RegisterSignal(source, COMSIG_TURF_CHANGED, PROC_REF(on_turf_changed))
 	if(isgroundlessturf(source))
 		return
-	RegisterSignal(source, COMSIG_ATOM_SET_DENSITY, .proc/on_turf_set_density)
+	RegisterSignal(source, COMSIG_ATOM_SET_DENSITY, PROC_REF(on_turf_set_density))
 	if(!source.density)
 		turfs_to_spread += source
 		START_PROCESSING(SScorruption, src)
@@ -167,7 +167,7 @@
 /datum/corruption_node/atom/on_nearby_turf_uncorrupted(turf/source)
 	..()
 	if(!length(turfs_to_watch))
-		addtimer(CALLBACK(src, .proc/spawn_new_corruption), 5 MINUTES, TIMER_OVERRIDE)
+		addtimer(CALLBACK(src, PROC_REF(spawn_new_corruption)), 5 MINUTES, TIMER_OVERRIDE)
 
 /datum/corruption_node/atom/proc/spawn_new_corruption()
 	var/obj/structure/corruption/corrupt = locate(/obj/structure/corruption) in get_turf(parent)

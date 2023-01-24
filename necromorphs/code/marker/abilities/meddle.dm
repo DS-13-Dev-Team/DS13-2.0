@@ -1,16 +1,16 @@
-/datum/action/cooldown/necro/psy/flicker
+/datum/action/cooldown/necro/psy/meddle
 	name = "Meddle"
 	desc = "A context sensitive spell which does different things depending on the target. Interfaces with machines, moves items, messes with computers and office appliances."
 	cost = 10
 
-/datum/action/cooldown/necro/psy/flicker/PreActivate(obj/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/meddle/PreActivate(obj/target)
 	if(isobj(target))
 		return FALSE
 	return ..()
 
-/datum/action/cooldown/necro/psy/flicker/Activate(obj/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/meddle/Activate(obj/target)
 	..()
-	target.meddle_act(caller)
+	target.meddle_act(owner)
 	return TRUE
 
 #define SHAKE_ANIMATION_OFFSET 4

@@ -15,7 +15,7 @@
 
 /obj/structure/necromorph/Initialize(mapload)
 	..()
-	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, .proc/on_integrity_change)
+	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, PROC_REF(on_integrity_change))
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/structure/necromorph/LateInitialize()
@@ -35,11 +35,11 @@
 		UnregisterSignal(old_loc, list(COMSIG_TURF_NECRO_CORRUPTED, COMSIG_TURF_NECRO_UNCORRUPTED))
 	if(new_loc)
 		if(istype(new_loc) && new_loc.necro_corrupted)
-			RegisterSignal(new_loc, COMSIG_TURF_NECRO_UNCORRUPTED, .proc/on_turf_uncorrupted)
+			RegisterSignal(new_loc, COMSIG_TURF_NECRO_UNCORRUPTED, PROC_REF(on_turf_uncorrupted))
 			state = GROWING
 			START_PROCESSING(SScorruption, src)
 		else
-			RegisterSignal(new_loc, COMSIG_TURF_NECRO_CORRUPTED, .proc/on_turf_corrupted)
+			RegisterSignal(new_loc, COMSIG_TURF_NECRO_CORRUPTED, PROC_REF(on_turf_corrupted))
 			state = DECAYING
 			START_PROCESSING(SScorruption, src)
 

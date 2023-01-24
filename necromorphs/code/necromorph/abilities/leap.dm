@@ -1,6 +1,5 @@
 /datum/action/cooldown/necro/leap
 	name = "Leap"
-	icon_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Allows you to leap at a chosen position."
 	cooldown_time = 1.5 SECONDS
@@ -52,9 +51,9 @@
 	ADD_TRAIT(src, TRAIT_MOVE_FLOATING, LEAPING_TRAIT) //Throwing itself doesn't protect mobs against lava (because gulag).
 
 	SEND_SIGNAL(leaper, COMSIG_STARTED_CHARGE)
-	RegisterSignal(leaper, COMSIG_MOVABLE_BUMP, .proc/on_bump)
-	RegisterSignal(leaper, COMSIG_MOVABLE_PRE_MOVE, .proc/on_move)
-	RegisterSignal(leaper, COMSIG_MOVABLE_MOVED, .proc/on_moved)
+	RegisterSignal(leaper, COMSIG_MOVABLE_BUMP, PROC_REF(on_bump))
+	RegisterSignal(leaper, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_move))
+	RegisterSignal(leaper, COMSIG_MOVABLE_MOVED, PROC_REF(on_moved))
 	leaper.setDir(target_dir)
 	leaper.set_dir_on_move = FALSE
 	do_leap_indicator(target_atom)
@@ -64,12 +63,12 @@
 	var/datum/move_loop/move/moving_loop = SSmove_manager.move(leaper, target_dir, leap_speed, leap_time, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
 	if(!moving_loop)
 		return
-	RegisterSignal(moving_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, .proc/pre_move)
-	RegisterSignal(moving_loop, COMSIG_MOVELOOP_POSTPROCESS, .proc/post_move)
-	RegisterSignal(moving_loop, COMSIG_PARENT_QDELETING, .proc/leap_end)
+	RegisterSignal(moving_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, PROC_REF(pre_move))
+	RegisterSignal(moving_loop, COMSIG_MOVELOOP_POSTPROCESS, PROC_REF(post_move))
+	RegisterSignal(moving_loop, COMSIG_PARENT_QDELETING, PROC_REF(leap_end))
 	if(ismob(leaper))
-		RegisterSignal(moving_loop, COMSIG_MOB_STATCHANGE, .proc/stat_changed)
-		RegisterSignal(moving_loop, COMSIG_LIVING_UPDATED_RESTING, .proc/update_resting)
+		RegisterSignal(moving_loop, COMSIG_MOB_STATCHANGE, PROC_REF(stat_changed))
+		RegisterSignal(moving_loop, COMSIG_LIVING_UPDATED_RESTING, PROC_REF(update_resting))
 
 /datum/action/cooldown/necro/leap/proc/pre_move(datum)
 	SIGNAL_HANDLER
