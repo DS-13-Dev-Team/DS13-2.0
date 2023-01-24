@@ -21,8 +21,8 @@
 	LAZYADD(marker.corruption_eyes, src)
 	marker.markernet.addVisionSource(src, VISION_SOURCE_RANGE, FALSE)
 	var/static/list/loc_connections = list(
-		COMSIG_ATOM_ENTERED = .proc/on_entered,
-		COMSIG_ATOM_INITIALIZED_ON = .proc/on_entered,
+		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
+		COMSIG_ATOM_INITIALIZED_ON = PROC_REF(on_entered),
 	)
 	AddComponent(/datum/component/connect_range, src, loc_connections, 4, FALSE)
 

@@ -28,9 +28,9 @@
 			holder.client.screen += health
 			holder.client.screen += foreground
 	else
-		RegisterSignal(holder, COMSIG_MOB_HUD_CREATED, .proc/on_hud_created)
+		RegisterSignal(holder, COMSIG_MOB_HUD_CREATED, PROC_REF(on_hud_created))
 
-	RegisterSignal(holder, COMSIG_CARBON_HEALTH_UPDATE, .proc/on_health_update)
+	RegisterSignal(holder, COMSIG_CARBON_HEALTH_UPDATE, PROC_REF(on_health_update))
 
 /datum/component/health_meter/Destroy(force, silent)
 	var/mob/living/holder = parent

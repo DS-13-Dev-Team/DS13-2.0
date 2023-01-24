@@ -3,7 +3,7 @@
 	desc = "Creates a spooky rune. Has no functional effects, just for decoration"
 	cost = 16
 
-/datum/action/cooldown/necro/psy/rune/Activate(atom/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/rune/Activate(atom/target)
 	var/turf/target_turf = get_turf(target)
 	if(isgroundlessturf(target_turf) || target_turf.density)
 		return

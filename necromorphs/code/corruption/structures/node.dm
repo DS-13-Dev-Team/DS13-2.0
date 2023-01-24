@@ -23,7 +23,7 @@
 		UnregisterSignal(old_loc, list(COMSIG_TURF_NECRO_UNCORRUPTED))
 	if(new_loc)
 		if(istype(new_loc) && new_loc.necro_corrupted)
-			RegisterSignal(new_loc, COMSIG_TURF_NECRO_UNCORRUPTED, .proc/on_turf_uncorrupted)
+			RegisterSignal(new_loc, COMSIG_TURF_NECRO_UNCORRUPTED, PROC_REF(on_turf_uncorrupted))
 			state = GROWING
 			START_PROCESSING(SScorruption, src)
 		else

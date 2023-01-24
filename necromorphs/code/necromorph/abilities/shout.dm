@@ -5,7 +5,6 @@
 
 /datum/action/cooldown/necro/shout
 	name = "Shout"
-	icon_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Shout to disorientate your enemies."
 	cooldown_time = 8 SECONDS
@@ -33,7 +32,6 @@
 
 /datum/action/cooldown/necro/scream
 	name = "Scream"
-	icon_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Scream to disorientate your enemies."
 	cooldown_time = 8 SECONDS
@@ -43,7 +41,7 @@
 	StartCooldown()
 	var/mob/living/carbon/human/necromorph/holder = owner
 	holder.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_HIGH, TRUE, 2)
-	RegisterSignal(holder, COMSIG_MOVABLE_PRE_MOVE, .proc/on_move)
+	RegisterSignal(holder, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_move))
 	var/matrix/new_matrix = matrix(holder.transform)
 	var/shake_dir = pick(-1, 1)
 	new_matrix.Turn(17*shake_dir)
