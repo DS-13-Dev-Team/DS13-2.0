@@ -63,6 +63,9 @@
 		if(gradient.gradient_category & GRADIENT_APPLIES_TO_FACIAL_HAIR)
 			GLOB.facial_hair_gradients_list[gradient.name] = gradient
 
+	for(var/i = 1 to 10)
+		GLOB.necro_runes += iconstate2appearance('necromorphs/icons/effects/runes.dmi', "rune-[i]")
+
 	// Keybindings
 	init_keybindings()
 

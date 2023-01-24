@@ -70,6 +70,7 @@
 // Anything aboe this layer is not "on" a turf for the purposes of washing
 // I hate this life of ours
 #define FLOOR_CLEAN_LAYER 2.55
+#define NECROMORPH_CORRUPTION_LAYER 2.56
 
 #define BELOW_OPEN_DOOR_LAYER 2.6
 #define BLASTDOOR_LAYER 2.65

@@ -517,8 +517,10 @@
 	return !(machine_stat & NOPOWER)
 
 /obj/machinery/door/proc/update_freelook_sight()
-	if(!glass && GLOB.cameranet)
-		GLOB.cameranet.updateVisibility(src, 0)
+	if(!glass)
+		GLOB.cameranet?.updateVisibility(src, 0)
+		for(var/obj/structure/marker/marker as anything in GLOB.necromorph_markers)
+			marker.markernet.updateVisibility(src, 0)
 
 /obj/machinery/door/block_superconductivity() // All non-glass airlocks block heat, this is intended.
 	if(opacity || heat_proof)

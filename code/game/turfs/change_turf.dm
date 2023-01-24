@@ -110,6 +110,8 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	if(old_signal_procs)
 		LAZYOR(W.signal_procs, old_signal_procs)
 
+	SEND_SIGNAL(W, COMSIG_TURF_CHANGED, flags)
+
 	for(var/datum/callback/callback as anything in post_change_callbacks)
 		callback.InvokeAsync(W)
 

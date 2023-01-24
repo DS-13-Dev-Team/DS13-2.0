@@ -70,6 +70,7 @@ export const DmTarget = new Juke.Target({
     'icons/**',
     'interface/**',
     'modular_pariah/**', //PARIAH EDIT
+    'necromorphs/**',
     `${DME_NAME}.dme`,
   ],
   outputs: [

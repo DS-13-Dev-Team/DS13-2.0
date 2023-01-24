@@ -791,6 +791,8 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/ai_module))
 				C.upgradeXRay(TRUE) //if this is removed you can get rid of camera_assembly/var/malf_xray_firmware_active and clean up isxray()
 				//Update what it can see.
 				GLOB.cameranet.updateVisibility(C, 0)
+				for(var/obj/structure/marker/marker as anything in GLOB.necromorph_markers)
+					marker.markernet.updateVisibility(C, 0)
 				upgraded = TRUE
 
 			if(!C.isEmpProof())
