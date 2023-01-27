@@ -11,8 +11,7 @@
 
 /datum/action/cooldown/necro/process(delta_time)
 	.=..()
-	var/time_left = max(next_use_time - world.time, 0)
-	if(!time_left)
+	if((next_use_time - world.time) <= 0)
 		CooldownEnd()
 
 /*

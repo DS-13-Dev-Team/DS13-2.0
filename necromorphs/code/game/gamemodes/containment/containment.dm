@@ -12,7 +12,7 @@
 	//Just it for now
 	var/turf/location = pick(GLOB.possible_marker_locations)
 	main_marker = new /obj/structure/marker(location)
-	addtimer(CALLBACK(src, .proc/activate_marker), rand(45 MINUTES, 60 MINUTES))
+	addtimer(CALLBACK(src, PROC_REF(activate_marker)), rand(45 MINUTES, 60 MINUTES))
 	return TRUE
 
 /datum/game_mode/containment/proc/activate_marker()
@@ -20,7 +20,7 @@
 
 /datum/game_mode/containment/post_setup(report)
 	if(!CONFIG_GET(flag/no_intercept_report))
-		addtimer(CALLBACK(src, .proc/announce_marker), rand(1 MINUTES, 3 MINUTES))
+		addtimer(CALLBACK(src, PROC_REF(announce_marker)), rand(1 MINUTES, 3 MINUTES))
 	return ..()
 
 /datum/game_mode/containment/proc/announce_marker()

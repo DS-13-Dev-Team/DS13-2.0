@@ -77,8 +77,8 @@
 		FOR_DVIEW(var/atom/movable/controlled, HARVESTER_CONTROL_RANGE, src, INVISIBILITY_LIGHTING)
 			if(controlled.biomass_produce && !HAS_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS))
 				controlled_atoms += controlled
-				RegisterSignal(controlled, COMSIG_PARENT_QDELETING, .proc/on_controlled_delete)
-				RegisterSignal(controlled, COMSIG_MOVABLE_MOVED, .proc/on_controlled_moved)
+				RegisterSignal(controlled, COMSIG_PARENT_QDELETING, PROC_REF(on_controlled_delete))
+				RegisterSignal(controlled, COMSIG_MOVABLE_MOVED, PROC_REF(on_controlled_moved))
 				ADD_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
 				biomass_per_tick += controlled.biomass_produce
 		FOR_DVIEW_END

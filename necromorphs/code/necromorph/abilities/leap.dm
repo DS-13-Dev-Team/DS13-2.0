@@ -1,4 +1,7 @@
 /datum/action/cooldown/necro/charge/leaper
+	name = "Leap"
+	button_icon_state = "sniper_zoom"
+	desc = "Allows you to leap at a chosen position."
 	cooldown_time = 6 SECONDS
 	charge_delay = 1.2 SECONDS
 	charge_time = 8 SECONDS

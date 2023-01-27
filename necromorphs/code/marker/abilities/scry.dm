@@ -4,7 +4,8 @@
 	cost = 20
 	click_through_static = TRUE
 
-/datum/action/cooldown/necro/psy/scry/Activate(atom/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/scry/Activate(atom/target)
+	var/mob/camera/marker_signal/caller = owner
 	var/turf/target_turf = get_turf(target)
 	if(target_turf)
 		..()

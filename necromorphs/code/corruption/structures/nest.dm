@@ -76,15 +76,15 @@
 			currently_active_necromorphs++
 			var/mob/living/carbon/human/necromorph/necromorph = new type_to_spawn(get_turf(src), marker)
 			user.possess_necromorph(necromorph)
-			RegisterSignal(necromorph, list(COMSIG_PARENT_QDELETING, COMSIG_LIVING_DEATH), .proc/on_necromorph_death)
+			RegisterSignal(necromorph, list(COMSIG_PARENT_QDELETING, COMSIG_LIVING_DEATH), PROC_REF(on_necromorph_death))
 			if((available_necromorphs+currently_active_necromorphs) < max_spawns)
-				timer_id = addtimer(CALLBACK(src, .proc/add_necromorph_to_spawn), DEFAULT_SPAWN_COOLDOWN, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_NO_HASH_WAIT)
+				timer_id = addtimer(CALLBACK(src, PROC_REF(add_necromorph_to_spawn)), DEFAULT_SPAWN_COOLDOWN, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_NO_HASH_WAIT)
 
 /obj/structure/necromorph/nest/proc/on_necromorph_death(mob/living/carbon/human/necromorph/necromorph)
 	UnregisterSignal(necromorph, list(COMSIG_PARENT_QDELETING, COMSIG_LIVING_DEATH))
 	currently_active_necromorphs--
 	if((available_necromorphs+currently_active_necromorphs) < max_spawns)
-		timer_id = addtimer(CALLBACK(src, .proc/add_necromorph_to_spawn), DEFAULT_SPAWN_COOLDOWN, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_NO_HASH_WAIT)
+		timer_id = addtimer(CALLBACK(src, PROC_REF(add_necromorph_to_spawn)), DEFAULT_SPAWN_COOLDOWN, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_NO_HASH_WAIT)
 
 /obj/structure/necromorph/nest/proc/pick_type2spawn(mob/camera/marker_signal/user)
 	if(spawning_necromorph)
@@ -102,14 +102,14 @@
 		return
 	biomass_spent = class.biomass_cost
 	spawning_necromorph = class.type
-	timer_id = addtimer(CALLBACK(src, .proc/add_necromorph_to_spawn), DEFAULT_SPAWN_COOLDOWN, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_NO_HASH_WAIT)
+	timer_id = addtimer(CALLBACK(src, PROC_REF(add_necromorph_to_spawn)), DEFAULT_SPAWN_COOLDOWN, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_NO_HASH_WAIT)
 
 /obj/structure/necromorph/nest/proc/add_necromorph_to_spawn()
 	if((available_necromorphs+currently_active_necromorphs) >= max_spawns)
 		return
 	available_necromorphs++
 	if((available_necromorphs+currently_active_necromorphs) < max_spawns)
-		timer_id = addtimer(CALLBACK(src, .proc/add_necromorph_to_spawn), DEFAULT_SPAWN_COOLDOWN, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_NO_HASH_WAIT)
+		timer_id = addtimer(CALLBACK(src, PROC_REF(add_necromorph_to_spawn)), DEFAULT_SPAWN_COOLDOWN, TIMER_UNIQUE|TIMER_STOPPABLE|TIMER_NO_HASH_WAIT)
 
 /datum/action/cooldown/necro/corruption/nest
 	name = "Nest"

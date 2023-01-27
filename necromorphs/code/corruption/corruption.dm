@@ -50,7 +50,7 @@
 	SEND_SIGNAL(loc, COMSIG_TURF_NECRO_CORRUPTED, src)
 
 	//I hate that you can't just override update_integrity()
-	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, .proc/on_integrity_change)
+	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, PROC_REF(on_integrity_change))
 
 /obj/structure/corruption/Destroy()
 	var/turf/our_loc = loc

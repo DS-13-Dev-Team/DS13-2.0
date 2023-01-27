@@ -3,12 +3,12 @@
 	desc = "Causes a targeted light to flicker."
 	cost = 10
 
-/datum/action/cooldown/necro/psy/flicker/PreActivate(obj/machinery/light/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/flicker/PreActivate(obj/machinery/light/target)
 	if(!istype(target, /obj/machinery/light))
 		return FALSE
 	return ..()
 
-/datum/action/cooldown/necro/psy/flicker/Activate(obj/machinery/light/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/flicker/Activate(obj/machinery/light/target)
 	..()
 	target.flicker()
 	return TRUE

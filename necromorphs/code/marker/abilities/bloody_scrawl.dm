@@ -3,7 +3,7 @@
 	desc = "Writes a message in blood"
 	cost = 15
 
-/datum/action/cooldown/necro/psy/scrawl/Activate(atom/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/scrawl/Activate(atom/target)
 	var/turf/target_turf = get_turf(target)
 	if(isgroundlessturf(target_turf) || target_turf.density)
 		return
@@ -13,7 +13,7 @@
 	if(num_doodles > 4)
 		to_chat(src, span_warning("There is no space to write on!"))
 		return
-	var/text = tgui_input_text(caller, "Write a message", "Bloody Scrawl")
+	var/text = tgui_input_text(owner, "Write a message", "Bloody Scrawl")
 	if(!text)
 		return
 	..()

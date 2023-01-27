@@ -31,23 +31,17 @@
 		target = new_target
 
 	// The actual action begins here
-	if(!PreActivate(target, caller))
+	if(!PreActivate(target))
 		return FALSE
 
-	caller.click_intercept = null
+	// And if we reach here, the action was complete successfully
+	if(unset_after_click)
+		unset_click_ability(caller, refund_cooldown = FALSE)
+	caller.next_click = world.time + click_cd_override
+
 	return TRUE
 
-/// For signal calling
-/datum/action/cooldown/necro/psy/PreActivate(atom/target, mob/camera/marker_signal/caller)
-	if(SEND_SIGNAL(owner, COMSIG_ABILITY_STARTED, src) & COMPONENT_BLOCK_ABILITY_START)
-		return
-	// Note, that PreActivate handles no cooldowns at all by default.
-	// Be sure to call StartCooldown() in Activate() where necessary.
-	. = Activate(target, caller)
-	// There is a possibility our action (or owner) is qdeleted in Activate().
-	if(!QDELETED(src) && !QDELETED(owner))
-		SEND_SIGNAL(owner, COMSIG_ABILITY_FINISHED, src)
-
-/datum/action/cooldown/necro/psy/Activate(atom/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/Activate(atom/target)
+	var/mob/camera/marker_signal/caller = owner
 	caller.change_psy_energy(-cost)
 	..()

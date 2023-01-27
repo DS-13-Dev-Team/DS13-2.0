@@ -1,6 +1,5 @@
 /datum/action/cooldown/necro/charge
 	name = "Charge"
-	icon_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Allows you to charge at a chosen position."
 	cooldown_time = 1.5 SECONDS
@@ -46,9 +45,9 @@
 	actively_moving = FALSE
 	charger.charging = TRUE
 	SEND_SIGNAL(charger, COMSIG_STARTED_CHARGE)
-	RegisterSignal(charger, COMSIG_MOVABLE_BUMP, .proc/on_bump)
-	RegisterSignal(charger, COMSIG_MOVABLE_PRE_MOVE, .proc/on_move)
-	RegisterSignal(charger, COMSIG_MOVABLE_MOVED, .proc/on_moved)
+	RegisterSignal(charger, COMSIG_MOVABLE_BUMP, PROC_REF(on_bump))
+	RegisterSignal(charger, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_move))
+	RegisterSignal(charger, COMSIG_MOVABLE_MOVED, PROC_REF(on_moved))
 	charger.setDir(get_dir(charger, target_atom))
 	do_charge_indicator(target_atom)
 
@@ -57,12 +56,11 @@
 	var/datum/move_loop/new_loop = SSmove_manager.home_onto(charger, target_atom, delay = charge_speed, timeout = charge_time, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
 	if(!new_loop)
 		return
-	RegisterSignal(new_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, .proc/pre_move)
-	RegisterSignal(new_loop, COMSIG_MOVELOOP_POSTPROCESS, .proc/post_move)
-	RegisterSignal(new_loop, COMSIG_PARENT_QDELETING, .proc/charge_end)
-	if(ismob(charger))
-		RegisterSignal(charger, COMSIG_MOB_STATCHANGE, .proc/stat_changed)
-		RegisterSignal(charger, COMSIG_LIVING_UPDATED_RESTING, .proc/update_resting)
+	RegisterSignal(new_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, PROC_REF(pre_move))
+	RegisterSignal(new_loop, COMSIG_MOVELOOP_POSTPROCESS, PROC_REF(post_move))
+	RegisterSignal(new_loop, COMSIG_PARENT_QDELETING, PROC_REF(charge_end))
+	RegisterSignal(charger, COMSIG_MOB_STATCHANGE, PROC_REF(stat_changed))
+	RegisterSignal(charger, COMSIG_LIVING_UPDATED_RESTING, PROC_REF(update_resting))
 
 /datum/action/cooldown/necro/charge/proc/pre_move(datum)
 	SIGNAL_HANDLER
