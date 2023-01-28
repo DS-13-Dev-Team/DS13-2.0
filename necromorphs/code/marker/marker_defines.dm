@@ -4,8 +4,8 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	icon = 'necromorphs/icons/obj/marker_giant.dmi'
 	icon_state = "marker_giant_dormant"
 	appearance_flags = PIXEL_SCALE|LONG_GLIDE
-	layer = ABOVE_ALL_MOB_LAYER
-	plane = ABOVE_GAME_PLANE
+	layer = BELOW_OPEN_DOOR_LAYER
+	plane = GAME_PLANE
 	interaction_flags_atom = INTERACT_ATOM_ATTACK_HAND
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	bound_width = 96

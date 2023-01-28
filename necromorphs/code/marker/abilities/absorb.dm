@@ -17,7 +17,6 @@
 	return FALSE
 
 /datum/action/cooldown/necro/psy/absorb/Activate(turf/target, mob/camera/marker_signal/caller)
-	. = TRUE
 	target = get_turf(target)
 	var/absorbed_biomass = 0
 	var/list/absorbed_atoms = list()
@@ -27,7 +26,7 @@
 			absorbed_atoms += item
 	if(!absorbed_biomass)
 		to_chat(caller, span_warning("No things containing asborbable biomass found."))
-		return
+		return TRUE
 	..()
 	for(var/obj/item/item as anything in absorbed_atoms)
 		new /obj/effect/temp_visual/decoy/absorb(get_turf(item), item, target)
@@ -35,6 +34,7 @@
 	caller.marker.marker_biomass += (absorbed_biomass * 0.4)
 	caller.marker.signal_biomass += (absorbed_biomass * 0.6)
 	to_chat(caller, span_notice("Gained total of [absorbed_biomass] biomass from absorbing [length(absorbed_atoms)] thing\s!"))
+	return TRUE
 
 /obj/effect/temp_visual/decoy/absorb
 	plane = ABOVE_LIGHTING_PLANE

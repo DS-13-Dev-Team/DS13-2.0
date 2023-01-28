@@ -1,6 +1,5 @@
 /datum/action/cooldown/necro/active/gallop
 	name = "Gallop"
-	icon_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Gives a huge burst of speed, but makes you vulnerable."
 	cooldown_time = 10 SECONDS
