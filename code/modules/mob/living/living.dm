@@ -824,11 +824,10 @@
 	adjustStaminaLoss(stam_amt*-1)
 
 /mob/living/carbon/specific_heal(blood_amt = 0, brute_amt = 0, fire_amt = 0, tox_amt = 0, oxy_amt = 0, clone_amt = 0, organ_amt = 0, stam_amt = 0, specific_revive = FALSE, specific_bones = FALSE)
-	var/mob/living/carbon/C = src
-	if(!(C.dna?.species && (NOBLOOD in C.dna.species.species_traits)))
-		C.blood_volume += (blood_amt)
+	if(!(NOBLOOD in src.dna?.species?.species_traits))
+		src.blood_volume += (blood_amt)
 
-	for(var/i in C.internal_organs)
+	for(var/i in src.internal_organs)
 		var/obj/item/organ/O = i
 		if(O.organ_flags & ORGAN_SYNTHETIC)
 			continue

@@ -12,13 +12,13 @@
 	var/stamina_loss = 0
 	var/blood_loss = 0
 	var/organ_loss = 0
-	var/heal_modifier = 0.05 // heals 5% of damage taken.
+	var/heal_modifier = 0.075 // heals 7.5% of damage taken.
 	var/jelly_amount = 0 // used for a burst of healing after being healed.
 	var/bone_loss = FALSE
 	var/life_loss = FALSE
 	var/heal_delay = 10 // 1 second
 	var/self_heal_delay_modifier = 2 //healing yourself is slower than others.
-	var/flat_heal = 12.5
+	var/flat_heal = 0
 	var/death_heal = 0.3 // Used for the adrenaline medipack. Big enough as to reduce the chance of immediately dying again.
 
 	var/base_delay = 10
@@ -31,28 +31,27 @@
 	if(!prox || !isliving(target))
 		return
 	var/mob/living/H = target
-	if(H.stat == DEAD && life_loss)
-		heal_modifier = death_heal
-		heal_delay = 200 //Reviving the dead takes a while, 20 seconds to be exact
-		organ_loss = 30
-		to_chat(user, "<span class='warning'>You begin using the [src] to try and bring [H] back from the dead...</span>")
-	if(H.stat == DEAD && !life_loss) // Won't revive the dead, except for specific extracts
-		to_chat(user, "<span class='warning'>[src] will not work on the dead!</span>")
-		return
-	else if(H.stat != DEAD && life_loss) // Syringes healing the dead won't work well on the living.
+	if(H.stat == DEAD)
+		if(life_loss)
+			heal_modifier = death_heal
+			heal_delay = 200 //Reviving the dead takes a while, 20 seconds to be exact
+			organ_loss = 30
+			to_chat(user, "<span class='warning'>You begin using the [src] to try and bring [H] back from the dead...</span>")
+		else // Won't revive the dead, except for specific extracts
+			to_chat(user, "<span class='warning'>[src] will not work on the dead!</span>")
+			return
+	else if(life_loss) // Syringes healing the dead won't work well on the living.
 		heal_modifier = base_modifier
 		heal_delay = base_delay
 		organ_loss = base_organ
 
 	if(H != user)
 		if(!do_mob(user, H, heal_delay)) // 1 second delay. Heal others faster than yourself!
-			return FALSE
-		user.visible_message("<span class='notice'>[user] crushes the [src] over [H], the glowing goop quickly regenerating some of [H.p_their()] injuries!</span>",
+			user.visible_message("<span class='notice'>[user] crushes the [src] over [H], the glowing goop quickly regenerating some of [H.p_their()] injuries!</span>",
 			"<span class='notice'>You squeeze the [src], and it bursts over [H], the glowing goop regenerating some of [H.p_their()] injuries.</span>")
 	else
 		if(!do_mob(user, H, (heal_delay * self_heal_delay_modifier))) // 2 second delay. Heal yourself slower than others!
-			return FALSE
-		user.visible_message("<span class='notice'>[user] crushes the [src] over [user.p_them()]self, the glowing goop quickly regenerating some of [user.p_their()] injuries!</span>",
+			user.visible_message("<span class='notice'>[user] crushes the [src] over [user.p_them()]self, the glowing goop quickly regenerating some of [user.p_their()] injuries!</span>",
 			"<span class='notice'>You squeeze the [src], and it bursts in your hand, splashing you with glowing goop which quickly regenerates some of your injuries!</span>")
 
 	oxy_loss = (flat_heal + (H.getOxyLoss() * heal_modifier))
@@ -77,7 +76,7 @@
 	heal_modifier = 0.2 // heals 20% of damage taken.
 	jelly_amount = 1 // used for a burst of healing after being healed.
 	heal_delay = 12.5 // 1.25 seconds.
-	flat_heal = 9
+	flat_heal = 2
 
 /obj/item/medipack/large
 	name = "large medipack"
