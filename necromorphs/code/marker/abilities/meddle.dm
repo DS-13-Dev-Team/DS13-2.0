@@ -1,6 +1,7 @@
 /datum/action/cooldown/necro/psy/meddle
 	name = "Meddle"
 	desc = "A context sensitive spell which does different things depending on the target. Interfaces with machines, moves items, messes with computers and office appliances."
+	button_icon_state = "meddle"
 	cost = 10
 
 /datum/action/cooldown/necro/psy/meddle/PreActivate(obj/target)

@@ -1,6 +1,5 @@
 /datum/action/cooldown/necro/charge
 	name = "Charge"
-	button_icon_state = "sniper_zoom"
 	desc = "Allows you to charge at a chosen position."
 	cooldown_time = 1.5 SECONDS
 	click_to_activate = TRUE

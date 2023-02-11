@@ -1,0 +1,2 @@
+/datum/reagent
+	var/biomass

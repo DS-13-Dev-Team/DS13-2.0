@@ -1,6 +1,7 @@
 /datum/action/cooldown/necro/psy/flicker
 	name = "Flicker"
 	desc = "Causes a targeted light to flicker."
+	button_icon_state = "flicker"
 	cost = 10
 
 /datum/action/cooldown/necro/psy/flicker/PreActivate(obj/machinery/light/target)

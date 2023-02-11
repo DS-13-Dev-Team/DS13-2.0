@@ -1,7 +1,6 @@
 /datum/action/cooldown/necro/explode
 	name = "Explode"
 	desc = "Makes you explode after a few seconds."
-	button_icon_state = "sniper_zoom"
 	cooldown_time = 12 SECONDS
 	click_to_activate = FALSE
 

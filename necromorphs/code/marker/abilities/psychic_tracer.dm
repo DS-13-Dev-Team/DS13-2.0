@@ -1,6 +1,7 @@
 /datum/action/cooldown/necro/psy/psychic_tracer
 	name = "Psychic Tracer"
 	desc = "Plants a psychic tracer on a target mob, causing them to act as a visual relay for necrovision."
+	button_icon_state = "tracer"
 	cost = 110
 
 /datum/action/cooldown/necro/psy/psychic_tracer/PreActivate(mob/living/target)

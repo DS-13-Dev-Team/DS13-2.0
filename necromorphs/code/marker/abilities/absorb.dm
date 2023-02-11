@@ -24,6 +24,12 @@
 		if(item.biomass)
 			absorbed_biomass += item.biomass
 			absorbed_atoms += item
+		if(item.reagents?.flags & OPENCONTAINER)
+			for(var/datum/reagent/reagent as anything in item.reagents.reagent_list)
+				if(!reagent.biomass)
+					continue
+				absorbed_biomass += reagent.biomass
+				item.reagents.remove_reagent(reagent.type, reagent.volume)
 	if(!absorbed_biomass)
 		to_chat(caller, span_warning("No things containing asborbable biomass found."))
 		return TRUE
@@ -45,6 +51,8 @@
 	//wait time + second animate duration
 	duration = animate_duration + 4
 	.=..()
+	if(!target)
+		return INITIALIZE_HINT_QDEL
 	add_filter("necro_outline", 1, outline_filter(1, COLOR_BRIGHT_ORANGE))
 	//wait some time before start the animation
 	animate(src, time = animate_duration)

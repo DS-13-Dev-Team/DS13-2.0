@@ -1,4 +1,6 @@
 #define MOUNT_ANIMATION_TIME 0.15 SECONDS
+#define PIXEL_X_OFFSET 1
+#define PIXEL_Y_OFFSET 2
 
 GLOBAL_LIST_INIT(wallrun_types_typecache, typecacheof(list(
 		/turf/closed/wall,
@@ -57,7 +59,8 @@ GLOBAL_LIST_INIT(wallrun_types_typecache, typecacheof(list(
 	if(source.alpha > 100)
 		new_alpha = max(cached_alpha * 0.5, 100)
 	var/dir_to_source = get_dir(bumped, source)
-	animate(source, time = MOUNT_ANIMATION_TIME, pixel_x = get_pixel_offset_x(dir_to_source), pixel_y = get_pixel_offset_y(dir_to_source), transform = matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE), alpha = new_alpha, easing = BACK_EASING)
+	var/list/offset = get_pixel_offset(dir_to_source)
+	animate(source, time = MOUNT_ANIMATION_TIME, pixel_x = offset[PIXEL_X_OFFSET], pixel_y = offset[PIXEL_Y_OFFSET], transform = matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE), alpha = new_alpha, easing = BACK_EASING)
 	RegisterSignal(source, COMSIG_LIVING_UPDATED_RESTING, .proc/update_resting)
 	RegisterSignal(source, COMSIG_MOB_STATCHANGE, .proc/on_parent_stat_change)
 	RegisterSignal(source, COMSIG_MOVABLE_MOVED, .proc/on_parent_moved)
@@ -67,22 +70,21 @@ GLOBAL_LIST_INIT(wallrun_types_typecache, typecacheof(list(
 	RegisterSignal(bumped, COMSIG_ATOM_DIR_CHANGE, .proc/on_mount_point_dir_change)
 	mount_point = bumped
 
-/datum/component/wallrun/proc/get_pixel_offset_x(dir_to_source)
+/datum/component/wallrun/proc/get_pixel_offset(dir_to_source)
 	var/mob/living/source = parent
-	if(dir_to_source & (WEST|SOUTH))
-		return -source.base_pixel_x
-	return source.base_pixel_x
-
-/datum/component/wallrun/proc/get_pixel_offset_y(dir_to_source)
-	var/mob/living/source = parent
-	if(dir_to_source & (EAST|SOUTH))
-		return -source.base_pixel_y
-	return source.base_pixel_y
+	var/base_pixel_x = source.base_pixel_x
+	var/base_pixel_y = source.base_pixel_y
+	var/matrix/rotation =  matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE)
+	var/list/offset[2]
+	offset[PIXEL_X_OFFSET] = (base_pixel_x * rotation.a) + (base_pixel_y * rotation.b)
+	offset[PIXEL_Y_OFFSET] = (base_pixel_x * rotation.d) + (base_pixel_y * rotation.e)
+	return offset
 
 /datum/component/wallrun/proc/transit_to(atom/bumped)
 	var/mob/living/source = parent
 	var/dir_to_source = get_dir(bumped, source)
-	animate(source, time = MOUNT_ANIMATION_TIME, pixel_x = get_pixel_offset_x(dir_to_source), pixel_y = get_pixel_offset_y(dir_to_source), transform = matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE), easing = BACK_EASING)
+	var/list/offset = get_pixel_offset(dir_to_source)
+	animate(source, time = MOUNT_ANIMATION_TIME, pixel_x = offset[PIXEL_X_OFFSET], pixel_y = offset[PIXEL_Y_OFFSET], transform = matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE), easing = BACK_EASING)
 	UnregisterSignal(mount_point, list(COMSIG_MOVABLE_MOVED, COMSIG_ATOM_DENSITY_CHANGE, COMSIG_PARENT_QDELETING, COMSIG_ATOM_DIR_CHANGE))
 	if(ismovable(bumped))
 		RegisterSignal(bumped, COMSIG_MOVABLE_MOVED, .proc/on_mount_point_moved)
@@ -120,7 +122,8 @@ GLOBAL_LIST_INIT(wallrun_types_typecache, typecacheof(list(
 /datum/component/wallrun/proc/change_mount_point(atom/new_point)
 	var/mob/living/source = parent
 	var/dir_to_source = get_dir(new_point, source)
-	animate(source, time = MOUNT_ANIMATION_TIME, pixel_x = get_pixel_offset_x(dir_to_source), pixel_y = get_pixel_offset_y(dir_to_source), transform = matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE), easing = BACK_EASING)
+	var/list/offset = get_pixel_offset(dir_to_source)
+	animate(source, time = MOUNT_ANIMATION_TIME, pixel_x = offset[PIXEL_X_OFFSET], pixel_y = offset[PIXEL_Y_OFFSET], transform = matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE), easing = BACK_EASING)
 	UnregisterSignal(mount_point, list(COMSIG_MOVABLE_MOVED, COMSIG_ATOM_DENSITY_CHANGE, COMSIG_PARENT_QDELETING, COMSIG_ATOM_DIR_CHANGE))
 	if(ismovable(new_point))
 		RegisterSignal(new_point, COMSIG_MOVABLE_MOVED, .proc/on_mount_point_moved)
@@ -161,7 +164,8 @@ GLOBAL_LIST_INIT(wallrun_types_typecache, typecacheof(list(
 			// Check if didn't move away from mount point
 			if(direction & dir)
 				var/dir_to_source = get_dir(mount_point, source)
-				animate(source, time = MOUNT_ANIMATION_TIME, pixel_x = get_pixel_offset_x(dir_to_source), pixel_y = get_pixel_offset_y(dir_to_source), transform = matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE), easing = BACK_EASING)
+				var/list/offset = get_pixel_offset(dir_to_source)
+				animate(source, time = MOUNT_ANIMATION_TIME, pixel_x = offset[PIXEL_X_OFFSET], pixel_y = offset[PIXEL_Y_OFFSET], transform = matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE), easing = BACK_EASING)
 				return
 		else
 			var/atom/next_mount_point = find_mount_point(get_step(source, get_dir(old_loc, mount_point)))
@@ -170,7 +174,8 @@ GLOBAL_LIST_INIT(wallrun_types_typecache, typecacheof(list(
 				return
 			else
 				var/dir_to_source = get_dir(mount_point, source)
-				animate(source, time = MOUNT_ANIMATION_TIME, pixel_x = get_pixel_offset_x(dir_to_source), pixel_y = get_pixel_offset_y(dir_to_source), transform = matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE), easing = BACK_EASING)
+				var/list/offset = get_pixel_offset(dir_to_source)
+				animate(source, time = MOUNT_ANIMATION_TIME, pixel_x = offset[PIXEL_X_OFFSET], pixel_y = offset[PIXEL_Y_OFFSET], transform = matrix(cached_matrix, dir2angle(dir_to_source), MATRIX_ROTATE), easing = BACK_EASING)
 				return
 	unmount()
 
@@ -197,3 +202,5 @@ GLOBAL_LIST_INIT(wallrun_types_typecache, typecacheof(list(
 		unmount()
 
 #undef MOUNT_ANIMATION_TIME
+#undef PIXEL_X_OFFSET
+#undef PIXEL_Y_OFFSET

@@ -18,6 +18,9 @@
 	marker?.remove_necro(src)
 	return ..()
 
+/mob/living/carbon/human/necromorph/has_hand_for_held_index(i)
+	return FALSE
+
 /mob/living/carbon/human/necromorph/updatehealth()
 	. = ..()
 	if(hud_used)
