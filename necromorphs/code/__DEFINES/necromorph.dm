@@ -55,3 +55,8 @@
 #define CHARGE_BRUTE (1<<0)
 
 #define STOP_CHARGE_ON_DEL (1<<0)
+
+#define CHARGE_OFF 0
+#define CHARGE_BUILDINGUP 1
+#define CHARGE_ON 2
+#define CHARGE_MAX 3

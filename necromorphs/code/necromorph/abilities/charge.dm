@@ -80,6 +80,7 @@
 	SEND_SIGNAL(owner, COMSIG_FINISHED_CHARGE)
 	actively_moving = FALSE
 	charger.set_dir_on_move = initial(charger.set_dir_on_move)
+	charger.remove_movespeed_modifier(/datum/movespeed_modifier/necro_charge)
 	StartCooldown()
 
 /datum/action/cooldown/necro/charge/proc/stat_changed(mob/source, new_stat, old_stat)
