@@ -1,189 +1,148 @@
-/obj/structure/fireaxecabinet
-	name = "fire axe cabinet"
-	desc = "There is a small label that reads \"For Emergency use only\" along with details for safe use of the axe. As if."
-	icon = 'icons/obj/wallmounts.dmi'
-	icon_state = "fireaxe"
-	anchored = TRUE
-	density = FALSE
-	armor = list(MELEE = 50, BULLET = 20, LASER = 0, ENERGY = 100, BOMB = 10, BIO = 100, FIRE = 90, ACID = 50)
-	max_integrity = 150
-	integrity_failure = 0.33
-	var/locked = TRUE
-	var/open = FALSE
-	var/obj/item/fireaxe/fireaxe
+/*
+ * Fireaxe
+ */
+/obj/item/fireaxe  // DEM AXES MAN, marker -Agouri
+	icon_state = "fireaxe0"
+	base_icon_state = "fireaxe"
+	lefthand_file = 'icons/mob/inhands/weapons/axes_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/axes_righthand.dmi'
+	name = "fire axe"
+	desc = "Truly, the weapon of a madman. Who would think to fight fire with an axe?"
+	force = 5
+	throwforce = 15
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	attack_verb_continuous = list("attacks", "chops", "cleaves", "tears", "lacerates", "cuts")
+	attack_verb_simple = list("attack", "chop", "cleave", "tear", "lacerate", "cut")
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	sharpness = SHARP_EDGED
+	max_integrity = 200
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 100, ACID = 30)
+	resistance_flags = FIRE_PROOF
+	wound_bonus = -15
+	bare_wound_bonus = 20
+	var/wielded = FALSE // track wielded status on item
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/structure/fireaxecabinet, 32)
-
-/obj/structure/fireaxecabinet/Initialize(mapload)
+/obj/item/fireaxe/Initialize(mapload)
 	. = ..()
-	fireaxe = new(src)
-	update_appearance()
+	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
+	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
 
-/obj/structure/fireaxecabinet/Destroy()
-	if(fireaxe)
-		QDEL_NULL(fireaxe)
+/obj/item/fireaxe/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/butchering, 100, 80, 0 , hitsound) //axes are not known for being precision butchering tools
+	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=24, icon_wielded="[base_icon_state]1")
+
+/// triggered on wield of two handed item
+/obj/item/fireaxe/proc/on_wield(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+
+	wielded = TRUE
+
+/// triggered on unwield of two handed item
+/obj/item/fireaxe/proc/on_unwield(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+
+	wielded = FALSE
+
+/obj/item/fireaxe/update_icon_state()
+	icon_state = "[base_icon_state]0"
 	return ..()
 
-/obj/structure/fireaxecabinet/attackby(obj/item/I, mob/living/user, params)
-	if(iscyborg(user) || I.tool_behaviour == TOOL_MULTITOOL)
-		toggle_lock(user)
-	else if(I.tool_behaviour == TOOL_WELDER && !user.combat_mode && !broken)
-		if(atom_integrity < max_integrity)
-			if(!I.tool_start_check(user, amount=2))
-				return
+/obj/item/fireaxe/suicide_act(mob/user)
+	user.visible_message(span_suicide("[user] axes [user.p_them()]self from head to toe! It looks like [user.p_theyre()] trying to commit suicide!"))
+	return (BRUTELOSS)
 
-			to_chat(user, span_notice("You begin repairing [src]."))
-			if(I.use_tool(src, user, 40, volume=50, amount=2))
-				atom_integrity = max_integrity
-				update_appearance()
-				to_chat(user, span_notice("You repair [src]."))
-		else
-			to_chat(user, span_warning("[src] is already in good condition!"))
-		return
-	else if(istype(I, /obj/item/stack/sheet/glass) && broken)
-		var/obj/item/stack/sheet/glass/G = I
-		if(G.get_amount() < 2)
-			to_chat(user, span_warning("You need two glass sheets to fix [src]!"))
-			return
-		to_chat(user, span_notice("You start fixing [src]..."))
-		if(do_after(user, 20, target = src) && G.use(2))
-			broken = FALSE
-			atom_integrity = max_integrity
-			update_appearance()
-	else if(open || broken)
-		if(istype(I, /obj/item/fireaxe) && !fireaxe)
-			var/obj/item/fireaxe/F = I
-			if(F?.wielded)
-				to_chat(user, span_warning("Unwield the [F.name] first."))
-				return
-			if(!user.transferItemToLoc(F, src))
-				return
-			fireaxe = F
-			to_chat(user, span_notice("You place the [F.name] back in the [name]."))
-			update_appearance()
-			return
-		else if(!broken)
-			toggle_open()
-	else
-		return ..()
-
-/obj/structure/fireaxecabinet/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
-	switch(damage_type)
-		if(BRUTE)
-			if(broken)
-				playsound(loc, 'sound/effects/hit_on_shattered_glass.ogg', 90, TRUE)
-			else
-				playsound(loc, 'sound/effects/glasshit.ogg', 90, TRUE)
-		if(BURN)
-			playsound(src.loc, 'sound/items/welder.ogg', 100, TRUE)
-
-/obj/structure/fireaxecabinet/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = TRUE, attack_dir)
-	if(open)
-		return
+/obj/item/fireaxe/afterattack(atom/A, mob/user, proximity)
 	. = ..()
-	if(.)
-		update_appearance()
+	if(!proximity)
+		return
+	if(wielded) //destroys windows and grilles in one hit
+		if(istype(A, /obj/structure/window) || istype(A, /obj/structure/grille))
+			var/obj/structure/W = A
+			W.atom_destruction("fireaxe")
 
-/obj/structure/fireaxecabinet/atom_break(damage_flag)
+/*
+ * Bone Axe
+ */
+/obj/item/fireaxe/boneaxe  // Blatant imitation of the fireaxe, but made out of bone.
+	icon_state = "bone_axe0"
+	base_icon_state = "bone_axe"
+	name = "bone axe"
+	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters."
+
+/obj/item/fireaxe/boneaxe/ComponentInitialize()
 	. = ..()
-	if(!broken && !(flags_1 & NODECONSTRUCT_1))
-		update_appearance()
-		broken = TRUE
-		playsound(src, 'sound/effects/glassbr3.ogg', 100, TRUE)
-		new /obj/item/shard(loc)
-		new /obj/item/shard(loc)
+	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=23, icon_wielded="[base_icon_state]1")
 
-/obj/structure/fireaxecabinet/deconstruct(disassembled = TRUE)
-	if(!(flags_1 & NODECONSTRUCT_1))
-		if(fireaxe && loc)
-			fireaxe.forceMove(loc)
-			fireaxe = null
-		new /obj/item/stack/sheet/iron(loc, 2)
-	qdel(src)
 
-/obj/structure/fireaxecabinet/blob_act(obj/structure/blob/B)
-	if(fireaxe)
-		fireaxe.forceMove(loc)
-		fireaxe = null
-	qdel(src)
+/*
+ * Metal Hydrogen Axe
+ */
+/obj/item/fireaxe/metal_h2_axe  // Blatant imitation of the fireaxe, but made out of metallic hydrogen
+	icon_state = "metalh2_axe0"
+	base_icon_state = "metalh2_axe"
+	name = "metallic hydrogen axe"
+	desc = "A large, menacing axe made of an unknown substance that the eldest atmosians call Metallic Hydrogen. Truly an otherworldly weapon."
 
-/obj/structure/fireaxecabinet/attack_hand(mob/user, list/modifiers)
+/obj/item/fireaxe/metal_h2_axe/ComponentInitialize()
 	. = ..()
-	if(.)
-		return
-	if(open || broken)
-		if(fireaxe)
-			user.put_in_hands(fireaxe)
-			fireaxe = null
-			to_chat(user, span_notice("You take the fire axe from the [name]."))
-			src.add_fingerprint(user)
-			update_appearance()
-			return
-	if(locked)
-		to_chat(user, span_warning("The [name] won't budge!"))
-		return
-	else
-		open = !open
-		update_appearance()
-		return
+	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=23, icon_wielded="[base_icon_state]1")
 
-/obj/structure/fireaxecabinet/attack_paw(mob/living/user, list/modifiers)
-	return attack_hand(user, modifiers)
+/*
+ * Huge Wrench
+ */
 
-/obj/structure/fireaxecabinet/attack_ai(mob/user)
-	toggle_lock(user)
-	return
+/obj/item/fireaxe/hugewrench
+	name = "huge wrench"
+	desc = "If everything else failed - bring a bigger wrench."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "big_wrench0"
+	base_icon_state = "big_wrench"
+	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	flags_1 = CONDUCT_1
+	force = 5
+	throwforce = 15
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
 
+	attack_verb_continuous = list("bashes", "batters", "bludgeons", "whacks")
+	attack_verb_simple = list("bash", "batter", "bludgeon", "whack")
+	hitsound = 'sound/weapons/smash.ogg'
+	sharpness = WOUND_BLUNT
+	max_integrity = 200
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 100, ACID = 30)
+	resistance_flags = FIRE_PROOF
+	wound_bonus = -15
+	bare_wound_bonus = 20
+	drop_sound = 'sound/items/handling/wrench_drop.ogg'
+	pickup_sound = 'sound/items/handling/wrench_pickup.ogg'
 
-/obj/structure/fireaxecabinet/attack_tk(mob/user)
-	. = COMPONENT_CANCEL_ATTACK_CHAIN
-	if(locked)
-		to_chat(user, span_warning("The [name] won't budge!"))
-		return
-	open = !open
-	update_appearance()
-
-
-/obj/structure/fireaxecabinet/update_overlays()
+/obj/item/fireaxe/hugewrench/Initialize(mapload)
 	. = ..()
-	if(fireaxe)
-		. += "axe"
-	if(open)
-		. += "glass_raised"
+	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
+	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
+
+/obj/item/fireaxe/hugewrench/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=24, icon_wielded="[base_icon_state]1")
+
+/obj/item/fireaxe/hugewrench/update_icon_state()
+	icon_state = "[base_icon_state]0"
+	return ..()
+
+/obj/item/fireaxe/hugewrench/suicide_act(mob/user)
+	user.visible_message(span_suicide("[user] axes [user.p_them()]self from head to toe! It looks like [user.p_theyre()] trying to commit suicide!"))
+	return (BRUTELOSS)
+
+/obj/item/fireaxe/hugewrench/afterattack(atom/A, mob/user, proximity)
+	. = ..()
+	if(!proximity)
 		return
-	var/hp_percent = atom_integrity/max_integrity * 100
-	if(broken)
-		. += "glass4"
-	else
-		switch(hp_percent)
-			if(-INFINITY to 40)
-				. += "glass3"
-			if(40 to 60)
-				. += "glass2"
-			if(60 to 80)
-				. += "glass1"
-			if(80 to INFINITY)
-				. += "glass"
+	if(wielded) //destroys windows and grilles in one hit
+		if(istype(A, /obj/structure/window) || istype(A, /obj/structure/grille))
+			var/obj/structure/W = A
+			W.atom_destruction("fireaxe")
 
-	. += locked ? "locked" : "unlocked"
 
-/obj/structure/fireaxecabinet/proc/toggle_lock(mob/user)
-	to_chat(user, span_notice("Resetting circuitry..."))
-	playsound(src, 'sound/machines/locktoggle.ogg', 50, TRUE)
-	if(do_after(user, 20, target = src))
-		to_chat(user, span_notice("You [locked ? "disable" : "re-enable"] the locking modules."))
-		locked = !locked
-		update_appearance()
-
-/obj/structure/fireaxecabinet/verb/toggle_open()
-	set name = "Open/Close"
-	set category = "Object"
-	set src in oview(1)
-
-	if(locked)
-		to_chat(usr, span_warning("The [name] won't budge!"))
-		return
-	else
-		open = !open
-		update_appearance()
-		return
