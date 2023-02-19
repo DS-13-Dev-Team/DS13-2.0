@@ -20,6 +20,8 @@
 	low_threshold = 45
 	high_threshold = 120
 
+	organ_traits = list(TRAIT_ADVANCEDTOOLUSER, TRAIT_LITERATE, TRAIT_CAN_STRIP)
+
 	var/suicided = FALSE
 	var/mob/living/brain/brainmob = null
 	/// If it's a fake brain with no brainmob assigned. Feedback messages will be faked as if it does have a brainmob. See changelings & dullahans.
@@ -467,3 +469,11 @@
 		qdel(X)
 		amount_cured++
 	return amount_cured
+
+/// This proc lets the mob's brain decide what bodypart to attack with in an unarmed strike.
+/obj/item/organ/internal/brain/proc/get_attacking_limb(mob/living/carbon/human/target)
+	var/obj/item/bodypart/arm/active_hand = owner.get_active_hand()
+	if(target.body_position == LYING_DOWN && owner.usable_legs)
+		var/obj/item/bodypart/found_bodypart = owner.get_bodypart((active_hand.held_index % 2) ? BODY_ZONE_L_LEG : BODY_ZONE_R_LEG)
+		return found_bodypart || active_hand
+	return active_hand

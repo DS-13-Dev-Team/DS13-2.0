@@ -131,7 +131,7 @@ Striking a noncultist, however, will tear their flesh."}
 	throw_range = 3
 	sharpness = SHARP_EDGED
 	light_system = MOVABLE_LIGHT
-	light_range = 4
+	light_outer_range = 4
 	light_color = COLOR_RED
 	attack_verb_continuous = list("cleaves", "slashes", "tears", "lacerates", "hacks", "rips", "dices", "carves")
 	attack_verb_simple = list("cleave", "slash", "tear", "lacerate", "hack", "rip", "dice", "carve")
@@ -240,7 +240,7 @@ Striking a noncultist, however, will tear their flesh."}
 /datum/action/innate/dash/cult
 	name = "Rend the Veil"
 	desc = "Use the sword to shear open the flimsy fabric of this reality and teleport to your target."
-	icon_icon = 'icons/mob/actions/actions_cult.dmi'
+	button_icon = 'icons/mob/actions/actions_cult.dmi'
 	button_icon_state = "phaseshift"
 	dash_sound = 'sound/magic/enter_blood.ogg'
 	recharge_sound = 'sound/magic/exit_blood.ogg'
@@ -248,7 +248,7 @@ Striking a noncultist, however, will tear their flesh."}
 	phasein = /obj/effect/temp_visual/dir_setting/cult/phase
 	phaseout = /obj/effect/temp_visual/dir_setting/cult/phase/out
 
-/datum/action/innate/dash/cult/IsAvailable()
+/datum/action/innate/dash/cult/IsAvailable(feedback = FALSE)
 	if(IS_CULTIST(owner) && current_charges)
 		return TRUE
 	else
@@ -270,7 +270,7 @@ Striking a noncultist, however, will tear their flesh."}
 	sword = bastard
 	holder = user
 
-/datum/action/innate/cult/spin2win/IsAvailable()
+/datum/action/innate/cult/spin2win/IsAvailable(feedback = FALSE)
 	if(IS_CULTIST(holder) && cooldown <= world.time)
 		return TRUE
 	else
@@ -284,14 +284,14 @@ Striking a noncultist, however, will tear their flesh."}
 	sword.block_chance = 100
 	sword.slowdown += 1.5
 	addtimer(CALLBACK(src, .proc/stop_spinning), 50)
-	holder.update_action_buttons_icon()
+	holder?.update_mob_action_buttons()
 
 /datum/action/innate/cult/spin2win/proc/stop_spinning()
 	sword.spinning = FALSE
 	sword.block_chance = 50
 	sword.slowdown -= 1.5
 	sleep(sword.spin_cooldown)
-	holder.update_action_buttons_icon()
+	holder?.update_mob_action_buttons()
 
 /obj/item/restraints/legcuffs/bola/cult
 	name = "\improper Nar'Sien bola"
@@ -576,7 +576,7 @@ Striking a noncultist, however, will tear their flesh."}
 		var/curse_message = pick_n_take(remaining_curses) || "Something has gone horrendously wrong..."
 
 		curse_message += " The shuttle will be delayed by three minutes."
-		priority_announce("[curse_message]", "System Failure", 'sound/misc/notice1.ogg')
+		priority_announce("[curse_message]", "LSRV Icarus Announcement", "System Failure", 'sound/misc/notice1.ogg')
 		if(MAX_SHUTTLE_CURSES-totalcurses <= 0)
 			to_chat(user, span_danger(span_big("You sense that the emergency escape shuttle can no longer be cursed. It would be unwise to create more cursed orbs.")))
 		else if(MAX_SHUTTLE_CURSES-totalcurses == 1)
@@ -586,7 +586,7 @@ Striking a noncultist, however, will tear their flesh."}
 
 		if(totalcurses >= MAX_SHUTTLE_CURSES && (world.time < first_curse_time + SHUTTLE_CURSE_OMFG_TIMESPAN))
 			var/omfg_message = pick_list(CULT_SHUTTLE_CURSE, "omfg_announce") || "LEAVE US ALONE!"
-			addtimer(CALLBACK(GLOBAL_PROC, .proc/priority_announce, omfg_message, "Priority Alert", 'sound/misc/notice1.ogg', null, "Nanotrasen Department of Transportation: Central Command"), rand(2 SECONDS, 6 SECONDS))
+			addtimer(CALLBACK(GLOBAL_PROC,.proc/priority_announce,omfg_message,"Daedalus Industries Shuttle Dispatch","FUCK OFF",'sound/misc/notice1.ogg'), rand(2 SECONDS, 6 SECONDS))
 			for(var/mob/iter_player as anything in GLOB.player_list)
 				if(IS_CULTIST(iter_player))
 					iter_player.client?.give_award(/datum/award/achievement/misc/cult_shuttle_omfg, iter_player)
@@ -652,7 +652,7 @@ Striking a noncultist, however, will tear their flesh."}
 	name = "void torch"
 	desc = "Used by veteran cultists to instantly transport items to their needful brethren."
 	w_class = WEIGHT_CLASS_SMALL
-	light_range = 1
+	light_outer_range = 1
 	icon_state = "torch"
 	inhand_icon_state = "torch"
 	color = "#ff0000"

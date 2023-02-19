@@ -99,21 +99,21 @@
 
 /datum/action/innate/megafauna_attack/create_skull
 	name = "Create Legion Skull"
-	icon_icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
+	button_icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	button_icon_state = "legion_head"
 	chosen_message = "<span class='colossus'>You are now creating legion skulls.</span>"
 	chosen_attack_num = 1
 
 /datum/action/innate/megafauna_attack/charge_target
 	name = "Charge Target"
-	icon_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	chosen_message = "<span class='colossus'>You are now charging at your target.</span>"
 	chosen_attack_num = 2
 
 /datum/action/innate/megafauna_attack/create_turrets
 	name = "Create Sentinels"
-	icon_icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
+	button_icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	button_icon_state = "legion_turret"
 	chosen_message = "<span class='colossus'>You are now creating legion sentinels.</span>"
 	chosen_attack_num = 3
@@ -267,7 +267,7 @@
 	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
 	icon_state = "legion_turret"
 	light_power = 0.5
-	light_range = 2
+	light_outer_range = 2
 	max_integrity = 80
 	luminosity = 6
 	anchored = TRUE

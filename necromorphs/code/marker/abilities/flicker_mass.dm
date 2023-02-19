@@ -4,7 +4,7 @@
 	cost = 50
 	cooldown_time = 10 SECONDS
 
-/datum/action/cooldown/necro/psy/flicker_mass/Activate(turf/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/flicker_mass/Activate(turf/target)
 	target = get_turf(target)
 	if(!target)
 		return

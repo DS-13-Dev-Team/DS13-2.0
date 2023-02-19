@@ -533,12 +533,12 @@
 		robot_suit.update_appearance()
 	else
 		new /obj/item/robot_suit(T)
-		new /obj/item/bodypart/l_leg/robot(T)
-		new /obj/item/bodypart/r_leg/robot(T)
+		new /obj/item/bodypart/leg/left/robot(T)
+		new /obj/item/bodypart/leg/right/robot(T)
 		new /obj/item/stack/cable_coil(T, 1)
 		new /obj/item/bodypart/chest/robot(T)
-		new /obj/item/bodypart/l_arm/robot(T)
-		new /obj/item/bodypart/r_arm/robot(T)
+		new /obj/item/bodypart/arm/left/robot(T)
+		new /obj/item/bodypart/arm/right/robot(T)
 		new /obj/item/bodypart/head/robot(T)
 		var/b
 		for(b=0, b!=2, b++)
@@ -869,7 +869,7 @@
 /datum/action/innate/undeployment
 	name = "Disconnect from shell"
 	desc = "Stop controlling your shell and resume normal core operations."
-	icon_icon = 'icons/mob/actions/actions_AI.dmi'
+	button_icon = 'icons/mob/actions/actions_AI.dmi'
 	button_icon_state = "ai_core"
 
 /datum/action/innate/undeployment/Trigger(trigger_flags)

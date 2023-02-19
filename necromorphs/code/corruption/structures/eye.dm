@@ -6,7 +6,8 @@
 	icon = 'necromorphs/icons/effects/corruption.dmi'
 	icon_state = "eye"
 	light_power = 1.5
-	light_range = 3
+	light_inner_range = 1
+	light_outer_range = 2
 	light_color = COLOR_BRIGHT_ORANGE
 	max_integrity = 30
 	var/obj/structure/marker/marker
@@ -20,8 +21,8 @@
 	LAZYADD(marker.corruption_eyes, src)
 	marker.markernet.addVisionSource(src, VISION_SOURCE_RANGE, FALSE)
 	var/static/list/loc_connections = list(
-		COMSIG_ATOM_ENTERED = .proc/on_entered,
-		COMSIG_ATOM_INITIALIZED_ON = .proc/on_entered,
+		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
+		COMSIG_ATOM_INITIALIZED_ON = PROC_REF(on_entered),
 	)
 	AddComponent(/datum/component/connect_range, src, loc_connections, 4, FALSE)
 

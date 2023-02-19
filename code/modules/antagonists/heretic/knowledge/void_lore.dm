@@ -130,7 +130,7 @@
 		/datum/heretic_knowledge/spell/blood_siphon,
 		/datum/heretic_knowledge/rune_carver,
 	)
-	spell_to_add = /obj/effect/proc_holder/spell/pointed/void_phase
+	spell_to_add = /datum/action/cooldown/spell/pointed/void_phase
 	cost = 1
 	route = PATH_VOID
 
@@ -163,7 +163,7 @@
 		/datum/heretic_knowledge/spell/cleave,
 		/datum/heretic_knowledge/summon/maid_in_mirror,
 	)
-	spell_to_add = /obj/effect/proc_holder/spell/targeted/void_pull
+	spell_to_add = /datum/action/cooldown/spell/aoe/void_pull
 	cost = 1
 	route = PATH_VOID
 
@@ -197,7 +197,7 @@
 
 /datum/heretic_knowledge/final/void_final/on_finished_recipe(mob/living/user, list/selected_atoms, turf/loc)
 	. = ..()
-	priority_announce("[generate_heretic_text()] The nobleman of void [user.real_name] has arrived, step along the Waltz that ends worlds! [generate_heretic_text()]","[generate_heretic_text()]", ANNOUNCER_SPANOMALIES)
+	priority_announce("[generate_heretic_text()] The nobleman of void [user.real_name] has arrived, step along the Waltz that ends worlds! [generate_heretic_text()]","[generate_heretic_text()]", sound_type = ANNOUNCER_SPANOMALIES)
 	user.client?.give_award(/datum/award/achievement/misc/void_ascension, user)
 	ADD_TRAIT(user, TRAIT_RESISTLOWPRESSURE, MAGIC_TRAIT)
 

@@ -15,8 +15,8 @@
 
 	//Should be replaced with hud as soon as possible
 	AddComponent(/datum/component/health_meter)
-	RegisterSignal(src, COMSIG_STARTED_CHARGE, .proc/start_charge)
-	RegisterSignal(src, COMSIG_FINISHED_CHARGE, .proc/end_charge)
+	RegisterSignal(src, COMSIG_STARTED_CHARGE, PROC_REF(start_charge))
+	RegisterSignal(src, COMSIG_FINISHED_CHARGE, PROC_REF(end_charge))
 
 /mob/living/carbon/human/necromorph/Destroy()
 	evacuate()
@@ -90,7 +90,7 @@
 	SetSleeping(0, 0)
 	reset_perspective(null)
 	reload_fullscreen()
-	update_action_buttons_icon()
+	update_mob_action_buttons()
 	update_damage_hud()
 	update_health_hud()
 	med_hud_set_health()

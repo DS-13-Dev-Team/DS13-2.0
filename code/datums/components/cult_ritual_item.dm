@@ -15,8 +15,8 @@
 	var/list/turfs_that_boost_us
 	/// A list of all shields surrounding us while drawing certain runes (Nar'sie).
 	var/list/obj/structure/emergency_shield/cult/narsie/shields
-	/// An item action associated with our parent, to quick-draw runes.
-	var/datum/action/item_action/linked_action
+	/// Weakref to an action added to our parent item that allows for quick drawing runes
+	var/datum/weakref/linked_action_ref
 
 /datum/component/cult_ritual_item/Initialize(
 	examine_message,
@@ -35,12 +35,13 @@
 		src.turfs_that_boost_us = list(turfs_that_boost_us)
 
 	if(ispath(action))
-		linked_action = new action(parent)
+		var/obj/item/item_parent = parent
+		var/datum/action/added_action = item_parent.add_item_action(action)
+		linked_action_ref = WEAKREF(added_action)
 
 /datum/component/cult_ritual_item/Destroy(force, silent)
 	cleanup_shields()
-	if(linked_action)
-		QDEL_NULL(linked_action)
+	QDEL_NULL(linked_action_ref)
 	return ..()
 
 /datum/component/cult_ritual_item/RegisterWithParent()
@@ -355,7 +356,7 @@
 		return
 	if(!check_if_in_ritual_site(cultist, cult_team))
 		return FALSE
-	priority_announce("Figments from an eldritch god are being summoned by [cultist.real_name] into [get_area(cultist)] from an unknown dimension. Disrupt the ritual at all costs!","Central Command Higher Dimensional Affairs", ANNOUNCER_SPANOMALIES)
+	priority_announce("Figments from an eldritch god are being summoned by [cultist.real_name] into [get_area(cultist)] from an unknown dimension. Disrupt the ritual at all costs!","Ananke Higher Dimensional Affairs", sound_type = ANNOUNCER_SPANOMALIES)
 	for(var/shielded_turf in spiral_range_turfs(1, cultist, 1))
 		LAZYADD(shields, new /obj/structure/emergency_shield/cult/narsie(shielded_turf))
 

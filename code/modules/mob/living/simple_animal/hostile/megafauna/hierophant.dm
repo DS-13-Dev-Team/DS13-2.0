@@ -97,28 +97,28 @@ Difficulty: Hard
 
 /datum/action/innate/megafauna_attack/blink
 	name = "Blink To Target"
-	icon_icon = 'icons/mob/actions/actions_items.dmi'
+	button_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	chosen_message = "<span class='colossus'>You are now blinking to your target.</span>"
 	chosen_attack_num = 1
 
 /datum/action/innate/megafauna_attack/chaser_swarm
 	name = "Chaser Swarm"
-	icon_icon = 'icons/effects/effects.dmi'
+	button_icon = 'icons/effects/effects.dmi'
 	button_icon_state = "hierophant_squares_indefinite"
 	chosen_message = "<span class='colossus'>You are firing a chaser swarm at your target.</span>"
 	chosen_attack_num = 2
 
 /datum/action/innate/megafauna_attack/cross_blasts
 	name = "Cross Blasts"
-	icon_icon = 'icons/effects/effects.dmi'
+	button_icon = 'icons/effects/effects.dmi'
 	button_icon_state = "hierophant_blast_indefinite"
 	chosen_message = "<span class='colossus'>You are now firing cross blasts at your target.</span>"
 	chosen_attack_num = 3
 
 /datum/action/innate/megafauna_attack/blink_spam
 	name = "Blink Chase"
-	icon_icon = 'icons/obj/lavaland/artefacts.dmi'
+	button_icon = 'icons/obj/lavaland/artefacts.dmi'
 	button_icon_state = "hierophant_club_ready_beacon"
 	chosen_message = "<span class='colossus'>You are now repeatedly blinking at your target.</span>"
 	chosen_attack_num = 4
@@ -518,7 +518,7 @@ Difficulty: Hard
 /obj/effect/temp_visual/hierophant/squares
 	icon_state = "hierophant_squares"
 	duration = 3
-	light_range = MINIMUM_USEFUL_LIGHT_RANGE
+	light_outer_range = MINIMUM_USEFUL_LIGHT_RANGE
 	randomdir = FALSE
 
 /obj/effect/temp_visual/hierophant/squares/Initialize(mapload, new_caster)
@@ -535,7 +535,7 @@ Difficulty: Hard
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_HIERO_WALL)
 	canSmoothWith = list(SMOOTH_GROUP_HIERO_WALL)
-	light_range = MINIMUM_USEFUL_LIGHT_RANGE
+	light_outer_range = MINIMUM_USEFUL_LIGHT_RANGE
 	duration = 100
 
 /obj/effect/temp_visual/hierophant/wall/Initialize(mapload, new_caster)
@@ -649,7 +649,7 @@ Difficulty: Hard
 /obj/effect/temp_visual/hierophant/blast
 	icon_state = "hierophant_blast"
 	name = "vortex blast"
-	light_range = 2
+	light_outer_range = 2
 	light_power = 2
 	desc = "Get out of the way!"
 	duration = 9
@@ -730,7 +730,7 @@ Difficulty: Hard
 /obj/effect/temp_visual/hierophant/blast/visual
 	icon_state = "hierophant_blast"
 	name = "vortex blast"
-	light_range = 2
+	light_outer_range = 2
 	light_power = 2
 	desc = "Get out of the way!"
 	duration = 9
@@ -745,7 +745,7 @@ Difficulty: Hard
 	desc = "A strange beacon, allowing mass teleportation for those able to use it."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
 	icon_state = "hierophant_tele_off"
-	light_range = 2
+	light_outer_range = 2
 	layer = LOW_OBJ_LAYER
 	anchored = TRUE
 
@@ -760,7 +760,7 @@ Difficulty: Hard
 				to_chat(user, span_hierophant_warning("You collect [src], reattaching it to the club!"))
 				H.beacon = null
 				H.update_appearance()
-				user.update_action_buttons_icon()
+				user?.update_mob_action_buttons()
 				qdel(src)
 		else
 			to_chat(user, span_hierophant_warning("You touch the beacon with the club, but nothing happens."))

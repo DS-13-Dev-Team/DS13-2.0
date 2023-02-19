@@ -1,7 +1,6 @@
 /datum/action/cooldown/necro/explode
 	name = "Explode"
 	desc = "Makes you explode after a few seconds."
-	icon_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	cooldown_time = 12 SECONDS
 	click_to_activate = FALSE
@@ -37,7 +36,7 @@
 
 /datum/action/cooldown/necro/explode/proc/explode(mob/living/carbon/human/necromorph/exploder/user)
 	if(owner == user)
-		var/obj/item/bodypart/l_arm/necromorph/exploder/pustule = target
+		var/obj/item/bodypart/arm/left/necromorph/exploder/pustule = target
 		pustule.explode()
 		user.gib_animation()
 		new /obj/effect/temp_visual/scry(get_turf(user), user.marker.markernet)

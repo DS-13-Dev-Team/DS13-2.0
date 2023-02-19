@@ -8,7 +8,7 @@
 	environment_smash = ENVIRONMENT_SMASH_RWALLS
 	mob_biotypes = MOB_ORGANIC|MOB_EPIC
 	obj_damage = 400
-	light_range = 3
+	light_outer_range = 3
 	faction = list("mining", "boss")
 	weather_immunities = list(TRAIT_LAVA_IMMUNE,TRAIT_ASHSTORM_IMMUNE)
 	robust_searching = TRUE
@@ -189,7 +189,7 @@
 
 /datum/action/innate/megafauna_attack
 	name = "Megafauna Attack"
-	icon_icon = 'icons/mob/actions/actions_animal.dmi'
+	button_icon = 'icons/mob/actions/actions_animal.dmi'
 	button_icon_state = ""
 	var/chosen_message
 	var/chosen_attack_num = 0

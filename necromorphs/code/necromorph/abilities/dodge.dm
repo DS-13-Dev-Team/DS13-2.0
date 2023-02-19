@@ -1,7 +1,6 @@
 //Still need some tweaks. Kinda useless in it's current state
 /datum/action/cooldown/necro/dodge
 	name = "Dodge"
-	icon_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "sniper_zoom"
 	desc = "Allows you to dodge bullets."
 	cooldown_time = 6 SECONDS

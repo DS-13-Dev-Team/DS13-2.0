@@ -23,7 +23,7 @@
 	///The mode of the scrubber (SCRUBBING or SIPHONING)
 	var/scrubbing = SCRUBBING //0 = siphoning, 1 = scrubbing
 	///The list of gases we are filtering
-	var/list/filter_types = list(GAS_CO2)
+	var/list/filter_types = list(GAS_CO2, GAS_RADON, GAS_PLASMA)
 	///Rate of the scrubber to remove gases from the air
 	var/volume_rate = MAX_SCRUBBER_FLOWRATE
 	///A fast-siphon toggle, siphons at 3x speed for 3x the power cost.
@@ -260,8 +260,7 @@
 			var/draw = scrub_gas(filter_types, environment, air_contents, transfer_moles, power_rating)
 			if(draw == -1)
 				. = FALSE
-			else if(draw)
-				ATMOS_USE_POWER(draw)
+			ATMOS_USE_POWER(draw)
 			//Remix the resulting gases
 			update_parents()
 			return .
@@ -271,8 +270,7 @@
 		var/transfer_moles = min(environment.total_moles, environment.total_moles*MAX_SIPHON_FLOWRATE/environment.volume)
 
 		var/draw = pump_gas(environment, air_contents, transfer_moles, power_rating)
-		if(draw > 0)
-			ATMOS_USE_POWER(draw)
+		ATMOS_USE_POWER(draw)
 		update_parents()
 		return TRUE
 

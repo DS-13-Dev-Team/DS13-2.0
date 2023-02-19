@@ -34,8 +34,7 @@
 		else
 			effect.be_replaced()
 
-	if(ranged_ability)
-		ranged_ability.remove_ranged_ability(src)
+
 	if(buckled)
 		buckled.unbuckle_mob(src,force=1)
 
@@ -292,6 +291,7 @@
 		stop_pulling()
 
 	changeNext_move(CLICK_CD_GRABBING)
+	animate_interact(AM, INTERACT_PULL)
 
 	if(AM.pulledby)
 		if(!supress_message)
@@ -406,6 +406,7 @@
 		stop_pulling()
 
 /mob/living/stop_pulling()
+	animate_interact(pulling, INTERACT_UNPULL)
 	if(ismob(pulling))
 		reset_pull_offsets(pulling)
 	..()
@@ -750,10 +751,6 @@
 		clear_alert(ALERT_NOT_ENOUGH_OXYGEN)
 		reload_fullscreen()
 		. = TRUE
-		if(mind)
-			for(var/S in mind.spell_list)
-				var/obj/effect/proc_holder/spell/spell = S
-				spell.updateButtons()
 		if(excess_healing)
 			INVOKE_ASYNC(src, .proc/emote, "gasp")
 			log_combat(src, src, "revived")
@@ -1553,24 +1550,6 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 /mob/living/proc/on_fall()
 	return
 
-/mob/living/proc/AddAbility(obj/effect/proc_holder/A)
-	abilities.Add(A)
-	A.on_gain(src)
-	if(A.has_action)
-		A.action.Grant(src)
-
-/mob/living/proc/RemoveAbility(obj/effect/proc_holder/A)
-	abilities.Remove(A)
-	A.on_lose(src)
-	if(A.action)
-		A.action.Remove(src)
-
-/mob/living/proc/add_abilities_to_panel()
-	var/list/L = list()
-	for(var/obj/effect/proc_holder/A in abilities)
-		L[++L.len] = list("[A.panel]",A.get_panel_text(),A.name,"[REF(A)]")
-	return L
-
 /mob/living/forceMove(atom/destination)
 	if(!currently_z_moving)
 		stop_pulling()
@@ -1706,12 +1685,6 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 		client_eye.get_remote_view_fullscreens(src)
 	else
 		clear_fullscreen("remote_view", 0)
-
-/mob/living/update_mouse_pointer()
-	..()
-	if (client && ranged_ability?.ranged_mousepointer)
-		client.mouse_pointer_icon = ranged_ability.ranged_mousepointer
-
 
 /mob/living/vv_edit_var(var_name, var_value)
 	switch(var_name)

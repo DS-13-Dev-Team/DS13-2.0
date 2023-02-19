@@ -402,16 +402,12 @@
 	. = ..()
 	var/obj/item/organ/internal/alien/plasmavessel/vessel = getorgan(/obj/item/organ/internal/alien/plasmavessel)
 	if(vessel)
-		. += "Plasma Stored: [vessel.storedPlasma]/[vessel.max_plasma]"
+		. += "Plasma Stored: [vessel.stored_plasma]/[vessel.max_plasma]"
 	var/obj/item/organ/internal/heart/vampire/darkheart = getorgan(/obj/item/organ/internal/heart/vampire)
 	if(darkheart)
 		. += "Current blood level: [blood_volume]/[BLOOD_VOLUME_MAXIMUM]."
 	if(locate(/obj/item/assembly/health) in src)
 		. += "Health: [health]"
-
-/mob/living/carbon/get_proc_holders()
-	. = ..()
-	. += add_abilities_to_panel()
 
 /mob/living/carbon/attack_ui(slot, params)
 	if(!has_hand_for_held_index(active_hand_index))
@@ -799,10 +795,6 @@
 		else
 			hud_used.stamina.icon_state = "stamina6"
 
-/mob/living/carbon/proc/update_internals_hud_icon(internal_state = 0)
-	if(hud_used?.internals)
-		hud_used.internals.icon_state = "internal[internal_state]"
-
 /mob/living/carbon/proc/update_spacesuit_hud_icon(cell_state = "empty")
 	if(hud_used?.spacesuit)
 		hud_used.spacesuit.icon_state = "spacesuit_[cell_state]"
@@ -854,7 +846,7 @@
 	else
 		clear_alert(ALERT_HANDCUFFED)
 		SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "handcuffed")
-	update_action_buttons_icon() //some of our action buttons might be unusable when we're handcuffed.
+	update_mob_action_buttons() //some of our action buttons might be unusable when we're handcuffed.
 	update_worn_handcuffs()
 	update_hud_handcuffed()
 
@@ -987,8 +979,10 @@
 				hand_bodyparts += bodypart_instance
 
 
-///Proc to hook behavior on bodypart additions.
+///Proc to hook behavior on bodypart additions. Do not directly call. You're looking for [/obj/item/bodypart/proc/attach_limb()].
 /mob/living/carbon/proc/add_bodypart(obj/item/bodypart/new_bodypart)
+	SHOULD_NOT_OVERRIDE(TRUE)
+
 	bodyparts += new_bodypart
 	new_bodypart.set_owner(src)
 
@@ -1003,8 +997,10 @@
 				set_usable_hands(usable_hands + 1)
 
 
-///Proc to hook behavior on bodypart removals.
+///Proc to hook behavior on bodypart removals.  Do not directly call. You're looking for [/obj/item/bodypart/proc/drop_limb()].
 /mob/living/carbon/proc/remove_bodypart(obj/item/bodypart/old_bodypart)
+	SHOULD_NOT_OVERRIDE(TRUE)
+
 	bodyparts -= old_bodypart
 	switch(old_bodypart.body_part)
 		if(LEG_LEFT, LEG_RIGHT)
@@ -1059,15 +1055,15 @@
 				if(BODY_ZONE_CHEST)
 					limbtypes = typesof(/obj/item/bodypart/chest)
 				if(BODY_ZONE_R_ARM)
-					limbtypes = typesof(/obj/item/bodypart/r_arm)
+					limbtypes = typesof(/obj/item/bodypart/arm/right)
 				if(BODY_ZONE_L_ARM)
-					limbtypes = typesof(/obj/item/bodypart/l_arm)
+					limbtypes = typesof(/obj/item/bodypart/arm/left)
 				if(BODY_ZONE_HEAD)
 					limbtypes = typesof(/obj/item/bodypart/head)
 				if(BODY_ZONE_L_LEG)
-					limbtypes = typesof(/obj/item/bodypart/l_leg)
+					limbtypes = typesof(/obj/item/bodypart/leg/left)
 				if(BODY_ZONE_R_LEG)
-					limbtypes = typesof(/obj/item/bodypart/r_leg)
+					limbtypes = typesof(/obj/item/bodypart/leg/right)
 			switch(edit_action)
 				if("remove")
 					if(BP)
@@ -1345,9 +1341,9 @@
 
 
 /mob/living/carbon/get_attack_type()
-	var/datum/species/species = dna?.species
-	if (species)
-		return species.attack_type
+	if(has_active_hand())
+		var/obj/item/bodypart/arm/active_arm = get_active_hand()
+		return active_arm.attack_type
 	return ..()
 
 

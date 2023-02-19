@@ -4,7 +4,8 @@
 	cost = 20
 	click_through_static = TRUE
 
-/datum/action/cooldown/necro/psy/scry/Activate(atom/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/scry/Activate(atom/target)
+	var/mob/camera/marker_signal/caller = owner
 	var/turf/target_turf = get_turf(target)
 	if(target_turf)
 		..()
@@ -14,7 +15,8 @@
 /obj/effect/temp_visual/scry
 	anchored = TRUE
 	light_color = "#ffff00"
-	light_range = 6
+	light_inner_range = 1
+	light_outer_range = 4
 	light_power = 1
 	duration = 1 MINUTES
 

@@ -13,7 +13,7 @@
 	startWhen = rand(40, 60)
 
 /datum/round_event/wizard/magicarp/announce(fake)
-	priority_announce("Unknown magical entities have been detected near [station_name()], please stand-by.", "Lifesign Alert")
+	priority_announce("Unknown magical entities have been detected near [station_name()], please stand-by.", FLAVOR_ANANKE_STATION)
 
 /datum/round_event/wizard/magicarp/start()
 	for(var/obj/effect/landmark/carpspawn/C in GLOB.landmarks_list)
@@ -40,7 +40,7 @@
 	random_color = FALSE
 
 	var/allowed_projectile_types = list(/obj/projectile/magic/change, /obj/projectile/magic/animate, /obj/projectile/magic/resurrection,
-	/obj/projectile/magic/death, /obj/projectile/magic/teleport, /obj/projectile/magic/door, /obj/projectile/magic/aoe/fireball,
+	/obj/projectile/magic/death, /obj/projectile/magic/teleport, /obj/projectile/magic/door, /obj/projectile/magic/fireball,
 	/obj/projectile/magic/spellblade, /obj/projectile/magic/arcane_barrage)
 
 /mob/living/simple_animal/hostile/carp/ranged/Initialize(mapload)
@@ -62,9 +62,9 @@
 /mob/living/simple_animal/hostile/carp/ranged/xenobiology // these are for the xenobio gold slime pool
 	gold_core_spawnable = HOSTILE_SPAWN
 	allowed_projectile_types = list(/obj/projectile/magic/animate, /obj/projectile/magic/teleport,
-	/obj/projectile/magic/door, /obj/projectile/magic/aoe/fireball, /obj/projectile/magic/spellblade, /obj/projectile/magic/arcane_barrage) //thanks Lett1
+	/obj/projectile/magic/door, /obj/projectile/magic/fireball, /obj/projectile/magic/spellblade, /obj/projectile/magic/arcane_barrage) //thanks Lett1
 
 /mob/living/simple_animal/hostile/carp/ranged/chaos/xenobiology
 	gold_core_spawnable = HOSTILE_SPAWN
 	allowed_projectile_types = list(/obj/projectile/magic/animate, /obj/projectile/magic/teleport,
-	/obj/projectile/magic/door, /obj/projectile/magic/aoe/fireball, /obj/projectile/magic/spellblade, /obj/projectile/magic/arcane_barrage)
+	/obj/projectile/magic/door, /obj/projectile/magic/fireball, /obj/projectile/magic/spellblade, /obj/projectile/magic/arcane_barrage)

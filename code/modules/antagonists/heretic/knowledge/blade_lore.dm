@@ -340,7 +340,7 @@
 		/datum/heretic_knowledge/final/blade_final,
 		/datum/heretic_knowledge/rifle,
 	)
-	spell_to_add = /obj/effect/proc_holder/spell/aimed/furious_steel
+	spell_to_add = /datum/action/cooldown/spell/pointed/projectile/furious_steel
 	cost = 1
 	route = PATH_BLADE
 
@@ -367,15 +367,15 @@
 
 /datum/heretic_knowledge/final/blade_final/on_finished_recipe(mob/living/user, list/selected_atoms, turf/loc)
 	. = ..()
-	priority_announce("[generate_heretic_text()] Master of blades, the Colonel's disciple, [user.real_name] has ascended! Their steel is that which will cut reality in a maelstom of silver! [generate_heretic_text()]","[generate_heretic_text()]", ANNOUNCER_SPANOMALIES)
+	priority_announce("[generate_heretic_text()] Master of blades, the Colonel's disciple, [user.real_name] has ascended! Their steel is that which will cut reality in a maelstom of silver! [generate_heretic_text()]","[generate_heretic_text()]", sound_type = ANNOUNCER_SPANOMALIES)
 	user.client?.give_award(/datum/award/achievement/misc/blade_ascension, user)
 	ADD_TRAIT(user, TRAIT_STUNIMMUNE, name)
 	ADD_TRAIT(user, TRAIT_NEVER_WOUNDED, name)
 	RegisterSignal(user, COMSIG_HERETIC_BLADE_ATTACK, .proc/on_eldritch_blade)
 	user.apply_status_effect(/datum/status_effect/protective_blades/recharging, null, 8, 30, 0.25 SECONDS, 1 MINUTES)
 
-	var/obj/effect/proc_holder/spell/aimed/furious_steel/steel_spell = locate() in user.mind.spell_list
-	steel_spell?.charge_max /= 3
+	var/datum/action/cooldown/spell/pointed/projectile/furious_steel/steel_spell = locate() in user.actions
+	steel_spell?.cooldown_time /= 3
 
 /datum/heretic_knowledge/final/blade_final/proc/on_eldritch_blade(mob/living/source, mob/living/target, obj/item/melee/sickly_blade/blade)
 	SIGNAL_HANDLER

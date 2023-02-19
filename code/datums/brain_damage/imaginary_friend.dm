@@ -193,9 +193,9 @@
 
 	friend_talk(message)
 
-/mob/camera/imaginary_friend/Hear(message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, list/message_mods = list())
+/mob/camera/imaginary_friend/Hear(message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, list/message_mods = list(), atom/sound_loc)
 	if (client?.prefs.read_preference(/datum/preference/toggle/enable_runechat) && (client.prefs.read_preference(/datum/preference/toggle/enable_runechat_non_mobs) || ismob(speaker)))
-		create_chat_message(speaker, message_language, raw_message, spans)
+		create_chat_message(speaker, message_language, raw_message, spans, sound_loc = sound_loc)
 	to_chat(src, compose_message(speaker, message_language, raw_message, radio_freq, spans, message_mods))
 
 /mob/camera/imaginary_friend/proc/friend_talk(message)
@@ -250,7 +250,7 @@
 /datum/action/innate/imaginary_join
 	name = "Join"
 	desc = "Join your owner, following them from inside their mind."
-	icon_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
 	background_icon_state = "bg_revenant"
 	button_icon_state = "join"
 
@@ -261,7 +261,7 @@
 /datum/action/innate/imaginary_hide
 	name = "Hide"
 	desc = "Hide yourself from your owner's sight."
-	icon_icon = 'icons/mob/actions/actions_minor_antag.dmi'
+	button_icon = 'icons/mob/actions/actions_minor_antag.dmi'
 	background_icon_state = "bg_revenant"
 	button_icon_state = "hide"
 
@@ -275,7 +275,7 @@
 		name = "Hide"
 		desc = "Hide yourself from your owner's sight."
 		button_icon_state = "hide"
-	UpdateButtons()
+	build_all_button_icons()
 
 /datum/action/innate/imaginary_hide/Activate()
 	var/mob/camera/imaginary_friend/I = owner
