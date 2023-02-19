@@ -167,3 +167,28 @@
 /obj/item/knife/shiv/carrot/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] forcefully drives \the [src] into [user.p_their()] eye! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return BRUTELOSS
+
+/obj/item/material/knife/unitologist
+	name = "unitology ritual blade"
+	desc = "A clean, pristine blade used for spiritual and religious purposes"
+	icon = 'icons/obj/eldritch.dmi'
+	icon_state = "unitology_ritual_blade"
+	lefthand_file =  'icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
+	flags_1 = CONDUCT_1
+	slot_flags = list (ITEM_SLOT_POCKETS, ITEM_SLOT_BELT)
+	force = 10
+	w_class = WEIGHT_CLASS_SMALL
+	throwforce = 10
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	throw_speed = 3
+	throw_range = 6
+	custom_materials = list(/datum/material/iron=12000)
+	attack_verb_continuous = list("slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts")
+	attack_verb_simple = list("slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
+	sharpness = SHARP_EDGED
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 50)
+	var/bayonet = FALSE //Can this be attached to a gun?
+	wound_bonus = 5
+	bare_wound_bonus = 15
+	tool_behaviour = TOOL_KNIFE
