@@ -58,6 +58,54 @@
 	desc = "A pickaxe with a diamond pick head. Extremely robust at cracking rock walls and digging up dirt."
 	force = 19
 
+/obj/item/pickaxe/laser
+	name = "rock saw"
+	desc = "An energised mining tool for surveying and retrieval of objects embedded in otherwise dense material. Very dangerous, will cut through flesh and bone with ease."
+	icon = 'icons/obj/mining.dmi'
+	icon_state = "ds_rocksaw0"
+	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/mining_righthand.dmi'
+	mob_throw_hit_sound = 'sound/weapons/pierce.ogg'
+	flags_1 = CONDUCT_1
+	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
+	force = 2
+	w_class = WEIGHT_CLASS_BULKY
+	throwforce = 9
+	throw_speed = 2
+	throw_range = 5
+	custom_materials = list(/datum/material/iron=1000)
+	attack_verb_continuous = list("attacks", "slashes", "saws", "cuts")
+	attack_verb_simple = list("attack", "slash", "saw", "cut")
+
+	tool_behaviour = null
+	toolspeed = null
+
+/obj/item/pickaxe/laser/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/transforming, \
+		force_on = 15, \
+		throwforce_on = 8, \
+		hitsound_on = hitsound, \
+		w_class_on = WEIGHT_CLASS_NORMAL, \
+		clumsy_check = FALSE)
+	RegisterSignal(src, COMSIG_TRANSFORMING_ON_TRANSFORM, .proc/on_transform)
+
+/obj/item/pickaxe/laser/proc/on_transform(obj/item/source, mob/user, active)
+	SIGNAL_HANDLER
+
+	if(active)
+		tool_behaviour = TOOL_MINING
+		sharpness = SHARP_EDGED
+		toolspeed = 0.3
+		icon_state = "ds_rocksaw1"
+	else
+		icon_state = "ds_rocksaw0"
+		tool_behaviour = initial(tool_behaviour)
+		toolspeed = initial(toolspeed)
+
+	playsound(user ? user : src, active ? 'sound/weapons/saberon.ogg' : 'sound/weapons/saberoff.ogg', 5, TRUE)
+	return COMPONENT_NO_DEFAULT_MESSAGE
+
 /obj/item/pickaxe/drill
 	name = "mining drill"
 	icon_state = "handdrill"
@@ -162,3 +210,4 @@
 	attack_verb_continuous = list("slashes", "impales", "stabs", "slices")
 	attack_verb_simple = list("slash", "impale", "stab", "slice")
 	sharpness = SHARP_EDGED
+
