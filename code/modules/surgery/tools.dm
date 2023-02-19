@@ -225,7 +225,6 @@
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	mob_throw_hit_sound = 'sound/weapons/pierce.ogg'
 	flags_1 = CONDUCT_1
-	item_flags = TOOL_MINING
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 2
@@ -253,7 +252,7 @@
 	SIGNAL_HANDLER
 
 	if(active)
-		tool_behaviour = list (TOOL_SAW, TOOL_MINING)
+		tool_behaviour = TOOL_MINING
 		sharpness = SHARP_EDGED
 		toolspeed = 1
 		icon_state = "plasma_saw_on"
