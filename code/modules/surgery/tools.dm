@@ -215,6 +215,55 @@
 	w_class = WEIGHT_CLASS_SMALL
 	toolspeed = 0.5
 
+/obj/item/circular_saw/plasma
+	name = "SH-B1 Plasma Saw"
+	desc = "The SH-B1 Plasma Saw is designed for dissection of heavy duty materials in both on and off-site locations. Users are advised to always wear protective clothing when the saw is in use."
+	icon = 'icons/obj/tools.dmi'
+	icon_state = "plasma_saw_off"
+	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	hitsound = 'sound/weapons/circsawhit.ogg'
+	mob_throw_hit_sound = 'sound/weapons/pierce.ogg'
+	flags_1 = CONDUCT_1
+	item_flags = TOOL_MINING
+	slot_flags = ITEM_SLOT_BELT
+	w_class = WEIGHT_CLASS_NORMAL
+	force = 2
+	throwforce = 9
+	throw_speed = 2
+	throw_range = 5
+	custom_materials = list(/datum/material/iron=1000)
+	attack_verb_continuous = list("attacks", "slashes", "saws", "cuts")
+	attack_verb_simple = list("attack", "slash", "saw", "cut")
+
+	tool_behaviour = null
+	toolspeed = null
+
+/obj/item/circular_saw/plasma/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/transforming, \
+		force_on = 15, \
+		throwforce_on = 8, \
+		hitsound_on = hitsound, \
+		w_class_on = WEIGHT_CLASS_NORMAL, \
+		clumsy_check = FALSE)
+	RegisterSignal(src, COMSIG_TRANSFORMING_ON_TRANSFORM, .proc/on_transform)
+
+/obj/item/circular_saw/plasma/proc/on_transform(obj/item/source, mob/user, active)
+	SIGNAL_HANDLER
+
+	if(active)
+		tool_behaviour = list (TOOL_SAW, TOOL_MINING)
+		sharpness = SHARP_EDGED
+		toolspeed = 1
+		icon_state = "plasma_saw_on"
+	else
+		icon_state = "plasma_saw_off"
+		tool_behaviour = initial(tool_behaviour)
+		toolspeed = initial(toolspeed)
+
+	playsound(user ? user : src, active ? 'sound/weapons/saberon.ogg' : 'sound/weapons/saberoff.ogg', 5, TRUE)
+	return COMPONENT_NO_DEFAULT_MESSAGE
 
 /obj/item/surgical_drapes
 	name = "surgical drapes"
