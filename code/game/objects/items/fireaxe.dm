@@ -119,24 +119,24 @@
 	drop_sound = 'sound/items/handling/wrench_drop.ogg'
 	pickup_sound = 'sound/items/handling/wrench_pickup.ogg'
 
-/obj/item/fireaxe/bigwrench/Initialize(mapload)
+/obj/item/fireaxe/hugewrench/Initialize(mapload)
 	. = ..()
 	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
 
-/obj/item/fireaxe/bigwrench/ComponentInitialize()
+/obj/item/fireaxe/hugewrench/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=24, icon_wielded="[base_icon_state]1")
 
-/obj/item/fireaxe/bigwrench/update_icon_state()
+/obj/item/fireaxe/hugewrench/update_icon_state()
 	icon_state = "[base_icon_state]0"
 	return ..()
 
-/obj/item/fireaxe/bigwrench/suicide_act(mob/user)
+/obj/item/fireaxe/hugewrench/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] axes [user.p_them()]self from head to toe! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return (BRUTELOSS)
 
-/obj/item/fireaxe/bigwrench/afterattack(atom/A, mob/user, proximity)
+/obj/item/fireaxe/hugewrench/afterattack(atom/A, mob/user, proximity)
 	. = ..()
 	if(!proximity)
 		return
