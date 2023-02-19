@@ -88,3 +88,61 @@
 /obj/item/fireaxe/metal_h2_axe/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=23, icon_wielded="[base_icon_state]1")
+
+/*
+ * Huge Wrench
+ */
+
+/obj/item/fireaxe/hugewrench
+	name = "huge wrench"
+	desc = "If everything else failed - bring a bigger wrench."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "big_wrench0"
+	base_icon_state = "big_wrench"
+	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
+	flags_1 = CONDUCT_1
+	force = 5
+	throwforce = 15
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+
+	attack_verb_continuous = list("bashes", "batters", "bludgeons", "whacks")
+	attack_verb_simple = list("bash", "batter", "bludgeon", "whack")
+	hitsound = 'sound/weapons/smash.ogg'
+	sharpness = WOUND_BLUNT
+	max_integrity = 200
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 100, ACID = 30)
+	resistance_flags = FIRE_PROOF
+	wound_bonus = -15
+	bare_wound_bonus = 20
+	drop_sound = 'sound/items/handling/wrench_drop.ogg'
+	pickup_sound = 'sound/items/handling/wrench_pickup.ogg'
+
+/obj/item/fireaxe/bigwrench/Initialize(mapload)
+	. = ..()
+	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
+	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
+
+/obj/item/fireaxe/bigwrench/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=24, icon_wielded="[base_icon_state]1")
+
+/obj/item/fireaxe/bigwrench/update_icon_state()
+	icon_state = "[base_icon_state]0"
+	return ..()
+
+/obj/item/fireaxe/bigwrench/suicide_act(mob/user)
+	user.visible_message(span_suicide("[user] axes [user.p_them()]self from head to toe! It looks like [user.p_theyre()] trying to commit suicide!"))
+	return (BRUTELOSS)
+
+/obj/item/fireaxe/bigwrench/afterattack(atom/A, mob/user, proximity)
+	. = ..()
+	if(!proximity)
+		return
+	if(wielded) //destroys windows and grilles in one hit
+		if(istype(A, /obj/structure/window) || istype(A, /obj/structure/grille))
+			var/obj/structure/W = A
+			W.atom_destruction("fireaxe")
+
+
