@@ -4848,4 +4848,7 @@
 #include "necromorphs\code\necromorph\necromorphs\subtypes\slasher.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\spitter.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\ubermorph.dm"
+#include "necromorphs\code\tools\ds13_mining_tools.dm"
+#include "necromorphs\code\weapons\handheld\ds13_melee.dm"
+#include "necromorphs\code\weapons\handheld\ds13_two_handed.dm"
 // END_INCLUDE
