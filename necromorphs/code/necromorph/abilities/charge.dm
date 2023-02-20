@@ -1,6 +1,5 @@
 /datum/action/cooldown/necro/charge
 	name = "Charge"
-	button_icon_state = "sniper_zoom"
 	desc = "Allows you to charge at a chosen position."
 	cooldown_time = 1.5 SECONDS
 	click_to_activate = TRUE
@@ -41,8 +40,9 @@
 	StartCooldown(charge_time+charge_delay+1)
 	do_charge(owner, target_atom)
 
-/datum/action/cooldown/necro/charge/proc/do_charge(atom/movable/charger, atom/target_atom)
+/datum/action/cooldown/necro/charge/proc/do_charge(mob/living/carbon/human/necromorph/charger, atom/target_atom)
 	actively_moving = FALSE
+	charger.charging = TRUE
 	SEND_SIGNAL(charger, COMSIG_STARTED_CHARGE)
 	RegisterSignal(charger, COMSIG_MOVABLE_BUMP, PROC_REF(on_bump))
 	RegisterSignal(charger, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_move))
@@ -58,9 +58,8 @@
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, PROC_REF(pre_move))
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_POSTPROCESS, PROC_REF(post_move))
 	RegisterSignal(new_loop, COMSIG_PARENT_QDELETING, PROC_REF(charge_end))
-	if(ismob(charger))
-		RegisterSignal(new_loop, COMSIG_MOB_STATCHANGE, PROC_REF(stat_changed))
-		RegisterSignal(new_loop, COMSIG_LIVING_UPDATED_RESTING, PROC_REF(update_resting))
+	RegisterSignal(charger, COMSIG_MOB_STATCHANGE, PROC_REF(stat_changed))
+	RegisterSignal(charger, COMSIG_LIVING_UPDATED_RESTING, PROC_REF(update_resting))
 
 /datum/action/cooldown/necro/charge/proc/pre_move(datum)
 	SIGNAL_HANDLER
@@ -74,9 +73,9 @@
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/charger = source.moving
 	UnregisterSignal(charger, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING))
+	charger.charging = FALSE
 	SEND_SIGNAL(owner, COMSIG_FINISHED_CHARGE)
 	actively_moving = FALSE
-	charger.set_dir_on_move = initial(charger.set_dir_on_move)
 	StartCooldown()
 
 /datum/action/cooldown/necro/charge/proc/stat_changed(mob/source, new_stat, old_stat)
@@ -99,9 +98,6 @@
 
 /datum/action/cooldown/necro/charge/proc/on_bump(atom/movable/source, atom/target)
 	SIGNAL_HANDLER
-	// If we bump ourself (!?) or target doesn't block our movement we continue
-	if(owner == target || !target.density)
-		return
 	if(ismob(target) || target.uses_integrity)
 		hit_target(source, target)
 	SSmove_manager.stop_looping(source)
@@ -126,19 +122,6 @@
 		source.Stun(6)
 
 /datum/action/cooldown/necro/charge/proc/update_resting(atom/movable/source, resting)
+	SIGNAL_HANDLER
 	if(resting)
 		SSmove_manager.stop_looping(source)
-
-/datum/action/cooldown/necro/charge/slasher
-	cooldown_time = 12 SECONDS
-	charge_delay = 1 SECONDS
-	charge_time = 4 SECONDS
-
-/datum/action/cooldown/necro/charge/slasher/do_charge_indicator(atom/charge_target)
-	var/mob/living/carbon/human/necromorph/source = owner
-	var/matrix/new_matrix = matrix(source.transform)
-	var/shake_dir = pick(-1, 1)
-	new_matrix.Turn(16*shake_dir)
-	animate(source, transform = new_matrix, pixel_x = source.pixel_x + 5*shake_dir, time = 1)
-	animate(transform = matrix(), pixel_x = source.pixel_x-5*shake_dir, time = 9, easing = ELASTIC_EASING)
-	source.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_HIGH, TRUE, 3)

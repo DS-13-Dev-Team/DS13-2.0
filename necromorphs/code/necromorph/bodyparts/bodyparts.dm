@@ -192,7 +192,9 @@
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	icon_state = "l_arm"
+	icon_state = "head"
+	body_zone = BODY_ZONE_HEAD
+	body_part = HEAD
 	max_damage = 200
 	px_x = 0
 	px_y = -8
@@ -1114,3 +1116,18 @@
 				new_wound.apply_wound(src, attack_direction = attack_direction)
 			log_wound(owner, new_wound, damage, wound_bonus, bare_wound_bonus, base_roll) // dismembering wounds are logged in the apply_wound() for loss wounds since they delete themselves immediately, these will be immediately returned
 			return new_wound
+
+/obj/item/organ/external/tail/necromorph
+	name = "tail"
+	desc = "A severed tail. What did you cut this off of?"
+	visual = TRUE
+	zone = BODY_ZONE_PRECISE_GROIN
+	slot = ORGAN_SLOT_EXTERNAL_TAIL
+
+/obj/item/organ/external/tail/necromorph/get_global_feature_list()
+	return GLOB.necromorph_tails
+
+/datum/sprite_accessory/necromorph
+	name = "Necromorph Tail"
+	em_block = TRUE
+	locked = TRUE

@@ -1,6 +1,7 @@
 /datum/action/cooldown/necro/psy/false_sound
 	name = "False Sound"
 	desc = "A context sensitive spell which does different things depending on the target. Interfaces with machines, moves items, messes with computers and office appliances."
+	button_icon_state = "false_sound"
 	cost = 100
 	cooldown_time = 2 MINUTES
 	marker_flags = SIGNAL_ABILITY_PRE_ACTIVATION

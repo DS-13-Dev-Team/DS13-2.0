@@ -301,7 +301,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	if(marker.spent_biomass < marker.necro_classes[spawning_necromorph].biomass_spent_required)
 		to_chat(src, span_warning("Not enough biomass spent!"))
 		return
-	if(marker.biomass < marker.necro_classes[spawning_necromorph].biomass_cost)
+	if(marker.marker_biomass < marker.necro_classes[spawning_necromorph].biomass_cost)
 		to_chat(src, span_warning("Not enough biomass!"))
 		return
 	A = get_turf(A)
@@ -323,7 +323,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		if(!can_see(turf_loc, A, 4))
 			spawnloc_cantsee = TRUE
 			continue
-		marker.biomass -= marker.necro_classes[spawning_necromorph].biomass_cost
+		marker.marker_biomass -= marker.necro_classes[spawning_necromorph].biomass_cost
 		var/path = marker.necro_classes[spawning_necromorph].necromorph_type_path
 		var/mob/living/carbon/human/necromorph/mob = new path(A, marker)
 		if(marker.use_necroqueue && length(marker.marker_signals-src))

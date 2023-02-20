@@ -5,7 +5,6 @@
 
 /datum/action/cooldown/necro/shout
 	name = "Shout"
-	button_icon_state = "sniper_zoom"
 	desc = "Shout to disorientate your enemies."
 	cooldown_time = 8 SECONDS
 	click_to_activate = FALSE
@@ -32,7 +31,6 @@
 
 /datum/action/cooldown/necro/scream
 	name = "Scream"
-	button_icon_state = "sniper_zoom"
 	desc = "Scream to disorientate your enemies."
 	cooldown_time = 8 SECONDS
 	click_to_activate = FALSE

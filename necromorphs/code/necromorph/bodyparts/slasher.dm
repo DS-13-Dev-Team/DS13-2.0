@@ -14,7 +14,7 @@
 	name = BODY_ZONE_HEAD
 	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	icon_state = "l_arm"
+	icon_state = "head"
 	max_damage = 200
 	px_x = 0
 	px_y = -8
@@ -59,7 +59,7 @@
 	desc = "Some athletes prefer to tie their left shoelaces first for good \
 		luck. In this instance, it probably would not have helped."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	icon_state = "l_arm"
+	icon_state = "l_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
@@ -75,7 +75,7 @@
 		shake it all about. And apparently then it detaches.\n\
 		The hokey pokey has certainly changed a lot since space colonisation."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	icon_state = "l_arm"
+	icon_state = "r_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50

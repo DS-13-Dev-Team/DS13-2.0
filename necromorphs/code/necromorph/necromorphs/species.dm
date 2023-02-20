@@ -68,3 +68,11 @@
 
 /datum/species/necromorph/random_name(gender,unique,lastname)
 	return "[name] [rand(1, 999)]"
+
+/datum/species/necromorph/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/necromorph/H, forced = FALSE, spread_damage = FALSE, wound_bonus = 0, bare_wound_bonus = 0, sharpness = NONE, attack_direction = null)
+	if(H.dodge_shield > 0 && blocked < 50)
+		//We can only absorb half of the damage
+		var/absorbed_damage = min(H.dodge_shield, (damage * ((50-blocked)/100)))
+		H.reduce_shield(absorbed_damage)
+		blocked += (absorbed_damage / damage) * 100
+	return ..()

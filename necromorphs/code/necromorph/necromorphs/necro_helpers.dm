@@ -25,14 +25,6 @@
 /mob/living/carbon/human/necromorph/proc/play_necro_sound(audio_type, volume, extra_range)
 	CRASH("play_necro_sound() wasn't overriden | Name: [name] | Type: [type]")
 
-/mob/living/carbon/human/necromorph/proc/start_charge()
-	SIGNAL_HANDLER
-	charging = TRUE
-
-/mob/living/carbon/human/necromorph/proc/end_charge()
-	SIGNAL_HANDLER
-	charging = FALSE
-
 /mob/living/carbon/human/necromorph/verb/evacuate()
 	set name = "Evacuate"
 	set category = "Necromorph"
@@ -41,6 +33,25 @@
 		controlling.abstract_move(get_turf(src))
 		mind.transfer_to(controlling, TRUE)
 		controlling = null
+
+/mob/living/carbon/human/necromorph/proc/add_shield()
+	dodge_shield = 5 + (maxHealth*0.15)
+	if(hud_used)
+		var/datum/hud/necromorph/hud = hud_used
+		hud.update_shieldbar(src)
+	addtimer(CALLBACK(src, .proc/remove_shield), 5 SECONDS, TIMER_OVERRIDE|TIMER_UNIQUE)
+
+/mob/living/carbon/human/necromorph/proc/remove_shield()
+	dodge_shield = 0
+	if(hud_used)
+		var/datum/hud/necromorph/hud = hud_used
+		hud.update_shieldbar(src)
+
+/mob/living/carbon/human/necromorph/proc/reduce_shield(amount)
+	dodge_shield -= amount
+	if(hud_used)
+		var/datum/hud/necromorph/hud = hud_used
+		hud.update_shieldbar(src)
 
 /client/proc/spawn_necromorph()
 	set category = "Debug"

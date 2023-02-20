@@ -43,6 +43,8 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/vox_snouts, GLOB.vox_snouts_list)
 	//Moths have a whitelist
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_hair, GLOB.moth_hairstyles_list)
+	//Necromorph, DS13
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/necromorph, GLOB.necromorph_tails)
 
 	//Species
 	for(var/spath in subtypesof(/datum/species))

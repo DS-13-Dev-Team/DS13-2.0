@@ -1,5 +1,6 @@
 /datum/action/cooldown/necro/psy
 	name = "Generic psy ability"
+	button_icon = 'necromorphs/icons/hud/signal_icons.dmi'
 	cooldown_time = 0.1 SECONDS
 	click_to_activate = TRUE
 	var/cost = 0
