@@ -4779,7 +4779,6 @@
 #include "necromorphs\code\corruption\structures\cyst.dm"
 #include "necromorphs\code\corruption\structures\eye.dm"
 #include "necromorphs\code\corruption\structures\harvester.dm"
-#include "necromorphs\code\corruption\structures\maw.dm"
 #include "necromorphs\code\corruption\structures\nest.dm"
 #include "necromorphs\code\corruption\structures\node.dm"
 #include "necromorphs\code\corruption\structures\propagator.dm"

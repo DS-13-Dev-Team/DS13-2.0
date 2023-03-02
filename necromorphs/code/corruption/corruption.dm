@@ -75,13 +75,15 @@
 		our_loc.necro_corrupted = TRUE
 
 /obj/structure/corruption/process(delta_time)
-	if(state == GROWING)
-		repair_damage(3*delta_time)
-	else if(state == DECAYING)
-		take_damage(3*delta_time)
-	else
-		. = PROCESS_KILL
-		CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
+	switch(state)
+		if(GROWING)
+			repair_damage(3*delta_time)
+			return
+		if(DECAYING)
+			take_damage(3*delta_time)
+			return
+	. = PROCESS_KILL
+	CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
 
 /obj/structure/corruption/proc/on_master_delete()
 	master.corruption -= src

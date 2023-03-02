@@ -3,7 +3,7 @@
 	desc = "Causes all lights in an area to flicker"
 	button_icon_state = "mass_flicker"
 	cost = 50
-	cooldown_time = 10 SECONDS
+	cooldown_time = 40 SECONDS
 
 /datum/action/cooldown/necro/psy/flicker_mass/Activate(turf/target)
 	target = get_turf(target)

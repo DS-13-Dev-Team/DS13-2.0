@@ -44,13 +44,9 @@
 		biomass_income -= difference
 
 /obj/structure/marker/process(delta_time)
-	var/income = biomass_income
-	//Handles maws
-	for(var/obj/structure/necromorph/maw/maw as anything in active_maws)
-		income += maw.chew_target(delta_time)
-	biomass += income*(1-signal_biomass_percent)
-	signal_biomass += income*signal_biomass_percent
-	last_biomass_income = income
+	biomass += biomass_income*(1-signal_biomass_percent)
+	signal_biomass += biomass_income*signal_biomass_percent
+	last_biomass_income = biomass_income
 
 /obj/structure/marker/proc/hive_mind_message(mob/sender, message)
 	for(var/mob/dead/observer/observer as anything in GLOB.current_observers_list)
