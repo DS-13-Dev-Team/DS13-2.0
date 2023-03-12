@@ -1,7 +1,6 @@
 #define GROWING 1
 #define DECAYING 2
 
-//TODO: Wait for Ketrai's sprites
 /obj/structure/corruption
 	name = ""
 	desc = "There is something scary in it."
@@ -52,6 +51,12 @@
 	//I hate that you can't just override update_integrity()
 	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, PROC_REF(on_integrity_change))
 
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = PROC_REF(on_location_entered),
+		COMSIG_ATOM_EXITED = PROC_REF(on_location_exited)
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+
 /obj/structure/corruption/Destroy()
 	var/turf/our_loc = loc
 	if(istype(our_loc))
@@ -84,6 +89,10 @@
 			return
 	. = PROCESS_KILL
 	CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
+
+/obj/structure/corruption/proc/on_location_entered(atom/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
+
+/obj/structure/corruption/proc/on_location_exited(atom/source, atom/movable/gone, direction)
 
 /obj/structure/corruption/proc/on_master_delete()
 	master.corruption -= src

@@ -4770,6 +4770,8 @@
 #include "necromorphs\code\_global_vars\lists\necromorph_sounds.dm"
 #include "necromorphs\code\_onclick\hud\rendering\plane_master.dm"
 #include "necromorphs\code\_subsystems\corruption.dm"
+#include "necromorphs\code\biomass\_source.dm"
+#include "necromorphs\code\biomass\source_types.dm"
 #include "necromorphs\code\corruption\action.dm"
 #include "necromorphs\code\corruption\corruption.dm"
 #include "necromorphs\code\corruption\corruption_structure.dm"
