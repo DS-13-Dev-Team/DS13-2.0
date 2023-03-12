@@ -12,10 +12,10 @@
 	//Add the baseline income
 	add_biomass_source(/datum/biomass_source/baseline)
 
-	START_PROCESSING(SSprocessing, src)
+	START_PROCESSING(SSobj, src)
 
 /obj/structure/marker/Destroy()
-	STOP_PROCESSING(SSprocessing, src)
+	STOP_PROCESSING(SSobj, src)
 	for(var/datum/biomass_source/source as anything in biomass_sources)
 		remove_biomass_source(source)
 	necro_spawn_atoms = null

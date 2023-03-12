@@ -57,9 +57,10 @@ GLOBAL_LIST_EMPTY(markers_signals)
 			ability = new ability(src)
 			ability.Grant(src)
 
-	START_PROCESSING(SSprocessing, src)
+	START_PROCESSING(SSobj, src)
 
 /mob/camera/marker_signal/Destroy()
+	STOP_PROCESSING(SSobj, src)
 	GLOB.markers_signals -= src
 	if(marker)
 		marker.markernet.eyes -= src
