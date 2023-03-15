@@ -16,8 +16,6 @@
 /datum/biomass_source/Destroy(force, ...)
 	UnregisterSignal(source, COMSIG_PARENT_QDELETING)
 	source = null
-	//Safety measure in case we somehow remain in biomass sources
-	master.remove_biomass_source(src)
 	master = null
 	return ..()
 

@@ -21,8 +21,6 @@
 	interaction_flags_atom = NONE
 	/// Node that keeps us alive
 	var/datum/corruption_node/master
-	/// The Marker we are part of. Mainly used by corruption to get marker net
-	var/obj/structure/marker/marker
 	/// If we are growing or decaying
 	var/state = null
 
@@ -52,8 +50,7 @@
 	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, PROC_REF(on_integrity_change))
 
 	var/static/list/loc_connections = list(
-		COMSIG_ATOM_ENTERED = PROC_REF(on_location_entered),
-		COMSIG_ATOM_EXITED = PROC_REF(on_location_exited)
+		COMSIG_ATOM_ENTERED = PROC_REF(on_location_entered)
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
 
@@ -91,8 +88,8 @@
 	CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
 
 /obj/structure/corruption/proc/on_location_entered(atom/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
-
-/obj/structure/corruption/proc/on_location_exited(atom/source, atom/movable/gone, direction)
+	if(isliving(arrived) && !isnecromorph(arrived))
+		arrived.AddComponent(/datum/component/corruption_absorbing, master.marker)
 
 /obj/structure/corruption/proc/on_master_delete()
 	master.corruption -= src

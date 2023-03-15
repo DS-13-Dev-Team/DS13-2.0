@@ -4789,6 +4789,7 @@
 #include "necromorphs\code\datums\images.dm"
 #include "necromorphs\code\datums\reagents.dm"
 #include "necromorphs\code\datums\round_statics.dm"
+#include "necromorphs\code\datums\components\corruption_absorbing.dm"
 #include "necromorphs\code\datums\keybindingins\signal.dm"
 #include "necromorphs\code\game\atoms.dm"
 #include "necromorphs\code\game\ds13_floor.dm"
