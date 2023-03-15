@@ -14,8 +14,9 @@
 	RegisterSignal(new_source, COMSIG_PARENT_QDELETING, PROC_REF(on_source_deleted))
 
 /datum/biomass_source/Destroy(force, ...)
-	UnregisterSignal(source, COMSIG_PARENT_QDELETING)
-	source = null
+	if (source)
+		UnregisterSignal(source, COMSIG_PARENT_QDELETING)
+		source = null
 	master = null
 	return ..()
 

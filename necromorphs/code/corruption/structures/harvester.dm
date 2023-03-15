@@ -29,7 +29,7 @@
 		addtimer(CALLBACK(src, .proc/activate), 3 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /obj/structure/necromorph/harvester/Destroy()
-	marker.remove_biomass_source(our_source)
+	marker?.remove_biomass_source(our_source)
 	our_source = null
 	for(var/atom/movable/controlled as anything in controlled_atoms)
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
