@@ -9,10 +9,15 @@
 
 	necro_spawn_atoms += src
 
-	START_PROCESSING(SSprocessing, src)
+	//Add the baseline income
+	add_biomass_source(/datum/biomass_source/baseline)
+
+	START_PROCESSING(SSobj, src)
 
 /obj/structure/marker/Destroy()
-	STOP_PROCESSING(SSprocessing, src)
+	STOP_PROCESSING(SSobj, src)
+	for(var/datum/biomass_source/source as anything in biomass_sources)
+		remove_biomass_source(source)
 	necro_spawn_atoms = null
 	GLOB.necromorph_markers -= src
 	for(var/mob/camera/marker_signal/signal as anything in marker_signals)
@@ -26,28 +31,10 @@
 	icon_state = (active ? "marker_giant_dormant" : "marker_giant_active_anim")
 	return ..()
 
-/obj/structure/marker/proc/add_biomass_income(source, biomass_per_tick = 0)
-	if(biomass_sources[source])
-		biomass_sources[source] += biomass_per_tick
-	else
-		biomass_sources[source] = biomass_per_tick
-	biomass_income += biomass_per_tick
-
-/obj/structure/marker/proc/remove_biomass_income(source, biomass_per_tick = INFINITY)
-	if(biomass_sources[source])
-		var/difference = biomass_sources[source]
-		biomass_sources[source] -= biomass_per_tick
-		if(biomass_sources[source] < 0)
-			biomass_sources -= source
-		else
-			difference -= biomass_sources[source]
-		biomass_income -= difference
-
 /obj/structure/marker/process(delta_time)
-	var/income = biomass_income
-	//Handles maws
-	for(var/obj/structure/necromorph/maw/maw as anything in active_maws)
-		income += maw.chew_target(delta_time)
+	var/income = 0
+	for(var/datum/biomass_source/source as anything in biomass_sources)
+		income += source.absorb_biomass(delta_time)
 	biomass += income*(1-signal_biomass_percent)
 	signal_biomass += income*signal_biomass_percent
 	last_biomass_income = income
@@ -93,12 +80,7 @@
 			ability = new ability(eye)
 			ability.Grant(eye)
 	new /datum/corruption_node/atom/marker(src, src)
-	add_biomass_income(src, 5)
-	addtimer(CALLBACK(src, .proc/_add_passive_income), 10 MINUTES, TIMER_LOOP)
 	update_icon(UPDATE_ICON_STATE)
-
-/obj/structure/marker/proc/_add_passive_income()
-	add_biomass_income(src, 5)
 
 /obj/structure/marker/CanCorrupt(corruption_dir)
 	return TRUE
@@ -191,6 +173,11 @@
 			signal_biomass += remove_biomass
 			return TRUE
 
-/obj/structure/marker/proc/notift_all_signals(text)
-	for(var/mob/camera/marker_signal/signal as anything in marker_signals)
-		to_chat(signal, text)
+/obj/structure/marker/proc/add_biomass_source(source_type, datum/source)
+	var/datum/biomass_source/new_source = new source_type(src, source)
+	biomass_sources += new_source
+	return new_source
+
+/obj/structure/marker/proc/remove_biomass_source(datum/biomass_source/source)
+	biomass_sources -= source
+	qdel(source)

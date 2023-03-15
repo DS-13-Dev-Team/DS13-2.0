@@ -1,7 +1,6 @@
 #define GROWING 1
 #define DECAYING 2
 
-//TODO: Wait for Ketrai's sprites
 /obj/structure/corruption
 	name = ""
 	desc = "There is something scary in it."
@@ -22,8 +21,6 @@
 	interaction_flags_atom = NONE
 	/// Node that keeps us alive
 	var/datum/corruption_node/master
-	/// The Marker we are part of. Mainly used by corruption to get marker net
-	var/obj/structure/marker/marker
 	/// If we are growing or decaying
 	var/state = null
 
@@ -52,6 +49,11 @@
 	//I hate that you can't just override update_integrity()
 	RegisterSignal(src, COMSIG_ATOM_INTEGRITY_CHANGED, PROC_REF(on_integrity_change))
 
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = PROC_REF(on_location_entered)
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+
 /obj/structure/corruption/Destroy()
 	var/turf/our_loc = loc
 	if(istype(our_loc))
@@ -75,13 +77,19 @@
 		our_loc.necro_corrupted = TRUE
 
 /obj/structure/corruption/process(delta_time)
-	if(state == GROWING)
-		repair_damage(3*delta_time)
-	else if(state == DECAYING)
-		take_damage(3*delta_time)
-	else
-		. = PROCESS_KILL
-		CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
+	switch(state)
+		if(GROWING)
+			repair_damage(3*delta_time)
+			return
+		if(DECAYING)
+			take_damage(3*delta_time)
+			return
+	. = PROCESS_KILL
+	CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
+
+/obj/structure/corruption/proc/on_location_entered(atom/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
+	if(isliving(arrived) && !isnecromorph(arrived))
+		arrived.AddComponent(/datum/component/corruption_absorbing, master.marker)
 
 /obj/structure/corruption/proc/on_master_delete()
 	master.corruption -= src

@@ -1,3 +1,16 @@
+/// Update this list if you are adding new sounds
+GLOBAL_LIST_INIT(necromorph_sounds, list(
+	"Slasher" = slasher_sounds,
+	"Exploder" = exploder_sounds,
+	"Leaper" = leaper_sounds,
+	"Spitter" = spitter_sounds,
+	"Puker" = puker_sounds,
+	"Brute" = brute_sounds,
+	"Twitcher" = twitcher_sounds,
+	"Hunter" = hunter_sounds,
+	"Ubermorph" = ubermorph_sounds,
+))
+
 GLOBAL_LIST_INIT(slasher_sounds, list(
 	SOUND_ATTACK = list(
 		'necromorphs/sound/effects/creatures/necromorph/slasher/slasher_attack_1.ogg',
