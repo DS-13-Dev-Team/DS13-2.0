@@ -10,9 +10,10 @@
 	resistance_flags = FLAMMABLE
 	var/title = "book"
 
-/obj/item/storage/book/Initialize()
+/obj/item/storage/book/ComponentInitialize()
 	. = ..()
-	atom_storage.max_slots = 1
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 1
 
 /obj/item/storage/book/attack_self(mob/user)
 	to_chat(user, span_notice("The pages of [title] have been cut out!"))
@@ -120,7 +121,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 	var/new_altar_area = get_turf(bible_smacked)
 
 	balloon_alert(user, "unpacking bible...")
-	if(!do_after(user, new_altar_area, 15 SECONDS))
+	if(!do_after(user, 15 SECONDS, new_altar_area))
 		return
 	new /obj/structure/altar_of_gods(new_altar_area)
 	qdel(src)
@@ -204,7 +205,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 	if(isfloorturf(bible_smacked))
 		if(user.mind && (user.mind.holy_role))
 			var/area/current_area = get_area(bible_smacked)
-			if(!GLOB.chaplain_altars.len && istype(current_area, /area/station/service/chapel))
+			if(!GLOB.chaplain_altars.len && istype(current_area, /area/service/chapel))
 				make_new_altar(bible_smacked, user)
 				return
 			for(var/obj/effect/rune/nearby_runes in orange(2,user))
@@ -233,7 +234,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 		var/obj/item/cult_bastard/sword = bible_smacked
 		to_chat(user, span_notice("You begin to exorcise [sword]."))
 		playsound(src,'sound/hallucinations/veryfar_noise.ogg',40,TRUE)
-		if(do_after(user, sword, 4 SECONDS))
+		if(do_after(user, 40, target = sword))
 			playsound(src,'sound/effects/pray_chaplain.ogg',60,TRUE)
 			for(var/obj/item/soulstone/SS in sword.contents)
 				SS.required_role = null

@@ -22,6 +22,8 @@
 	force = 15
 	throwforce = 25
 	block_chance = 25
+	wound_bonus = -10
+	bare_wound_bonus = 20
 	armour_penetration = 35
 
 /obj/item/melee/cultblade/dagger/Initialize(mapload)
@@ -68,6 +70,8 @@ Striking a noncultist, however, will tear their flesh."}
 	force = 30 // whoever balanced this got beat in the head by a bible too many times good lord
 	throwforce = 10
 	block_chance = 50 // now it's officially a cult esword
+	wound_bonus = -50
+	bare_wound_bonus = 20
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "rends")
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "rend")
@@ -834,18 +838,16 @@ Striking a noncultist, however, will tear their flesh."}
 	mag_type = /obj/item/ammo_box/magazine/internal/blood
 	fire_sound = 'sound/magic/wand_teleport.ogg'
 
-/obj/item/gun/ballistic/rifle/enchanted/arcane_barrage/blood/can_trigger_gun(mob/living/user, akimbo_usage)
-	if(akimbo_usage)
-		return FALSE
+/obj/item/gun/ballistic/rifle/enchanted/arcane_barrage/blood/can_trigger_gun(mob/living/user)
 	. = ..()
 	if(!IS_CULTIST(user))
 		to_chat(user, span_cultlarge("\"Did you truly think that you could channel MY blood without my approval? Amusing, but futile.\""))
 		if(iscarbon(user))
 			var/mob/living/carbon/C = user
 			if(C.active_hand_index == 1)
-				C.apply_damage(20, BRUTE, BODY_ZONE_L_ARM, sharpness = SHARP_EDGED) //oof ouch
+				C.apply_damage(20, BRUTE, BODY_ZONE_L_ARM, wound_bonus = 20, sharpness = SHARP_EDGED) //oof ouch
 			else
-				C.apply_damage(20, BRUTE, BODY_ZONE_R_ARM, sharpness = SHARP_EDGED)
+				C.apply_damage(20, BRUTE, BODY_ZONE_R_ARM, wound_bonus = 20, sharpness = SHARP_EDGED)
 		qdel(src)
 		return FALSE
 
@@ -916,12 +918,12 @@ Striking a noncultist, however, will tear their flesh."}
 		return
 	charging = TRUE
 	INVOKE_ASYNC(src, .proc/charge, user)
-	if(do_after(user, user, 9 SECONDS))
+	if(do_after(user, 9 SECONDS, target = user))
 		firing = TRUE
 		ADD_TRAIT(user, TRAIT_IMMOBILIZED, CULT_TRAIT)
 		INVOKE_ASYNC(src, .proc/pewpew, user, clickparams)
 		var/obj/structure/emergency_shield/cult/weak/N = new(user.loc)
-		if(do_after(user, user, 9 SECONDS))
+		if(do_after(user, 9 SECONDS, target = user))
 			user.Paralyze(40)
 			to_chat(user, "<span class='cult italic'>You have exhausted the power of this spell!</span>")
 		REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, CULT_TRAIT)

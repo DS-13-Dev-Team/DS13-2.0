@@ -8,6 +8,7 @@
 	flags_1 = CONDUCT_1
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_SMALL
+	wound_bonus = 20
 	force = 10
 	throwforce = 20
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -114,7 +115,7 @@
 
 	target_turf.balloon_alert(user, "carving [picked_choice]...")
 	user.playsound_local(target_turf, 'sound/items/sheath.ogg', 50, TRUE)
-	if(!do_after(user, target_turf, 5 SECONDS))
+	if(!do_after(user, 5 SECONDS, target = target_turf))
 		target_turf.balloon_alert(user, "interrupted!")
 		return
 

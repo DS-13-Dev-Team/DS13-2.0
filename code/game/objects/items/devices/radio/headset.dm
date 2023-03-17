@@ -21,10 +21,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	inhand_icon_state = "headset"
 	worn_icon_state = null // So that each subtype uses their own icon state
 	custom_materials = list(/datum/material/iron=75)
-
 	subspace_transmission = TRUE
 	canhear_range = 0 // can't hear headsets from very far away
-	should_be_listening = TRUE
 
 	slot_flags = ITEM_SLOT_EARS
 	dog_fashion = null
@@ -58,6 +56,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/Initialize(mapload)
 	. = ..()
+	set_listening(TRUE)
 	recalculateChannels()
 	possibly_deactivate_in_loc()
 
@@ -224,7 +223,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	keyslot = new /obj/item/encryptionkey/heads/ce
 
 /obj/item/radio/headset/heads/cmo
-	name = "\proper the medical director's headset"
+	name = "\proper the chief medical officer's headset"
 	desc = "The headset of the highly trained medical chief."
 	icon_state = "com_headset"
 	keyslot = new /obj/item/encryptionkey/heads/cmo
@@ -292,7 +291,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	user.set_machine(src)
 	if(keyslot || keyslot2)
 		for(var/ch_name in channels)
-			SSpackets.remove_object(src, GLOB.radiochannels[ch_name])
+			SSradio.remove_object(src, GLOB.radiochannels[ch_name])
 			secure_radio_connections[ch_name] = null
 
 		if(keyslot)

@@ -6,12 +6,6 @@
 	var/number // unique id
 	var/list/cables = list() // all cables & junctions
 	var/list/nodes = list() // all connected machines
-	var/list/data_nodes = list() // all connected network equipment
-
-	///The packet queue.
-	var/list/next_packet_queue = list()
-	/// Only SSpackets should be touching this.
-	var/list/current_packet_queue = list()
 
 	var/load = 0 // the current load on the powernet, increased by each machine at processing
 	var/newavail = 0 // what available power was gathered last tick, then becomes...
@@ -23,7 +17,6 @@
 
 /datum/powernet/New()
 	SSmachines.powernets += src
-	SSpackets.queued_networks += src
 
 /datum/powernet/Destroy()
 	//Go away references, you suck!
@@ -35,7 +28,6 @@
 		M.powernet = null
 
 	SSmachines.powernets -= src
-	SSpackets.queued_networks -= src
 	return ..()
 
 /datum/powernet/proc/is_empty()
@@ -65,8 +57,7 @@
 //if the powernet is then empty, delete it
 //Warning : this proc DON'T check if the machine exists
 /datum/powernet/proc/remove_machine(obj/machinery/power/M)
-	nodes -= M
-	data_nodes -= M
+	nodes -=M
 	M.powernet = null
 	if(is_empty())//the powernet is now empty...
 		qdel(src)///... delete it
@@ -81,8 +72,6 @@
 		else
 			M.disconnect_from_network()//..remove it
 	M.powernet = src
-	if(M.network_flags & NETWORK_FLAG_POWERNET_DATANODE)
-		data_nodes[M] = M
 	nodes[M] = M
 
 //handles the power changes in the powernet
@@ -110,14 +99,3 @@
 		return clamp(20 + round(avail/25000), 20, 195) + rand(-5,5)
 	else
 		return 0
-
-////////////////////////////////////////////////
-// Data Passing
-///////////////////////////////////////////////
-// AKA: Honey, it's time to bloat powernet code again!
-
-
-/// Pass a signal through a powernet to all connected data equipment.
-// SSpackets does this for us!
-/datum/powernet/proc/queue_signal(datum/signal/signal)
-	next_packet_queue += signal

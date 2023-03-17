@@ -18,11 +18,13 @@
 	///If the UI has the pH meter shown
 	var/show_ph = TRUE
 
-/obj/item/storage/portable_chem_mixer/Initialize()
+/obj/item/storage/portable_chem_mixer/ComponentInitialize()
 	. = ..()
-	atom_storage.max_total_storage = 200
-	atom_storage.max_slots = 50
-	atom_storage.set_holdable(list(
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_combined_w_class = 200
+	STR.max_items = 50
+	STR.insert_preposition = "in"
+	STR.set_holdable(list(
 		/obj/item/reagent_containers/glass/beaker,
 		/obj/item/reagent_containers/glass/bottle,
 		/obj/item/reagent_containers/food/drinks/waterbottle,
@@ -38,7 +40,8 @@
 		return ..()
 
 /obj/item/storage/portable_chem_mixer/attackby(obj/item/I, mob/user, params)
-	if (istype(I, /obj/item/reagent_containers) && !(I.item_flags & ABSTRACT) && I.is_open_container() && atom_storage.locked)
+	var/locked = SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED)
+	if (istype(I, /obj/item/reagent_containers) && !(I.item_flags & ABSTRACT) && I.is_open_container() && locked)
 		var/obj/item/reagent_containers/B = I
 		. = TRUE //no afterattack
 		if(!user.transferItemToLoc(B, src))
@@ -67,7 +70,7 @@
 	return
 
 /obj/item/storage/portable_chem_mixer/update_icon_state()
-	if(!atom_storage.locked)
+	if(!SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED))
 		icon_state = "portablechemicalmixer_open"
 		return ..()
 	if(beaker)
@@ -78,7 +81,8 @@
 
 
 /obj/item/storage/portable_chem_mixer/AltClick(mob/living/user)
-	if(!atom_storage.locked)
+	var/locked = SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED)
+	if(!locked)
 		return ..()
 	if(!can_interact(user) || !user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		return
@@ -86,10 +90,11 @@
 	update_appearance()
 
 /obj/item/storage/portable_chem_mixer/CtrlClick(mob/living/user)
-	atom_storage.locked = !atom_storage.locked
-	if (!atom_storage.locked)
+	var/locked = SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED)
+	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_SET_LOCKSTATE, !locked)
+	if (!locked)
 		update_contents()
-	if (atom_storage.locked)
+	if (locked)
 		replace_beaker(user)
 	update_appearance()
 	playsound(src, 'sound/items/screwdriver2.ogg', 50)
@@ -117,15 +122,17 @@
 	if (loc != user)
 		return ..()
 	else
-		if (!atom_storage.locked)
+		var/locked = SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED)
+		if (!locked)
 			return ..()
-	if(atom_storage?.locked)
+	if(SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED))
 		ui_interact(user)
 		return
 
 /obj/item/storage/portable_chem_mixer/attack_self(mob/user)
 	if(loc == user)
-		if (atom_storage.locked)
+		var/locked = SEND_SIGNAL(src, COMSIG_IS_STORAGE_LOCKED)
+		if (locked)
 			ui_interact(user)
 			return
 		else

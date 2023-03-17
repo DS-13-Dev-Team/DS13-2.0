@@ -6,16 +6,9 @@
 /atom/proc/zas_update_loc()
 	var/turf/T = get_turf(src)
 	if(T?.simulated)
-		SSzas.mark_for_update(T)
+		SSzas.mark_for_update(get_turf(src))
 		return TRUE
 	return FALSE
-
-/turf/zas_update_loc()
-	if(simulated)
-		SSzas.mark_for_update(src)
-		return TRUE
-	return FALSE
-
 
 //Returns:
 // 0 / AIR_ALLOWED - Not blocked. Air and zones can mingle with this turf as they please.
@@ -40,4 +33,10 @@
 	. = 0
 	ATMOS_CANPASS_TURF(., src, other)
 	stack_trace("Turf ZAS canpass invoked.")
+
+/atom/proc/zas_mark_update()
+	var/turf/local_turf = get_turf(loc)
+	if(!local_turf)
+		return
+	SSzas.mark_for_update(local_turf)
 

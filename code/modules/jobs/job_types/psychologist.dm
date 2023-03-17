@@ -6,7 +6,7 @@
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel and the medical director"
+	supervisors = "the head of personnel and the chief medical officer"
 	selection_color = "#bbe291"
 	exp_granted_type = EXP_TYPE_CREW
 
@@ -18,7 +18,7 @@
 	)
 
 	paycheck = PAYCHECK_MEDIUM
-	paycheck_department = ACCOUNT_STATION_MASTER
+	paycheck_department = ACCOUNT_SRV
 
 	liver_traits = list(TRAIT_MEDICAL_METABOLISM)
 

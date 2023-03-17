@@ -9,6 +9,7 @@
 	attack_verb_continuous = list("bashes", "batters", "bludgeons", "whacks")
 	attack_verb_simple = list("bash", "batter", "bludgeon", "whack")
 	hitsound = 'sound/weapons/smash.ogg'
+	sharpness = WOUND_BLUNT
 
 /obj/item/fireaxe/hugewrench/ComponentInitialize()
 	. = ..()

@@ -22,6 +22,7 @@ Assistant
 
 	paycheck = PAYCHECK_ASSISTANT // Get a job. Job reassignment changes your paycheck now. Get over it.
 
+	paycheck_department = ACCOUNT_CIV
 	display_order = JOB_DISPLAY_ORDER_ASSISTANT
 
 	department_for_prefs = /datum/job_department/assistant

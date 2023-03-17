@@ -365,7 +365,7 @@
 		if(equip_to_slot_if_possible(thing, slot_type))
 			update_held_items()
 		return
-	var/datum/storage/storage = equipped_item.atom_storage
+	var/datum/component/storage/storage = equipped_item.GetComponent(/datum/component/storage)
 	if(!storage)
 		if(!thing)
 			equipped_item.attack_hand(src)
@@ -373,10 +373,10 @@
 			to_chat(src, span_warning("You can't fit [thing] into your [equipped_item.name]!"))
 		return
 	if(thing) // put thing in storage item
-		if(!equipped_item.atom_storage?.attempt_insert(thing, src))
+		if(!SEND_SIGNAL(equipped_item, COMSIG_TRY_STORAGE_INSERT, thing, src))
 			to_chat(src, span_warning("You can't fit [thing] into your [equipped_item.name]!"))
 		return
-	var/atom/real_location = storage.real_location?.resolve()
+	var/atom/real_location = storage.real_location()
 	if(!real_location.contents.len) // nothing to take out
 		to_chat(src, span_warning("There's nothing in your [equipped_item.name] to take out!"))
 		return

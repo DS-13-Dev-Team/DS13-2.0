@@ -30,7 +30,7 @@
 		)
 
 	paycheck = PAYCHECK_COMMAND
-	paycheck_department = ACCOUNT_STATION_MASTER
+	paycheck_department = ACCOUNT_MED
 
 	liver_traits = list(TRAIT_MEDICAL_METABOLISM, TRAIT_ROYAL_METABOLISM)
 
@@ -55,7 +55,7 @@
 
 
 /datum/outfit/job/cmo
-	name = "Medical Director"
+	name = "Chief Medical Officer"
 	jobtype = /datum/job/chief_medical_officer
 
 	id = /obj/item/card/id/advanced/silver
@@ -84,7 +84,7 @@
 	skillchips = list(/obj/item/skillchip/entrails_reader)
 
 /datum/outfit/job/cmo/plasmaman
-	name = "Medical Director (Plasmaman)"
+	name = "Chief Medical Officer (Plasmaman)"
 
 	uniform = /obj/item/clothing/under/plasmaman/chief_medical_officer
 	gloves = /obj/item/clothing/gloves/color/plasmaman/white
@@ -93,7 +93,7 @@
 	r_hand = /obj/item/tank/internals/plasmaman/belt/full
 
 /datum/outfit/job/cmo/mod
-	name = "Medical Director (MODsuit)"
+	name = "Chief Medical Officer (MODsuit)"
 
 	suit_store = /obj/item/tank/internals/oxygen
 	back = /obj/item/mod/control/pre_equipped/rescue

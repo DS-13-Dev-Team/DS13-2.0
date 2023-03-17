@@ -22,17 +22,21 @@
 	max_integrity = 300
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
 
-/obj/item/storage/backpack/Initialize()
+/obj/item/storage/backpack/ComponentInitialize()
 	. = ..()
-	create_storage(max_slots = 21, max_total_storage = 21)
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_combined_w_class = 21
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_items = 21
 
 /*
  * Backpack Types
  */
 
-/obj/item/storage/backpack/old/Initialize()
+/obj/item/storage/backpack/old/ComponentInitialize()
 	. = ..()
-	atom_storage.max_total_storage = 12
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_combined_w_class = 12
 
 /obj/item/bag_of_holding_inert
 	name = "inert bag of holding"
@@ -54,12 +58,14 @@
 	resistance_flags = FIRE_PROOF
 	item_flags = NO_MAT_REDEMPTION
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 60, ACID = 50)
+	component_type = /datum/component/storage/concrete/bluespace/bag_of_holding
 
-/obj/item/storage/backpack/holding/Initialize()
+/obj/item/storage/backpack/holding/ComponentInitialize()
 	. = ..()
-
-	create_storage(max_specific_storage = WEIGHT_CLASS_GIGANTIC, max_total_storage = 35, max_slots = 30, type = /datum/storage/bag_of_holding)
-	atom_storage.allow_big_nesting = TRUE
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.allow_big_nesting = TRUE
+	STR.max_w_class = WEIGHT_CLASS_GIGANTIC
+	STR.max_combined_w_class = 35
 
 /obj/item/storage/backpack/holding/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is jumping into [src]! It looks like [user.p_theyre()] trying to commit suicide."))
@@ -81,10 +87,11 @@
 	. = ..()
 	regenerate_presents()
 
-/obj/item/storage/backpack/santabag/Initialize()
+/obj/item/storage/backpack/santabag/ComponentInitialize()
 	. = ..()
-	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
-	atom_storage.max_total_storage = 60
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_combined_w_class = 60
 
 /obj/item/storage/backpack/santabag/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] places [src] over [user.p_their()] head and pulls it tight! It looks like [user.p_they()] [user.p_are()]n't in the Christmas spirit..."))
@@ -93,14 +100,17 @@
 /obj/item/storage/backpack/santabag/proc/regenerate_presents()
 	addtimer(CALLBACK(src, .proc/regenerate_presents), 30 SECONDS)
 
-	var/mob/user = get(loc, /mob)
-	if(!istype(user))
+	var/mob/M = get(loc, /mob)
+	if(!istype(M))
 		return
-	if(user.mind && HAS_TRAIT(user.mind, TRAIT_CANNOT_OPEN_PRESENTS))
+	if(M.mind && HAS_TRAIT(M.mind, TRAIT_CANNOT_OPEN_PRESENTS))
+		var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 		var/turf/floor = get_turf(src)
-		var/obj/item/thing = new /obj/item/a_gift/anything(floor)
-		if(!atom_storage.attempt_insert(thing, user, override = TRUE))
-			qdel(thing)
+		var/obj/item/I = new /obj/item/a_gift/anything(floor)
+		if(STR.can_be_inserted(I, stop_messages=TRUE))
+			STR.handle_item_insertion(I, prevent_warning=TRUE)
+		else
+			qdel(I)
 
 
 /obj/item/storage/backpack/cultpack
@@ -322,9 +332,13 @@
 
 /obj/item/storage/backpack/satchel/flat/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/undertile, TRAIT_T_RAY_VISIBLE, INVISIBILITY_OBSERVER, use_anchor = TRUE)
-	atom_storage.max_total_storage = 15
-	atom_storage.set_holdable(cant_hold_list = list(/obj/item/storage/backpack/satchel/flat)) //muh recursive backpacks)
+	AddElement(/datum/element/undertile, TRAIT_T_RAY_VISIBLE, INVISIBILITY_MAXIMUM, use_anchor = TRUE)
+
+/obj/item/storage/backpack/satchel/flat/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_combined_w_class = 15
+	STR.set_holdable(null, list(/obj/item/storage/backpack/satchel/flat)) //muh recursive backpacks)
 
 /obj/item/storage/backpack/satchel/flat/PopulateContents()
 	var/datum/supply_pack/costumes_toys/randomised/contraband/C = new
@@ -350,9 +364,10 @@
 	inhand_icon_state = "duffel"
 	slowdown = 1
 
-/obj/item/storage/backpack/duffelbag/Initialize()
+/obj/item/storage/backpack/duffelbag/ComponentInitialize()
 	. = ..()
-	atom_storage.max_total_storage = 30
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_combined_w_class = 30
 
 /obj/item/storage/backpack/duffelbag/cursed
 	name = "living duffel bag"
@@ -517,9 +532,10 @@
 	resistance_flags = FIRE_PROOF
 	supports_variations_flags = NONE
 
-/obj/item/storage/backpack/duffelbag/syndie/Initialize()
+/obj/item/storage/backpack/duffelbag/syndie/ComponentInitialize()
 	. = ..()
-	atom_storage.silent = TRUE
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.silent = TRUE
 
 /obj/item/storage/backpack/duffelbag/syndie/hitman
 	desc = "A large duffel bag for holding extra things. There is a Nanotrasen logo on the back."
@@ -672,10 +688,11 @@
 	new /obj/item/grenade/syndieminibomb(src)
 
 // For ClownOps.
-/obj/item/storage/backpack/duffelbag/clown/syndie/Initialize()
+/obj/item/storage/backpack/duffelbag/clown/syndie/ComponentInitialize()
 	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	slowdown = 0
-	atom_storage.silent = TRUE
+	STR.silent = TRUE
 
 /obj/item/storage/backpack/duffelbag/clown/syndie/PopulateContents()
 	new /obj/item/modular_computer/tablet/pda/clown(src)

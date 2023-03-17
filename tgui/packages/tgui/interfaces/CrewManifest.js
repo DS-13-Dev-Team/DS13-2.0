@@ -8,7 +8,8 @@ const commandJobs = [
   "Head of Security",
   "Chief Engineer",
   "Research Director",
-  "Medical Director",
+  "Chief Medical Officer",
+  "Quartermaster", // PARIAH EDIT ADDITION
 ];
 
 // PARIAH EDIT

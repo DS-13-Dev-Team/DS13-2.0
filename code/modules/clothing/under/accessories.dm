@@ -11,8 +11,14 @@
 	var/above_suit = FALSE
 	/// TRUE if shown as a small icon in corner, FALSE if overlayed
 	var/minimize_when_attached = TRUE
+	/// Whether the accessory has any storage to apply to the clothing it's attached to.
+	var/datum/component/storage/detached_pockets
 	/// What equipment slot the accessory attaches to.
 	var/attachment_slot = CHEST
+
+/obj/item/clothing/accessory/Destroy()
+	set_detached_pockets(null)
+	return ..()
 
 /obj/item/clothing/accessory/proc/can_attach_accessory(obj/item/clothing/U, mob/user)
 	if(!attachment_slot || (U && U.body_parts_covered & attachment_slot))
@@ -21,11 +27,12 @@
 		to_chat(user, span_warning("There doesn't seem to be anywhere to put [src]..."))
 
 /obj/item/clothing/accessory/proc/attach(obj/item/clothing/under/U, user)
-	if(atom_storage)
-		if(U.atom_storage)
+	var/datum/component/storage/storage = GetComponent(/datum/component/storage)
+	if(storage)
+		if(SEND_SIGNAL(U, COMSIG_CONTAINS_STORAGE))
 			return FALSE
-		U.clone_storage(atom_storage)
-		U.atom_storage.set_real_location(src)
+		U.TakeComponent(storage)
+		set_detached_pockets(storage)
 	U.attached_accessory = src
 	forceMove(U)
 	layer = FLOAT_LAYER
@@ -50,8 +57,8 @@
 	return TRUE
 
 /obj/item/clothing/accessory/proc/detach(obj/item/clothing/under/U, user)
-	if(U.atom_storage && U.atom_storage.real_location?.resolve() == src)
-		QDEL_NULL(U.atom_storage)
+	if(detached_pockets && detached_pockets.parent == U)
+		TakeComponent(detached_pockets)
 
 	U.armor = U.armor.detachArmor(armor)
 
@@ -68,6 +75,16 @@
 	U.attached_accessory = null
 	U.accessory_overlay = null
 
+/obj/item/clothing/accessory/proc/set_detached_pockets(new_pocket)
+	if(detached_pockets)
+		UnregisterSignal(detached_pockets, COMSIG_PARENT_QDELETING)
+	detached_pockets = new_pocket
+	if(detached_pockets)
+		RegisterSignal(detached_pockets, COMSIG_PARENT_QDELETING, .proc/handle_pockets_del)
+
+/obj/item/clothing/accessory/proc/handle_pockets_del(datum/source)
+	SIGNAL_HANDLER
+	set_detached_pockets(null)
 
 /obj/item/clothing/accessory/proc/on_uniform_equip(obj/item/clothing/under/U, user)
 	return
@@ -146,7 +163,7 @@
 			var/input
 			if(!commended && user != M)
 				input = tgui_input_text(user, "Reason for this commendation? It will be recorded by Nanotrasen.", "Commendation", max_length = 140)
-			if(do_after(user, M, delay))
+			if(do_after(user, delay, target = M))
 				if(U.attach_accessory(src, user, 0)) //Attach it, do not notify the user of the attachment
 					if(user == M)
 						to_chat(user, span_notice("You attach [src] to [U]."))
@@ -275,6 +292,10 @@
 	icon_state = "redband"
 	attachment_slot = null
 
+/obj/item/clothing/accessory/armband/deputy
+	name = "security deputy armband"
+	desc = "An armband, worn by personnel authorized to act as a deputy of station security."
+
 /obj/item/clothing/accessory/armband/cargo
 	name = "cargo bay guard armband"
 	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is brown."
@@ -341,12 +362,10 @@
 	name = "pocket protector"
 	desc = "Can protect your clothing from ink stains, but you'll look like a nerd if you're using one."
 	icon_state = "pocketprotector"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/pocketprotector
 
 /obj/item/clothing/accessory/pocketprotector/full/Initialize(mapload)
 	. = ..()
-
-	create_storage(type = /datum/storage/pockets/pocketprotector)
-
 	new /obj/item/pen/red(src)
 	new /obj/item/pen(src)
 	new /obj/item/pen/blue(src)

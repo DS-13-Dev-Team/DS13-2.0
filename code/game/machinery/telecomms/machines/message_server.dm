@@ -90,7 +90,7 @@
 	if (calibrating)
 		calibrating += world.time
 		say("Calibrating... Estimated wait time: [rand(3, 9)] minutes.")
-		pda_msgs += new /datum/data_tablet_msg("System Administrator", "system", "This is an automated message. System calibration started at [stationtime2text()].")
+		pda_msgs += new /datum/data_tablet_msg("System Administrator", "system", "This is an automated message. System calibration started at [station_time_timestamp()].")
 	else
 		pda_msgs += new /datum/data_tablet_msg("System Administrator", "system", MESSAGE_SERVER_FUNCTIONING_MESSAGE)
 
@@ -154,17 +154,15 @@
 	var/datum/logged
 
 /datum/signal/subspace/messaging/New(init_source, init_data)
-	author = WEAKREF(init_source)
+	source = init_source
 	data = init_data
-	var/turf/T = get_turf(init_source)
-	if(!T)
-		CRASH("Uh on, no source turf!")
+	var/turf/T = get_turf(source)
 	levels = list(T.z)
 	if(!("reject" in data))
 		data["reject"] = TRUE
 
 /datum/signal/subspace/messaging/copy()
-	var/datum/signal/subspace/messaging/copy = new type(author.resolve(), data.Copy())
+	var/datum/signal/subspace/messaging/copy = new type(source, data.Copy())
 	copy.original = src
 	copy.levels = levels
 	return copy
@@ -180,16 +178,12 @@
 	return "\"[data["message"]]\""
 
 /datum/signal/subspace/messaging/tablet_msg/broadcast()
-	SSpackets.queued_tablet_messages += src
-	/// MOVED TO SSPACKETS
-	/*
 	if (!logged)  // Can only go through if a message server logs it
 		return
 	for (var/obj/item/modular_computer/comp in data["targets"])
 		var/obj/item/computer_hardware/hard_drive/drive = comp.all_components[MC_HDD]
 		for(var/datum/computer_file/program/messenger/app in drive.stored_files)
 			app.receive_message(src)
-	*/
 
 // Request Console signal datum
 /datum/signal/subspace/messaging/rc/broadcast()

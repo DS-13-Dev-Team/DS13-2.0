@@ -303,8 +303,6 @@
 //visibly unequips I but it is NOT MOVED AND REMAINS IN SRC
 //item MUST BE FORCEMOVE'D OR QDEL'D
 /mob/proc/temporarilyRemoveItemFromInventory(obj/item/I, force = FALSE, idrop = TRUE)
-	if(I.item_flags & ABSTRACT)
-		return //Do nothing. Abstract items shouldn't end up in inventories and doing this triggers various odd side effects.
 	return doUnEquip(I, force, null, TRUE, idrop, silent = TRUE)
 
 //DO NOT CALL THIS PROC
@@ -418,6 +416,7 @@
 
 	return obscured
 
+
 /obj/item/proc/equip_to_best_slot(mob/M)
 	if(M.equip_to_appropriate_slot(src))
 		M.update_held_items()
@@ -426,7 +425,7 @@
 		if(equip_delay_self)
 			return
 
-	if(M.active_storage?.attempt_insert(src, M))
+	if(M.active_storage && M.active_storage.parent && SEND_SIGNAL(M.active_storage.parent, COMSIG_TRY_STORAGE_INSERT, src,M))
 		return TRUE
 
 	var/list/obj/item/possible = list(M.get_inactive_held_item(), M.get_item_by_slot(ITEM_SLOT_BELT), M.get_item_by_slot(ITEM_SLOT_DEX_STORAGE), M.get_item_by_slot(ITEM_SLOT_BACK))
@@ -434,7 +433,7 @@
 		if(!i)
 			continue
 		var/obj/item/I = i
-		if(I.atom_storage?.attempt_insert(src, M))
+		if(SEND_SIGNAL(I, COMSIG_TRY_STORAGE_INSERT, src, M))
 			return TRUE
 
 	to_chat(M, span_warning("You are unable to equip that!"))
@@ -509,8 +508,8 @@
 	var/i = 0
 	while(i < length(processing_list) )
 		var/atom/A = processing_list[++i]
-		if(A.atom_storage)
+		if(SEND_SIGNAL(A, COMSIG_CONTAINS_STORAGE))
 			var/list/item_stuff = list()
-			A.atom_storage.return_inv(item_stuff)
+			SEND_SIGNAL(A, COMSIG_TRY_STORAGE_RETURN_INVENTORY, item_stuff)
 			processing_list += item_stuff
 	return processing_list

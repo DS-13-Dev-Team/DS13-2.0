@@ -162,7 +162,7 @@
  * Currently it doesn't allow worst parts to be installed
  */
 /obj/machinery/power/turbine/proc/install_part(obj/item/turbine_parts/part_object, mob/user)
-	if(!do_after(user, src, 2 SECONDS))
+	if(!do_after(user, 2 SECONDS, src))
 		return
 	if(installed_part)
 		user.put_in_hands(installed_part)
@@ -299,7 +299,7 @@
 	. = ..()
 	radio = new(src)
 	radio.keyslot = new radio_key
-	radio.set_listening(FALSE, TRUE)
+	radio.set_listening(FALSE)
 	radio.recalculateChannels()
 
 	new /obj/item/paper/guides/jobs/atmos/turbine(loc)

@@ -319,7 +319,11 @@ rough example of the "cone" made by the 3 dirs checked
 	. = list()
 	if(!istype(target) || !(target.item_flags & IN_STORAGE))
 		return
-	var/datum/storage/storage_datum = target.loc.atom_storage
+	var/datum/component/storage/concrete/storage_datum = target.loc.GetComponent(/datum/component/storage/concrete)
 	if(!storage_datum)
 		return
 	. += storage_datum.parent
+	for(var/datum/component/storage/slave as anything in storage_datum.slaves)
+		if(!isatom(slave.parent))
+			continue
+		. += slave.parent

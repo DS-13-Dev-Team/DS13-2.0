@@ -88,7 +88,7 @@
 	set_stat(DEAD)
 	unset_machine()
 	timeofdeath = world.time
-	tod = stationtime2text()
+	tod = station_time_timestamp()
 	evacuate()
 	set_disgust(0)
 	SetSleeping(0, 0)

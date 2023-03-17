@@ -8,6 +8,8 @@
 	icon_state = "storage"
 	complexity = 3
 	incompatible_modules = list(/obj/item/mod/module/storage)
+	/// The storage component of the module.
+	var/datum/component/storage/concrete/storage
 	/// Max weight class of items in the storage.
 	var/max_w_class = WEIGHT_CLASS_NORMAL
 	/// Max combined weight of all items in the storage.
@@ -17,28 +19,34 @@
 
 /obj/item/mod/module/storage/Initialize(mapload)
 	. = ..()
-	create_storage(max_specific_storage = max_w_class, max_total_storage = max_combined_w_class, max_slots = max_items)
-	atom_storage.allow_big_nesting = TRUE
-	atom_storage.locked = TRUE
+	storage = AddComponent(/datum/component/storage/concrete)
+	storage.max_w_class = max_w_class
+	storage.max_combined_w_class = max_combined_w_class
+	storage.max_items = max_items
+	storage.allow_big_nesting = TRUE
+	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_SET_LOCKSTATE, TRUE)
 
 /obj/item/mod/module/storage/on_install()
-	var/datum/storage/modstorage = mod.create_storage(max_specific_storage = max_w_class, max_total_storage = max_combined_w_class, max_slots = max_items)
-	modstorage.set_real_location(src)
-	atom_storage.locked = FALSE
+	var/datum/component/storage/modstorage = mod.AddComponent(/datum/component/storage, storage)
+	modstorage.max_w_class = max_w_class
+	modstorage.max_combined_w_class = max_combined_w_class
+	modstorage.max_items = max_items
+	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_SET_LOCKSTATE, FALSE)
+	RegisterSignal(mod.chestplate, COMSIG_ITEM_PRE_UNEQUIP, .proc/on_chestplate_unequip)
 
 /obj/item/mod/module/storage/on_uninstall(deleting = FALSE)
-	var/datum/storage/modstorage = mod.atom_storage
-	atom_storage.locked = TRUE
+	var/datum/component/storage/modstorage = mod.GetComponent(/datum/component/storage)
+	storage.slaves -= modstorage
 	qdel(modstorage)
-	if(!deleting)
-		atom_storage.remove_all(get_turf(src))
 	UnregisterSignal(mod.chestplate, COMSIG_ITEM_PRE_UNEQUIP)
-
+	if(!deleting)
+		SEND_SIGNAL(src, COMSIG_TRY_STORAGE_QUICK_EMPTY, drop_location())
+	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_SET_LOCKSTATE, TRUE)
 /obj/item/mod/module/storage/proc/on_chestplate_unequip(obj/item/source, force, atom/newloc, no_move, invdrop, silent)
 	if(QDELETED(source) || newloc == mod.wearer || !mod.wearer.s_store)
 		return
 	to_chat(mod.wearer, span_notice("[src] tries to store [mod.wearer.s_store] inside itself."))
-	atom_storage?.attempt_insert(mod.wearer.s_store, mod.wearer, override = TRUE)
+	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_INSERT, mod.wearer.s_store, mod.wearer, TRUE)
 
 /obj/item/mod/module/storage/large_capacity
 	name = "MOD expanded storage module"
@@ -291,7 +299,7 @@
 	. = ..()
 	if(!.)
 		return
-	if(dispense_time && !do_after(mod.wearer, mod, dispense_time))
+	if(dispense_time && !do_after(mod.wearer, dispense_time, target = mod))
 		balloon_alert(mod.wearer, "interrupted!")
 		return FALSE
 	var/obj/item/dispensed = new dispense_type(mod.wearer.loc)

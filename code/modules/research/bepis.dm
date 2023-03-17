@@ -17,6 +17,7 @@
 	base_icon_state = "chamber"
 	density = TRUE
 	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
 	circuit = /obj/item/circuitboard/machine/bepis
 
 	///How much cash the UI and machine are depositing at a time.

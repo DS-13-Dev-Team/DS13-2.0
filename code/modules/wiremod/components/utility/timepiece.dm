@@ -46,7 +46,7 @@
 
 	switch(format.value)
 		if(COMP_TIMEPIECE_TWENTYFOUR_HOUR)
-			time = stationtime2text()
+			time = station_time_timestamp()
 		if(COMP_TIMEPIECE_TWELVE_HOUR)
 			time = time_to_twelve_hour(station_time())
 

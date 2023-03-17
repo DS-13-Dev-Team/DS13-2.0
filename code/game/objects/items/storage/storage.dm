@@ -3,6 +3,7 @@
 	icon = 'icons/obj/storage.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	var/rummage_if_nodrop = TRUE
+	var/component_type = /datum/component/storage/concrete
 	/// Should we preload the contents of this type?
 	/// BE CAREFUL, THERE'S SOME REALLY NASTY SHIT IN THIS TYPEPATH
 	/// SANTA IS EVIL
@@ -10,13 +11,12 @@
 
 /obj/item/storage/Initialize(mapload)
 	. = ..()
-
-	create_storage()
-
 	PopulateContents()
-
 	for (var/obj/item/item in src)
 		item.item_flags |= IN_STORAGE
+
+/obj/item/storage/ComponentInitialize()
+	AddComponent(component_type)
 
 /obj/item/storage/AllowDrop()
 	return FALSE
@@ -37,7 +37,8 @@
 
 /obj/item/storage/doStrip(mob/who)
 	if(HAS_TRAIT(src, TRAIT_NODROP) && rummage_if_nodrop)
-		atom_storage.remove_all()
+		var/datum/component/storage/CP = GetComponent(/datum/component/storage)
+		CP.do_quick_empty()
 		return TRUE
 	return ..()
 
@@ -47,7 +48,8 @@
 /obj/item/storage/proc/PopulateContents()
 
 /obj/item/storage/proc/emptyStorage()
-	atom_storage.remove_all()
+	var/datum/component/storage/ST = GetComponent(/datum/component/storage)
+	ST.do_quick_empty()
 
 /obj/item/storage/Destroy()
 	for(var/obj/important_thing in contents)
