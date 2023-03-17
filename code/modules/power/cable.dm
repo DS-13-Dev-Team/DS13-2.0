@@ -351,6 +351,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 /obj/structure/cable/proc/auto_propagate_cut_cable(obj/O)
 	if(O && !QDELETED(O))
 		var/datum/powernet/newPN = new()// creates a new powernet...
+		//NOTE: If packets are acting weird during very high SSpackets load (if you somehow manage to overload it to the point that you're losing packets from powernet rebuilds...), start looking here.
 		propagate_network(O, newPN)//... and propagates it to the other side of the cable
 
 //Makes a new network for the cable and propgates it. If we already have one, just die
@@ -549,7 +550,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	if(affecting && !IS_ORGANIC_LIMB(affecting))
 		if(user == H)
 			user.visible_message(span_notice("[user] starts to fix some of the wires in [H]'s [affecting.name]."), span_notice("You start fixing some of the wires in [H == user ? "your" : "[H]'s"] [affecting.name]."))
-			if(!do_mob(user, H, 50))
+			if(!do_after(user, H, 50))
 				return
 		if(item_heal_robotic(H, user, 0, 15))
 			use(1)
@@ -772,4 +773,15 @@ GLOBAL_LIST(hub_radial_layer_list)
 
 // This is a mapping aid. In order for this to be placed on a map and function, all three layers need to have their nodes active
 /obj/structure/cable/multilayer/connected
-		cable_layer = CABLE_LAYER_1 | CABLE_LAYER_2 | CABLE_LAYER_3
+	cable_layer = CABLE_LAYER_1 | CABLE_LAYER_2 | CABLE_LAYER_3
+
+/// A mapping helper for a cable hub that connects layers 1 and 2
+/obj/structure/cable/multilayer/connected/one_two
+	cable_layer = CABLE_LAYER_1 | CABLE_LAYER_2
+
+/obj/item/paper/fluff/smartwire_rant
+	name = "Notice: 'Smart Wiring'"
+	info = "<p>I don’t know which brilliant fuckwad decided that “Auto-Routing Smart Wiring” was the galaxy’s brightest fucking idea, but they clearly haven’t used the fucking things.</p> \
+		<p>We’ve fried right through 3 pairs of welding goggles due to arc flashes from the “clever” things bridging powernets.</p> \
+		<p>Don’t fuck around in this room in particular if you aren’t INCREDIBLY CONFIDENT IN WHAT YOU ARE DOING.</p> \
+		<p>-<span style=\"color:#000000;font-family:'Times New Roman';font-weight: bold;\">Argus Finch, Chief Engineer, Watch 36/5/22/5</span></p>"
