@@ -4768,7 +4768,6 @@
 #include "modular_pariah\modules\tableflip\code\flipped_table.dm"
 #include "necromorphs\code\__DEFINES\audio.dm"
 #include "necromorphs\code\__DEFINES\color.dm"
-#include "necromorphs\code\__DEFINES\damage_organs.dm"
 #include "necromorphs\code\__DEFINES\hud.dm"
 #include "necromorphs\code\__DEFINES\is_helpers.dm"
 #include "necromorphs\code\__DEFINES\layers.dm"
