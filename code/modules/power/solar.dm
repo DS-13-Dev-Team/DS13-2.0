@@ -50,6 +50,7 @@
 	overlay.appearance_flags = TILE_BOUND
 	overlay.icon_state = icon_state
 	overlay.layer = FLY_LAYER
+	overlay.plane = ABOVE_GAME_PLANE
 	overlay.pixel_y = y_offset
 	vis_contents += overlay
 	return overlay

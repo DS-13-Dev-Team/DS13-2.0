@@ -17,7 +17,7 @@
 	)
 
 	paycheck = PAYCHECK_EASY
-	paycheck_department = ACCOUNT_STATION_MASTER
+	paycheck_department = ACCOUNT_SRV
 	display_order = JOB_DISPLAY_ORDER_BARTENDER
 	bounty_types = CIV_JOB_DRINK
 	departments_list = list(

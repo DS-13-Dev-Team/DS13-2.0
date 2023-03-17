@@ -154,6 +154,10 @@
 	///What kind of footstep this mob should have. Null if it shouldn't have any.
 	var/footstep_type
 
+	///How much wounding power it has
+	var/wound_bonus = CANT_WOUND
+	///How much bare wounding power it has
+	var/bare_wound_bonus = 0
 	///If the attacks from this are sharp
 	var/sharpness = NONE
 	///Generic flags
@@ -321,7 +325,7 @@
 	if(isturf(loc) && isopenturf(loc))
 		var/turf/open/ST = loc
 		if(ST.air)
-			var/list/muhair = ST.unsafe_return_air().gas
+			var/datum/gas_mixture/muhair = ST.return_air().getGases()
 
 			var/plas = muhair[GAS_PLASMA]
 			var/oxy = muhair[GAS_OXYGEN]

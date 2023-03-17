@@ -209,8 +209,6 @@
 		QDEL_NULL(cell)
 	if(terminal)
 		disconnect_terminal()
-
-	lose_atmos_sensitivity()
 	. = ..()
 
 /obj/machinery/power/apc/handle_atom_del(atom/atom_to_check)

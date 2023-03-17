@@ -16,5 +16,3 @@
 	default_price = PAYCHECK_ASSISTANT
 	extra_price = PAYCHECK_ASSISTANT
 	payment_department = ACCOUNT_SCI
-
-	discount_access = ACCESS_ORDNANCE

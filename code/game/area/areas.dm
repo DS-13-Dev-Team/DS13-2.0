@@ -5,7 +5,7 @@
  */
 /area
 	name = "Space"
-	icon = 'icons/area/areas_misc.dmi'
+	icon = 'icons/turf/areas.dmi'
 	icon_state = "unknown"
 	layer = AREA_LAYER
 	//Keeping this on the default plane, GAME_PLANE, will make area overlays fail to render on FLOOR_PLANE.
@@ -167,10 +167,8 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	if(!ambientsounds)
 		ambientsounds = GLOB.ambience_assoc[ambience_index]
 
-	if((area_flags & AREA_USES_STARLIGHT) && CONFIG_GET(flag/starlight))
-		base_lighting_alpha = 0
-		base_lighting_color = null
-		static_lighting = TRUE
+	if(area_flags & AREA_USES_STARLIGHT)
+		static_lighting = CONFIG_GET(flag/starlight)
 
 	if(requires_power)
 		luminosity = 0

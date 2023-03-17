@@ -51,7 +51,7 @@
 	set_frequency(frequency)
 
 /obj/item/assembly/signaler/Destroy()
-	SSpackets.remove_object(src,frequency)
+	SSradio.remove_object(src,frequency)
 	suicider = null
 	. = ..()
 
@@ -148,8 +148,8 @@
 		logging_data = "[time] <B>:</B> [usr.key] used [src] @ location ([T.x],[T.y],[T.z]) <B>:</B> [format_frequency(frequency)]/[code]"
 		GLOB.lastsignalers.Add(logging_data)
 
-	var/datum/signal/signal = new(src, list("code" = code), logging_data = logging_data)
-	radio_connection.post_signal(signal)
+	var/datum/signal/signal = new(list("code" = code), logging_data = logging_data)
+	radio_connection.post_signal(src, signal)
 
 /obj/item/assembly/signaler/receive_signal(datum/signal/signal)
 	. = FALSE
@@ -173,9 +173,9 @@
 	return TRUE
 
 /obj/item/assembly/signaler/proc/set_frequency(new_frequency)
-	SSpackets.remove_object(src, frequency)
+	SSradio.remove_object(src, frequency)
 	frequency = new_frequency
-	radio_connection = SSpackets.add_object(src, frequency, RADIO_SIGNALER)
+	radio_connection = SSradio.add_object(src, frequency, RADIO_SIGNALER)
 	return
 
 // Embedded signaller used in grenade construction.

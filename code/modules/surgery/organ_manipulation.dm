@@ -10,7 +10,6 @@
 		/datum/surgery_step/clamp_bleeders,
 		/datum/surgery_step/incise,
 		/datum/surgery_step/manipulate_organs, //there should be bone fixing
-		/datum/surgery_step/repair_bone,
 		/datum/surgery_step/close)
 
 /datum/surgery/organ_manipulation/soft
@@ -33,8 +32,6 @@
 		/datum/surgery_step/retract_skin,
 		/datum/surgery_step/saw,
 		/datum/surgery_step/manipulate_organs,
-		/datum/surgery_step/repair_bone,
-		/datum/surgery_step/repair_bone,
 		/datum/surgery_step/close)
 
 /datum/surgery/organ_manipulation/mechanic

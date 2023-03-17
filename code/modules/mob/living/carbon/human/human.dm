@@ -130,9 +130,9 @@
 				return
 			var/obj/item/photo/P = null
 			if(href_list["photo_front"])
-				P = R.get_front_photo()
+				P = R.fields["photo_front"]
 			else if(href_list["photo_side"])
-				P = R.get_side_photo()
+				P = R.fields["photo_side"]
 			if(P)
 				P.show(H)
 			return
@@ -290,7 +290,7 @@
 				if(!HAS_TRAIT(H, TRAIT_SECURITY_HUD))
 					return
 
-				var/datum/data/crime/crime = GLOB.data_core.createCrimeEntry(t1, "", allowed_access, stationtime2text(), fine)
+				var/datum/data/crime/crime = GLOB.data_core.createCrimeEntry(t1, "", allowed_access, station_time_timestamp(), fine)
 				for (var/obj/item/modular_computer/tablet in GLOB.TabletMessengers)
 					if(tablet.saved_identification == R.fields["name"])
 						var/message = "You have been fined [fine] credits for '[t1]'. Fines may be paid at security."
@@ -316,7 +316,7 @@
 					return
 				if(!HAS_TRAIT(H, TRAIT_SECURITY_HUD))
 					return
-				var/crime = GLOB.data_core.createCrimeEntry(t1, null, allowed_access, stationtime2text())
+				var/crime = GLOB.data_core.createCrimeEntry(t1, null, allowed_access, station_time_timestamp())
 				GLOB.data_core.addCrime(R.fields["id"], crime)
 				investigate_log("New Crime: <strong>[t1]</strong> | Added to [R.fields["name"]] by [key_name(usr)]", INVESTIGATE_RECORDS)
 				to_chat(usr, span_notice("Successfully added a crime."))
@@ -360,7 +360,7 @@
 				var/counter = 1
 				while(R.fields[text("com_[]", counter)])
 					counter++
-				R.fields[text("com_[]", counter)] = text("Made by [] on [] [], []<BR>[]", allowed_access, stationtime2text(), time2text(world.realtime, "MMM DD"), CURRENT_STATION_YEAR, t1)
+				R.fields[text("com_[]", counter)] = text("Made by [] on [] [], []<BR>[]", allowed_access, station_time_timestamp(), time2text(world.realtime, "MMM DD"), CURRENT_STATION_YEAR, t1)
 				to_chat(usr, span_notice("Successfully added comment."))
 				return
 
@@ -524,7 +524,7 @@
 		visible_message(span_notice("[src] is trying to perform CPR on [target.name]!"), \
 						span_notice("You try to perform CPR on [target.name]... Hold still!"))
 
-		if (!do_after(src, target, time = panicking ? CPR_PANIC_SPEED : (3 SECONDS)))
+		if (!do_mob(src, target, time = panicking ? CPR_PANIC_SPEED : (3 SECONDS)))
 			to_chat(src, span_warning("You fail to perform CPR on [target]!"))
 			return FALSE
 
@@ -765,6 +765,7 @@
 		if(HM.quality != POSITIVE)
 			dna.remove_mutation(HM.name)
 	set_coretemperature(get_body_temp_normal(apply_change=FALSE))
+	heat_exposure_stacks = 0
 	return ..()
 
 /mob/living/carbon/human/vomit(lost_nutrition = 10, blood = FALSE, stun = TRUE, distance = 1, message = TRUE, vomit_type = VOMIT_TOXIC, harm = TRUE, force = FALSE, purge_ratio = 0.1)
@@ -909,7 +910,7 @@
 
 	visible_message(span_notice("[src] starts[skills_space] lifting [target] onto [p_their()] back..."),
 		span_notice("You[skills_space] start to lift [target] onto your back..."))
-	if(!do_after(src, target, carrydelay))
+	if(!do_after(src, carrydelay, target))
 		visible_message(span_warning("[src] fails to fireman carry [target]!"))
 		return
 
@@ -926,7 +927,7 @@
 		return
 
 	visible_message(span_notice("[target] starts to climb onto [src]..."))
-	if(!do_after(target, src, 1.5 SECONDS) || !can_piggyback(target))
+	if(!do_after(target, 1.5 SECONDS, target = src) || !can_piggyback(target))
 		visible_message(span_warning("[target] fails to climb onto [src]!"))
 		return
 

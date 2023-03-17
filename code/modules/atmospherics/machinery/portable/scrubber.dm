@@ -44,7 +44,7 @@
 
 /obj/machinery/portable_atmospherics/scrubber/process_atmos()
 	var/pressure = air_contents.returnPressure()
-	var/temperature = air_contents.temperature
+	var/temperature = air_contents.get_temperature()
 	///function used to check the limit of the scrubbers and also set the amount of damage that the scrubber can receive, if the heat and pressure are way higher than the limit the more damage will be done
 	if(temperature > heat_limit || pressure > pressure_limit)
 		take_damage(clamp((temperature/heat_limit) * (pressure/pressure_limit), 5, 50), BURN, 0)
@@ -57,8 +57,7 @@
 	excited = TRUE
 
 	var/atom/target = holding || get_turf(src)
-	if(scrub(target.unsafe_return_air()))
-		SAFE_ZAS_UPDATE(target)
+	scrub(target.return_air())
 
 
 	return ..()
@@ -78,7 +77,6 @@
 
 	var/draw = scrub_gas(scrubbing, mixture, air_contents, transfer_moles, power_rating)
 	ATMOS_USE_POWER(draw)
-	return TRUE
 
 /obj/machinery/portable_atmospherics/scrubber/emp_act(severity)
 	. = ..()
@@ -186,8 +184,7 @@
 
 	if(!holding)
 		var/turf/muhturf = get_turf(src)
-		if(scrub(muhturf.unsafe_return_air()))
-			SAFE_ZAS_UPDATE(muhturf)
+		scrub(muhturf.return_air())
 
 	return ..()
 

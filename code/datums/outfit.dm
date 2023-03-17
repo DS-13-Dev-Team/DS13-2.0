@@ -215,14 +215,9 @@
 			WARNING("Unable to equip accessory [accessory] in outfit [name]. No uniform present!")
 
 	if(l_hand)
-		var/obj/item/item_to_equip = SSwardrobe.provide_type(l_hand, H)
-		if(!H.put_in_l_hand(item_to_equip))
-			qdel(item_to_equip)
-
+		H.put_in_l_hand(SSwardrobe.provide_type(l_hand, H))
 	if(r_hand)
-		var/obj/item/item_to_equip = SSwardrobe.provide_type(r_hand, H)
-		if(!H.put_in_r_hand(item_to_equip))
-			qdel(item_to_equip)
+		H.put_in_r_hand(SSwardrobe.provide_type(r_hand, H))
 
 	if(!visualsOnly) // Items in pockets or backpack don't show up on mob's icon.
 		if(l_pocket)

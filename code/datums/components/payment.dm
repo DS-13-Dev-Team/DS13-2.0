@@ -21,7 +21,7 @@
 /datum/component/payment/Initialize(_cost, _target, _style)
 	target_acc = _target
 	if(!target_acc)
-		target_acc = SSeconomy.station_master
+		target_acc = SSeconomy.get_dep_account(ACCOUNT_CIV)
 
 	cost = _cost
 	transaction_style = _style

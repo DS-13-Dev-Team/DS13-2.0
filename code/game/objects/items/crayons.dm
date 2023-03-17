@@ -368,7 +368,7 @@
 		wait_time *= 3
 
 	if(gang_mode || !instant)
-		if(!do_after(user, target, 5 SECONDS))
+		if(!do_after(user, 50, target = target))
 			return
 
 	var/charges_used = use_charges(user, cost)
@@ -599,7 +599,9 @@
 
 /obj/item/storage/crayons/Initialize(mapload)
 	. = ..()
-	create_storage(canhold = list(/obj/item/toy/crayon))
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 7
+	STR.set_holdable(list(/obj/item/toy/crayon))
 
 /obj/item/storage/crayons/PopulateContents()
 	new /obj/item/toy/crayon/red(src)
@@ -821,7 +823,7 @@
 
 	return SECONDARY_ATTACK_CONTINUE_CHAIN
 
-/obj/item/toy/crayon/spraycan/attackby_storage_insert(datum/storage, atom/storage_holder, mob/user)
+/obj/item/toy/crayon/spraycan/attackby_storage_insert(datum/component/storage, atom/storage_holder, mob/user)
 	return is_capped
 
 /obj/item/toy/crayon/spraycan/update_icon_state()

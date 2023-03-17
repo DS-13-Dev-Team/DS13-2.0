@@ -128,7 +128,9 @@ GLOBAL_LIST_INIT(medicine_reagents, build_medicine_reagents())
 	if(randomize_impurity_reagents)
 		for(var/rid in required_reagents)
 			var/datum/reagent/R = GLOB.chemical_reagents_list[rid]
+			R.impure_chem = get_random_reagent_id()
 			R.inverse_chem = get_random_reagent_id()
+			R.failed_chem = get_random_reagent_id()
 
 	if(randomize_results)
 		results = list()

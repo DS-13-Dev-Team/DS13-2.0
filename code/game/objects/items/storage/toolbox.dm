@@ -21,6 +21,7 @@
 	material_flags = MATERIAL_EFFECTS | MATERIAL_COLOR
 	var/latches = "single_latch"
 	var/has_latches = TRUE
+	wound_bonus = 5
 
 /obj/item/storage/toolbox/Initialize(mapload)
 	. = ..()
@@ -36,9 +37,6 @@
 	if(has_latches)
 		. += latches
 
-/obj/item/storage/toolbox/Initialize()
-	. = ..()
-	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/toolbox/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] robusts [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -98,10 +96,6 @@
 	desc = "It's seen better days."
 	force = 5
 	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/item/storage/toolbox/mechanical/old/heirloom/Initialize()
-	. = ..()
-	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
 
 /obj/item/storage/toolbox/mechanical/old/heirloom/PopulateContents()
 	return
@@ -166,9 +160,10 @@
 	throwforce = 18
 	material_flags = NONE
 
-/obj/item/storage/toolbox/syndicate/Initialize()
+/obj/item/storage/toolbox/syndicate/ComponentInitialize()
 	. = ..()
-	atom_storage.silent = TRUE
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.silent = TRUE
 
 /obj/item/storage/toolbox/syndicate/PopulateContents()
 	new /obj/item/screwdriver/nuke(src)
@@ -203,10 +198,11 @@
 	w_class = WEIGHT_CLASS_GIGANTIC //Holds more than a regular toolbox!
 	material_flags = NONE
 
-/obj/item/storage/toolbox/artistic/Initialize()
+/obj/item/storage/toolbox/artistic/ComponentInitialize()
 	. = ..()
-	atom_storage.max_total_storage = 20
-	atom_storage.max_slots = 10
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_combined_w_class = 20
+	STR.max_items = 10
 
 /obj/item/storage/toolbox/artistic/PopulateContents()
 	new /obj/item/storage/crayons(src)
@@ -269,12 +265,12 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	has_latches = FALSE
 
-/obj/item/storage/toolbox/infiltrator/Initialize()
+/obj/item/storage/toolbox/infiltrator/ComponentInitialize()
 	. = ..()
-	atom_storage.max_slots = 10
-	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
-	atom_storage.max_total_storage = 24
-	atom_storage.set_holdable(list(
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 10
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.set_holdable(list(
 		/obj/item/clothing/head/helmet/infiltrator,
 		/obj/item/clothing/suit/armor/vest/infiltrator,
 		/obj/item/clothing/under/syndicate/bloodred,

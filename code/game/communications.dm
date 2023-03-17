@@ -38,11 +38,14 @@
  *       filter - described above.
  *       range - radius of regular byond's square circle on that z-level. null means everywhere, on all z-levels.
  *
- * obj/proc/receive_signal(datum/signal/signal)
+ * obj/proc/receive_signal(datum/signal/signal, receive_method as num, receive_param)
  *   Handler from received signals. By default does nothing. Define your own for your object.
  *   Avoid of sending signals directly from this proc, use spawn(0). Do not use sleep() here please.
  *     parameters:
  *       signal - see description below. Extract all needed data from the signal before doing sleep(), spawn() or return!
+ *       receive_method - may be TRANSMISSION_WIRE or TRANSMISSION_RADIO.
+ *         TRANSMISSION_WIRE is currently unused.
+ *       receive_param - for TRANSMISSION_RADIO here comes frequency.
  *
  * datum/signal
  *   vars:
@@ -134,24 +137,44 @@ GLOBAL_LIST_INIT(reverseradiochannels, list(
 
 //If range > 0, only post to devices on the same z_level and within range
 //Use range = -1, to restrain to the same z_level without limiting range
-/datum/radio_frequency/proc/post_signal(datum/signal/signal, filter = null as text|null, range = null as num|null)
-	if(!istype(signal))
-		CRASH("LEGACY POST SIGNAL SHIT")
-
-	//Ensure the signal's data is fully filled
+/datum/radio_frequency/proc/post_signal(obj/source as obj|null, datum/signal/signal, filter = null as text|null, range = null as num|null)
+	// Ensure the signal's data is fully filled
+	signal.source = source
 	signal.frequency = frequency
 
 	//Apply filter to the signal. If none supply, broadcast to every devices
 	//_default channel is always checked
+	var/list/filter_list
+
 	if(filter)
-		signal.filter_list = list(filter,"_default")
+		filter_list = list(filter,"_default")
 	else
-		signal.filter_list = devices
+		filter_list = devices
 
-	signal.frequency_datum = src
-	signal.range = range
+	//If checking range, find the source turf
+	var/turf/start_point
+	if(range)
+		start_point = get_turf(source)
+		if(!start_point)
+			return
 
-	SSpackets.queued_radio_packets += signal
+	//Send the data
+	for(var/current_filter in filter_list)
+		for(var/datum/weakref/device_ref as anything in devices[current_filter])
+			var/obj/device = device_ref.resolve()
+			if(!device)
+				devices[current_filter] -= device_ref
+				continue
+			if(device == source)
+				continue
+			if(range)
+				var/turf/end_point = get_turf(device)
+				if(!end_point)
+					continue
+				if(start_point.z != end_point.z || (range > 0 && get_dist(start_point, end_point) > range))
+					continue
+			device.receive_signal(signal)
+			CHECK_TICK
 
 /datum/radio_frequency/proc/add_listener(obj/device, filter as text|null)
 	if (!filter)
@@ -173,39 +196,17 @@ GLOBAL_LIST_INIT(reverseradiochannels, list(
 			devices -= devices_filter
 
 
-/datum/proc/receive_signal(datum/signal/signal)
-	//SHOULD_CALL_PARENT(TRUE)
-	. = TRUE
+/obj/proc/receive_signal(datum/signal/signal)
+	return
 
 /datum/signal
-	///The author/sender of this packet.
-	var/datum/weakref/author
-	///The medium of which this packet is travelling
-	var/transmission_method
-	///The player-accessible data of the packet
-	var/list/data
-
-	///A ref to the radio frequency datum, used by... radios.
-	var/datum/radio_frequency/frequency_datum
-	///Radio frequency
+	var/obj/source
 	var/frequency = 0
-	///Radio range
-	var/range = null
-	///Radio filter list
-	var/list/filter_list
-
-	///Admin logging
+	var/transmission_method
+	var/list/data
 	var/logging_data
 
-	///Does this packet contain anything but standard data?
-	///Anything that captures packets should either generate garbage data or discard these packets.
-	var/has_magic_data = FALSE
-
-/datum/signal/New(author, data, transmission_method = TRANSMISSION_RADIO, logging_data = null)
-	src.author = isnull(author) ? null : WEAKREF(author)
-	if(islist(author))
-		stack_trace("Something is using the old signal/New() argument order!")
-		src.data = author
+/datum/signal/New(data, transmission_method = TRANSMISSION_RADIO, logging_data = null)
 	src.data = data || list()
 	src.transmission_method = transmission_method
 	src.logging_data = logging_data

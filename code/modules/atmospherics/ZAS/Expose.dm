@@ -14,8 +14,6 @@
 	if(arrived.flags_2 & ATMOS_SENSITIVE_2)
 		LAZYDISTINCTADD(atmos_sensitive_contents, arrived)
 		if(TURF_HAS_VALID_ZONE(src))
-			if(isnull(zone.atmos_sensitive_contents))
-				SSzas.zones_with_sensitive_contents += zone
 			LAZYDISTINCTADD(zone.atmos_sensitive_contents, arrived)
 
 /turf/Exited(atom/movable/gone, direction)
@@ -25,8 +23,6 @@
 			LAZYREMOVE(atmos_sensitive_contents, gone)
 		if(TURF_HAS_VALID_ZONE(src))
 			LAZYREMOVE(zone.atmos_sensitive_contents, gone)
-			if(isnull(zone.atmos_sensitive_contents))
-				SSzas.zones_with_sensitive_contents -= zone
 
 ///allows this movable to know when it's container's temperature has changed
 /atom/proc/become_atmos_sensitive()
@@ -38,8 +34,6 @@
 	if(T)
 		LAZYDISTINCTADD(T.atmos_sensitive_contents, src)
 		if(TURF_HAS_VALID_ZONE(T))
-			if(isnull(T.zone.atmos_sensitive_contents))
-				SSzas.zones_with_sensitive_contents += T.zone
 			LAZYDISTINCTADD(T.zone.atmos_sensitive_contents, src)
 
 ///removes temperature sensitivity
@@ -53,5 +47,3 @@
 		LAZYREMOVE(T.atmos_sensitive_contents, src)
 		if(TURF_HAS_VALID_ZONE(T))
 			LAZYREMOVE(T.zone.atmos_sensitive_contents, src)
-			if(isnull(T.zone.atmos_sensitive_contents))
-				SSzas.zones_with_sensitive_contents -= T.zone

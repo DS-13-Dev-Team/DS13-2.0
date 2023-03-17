@@ -23,15 +23,12 @@
 	. = ..()
 	if(!length(case_designs))
 		populate_case_designs()
-	create_storage(
-		12,
-		canhold = typecacheof(
-			list(
-				/obj/item/hypospray/mkii,
-				/obj/item/reagent_containers/glass/vial
-			)
-		)
-	)
+	var/datum/component/storage/stored = GetComponent(/datum/component/storage)
+	stored.max_items = 12
+	stored.can_hold = typecacheof(list(
+		/obj/item/hypospray/mkii,
+		/obj/item/reagent_containers/glass/vial
+	))
 	update_icon_state()
 	update_icon()
 

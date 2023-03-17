@@ -1,6 +1,5 @@
 import { useBackend } from '../backend';
-import { formatSiUnit } from '../format';
-import { Button, LabeledList, NumberInput, Section, ProgressBar } from '../components';
+import { Button, LabeledList, NumberInput, Section } from '../components';
 import { getGasLabel } from '../constants';
 import { Window } from '../layouts';
 
@@ -10,7 +9,7 @@ export const AtmosFilter = (props, context) => {
   return (
     <Window
       width={420}
-      height={249}>
+      height={221}>
       <Window.Content>
         <Section>
           <LabeledList>
@@ -52,15 +51,6 @@ export const AtmosFilter = (props, context) => {
                     val: filter.gas_id,
                   })} />
               ))}
-            </LabeledList.Item>
-            <LabeledList.Item label="Power Usage">
-              <ProgressBar
-                value={data.last_draw}
-                maxValue={data.max_power}
-                color="yellow"
-              >
-                {formatSiUnit(data.last_draw, 0, 'W')}
-              </ProgressBar>
             </LabeledList.Item>
           </LabeledList>
         </Section>

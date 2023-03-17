@@ -28,7 +28,7 @@
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/neck/cloak/cmo
-	name = "medical director's cloak"
+	name = "chief medical officer's cloak"
 	desc = "Worn by Meditopia, the valiant men and women keeping pestilence at bay."
 	icon_state = "cmocloak"
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION
