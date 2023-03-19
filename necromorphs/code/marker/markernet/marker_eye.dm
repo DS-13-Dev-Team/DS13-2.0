@@ -197,7 +197,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		var/datum/hud/marker/our_hud = hud_used
 		var/filter = our_hud.psy_energy.get_filter("alpha_filter")
 		animate(filter, x = clamp(PSYBAR_PIXEL_WIDTH*(psy_energy/psy_energy_maximum), 0, PSYBAR_PIXEL_WIDTH), time = 0.5 SECONDS)
-		our_hud.foreground.maptext = MAPTEXT("[round(max(0, psy_energy), 1)]/[psy_energy_maximum] | +[psy_energy_generation] psy/seс")
+		our_hud.foreground.maptext = MAPTEXT("[round(psy_energy, 1)]/[psy_energy_maximum] | +[psy_energy_generation] psy/seс")
 
 /mob/camera/marker_signal/verb/become_master()
 	set name = "Become master signal"
