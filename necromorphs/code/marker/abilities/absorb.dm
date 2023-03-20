@@ -1,3 +1,5 @@
+#define NUTRIMENTS_TO_BIOMASS_MULTIPLIER 0.25
+
 /datum/action/cooldown/necro/psy/absorb
 	name = "Absorb"
 	desc = "Absorbs all pieces of biological matter within a two tile radius of the target location. Only works on or near corruption, or in sight of the marker"
@@ -26,11 +28,13 @@
 			absorbed_biomass += item.biomass
 			absorbed_atoms += item
 		if(item.reagents?.flags & OPENCONTAINER)
-			for(var/datum/reagent/reagent as anything in item.reagents.reagent_list)
-				if(!reagent.biomass)
-					continue
-				absorbed_biomass += reagent.biomass
+			for(var/datum/reagent/consumable/reagent as anything in item.reagents.reagent_list)
+				absorbed_biomass += reagent.nutriment_factor * NUTRIMENTS_TO_BIOMASS_MULTIPLIER
 				item.reagents.remove_reagent(reagent.type, reagent.volume)
+			//If it is food and wasn't added to the list before
+			if(istype(item, /obj/item/food) && !item.biomass)
+				absorbed_atoms += item
+
 	if(!absorbed_biomass)
 		to_chat(caller, span_warning("No things containing asborbable biomass found."))
 		return TRUE
@@ -58,3 +62,5 @@
 	//wait some time before start the animation
 	animate(src, time = animate_duration)
 	animate(pixel_x = src.pixel_x - ((src.x-target.x)*world.icon_size), pixel_y = src.pixel_y - ((src.y-target.y)*world.icon_size), transform = matrix(0, 0, 0, 0, 0, 0), time = 4)
+
+#undef NUTRIMENTS_TO_BIOMASS_MULTIPLIER

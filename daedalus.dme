@@ -4803,7 +4803,6 @@
 #include "necromorphs\code\corruption\structures\root.dm"
 #include "necromorphs\code\corruption\structures\snare.dm"
 #include "necromorphs\code\datums\images.dm"
-#include "necromorphs\code\datums\reagents.dm"
 #include "necromorphs\code\datums\round_statics.dm"
 #include "necromorphs\code\datums\components\corruption_absorbing.dm"
 #include "necromorphs\code\datums\keybindingins\signal.dm"
