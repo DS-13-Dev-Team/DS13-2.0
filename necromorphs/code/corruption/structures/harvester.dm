@@ -10,6 +10,7 @@
 	var/biomass_per_tick = 0
 	var/list/controlled_atoms
 	var/obj/structure/marker/marker
+	var/datum/biomass_source/our_source
 
 /obj/structure/necromorph/harvester/Initialize(mapload, obj/structure/marker/new_master)
 	.=..()
@@ -28,11 +29,13 @@
 		addtimer(CALLBACK(src, .proc/activate), 3 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /obj/structure/necromorph/harvester/Destroy()
-	marker?.remove_biomass_income(src, biomass_per_tick)
+	marker?.remove_biomass_source(our_source)
+	our_source = null
 	for(var/atom/movable/controlled as anything in controlled_atoms)
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 		REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
 	controlled_atoms = null
+	marker = null
 	return ..()
 
 /obj/structure/necromorph/harvester/update_overlays()
@@ -63,7 +66,8 @@
 /obj/structure/necromorph/harvester/on_turf_uncorrupted()
 	.=..()
 	active = FALSE
-	marker.remove_biomass_income(src, biomass_per_tick)
+	marker.remove_biomass_source(our_source)
+	our_source = null
 	for(var/atom/movable/controlled as anything in controlled_atoms)
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 		REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
@@ -82,13 +86,12 @@
 				ADD_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
 				biomass_per_tick += controlled.biomass_produce
 		FOR_DVIEW_END
-		marker.add_biomass_income(src, biomass_per_tick)
+		our_source = marker.add_biomass_source(/datum/biomass_source/harvester)
 		update_icon(UPDATE_OVERLAYS)
 
 /obj/structure/necromorph/harvester/proc/on_controlled_delete(atom/movable/controlled, force)
 	SIGNAL_HANDLER
 	biomass_per_tick -= controlled.biomass_produce
-	marker.remove_biomass_income(src, controlled.biomass_produce)
 	controlled_atoms -= controlled
 	UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 	REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
@@ -97,7 +100,6 @@
 	SIGNAL_HANDLER
 	if(IN_GIVEN_RANGE(src, controlled, HARVESTER_CONTROL_RANGE))
 		biomass_per_tick -= controlled.biomass_produce
-		marker.remove_biomass_income(src, controlled.biomass_produce)
 		controlled_atoms -= controlled
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 		REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)

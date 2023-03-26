@@ -1,6 +1,7 @@
 /datum/action/cooldown/necro/psy/whisper
 	name = "Whisper"
 	desc = "Allows you to broadcast a subliminal message into the mind of a receptive target. Can be used on anyone visible."
+	button_icon_state = "whisper"
 	cost = 30
 
 /datum/action/cooldown/necro/psy/whisper/PreActivate(mob/living/target)

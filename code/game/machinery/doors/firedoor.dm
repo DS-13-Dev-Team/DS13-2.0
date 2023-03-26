@@ -40,7 +40,7 @@
 	///Type of alarm when active. See code/defines/firealarm.dm for the list. This var being null means there is no alarm.
 	var/alert_type = FIRE_CLEAR
 
-	var/knock_sound = 'sound/effects/glassknock.ogg'
+	knock_sound = 'sound/effects/glassknock.ogg'
 	var/bash_sound = 'sound/effects/glassbash.ogg'
 
 
@@ -202,14 +202,14 @@
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 
-	if(!user.combat_mode)
-		user.visible_message(span_notice("[user] knocks on [src]."), \
-			span_notice("You knock on [src]."))
-		playsound(src, knock_sound, 50, TRUE)
+	if(!user.combat_mode || modifiers[RIGHT_CLICK])
+		knock_on(user)
+		return TRUE
 	else
 		user.visible_message(span_warning("[user] bashes [src]!"), \
 			span_warning("You bash [src]!"))
 		playsound(src, bash_sound, 100, TRUE)
+		return TRUE
 
 /obj/machinery/door/firedoor/wrench_act(mob/living/user, obj/item/tool)
 	add_fingerprint(user)
@@ -263,7 +263,7 @@
 			span_notice("You press your crowbar between the door and begin to pry it open..."),
 			span_hear("You hear a metal clang, followed by metallic groans.")
 		)
-		if(!do_after(user, 3 SECONDS, src))
+		if(!do_after(user, src, 3 SECONDS))
 			return
 		user.visible_message(
 			span_danger("[user] forces [src] open with a crowbar!"),
@@ -509,7 +509,7 @@
 				user.visible_message(span_notice("[user] begins reinforcing [src]..."), \
 					span_notice("You begin reinforcing [src]..."))
 				playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, TRUE)
-				if(do_after(user, DEFAULT_STEP_TIME, target = src))
+				if(do_after(user, src, DEFAULT_STEP_TIME))
 					if(constructionStep != CONSTRUCTION_PANEL_OPEN || reinforced || plasteel_sheet.get_amount() < 2 || !plasteel_sheet)
 						return
 					user.visible_message(span_notice("[user] reinforces [src]."), \
@@ -523,7 +523,7 @@
 				user.visible_message(span_notice("[user] starts adding [attacking_object] to [src]..."), \
 					span_notice("You begin adding a circuit board to [src]..."))
 				playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, TRUE)
-				if(!do_after(user, DEFAULT_STEP_TIME, target = src))
+				if(!do_after(user, src, DEFAULT_STEP_TIME))
 					return
 				if(constructionStep != CONSTRUCTION_NO_CIRCUIT)
 					return

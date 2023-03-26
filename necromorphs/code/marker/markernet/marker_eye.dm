@@ -57,9 +57,10 @@ GLOBAL_LIST_EMPTY(markers_signals)
 			ability = new ability(src)
 			ability.Grant(src)
 
-	START_PROCESSING(SSprocessing, src)
+	START_PROCESSING(SSobj, src)
 
 /mob/camera/marker_signal/Destroy()
+	STOP_PROCESSING(SSobj, src)
 	GLOB.markers_signals -= src
 	if(marker)
 		marker.markernet.eyes -= src
@@ -196,7 +197,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		var/datum/hud/marker/our_hud = hud_used
 		var/filter = our_hud.psy_energy.get_filter("alpha_filter")
 		animate(filter, x = clamp(PSYBAR_PIXEL_WIDTH*(psy_energy/psy_energy_maximum), 0, PSYBAR_PIXEL_WIDTH), time = 0.5 SECONDS)
-		our_hud.foreground.maptext = MAPTEXT("[round(max(0, psy_energy), 1)]/[psy_energy_maximum] | +[psy_energy_generation] psy/seс")
+		our_hud.foreground.maptext = MAPTEXT("[round(psy_energy, 1)]/[psy_energy_maximum] | +[psy_energy_generation] psy/seс")
 
 /mob/camera/marker_signal/verb/become_master()
 	set name = "Become master signal"
@@ -301,7 +302,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	if(marker.spent_biomass < marker.necro_classes[spawning_necromorph].biomass_spent_required)
 		to_chat(src, span_warning("Not enough biomass spent!"))
 		return
-	if(marker.biomass < marker.necro_classes[spawning_necromorph].biomass_cost)
+	if(marker.marker_biomass < marker.necro_classes[spawning_necromorph].biomass_cost)
 		to_chat(src, span_warning("Not enough biomass!"))
 		return
 	A = get_turf(A)
@@ -323,7 +324,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		if(!can_see(turf_loc, A, 4))
 			spawnloc_cantsee = TRUE
 			continue
-		marker.biomass -= marker.necro_classes[spawning_necromorph].biomass_cost
+		marker.marker_biomass -= marker.necro_classes[spawning_necromorph].biomass_cost
 		var/path = marker.necro_classes[spawning_necromorph].necromorph_type_path
 		var/mob/living/carbon/human/necromorph/mob = new path(A, marker)
 		if(marker.use_necroqueue && length(marker.marker_signals-src))

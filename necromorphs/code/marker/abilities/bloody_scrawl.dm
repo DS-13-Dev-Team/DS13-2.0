@@ -1,21 +1,20 @@
 /datum/action/cooldown/necro/psy/scrawl
 	name = "Bloody Scrawl"
-	desc = "Writes a message in blood"
+	desc = "Writes a message in blood. Should be at least 3 tiles away from another bloody scrawl!"
 	cost = 15
 
 /datum/action/cooldown/necro/psy/scrawl/Activate(atom/target)
 	var/turf/target_turf = get_turf(target)
 	if(isgroundlessturf(target_turf) || target_turf.density)
+		to_chat(owner, span_warning("There is no space to write on!"))
 		return
-	var/num_doodles = 0
-	for(var/obj/effect/decal/cleanable/blood/writing/W in target_turf)
-		num_doodles++
-	if(num_doodles > 4)
-		to_chat(src, span_warning("There is no space to write on!"))
+	//Using for loop because of compiler optiization
+	for(var/obj/effect/decal/cleanable/blood/writing/writing in range(3, target_turf))
+		to_chat(owner, span_warning("Another bloody scrawl is too close!"))
 		return
 	var/text = tgui_input_text(owner, "Write a message", "Bloody Scrawl")
 	if(!text)
-		return
+		return TRUE
 	..()
 	new /obj/effect/decal/cleanable/blood/writing(target_turf, text, TRUE)
 	target_turf.visible_message(span_warning("Invisible fingers crudely paint something in blood on \the [target_turf]."))

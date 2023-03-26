@@ -37,7 +37,7 @@
 #define DNA_UNI_IDENTITY_BLOCKS 7
 
 /// This number needs to equal the total number of DNA blocks
-#define DNA_FEATURE_BLOCKS 28
+#define DNA_FEATURE_BLOCKS 29
 
 #define DNA_MUTANT_COLOR_BLOCK 1
 #define DNA_ETHEREAL_COLOR_BLOCK 2
@@ -66,6 +66,7 @@
 #define DNA_VOX_FACIAL_HAIR_BLOCK 25
 #define DNA_VOX_TAIL_BLOCK 26
 #define DNA_VOX_SNOUT_BLOCK 27
+#define DNA_NECROMORPH_TAIL_BLOCK 28
 
 #define DNA_SEQUENCE_LENGTH 4
 #define DNA_MUTATION_BLOCKS 8

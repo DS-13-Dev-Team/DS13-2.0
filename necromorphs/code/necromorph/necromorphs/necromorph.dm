@@ -13,15 +13,19 @@
 	temp.load_data(src)
 	set_health(temp.max_health)
 
-	//Should be replaced with hud as soon as possible
-	AddComponent(/datum/component/health_meter)
-	RegisterSignal(src, COMSIG_STARTED_CHARGE, PROC_REF(start_charge))
-	RegisterSignal(src, COMSIG_FINISHED_CHARGE, PROC_REF(end_charge))
-
 /mob/living/carbon/human/necromorph/Destroy()
 	evacuate()
 	marker?.remove_necro(src)
 	return ..()
+
+/mob/living/carbon/human/necromorph/has_hand_for_held_index(i)
+	return FALSE
+
+/mob/living/carbon/human/necromorph/updatehealth()
+	. = ..()
+	if(hud_used)
+		var/datum/hud/necromorph/hud = hud_used
+		hud.update_healthbar(src)
 
 /mob/living/carbon/human/necromorph/revive(full_heal = FALSE, admin_revive = FALSE, excess_healing = 0)
 	.=..()
@@ -84,7 +88,7 @@
 	set_stat(DEAD)
 	unset_machine()
 	timeofdeath = world.time
-	tod = station_time_timestamp()
+	tod = stationtime2text()
 	evacuate()
 	set_disgust(0)
 	SetSleeping(0, 0)

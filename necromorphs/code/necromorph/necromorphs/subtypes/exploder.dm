@@ -14,6 +14,7 @@
 	melee_damage_upper = 16
 	max_health = 100
 	actions = list(
+		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "exploder"
 

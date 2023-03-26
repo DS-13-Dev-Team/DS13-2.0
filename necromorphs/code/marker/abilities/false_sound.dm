@@ -1,6 +1,7 @@
 /datum/action/cooldown/necro/psy/false_sound
 	name = "False Sound"
 	desc = "A context sensitive spell which does different things depending on the target. Interfaces with machines, moves items, messes with computers and office appliances."
+	button_icon_state = "false_sound"
 	cost = 100
 	cooldown_time = 2 MINUTES
 	marker_flags = SIGNAL_ABILITY_PRE_ACTIVATION
@@ -10,17 +11,12 @@
 	if(!target)
 		return
 	//Add more necromorphs here, perhaps we should make it a define to make sure it's updated
-	var/static/list/possible_sounds = list(
-		"Slasher" = GLOB.slasher_sounds,
-		"Puker" = GLOB.puker_sounds,
-		"Spitter" = GLOB.spitter_sounds,
-	)
-	var/list/category = possible_sounds[tgui_input_list(owner, "Pick a necromorph type", "False Sound", possible_sounds)]
+	var/list/category = GLOB.necromorph_sounds[tgui_input_list(owner, "Pick a necromorph type", "False Sound", GLOB.necromorph_sounds)]
 	if(!category)
-		return
+		return TRUE
 	var/list/picked_sound = tgui_input_list(owner, "Pick sound type to play", "False Sound", category)
 	if(!picked_sound)
-		return
+		return TRUE
 	var/volume = VOLUME_MID
 	if (picked_sound == SOUND_SHOUT || picked_sound == SOUND_SHOUT_LONG || picked_sound == SOUND_DEATH)
 		volume = VOLUME_LOUD

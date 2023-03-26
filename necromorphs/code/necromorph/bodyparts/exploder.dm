@@ -14,7 +14,7 @@
 	name = BODY_ZONE_HEAD
 	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
 	icon_static = 'necromorphs/icons/necromorphs/exploder/exploder.dmi'
-	icon_state = "l_arm"
+	icon_state = "head"
 	max_damage = 200
 	px_x = 0
 	px_y = -8

@@ -1,39 +1,35 @@
 //An actual HUD
-/atom/movable/screen/necromorph
-	icon = 'icons/hud/screen_midnight.dmi'
-
 /datum/hud/necromorph
 	ui_style = 'icons/hud/screen_midnight.dmi'
+	var/atom/movable/screen/meter/background/background
+	var/atom/movable/screen/meter/health/health
+	var/atom/movable/screen/meter/health/shield/shield
+	var/atom/movable/screen/meter/foreground/foreground
 
 /datum/hud/necromorph/New(mob/living/carbon/human/necromorph/owner)
 	..()
 
-	var/atom/movable/screen/using
+//healthbar
+	background = new
 
-//hands
-	build_hand_slots()
+	health = new
+	health.add_filter("alpha_mask", 1, alpha_mask_filter(icon = icon('necromorphs/icons/hud/healthbar.dmi', "alpha_mask"), x = clamp(HEALTHBAR_PIXEL_WIDTH*(owner.health/owner.maxHealth), 0, HEALTHBAR_PIXEL_WIDTH), flags = MASK_INVERSE))
 
+	foreground = new
+	if(owner.dodge_shield > 0)
+		foreground.maptext = MAPTEXT("[max(0, owner.health)]+[owner.dodge_shield]/[owner.maxHealth]")
+	else
+		foreground.maptext = MAPTEXT("[max(0, owner.health)]/[owner.maxHealth]")
+
+	shield = new
+	shield.add_filter("alpha_mask", 1, alpha_mask_filter(icon = icon('necromorphs/icons/hud/healthbar.dmi', "alpha_mask"), x = clamp(HEALTHBAR_PIXEL_WIDTH*(owner.dodge_shield/owner.maxHealth), 0, HEALTHBAR_PIXEL_WIDTH), flags = MASK_INVERSE))
+
+	infodisplay += background
+	infodisplay += health
+	infodisplay += shield
+	infodisplay += foreground
 //begin buttons
-
-	using = new /atom/movable/screen/swap_hand()
-	using.icon = ui_style
-	using.icon_state = "swap_1"
-	using.screen_loc = ui_swaphand_position(owner,1)
-	using.hud = src
-	static_inventory += using
-
-	using = new /atom/movable/screen/swap_hand()
-	using.icon = ui_style
-	using.icon_state = "swap_2"
-	using.screen_loc = ui_swaphand_position(owner,2)
-	using.hud = src
-	static_inventory += using
-
-	using = new /atom/movable/screen/human/equip()
-	using.icon = ui_style
-	using.screen_loc = ui_equip_position(mymob)
-	using.hud = src
-	static_inventory += using
+	var/atom/movable/screen/using
 
 	using = new /atom/movable/screen/mov_intent
 	using.icon = ui_style
@@ -91,6 +87,13 @@
 			inv_slots[TOBITSHIFT(inv.slot_id) + 1] = inv
 			inv.update_appearance()
 
+/datum/hud/necromorph/Destroy()
+	//They are actually deleted in QDEL_LIST(infodisplay)
+	background = null
+	health = null
+	foreground = null
+	return ..()
+
 /datum/hud/necromorph/persistent_inventory_update()
 	if(!mymob)
 		return
@@ -103,3 +106,19 @@
 		for(var/obj/item/I in H.held_items)
 			I.screen_loc = null
 			H.client.screen -= I
+
+/datum/hud/necromorph/proc/update_healthbar(mob/living/carbon/human/necromorph/necro)
+	animate(health.get_filter("alpha_mask"), x = clamp(HEALTHBAR_PIXEL_WIDTH*(necro.health/necro.maxHealth), 0, HEALTHBAR_PIXEL_WIDTH), time = 0.5 SECONDS)
+	if(necro.dodge_shield > 0)
+		foreground.maptext = MAPTEXT("[max(0, necro.health)]+[necro.dodge_shield]/[necro.maxHealth]")
+	else
+		foreground.maptext = MAPTEXT("[max(0, necro.health)]/[necro.maxHealth]")
+
+/datum/hud/necromorph/proc/update_shieldbar(mob/living/carbon/human/necromorph/necro)
+	animate(shield.get_filter("alpha_mask"), x = clamp(HEALTHBAR_PIXEL_WIDTH*(necro.dodge_shield/necro.maxHealth), 0, HEALTHBAR_PIXEL_WIDTH), time = 0.5 SECONDS)
+	if(necro.dodge_shield > 0)
+		foreground.maptext = MAPTEXT("[max(0, necro.health)]+[necro.dodge_shield]/[necro.maxHealth]")
+	else
+		foreground.maptext = MAPTEXT("[max(0, necro.health)]/[necro.maxHealth]")
+
+#undef HEALTHBAR_PIXEL_WIDTH

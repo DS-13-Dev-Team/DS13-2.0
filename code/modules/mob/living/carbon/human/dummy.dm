@@ -113,6 +113,7 @@ INITIALIZE_IMMEDIATE(/mob/living/carbon/human/dummy)
 	dna.features["teshari_ears"] = "None"
 	dna.features["tail_teshari"] = "Default"
 	dna.features["headtails"] = "Long"
+	dna.features["necro_tail"] = "Necromorph Tail"
 
 //Inefficient pooling/caching way.
 GLOBAL_LIST_EMPTY(human_dummy_list)
