@@ -4872,7 +4872,6 @@
 #include "necromorphs\code\necromorph\necromorphs\subtypes\spitter.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\ubermorph.dm"
 #include "necromorphs\code\tools\mining_tools.dm"
-#include "necromorphs\code\weapons\guns\cutter.dm"
 #include "necromorphs\code\weapons\guns\pulse.dm"
 #include "necromorphs\code\weapons\handheld\melee.dm"
 #include "necromorphs\code\weapons\handheld\two_handed.dm"
