@@ -28,7 +28,7 @@
 			absorbed_biomass += item.biomass
 			absorbed_atoms += item
 		if(item.reagents?.flags & OPENCONTAINER)
-			for(var/datum/reagent/consumable/reagent as anything in item.reagents.reagent_list)
+			for(var/datum/reagent/consumable/reagent in item.reagents.reagent_list)
 				absorbed_biomass += reagent.nutriment_factor * NUTRIMENTS_TO_BIOMASS_MULTIPLIER
 				item.reagents.remove_reagent(reagent.type, reagent.volume)
 			//If it is food and wasn't added to the list before
