@@ -16,8 +16,6 @@
 	bolt_type = BOLT_TYPE_NO_BOLT
 	can_suppress = FALSE
 	spread = 5
-	mag_display = TRUE
-	mag_display_ammo = TRUE
 	fire_sound = 'necromorphs/sound/weapons/guns/pulse_shot.ogg'
 
 /obj/item/gun/ballistic/automatic/pulse/Initialize(mapload)
