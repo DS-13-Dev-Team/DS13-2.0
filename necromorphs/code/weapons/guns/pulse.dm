@@ -42,7 +42,7 @@
 
 /obj/item/ammo_casing/caseless/pulse
 	name = "pulse round"
-	desc = "A small caliber round designed for the SWS Motorized Pulse Rifle."
+	desc = "A ultra-small caliber round designed for the SWS Motorized Pulse Rifle."
 	icon_state = "ionshell-live"
 	caliber = CALIBER_PULSE
 	projectile_type = /obj/projectile/bullet/pulse
