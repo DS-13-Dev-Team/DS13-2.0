@@ -9,6 +9,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/divet
 	can_suppress = FALSE
+	mag_display = FALSE
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
 	burst_size = 3
