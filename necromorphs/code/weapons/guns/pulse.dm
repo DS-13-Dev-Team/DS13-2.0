@@ -10,18 +10,16 @@
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = 0
 	mag_display = FALSE
-	semi_auto = FALSE
 	mag_type = /obj/item/ammo_box/magazine/pulse
 	weapon_weight = WEAPON_HEAVY
 	burst_size = 3
-	bolt_type = BOLT_TYPE_NO_BOLT
+	bolt_type = BOLT_TYPE_OPEN
 	can_suppress = FALSE
 	spread = 5
 	fire_sound = 'necromorphs/sound/weapons/guns/pulse_shot.ogg'
 
 /obj/item/gun/ballistic/automatic/pulse/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/update_icon_updates_onmob)
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
 /obj/item/ammo_box/magazine/pulse
