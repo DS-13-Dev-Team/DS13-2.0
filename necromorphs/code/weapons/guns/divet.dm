@@ -9,11 +9,11 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/divet
 	can_suppress = FALSE
-	mag_display = FALSE
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
 	burst_size = 3
 	fire_delay = 3
+	show_bolt_icon = FALSE
 	fire_sound = 'necromorphs/sound/weapons/guns/divet_fire.ogg'
 	load_sound = 'necromorphs/sound/weapons/guns/divet_magin.ogg'
 	eject_sound = 'necromorphs/sound/weapons/guns/divet_magout.ogg'

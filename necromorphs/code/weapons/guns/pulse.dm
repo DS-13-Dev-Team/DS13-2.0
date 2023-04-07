@@ -12,6 +12,7 @@
 	mag_display = FALSE
 	mag_type = /obj/item/ammo_box/magazine/pulse
 	weapon_weight = WEAPON_HEAVY
+	show_bolt_icon = FALSE
 	burst_size = 3
 	bolt_type = BOLT_TYPE_OPEN
 	can_suppress = FALSE
