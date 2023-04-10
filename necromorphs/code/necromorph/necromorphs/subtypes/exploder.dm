@@ -21,6 +21,7 @@
 /datum/species/necromorph/exploder
 	name = "Exploder"
 	id = SPECIES_NECROMORPH_EXPLODER
+	speedmod = 1.7
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/exploder,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/exploder,

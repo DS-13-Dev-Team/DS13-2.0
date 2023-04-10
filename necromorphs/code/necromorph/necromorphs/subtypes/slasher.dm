@@ -26,6 +26,7 @@
 /datum/species/necromorph/slasher
 	name = "Slasher"
 	id = SPECIES_NECROMORPH_SLASHER
+	speedmod = 1.6
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/slasher,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/slasher,
