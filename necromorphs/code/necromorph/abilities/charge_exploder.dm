@@ -5,7 +5,7 @@
 
 /datum/action/cooldown/necro/charge/exploder/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	if(isliving(target))
-		var/obj/item/bodypart/arm/left/necromorph/exploder/pustule = src.target
+		var/obj/item/bodypart/leg/left/necromorph/exploder/pustule = src.target
 		pustule.explode()
 		source.gib_animation()
 		new /obj/effect/temp_visual/scry(get_turf(source), source.marker.markernet)
