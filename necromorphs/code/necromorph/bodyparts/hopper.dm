@@ -53,7 +53,7 @@
 	desc = "A severed tail. What did you cut this off of?"
 	visual = TRUE
 	icon = 'necromorphs/icons/necromorphs/leaper_hopper.dmi'
-	icon_state = "necromorph_tail_hopper"
+	icon_state = "necromorph_tail"
 	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_EXTERNAL_TAIL
 	feature_key = "necro_tail"
@@ -62,4 +62,4 @@
 
 /datum/sprite_accessory/necromorph/leaper/hopper
 	icon = 'necromorphs/icons/necromorphs/leaper_hopper.dmi'
-	icon_state = "necromorph_tail_hopper"
+	icon_state = "necromorph_tail"
