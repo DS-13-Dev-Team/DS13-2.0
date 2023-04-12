@@ -62,4 +62,4 @@
 
 /datum/sprite_accessory/necromorph/leaper/enhanced
 	icon = 'necromorphs/icons/necromorphs/leaper_enhanced.dmi'
-	icon_state = "necromorph_tail_e"
+	icon_state = "necromorph_tail"
