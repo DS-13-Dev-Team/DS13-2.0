@@ -24,7 +24,7 @@
 /obj/item/bodypart/leg/left/necromorph/leaper/hopper
 	name = "left arm"
 	icon_static = 'necromorphs/icons/necromorphs/leaper_hopper.dmi'
-	icon_state = "l_arm"
+	icon_state = "l_leg"
 	body_part = LEG_LEFT
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
@@ -38,7 +38,7 @@
 /obj/item/bodypart/leg/right/necromorph/leaper/hopper
 	name = "right arm"
 	icon_static = 'necromorphs/icons/necromorphs/leaper_hopper.dmi'
-	icon_state = "l_arm"
+	icon_state = "r_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
