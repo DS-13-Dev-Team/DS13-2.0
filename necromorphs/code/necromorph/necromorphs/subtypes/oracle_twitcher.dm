@@ -1,73 +1,33 @@
-/obj/item/bodypart/chest/necromorph/otwitcher
-	name = BODY_ZONE_CHEST
-	icon_static = 'necromorphs/icons/necromorphs/twitcher_oracle.dmi'
-	icon_state = "chest"
-	max_damage = 200
-	px_x = 0
-	px_y = 0
-	stam_damage_coeff = 1
-	max_stamina_damage = 120
-	wound_resistance = 10
+/mob/living/carbon/human/necromorph/otwitcher
+	class = /datum/necro_class/otwitcher
+	necro_species = /datum/species/necromorph/otwitcher
+	pixel_x = -8
+	base_pixel_x = -8
 
-/obj/item/bodypart/head/necromorph/otwitcher
-	name = BODY_ZONE_HEAD
-	icon_static = 'necromorphs/icons/necromorphs/twitcher_oracle.dmi'
-	icon_state = "head"
-	max_damage = 200
-	px_x = 0
-	px_y = -8
-	stam_damage_coeff = 1
-	max_stamina_damage = 100
-	wound_resistance = 5
+/mob/living/carbon/human/necromorph/otwitcher/play_necro_sound(audio_type, volume, vary, extra_range)
+	playsound(src, pick(GLOB.twitcher_sounds[audio_type]), volume, vary, extra_range)
 
-/obj/item/bodypart/arm/left/necromorph/otwitcher
-	name = "left arm"
-	icon_static = 'necromorphs/icons/necromorphs/twitcher_oracle.dmi'
-	icon_state = "l_arm"
-	attack_verb_continuous = list("slashes", "stabs")
-	attack_verb_simple = list("slash", "stab")
-	max_damage = 50
-	max_stamina_damage = 50
-	body_damage_coeff = 0.75
-	px_x = -6
-	px_y = 0
-	wound_resistance = 0
+/datum/necro_class/otwitcher
+	display_name = "Oracle Twitcher"
+	desc = "Extremely rare twitcher variant achieved by infecting an oracle operative."
+	ui_icon = 'necromorphs/icons/necromorphs/twitcher_oracle.dmi'
+	necromorph_type_path = /mob/living/carbon/human/necromorph/otwitcher
+	melee_damage_lower = 10
+	melee_damage_upper = 16
+	max_health = 210
+	actions = list(
+	)
+	minimap_icon = "otwitcher"
 
-/obj/item/bodypart/arm/right/necromorph/otwitcher
-	name = "right arm"
-	icon_static = 'necromorphs/icons/necromorphs/twitcher_oracle.dmi'
-	icon_state = "l_arm"
-	attack_verb_continuous = list("slashes", "stabs")
-	attack_verb_simple = list("slash", "stab")
-	max_damage = 50
-	body_damage_coeff = 0.75
-	px_x = 6
-	px_y = 0
-	max_stamina_damage = 50
-	wound_resistance = 0
-
-/obj/item/bodypart/leg/left/necromorph/otwitcher
-	name = "left leg"
-	icon_static = 'necromorphs/icons/necromorphs/twitcher_oracle.dmi'
-	icon_state = "l_leg"
-	attack_verb_continuous = list("kicks", "stomps")
-	attack_verb_simple = list("kick", "stomp")
-	max_damage = 50
-	body_damage_coeff = 0.75
-	px_x = -2
-	px_y = 12
-	max_stamina_damage = 50
-	wound_resistance = 0
-
-/obj/item/bodypart/leg/right/necromorph/otwitcher
-	name = "right leg"
-	icon_static = 'necromorphs/icons/necromorphs/twitcher_oracle.dmi'
-	icon_state = "r_leg"
-	attack_verb_continuous = list("kicks", "stomps")
-	attack_verb_simple = list("kick", "stomp")
-	max_damage = 50
-	body_damage_coeff = 0.75
-	px_x = 2
-	px_y = 12
-	max_stamina_damage = 50
-	wound_resistance = 0
+/datum/species/necromorph/otwitcher
+	name = "Oracle Twitcher"
+	id = SPECIES_NECROMORPH_TWITCHER_ORACLE
+	speedmod = 1.2
+	bodypart_overrides = list(
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/otwitcher,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/otwitcher,
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/necromorph/otwitcher,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/necromorph/otwitcher,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/otwitcher,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/otwitcher,
+	)

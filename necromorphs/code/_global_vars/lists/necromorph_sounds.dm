@@ -2,17 +2,18 @@
 GLOBAL_LIST_INIT(necromorph_sounds, list(
 	"Slasher" = slasher_sounds,
 	"Exploder" = exploder_sounds,
+	"Infector" = infector_sounds,
 	"Leaper" = leaper_sounds,
 	"Spitter" = spitter_sounds,
-	"Puker" = puker_sounds,
-	"Brute" = brute_sounds,
-	"Twitcher" = twitcher_sounds,
-	"Hunter" = hunter_sounds,
-	"Ubermorph" = ubermorph_sounds,
-	"Divider" = divider_sounds,
-	"Infector" = infector_sounds,
-	"Tripod" = tripod_sounds,
 	"Lurker" = lurker_sounds,
+	"Enhanced Slasher" = enhanced_slasher_sounds,
+	"Puker" = puker_sounds,
+	"Twitcher" = twitcher_sounds,
+	"Brute" = brute_sounds,
+	"Divider" = divider_sounds,
+	"Hunter" = hunter_sounds,
+	"Tripod" = tripod_sounds,
+	"Ubermorph" = ubermorph_sounds,
 ))
 
 GLOBAL_LIST_INIT(slasher_sounds, list(
@@ -634,5 +635,53 @@ GLOBAL_LIST_INIT(lurker_sounds, list(
 		'necromorphs/sound/effects/creatures/necromorph/lurker/lurker_speech_2.ogg',
 		'necromorphs/sound/effects/creatures/necromorph/lurker/lurker_speech_3.ogg',
 		'necromorphs/sound/effects/creatures/necromorph/lurker/lurker_speech_4.ogg',
+	)
+))
+
+GLOBAL_LIST_INIT(enhanced_slasher_sounds, list(
+	SOUND_ATTACK = list(
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_attack_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_attack_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_attack_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_attack_4.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_attack_5.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_attack_6.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_attack_7.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_attack_8.ogg',
+	),
+	SOUND_DEATH = list(
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_3.ogg',
+	),
+	SOUND_PAIN = list(
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_pain_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_pain_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_pain_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_pain_4.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_pain_5.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_pain_extreme.ogg',
+	),
+	SOUND_SHOUT = list(
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_4.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_5.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_6.ogg',
+	),
+	SOUND_SHOUT_LONG = list(
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_long_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_long_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_long_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_long_4.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_long_5.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_long_6.ogg',
+	),
+	SOUND_SPEECH = list(
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_speech_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_speech_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_speech_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_speech_4.ogg',
 	)
 ))

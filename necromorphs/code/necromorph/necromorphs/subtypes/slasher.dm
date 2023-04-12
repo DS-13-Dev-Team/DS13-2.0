@@ -1,6 +1,8 @@
 /mob/living/carbon/human/necromorph/slasher
 	class = /datum/necro_class/slasher
 	necro_species = /datum/species/necromorph/slasher
+	pixel_x = -8
+	base_pixel_x = -8
 
 /mob/living/carbon/human/necromorph/slasher/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.slasher_sounds[audio_type]), volume, vary, extra_range)

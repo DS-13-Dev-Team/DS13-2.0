@@ -1,8 +1,6 @@
 /mob/living/carbon/human/necromorph/infector
 	class = /datum/necro_class/infector
 	necro_species = /datum/species/necromorph/infector
-	pixel_x = -8
-	base_pixel_x = -8
 
 /mob/living/carbon/human/necromorph/infector/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.infector_sounds[audio_type]), volume, vary, extra_range)
