@@ -1,6 +1,5 @@
 /obj/item/bodypart/chest/necromorph/leaper
 	name = BODY_ZONE_CHEST
-	desc = "It's impolite to stare at a person's chest."
 	icon_static = 'necromorphs/icons/necromorphs/leaper.dmi'
 	icon_state = "chest"
 	max_damage = 200
@@ -12,7 +11,6 @@
 
 /obj/item/bodypart/head/necromorph/leaper
 	name = BODY_ZONE_HEAD
-	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
 	icon_static = 'necromorphs/icons/necromorphs/leaper.dmi'
 	icon_state = "head"
 	max_damage = 200
@@ -25,8 +23,6 @@
 //Leapers use arms to walk
 /obj/item/bodypart/leg/left/necromorph/leaper
 	name = "left arm"
-	desc = "Some athletes prefer to tie their left shoelaces first for good \
-		luck. In this instance, it probably would not have helped."
 	icon_static = 'necromorphs/icons/necromorphs/leaper.dmi'
 	icon_state = "l_arm"
 	body_part = LEG_LEFT
@@ -41,9 +37,6 @@
 
 /obj/item/bodypart/leg/right/necromorph/leaper
 	name = "right arm"
-	desc = "You put your right leg in, your right leg out. In, out, in, out, \
-		shake it all about. And apparently then it detaches.\n\
-		The hokey pokey has certainly changed a lot since space colonisation."
 	icon_static = 'necromorphs/icons/necromorphs/leaper.dmi'
 	icon_state = "l_arm"
 	attack_verb_continuous = list("kicks", "stomps")

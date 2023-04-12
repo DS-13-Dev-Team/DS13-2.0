@@ -1,6 +1,8 @@
 /mob/living/carbon/human/necromorph/slasher
 	class = /datum/necro_class/slasher
 	necro_species = /datum/species/necromorph/slasher
+	pixel_x = -8
+	base_pixel_x = -8
 
 /mob/living/carbon/human/necromorph/slasher/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.slasher_sounds[audio_type]), volume, vary, extra_range)
@@ -26,6 +28,7 @@
 /datum/species/necromorph/slasher
 	name = "Slasher"
 	id = SPECIES_NECROMORPH_SLASHER
+	speedmod = 1.6
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/slasher,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/slasher,
