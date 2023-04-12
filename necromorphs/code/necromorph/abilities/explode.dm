@@ -35,7 +35,7 @@
 
 /datum/action/cooldown/necro/explode/proc/explode(mob/living/carbon/human/necromorph/exploder/user)
 	if(owner == user)
-		var/obj/item/bodypart/arm/left/necromorph/exploder/pustule = target
+		var/obj/item/bodypart/leg/left/necromorph/exploder/pustule = target
 		pustule.explode()
 		user.gib_animation()
 		new /obj/effect/temp_visual/scry(get_turf(user), user.marker.markernet)

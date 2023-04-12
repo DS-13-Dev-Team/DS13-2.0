@@ -1,6 +1,5 @@
 /obj/item/bodypart/chest/necromorph
 	name = BODY_ZONE_CHEST
-	desc = "It's impolite to stare at a person's chest."
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
@@ -28,7 +27,6 @@
 
 /obj/item/bodypart/head/necromorph
 	name = BODY_ZONE_HEAD
-	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
@@ -55,10 +53,6 @@
 
 /obj/item/bodypart/arm/left/necromorph
 	name = "left arm"
-	desc = "Did you know that the word 'sinister' stems originally from the \
-		Latin 'sinestra' (left hand), because the left hand was supposed to \
-		be possessed by the devil? This arm appears to be possessed by no \
-		one though."
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
@@ -83,8 +77,6 @@
 
 /obj/item/bodypart/arm/right/necromorph
 	name = "right arm"
-	desc = "Over 87% of humans are right handed. That figure is much lower \
-		among humans missing their right arm."
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
@@ -109,8 +101,6 @@
 
 /obj/item/bodypart/leg/left/necromorph
 	name = "left leg"
-	desc = "Some athletes prefer to tie their left shoelaces first for good \
-		luck. In this instance, it probably would not have helped."
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
@@ -135,9 +125,6 @@
 
 /obj/item/bodypart/leg/right/necromorph
 	name = "right leg"
-	desc = "You put your right leg in, your right leg out. In, out, in, out, \
-		shake it all about. And apparently then it detaches.\n\
-		The hokey pokey has certainly changed a lot since space colonisation."
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
@@ -164,7 +151,6 @@
 
 /obj/item/organ/external/tail/necromorph
 	name = "tail"
-	desc = "A severed tail. What did you cut this off of?"
 	visual = TRUE
 	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_EXTERNAL_TAIL

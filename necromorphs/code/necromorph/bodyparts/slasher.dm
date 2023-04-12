@@ -1,6 +1,5 @@
 /obj/item/bodypart/chest/necromorph/slasher
 	name = BODY_ZONE_CHEST
-	desc = "It's impolite to stare at a person's chest."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
 	icon_state = "chest"
 	max_damage = 200
@@ -12,7 +11,6 @@
 
 /obj/item/bodypart/head/necromorph/slasher
 	name = BODY_ZONE_HEAD
-	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
 	icon_state = "head"
 	max_damage = 200
@@ -24,10 +22,6 @@
 
 /obj/item/bodypart/arm/left/necromorph/slasher
 	name = "left blade"
-	desc = "Did you know that the word 'sinister' stems originally from the \
-		Latin 'sinestra' (left hand), because the left hand was supposed to \
-		be possessed by the devil? This arm appears to be possessed by no \
-		one though."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
 	icon_state = "l_arm"
 	attack_verb_continuous = list("slashes", "stabs")
@@ -41,8 +35,6 @@
 
 /obj/item/bodypart/arm/right/necromorph/slasher
 	name = "right blade"
-	desc = "Over 87% of humans are right handed. That figure is much lower \
-		among humans missing their right arm."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
 	icon_state = "l_arm"
 	attack_verb_continuous = list("slashes", "stabs")
@@ -56,8 +48,6 @@
 
 /obj/item/bodypart/leg/left/necromorph/slasher
 	name = "left leg"
-	desc = "Some athletes prefer to tie their left shoelaces first for good \
-		luck. In this instance, it probably would not have helped."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
 	icon_state = "l_leg"
 	attack_verb_continuous = list("kicks", "stomps")
@@ -71,9 +61,6 @@
 
 /obj/item/bodypart/leg/right/necromorph/slasher
 	name = "right leg"
-	desc = "You put your right leg in, your right leg out. In, out, in, out, \
-		shake it all about. And apparently then it detaches.\n\
-		The hokey pokey has certainly changed a lot since space colonisation."
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
 	icon_state = "r_leg"
 	attack_verb_continuous = list("kicks", "stomps")
