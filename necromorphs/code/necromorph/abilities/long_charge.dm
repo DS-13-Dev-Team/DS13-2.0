@@ -162,9 +162,9 @@
 	if(valid_steps_taken > steps_for_charge)
 
 		switch(charge_type)
-			if(CHARGE_BRUTE) //Xeno Crusher
+			if(CHARGE_BRUTE) //Necro Brute
 				if(MODULUS(valid_steps_taken, 4) == 0)
-					playsound(charger, "alien_charge", 50)
+					playsound(charger, "brute_charge", 50)
 				var/shake_dist = min(round(CHARGE_SPEED(src) * 5), 8)
 				for(var/mob/living/carbon/victim in range(shake_dist, charger))
 					if(victim.stat == DEAD)
@@ -238,7 +238,7 @@
 		animation_flash_color(crushed_living)
 
 		if(precrush > 0)
-			log_combat(charger, crushed_living, "xeno charged")
+			log_combat(charger, crushed_living, "necro charged")
 			//There is a chance to do enough damage here to gib certain mobs. Better update immediately.
 			crushed_living.apply_damage(precrush, BRUTE, BODY_ZONE_CHEST, MELEE)
 			if(QDELETED(crushed_living))

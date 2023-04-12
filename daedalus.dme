@@ -4831,6 +4831,7 @@
 #include "necromorphs\code\marker\markernet\marker_eye.dm"
 #include "necromorphs\code\marker\markernet\marker_net.dm"
 #include "necromorphs\code\marker\markernet\marker_static.dm"
+#include "necromorphs\code\mob\damage_procs.dm"
 #include "necromorphs\code\movespeed\misc.dm"
 #include "necromorphs\code\necromorph\effects.dm"
 #include "necromorphs\code\necromorph\living.dm"
