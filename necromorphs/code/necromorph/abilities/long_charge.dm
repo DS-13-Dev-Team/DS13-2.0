@@ -1,7 +1,6 @@
 /datum/action/cooldown/necro/long_charge
 	name = "Toggle Charging"
 	desc = "Toggles the movement-based charge on and off."
-	click_to_activate = TRUE
 	var/charge_type = CHARGE_BRUTE
 	var/next_move_limit = 0
 	var/turf/lastturf = null
@@ -29,6 +28,8 @@
 		return
 	charge_on()
 
+/datum/action/cooldown/necro/long_charge/is_action_active(atom/movable/screen/movable/action_button/current_button)
+	return current_button.our_hud?.mymob?.click_intercept == src
 
 /datum/action/cooldown/necro/long_charge/proc/charge_on(verbose = TRUE)
 	var/mob/living/carbon/human/necromorph/charger = owner
@@ -37,7 +38,6 @@
 	RegisterSignal(charger, COMSIG_ATOM_DIR_CHANGE, PROC_REF(on_dir_change))
 	if(verbose)
 		to_chat(charger, span_notice("We will charge when moving, now."))
-
 
 /datum/action/cooldown/necro/long_charge/proc/charge_off(verbose = TRUE)
 	var/mob/living/carbon/human/necromorph/charger = owner
@@ -78,6 +78,9 @@
 			return
 		charger.charging = CHARGE_BUILDINGUP
 		handle_momentum()
+		switch(charge_type)
+			if(CHARGE_BRUTE)
+				check_3_dirs(source, oldloc, direction, Forced, old_locs)
 		return
 
 	if(!check_momentum(direction))
@@ -85,14 +88,30 @@
 		return
 
 	handle_momentum()
+	switch(charge_type)
+		if(CHARGE_BRUTE)
+			check_3_dirs(source, oldloc, direction, Forced, old_locs)
 
+/datum/action/cooldown/necro/long_charge/proc/check_3_dirs(datum/source, atom/oldloc, direction, Forced, old_locs)
+	var/mob/living/carbon/human/necromorph/charger = owner
+	var/list/turfs = list(get_step(source, turn(direction, 90)), get_step(source, turn(direction, -90)))
+	var/continue_charge = TRUE
+	for (var/turf/T in turfs)
+		if (!continue_charge)
+			break
+
+		for (var/mob/A in T)
+			if (ismob(A))
+				continue_charge = charger.Bump(A)
+
+			if (!continue_charge)
+				break
 
 /datum/action/cooldown/necro/long_charge/proc/do_start_crushing()
 	var/mob/living/carbon/human/necromorph/charger = owner
 	RegisterSignal(charger, COMSIG_MOVABLE_BUMP, PROC_REF(do_crush))
 	charger.charging = CHARGE_ON
 	charger.update_icons()
-
 
 /datum/action/cooldown/necro/long_charge/proc/do_stop_crushing()
 	var/mob/living/carbon/human/necromorph/charger = owner
@@ -157,14 +176,12 @@
 			do_start_crushing()
 		else if(valid_steps_taken == max_steps_buildup)
 			charger.charging = CHARGE_MAX
-		charger.add_movespeed_modifier(/datum/movespeed_modifier/necro_charge, -CHARGE_SPEED(src))
+		charger.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/necro_charge, TRUE, -CHARGE_SPEED(src))
 
 	if(valid_steps_taken > steps_for_charge)
 
 		switch(charge_type)
 			if(CHARGE_BRUTE) //Necro Brute
-				if(MODULUS(valid_steps_taken, 4) == 0)
-					playsound(charger, "brute_charge", 50)
 				var/shake_dist = min(round(CHARGE_SPEED(src) * 5), 8)
 				for(var/mob/living/carbon/victim in range(shake_dist, charger))
 					if(victim.stat == DEAD)

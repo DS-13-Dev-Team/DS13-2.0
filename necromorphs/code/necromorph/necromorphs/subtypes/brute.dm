@@ -17,13 +17,25 @@
 	melee_damage_upper = 16
 	max_health = 510
 	actions = list(
+		/datum/action/cooldown/necro/long_charge
 	)
 	minimap_icon = "brute"
 
 /datum/species/necromorph/brute
 	name = "Brute"
 	id = SPECIES_NECROMORPH_BRUTE
+	burnmod = 0.75
+	stunmod = 0.15
 	speedmod = 2
+	species_mob_size = MOB_SIZE_LARGE
+	special_step_sounds = list(
+		'necromorphs/sound/effects/footstep/brute_step_1.ogg',
+		'necromorphs/sound/effects/footstep/brute_step_2.ogg',
+		'necromorphs/sound/effects/footstep/brute_step_3.ogg',
+		'necromorphs/sound/effects/footstep/brute_step_4.ogg',
+		'necromorphs/sound/effects/footstep/brute_step_5.ogg',
+		'necromorphs/sound/effects/footstep/brute_step_6.ogg'
+	)
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/brute,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/brute,
