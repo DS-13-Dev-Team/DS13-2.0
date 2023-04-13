@@ -188,7 +188,7 @@
 						continue
 					if(victim.client)
 						shake_camera(victim, 1, 1)
-					if(victim.loc != charger.loc || victim.lying_angle == 0)
+					if(victim.loc != charger.loc || !victim.lying_prev)
 						continue
 					charger.visible_message(span_danger("[charger] runs [victim] over!"),
 						span_danger("We run [victim] over!"), null, 5)
