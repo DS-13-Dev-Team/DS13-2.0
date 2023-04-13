@@ -87,6 +87,8 @@
 		if (istype(T2))
 			LAZYADD(affected_turfs_secondary,T2)
 
+	return TRUE
+
 /datum/action/cooldown/necro/slam/proc/finish()
 	//Lets finish the slamming animation. We drop sharply back to the floor
 	//And, if we had an x offset, we'll also strike there

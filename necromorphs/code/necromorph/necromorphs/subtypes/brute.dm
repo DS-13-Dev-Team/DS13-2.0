@@ -55,6 +55,7 @@
 		/datum/action/cooldown/necro/long_charge,
 		/datum/action/cooldown/necro/slam,
 		/datum/action/cooldown/necro/curl,
+		/datum/action/cooldown/necro/shoot/biobomb
 	)
 	minimap_icon = "brute"
 

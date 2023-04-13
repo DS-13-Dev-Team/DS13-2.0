@@ -4852,6 +4852,7 @@
 #include "necromorphs\code\necromorph\abilities\gallop.dm"
 #include "necromorphs\code\necromorph\abilities\leap.dm"
 #include "necromorphs\code\necromorph\abilities\long_charge.dm"
+#include "necromorphs\code\necromorph\abilities\shoot.dm"
 #include "necromorphs\code\necromorph\abilities\shout.dm"
 #include "necromorphs\code\necromorph\abilities\slam.dm"
 #include "necromorphs\code\necromorph\abilities\wallrun.dm"
