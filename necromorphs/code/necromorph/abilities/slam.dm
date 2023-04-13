@@ -101,11 +101,9 @@
 	//Playing a sound several times slightly overlapping, makes, it MUCH louder
 	playsound(epicentre, 'necromorphs/sound/weapons/heavysmash.ogg', 100, 1, 20,20)
 	if (damage > 15)
-		spawn(1)
-			playsound(epicentre, 'necromorphs/sound/weapons/heavysmash.ogg', 100, 1, 20,20)
+		addtimer(CALLBACK(src, PROC_REF(playsound), epicentre, 'necromorphs/sound/weapons/heavysmash.ogg', 100, 1, 20,20), 1)
 	if (damage > 30)
-		spawn(2)
-			playsound(epicentre, 'necromorphs/sound/weapons/heavysmash.ogg', 100, 1, 20,20)
+		addtimer(CALLBACK(src, PROC_REF(playsound), epicentre, 'necromorphs/sound/weapons/heavysmash.ogg', 100, 1, 20,20), 2)
 
 
 	//Now lets damage all the things
@@ -193,11 +191,9 @@
 	deltimer(slam_timer)
 	//Lets smoothly slide back to a normal stance
 	animate(user, transform=matrix(), pixel_y = cached_pixels_y, pixel_x = cached_pixels_x, time = 7)
-	spawn(7)
+	if(isliving(user))
 		var/mob/living/L = user
-		if (istype(L))
-			L.SetStun(0, TRUE)
-
+		addtimer(CALLBACK(L, /mob/living.proc/SetStun, 0, TRUE), 7)
 
 /atom/movable/proc/can_slam(atom/target, error_messages = TRUE)
 	if (!target)

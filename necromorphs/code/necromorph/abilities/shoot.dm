@@ -8,6 +8,7 @@
 	var/list/dispersion
 	var/total_shots = 1
 	var/windup_time
+	var/fireanimtime
 	var/list/fire_sound
 	var/power = 1
 	cooldown_time = 1 SECONDS
@@ -57,7 +58,8 @@
 
 		windup_animation(target)
 
-	fire_animation()
+	if (fireanimtime)
+		addtimer(CALLBACK(src, PROC_REF(fire_animation)), fireanimtime)
 
 	for(shot_num in 1 to total_shots)
 		var/obj/projectile/P = new projectile_type(get_turf(owner))
@@ -104,6 +106,7 @@
 	projectile_type = /obj/projectile/bullet/biobomb/weak
 	nomove = 2 SECONDS
 	windup_time = 1.25 SECONDS
+	fireanimtime = 4
 
 	fire_sound = list(
 		'necromorphs/sound/effects/creatures/necromorph/cyst/cyst_fire_1.ogg',
@@ -126,10 +129,9 @@
 	sleep(windup_time)
 
 /datum/action/cooldown/necro/shoot/biobomb/fire_animation()
-	spawn(4)
-		var/mob/living/L = owner
-		var/matrix/M = matrix()
-		animate(L, transform=M,pixel_x = L.pixel_x, time = 0.8 SECOND, flags = ANIMATION_PARALLEL)
+	var/mob/living/L = owner
+	var/matrix/M = matrix()
+	animate(L, transform=M,pixel_x = L.pixel_x, time = 0.8 SECOND, flags = ANIMATION_PARALLEL)
 
 /obj/projectile/bullet/biobomb/weak
 	damage = 30

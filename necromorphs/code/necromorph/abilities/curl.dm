@@ -106,13 +106,15 @@
 
 
 	//Set the status after the animation finishes
-	spawn(animtime)
-		status = CURLED
-		//Some extra little impact sounds for the brute's arms hitting the ground as it curls up
-		N.play_necro_sound(N, SOUND_FOOTSTEP, 40, 1)
-		spawn(6) //One then the other
-			N.play_necro_sound(N, SOUND_FOOTSTEP, 40, 1)
-	//Nothing farther happens for now
+	addtimer(CALLBACK(src, PROC_REF(play_sound), animtime))
+
+/datum/action/cooldown/necro/curl/proc/play_sound()
+	var/mob/living/carbon/human/necromorph/N = owner
+	status = CURLED
+	//Some extra little impact sounds for the brute's arms hitting the ground as it curls up
+	N.play_necro_sound(SOUND_FOOTSTEP, 40, 1)
+
+	addtimer(CALLBACK(N, /mob/living/carbon/human/necromorph.proc/play_necro_sound, SOUND_FOOTSTEP, 40, 1), 6) //One then the other
 
 
 //In the finish proc, we uncurl. Lets assume safety checks are already done and we're clear to proceed
@@ -131,13 +133,15 @@
 	M.Scale(1)
 	M.Turn(0)
 	animate(N, transform = M, pixel_x = cached_pixels_x, pixel_y = cached_pixels_y, time = animtime)
-	spawn(animtime)
-		N.SetStun(0, TRUE)
-		status = FORCE_COOLDOWN
+	addtimer(CALLBACK(src, PROC_REF(uncurl_end)), animtime)
 
 	cached_pixels_x = null
 	cached_pixels_y = null
 
+/datum/action/cooldown/necro/curl/proc/uncurl_end()
+	var/mob/living/carbon/human/necromorph/N = owner
+	N.SetStun(0, TRUE)
+	status = FORCE_COOLDOWN
 
 /datum/action/cooldown/necro/curl/proc/notify_forced()
 	uncurl()
