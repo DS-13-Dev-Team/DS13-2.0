@@ -103,7 +103,7 @@
 	name = "Shoot biobomb"
 
 	cooldown_time = 12 SECONDS
-	projectile_type = /obj/projectile/bullet/biobomb/weak
+	projectile_type = /obj/projectile/bullet/cyst/weak
 	nomove = 2 SECONDS
 	windup_time = 1.25 SECONDS
 	fireanimtime = 4
@@ -133,5 +133,5 @@
 	var/matrix/M = matrix()
 	animate(L, transform=M,pixel_x = L.pixel_x, time = 0.8 SECOND, flags = ANIMATION_PARALLEL)
 
-/obj/projectile/bullet/biobomb/weak
+/obj/projectile/bullet/cyst/weak
 	damage = 30
