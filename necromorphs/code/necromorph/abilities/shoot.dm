@@ -26,6 +26,7 @@
 	var/starting_pixel_offset_y
 
 /datum/action/cooldown/necro/shoot/Activate(atom/target)
+	StartCooldown()
 	owner.face_atom(target)
 
 	//First of all, lets check if we're currently able to shoot
@@ -51,7 +52,7 @@
 			stoptime += nomove
 
 		if (stoptime)
-			L.Paralyze(stoptime)
+			L.Paralyze(stoptime, TRUE)
 
 	//Now lets windup the shot(s)
 	if (windup_time)

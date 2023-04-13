@@ -93,7 +93,6 @@
 			check_3_dirs(source, oldloc, direction, Forced, old_locs)
 
 /datum/action/cooldown/necro/long_charge/proc/check_3_dirs(datum/source, atom/oldloc, direction, Forced, old_locs)
-	var/mob/living/carbon/human/necromorph/charger = owner
 	var/list/turfs = list(get_step(source, turn(direction, 90)), get_step(source, turn(direction, -90)))
 	var/continue_charge = TRUE
 	for (var/turf/T in turfs)
@@ -102,7 +101,7 @@
 
 		for (var/mob/A in T)
 			if (ismob(A))
-				continue_charge = charger.Bump(A)
+				continue_charge = do_crush(owner, A)
 
 			if (!continue_charge)
 				break

@@ -52,8 +52,8 @@
 
 		//We'll stun the user so they can't move during the animation
 		//The extra number added to windup time is the total of all the little sleeps used throughout the process
-		var/stuntime = CEILING((windup_time + 13), 10) //Stuntime is in life ticks, so we divide by 10, and round up to the nearest integer
-		L.Stun(stuntime, TRUE) //Passing true here bypasses species resistance
+		var/stuntime = CEILING((windup_time + 16), 10) //Stuntime is in life ticks, so we divide by 10, and round up to the nearest integer
+		L.Paralyze(stuntime, TRUE) //Passing true here bypasses species resistance
 
 	//Here we start the windup.
 	cached_pixels_x = user.pixel_x
@@ -101,9 +101,9 @@
 	//Playing a sound several times slightly overlapping, makes, it MUCH louder
 	playsound(epicentre, 'necromorphs/sound/weapons/heavysmash.ogg', 100, 1, 20,20)
 	if (damage > 15)
-		addtimer(CALLBACK(src, PROC_REF(playsound), epicentre, 'necromorphs/sound/weapons/heavysmash.ogg', 100, 1, 20,20), 1)
+		addtimer(CALLBACK(src, .proc/playsound, epicentre, 'necromorphs/sound/weapons/heavysmash.ogg', 100, 1, 20,20), 1)
 	if (damage > 30)
-		addtimer(CALLBACK(src, PROC_REF(playsound), epicentre, 'necromorphs/sound/weapons/heavysmash.ogg', 100, 1, 20,20), 2)
+		addtimer(CALLBACK(src, .proc/playsound, epicentre, 'necromorphs/sound/weapons/heavysmash.ogg', 100, 1, 20,20), 2)
 
 
 	//Now lets damage all the things
@@ -193,7 +193,7 @@
 	animate(user, transform=matrix(), pixel_y = cached_pixels_y, pixel_x = cached_pixels_x, time = 7)
 	if(isliving(user))
 		var/mob/living/L = user
-		addtimer(CALLBACK(L, /mob/living.proc/SetStun, 0, TRUE), 7)
+		addtimer(CALLBACK(L, /mob/living.proc/SetParalyzed, 0, TRUE), 7)
 
 /atom/movable/proc/can_slam(atom/target, error_messages = TRUE)
 	if (!target)
