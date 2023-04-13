@@ -54,6 +54,7 @@
 	actions = list(
 		/datum/action/cooldown/necro/long_charge,
 		/datum/action/cooldown/necro/slam,
+		/datum/action/cooldown/necro/curl,
 	)
 	minimap_icon = "brute"
 
