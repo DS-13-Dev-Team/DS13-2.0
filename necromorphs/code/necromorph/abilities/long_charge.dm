@@ -25,8 +25,9 @@
 /datum/action/cooldown/necro/long_charge/Activate(atom/target)
 	if(charge_ability_on)
 		charge_off()
-		return
+		return TRUE
 	charge_on()
+	return TRUE
 
 /datum/action/cooldown/necro/long_charge/is_action_active(atom/movable/screen/movable/action_button/current_button)
 	return current_button.our_hud?.mymob?.click_intercept == src
