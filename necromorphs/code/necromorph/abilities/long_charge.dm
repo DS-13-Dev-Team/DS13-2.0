@@ -97,7 +97,7 @@
 	var/list/turfs = list(get_step(source, turn(direction, 90)), get_step(source, turn(direction, -90)))
 	for (var/turf/T in turfs)
 		for (var/mob/A in T)
-			if(!do_crush(owner, A)
+			if(!do_crush(owner, A))
 				return
 
 /datum/action/cooldown/necro/long_charge/proc/do_start_crushing()
