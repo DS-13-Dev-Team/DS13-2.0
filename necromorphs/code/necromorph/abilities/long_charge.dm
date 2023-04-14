@@ -246,7 +246,7 @@
 		if(precrush > 0)
 			log_combat(charger, crushed_living, "necro charged")
 			//There is a chance to do enough damage here to gib certain mobs. Better update immediately.
-			crushed_living.apply_damage(precrush, BRUTE, BODY_ZONE_CHEST, MELEE)
+			crushed_living.apply_damage(precrush, BRUTE, BODY_ZONE_CHEST)
 			if(QDELETED(crushed_living))
 				charger.visible_message(span_danger("[charger] anihilates [preserved_name]!"),
 				span_danger("We anihilate [preserved_name]!"))
