@@ -1,4 +1,4 @@
-/datum/action/cooldown/necro/long_charge
+/datum/action/cooldown/necro/active/long_charge
 	name = "Toggle Charging"
 	desc = "Toggles the movement-based charge on and off."
 	var/charge_type = CHARGE_BRUTE
@@ -17,22 +17,19 @@
 	///If this charge should keep momentum on dir change and if it can charge diagonally
 	var/agile_charge = FALSE
 
-/datum/action/cooldown/necro/long_charge/Destroy()
+/datum/action/cooldown/necro/active/long_charge/Destroy()
 	if(charge_ability_on)
 		charge_off()
 	return ..()
 
-/datum/action/cooldown/necro/long_charge/Activate(atom/target)
+/datum/action/cooldown/necro/active/long_charge/Activate(atom/target)
 	if(charge_ability_on)
 		charge_off()
 		return TRUE
 	charge_on()
 	return TRUE
 
-/datum/action/cooldown/necro/long_charge/is_action_active(atom/movable/screen/movable/action_button/current_button)
-	return current_button.our_hud?.mymob?.click_intercept == src
-
-/datum/action/cooldown/necro/long_charge/proc/charge_on(verbose = TRUE)
+/datum/action/cooldown/necro/active/long_charge/proc/charge_on(verbose = TRUE)
 	var/mob/living/carbon/human/necromorph/charger = owner
 	charge_ability_on = TRUE
 	RegisterSignal(charger, COMSIG_MOVABLE_MOVED, PROC_REF(update_charging))
@@ -40,7 +37,7 @@
 	if(verbose)
 		to_chat(charger, span_notice("We will charge when moving, now."))
 
-/datum/action/cooldown/necro/long_charge/proc/charge_off(verbose = TRUE)
+/datum/action/cooldown/necro/active/long_charge/proc/charge_off(verbose = TRUE)
 	var/mob/living/carbon/human/necromorph/charger = owner
 	if(charger.charging != CHARGE_OFF)
 		do_stop_momentum()
@@ -51,7 +48,7 @@
 	charge_ability_on = FALSE
 
 
-/datum/action/cooldown/necro/long_charge/proc/on_dir_change(datum/source, old_dir, new_dir)
+/datum/action/cooldown/necro/active/long_charge/proc/on_dir_change(datum/source, old_dir, new_dir)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/charger = owner
 	if(charger.charging == CHARGE_OFF)
@@ -61,7 +58,7 @@
 	do_stop_momentum()
 
 
-/datum/action/cooldown/necro/long_charge/proc/update_charging(datum/source, atom/oldloc, direction, Forced, old_locs)
+/datum/action/cooldown/necro/active/long_charge/proc/update_charging(datum/source, atom/oldloc, direction, Forced, old_locs)
 	SIGNAL_HANDLER
 	if(Forced)
 		return
@@ -79,9 +76,7 @@
 			return
 		charger.charging = CHARGE_BUILDINGUP
 		handle_momentum()
-		switch(charge_type)
-			if(CHARGE_BRUTE)
-				check_3_dirs(source, oldloc, direction, Forced, old_locs)
+		spec_check(source, oldloc, direction, Forced, old_locs)
 		return
 
 	if(!check_momentum(direction))
@@ -89,24 +84,24 @@
 		return
 
 	handle_momentum()
+	spec_check(source, oldloc, direction, Forced, old_locs)
+
+/datum/action/cooldown/necro/active/long_charge/proc/spec_check(datum/source, atom/oldloc, direction, Forced, old_locs)
 	switch(charge_type)
 		if(CHARGE_BRUTE)
-			check_3_dirs(source, oldloc, direction, Forced, old_locs)
+			var/list/turfs = list(get_step(source, turn(direction, 90)), get_step(source, turn(direction, -90)))
+			for (var/turf/T in turfs)
+				for (var/mob/A in T)
+					if(!do_crush(owner, A))
+						return
 
-/datum/action/cooldown/necro/long_charge/proc/check_3_dirs(datum/source, atom/oldloc, direction, Forced, old_locs)
-	var/list/turfs = list(get_step(source, turn(direction, 90)), get_step(source, turn(direction, -90)))
-	for (var/turf/T in turfs)
-		for (var/mob/A in T)
-			if(!do_crush(owner, A))
-				return
-
-/datum/action/cooldown/necro/long_charge/proc/do_start_crushing()
+/datum/action/cooldown/necro/active/long_charge/proc/do_start_crushing()
 	var/mob/living/carbon/human/necromorph/charger = owner
 	RegisterSignal(charger, COMSIG_MOVABLE_BUMP, PROC_REF(do_crush))
 	charger.charging = CHARGE_ON
 	charger.update_icons()
 
-/datum/action/cooldown/necro/long_charge/proc/do_stop_crushing()
+/datum/action/cooldown/necro/active/long_charge/proc/do_stop_crushing()
 	var/mob/living/carbon/human/necromorph/charger = owner
 	UnregisterSignal(charger, COMSIG_MOVABLE_BUMP)
 	if(valid_steps_taken > 0) //If this is false, then do_stop_momentum() should have it handled already.
@@ -114,7 +109,7 @@
 		charger.update_icons()
 
 
-/datum/action/cooldown/necro/long_charge/proc/do_stop_momentum(message = TRUE)
+/datum/action/cooldown/necro/active/long_charge/proc/do_stop_momentum(message = TRUE)
 	var/mob/living/carbon/human/necromorph/charger = owner
 	if(message && valid_steps_taken >= steps_for_charge) //Message now happens without a stun condition
 		charger.visible_message(span_danger("[charger] skids to a halt!"),
@@ -130,7 +125,7 @@
 	charger.update_icons()
 
 
-/datum/action/cooldown/necro/long_charge/proc/check_momentum(newdir)
+/datum/action/cooldown/necro/active/long_charge/proc/check_momentum(newdir)
 	var/mob/living/carbon/human/necromorph/charger = owner
 	if((newdir && ISDIAGONALDIR(newdir) || charge_dir != newdir) && !agile_charge) //Check for null direction from help shuffle signals
 		return FALSE
@@ -156,7 +151,8 @@
 	return TRUE
 
 
-/datum/action/cooldown/necro/long_charge/proc/handle_momentum()
+/datum/action/cooldown/necro/active/long_charge/proc/handle_momentum()
+	set waitfor = FALSE
 	var/mob/living/carbon/human/necromorph/charger = owner
 
 	if(charger.pulling && valid_steps_taken)
@@ -191,7 +187,7 @@
 	lastturf = charger.loc
 
 
-/datum/action/cooldown/necro/long_charge/proc/speed_down(amt)
+/datum/action/cooldown/necro/active/long_charge/proc/speed_down(amt)
 	if(valid_steps_taken == 0)
 		return
 	valid_steps_taken -= amt
@@ -217,7 +213,7 @@
 			return NONE
 
 // Charge is divided into two acts: before and after the crushed thing taking damage, as that can cause it to be deleted.
-/datum/action/cooldown/necro/long_charge/proc/do_crush(datum/source, atom/crushed)
+/datum/action/cooldown/necro/active/long_charge/proc/do_crush(datum/source, atom/crushed)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/charger = owner
 	if(charger.incapacitated() || charger.now_pushing)
@@ -291,11 +287,11 @@
 // ***************************************
 
 //Anything called here will have failed CanPass(), so it's likely dense.
-/atom/proc/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/atom/proc/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	return //If this happens it will error.
 
 
-/obj/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/obj/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	if((resistance_flags & INDESTRUCTIBLE) || charger.charging < CHARGE_ON)
 		charge_datum.do_stop_momentum()
 		return PRECRUSH_STOPPED
@@ -318,13 +314,13 @@
 		unbuckle_mob(m)
 	return (CHARGE_SPEED(charge_datum) * 20) //Damage to inflict.
 
-/obj/vehicle/unmanned/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/obj/vehicle/unmanned/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	return (CHARGE_SPEED(charge_datum) * 10)
 
-/obj/vehicle/sealed/mecha/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/obj/vehicle/sealed/mecha/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	return (CHARGE_SPEED(charge_datum) * 240)
 
-/obj/structure/razorwire/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/obj/structure/razorwire/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	if(resistance_flags & INDESTRUCTIBLE || charger.charging < CHARGE_ON)
 		charge_datum.do_stop_momentum()
 		return PRECRUSH_STOPPED
@@ -336,10 +332,10 @@
 	return (CHARGE_SPEED(charge_datum) * 20) //Damage to inflict.
 
 
-/mob/living/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/mob/living/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	return (stat == DEAD ? 0 : CHARGE_SPEED(charge_datum) * charge_datum.crush_living_damage)
 
-/turf/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/turf/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	if(charge_datum.valid_steps_taken >= charge_datum.max_steps_buildup)
 		return 2 //Should dismantle, or at least heavily damage it.
 	return 3 //Lighter damage.
@@ -349,11 +345,11 @@
 // *********** Post-Crush
 // ***************************************
 
-/atom/proc/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/atom/proc/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	return PRECRUSH_STOPPED //By default, if this happens then movement stops. But not necessarily.
 
 
-/obj/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/obj/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	if(anchored) //Did it manage to stop it?
 		charger.visible_message(span_danger("[charger] rams into [src] and skids to a halt!"),
 		span_warning("We ram into [src] and skid to a halt!"))
@@ -376,7 +372,7 @@
 	charge_datum.speed_down(2) //Lose two turfs worth of speed.
 	return PRECRUSH_PLOWED
 
-/obj/machinery/vending/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/obj/machinery/vending/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	if(!anchored)
 		return ..()
 	if(density)
@@ -385,7 +381,7 @@
 	span_warning("We slam [src] into the ground!"))
 	return PRECRUSH_PLOWED
 
-/obj/vehicle/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/obj/vehicle/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	take_damage(charger.class.melee_damage_upper, BRUTE, MELEE)
 	if(density && charger.move_force <= move_resist)
 		charger.visible_message(span_danger("[charger] rams into [src] and skids to a halt!"),
@@ -395,7 +391,7 @@
 	charge_datum.speed_down(2) //Lose two turfs worth of speed.
 	return NONE
 
-/mob/living/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
+/mob/living/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
 	if(density && ((mob_size == charger.mob_size && charger.charging <= CHARGE_MAX) || mob_size > charger.mob_size))
 		charger.visible_message(span_danger("[charger] rams into [src] and skids to a halt!"),
 		span_warning("We ram into [src] and skid to a halt!"))

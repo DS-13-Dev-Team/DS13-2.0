@@ -52,9 +52,9 @@
 	max_health = 510
 	necro_armor = list(ARMOR_FRONT = 30, ARMOR_FLANK = 20, ARMOR_BACK = 10, CURL_ARMOR_MULT = 1.5, ARMOR_PROTECTION = 300)
 	actions = list(
-		/datum/action/cooldown/necro/long_charge,
+		/datum/action/cooldown/necro/active/long_charge,
 		/datum/action/cooldown/necro/slam,
-		/datum/action/cooldown/necro/curl,
+		/datum/action/cooldown/necro/active/curl,
 		/datum/action/cooldown/necro/shoot/biobomb
 	)
 	minimap_icon = "brute"
