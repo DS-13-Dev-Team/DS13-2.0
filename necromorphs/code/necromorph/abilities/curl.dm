@@ -114,7 +114,7 @@
 	//Some extra little impact sounds for the brute's arms hitting the ground as it curls up
 	N.play_necro_sound(SOUND_FOOTSTEP, 40, 1)
 
-	addtimer(CALLBACK(N, /mob/living/carbon/human/necromorph.proc/play_necro_sound, SOUND_FOOTSTEP, 40, 1), 6) //One then the other
+	addtimer(CALLBACK(N, TYPE_PROC_REF(/mob/living/carbon/human/necromorph, play_necro_sound), SOUND_FOOTSTEP, 40, 1), 6) //One then the other
 
 
 //In the finish proc, we uncurl. Lets assume safety checks are already done and we're clear to proceed
