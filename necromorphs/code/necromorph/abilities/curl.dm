@@ -38,15 +38,16 @@
 	//First of all, uncurling
 	if (can_uncurl())
 		finish()
-		return
+		return TRUE
 
 	//If we're not already curled, we're doing a curl
 	if (!can_curl())
-		return
+		return TRUE
 
 	started_at = world.time
 	if (status != CURLED && status != CURLING)
 		curl()
+	return TRUE
 
 /datum/action/cooldown/necro/curl/proc/curl()
 	var/mob/living/carbon/human/necromorph/N = owner
