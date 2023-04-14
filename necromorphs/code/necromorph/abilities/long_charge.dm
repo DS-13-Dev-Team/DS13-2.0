@@ -95,17 +95,10 @@
 
 /datum/action/cooldown/necro/long_charge/proc/check_3_dirs(datum/source, atom/oldloc, direction, Forced, old_locs)
 	var/list/turfs = list(get_step(source, turn(direction, 90)), get_step(source, turn(direction, -90)))
-	var/continue_charge = TRUE
 	for (var/turf/T in turfs)
-		if (!continue_charge)
-			break
-
 		for (var/mob/A in T)
-			if (ismob(A))
-				continue_charge = do_crush(owner, A)
-
-			if (!continue_charge)
-				break
+			if(!do_crush(owner, A)
+				return
 
 /datum/action/cooldown/necro/long_charge/proc/do_start_crushing()
 	var/mob/living/carbon/human/necromorph/charger = owner
