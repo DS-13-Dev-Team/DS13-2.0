@@ -52,7 +52,10 @@
 /datum/action/cooldown/necro/active/curl/proc/curl()
 	var/mob/living/carbon/human/necromorph/N = owner
 	status = CURLING
-	N.Stun(999999, TRUE) //The owner is stunned until they uncurl
+	//The owner is stunned until they uncurl
+	ADD_TRAIT(N, TRAIT_INCAPACITATED, src)
+	ADD_TRAIT(N, TRAIT_IMMOBILIZED, src)
+	ADD_TRAIT(N, TRAIT_HANDS_BLOCKED, src)
 	var/offset_dir_x
 	var/offset_dir_y
 	switch(REVERSE_DIR(N.dir))
@@ -140,8 +143,9 @@
 	cached_pixels_y = null
 
 /datum/action/cooldown/necro/active/curl/proc/uncurl_end()
-	var/mob/living/carbon/human/necromorph/N = owner
-	N.SetStun(0, TRUE)
+	REMOVE_TRAIT(owner, TRAIT_INCAPACITATED, src)
+	REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, src)
+	REMOVE_TRAIT(owner, TRAIT_HANDS_BLOCKED, src)
 	status = FORCE_COOLDOWN
 
 /datum/action/cooldown/necro/active/curl/proc/notify_forced()
