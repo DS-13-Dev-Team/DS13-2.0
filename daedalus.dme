@@ -4785,7 +4785,6 @@
 #include "necromorphs\code\__HELPERS\patterns.dm"
 #include "necromorphs\code\__HELPERS\turfs.dm"
 #include "necromorphs\code\__HELPERS\unsorted.dm"
-#include "necromorphs\code\_global_vars\mapping.dm"
 #include "necromorphs\code\_global_vars\lists\flavor.dm"
 #include "necromorphs\code\_global_vars\lists\necromorph_sounds.dm"
 #include "necromorphs\code\_onclick\hud\rendering\plane_master.dm"

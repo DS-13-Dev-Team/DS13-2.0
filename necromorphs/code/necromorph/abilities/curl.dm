@@ -55,7 +55,7 @@
 	N.Stun(999999, TRUE) //The owner is stunned until they uncurl
 	var/offset_dir_x
 	var/offset_dir_y
-	switch(GLOB.reverse_dir[N.dir])
+	switch(REVERSE_DIR(N.dir))
 		if(NORTH)
 			offset_dir_x = 0
 			offset_dir_y = 1
