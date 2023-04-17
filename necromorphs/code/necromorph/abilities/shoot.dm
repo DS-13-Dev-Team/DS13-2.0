@@ -25,17 +25,21 @@
 	var/starting_pixel_offset_x
 	var/starting_pixel_offset_y
 
-/datum/action/cooldown/necro/shoot/Activate(atom/target)
-	StartCooldown()
-	owner.face_atom(target)
-
-	//First of all, lets check if we're currently able to shoot
-	if (!can_shoot())
-		return FALSE
+/datum/action/cooldown/necro/shoot/PreActivate(atom/target)
+	if (isliving(owner))
+		var/mob/living/L = owner
+		if (L.incapacitated())
+			return FALSE
 
 	//Can't shoot yourself
 	if (target == src)
 		return FALSE
+
+	. = ..()
+
+/datum/action/cooldown/necro/shoot/Activate(atom/target)
+	StartCooldown()
+	owner.face_atom(target)
 
 	var/mob/living/L
 	var/target_zone = BODY_ZONE_CHEST
@@ -83,22 +87,6 @@
 
 /datum/action/cooldown/necro/shoot/proc/fire_animation()
 	return
-
-/***********************
-	Safety Checks
-************************/
-/datum/action/cooldown/necro/shoot/proc/can_shoot()
-	if (isliving(src))
-		var/mob/living/L = src
-		if (L.incapacitated())
-			return FALSE
-
-	return TRUE
-
-
-//Only used for repeat shooting
-/datum/action/cooldown/necro/shoot/proc/can_fire()
-	return TRUE
 
 /datum/action/cooldown/necro/shoot/biobomb
 	name = "Shoot biobomb"

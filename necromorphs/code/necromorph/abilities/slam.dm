@@ -30,15 +30,24 @@
 	var/list/affected_turfs
 	var/list/affected_turfs_secondary
 
-/datum/action/cooldown/necro/slam/Activate(atom/target)
-	StartCooldown()
-
+/datum/action/cooldown/necro/slam/PreActivate(atom/target)
 	var/direction = get_dir(owner, target)
 	target = get_step(owner, direction)
 
-	//First of all, lets check if we're currently able to charge
-	if (!owner.can_slam(target, TRUE))
-		return
+	var/dist = get_dist(owner, target)
+	if (dist > 1)
+		to_chat(owner, "You are too far away from [target], get closer first!")
+		return FALSE
+	if (dist < 1)
+		to_chat(owner, "You can't slam yourself!")
+		return FALSE
+	if (owner.incapacitated())
+		return FALSE
+
+	. = ..()
+
+/datum/action/cooldown/necro/slam/Activate(atom/target)
+	StartCooldown()
 
 	var/mob/living/carbon/human/necromorph/N = owner
 	N.play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, 1, 3)
@@ -197,24 +206,3 @@
 	REMOVE_TRAIT(owner, TRAIT_INCAPACITATED, src)
 	REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, src)
 	REMOVE_TRAIT(owner, TRAIT_HANDS_BLOCKED, src)
-
-/atom/movable/proc/can_slam(atom/target, error_messages = TRUE)
-	if (!target)
-		target = get_step(src, dir)
-
-	var/dist = get_dist(src, target)
-	if (dist > 1)
-		if(error_messages) to_chat(src, "You are too far away from [target], get closer first!")
-		return FALSE
-	if (dist < 1)
-		if(error_messages) to_chat(src, "You can't slam yourself!")
-		return FALSE
-
-
-	return TRUE
-
-/mob/living/can_slam(atom/target, error_messages = TRUE)
-	if (incapacitated())
-		return FALSE
-
-	.=..()

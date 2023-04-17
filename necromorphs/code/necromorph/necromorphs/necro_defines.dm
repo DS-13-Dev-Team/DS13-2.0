@@ -107,15 +107,3 @@
 	default_priority = 50
 
 	icon_state = "xeno"
-
-
-/obj/item/organ/internal/stomach/necro
-
-/obj/item/organ/internal/stomach/necro/on_life(delta_time, times_fired)
-	return
-
-/obj/item/organ/internal/stomach/necro/handle_hunger(mob/living/carbon/human/human, delta_time, times_fired)
-	return
-
-/obj/item/organ/internal/stomach/necro/handle_hunger_slowdown(mob/living/carbon/human/human)
-	return

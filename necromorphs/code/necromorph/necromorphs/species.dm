@@ -13,7 +13,6 @@
 	examine_limb_id = SPECIES_NECROMORPH
 	exotic_bloodtype = "X"
 	meat = /obj/item/food/meat/slab/human/mutant/necro
-	mutantstomach = /obj/item/organ/internal/stomach/necro
 	liked_food = NONE
 	disliked_food = NONE
 	toxic_food = NONE
@@ -42,6 +41,10 @@
 		ITEM_SLOT_LEGCUFFED,
 	)
 
+	inherent_traits = list(
+		TRAIT_CAN_STRIP,
+		TRAIT_NOHUNGER,
+	)
 	say_mod = "roars"
 	scream_verb = "roars"
 	species_language_holder = /datum/language_holder/necro_talk
@@ -56,7 +59,7 @@
 		AGENDER,
 		HAS_FLESH,
 		HAS_BONE,
-		NOAUGMENTS,
+		NOAUGMENTS
 	)
 
 	inherent_traits = list()
