@@ -27,6 +27,7 @@
 	base_pixel_y = 0
 	pixel_x = -8
 	has_human_mood = FALSE
+	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	var/nicknumber = 0
 
 	/// "Shield" that appears after dodging. Absorbs incom
