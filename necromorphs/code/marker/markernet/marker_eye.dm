@@ -4,6 +4,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	icon_state = "markersignal-"
 	icon = 'necromorphs/icons/signals/eye.dmi'
 	plane = MARKER_SIGNAL_PLANE
+	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	invisibility = INVISIBILITY_MARKER_SIGNAL
 	see_invisible = SEE_INVISIBLE_MARKER_SIGNAL
 	sight = SEE_MOBS|SEE_OBJS|SEE_TURFS
