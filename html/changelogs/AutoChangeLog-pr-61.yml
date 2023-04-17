@@ -1,0 +1,5 @@
+author: DTraitor
+delete-after: true
+changes:
+  - rscadd: Necromorphs and marker signals have nightvision
+  - bugfix: Ports markernet fixes from 1.0
