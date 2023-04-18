@@ -16,7 +16,7 @@
 /*
 	Extension
 */
-/datum/action/cooldown/necro/active/curl
+/datum/action/cooldown/necro/curl
 	name = "Curl"
 
 	cooldown_time = 1.5 MINUTE		//After an automatic curl, how long before we can be forced to do it again?
@@ -34,7 +34,7 @@
 	var/force_cooldown_timer
 	var/force_notify_timer
 
-/datum/action/cooldown/necro/active/curl/Activate(atom/target)
+/datum/action/cooldown/necro/curl/Activate(atom/target)
 	//First of all, uncurling
 	if (can_uncurl())
 		finish()
@@ -49,7 +49,7 @@
 		curl()
 	return TRUE
 
-/datum/action/cooldown/necro/active/curl/proc/curl()
+/datum/action/cooldown/necro/curl/proc/curl()
 	var/mob/living/carbon/human/necromorph/N = owner
 	status = CURLING
 	//The owner is stunned until they uncurl
@@ -110,9 +110,9 @@
 
 
 	//Set the status after the animation finishes
-	addtimer(CALLBACK(src, PROC_REF(play_sound), animtime))
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(play_sound), animtime))
 
-/datum/action/cooldown/necro/active/curl/proc/play_sound()
+/datum/action/cooldown/necro/curl/proc/play_sound()
 	var/mob/living/carbon/human/necromorph/N = owner
 	status = CURLED
 	//Some extra little impact sounds for the brute's arms hitting the ground as it curls up
@@ -122,7 +122,7 @@
 
 
 //In the finish proc, we uncurl. Lets assume safety checks are already done and we're clear to proceed
-/datum/action/cooldown/necro/active/curl/proc/finish()
+/datum/action/cooldown/necro/curl/proc/finish()
 	uncurl()
 	//If this was a forced curl, we'll start a cooldown timer
 	if (automatic)
@@ -130,7 +130,7 @@
 
 
 
-/datum/action/cooldown/necro/active/curl/proc/uncurl()
+/datum/action/cooldown/necro/curl/proc/uncurl()
 	var/mob/living/carbon/human/necromorph/N = owner
 	status = CURLING //We're in an animation, so set this again
 	var/matrix/M = matrix()
@@ -142,17 +142,17 @@
 	cached_pixels_x = null
 	cached_pixels_y = null
 
-/datum/action/cooldown/necro/active/curl/proc/uncurl_end()
+/datum/action/cooldown/necro/curl/proc/uncurl_end()
 	REMOVE_TRAIT(owner, TRAIT_INCAPACITATED, src)
 	REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, src)
 	REMOVE_TRAIT(owner, TRAIT_HANDS_BLOCKED, src)
 	status = FORCE_COOLDOWN
 
-/datum/action/cooldown/necro/active/curl/proc/notify_forced()
+/datum/action/cooldown/necro/curl/proc/notify_forced()
 	uncurl()
 
 //Assuming we're standing up, are we able to curl?
-/datum/action/cooldown/necro/active/curl/proc/can_curl(automatic = FALSE)
+/datum/action/cooldown/necro/curl/proc/can_curl(automatic = FALSE)
 	if (status == CURLING || status == CURLED)
 		return FALSE
 	if (automatic && status == FORCE_COOLDOWN)
@@ -163,7 +163,7 @@
 	return TRUE
 
 
-/datum/action/cooldown/necro/active/curl/proc/can_uncurl()
+/datum/action/cooldown/necro/curl/proc/can_uncurl()
 	if (status == CURLED)
 		if ((started_at + force_time) < world.time)
 			return TRUE

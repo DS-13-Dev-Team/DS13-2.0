@@ -1,4 +1,4 @@
-/datum/action/cooldown/necro/active/long_charge
+/datum/action/cooldown/necro/long_charge
 	name = "Toggle Charging"
 	desc = "Toggles the movement-based charge on and off."
 	var/charge_type = CHARGE_BRUTE
@@ -17,19 +17,19 @@
 	///If this charge should keep momentum on dir change and if it can charge diagonally
 	var/agile_charge = FALSE
 
-/datum/action/cooldown/necro/active/long_charge/Destroy()
+/datum/action/cooldown/necro/long_charge/Destroy()
 	if(charge_ability_on)
 		charge_off()
 	return ..()
 
-/datum/action/cooldown/necro/active/long_charge/Activate(atom/target)
+/datum/action/cooldown/necro/long_charge/Activate(atom/target)
 	if(charge_ability_on)
 		charge_off()
 		return TRUE
 	charge_on()
 	return TRUE
 
-/datum/action/cooldown/necro/active/long_charge/proc/charge_on(verbose = TRUE)
+/datum/action/cooldown/necro/long_charge/proc/charge_on(verbose = TRUE)
 	var/mob/living/carbon/human/necromorph/charger = owner
 	charge_ability_on = TRUE
 	RegisterSignal(charger, COMSIG_MOVABLE_MOVED, PROC_REF(update_charging))
@@ -37,7 +37,7 @@
 	if(verbose)
 		to_chat(charger, span_notice("We will charge when moving, now."))
 
-/datum/action/cooldown/necro/active/long_charge/proc/charge_off(verbose = TRUE)
+/datum/action/cooldown/necro/long_charge/proc/charge_off(verbose = TRUE)
 	var/mob/living/carbon/human/necromorph/charger = owner
 	if(charger.charging != CHARGE_OFF)
 		do_stop_momentum()
@@ -48,7 +48,7 @@
 	charge_ability_on = FALSE
 
 
-/datum/action/cooldown/necro/active/long_charge/proc/on_dir_change(datum/source, old_dir, new_dir)
+/datum/action/cooldown/necro/long_charge/proc/on_dir_change(datum/source, old_dir, new_dir)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/charger = owner
 	if(charger.charging == CHARGE_OFF)
@@ -58,7 +58,7 @@
 	do_stop_momentum()
 
 
-/datum/action/cooldown/necro/active/long_charge/proc/update_charging(datum/source, atom/oldloc, direction, Forced, old_locs)
+/datum/action/cooldown/necro/long_charge/proc/update_charging(datum/source, atom/oldloc, direction, Forced, old_locs)
 	SIGNAL_HANDLER
 	if(Forced)
 		return
@@ -86,7 +86,7 @@
 	handle_momentum()
 	spec_check(source, oldloc, direction, Forced, old_locs)
 
-/datum/action/cooldown/necro/active/long_charge/proc/spec_check(datum/source, atom/oldloc, direction, Forced, old_locs)
+/datum/action/cooldown/necro/long_charge/proc/spec_check(datum/source, atom/oldloc, direction, Forced, old_locs)
 	switch(charge_type)
 		if(CHARGE_BRUTE)
 			var/list/turfs = list(get_step(source, turn(direction, 90)), get_step(source, turn(direction, -90)))
@@ -95,13 +95,13 @@
 					if(!do_crush(owner, A))
 						return
 
-/datum/action/cooldown/necro/active/long_charge/proc/do_start_crushing()
+/datum/action/cooldown/necro/long_charge/proc/do_start_crushing()
 	var/mob/living/carbon/human/necromorph/charger = owner
 	RegisterSignal(charger, COMSIG_MOVABLE_BUMP, PROC_REF(do_crush))
 	charger.charging = CHARGE_ON
 	charger.update_icons()
 
-/datum/action/cooldown/necro/active/long_charge/proc/do_stop_crushing()
+/datum/action/cooldown/necro/long_charge/proc/do_stop_crushing()
 	var/mob/living/carbon/human/necromorph/charger = owner
 	UnregisterSignal(charger, COMSIG_MOVABLE_BUMP)
 	if(valid_steps_taken > 0) //If this is false, then do_stop_momentum() should have it handled already.
@@ -109,7 +109,7 @@
 		charger.update_icons()
 
 
-/datum/action/cooldown/necro/active/long_charge/proc/do_stop_momentum(message = TRUE)
+/datum/action/cooldown/necro/long_charge/proc/do_stop_momentum(message = TRUE)
 	var/mob/living/carbon/human/necromorph/charger = owner
 	if(message && valid_steps_taken >= steps_for_charge) //Message now happens without a stun condition
 		charger.visible_message(span_danger("[charger] skids to a halt!"),
@@ -125,7 +125,7 @@
 	charger.update_icons()
 
 
-/datum/action/cooldown/necro/active/long_charge/proc/check_momentum(newdir)
+/datum/action/cooldown/necro/long_charge/proc/check_momentum(newdir)
 	var/mob/living/carbon/human/necromorph/charger = owner
 	if((newdir && ISDIAGONALDIR(newdir) || charge_dir != newdir) && !agile_charge) //Check for null direction from help shuffle signals
 		return FALSE
@@ -151,7 +151,7 @@
 	return TRUE
 
 
-/datum/action/cooldown/necro/active/long_charge/proc/handle_momentum()
+/datum/action/cooldown/necro/long_charge/proc/handle_momentum()
 	set waitfor = FALSE
 	var/mob/living/carbon/human/necromorph/charger = owner
 
@@ -187,7 +187,7 @@
 	lastturf = charger.loc
 
 
-/datum/action/cooldown/necro/active/long_charge/proc/speed_down(amt)
+/datum/action/cooldown/necro/long_charge/proc/speed_down(amt)
 	if(valid_steps_taken == 0)
 		return
 	valid_steps_taken -= amt
@@ -213,7 +213,7 @@
 			return NONE
 
 // Charge is divided into two acts: before and after the crushed thing taking damage, as that can cause it to be deleted.
-/datum/action/cooldown/necro/active/long_charge/proc/do_crush(datum/source, atom/crushed)
+/datum/action/cooldown/necro/long_charge/proc/do_crush(datum/source, atom/crushed)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/charger = owner
 	if(charger.incapacitated() || charger.now_pushing)

@@ -45,6 +45,7 @@
 		TRAIT_CAN_STRIP,
 		TRAIT_NOHUNGER,
 	)
+
 	say_mod = "roars"
 	scream_verb = "roars"
 	species_language_holder = /datum/language_holder/necro_talk
