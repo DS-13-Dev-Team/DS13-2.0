@@ -77,7 +77,7 @@
 /datum/markerchunk/proc/add(list/eyes)
 	if(!islist(eyes))
 		eyes = list(eyes)
-	for(var/mob/camera/marker/eye as anything in eyes)
+	for(var/mob/camera/marker_signal/eye as anything in eyes)
 		eye.visibleChunks += src
 		seenby += eye
 		if(queued_for_update)
@@ -88,7 +88,7 @@
 /datum/markerchunk/proc/safeAdd(list/eyes)
 	if(!islist(eyes))
 		eyes = list(eyes)
-	for(var/mob/camera/marker/eye as anything in eyes)
+	for(var/mob/camera/marker_signal/eye as anything in eyes)
 		if(src.z != eye.z)
 			continue
 		if(abs(eye.x - x) >= eye.static_visibility_range || abs(eye.y - y) >= eye.static_visibility_range)
@@ -104,7 +104,7 @@
 /datum/markerchunk/proc/remove(list/eyes)
 	if(!islist(eyes))
 		eyes = list(eyes)
-	for(var/mob/camera/marker/eye as anything in eyes)
+	for(var/mob/camera/marker_signal/eye as anything in eyes)
 		eye.visibleChunks -= src
 		seenby -= eye
 		eye.client?.images -= active_masks
