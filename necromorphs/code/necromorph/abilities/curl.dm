@@ -110,7 +110,7 @@
 
 
 	//Set the status after the animation finishes
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(play_sound), animtime))
+	addtimer(CALLBACK(src, PROC_REF(play_sound), animtime))
 
 /datum/action/cooldown/necro/curl/proc/play_sound()
 	var/mob/living/carbon/human/necromorph/N = owner

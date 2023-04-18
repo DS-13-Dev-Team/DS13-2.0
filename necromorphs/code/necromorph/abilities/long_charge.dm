@@ -287,11 +287,11 @@
 // ***************************************
 
 //Anything called here will have failed CanPass(), so it's likely dense.
-/atom/proc/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/atom/proc/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	return //If this happens it will error.
 
 
-/obj/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/obj/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	if((resistance_flags & INDESTRUCTIBLE) || charger.charging < CHARGE_ON)
 		charge_datum.do_stop_momentum()
 		return PRECRUSH_STOPPED
@@ -314,13 +314,13 @@
 		unbuckle_mob(m)
 	return (CHARGE_SPEED(charge_datum) * 20) //Damage to inflict.
 
-/obj/vehicle/unmanned/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/obj/vehicle/unmanned/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	return (CHARGE_SPEED(charge_datum) * 10)
 
-/obj/vehicle/sealed/mecha/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/obj/vehicle/sealed/mecha/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	return (CHARGE_SPEED(charge_datum) * 240)
 
-/obj/structure/razorwire/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/obj/structure/razorwire/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	if(resistance_flags & INDESTRUCTIBLE || charger.charging < CHARGE_ON)
 		charge_datum.do_stop_momentum()
 		return PRECRUSH_STOPPED
@@ -332,10 +332,10 @@
 	return (CHARGE_SPEED(charge_datum) * 20) //Damage to inflict.
 
 
-/mob/living/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/mob/living/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	return (stat == DEAD ? 0 : CHARGE_SPEED(charge_datum) * charge_datum.crush_living_damage)
 
-/turf/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/turf/pre_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	if(charge_datum.valid_steps_taken >= charge_datum.max_steps_buildup)
 		return 2 //Should dismantle, or at least heavily damage it.
 	return 3 //Lighter damage.
@@ -345,11 +345,11 @@
 // *********** Post-Crush
 // ***************************************
 
-/atom/proc/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/atom/proc/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	return PRECRUSH_STOPPED //By default, if this happens then movement stops. But not necessarily.
 
 
-/obj/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/obj/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	if(anchored) //Did it manage to stop it?
 		charger.visible_message(span_danger("[charger] rams into [src] and skids to a halt!"),
 		span_warning("We ram into [src] and skid to a halt!"))
@@ -372,7 +372,7 @@
 	charge_datum.speed_down(2) //Lose two turfs worth of speed.
 	return PRECRUSH_PLOWED
 
-/obj/machinery/vending/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/obj/machinery/vending/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	if(!anchored)
 		return ..()
 	if(density)
@@ -381,7 +381,7 @@
 	span_warning("We slam [src] into the ground!"))
 	return PRECRUSH_PLOWED
 
-/obj/vehicle/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/obj/vehicle/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	take_damage(charger.class.melee_damage_upper, BRUTE, MELEE)
 	if(density && charger.move_force <= move_resist)
 		charger.visible_message(span_danger("[charger] rams into [src] and skids to a halt!"),
@@ -391,7 +391,7 @@
 	charge_datum.speed_down(2) //Lose two turfs worth of speed.
 	return NONE
 
-/mob/living/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/active/long_charge/charge_datum)
+/mob/living/post_crush_act(mob/living/carbon/human/necromorph/charger, datum/action/cooldown/necro/long_charge/charge_datum)
 	if(density && ((mob_size == charger.mob_size && charger.charging <= CHARGE_MAX) || mob_size > charger.mob_size))
 		charger.visible_message(span_danger("[charger] rams into [src] and skids to a halt!"),
 		span_warning("We ram into [src] and skid to a halt!"))
