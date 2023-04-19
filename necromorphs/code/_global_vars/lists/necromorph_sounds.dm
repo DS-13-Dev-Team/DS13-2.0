@@ -237,6 +237,14 @@ GLOBAL_LIST_INIT(brute_sounds, list(
 	),
 	SOUND_SHOUT_LONG = list(
 		'necromorphs/sound/effects/creatures/necromorph/brute/brute_shout_long.ogg',
+	),
+	SOUND_FOOTSTEP = list(
+		'necromorphs/sound/effects/footstep/brute_step_1.ogg',
+		'necromorphs/sound/effects/footstep/brute_step_2.ogg',
+		'necromorphs/sound/effects/footstep/brute_step_3.ogg',
+		'necromorphs/sound/effects/footstep/brute_step_4.ogg',
+		'necromorphs/sound/effects/footstep/brute_step_5.ogg',
+		'necromorphs/sound/effects/footstep/brute_step_6.ogg'
 	)
 ))
 

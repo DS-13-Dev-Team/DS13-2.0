@@ -78,6 +78,8 @@
 	/// How good are we at penetrating armour
 	var/armour_penetration = 0
 
+	var/datum/necro_armor/necro_armors
+
 	var/attack_effect = ATTACK_EFFECT_SLASH
 	/// Signal controlling this necromorph at the moment
 	var/mob/camera/marker_signal/controlling

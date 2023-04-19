@@ -13,6 +13,9 @@
 	var/charge_damage = 30
 	/// If the current move is being triggered by us or not
 	var/actively_moving = FALSE
+	var/valid_steps_taken = 0
+	var/speed_per_step = 0.15
+	var/max_steps_buildup = 14
 
 /datum/action/cooldown/necro/charge/New(Target, cooldown, delay, time, speed, damage)
 	.=..()
@@ -52,7 +55,7 @@
 
 	SLEEP_CHECK_DEATH(charge_delay, charger)
 
-	var/datum/move_loop/new_loop = SSmove_manager.home_onto(charger, target_atom, delay = charge_speed, timeout = charge_time, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
+	var/datum/move_loop/new_loop = SSmove_manager.home_onto(charger, target_atom, timeout = charge_time, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
 	if(!new_loop)
 		return
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, PROC_REF(pre_move))
@@ -94,6 +97,9 @@
 
 /datum/action/cooldown/necro/charge/proc/on_moved(atom/source)
 	SIGNAL_HANDLER
+	var/mob/living/carbon/human/necromorph/charger = source
+	if(++valid_steps_taken <= max_steps_buildup)
+		charger.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/necro_charge, TRUE, -CHARGE_SPEED(src))
 	return
 
 /datum/action/cooldown/necro/charge/proc/on_bump(atom/movable/source, atom/target)

@@ -49,3 +49,16 @@
 
 #define NECROMORPH_CAN_VENT_CRAWL (1<<0)
 #define NECROMORPH_CAN_HAVE_ID (1<<1)
+
+
+#define CHARGE_SPEED(charger) (min(charger.valid_steps_taken, charger.max_steps_buildup) * charger.speed_per_step)
+#define CHARGE_MAX_SPEED (speed_per_step * max_steps_buildup)
+
+#define CHARGE_BRUTE (1<<0)
+
+#define STOP_CHARGE_ON_DEL (1<<0)
+
+#define CHARGE_OFF 0
+#define CHARGE_BUILDINGUP 1
+#define CHARGE_ON 2
+#define CHARGE_MAX 3
