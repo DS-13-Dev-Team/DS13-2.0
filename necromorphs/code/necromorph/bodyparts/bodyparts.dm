@@ -81,7 +81,7 @@
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	icon_state = "l_arm"
+	icon_state = "r_arm"
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
 	max_damage = 50
@@ -105,7 +105,7 @@
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	icon_state = "l_arm"
+	icon_state = "l_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
@@ -129,7 +129,7 @@
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
 	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
-	icon_state = "l_arm"
+	icon_state = "r_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
