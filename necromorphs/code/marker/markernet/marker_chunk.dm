@@ -69,27 +69,45 @@
 			viewVisionSources += source
 
 /datum/markerchunk/Destroy(force, ...)
-	for(var/mob/camera/marker_signal/eye as anything in seenby)
-		remove(eye)
+	remove(seenby)
 	active_masks = null
 	turfs = null
 	return ..()
 
-/// Add a Marker eye to the chunk
-/datum/markerchunk/proc/add(mob/camera/marker_signal/eye)
-	eye.visibleChunks += src
-	seenby += eye
-	if(queued_for_update)
-		update()
+/datum/markerchunk/proc/add(list/eyes)
+	if(!islist(eyes))
+		eyes = list(eyes)
+	for(var/mob/camera/marker_signal/eye as anything in eyes)
+		eye.visibleChunks += src
+		seenby += eye
+		if(queued_for_update)
+			update()
+		eye.client?.images += active_masks
 
-	eye.client?.images += active_masks
+/// The same as add(list/eyes) expect it also does the safety checks
+/datum/markerchunk/proc/safeAdd(list/eyes)
+	if(!islist(eyes))
+		eyes = list(eyes)
+	for(var/mob/camera/marker_signal/eye as anything in eyes)
+		if(src.z != eye.z)
+			continue
+		if(abs(eye.x - x) >= eye.static_visibility_range || abs(eye.y - y) >= eye.static_visibility_range)
+			continue
+
+		eye.visibleChunks += src
+		seenby += eye
+		if(queued_for_update)
+			update()
+		eye.client?.images += active_masks
 
 /// Remove a Marker eye from the chunk
-/datum/markerchunk/proc/remove(mob/camera/marker_signal/eye)
-	eye.visibleChunks -= src
-	seenby -= eye
-
-	eye.client?.images -= active_masks
+/datum/markerchunk/proc/remove(list/eyes)
+	if(!islist(eyes))
+		eyes = list(eyes)
+	for(var/mob/camera/marker_signal/eye as anything in eyes)
+		eye.visibleChunks -= src
+		seenby -= eye
+		eye.client?.images -= active_masks
 
 /*
  * Updates the chunk if it's watched, otherwise queued until Marker eye sees it
