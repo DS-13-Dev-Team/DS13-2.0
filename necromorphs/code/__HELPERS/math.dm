@@ -1,4 +1,4 @@
-/proc/soft_cap(var/input, var/cap = 0, var/groupsize = 1, var/groupmult = 0.9)
+/proc/soft_cap(input, cap = 0, groupsize = 1, groupmult = 0.9)
 	//The cap is a ringfenced amount. If we're below that, just return the input
 	if (input <= cap)
 		return input
@@ -25,3 +25,7 @@
 		power++ //Transfer to output, increment power, repeat until the input pile is all used
 
 	return output
+
+
+/proc/rand_between(lower, upper)
+	return (rand() * (upper - lower)) + lower

@@ -76,7 +76,12 @@
 
 /datum/species/necromorph/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/necromorph/H, forced = FALSE, spread_damage = FALSE, sharpness = NONE, attack_direction = null)
 	if(H.dodge_shield > 0)
-		var/percent_no_defend = (100-blocked-H.necro_armors.get_dir_armor(attack_direction, H.dir))/100
+		var/percent_no_defend = 100-blocked
+		if(HAS_TRAIT(H, TRAIT_DODGEARMOR_FULL))
+			percent_no_defend -= 100
+		else
+			percent_no_defend -=  H.necro_armors.get_dir_armor(attack_direction, H.dir)
+		percent_no_defend /= 100
 		if(percent_no_defend <= 0)
 			blocked = 100
 			return ..()
