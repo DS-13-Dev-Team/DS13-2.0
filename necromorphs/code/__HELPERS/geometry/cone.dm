@@ -17,14 +17,14 @@
 			&& ((startAngle < 180) ? turfAngle <= (startAngle - 360) : TRUE) && ((endAngle > -180) ? turfAngle >= (endAngle + 360) : TRUE))
 			.+= t
 
-/proc/get_view_cone(turf/origin, list/direction, distance, angle)
+/proc/get_view_cone(turf/origin, turf/target, distance, angle)
 	if (!istype(origin))
 		origin = get_turf(origin)
-	var/list/viewlist
-	FOR_DVIEW(var/turf/T, distance, origin, INVISIBILITY_LIGHTING)
+	var/list/viewlist = list()
+	FOR_DVIEW(var/turf/T, distance, origin, 0)
 		viewlist += T
 	FOR_DVIEW_END
-	var/list/conelist = get_cone(origin, direction, distance, angle)
+	var/list/conelist = get_cone(origin, target, distance, angle)
 
 	var/list/all = (viewlist & conelist)
 

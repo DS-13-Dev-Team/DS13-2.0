@@ -16,6 +16,7 @@
 	actions = list(
 		/datum/action/cooldown/necro/shoot/snapshoot,
 		/datum/action/cooldown/necro/shoot/longshoot,
+		/datum/action/cooldown/necro/spray,
 		/datum/action/cooldown/necro/shout
 	)
 	minimap_icon = "puker"

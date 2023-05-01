@@ -6,6 +6,7 @@
 //This probably shouldn't be defined here, all acid projectiles are a child of this one, and it's not a logical place to look to find the parent. Perhaps a necro_projectiles.dm?
 /obj/projectile/bullet/acid
 	name = "acid bolt"
+	icon = 'necromorphs/icons/obj/projectiles.dmi'
 	icon_state = "acid_small"
 	damage = 15
 	damage_type = BURN
