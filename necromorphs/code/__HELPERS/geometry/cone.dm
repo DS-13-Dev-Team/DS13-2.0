@@ -1,21 +1,15 @@
 /proc/get_cone(turf/origin, turf/target, radius, angle)
-	.=list()
+	. = list()
 	origin = get_turf(origin)
 	target = get_turf(target)
 	if(angle > 360)
 		return circle_range_turfs(origin, radius)
 	angle *= 0.5
-	var/targetAngle = ATAN2(target.x - origin.x, target.y - origin.y)
-	var/startAngle = targetAngle-angle
-	var/endAngle = targetAngle+angle
-	var/r2 = radius * (radius + 0.5)
 	for(var/turf/t as anything in RANGE_TURFS(radius, origin))
-		var/xTurf = t.x - origin.x
-		var/yTurf = t.y - origin.y
-		var/turfAngle = ATAN2(xTurf, yTurf)
-		if(turfAngle >= startAngle && turfAngle <= endAngle && (xTurf**2 + yTurf**2) <= r2 \
-			&& ((startAngle < 180) ? turfAngle <= (startAngle - 360) : TRUE) && ((endAngle > -180) ? turfAngle >= (endAngle + 360) : TRUE))
-			.+= t
+		var/t_angle = get_angle(origin, t)
+		var/datum/point/vector/direction = new(_angle = t_angle, initial_increment = TRUE)
+		if(target_in_arc(origin, target, direction, target))
+			. += t
 
 /proc/get_view_cone(turf/origin, turf/target, distance, angle)
 	if (!istype(origin))
@@ -29,3 +23,15 @@
 	var/list/all = (viewlist & conelist)
 
 	return all
+
+//Checks if target is within arc degrees either side of a specified direction vector from user. All parameters are mandatory
+//Rounding explained above
+/proc/target_in_arc(atom/origin, atom/target, datum/point/vector/direction, arc)
+	origin = get_turf(origin)
+	target = get_turf(target)
+	if (origin == target)
+		return TRUE
+
+	var/datum/point/vector/dirvector = direction.copy_to()
+	var/datum/point/vector/dotvector = new(target.x - origin.x, target.y - origin.y)
+	. = round(dirvector.x * dotvector.x + dirvector.y * dotvector.y, 0.000001) >= round(cos(arc),0.000001)
