@@ -64,6 +64,7 @@
 
 	//plot the initial trajectory
 	preparePixelProjectile(direct_target, curloc)
+	trajectory = new(starting.x, starting.y, starting.z, pixel_x, pixel_y, Angle, SSprojectiles.global_pixel_speed)
 	return process(targloc)
 
 /obj/projectile/test/process(turf/targloc)
