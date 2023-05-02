@@ -21,7 +21,6 @@
 	var/particle_color = "#FFFFFF"
 
 /datum/action/cooldown/necro/spray/Destroy(force, ...)
-	QDEL_NULL(fx)
 	. = ..()
 
 /datum/action/cooldown/necro/spray/PreActivate(atom/target)
