@@ -18,12 +18,6 @@
 
 	var/affect_origin = FALSE	//If true, the origin turf is affected as well
 
-
-	//Registry:
-	var/obj/effect/particle_system/fx	//Particle system for chem particles
-	var/fx_type = /obj/effect/particle_system/spray
-
-
 	var/particle_color = "#FFFFFF"
 
 /datum/action/cooldown/necro/spray/Destroy(force, ...)
@@ -55,15 +49,6 @@
 
 /datum/action/cooldown/necro/spray/proc/start()
 	recalculate_cone()
-
-	//Make sure we don't get double fx
-	if (fx)
-		QDEL_NULL(fx)
-
-	//Lets create the chemspray fx
-	fx = new fx_type(owner, direction, duration, length, angle)
-	fx.particle_color = particle_color
-	fx.start()
 
 	if (stun && isliving(owner))
 		start_stun()
@@ -113,31 +98,3 @@
 	//If affecting origin, add this in, as it may or may not be already present
 	if (affect_origin)
 		affected_turfs |= get_turf(owner)
-
-	if (fx)
-		fx.set_direction(direction)
-
-/***********************
-	Spray visual effect
-************************/
-/*
-	Particle System
-	Sprays particles in a cone
-*/
-/obj/effect/particle_system/spray
-	particle_type = /obj/effect/particle/spray
-	autostart = FALSE
-	particles_per_tick = 6
-	randpixel = 12
-
-
-
-
-/obj/effect/particle/spray
-	name = "spray"
-	icon = 'necromorphs/icons/effects/effects.dmi'
-	icon_state = "spray"
-	scale_x_end = 2
-	scale_y_end = 4
-	color = "#FF0000"
-	lifespan	=	0.25 SECOND
