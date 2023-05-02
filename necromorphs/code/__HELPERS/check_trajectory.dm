@@ -8,6 +8,7 @@
 
 	var/turf/origin = get_turf(firer)
 	var/obj/projectile/test/trace = new /obj/projectile/test(origin) //Making the test....
+	trace.firer = firer
 
 	if(!isnull(obj_flags))
 		trace.obj_flags = obj_flags
@@ -16,13 +17,13 @@
 	if(allow_sleep)
 		for(var/atom/A as anything in targets)
 			trace.result = null
-			trace.forceMove(origin)
+			trace.preparePixelProjectile(A, firer)
 			targets[A] = trace.fire(direct_target = A) //Test it!
 			CHECK_TICK
 	else
 		for(var/atom/A as anything in targets)
 			trace.result = null
-			trace.forceMove(origin)
+			trace.preparePixelProjectile(A, firer)
 			targets[A] = trace.fire(direct_target = A) //Test it!
 
 	QDEL_NULL(trace) //No need for it anymore
@@ -54,20 +55,21 @@
 /obj/projectile/test/fire(angle, atom/direct_target)
 	var/turf/curloc = get_turf(src)
 	var/turf/targloc = get_turf(direct_target)
+
 	if(!curloc || !targloc)
 		return FALSE
 
 	if (curloc == targloc)
 		return TRUE
 
-	original = direct_target
+	datum_flags |= DF_ISPROCESSING
+	..()
+	return Process(direct_target)
 
-	//plot the initial trajectory
-	preparePixelProjectile(direct_target, curloc)
-	trajectory = new(starting.x, starting.y, starting.z, pixel_x, pixel_y, Angle, SSprojectiles.global_pixel_speed)
-	return process(targloc)
+/obj/projectile/test/pixel_move(trajectory_multiplier, hitscanning = FALSE)
+	return
 
-/obj/projectile/test/process(turf/targloc)
+/obj/projectile/test/proc/Process(turf/targloc)
 
 	//Every step along the trajectory, we may populate this list with sub-steps.
 	//If populated we follow it

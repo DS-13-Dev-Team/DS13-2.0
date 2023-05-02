@@ -148,10 +148,10 @@
 
 /datum/effect_system/spray/proc/set_direction(datum/point/vector/new_direction)
 	if (!direction)
-		direction = new(new_direction.x, new_direction.y)
+		direction = new(new_direction.x / new_direction.speed, new_direction.y / new_direction.speed)
 	else
-		direction.x = new_direction.x
-		direction.y = new_direction.y
+		direction.x = new_direction.x / new_direction.speed
+		direction.y = new_direction.y / new_direction.speed
 
 	if (relative_offset)
 		var/datum/point/N = new /datum/point(0, 1)
@@ -179,6 +179,9 @@
 /datum/effect_system/spray/generate_effect()
 	if(holder)
 		location = get_turf(holder)
+	//Lets calculate a random angle for this particle
+	var/particle_angle = rand_between(0, angle) - angle*0.5	//We subtract half the angle to centre it
+	var/datum/point/vector/particle_direction = new(_angle = particle_angle, initial_increment = TRUE)
 	var/datum/point/offset = new /datum/point(rand_between(-randpixel, randpixel), rand_between(-randpixel, randpixel))
 	if (base_offset)
 		offset.x += base_offset.x
@@ -188,11 +191,7 @@
 		offset.x += relative_offset_rotated.x
 		offset.y += relative_offset_rotated.y
 
-	var/particle_angle = rand_between(0, angle) - angle*0.5	//We subtract half the angle to centre it
-	var/dir_angle = angle2dir(particle_angle)
-	var/turf/dir_step = get_step(holder, dir_angle)
-	var/datum/point/dir_effect = new /datum/point(holder.x - dir_step.x, holder.y - dir_step.y)
-	var/obj/effect/effect = new effect_type(location, dir_effect, particle_lifetime, length, offset, particle_color)
+	var/obj/effect/effect = new effect_type(location, particle_direction, particle_lifetime, length, offset, particle_color)
 
 	return effect
 
@@ -221,7 +220,7 @@
 
 	var/list/random_icons
 
-/obj/effect/particle_effect/spray/New(loc, datum/position/direction, lifespan, range, datum/position/offset, color)
+/obj/effect/particle_effect/spray/New(loc, datum/point/vector/direction, lifespan, range, datum/position/offset, color)
 
 	if (random_icons)
 		icon_state = pick(random_icons)
@@ -234,11 +233,11 @@
 
 
 	//Rotate towards facing direction
-	src.direction = direction
+	src.direction = new(direction.x / direction.speed, direction.y / direction.speed)
 	if (direction)
 		var/datum/position/v = new /datum/position(0, 1)
-		var/cos_angle = direction.x * v.x + y * v.y
-		var/sin_angle = direction.x * v.y - y * v.x
+		var/cos_angle = src.direction.x * v.x + src.direction.y * v.y
+		var/sin_angle = src.direction.x * v.y - src.direction.y * v.x
 		starting_transform = matrix(cos_angle, sin_angle, 0, -sin_angle, cos_angle, 0)
 	else
 		starting_transform = matrix()
@@ -261,7 +260,7 @@
 
 	//Lets calculate the destination pixel_loc
 	origin_pixels = new /datum/point((x-1) * 32 + pixel_x + 16, (y-1) * 32 + pixel_y + 16)
-	pixel_delta = direction
+	pixel_delta = src.direction
 	pixel_delta.x *= range * 32
 	pixel_delta.y *= range * 32
 
