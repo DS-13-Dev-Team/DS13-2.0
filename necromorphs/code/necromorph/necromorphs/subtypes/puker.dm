@@ -17,7 +17,8 @@
 		/datum/action/cooldown/necro/shoot/snapshoot,
 		/datum/action/cooldown/necro/shoot/longshoot,
 		/datum/action/cooldown/necro/spray,
-		/datum/action/cooldown/necro/shout
+		/datum/action/cooldown/necro/shout,
+		/datum/action/cooldown/necro/shout/long
 	)
 	minimap_icon = "puker"
 

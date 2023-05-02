@@ -8,11 +8,17 @@
 	desc = "Shout to disorientate your enemies."
 	cooldown_time = 8 SECONDS
 	click_to_activate = FALSE
+	var/sound_type = SOUND_SHOUT
+
+/datum/action/cooldown/necro/shout/PreActivate(atom/target)
+	if(owner.incapacitated())
+		return
+	. = ..()
 
 /datum/action/cooldown/necro/shout/Activate(atom/target)
 	StartCooldown()
 	var/mob/living/carbon/human/necromorph/holder = owner
-	holder.play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, TRUE, 2)
+	holder.play_necro_sound(sound_type, VOLUME_HIGH, TRUE, 2)
 	var/matrix/new_matrix = matrix(holder.transform)
 	var/shake_dir = pick(-1, 1)
 	new_matrix.Turn(17*shake_dir)
@@ -24,6 +30,11 @@
 		var/intensity = 5 - (distance * 0.3)
 		var/duration = (7 - (distance * 0.5)) SECONDS
 		shake_camera(M, duration, intensity)
+
+/datum/action/cooldown/necro/shout/long
+	name = "Long Shout"
+	desc = "Long Shout to disorientate your enemies."
+	sound_type = SOUND_SHOUT_LONG
 
 /*
 	Scream

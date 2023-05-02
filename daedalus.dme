@@ -4911,6 +4911,8 @@
 #include "necromorphs\code\necromorph\necromorphs\subtypes\tripod.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\twitcher.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\ubermorph.dm"
+#include "necromorphs\code\particles\particle.dm"
+#include "necromorphs\code\particles\system.dm"
 #include "necromorphs\code\projectiles\effects.dm"
 #include "necromorphs\code\projectiles\projectile\bullet_acid.dm"
 #include "necromorphs\code\reagents\Chemistry-Reagents\acid.dm"

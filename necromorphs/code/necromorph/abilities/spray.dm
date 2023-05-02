@@ -14,14 +14,14 @@
 	cooldown_time = 12 SECONDS
 
 	var/list/affected_turfs = list()
-	var/datum/position/direction
+	var/datum/point/vector/direction
 
 	var/affect_origin = FALSE	//If true, the origin turf is affected as well
 
 
 	//Registry:
-	var/datum/effect_system/spray/fx	//Particle system for chem particles
-	var/fx_type = /datum/effect_system/spray
+	var/obj/effect/particle_system/fx	//Particle system for chem particles
+	var/fx_type = /obj/effect/particle_system/spray
 
 
 	var/particle_color = "#FFFFFF"
@@ -61,9 +61,7 @@
 		QDEL_NULL(fx)
 
 	//Lets create the chemspray fx
-	fx = new fx_type
-	fx.attach(owner)
-	fx.set_up(location = owner, direction = direction, angle = angle, length = length)
+	fx = new fx_type(owner, direction, duration, length, angle)
 	fx.particle_color = particle_color
 	fx.start()
 
@@ -72,9 +70,11 @@
 		addtimer(CALLBACK(src, PROC_REF(end_stun)), duration)
 
 /datum/action/cooldown/necro/spray/proc/start_stun()
+	ADD_TRAIT(owner, TRAIT_INCAPACITATED, src)
 	ADD_TRAIT(owner, TRAIT_IMMOBILIZED, src)
 
 /datum/action/cooldown/necro/spray/proc/end_stun()
+	REMOVE_TRAIT(owner, TRAIT_INCAPACITATED, src)
 	REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, src)
 
 /datum/action/cooldown/necro/spray/proc/set_target(datum/new_target, target_object)
@@ -91,6 +91,8 @@
 /datum/action/cooldown/necro/spray/proc/recalculate_cone()
 	var/list/previous_turfs = affected_turfs.Copy()
 	affected_turfs = list()
+	var/angle_to_target = get_angle(owner, target_atom)
+	direction = new(_angle = angle_to_target, initial_increment = TRUE)
 	affected_turfs = get_view_cone(owner, target_atom, length, angle)
 
 	//Don't remove this if we're going to affect the origin
@@ -113,9 +115,7 @@
 		affected_turfs |= get_turf(owner)
 
 	if (fx)
-		var/angle_to_target = get_angle(owner, target_atom)
-		var/datum/point/vector/new_direction = new(_angle = angle_to_target, initial_increment = TRUE)
-		fx.set_direction(new_direction)
+		fx.set_direction(direction)
 
 /***********************
 	Spray visual effect
@@ -124,164 +124,20 @@
 	Particle System
 	Sprays particles in a cone
 */
-/datum/effect_system/spray
-	effect_type  = /obj/effect/particle_effect/spray
-	var/duration = 3 SECONDS
-	var/particles_per_tick = 3
-	var/particle_color
-	var/particle_lifetime = null	//Overrides lifetime on particles if nonzero
-	var/datum/position/direction
-	var/angle
-	var/length
-	var/randpixel = 12
-	var/datum/point/base_offset	//A flat offset added to the starting position of all particles
-	var/datum/point/relative_offset	//An offset that is multiplied by the aim direction before being added to the starting position
-	var/datum/point/relative_offset_rotated //The above but with the rotation baked in
+/obj/effect/particle_system/spray
+	particle_type = /obj/effect/particle/spray
+	autostart = FALSE
+	particles_per_tick = 6
+	randpixel = 12
 
-/datum/effect_system/spray/set_up(number = 3, cardinals_only = FALSE, location, direction, angle, length)
-	. = ..()
-	src.direction = direction
-	src.angle = angle
-	src.length = length
-	if (particle_lifetime)
-		particle_lifetime *= length
 
-/datum/effect_system/spray/proc/set_direction(datum/point/vector/new_direction)
-	if (!direction)
-		direction = new(new_direction.x / new_direction.speed, new_direction.y / new_direction.speed)
-	else
-		direction.x = new_direction.x / new_direction.speed
-		direction.y = new_direction.y / new_direction.speed
 
-	if (relative_offset)
-		var/datum/point/N = new /datum/point(0, 1)
-		var/angle = (Atan2(direction.y, direction.x) - Atan2(N.y, N.x))
-		relative_offset_rotated = relative_offset * matrix().Turn(angle)
 
-/datum/effect_system/spray/start()
-	//A duration of zero lasts until manually stopped
-	if (duration > 0)
-		addtimer(CALLBACK(src, PROC_REF(end)), duration)
-
-	START_PROCESSING(SSfastprocess, src)
-	//tick()
-
-/datum/effect_system/spray/proc/end()
-	qdel(src)
-
-/datum/effect_system/spray/process()
-	if(QDELETED(src))
-		return
-
-	for (var/i in 1 to particles_per_tick)
-		generate_effect()
-
-/datum/effect_system/spray/generate_effect()
-	if(holder)
-		location = get_turf(holder)
-	//Lets calculate a random angle for this particle
-	var/particle_angle = rand_between(0, angle) - angle*0.5	//We subtract half the angle to centre it
-	var/datum/point/vector/particle_direction = new(_angle = particle_angle, initial_increment = TRUE)
-	var/datum/point/offset = new /datum/point(rand_between(-randpixel, randpixel), rand_between(-randpixel, randpixel))
-	if (base_offset)
-		offset.x += base_offset.x
-		offset.y += base_offset.y
-
-	if (relative_offset_rotated)
-		offset.x += relative_offset_rotated.x
-		offset.y += relative_offset_rotated.y
-
-	var/obj/effect/effect = new effect_type(location, particle_direction, particle_lifetime, length, offset, particle_color)
-
-	return effect
-
-/obj/effect/particle_effect/spray
+/obj/effect/particle/spray
 	name = "spray"
 	icon = 'necromorphs/icons/effects/effects.dmi'
 	icon_state = "spray"
+	scale_x_end = 2
+	scale_y_end = 4
 	color = "#FF0000"
-
-	var/datum/point/pixel_delta
-	var/datum/point/origin_pixels
-
-	var/scale_x_start = 	1
-	var/scale_y_start = 	1
-	var/alpha_start	=	255
-
-	var/scale_x_end = 	2
-	var/scale_y_end = 	4
-	var/alpha_end	=	0
-
-	var/matrix/target_transform
-	var/matrix/starting_transform
-
-	var/lifespan	=	0.25 SECOND
-	var/datum/position/direction
-
-	var/list/random_icons
-
-/obj/effect/particle_effect/spray/New(loc, datum/point/vector/direction, lifespan, range, datum/position/offset, color)
-
-	if (random_icons)
-		icon_state = pick(random_icons)
-
-	//Set starting pixel offset
-	if (offset)
-		pixel_x = offset.x
-		pixel_y = offset.y
-
-
-
-	//Rotate towards facing direction
-	src.direction = new(direction.x / direction.speed, direction.y / direction.speed)
-	if (direction)
-		var/datum/position/v = new /datum/position(0, 1)
-		var/cos_angle = src.direction.x * v.x + src.direction.y * v.y
-		var/sin_angle = src.direction.x * v.y - src.direction.y * v.x
-		starting_transform = matrix(cos_angle, sin_angle, 0, -sin_angle, cos_angle, 0)
-	else
-		starting_transform = matrix()
-	target_transform = matrix(starting_transform)
-
-	if (color)
-		src.color = color
-
-	//Set starting scale
-	starting_transform.Scale(scale_x_start, scale_y_start)
-
-	//Setup expiration
-	if (lifespan)
-		//Lifespan will already be multiplied by range if one was passed in
-		//If null is passed in, we use our own
-		src.lifespan = lifespan
-	else
-		src.lifespan *= range
-	QDEL_IN(src, src.lifespan)
-
-	//Lets calculate the destination pixel_loc
-	origin_pixels = new /datum/point((x-1) * 32 + pixel_x + 16, (y-1) * 32 + pixel_y + 16)
-	pixel_delta = src.direction
-	pixel_delta.x *= range * 32
-	pixel_delta.y *= range * 32
-
-	//And the transform we'll eventually transition to
-	target_transform.Scale(scale_x_end, scale_y_end)
-
-	.=..()
-
-/obj/effect/particle_effect/spray/Initialize(mapload)
-	. = ..()
-	animation()
-
-//I bladed this proc off into an async one to avoid hanging initialize()
-/obj/effect/particle_effect/spray/proc/animation()
-	set waitfor = FALSE
-	//Lets start the animation!
-	animate(src, transform = starting_transform, time = 0)
-	animate(
-	pixel_x = pixel_x+pixel_delta.x,
-	pixel_y = pixel_y+pixel_delta.y,
-	transform = target_transform,
-	alpha = alpha_end,
-	time = lifespan,
-	flags = ANIMATION_LINEAR_TRANSFORM)
+	lifespan	=	0.25 SECOND
