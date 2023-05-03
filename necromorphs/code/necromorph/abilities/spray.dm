@@ -20,6 +20,13 @@
 
 	var/particle_color = "#FFFFFF"
 
+	var/ongoing_timer
+
+	var/obj/item/chem_atom
+	var/datum/reagents/chem_holder
+	var/volume_tick = 1.1
+	var/reagent_type = /datum/reagent/acid/necromorph
+
 /datum/action/cooldown/necro/spray/Destroy(force, ...)
 	. = ..()
 
@@ -47,11 +54,35 @@
 	return TRUE
 
 /datum/action/cooldown/necro/spray/proc/start()
+
+	chem_atom = new(owner)
+	chem_holder = new (2**24, chem_atom)
+	var/datum/reagent/R = chem_holder.add_reagent(reagent_type, chem_holder.maximum_volume)
+
+	//A duration of 0 lasts indefinitely, until something stops it
+	if (duration)
+		ongoing_timer = addtimer(CALLBACK(src, PROC_REF(stop)), duration, TIMER_STOPPABLE)
+
 	recalculate_cone()
 
 	if (stun && isliving(owner))
 		start_stun()
 		addtimer(CALLBACK(src, PROC_REF(end_stun)), duration)
+
+	START_PROCESSING(SSfastprocess, src)
+
+/datum/action/cooldown/necro/spray/proc/stop()
+	STOP_PROCESSING(SSfastprocess, src)
+	deltimer(ongoing_timer)
+	QDEL_NULL(chem_holder)
+	QDEL_NULL(chem_atom)
+
+/datum/action/cooldown/necro/spray/process()
+	for (var/t in affected_turfs)
+		var/turf/T = t
+		chem_holder.trans_to(T, volume_tick)
+		for (var/atom/movable/A in T)
+			chem_holder.trans_to(A, volume_tick)
 
 /datum/action/cooldown/necro/spray/proc/start_stun()
 	ADD_TRAIT(owner, TRAIT_INCAPACITATED, src)
