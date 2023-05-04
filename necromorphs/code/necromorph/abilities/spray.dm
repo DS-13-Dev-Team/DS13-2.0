@@ -8,13 +8,13 @@
 	var/length = 2.5
 	var/atom/target_atom
 
-	var/stun = FALSE
+	var/stun = TRUE
 	var/duration = 3 SECONDS
 	var/windup = 1.8 SECONDS
+	var/is_processing = FALSE
 	cooldown_time = 12 SECONDS
 
 	var/list/affected_turfs = list()
-	var/datum/point/vector/direction
 
 	var/affect_origin = FALSE	//If true, the origin turf is affected as well
 
@@ -50,14 +50,15 @@
 
 /datum/action/cooldown/necro/spray/Activate(atom/target)
 	. = ..()
+	chem_atom = new(owner)
+	chem_holder = new (2**24)
+	chem_holder.my_atom = chem_atom
+	chem_holder.add_reagent(reagent_type, chem_holder.maximum_volume)
+
 	addtimer(CALLBACK(src, PROC_REF(start)), windup)
 	return TRUE
 
 /datum/action/cooldown/necro/spray/proc/start()
-
-	chem_atom = new(owner)
-	chem_holder = new (2**24, chem_atom)
-	var/datum/reagent/R = chem_holder.add_reagent(reagent_type, chem_holder.maximum_volume)
 
 	//A duration of 0 lasts indefinitely, until something stops it
 	if (duration)
@@ -69,15 +70,18 @@
 		start_stun()
 		addtimer(CALLBACK(src, PROC_REF(end_stun)), duration)
 
-	START_PROCESSING(SSfastprocess, src)
+	if(!is_processing)
+		SSnecroabilite.processing += src
+		is_processing = TRUE
 
 /datum/action/cooldown/necro/spray/proc/stop()
-	STOP_PROCESSING(SSfastprocess, src)
+	SSnecroabilite.processing -= src
+	is_processing = FALSE
 	deltimer(ongoing_timer)
 	QDEL_NULL(chem_holder)
 	QDEL_NULL(chem_atom)
 
-/datum/action/cooldown/necro/spray/process()
+/datum/action/cooldown/necro/spray/process_abilitie()
 	for (var/t in affected_turfs)
 		var/turf/T = t
 		chem_holder.trans_to(T, volume_tick)
@@ -106,8 +110,6 @@
 /datum/action/cooldown/necro/spray/proc/recalculate_cone()
 	var/list/previous_turfs = affected_turfs.Copy()
 	affected_turfs = list()
-	var/angle_to_target = get_angle(owner, target_atom)
-	direction = new(_angle = angle_to_target, initial_increment = TRUE)
 	affected_turfs = get_view_cone(owner, target_atom, length, angle)
 
 	//Don't remove this if we're going to affect the origin
