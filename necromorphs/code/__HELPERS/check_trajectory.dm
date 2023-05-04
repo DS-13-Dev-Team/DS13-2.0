@@ -17,12 +17,18 @@
 	if(allow_sleep)
 		for(var/atom/A as anything in targets)
 			trace.result = null
+			trace.trajectory_ignore_forcemove = TRUE
+			trace.forceMove(firer)
+			trace.trajectory_ignore_forcemove = FALSE
 			trace.preparePixelProjectile(A, firer)
 			targets[A] = trace.fire(direct_target = A) //Test it!
 			CHECK_TICK
 	else
 		for(var/atom/A as anything in targets)
 			trace.result = null
+			trace.trajectory_ignore_forcemove = TRUE
+			trace.forceMove(firer)
+			trace.trajectory_ignore_forcemove = FALSE
 			trace.preparePixelProjectile(A, firer)
 			targets[A] = trace.fire(direct_target = A) //Test it!
 
@@ -49,6 +55,7 @@
 
 		result = TRUE
 		return
+
 	result = FALSE
 	return
 
@@ -62,69 +69,49 @@
 	if (curloc == targloc)
 		return TRUE
 
-	datum_flags |= DF_ISPROCESSING
-	..()
-	return Process(direct_target)
-
-/obj/projectile/test/pixel_move(trajectory_multiplier, hitscanning = FALSE)
-	return
-
-/obj/projectile/test/proc/Process(turf/targloc)
-
-	//Every step along the trajectory, we may populate this list with sub-steps.
-	//If populated we follow it
-	var/list/steps = list()
-	var/loops = 0
-	while(!QDELETED(src)) //Loop on through!
-		if(loops++ >= 100)
+	if(isnum(angle))
+		set_angle(angle)
+	var/turf/starting = get_turf(src)
+	if(isnull(Angle)) //Try to resolve through offsets if there's no angle set.
+		if(isnull(xo) || isnull(yo))
+			stack_trace("WARNING: Projectile [type] deleted due to being unable to resolve a target after angle was null!")
 			qdel(src)
-			CRASH("Raytracing projectile passed 100 loops, terminating")
+			return
+		var/turf/target = locate(clamp(starting + xo, 1, world.maxx), clamp(starting + yo, 1, world.maxy), starting.z)
+		set_angle(get_angle(src, target))
+	original_angle = Angle
+	if(!nondirectional_sprite)
+		var/matrix/matrix = new
+		matrix.Turn(Angle)
+		transform = matrix
+	trajectory_ignore_forcemove = TRUE
+	forceMove(starting)
+	trajectory_ignore_forcemove = FALSE
+	trajectory = new(starting.x, starting.y, starting.z, pixel_x, pixel_y, Angle, SSprojectiles.global_pixel_speed)
+	last_projectile_move = world.time
+	fired = TRUE
+	SEND_SIGNAL(src, COMSIG_PROJECTILE_FIRE)
 
-		if((!( targloc ) || loc == targloc))
-			targloc = locate(min(max(x + xo, 1), world.maxx), min(max(y + yo, 1), world.maxy), z) //Finding the target turf at map edge
+	return process_hitscan(targloc)
 
-		var/turf/newloc
-		if (!length(steps))
-			trajectory.increment()	// increment the current location
-			var/datum/position/location = trajectory.return_position()		// update the locally stored location data
+/obj/projectile/test/process_hitscan(turf/targloc)
+	var/safety = range * 10
+	record_hitscan_start(RETURN_POINT_VECTOR_INCREMENT(src, Angle, MUZZLE_EFFECT_PIXEL_INCREMENT, 1))
+	while(loc)
+		if(paused)
+			stoplag(1)
+			continue
 
-			//TODO: Figure out why this happens
-			if (!location)
-				return FALSE
+		if(targloc == get_turf(src))
+			return TRUE
 
-			newloc = trajectory.return_turf()
-
-			//If we're moving diagonally, then we need some more complex resolution
-			if (!loc.cardinally_adjacent(newloc))
-				steps = get_line(loc, newloc)
-
-				newloc = antipop(steps)
-
-
-		else
-			newloc = antipop(steps)
-
-
-		Move(newloc)
-
-
-		//Check this again, our attempted move may have just set it
 		if(!isnull(result))
 			return result
 
-		var/turf/T = get_turf(src)
-		if (T == original)
-			obstacle = original
-			return TRUE
+		if(safety-- <= 0)
+			return FALSE //Kill!
 
-		var/atom/A = locate(original) in T
-		if(A) //We are on our target's turf, we can hit them
-			obstacle = A
-			return TRUE
-
-		//If we get here, lets set our location to the newloc and ignore blockers
-		forceMove(newloc)
-
+		pixel_move(1, TRUE)
 
 /obj/projectile/test/Destroy()
 	obstacle = null
