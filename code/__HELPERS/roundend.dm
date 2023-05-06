@@ -562,7 +562,7 @@
 /datum/controller/subsystem/ticker/proc/marker_report()
 	var/list/parts = list()
 
-	parts += "<div class='panel stationborder'><span class='header'>Necromorphs Effectivness Summary:</span><br>"
+	parts += "<div class='panel stationborder'><span class='header'>Necromorphs Effectiveness Summary:</span><br>"
 	parts += "<b>Total number of markers:</b> [GLOB.round_statistics.total_markers]<br>"
 	parts += "<b>Number of currently existing markers:</b> [length(GLOB.necromorph_markers)]<br>"
 
