@@ -11,4 +11,5 @@ add [] around this to use it in text.
 GLOBAL_DATUM_INIT(round_statistics, /datum/round_statistics, new)
 
 /datum/round_statistics
-	var/weeds_destroyed = 0
+	var/total_markers = 0
+
