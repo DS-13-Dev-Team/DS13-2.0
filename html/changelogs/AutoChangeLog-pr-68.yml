@@ -1,0 +1,5 @@
+author: DTraitor
+delete-after: true
+changes:
+  - rscadd: Adds markers to the report in the end of the round
+  - bugfix: Fixes icons in default necromorph limbs
