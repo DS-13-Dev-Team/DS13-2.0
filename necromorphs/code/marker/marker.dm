@@ -1,6 +1,9 @@
 /obj/structure/marker/Initialize(mapload)
 	.=..()
+	name = "Marker #[++GLOB.round_statistics.total_markers]"
+
 	GLOB.necromorph_markers += src
+
 	markernet = new
 	markernet.addVisionSource(src, VISION_SOURCE_RANGE)
 
@@ -37,7 +40,8 @@
 		income += source.absorb_biomass(delta_time)
 	biomass += income*(1-signal_biomass_percent)
 	signal_biomass += income*signal_biomass_percent
-	last_biomass_income = income
+	//Income per second
+	last_biomass_income = income / delta_time
 
 /obj/structure/marker/proc/hive_mind_message(mob/sender, message)
 	for(var/mob/dead/observer/observer as anything in GLOB.current_observers_list)

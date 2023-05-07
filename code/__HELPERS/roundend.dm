@@ -330,6 +330,9 @@
 	//Economy & Money
 	parts += market_report()
 
+	//Necromorphs
+	parts += marker_report()
+
 	list_clear_nulls(parts)
 
 	return parts.Join()
@@ -553,6 +556,26 @@
 		parts += "The most affluent crew member at shift end was <b>[mr_moneybags.account_holder] with [mr_moneybags.account_balance]</b> cr!</div>"
 	else
 		parts += "Somehow, nobody made any money this shift! This'll result in some budget cuts...</div>"
+	return parts
+
+///Generate a report for necromorph markers.
+/datum/controller/subsystem/ticker/proc/marker_report()
+	var/list/parts = list()
+
+	parts += "<div class='panel stationborder'><span class='header'>Necromorphs Effectiveness Summary:</span><br>"
+	parts += "<b>Total number of markers:</b> [GLOB.round_statistics.total_markers]<br>"
+	parts += "<b>Number of currently existing markers:</b> [length(GLOB.necromorph_markers)]<br>"
+
+	for(var/obj/structure/marker/marker as anything in GLOB.necromorph_markers)
+		parts += "<br>"
+		parts += "<b>[marker.name]</b> | "
+		parts += "<b>Marker player:</b> [marker.camera_mob?.key ? marker.camera_mob?.key : "Missing"] | "
+		parts += "<b>Total biomass:</b> [marker.biomass + marker.signal_biomass] | "
+		parts += "<b>Spent biomass:</b> [marker.spent_biomass] | "
+		parts += "<b>Biomass income:</b> [marker.last_biomass_income] bio/second"
+
+	parts += "</div>"
+
 	return parts
 
 /**
