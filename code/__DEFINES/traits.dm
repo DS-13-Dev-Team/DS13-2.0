@@ -924,3 +924,14 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define LEFT_ARM_TRAIT "left_arm"
 #define RIGHT_LEG_TRAIT "right_leg"
 #define LEFT_LEG_TRAIT "left_leg"
+
+/// Deadspace traits
+
+/// Picture has mining evidences on it
+#define TRAIT_MINING_EVIDENCES "mining_evidences"
+
+/// Picture has unitologists activity evidences on it
+#define TRAIT_UNTIOLOGY_EVIDENCES "unitology_evidences"
+
+/// Source is a photo
+#define PHOTO_EVIDENCES_TRAIT "photo_evidences"
