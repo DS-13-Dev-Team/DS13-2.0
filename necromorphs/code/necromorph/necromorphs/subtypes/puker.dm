@@ -14,12 +14,18 @@
 	melee_damage_upper = 16
 	max_health = 100
 	actions = list(
+		/datum/action/cooldown/necro/shoot/snapshoot,
+		/datum/action/cooldown/necro/shoot/longshoot,
+		/datum/action/cooldown/necro/spray,
+		/datum/action/cooldown/necro/shout,
+		/datum/action/cooldown/necro/shout/long
 	)
 	minimap_icon = "puker"
 
 /datum/species/necromorph/puker
 	name = "Puker"
 	id = SPECIES_NECROMORPH_PUKER
+	burnmod = 1.1
 	speedmod = 1.6
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/puker,
@@ -28,4 +34,16 @@
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/necromorph/puker,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/puker,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/puker,
+	)
+
+	special_step_sounds = list(
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_3.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_4.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_5.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_6.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_7.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_8.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_9.ogg'
 	)

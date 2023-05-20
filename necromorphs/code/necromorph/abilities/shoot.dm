@@ -80,12 +80,16 @@
 		if (fire_sound)
 			playsound(owner, pick(fire_sound), VOLUME_MID, 1)
 
+	play_attack_sound()
 	return TRUE
 
 /datum/action/cooldown/necro/shoot/proc/windup_animation(atom/target)
 	sleep(windup_time)
 
 /datum/action/cooldown/necro/shoot/proc/fire_animation()
+	return
+
+/datum/action/cooldown/necro/shoot/proc/play_attack_sound()
 	return
 
 /datum/action/cooldown/necro/shoot/biobomb
@@ -122,5 +126,41 @@
 	var/matrix/M = matrix()
 	animate(L, transform=M,pixel_x = L.pixel_x, time = 0.8 SECOND, flags = ANIMATION_PARALLEL)
 
+/datum/action/cooldown/necro/shoot/biobomb/play_attack_sound()
+	var/mob/living/carbon/human/necromorph/N = owner
+	N.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 3)
+
 /obj/projectile/bullet/cyst/weak
 	damage = 30
+
+/datum/action/cooldown/necro/shoot/snapshoot
+	name = "Snapshoot"
+	projectile_type = /obj/projectile/bullet/acid/puker_snap
+
+/datum/action/cooldown/necro/shoot/snapshoot/play_attack_sound()
+	var/mob/living/carbon/human/necromorph/N = owner
+	N.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 3)
+
+//Snapshot projectile. Lower damage, limited range
+/obj/projectile/bullet/acid/puker_snap
+	icon_state = "acid_small"
+	damage = 13.5
+	speed = 1.25
+	range = 5
+	impact_type = /obj/effect/projectile/impact
+
+
+/datum/action/cooldown/necro/shoot/longshoot
+	name = "Longshoot"
+	projectile_type = /obj/projectile/bullet/acid/puker_long
+
+/datum/action/cooldown/necro/shoot/longshoot/play_attack_sound()
+	var/mob/living/carbon/human/necromorph/N = owner
+	N.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 3)
+
+//Longshot projectile. Good damage, no range limits, slower moving
+/obj/projectile/bullet/acid/puker_long
+	name = "acid blast"
+	icon_state = "acid_large"
+	speed = 1.75
+	damage = 25

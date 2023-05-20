@@ -1,6 +1,15 @@
 // Subsystems Fire
 #define FIRE_PRIORITY_CORRUPTION	34
 
+#define NECROMORPH_ACID_POWER	0.7	//Damage per unit of necromorph organic acid, used by many things
+#define NECROMORPH_FRIENDLY_FIRE_FACTOR	0.5	//All damage dealt by necromorphs TO necromorphs, is multiplied by this
+#define NECROMORPH_ACID_COLOR	"#946b36"
+
+//Minimum power levels for bioblasts to trigger the appropriate ex_act tier
+#define BIOBLAST_TIER_1	120
+#define BIOBLAST_TIER_2	60
+#define BIOBLAST_TIER_3	30
+
 //Faction strings
 #define FACTION_NECROMORPH	"necromorph"
 #define ROLE_NECROMORPH "necromorph"
