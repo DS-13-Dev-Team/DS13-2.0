@@ -172,7 +172,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 	data["unread_message"] = unread_message
 
 	var/admin_destination = (emagged ? SYNDICATE_FAX_MACHINE : CENTCOM_FAX_MACHINE)
-	var/list/possible_destinations = list()
+	var/list/possible_destinations = list(EARTHGOV_FAX_MACHINE)
 	possible_destinations += admin_destination
 	for(var/obj/machinery/fax_machine/machine as anything in GLOB.fax_machines)
 		if(machine == src)

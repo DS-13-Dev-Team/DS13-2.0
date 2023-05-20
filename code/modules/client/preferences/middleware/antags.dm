@@ -119,6 +119,8 @@
 		ROLE_FUGITIVE = /datum/antagonist/fugitive,
 		ROLE_LONE_OPERATIVE = /datum/antagonist/nukeop/lone,
 		ROLE_DRIFTING_CONTRACTOR = /datum/antagonist/contractor,
+		ROLE_EARTHGOV_AGENT = /datum/antagonist/egov_agent,
+		ROLE_UNITOLOGIST_ZEALOT = /datum/antagonist/unitologist,
 	)
 
 	var/list/antagonists = non_ruleset_antagonists.Copy()

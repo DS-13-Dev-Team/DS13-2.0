@@ -184,8 +184,6 @@
 	var/list/mobs = list()
 	var/blueprints = FALSE
 	var/clone_area = SSmapping.RequestBlockReservation(size_x * 2 + 1, size_y * 2 + 1)
-	var/mining_evidences
-	var/unitology_evidences
 	for(var/turf/placeholder in block(locate(target_turf.x - size_x, target_turf.y - size_y, target_turf.z), locate(target_turf.x + size_x, target_turf.y + size_y, target_turf.z)))
 		var/turf/T = placeholder
 		while(istype(T, /turf/open/openspace)) //Multi-z photography
@@ -197,12 +195,6 @@
 			turfs += T
 			for(var/mob/M in T)
 				mobs += M
-			//Used by earthgov agent antagonists
-			for(var/obj/O in T)
-				if(is_type_in_typecache(O, GLOB.mining_evidences))
-					mining_evidences = TRUE
-				if(is_type_in_typecache(O, GLOB.unitology_evidences))
-					unitology_evidences = TRUE
 			if(locate(/obj/item/areaeditor/blueprints) in T)
 				blueprints = TRUE
 	for(var/i in mobs)
@@ -219,10 +211,6 @@
 	get_icon.Blend("#000", ICON_UNDERLAY)
 
 	var/datum/picture/picture = new("picture", desc.Join(" "), mobs_spotted, dead_spotted, get_icon, null, psize_x, psize_y, blueprints, can_see_ghosts = see_ghosts)
-	if(mining_evidences)
-		ADD_TRAIT(picture, TRAIT_MINING_EVIDENCES, PHOTO_EVIDENCES_TRAIT)
-	if(unitology_evidences)
-		ADD_TRAIT(picture, TRAIT_UNTIOLOGY_EVIDENCES, PHOTO_EVIDENCES_TRAIT)
 
 	after_picture(user, picture)
 	SEND_SIGNAL(src, COMSIG_CAMERA_IMAGE_CAPTURED, target, user)
