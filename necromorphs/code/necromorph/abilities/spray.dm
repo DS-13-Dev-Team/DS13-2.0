@@ -84,7 +84,7 @@
 /datum/action/cooldown/necro/spray/process_abilitie()
 	for (var/t in affected_turfs)
 		var/turf/T = t
-		chem_holder.trans_to(T, volume_tick)
+		chem_holder.expose(T, TOUCH)
 		for (var/atom/movable/A in T)
 			chem_holder.trans_to(A, volume_tick)
 
