@@ -3,17 +3,83 @@
 	var/obj/structure/marker/main_marker
 	var/minimum_round_crew = 2
 	var/minimum_alive_percentage = 0.1 //0.1 = 10%
+	var/list/assigned_egov
+	var/list/assigned_untiologists
 
 ///Attempts to select players for special roles the mode might have.
 /datum/game_mode/containment/pre_setup()
+	setup_marker()
+	get_antag_candidates()
+	return TRUE
+
+/datum/game_mode/containment/proc/setup_marker()
 	if(!length(GLOB.possible_marker_locations))
 		log_mapping("No /obj/effect/marker_location was placed on the map!")
-		return TRUE
+		return
 	//Just it for now
 	var/turf/location = pick(GLOB.possible_marker_locations)
 	main_marker = new /obj/structure/marker(location)
 	addtimer(CALLBACK(src, PROC_REF(activate_marker)), rand(45 MINUTES, 60 MINUTES))
-	return TRUE
+
+/datum/game_mode/containment/proc/get_antag_candidates()
+	var/list/egov_candidates = list()
+	var/list/untiology_candidates = list()
+	var/ready_pop = 0
+
+	for(var/mob/dead/new_player/player as anything in GLOB.new_player_list)
+		if(player.ready != PLAYER_READY_TO_PLAY || !player.mind || !player.check_preferences())
+			continue
+		++ready_pop
+
+		if(player.mind.special_role) // We really don't want to give antag to an antag.
+			continue
+
+		var/client/candidate_client = player.client
+		if(ROLE_EARTHGOV_AGENT in candidate_client.prefs.be_special)
+			if(!is_banned_from(player.ckey, ROLE_EARTHGOV_AGENT))
+				egov_candidates += player
+
+		if(ROLE_UNITOLOGIST_ZEALOT in candidate_client.prefs.be_special)
+			if(is_banned_from(player.ckey, ROLE_UNITOLOGIST_ZEALOT))
+				untiology_candidates += player
+
+	var/list/restricted_roles = list(
+		JOB_AI,
+		JOB_CYBORG,
+	)
+	if(CONFIG_GET(flag/protect_roles_from_antagonist))
+		restricted_roles += list(
+			JOB_CAPTAIN,
+			JOB_DETECTIVE,
+			JOB_HEAD_OF_SECURITY,
+			JOB_PRISONER,
+			JOB_SECURITY_OFFICER,
+			JOB_WARDEN,
+		)
+	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
+		restricted_roles += JOB_ASSISTANT
+
+	var/antag_count = ready_pop / 6
+	assigned_egov = list()
+	assigned_untiologists = list()
+
+	for (var/i = 1 to antag_count)
+		if(length(egov_candidates) <= 0)
+			break
+		var/mob/dead/new_player/M = pick_n_take(egov_candidates)
+		assigned_egov += M.mind
+		M.mind.special_role = ROLE_EARTHGOV_AGENT
+		M.mind.restricted_roles = restricted_roles
+		GLOB.pre_setup_antags += M.mind
+
+	for (var/i = 1 to antag_count)
+		if(length(untiology_candidates) <= 0)
+			break
+		var/mob/dead/new_player/M = pick_n_take(untiology_candidates)
+		assigned_untiologists += M.mind
+		M.mind.special_role = ROLE_UNITOLOGIST_ZEALOT
+		M.mind.restricted_roles = restricted_roles
+		GLOB.pre_setup_antags += M.mind
 
 /datum/game_mode/containment/proc/activate_marker()
 	main_marker?.activate()
@@ -21,6 +87,17 @@
 /datum/game_mode/containment/post_setup(report)
 	if(!CONFIG_GET(flag/no_intercept_report))
 		addtimer(CALLBACK(src, PROC_REF(announce_marker)), rand(1 MINUTES, 3 MINUTES))
+
+	for(var/datum/mind/mind as anything in assigned_egov)
+		mind.add_antag_datum(/datum/antagonist/egov_agent)
+		GLOB.pre_setup_antags -= mind
+	assigned_egov = null
+
+	for(var/datum/mind/mind as anything in assigned_untiologists)
+		mind.add_antag_datum(/datum/antagonist/unitologist)
+		GLOB.pre_setup_antags -= mind
+	assigned_untiologists = null
+
 	return ..()
 
 /datum/game_mode/containment/proc/announce_marker()

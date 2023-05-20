@@ -40,6 +40,8 @@
 #define ROLE_SPIDER "Spider"
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
 #define ROLE_DRIFTING_CONTRACTOR "Drifting Contractor"
+#define ROLE_EARTHGOV_AGENT "EarthGov Agent"
+#define ROLE_UNITOLOGIST_ZEALOT "Unitologist Zealot"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
