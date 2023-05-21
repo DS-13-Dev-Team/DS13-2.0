@@ -47,3 +47,9 @@
 		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_8.ogg',
 		'necromorphs/sound/effects/creatures/necromorph/puker/puker_footstep_9.ogg'
 	)
+
+	deathsound = list(
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_death_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_death_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/puker/puker_death_3.ogg'
+	)

@@ -18,6 +18,7 @@
 	src.armor_back = armor_back
 	src.curl_armor_mult = curl_armor_mult
 	src.armor_protection = armor_protection
+	tag = ARMORID
 
 /datum/necro_armor/proc/get_dir_armor(attack_direction, mob_direction)
 	switch(attack_direction)
