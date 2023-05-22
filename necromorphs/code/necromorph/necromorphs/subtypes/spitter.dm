@@ -14,6 +14,10 @@
 	melee_damage_upper = 16
 	max_health = 100
 	actions = list(
+		/datum/action/cooldown/necro/shoot/snapshoot/spitter,
+		/datum/action/cooldown/necro/shoot/longshoot/spitter,
+		/datum/action/cooldown/necro/shout,
+		/datum/action/cooldown/necro/shout/long
 	)
 	minimap_icon = "spitter"
 
@@ -24,8 +28,14 @@
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/spitter,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/spitter,
-		BODY_ZONE_HEAD = /obj/item/bodypart/head/necromorph/slasher,
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/necromorph/spitter,
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/necromorph/spitter,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/spitter,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/spitter,
+	)
+
+	deathsound = list(
+		'necromorphs/sound/effects/creatures/necromorph/spitter/spitter_death_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/spitter/spitter_death_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/spitter/spitter_death_3.ogg'
 	)

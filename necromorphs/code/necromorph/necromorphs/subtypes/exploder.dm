@@ -34,3 +34,19 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/exploder,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/exploder,
 	)
+
+	special_step_sounds = list(
+		'necromorphs/sound/effects/footstep/exploder_footstep_1.ogg',
+		'necromorphs/sound/effects/footstep/exploder_footstep_2.ogg',
+		'necromorphs/sound/effects/footstep/exploder_footstep_3.ogg',
+		'necromorphs/sound/effects/footstep/exploder_footstep_4.ogg',
+		'necromorphs/sound/effects/footstep/exploder_footstep_5.ogg',
+		'necromorphs/sound/effects/footstep/exploder_footstep_6.ogg',
+		'necromorphs/sound/effects/footstep/exploder_footstep_7.ogg',
+	)
+
+	deathsound = list(
+		'necromorphs/sound/effects/creatures/necromorph/exploder/exploder_death_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/exploder/exploder_death_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/exploder/exploder_death_3.ogg'
+	)

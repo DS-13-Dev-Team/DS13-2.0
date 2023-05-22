@@ -141,14 +141,23 @@
 	var/mob/living/carbon/human/necromorph/N = owner
 	N.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 3)
 
+/datum/action/cooldown/necro/shoot/snapshoot/spitter
+	projectile_type = /obj/projectile/bullet/acid/spitter_snap
+
 //Snapshot projectile. Lower damage, limited range
 /obj/projectile/bullet/acid/puker_snap
 	icon_state = "acid_small"
 	damage = 13.5
-	speed = 1.25
+	speed = 0.9
 	range = 5
 	impact_type = /obj/effect/projectile/impact
 
+/obj/projectile/bullet/acid/spitter_snap
+	icon_state = "acid_small"
+	damage = 9
+	speed = 1
+	range = 5
+	impact_type = /obj/effect/projectile/impact
 
 /datum/action/cooldown/necro/shoot/longshoot
 	name = "Longshoot"
@@ -158,9 +167,18 @@
 	var/mob/living/carbon/human/necromorph/N = owner
 	N.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 3)
 
+/datum/action/cooldown/necro/shoot/longshoot/spitter
+	projectile_type = /obj/projectile/bullet/acid/spitter_long
+
 //Longshot projectile. Good damage, no range limits, slower moving
 /obj/projectile/bullet/acid/puker_long
 	name = "acid blast"
 	icon_state = "acid_large"
-	speed = 1.75
+	speed = 0.7
 	damage = 25
+
+/obj/projectile/bullet/acid/spitter_long
+	name = "acid blast"
+	icon_state = "acid_large"
+	speed = 0.7
+	damage = 14

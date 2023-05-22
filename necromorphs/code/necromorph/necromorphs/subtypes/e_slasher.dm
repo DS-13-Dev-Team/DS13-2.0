@@ -16,13 +16,18 @@
 	melee_damage_upper = 16
 	max_health = 215
 	actions = list(
+		/datum/action/cooldown/necro/charge/slasher,
+		/datum/action/cooldown/necro/dodge/enhanced,
+
 	)
 	minimap_icon = "e_slasher"
 
 /datum/species/necromorph/slasher/enhanced
 	name = "Enhanced Slasher"
 	id = SPECIES_NECROMORPH_SLASHER_ENHANCED
+	burnmod = 1.1
 	speedmod = 1.5
+	species_mob_size = MOB_SIZE_LARGE
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/slasher/enhanced,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/slasher/enhanced,
@@ -31,3 +36,12 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/slasher/enhanced,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/slasher/enhanced,
 	)
+
+	deathsound = list(
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_1.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_2.ogg',
+		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_3.ogg'
+	)
+
+/datum/action/cooldown/necro/dodge/enhanced
+	cooldown_time = 5 SECONDS
