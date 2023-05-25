@@ -29,3 +29,6 @@
 
 /proc/rand_between(lower, upper)
 	return (rand() * (upper - lower)) + lower
+
+/proc/shortest_angle(delta)
+	return (delta - round(delta, 360))

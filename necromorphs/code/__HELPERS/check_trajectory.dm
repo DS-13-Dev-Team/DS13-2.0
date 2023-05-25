@@ -1,3 +1,27 @@
+//Procs to check if a target atom can be reached from the current. Essentially raytracing
+
+//Helper proc to check if you can hit them or not.
+/proc/check_trajectory(atom/target as mob|obj, atom/firer as mob|obj, pass_flags=PASSTABLE|PASSGLASS|PASSGRILLE, obj_flags = null)
+	if(!istype(target) || !istype(firer))
+		return 0
+
+	//If its in the same turf, just say yes
+	if (get_turf(target) == get_turf(firer))
+		return TRUE
+
+	var/obj/projectile/test/trace = new /obj/projectile/test(get_turf(firer)) //Making the test....
+	//Set the flags and pass flags to that of the real projectile...
+	if(!isnull(obj_flags))
+		trace.obj_flags = obj_flags
+	trace.pass_flags = pass_flags
+
+	trace.trajectory_ignore_forcemove = TRUE
+	trace.forceMove(firer)
+	trace.trajectory_ignore_forcemove = FALSE
+	trace.preparePixelProjectile(target, firer)
+	var/output = trace.fire(target) //Test it!
+	QDEL_NULL(trace) //No need for it anymore
+	return output //Send it back to the gun!
 
 //Version optimised for mass testing
 //Takes a list of target atoms to test
