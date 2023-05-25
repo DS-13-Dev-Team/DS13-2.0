@@ -79,6 +79,9 @@
 	///Whether the necromorph enters and crawls through vents silently
 	var/silent_vent_crawl = FALSE
 
+	//TODO: Get rid of this
+	var/implemented = FALSE
+
 /datum/necro_class/proc/load_data(mob/living/carbon/human/necromorph/necro)
 	for(var/trait in traits)
 		ADD_TRAIT(necro, trait, NECROMORPH_TRAIT)

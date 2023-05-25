@@ -10,6 +10,7 @@
 	circuit = /obj/item/circuitboard/machine/griddle
 	processing_flags = START_PROCESSING_MANUALLY
 	resistance_flags = FIRE_PROOF
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 	///Things that are being griddled right now
 	var/list/griddled_objects = list()

@@ -8,6 +8,7 @@
 	layer = BELOW_OBJ_LAYER
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/processor
+	biomass_produce = BIOMASS_HARVEST_SMALL
 	var/broken = FALSE
 	var/processing = FALSE
 	var/rating_speed = 1

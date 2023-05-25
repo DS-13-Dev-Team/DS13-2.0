@@ -19,6 +19,7 @@
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "e_exploder"
+	implemented = FALSE
 
 /datum/species/necromorph/exploder/enhanced
 	name = "Enhanced Exploder"

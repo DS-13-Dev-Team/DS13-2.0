@@ -55,9 +55,10 @@
 		/datum/action/cooldown/necro/long_charge,
 		/datum/action/cooldown/necro/slam,
 		/datum/action/cooldown/necro/curl,
-		/datum/action/cooldown/necro/shoot/biobomb
+		/datum/action/cooldown/necro/shoot/brute,
 	)
 	minimap_icon = "brute"
+	implemented = TRUE
 
 /datum/species/necromorph/brute
 	name = "Brute"
@@ -85,3 +86,49 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/brute,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/brute,
 	)
+
+#define WINDUP_TIME 1.25 SECONDS
+
+/datum/action/cooldown/necro/shoot/brute
+	name = "Bio-bomb"
+	desc = "A moderate-strength projectile for longrange shooting."
+	cooldown_time = 12 SECONDS
+	windup_time = WINDUP_TIME
+	projectiletype = /obj/projectile/bullet/biobomb/brute
+
+/datum/action/cooldown/necro/shoot/brute/pre_fire(atom/target)
+	var/x_direction = 0
+	if (target.x > owner.x)
+		x_direction = -1
+	else if (target.x < owner.x)
+		x_direction = 1
+
+	//We do the windup animation. This involves the user slowly rising into the air, and tilting back if striking horizontally
+	animate(
+		owner,
+		transform = turn(matrix(), 25*x_direction),
+		pixel_x = owner.base_pixel_x + 8*x_direction,
+		time = WINDUP_TIME,
+		flags = ANIMATION_PARALLEL
+	)
+
+	ADD_TRAIT(owner, TRAIT_IMMOBILIZED, src)
+
+/datum/action/cooldown/necro/shoot/brute/post_fire()
+	sleep(0.4 SECONDS)
+	animate(owner, transform = matrix(), pixel_x = owner.base_pixel_x, time = 0.8 SECOND, flags = ANIMATION_PARALLEL)
+	sleep(0.8 SECONDS)
+	REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, src)
+
+#undef WINDUP_TIME
+
+/obj/projectile/bullet/biobomb/brute
+	name = "acid bolt"
+	icon = 'necromorphs/icons/obj/projectiles.dmi'
+	icon_state = "acid_large"
+
+	speed = 1
+	pixel_speed_multiplier = 0.3
+
+	acid_type = /datum/reagent/toxin/acid/fluacid
+	acid_amount = 3

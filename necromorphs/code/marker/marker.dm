@@ -7,13 +7,17 @@
 	markernet = new
 	markernet.addVisionSource(src, VISION_SOURCE_RANGE)
 
+	marker_ui_action = new(src)
+
 	for(var/datum/necro_class/class as anything in subtypesof(/datum/necro_class))
-		necro_classes[class] = new class()
+		//Temp check to see if this class is implemented
+		if(initial(class.implemented))
+			necro_classes[class] = new class()
 
 	necro_spawn_atoms += src
 
 	//Add the baseline income
-	add_biomass_source(/datum/biomass_source/baseline)
+	add_biomass_source(/datum/biomass_source/baseline, src)
 
 	START_PROCESSING(SSobj, src)
 
@@ -31,17 +35,26 @@
 	.=..()
 
 /obj/structure/marker/update_icon_state()
-	icon_state = (active ? "marker_giant_dormant" : "marker_giant_active_anim")
+	icon_state = (active ? "marker_giant_active_anim" : "marker_giant_dormant")
 	return ..()
 
 /obj/structure/marker/process(delta_time)
 	var/income = 0
 	for(var/datum/biomass_source/source as anything in biomass_sources)
 		income += source.absorb_biomass(delta_time)
-	biomass += income*(1-signal_biomass_percent)
-	signal_biomass += income*signal_biomass_percent
+	change_marker_biomass(income*(1-signal_biomass_percent))
+	change_signal_biomass(income*signal_biomass_percent)
 	//Income per second
 	last_biomass_income = income / delta_time
+
+/obj/structure/marker/proc/change_marker_biomass(amount)
+	marker_biomass = max(0, marker_biomass+amount)
+	camera_mob?.update_biomass_hud()
+
+/obj/structure/marker/proc/change_signal_biomass(amount)
+	signal_biomass = max(0, signal_biomass+amount)
+	for(var/mob/camera/marker_signal/signal as anything in marker_signals)
+		signal.update_biomass_hud()
 
 /obj/structure/marker/proc/hive_mind_message(mob/sender, message)
 	for(var/mob/dead/observer/observer as anything in GLOB.current_observers_list)
@@ -72,6 +85,7 @@
 
 /obj/structure/marker/proc/activate()
 	active = TRUE
+	change_marker_biomass(300)
 	for(var/mob/camera/marker_signal/eye as anything in marker_signals)
 		for(var/datum/action/cooldown/necro/psy/ability as anything in eye.abilities)
 			if((ability.marker_flags & SIGNAL_ABILITY_PRE_ACTIVATION))
@@ -108,7 +122,7 @@
 /obj/structure/marker/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "NecromorphMarker")
+		ui = new(user, src, "NecromorphMarker", "Marker")
 		ui.open()
 
 /obj/structure/marker/ui_state(mob/user)
@@ -126,7 +140,7 @@
 
 /obj/structure/marker/ui_data(mob/user)
 	. = list()
-	.["biomass"] = biomass
+	.["biomass"] = marker_biomass
 	.["biomass_income"] = last_biomass_income
 	.["biomass_invested"] = spent_biomass
 	.["use_necroqueue"] = use_necroqueue
@@ -166,15 +180,19 @@
 			camera_mob.detach_necro_preview()
 			camera_mob.attach_necro_preview(necro_classes[class])
 		if("set_signal_biomass_percent")
-			var/percent = text2num(params["percentage"]) || 0.1
+			var/percent = text2num(params["percentage"])
+			if(isnull(percent))
+				percent = 0.1
 			signal_biomass_percent = CLAMP01(percent)
+			for(var/mob/camera/marker_signal/signal as anything in marker_signals)
+				signal.update_biomass_hud()
 		if("change_signal_biomass")
-			var/remove_biomass = text2num(params["biomass"])
-			if(!remove_biomass)
+			var/add_signal_biomass = text2num(params["biomass"])
+			if(!add_signal_biomass)
 				return
-			remove_biomass = clamp(remove_biomass, -signal_biomass, biomass)
-			biomass -= remove_biomass
-			signal_biomass += remove_biomass
+			add_signal_biomass = clamp(add_signal_biomass, -signal_biomass, marker_biomass)
+			change_marker_biomass(-add_signal_biomass)
+			change_signal_biomass(add_signal_biomass)
 			return TRUE
 
 /obj/structure/marker/proc/add_biomass_source(source_type, datum/source)
@@ -185,3 +203,20 @@
 /obj/structure/marker/proc/remove_biomass_source(datum/biomass_source/source)
 	biomass_sources -= source
 	qdel(source)
+
+/datum/action/marker_ui
+	name = "Open Marker UI"
+
+/datum/action/marker_ui/Trigger(trigger_flags)
+	if(!..())
+		return FALSE
+	target.ui_interact(owner)
+	return TRUE
+
+/datum/action/marker_ui/IsAvailable(feedback)
+	if(!istype(owner, /mob/camera/marker_signal/marker))
+		if(feedback)
+			to_chat(owner, span_warning("You can't open the marker UI!"))
+		return FALSE
+	return ..()
+

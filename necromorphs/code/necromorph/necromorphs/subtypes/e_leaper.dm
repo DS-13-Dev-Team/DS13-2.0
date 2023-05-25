@@ -29,6 +29,7 @@
 	actions = list(
 	)
 	minimap_icon = "e_leaper"
+	implemented = FALSE
 
 /datum/species/necromorph/leaper/enhanced
 	name = "Enhanced Leaper"

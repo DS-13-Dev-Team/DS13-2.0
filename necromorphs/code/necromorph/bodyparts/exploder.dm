@@ -1,5 +1,6 @@
 /obj/item/bodypart/chest/necromorph/exploder
 	name = BODY_ZONE_CHEST
+	limb_id = SPECIES_NECROMORPH_EXPLODER
 	icon_static = 'necromorphs/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "chest"
 	max_damage = 200
@@ -11,6 +12,7 @@
 
 /obj/item/bodypart/head/necromorph/exploder
 	name = BODY_ZONE_HEAD
+	limb_id = SPECIES_NECROMORPH_EXPLODER
 	icon_static = 'necromorphs/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "head"
 	max_damage = 200
@@ -23,6 +25,7 @@
 //This is an arm actually. It's just used for walking
 /obj/item/bodypart/leg/left/necromorph/exploder
 	name = "yellow pustule"
+	limb_id = SPECIES_NECROMORPH_EXPLODER
 	icon_static = 'necromorphs/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "l_leg"
 	attack_verb_continuous = list("kicks", "stomps")
@@ -68,6 +71,7 @@
 
 /obj/item/bodypart/leg/right/necromorph/exploder
 	name = "right arm"
+	limb_id = SPECIES_NECROMORPH_EXPLODER
 	icon_static = 'necromorphs/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "l_leg"
 	attack_verb_continuous = list("kicks", "stomps")
