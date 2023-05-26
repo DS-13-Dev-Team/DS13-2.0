@@ -12,7 +12,6 @@
 
 	var/ongoing_timer
 
-	var/atom/source
 	var/datum/position/target_direction
 	var/angle
 	var/range
@@ -51,14 +50,14 @@
 
 
 
-/datum/component/swing/New(atom/user, atom/source, atom/target, angle = 90, range = 3, duration = 1 SECOND, windup = 0, cooldown = 0,  effect_type, damage = 1, damage_flags = 0, stages = 8, swing_direction = CLOCKWISE)
-	.=..()
+/datum/component/swing/Initialize(atom/user, atom/target, angle = 90, range = 3, duration = 1 SECOND, windup = 0, cooldown = 0,  effect_type, damage = 1, damage_flags = 0, stages = 8, swing_direction = CLOCKWISE)
+	. = ..()
 	if (isliving(user))
 		src.user = user
 
 	//Target could be an atom to aim at, or a direction to swing in
 	if (isatom(target))
-		if ((get_turf(source) == get_turf(target)))
+		if ((get_turf(parent) == get_turf(target)))
 			//If source and target are on the same turf, we cant aim at the target
 			target_direction = NewFromDir(user.dir)
 		else
@@ -68,11 +67,6 @@
 	else
 		target_direction = NewFromDir(target)
 
-	if (!source)
-		src.source = get_turf(parent)
-
-	else
-		src.source = source
 	src.angle = angle
 	src.range = range
 	src.duration = duration
@@ -95,7 +89,7 @@
 	windup_animation()
 
 	//Alright lets get our cone
-	var/list/cones = get_multistage_cone(source, target_direction, range, angle, stages, swing_direction)
+	var/list/cones = get_multistage_cone(parent, target_direction, range, angle, stages, swing_direction)
 
 	//Lets correct the number of stages now, it may be less than originally specified
 	stages = cones.len
@@ -144,7 +138,7 @@
 	var/datum/position/starting_direction = get_effect_starting_direction()
 
 	//TODO: Create the arm effect
-	effect = new effect_type(get_turf(source), source, starting_direction.Rotation())
+	effect = new effect_type(get_turf(parent), parent, starting_direction.Rotation())
 	starting_direction = null
 	var/atom/A = parent
 	if (effect.inherit_order)
@@ -205,7 +199,7 @@
 	if (L == user)
 		return FALSE
 	var/atom/A = effect
-	if (raytrace && !check_trajectory(L, source, pass_flags = A.pass_flags_self))
+	if (raytrace && !check_trajectory(L, parent, pass_flags = A.pass_flags_self))
 		return FALSE
 
 
@@ -275,7 +269,7 @@
 	if (!can_swing(swing_type))
 		return FALSE
 
-	AddComponent(src, swing_type, source, target, angle, range, duration, windup, cooldown, effect_type, damage, damage_flags, stages, swing_direction)
+	AddComponent(swing_type, source, target, angle, range, duration, windup, cooldown, effect_type, damage, damage_flags, stages, swing_direction)
 	return TRUE
 
 

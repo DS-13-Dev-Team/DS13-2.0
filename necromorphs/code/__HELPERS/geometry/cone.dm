@@ -57,7 +57,9 @@
 	var/list/all_tiles = list()
 	for (var/i in 1 to stages)
 		//For each stage, we'll get the subcone
-		var/list/subcone = get_cone(origin, subcone_direction, distance, abs(subcone_angle))
+		var/dir = angle2dir(subcone_direction.AngleFrom())
+		var/turf/to_dir = get_step(origin, dir)
+		var/list/subcone = get_cone(origin, to_dir, distance, abs(subcone_angle))
 		subcone -= all_tiles	//Filter out any tiles that are already in another subcone
 		//Don't add empty cones to lists
 		if (length(subcone) > 0)

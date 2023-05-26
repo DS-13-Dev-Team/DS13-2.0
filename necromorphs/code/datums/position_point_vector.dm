@@ -1,22 +1,22 @@
 
 /* Equivalence checking. Compares components exactly.
 */
-/datum/position/proc/operator~=(datum/position/v)
-	return v ? x == v.x && y == v.y : FALSE
+/proc/equalent(datum/position/v, datum/position/p)
+	return v ? p.x == v.x && p.y == v.y : FALSE
 
 /* Position addition.
 */
-/datum/position/proc/operator+(datum/position/v)
-	return v ? new /datum/position(x + v.x, y + v.y) : src
+/proc/summ(datum/position/v, datum/position/p)
+	return p ? new /datum/position(p.x + v.x, p.y + v.y) : new /datum/position(p.x, p.y)
 
-/* Vector subtraction and negation.
+/* Position subtraction and negation.
 */
-/datum/position/proc/operator-(datum/position/v)
-	return v ? new /datum/position(x - v.x, y - v.y) : new /datum/position(-x, -y)
+/proc/subtraction(datum/position/v, datum/position/p)
+	return p ? new /datum/position(v.x - p.x, p.y - v.y) : new /datum/position(-p.x, -p.y)
 
-/* Vector scaling.
+/* Position scaling.
 */
-/datum/position/proc/operator*(s)
+/datum/position/proc/multiply(s)
 	// Scalar
 	if(isnum(s)) return new /datum/position(x * s, y * s)
 
@@ -34,7 +34,7 @@
 
 /* Position inverse scaling.
 */
-/datum/position/proc/operator/(d)
+/datum/position/proc/divide(d)
 	// Scalar
 	if(isnum(d)) return new /datum/position(x / d, y / d)
 
@@ -48,8 +48,8 @@
 
 	else CRASH("Invalid args.")
 
-/* Vector dot product.
-	Returns the cosine of the angle between the vectors.
+/* Position dot product.
+	Returns the cosine of the angle between the positions.
 */
 /datum/position/proc/Dot(datum/position/v)
 	return x * v.x + y * v.y
@@ -64,7 +64,7 @@
 */
 //Future TODO: Make and implement a self version of this
 /datum/position/proc/Turn(angle)
-	return src * matrix().Turn(angle)
+	return src.multiply(matrix().Turn(angle))
 
 /datum/position/proc/SelfTurn(inputangle)
 

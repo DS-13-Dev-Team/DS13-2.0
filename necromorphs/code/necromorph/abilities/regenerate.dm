@@ -38,8 +38,6 @@
 	var/count_limbs = 0
 
 	for(var/limb_tag in target_necro.dna.species.bodypart_overrides)
-		if (max_limbs <= count_limbs)
-			continue
 
 		var/obj/item/bodypart/bp = target_necro.get_bodypart(limb_tag)
 
@@ -48,6 +46,15 @@
 		else if(!bp)
 			missing_limbs |= limb_tag
 
+		if (max_limbs <= count_limbs)
+			continue
+
+		if(bp)
+			if(!bp.can_be_disabled)
+				continue
+			if(bp.bodypart_disabled)
+				qdel(bp)
+				bp = null
 		if(!bp)
 			regenerating_organs |= limb_tag
 			count_limbs++

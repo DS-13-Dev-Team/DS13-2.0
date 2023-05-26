@@ -4769,6 +4769,7 @@
 #include "necromorphs\code\__DEFINES\audio.dm"
 #include "necromorphs\code\__DEFINES\colors.dm"
 #include "necromorphs\code\__DEFINES\combat.dm"
+#include "necromorphs\code\__DEFINES\directions.dm"
 #include "necromorphs\code\__DEFINES\hud.dm"
 #include "necromorphs\code\__DEFINES\is_helpers.dm"
 #include "necromorphs\code\__DEFINES\layers.dm"

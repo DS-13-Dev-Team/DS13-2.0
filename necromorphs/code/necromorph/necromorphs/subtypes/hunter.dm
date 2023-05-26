@@ -66,9 +66,15 @@
 	name = "Hookblade"
 	desc = "A shortrange charge with a swing at the end, pulling in all enemies it hits."
 
-/datum/action/cooldown/necro/charge/lunge/hunter/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
+/datum/action/cooldown/necro/charge/lunge/hunter/peter_out_effects()
+	set waitfor = FALSE
 	var/mob/living/carbon/human/necromorph/N = owner
-	N.hookblade_swing(target)
+	N.hookblade_swing(target_atom)
+
+/datum/action/cooldown/necro/charge/lunge/hunter/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
+	set waitfor = FALSE
+	var/mob/living/carbon/human/necromorph/N = owner
+	N.hookblade_swing(target_atom)
 
 /*--------------------------------
 	Arm Swing
@@ -122,15 +128,30 @@
 	.=..()
 	user.density = FALSE
 
-
-
 /datum/component/swing/arm/hunter/hit_mob(mob/living/L)
-	.=..()
+	. = ..()
 	if (.)
 		//If we hit someone, we'll pull them in a direction which is generally towards us
 		//Since our density is false, they can pass through us
 		var/push_angle = rand_between(140, 220)
 
 		var/datum/position/push_direction = target_direction.Turn(push_angle)
-		L.throw_at(push_direction, 200)
+		var/angle = push_direction.AngleFrom()
+		var/fling_dir = angle2dir(angle)
+		var/fling_dist = 2
+		var/turf/destination = L.loc
+		var/turf/temp
+
+		for(var/i in 1 to fling_dist)
+			temp = get_step(destination, fling_dir)
+			if(!temp)
+				break
+			destination = temp
+		if(destination != L.loc)
+			L.throw_at(destination, fling_dist, 1, parent, TRUE)
+
 		push_direction = null
+
+/datum/component/swing/arm/hunter/cleanup_effect()
+	. = ..()
+	addtimer(CALLBACK(user, TYPE_PROC_REF(/atom, set_density), TRUE), 15)

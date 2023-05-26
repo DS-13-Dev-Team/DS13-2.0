@@ -11,7 +11,7 @@
 
 
 
-/datum/component/swing/arm/New(atom/user, atom/source, atom/target, angle = 90, range = 3, duration = 1 SECOND, windup = 0, cooldown = 0,  effect_type, damage = 1, damage_flags = 0, stages = 8, swing_direction = CLOCKWISE)
+/datum/component/swing/arm/Initialize(atom/user, atom/target, angle = 90, range = 3, duration = 1 SECOND, windup = 0, cooldown = 0,  effect_type, damage = 1, damage_flags = 0, stages = 8, swing_direction = CLOCKWISE)
 	if (ismob(user))
 		var/mob/M = user
 		swing_direction = M.get_swing_dir()
@@ -22,7 +22,7 @@
 			if (ANTICLOCKWISE)
 				effect_type = right
 
-	.=..()
+	. = ..()
 
 
 /datum/component/swing/arm/windup_animation()
@@ -38,6 +38,7 @@
 	//We will temporarily retract the arm from the sprite
 	var/obj/item/bodypart/E = H.get_bodypart(limb_used)
 	if (E)
+		E.is_husked = TRUE
 		H.update_body(TRUE)
 
 
@@ -63,4 +64,5 @@
 	//Put the arm back now
 	var/obj/item/bodypart/E = H.get_bodypart(limb_used)
 	if (E)
+		E.is_husked = FALSE
 		H.update_body(TRUE)
