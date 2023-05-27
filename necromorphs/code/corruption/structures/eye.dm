@@ -68,7 +68,7 @@
 	ui_interact(owner)
 	return TRUE
 
-/datum/action/marker_ui/IsAvailable(feedback)
+/datum/action/prey_sightings/IsAvailable(feedback)
 	if(!istype(owner, /mob/camera/marker_signal))
 		if(feedback)
 			to_chat(owner, span_warning("You can't see prey sightings!"))
