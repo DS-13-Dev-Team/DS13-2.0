@@ -237,8 +237,8 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	var/spawning_necromorph
 
 /mob/camera/marker_signal/marker/Initialize(mapload, obj/structure/marker/master)
-	master.marker_ui_action.Grant(src)
 	. = ..()
+	master?.marker_ui_action.Grant(src)
 	icon_state = "mastersignal"
 	verbs -= /mob/camera/marker_signal/verb/become_master
 

@@ -80,7 +80,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
+	icon_static = 'necromorphs/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_arm"
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")

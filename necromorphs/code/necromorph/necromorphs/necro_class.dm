@@ -1,7 +1,7 @@
 /datum/necro_class
 	var/display_name = ""
 	var/desc = ""
-	var/ui_icon
+	var/ui_icon = 'necromorphs/icons/necromorphs/base_necromorph.dmi'
 
 	var/tier = 0
 
