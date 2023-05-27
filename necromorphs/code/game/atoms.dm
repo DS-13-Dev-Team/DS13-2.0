@@ -11,8 +11,9 @@
 	if(!density)
 		return TRUE
 	if(flags_1 & ON_BORDER_1)
-		if(corruption_dir & ~turn(dir, 180))
+		if(dir != REVERSE_DIR(corruption_dir))
 			return TRUE
+	return FALSE
 
 //Considering the checks corruption does we assume turf is not dense
 //Add density checks if you will need this proc outside of corruption spreading

@@ -21,6 +21,7 @@ GLOBAL_LIST_EMPTY(bodycontainers) //Let them act as spawnpoints for revenants an
 	density = TRUE
 	anchored = TRUE
 	max_integrity = 400
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 	var/obj/structure/tray/connected = null
 	var/locked = FALSE

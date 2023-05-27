@@ -5,6 +5,7 @@
 	icon_state = "grinder"
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/gibber
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 	var/operating = FALSE //Is it on?
 	var/dirty = FALSE // Does it need cleaning?

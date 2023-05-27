@@ -8,6 +8,7 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 	layer = BELOW_OBJ_LAYER
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/monkey_recycler
+	biomass_produce = BIOMASS_HARVEST_SMALL
 	var/stored_matter = 0
 	var/cube_production = 0.2
 	var/list/connected = list() //Keeps track of connected xenobio consoles, for deletion in /Destroy()

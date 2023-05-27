@@ -5,8 +5,8 @@
 	cost = 10
 
 /datum/action/cooldown/necro/psy/meddle/PreActivate(obj/target)
-	if(isobj(target))
-		return FALSE
+	if(!isobj(target))
+		return TRUE
 	return ..()
 
 /datum/action/cooldown/necro/psy/meddle/Activate(obj/target)

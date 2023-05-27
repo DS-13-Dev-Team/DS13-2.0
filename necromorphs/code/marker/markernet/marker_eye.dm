@@ -197,8 +197,12 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	if(hud_used)
 		var/datum/hud/marker/our_hud = hud_used
 		var/filter = our_hud.psy_energy.get_filter("alpha_filter")
-		animate(filter, x = clamp(PSYBAR_PIXEL_WIDTH*(psy_energy/psy_energy_maximum), 0, PSYBAR_PIXEL_WIDTH), time = 0.5 SECONDS)
-		our_hud.foreground.maptext = MAPTEXT("[round(psy_energy, 1)]/[psy_energy_maximum] | +[psy_energy_generation] psy/seс")
+		animate(filter, x = clamp(HUD_METER_PIXEL_WIDTH*(psy_energy/psy_energy_maximum), 0, HUD_METER_PIXEL_WIDTH), time = 0.5 SECONDS)
+		our_hud.foreground_psy.maptext = MAPTEXT("[round(psy_energy, 1)]/[psy_energy_maximum] | +[psy_energy_generation] psy/sec")
+
+/mob/camera/marker_signal/proc/update_biomass_hud(hud_override)
+	var/datum/hud/marker/our_hud = hud_override || hud_used
+	our_hud?.foreground_bio.maptext = MAPTEXT("[round(marker.signal_biomass, 1)] | +[marker.last_biomass_income*marker.signal_biomass_percent] bio/sec")
 
 /mob/camera/marker_signal/verb/become_master()
 	set name = "Become master signal"
@@ -214,7 +218,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	marker.camera_mob = camera
 	camera.real_name = camera.name
 	camera.ckey = src.ckey
-	camera.psy_energy = min(psy_energy, camera.psy_energy_maximum)
+	camera.change_psy_energy(psy_energy)
 	qdel(src)
 
 /mob/camera/marker_signal/marker
@@ -234,12 +238,17 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 /mob/camera/marker_signal/marker/Initialize(mapload, obj/structure/marker/master)
 	. = ..()
+	master?.marker_ui_action.Grant(src)
 	icon_state = "mastersignal"
 	verbs -= /mob/camera/marker_signal/verb/become_master
 
 /mob/camera/marker_signal/marker/Destroy()
 	marker?.camera_mob = null
 	return ..()
+
+/mob/camera/marker_signal/marker/update_biomass_hud(hud_override)
+	var/datum/hud/marker/our_hud = hud_override || hud_used
+	our_hud?.foreground_bio.maptext = MAPTEXT("[round(marker.marker_biomass, 1)] | +[marker.last_biomass_income*(1-marker.signal_biomass_percent)] bio/sec")
 
 /mob/camera/marker_signal/marker/verb/downgrade()
 	set name = "Downgrade to normal signal"
@@ -248,14 +257,8 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	var/mob/camera/marker_signal/signal = new /mob/camera/marker_signal(get_turf(src), marker)
 	signal.real_name = signal.name
 	signal.ckey = src.ckey
-	signal.psy_energy = min(psy_energy, signal.psy_energy_maximum)
+	signal.change_psy_energy(psy_energy)
 	qdel(src)
-
-/mob/camera/marker_signal/marker/verb/open_marker_ui()
-	set name = "Open Marker UI"
-	set category = "Necromorph"
-
-	marker.ui_interact(src)
 
 /mob/camera/marker_signal/marker/ClickOn(atom/A, params)
 	if(check_click_intercept(params,A))

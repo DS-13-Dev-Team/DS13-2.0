@@ -26,7 +26,7 @@
 	//If we have corruption beneath - we are growing
 	var/turf/our_loc = loc
 	if(istype(our_loc) && our_loc.necro_corrupted)
-		addtimer(CALLBACK(src, .proc/activate), 3 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
+		addtimer(CALLBACK(src, .proc/activate), 1 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /obj/structure/necromorph/harvester/Destroy()
 	marker?.remove_biomass_source(our_source)
@@ -47,8 +47,8 @@
 			mutable_appearance(icon, "tentacle_2"),
 			mutable_appearance(icon, "tentacle_3"),
 			mutable_appearance(icon, "tentacle_4"),
-			mutable_appearance(icon, "beak_closed"),
 			mutable_appearance(icon, "beak"),
+			mutable_appearance(icon, "beak_closed"),
 		)
 	if(active)
 		. += our_overlays[1]
@@ -61,7 +61,7 @@
 
 /obj/structure/necromorph/harvester/on_turf_corrupted()
 	.=..()
-	addtimer(CALLBACK(src, .proc/activate), 3 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
+	addtimer(CALLBACK(src, .proc/activate), 1 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /obj/structure/necromorph/harvester/on_turf_uncorrupted()
 	.=..()
@@ -86,7 +86,7 @@
 				ADD_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
 				biomass_per_tick += controlled.biomass_produce
 		FOR_DVIEW_END
-		our_source = marker.add_biomass_source(/datum/biomass_source/harvester)
+		our_source = marker.add_biomass_source(/datum/biomass_source/harvester, src)
 		update_icon(UPDATE_OVERLAYS)
 
 /obj/structure/necromorph/harvester/proc/on_controlled_delete(atom/movable/controlled, force)
