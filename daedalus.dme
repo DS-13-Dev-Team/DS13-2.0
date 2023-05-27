@@ -4854,6 +4854,7 @@
 #include "necromorphs\code\necromorph\abilities\shoot.dm"
 #include "necromorphs\code\necromorph\abilities\shout.dm"
 #include "necromorphs\code\necromorph\abilities\slam.dm"
+#include "necromorphs\code\necromorph\abilities\swing.dm"
 #include "necromorphs\code\necromorph\abilities\wallrun.dm"
 #include "necromorphs\code\necromorph\bodyparts\bodyparts.dm"
 #include "necromorphs\code\necromorph\bodyparts\brute.dm"

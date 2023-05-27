@@ -127,10 +127,10 @@ export const BiomassDisplay = (props, context) => {
         <ProgressBar value={1} ranges={{ "red": [0, 1] }}>
           <Box textAlign="center">
             Marker Biomass | {
-              <AnimatedNumber value={biomass.toFixed(1)} />
+              <AnimatedNumber value={biomass.toFixed(2)} />
             } | {
               <AnimatedNumber
-                value={(biomass_income*(1-signal_biomass_percent)).toFixed(1)}
+                value={(biomass_income*(1-signal_biomass_percent)).toFixed(2)}
               />
             } bio/s
           </Box>
@@ -147,10 +147,10 @@ export const BiomassDisplay = (props, context) => {
             <ProgressBar value={1} ranges={{ "purple": [0, 1] }}>
               <Box textAlign="center">
                 Signal Biomass | {
-                  <AnimatedNumber value={signal_biomass.toFixed(1)} />
+                  <AnimatedNumber value={signal_biomass.toFixed(2)} />
                 } | {
                   <AnimatedNumber
-                    value={(biomass_income*signal_biomass_percent).toFixed(1)}
+                    value={(biomass_income*signal_biomass_percent).toFixed(2)}
                   />
                 } bio/s
               </Box>

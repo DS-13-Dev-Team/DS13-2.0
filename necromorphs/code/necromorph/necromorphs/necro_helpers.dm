@@ -69,7 +69,8 @@
 
 	var/list/list_to_pick = list()
 	for(var/datum/necro_class/class as anything in subtypesof(/datum/necro_class))
-		list_to_pick[initial(class.display_name)] = initial(class.necromorph_type_path)
+		if(initial(class.implemented))
+			list_to_pick[initial(class.display_name)] = initial(class.necromorph_type_path)
 
 	var/type_to_spawn = list_to_pick[tgui_input_list(usr, "Pick a necromorph to spawn", "Spawning", list_to_pick)]
 	if(!type_to_spawn)
