@@ -3,7 +3,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
+	icon_static = 'necromorphs/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "chest"
 	max_damage = 200
 	body_zone = BODY_ZONE_CHEST
@@ -30,7 +30,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
+	icon_static = 'necromorphs/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "head"
 	body_zone = BODY_ZONE_HEAD
 	body_part = HEAD
@@ -56,7 +56,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
+	icon_static = 'necromorphs/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_arm"
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
@@ -104,7 +104,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
+	icon_static = 'necromorphs/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
@@ -128,7 +128,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	icon_static = 'necromorphs/icons/necromorphs/slasher/fleshy.dmi'
+	icon_static = 'necromorphs/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
