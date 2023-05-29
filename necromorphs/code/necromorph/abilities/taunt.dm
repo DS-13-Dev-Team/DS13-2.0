@@ -1,0 +1,131 @@
+#define COMSIG_END_ACTION "end_action"
+
+/*
+	Taunt is an ability used by the hunter
+
+	It has two parts:
+		1. This extension, applied to the user. Buffs the user's movespeed and damage resist. Gives the user a red outline to mark them
+			Applies the companion extension to everyone on the user's team who can see them, each tick
+
+		2. The companion, applied to people who see the user. Buffs the subject's damage resist and evasion]
+
+	Taunt lasts a long time potentially. But it ends early under two conditions:
+		1. The user is knocked down
+
+		2. Six seconds pass without seeing a valid enemy
+*/
+
+/datum/action/cooldown/necro/taunt
+	name = "Taunt"
+
+	var/status
+	cooldown_time = 20 SECONDS
+	var/duration = 5 MINUTES
+	var/tick_interval = 1 SECOND
+
+	var/started_at
+	var/stopped_at
+
+	var/ongoing_timer
+	var/tick_timer
+
+	var/time_without_enemy = 0
+	var/max_time_without_enemy = 6 SECONDS
+
+	var/list/mobs_observations = list()
+
+	var/dm_filter/outline
+
+/datum/action/cooldown/necro/taunt/PreActivate(atom/target)
+	if (owner.incapacitated())
+		return FALSE
+
+	if (owner:body_position == LYING_DOWN)
+		to_chat(owner, span_danger("You must be standing to use taunt!"))
+		return FALSE
+
+	//Taunt requires a visible enemy
+	if (!owner.enemy_in_view(require_standing = TRUE))
+		to_chat(owner, span_danger("You need a standing enemy in view to use taunt!"))
+		return FALSE
+
+	. = ..()
+
+/datum/action/cooldown/necro/taunt/Activate()
+	StartCooldown()
+	if (!outline)
+		var/newfilter = filter(type="outline", size = 1, color = rgb(255,0,0,128))
+		owner.filters.Add(newfilter)
+		outline = owner.filters[owner.filters.len]
+	ongoing_timer = addtimer(CALLBACK(src, PROC_REF(stop)), duration, TIMER_STOPPABLE)
+	if (tick_interval)
+		tick_timer = addtimer(CALLBACK(src, PROC_REF(tick)), tick_interval, TIMER_STOPPABLE)
+
+/datum/action/cooldown/necro/taunt/proc/stop()
+	deltimer(ongoing_timer)
+	deltimer(tick_timer)
+	if (outline)
+		owner.filters.Remove(outline)
+		outline = null
+	if (mobs_observations != list())
+		for(var/mob/living/carbon/human/H as anything in mobs_observations)
+			if(!H.GetComponent(/datum/component/taunt_companion))
+				continue
+			SEND_SIGNAL(H, COMSIG_END_ACTION)
+	mobs_observations = list()
+
+
+/datum/action/cooldown/necro/taunt/proc/tick()
+
+	tick_timer = addtimer(CALLBACK(src, .proc/tick), tick_interval, TIMER_STOPPABLE)
+
+	if (!owner.enemy_in_view(require_standing = TRUE))
+
+		time_without_enemy += tick_interval
+		if (time_without_enemy >= max_time_without_enemy)
+			to_chat(owner, span_danger("There are no more enemies in sight, taunt is ended"))
+			stop()
+
+	else
+		time_without_enemy = 0
+		//Lets apply the effect to other necros
+		for (var/mob/living/carbon/human/H in view(owner, 10))
+			if (!isnecromorph(H))
+				continue
+
+			//They already have it?
+			if (H.GetComponent(/datum/component/taunt_companion))
+				continue
+
+			//Go!
+			H.AddComponent(/datum/component/taunt_companion, owner)
+			RegisterSignal(H, COMSIG_END_ACTION, TYPE_PROC_REF(/datum/component/taunt_companion/, end))
+			mobs_observations.Add(H)
+
+/*
+	Companion effect
+	Applied to others who see the taunt user (referrred to as shield)
+	Ticks regularly and removes itself if the shield is no longer in view
+*/
+/datum/component/taunt_companion
+	var/tick_timer
+	var/mob/shield
+
+	var/tick_interval = 1 SECOND
+
+/datum/component/taunt_companion/Initialize(mob/shield)
+	.=..()
+	src.shield = shield
+	tick_timer = addtimer(CALLBACK(src, .proc/tick), tick_interval, TIMER_STOPPABLE)
+
+/datum/component/taunt_companion/proc/tick()
+	//Check we can still see the shield
+	if (QDELETED(shield) || !(shield in (view(7, parent))))
+		end()
+		return
+
+	tick_timer = addtimer(CALLBACK(src, .proc/tick), tick_interval, TIMER_STOPPABLE)
+
+/datum/component/taunt_companion/proc/end()
+	deltimer(tick_timer)
+	qdel(src)

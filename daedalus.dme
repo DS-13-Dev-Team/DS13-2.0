@@ -4869,6 +4869,7 @@
 #include "necromorphs\code\necromorph\abilities\shout.dm"
 #include "necromorphs\code\necromorph\abilities\slam.dm"
 #include "necromorphs\code\necromorph\abilities\spray.dm"
+#include "necromorphs\code\necromorph\abilities\taunt.dm"
 #include "necromorphs\code\necromorph\abilities\wallrun.dm"
 #include "necromorphs\code\necromorph\abilities\swing\_swing.dm"
 #include "necromorphs\code\necromorph\abilities\swing\arm.dm"

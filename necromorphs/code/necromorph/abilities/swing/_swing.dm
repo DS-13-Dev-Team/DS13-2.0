@@ -242,7 +242,7 @@
 //Access Proc
 /atom/proc/can_swing(swing_type = /datum/component/swing)
 
-	var/datum/component/swing/E = GetComponents(swing_type)
+	var/datum/component/swing/E = GetComponent(swing_type)
 	if(istype(E))
 		if (E.stopped_at)
 			to_chat(src, span_notice("[E] is cooling down. You can use it again in [E.get_cooldown_time() /10] seconds"))

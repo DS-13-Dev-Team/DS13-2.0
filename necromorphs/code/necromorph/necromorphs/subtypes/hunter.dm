@@ -22,6 +22,7 @@
 	actions = list(
 		/datum/action/cooldown/necro/regenerate/hunter,
 		/datum/action/cooldown/necro/charge/lunge/hunter,
+		/datum/action/cooldown/necro/taunt,
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "hunter"
