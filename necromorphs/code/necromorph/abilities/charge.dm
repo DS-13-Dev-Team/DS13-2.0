@@ -33,7 +33,7 @@
 		return
 	// Start pre-cooldown so that the ability can't come up while the charge is happening
 	StartCooldown(charge_time+charge_delay+1)
-	src.target_atom = get_turf(target_atom)
+	src.target_atom = target_atom
 	addtimer(CALLBACK(src, PROC_REF(do_charge), owner), charge_delay)
 
 /datum/action/cooldown/necro/charge/proc/do_charge(mob/living/carbon/human/necromorph/charger)
@@ -105,7 +105,7 @@
 		charger.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/necro_charge, TRUE, -CHARGE_SPEED(src))
 
 	//If we have entered the same turf as our target then it must have been nondense. Let's hit it
-	if (source.loc == target_atom)
+	if (source.loc == target_atom.loc || source.loc == target_atom)
 		. = on_bump(source, target_atom)
 	else
 		//Light shake with each step
