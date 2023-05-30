@@ -4,7 +4,7 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	icon = 'necromorphs/icons/obj/marker_giant.dmi'
 	icon_state = "marker_giant_dormant"
 	appearance_flags = PIXEL_SCALE|LONG_GLIDE
-	layer = BELOW_OPEN_DOOR_LAYER
+	layer = HIGH_OBJ_LAYER
 	plane = GAME_PLANE
 	interaction_flags_atom = INTERACT_ATOM_ATTACK_HAND
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -43,3 +43,4 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	var/list/corruption_eyes
 	/// When was the last time all signals were alerted by an eye
 	var/last_eye_notify
+	var/datum/action/marker_ui/marker_ui_action

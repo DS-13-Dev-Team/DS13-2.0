@@ -24,6 +24,7 @@
 		/datum/action/cooldown/necro/dodge,
 	)
 	minimap_icon = "slasher"
+	implemented = TRUE
 
 /datum/species/necromorph/slasher
 	name = "Slasher"

@@ -23,6 +23,7 @@
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "exploder"
+	implemented = TRUE
 
 /datum/species/necromorph/exploder
 	name = "Exploder"

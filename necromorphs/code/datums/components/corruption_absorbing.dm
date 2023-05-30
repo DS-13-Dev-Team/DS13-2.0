@@ -5,7 +5,7 @@
 	var/timerid
 
 /datum/component/corruption_absorbing/Initialize(obj/structure/marker/our_master)
-	if(!ishuman(parent) || isnecromorph(parent))
+	if(!isliving(parent) || isnecromorph(parent))
 		return COMPONENT_INCOMPATIBLE
 	master = our_master
 	var/mob/living/living = parent
@@ -28,7 +28,7 @@
 		return
 	if(bio_source)
 		master.remove_biomass_source(bio_source)
-		new_master.add_biomass_source(bio_source)
+	bio_source = new_master.add_biomass_source(/datum/biomass_source/corruption_absorbing, parent)
 	master = new_master
 
 /datum/component/corruption_absorbing/proc/start_absorbing()

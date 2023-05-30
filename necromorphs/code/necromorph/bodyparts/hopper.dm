@@ -1,5 +1,6 @@
 /obj/item/bodypart/chest/necromorph/leaper/hopper
 	name = BODY_ZONE_CHEST
+	limb_id = SPECIES_NECROMORPH_LEAPER_HOPPER
 	icon_static = 'necromorphs/icons/necromorphs/leaper_hopper.dmi'
 	icon_state = "chest"
 	max_damage = 200
@@ -11,6 +12,7 @@
 
 /obj/item/bodypart/head/necromorph/leaper/hopper
 	name = BODY_ZONE_HEAD
+	limb_id = SPECIES_NECROMORPH_LEAPER_HOPPER
 	icon_static = 'necromorphs/icons/necromorphs/leaper_hopper.dmi'
 	icon_state = "head"
 	max_damage = 200
@@ -23,6 +25,7 @@
 //Leapers use arms to walk
 /obj/item/bodypart/leg/left/necromorph/leaper/hopper
 	name = "left arm"
+	limb_id = SPECIES_NECROMORPH_LEAPER_HOPPER
 	icon_static = 'necromorphs/icons/necromorphs/leaper_hopper.dmi'
 	icon_state = "l_leg"
 	body_part = LEG_LEFT
@@ -37,6 +40,7 @@
 
 /obj/item/bodypart/leg/right/necromorph/leaper/hopper
 	name = "right arm"
+	limb_id = SPECIES_NECROMORPH_LEAPER_HOPPER
 	icon_static = 'necromorphs/icons/necromorphs/leaper_hopper.dmi'
 	icon_state = "r_leg"
 	attack_verb_continuous = list("kicks", "stomps")

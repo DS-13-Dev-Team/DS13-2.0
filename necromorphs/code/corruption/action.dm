@@ -17,10 +17,12 @@
 /datum/action/cooldown/necro/corruption/set_click_ability(mob/on_who)
 	.=..()
 	owner.mouse_move_intercept = src
+	owner.client.images += template
 
 /datum/action/cooldown/necro/corruption/unset_click_ability(mob/on_who, refund_cooldown)
 	.=..()
 	owner.mouse_move_intercept = null
+	owner.client.images -= template
 	template.loc = null
 
 /datum/action/cooldown/necro/corruption/Activate(atom/target)
@@ -28,7 +30,7 @@
 	var/current_biomass = istype(signal, /mob/camera/marker_signal/marker) ? signal.marker.marker_biomass : signal.marker.signal_biomass
 	if(current_biomass < cost)
 		to_chat(signal, span_warning("Not enough biomass!"))
-		return
+		return TRUE
 	var/turf/target_turf = get_turf(target)
 	if(!target_turf.necro_corrupted)
 		to_chat(signal, span_warning("Turf isn't corrupted!"))

@@ -1,7 +1,7 @@
 /datum/necro_class
 	var/display_name = ""
 	var/desc = ""
-	var/ui_icon
+	var/ui_icon = 'necromorphs/icons/necromorphs/base_necromorph.dmi'
 
 	var/tier = 0
 
@@ -78,6 +78,9 @@
 	var/vent_exit_speed = NECRO_DEFAULT_VENT_EXIT_TIME
 	///Whether the necromorph enters and crawls through vents silently
 	var/silent_vent_crawl = FALSE
+
+	//TODO: Get rid of this
+	var/implemented = FALSE
 
 /datum/necro_class/proc/load_data(mob/living/carbon/human/necromorph/necro)
 	for(var/trait in traits)

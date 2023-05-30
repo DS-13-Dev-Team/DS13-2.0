@@ -1,4 +1,3 @@
-#define HEALTHBAR_PIXEL_WIDTH 181
 /atom/movable/screen/meter
 	icon = 'necromorphs/icons/hud/healthbar.dmi'
 	icon_state = "backdrop"
@@ -19,4 +18,4 @@
 	icon_state = "graphic"
 	maptext_x = 73
 	maptext_y = 8
-	maptext_width = HEALTHBAR_PIXEL_WIDTH
+	maptext_width = HUD_METER_PIXEL_WIDTH

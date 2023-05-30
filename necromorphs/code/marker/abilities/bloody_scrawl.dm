@@ -27,7 +27,7 @@
 	gender = NEUTER
 	random_icon_states = list("writing1","writing2","writing3","writing4","writing5")
 	should_dry = FALSE
-	color = COLOR_BLOOD_HUMAN
+	color = COLOR_BLOOD_WRITING
 	transform = matrix(2, 0, 0, 0, 2, 0)
 	var/message
 	var/creator

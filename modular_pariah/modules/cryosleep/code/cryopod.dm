@@ -125,6 +125,8 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	anchored = TRUE
 	state_open = TRUE
 
+	biomass_produce = BIOMASS_HARVEST_SMALL
+
 	var/on_store_message = "has entered long-term storage."
 	var/on_store_name = "Cryogenic Oversight"
 

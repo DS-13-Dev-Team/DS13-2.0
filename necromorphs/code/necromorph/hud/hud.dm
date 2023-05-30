@@ -13,7 +13,7 @@
 	background = new
 
 	health = new
-	health.add_filter("alpha_mask", 1, alpha_mask_filter(icon = icon('necromorphs/icons/hud/healthbar.dmi', "alpha_mask"), x = clamp(HEALTHBAR_PIXEL_WIDTH*(owner.health/owner.maxHealth), 0, HEALTHBAR_PIXEL_WIDTH), flags = MASK_INVERSE))
+	health.add_filter("alpha_mask", 1, alpha_mask_filter(icon = icon('necromorphs/icons/hud/healthbar.dmi', "alpha_mask"), x = clamp(HUD_METER_PIXEL_WIDTH*(owner.health/owner.maxHealth), 0, HUD_METER_PIXEL_WIDTH), flags = MASK_INVERSE))
 
 	foreground = new
 	if(owner.dodge_shield > 0)
@@ -22,7 +22,7 @@
 		foreground.maptext = MAPTEXT("[max(0, owner.health)]/[owner.maxHealth]")
 
 	shield = new
-	shield.add_filter("alpha_mask", 1, alpha_mask_filter(icon = icon('necromorphs/icons/hud/healthbar.dmi', "alpha_mask"), x = clamp(HEALTHBAR_PIXEL_WIDTH*(owner.dodge_shield/owner.maxHealth), 0, HEALTHBAR_PIXEL_WIDTH), flags = MASK_INVERSE))
+	shield.add_filter("alpha_mask", 1, alpha_mask_filter(icon = icon('necromorphs/icons/hud/healthbar.dmi', "alpha_mask"), x = clamp(HUD_METER_PIXEL_WIDTH*(owner.dodge_shield/owner.maxHealth), 0, HUD_METER_PIXEL_WIDTH), flags = MASK_INVERSE))
 
 	infodisplay += background
 	infodisplay += health
@@ -108,17 +108,15 @@
 			H.client.screen -= I
 
 /datum/hud/necromorph/proc/update_healthbar(mob/living/carbon/human/necromorph/necro)
-	animate(health.get_filter("alpha_mask"), x = clamp(HEALTHBAR_PIXEL_WIDTH*(necro.health/necro.maxHealth), 0, HEALTHBAR_PIXEL_WIDTH), time = 0.5 SECONDS)
+	animate(health.get_filter("alpha_mask"), x = clamp(HUD_METER_PIXEL_WIDTH*(necro.health/necro.maxHealth), 0, HUD_METER_PIXEL_WIDTH), time = 0.5 SECONDS)
 	if(necro.dodge_shield > 0)
 		foreground.maptext = MAPTEXT("[max(0, necro.health)]+[necro.dodge_shield]/[necro.maxHealth]")
 	else
 		foreground.maptext = MAPTEXT("[max(0, necro.health)]/[necro.maxHealth]")
 
 /datum/hud/necromorph/proc/update_shieldbar(mob/living/carbon/human/necromorph/necro)
-	animate(shield.get_filter("alpha_mask"), x = clamp(HEALTHBAR_PIXEL_WIDTH*(necro.dodge_shield/necro.maxHealth), 0, HEALTHBAR_PIXEL_WIDTH), time = 0.5 SECONDS)
+	animate(shield.get_filter("alpha_mask"), x = clamp(HUD_METER_PIXEL_WIDTH*(necro.dodge_shield/necro.maxHealth), 0, HUD_METER_PIXEL_WIDTH), time = 0.5 SECONDS)
 	if(necro.dodge_shield > 0)
 		foreground.maptext = MAPTEXT("[max(0, necro.health)]+[necro.dodge_shield]/[necro.maxHealth]")
 	else
 		foreground.maptext = MAPTEXT("[max(0, necro.health)]/[necro.maxHealth]")
-
-#undef HEALTHBAR_PIXEL_WIDTH

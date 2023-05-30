@@ -12,6 +12,7 @@
 	pass_flags_self = PASSMACHINE | LETPASSTHROW
 	layer = BELOW_OBJ_LAYER
 	use_power = NO_POWER_USE
+	biomass_produce = BIOMASS_HARVEST_SMALL
 	var/grill_fuel = 0
 	var/obj/item/reagent_containers/food/grilled_item
 	var/grill_time = 0

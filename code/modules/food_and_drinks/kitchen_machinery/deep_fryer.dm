@@ -20,6 +20,7 @@ GLOBAL_LIST_INIT(oilfry_blacklisted_items, typecacheof(list(
 	idle_power_usage = BASE_MACHINE_IDLE_CONSUMPTION * 0.05
 	layer = BELOW_OBJ_LAYER
 	circuit = /obj/item/circuitboard/machine/deep_fryer
+	biomass_produce = BIOMASS_HARVEST_SMALL
 	var/obj/item/food/deepfryholder/frying //What's being fried RIGHT NOW?
 	var/cook_time = 0
 	var/oil_use = 0.025 //How much cooking oil is used per second

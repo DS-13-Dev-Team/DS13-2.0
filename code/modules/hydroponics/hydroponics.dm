@@ -9,6 +9,7 @@
 	obj_flags = CAN_BE_HIT | UNIQUE_RENAME
 	circuit = /obj/item/circuitboard/machine/hydroponics
 	use_power = NO_POWER_USE
+	biomass_produce = BIOMASS_HARVEST_MEDIUM
 	///The amount of water in the tray (max 100)
 	var/waterlevel = 100
 	///The maximum amount of water in the tray

@@ -570,7 +570,7 @@
 		parts += "<br>"
 		parts += "<b>[marker.name]</b> | "
 		parts += "<b>Marker player:</b> [marker.camera_mob?.key ? marker.camera_mob?.key : "Missing"] | "
-		parts += "<b>Total biomass:</b> [marker.biomass + marker.signal_biomass] | "
+		parts += "<b>Total biomass:</b> [marker.marker_biomass + marker.signal_biomass] | "
 		parts += "<b>Spent biomass:</b> [marker.spent_biomass] | "
 		parts += "<b>Biomass income:</b> [marker.last_biomass_income] bio/second"
 

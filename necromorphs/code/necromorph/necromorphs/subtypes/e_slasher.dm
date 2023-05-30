@@ -21,6 +21,7 @@
 
 	)
 	minimap_icon = "e_slasher"
+	implemented = FALSE
 
 /datum/species/necromorph/slasher/enhanced
 	name = "Enhanced Slasher"

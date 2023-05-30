@@ -1,0 +1,24 @@
+author: DTraitor
+delete-after: true
+changes:
+  - rscadd: Added biomass harvest values to a different machinery. Harvesters are
+      useful now
+  - rscadd: Added biomass bar to the Marker signals HUD
+  - rscadd: Implemented swing ability
+  - bugfix: Marker uses proper biomass variable
+  - bugfix: Necro corruption structures display preview icons now
+  - bugfix: Harvester beak is now closed while harvester is not active
+  - bugfix: Meddle works now
+  - bugfix: Marker properly changes icons when activated
+  - bugfix: Marker has a higher layer now
+  - bugfix: FIxed necromorph icons which could have wrong bodyparts
+  - balance: Increased baseline marker income (0.1->0.5)
+  - balance: Harvester deployment takes 1 minute instead of 3 now
+  - balance: Necromorph projectiles deal damage through exposing acid at targets now
+  - qol: Changes in the Marker UI (mostly from the code perspective)
+  - qol: Moved Marker signals psybar to the bottom of the screen
+  - qol: Marker UI is now opened through an action button instead of a verb
+  - code_imp: Remove a lot of unused/redundant code, including color defines
+  - code_imp: Rewrote "Shoot" ability
+  - code_imp: Added var/implemented to necromorph classes, set to TRUE if this necromorph
+      should appear in the lists
