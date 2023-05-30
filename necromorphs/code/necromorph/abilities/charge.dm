@@ -20,6 +20,7 @@
 	var/atom/target_atom
 
 /datum/action/cooldown/necro/charge/Activate(atom/target_atom)
+	. = TRUE
 	var/turf/T = get_turf(target_atom)
 	if(!T)
 		return

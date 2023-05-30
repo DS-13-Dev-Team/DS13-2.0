@@ -22,10 +22,11 @@
 	actions = list(
 		/datum/action/cooldown/necro/regenerate/hunter,
 		/datum/action/cooldown/necro/charge/lunge/hunter,
-		/datum/action/cooldown/necro/taunt,
+		/datum/action/cooldown/necro/taunt/hunter,
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "hunter"
+	implemented = TRUE
 
 /datum/species/necromorph/hunter
 	name = "Hunter"
@@ -75,7 +76,7 @@
 /datum/action/cooldown/necro/charge/lunge/hunter/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	set waitfor = FALSE
 	var/mob/living/carbon/human/necromorph/N = owner
-	N.hookblade_swing(target_atom)
+	N.hookblade_swing(target)
 
 /*--------------------------------
 	Arm Swing
@@ -87,17 +88,7 @@
 		target = dir
 
 	//Okay lets actually start the swing
-	.=swing_attack(swing_type = /datum/component/swing/arm/hunter,
-	source = src,
-	target = target,
-	angle = 150,
-	range = ARM_SWING_RANGE_HUNTER,
-	duration = 0.65 SECOND,
-	windup = 0,
-	cooldown = 0,//5 SECONDS, //TODO: Uncomment this
-	damage = 12.5,
-	damage_flags = MELEE,
-	stages = 8)
+	. = swing_attack(/datum/component/swing/arm/hunter, target)
 
 	if (.)
 		play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 2)
@@ -108,9 +99,8 @@
 
 //Component subtype
 /datum/component/swing/arm/hunter
-	precise = FALSE
-	left = /obj/effect/effect/swing/hunter_left
-	right = /obj/effect/effect/swing/hunter_right
+	left = /obj/effect/temp_visual/swing/hunter_left
+	right = /obj/effect/temp_visual/swing/hunter_right
 
 	offsets_left = list(S_NORTH = new /datum/position(-52, -12), S_SOUTH = new /datum/position(-32, -16), S_EAST = new /datum/position(-42, -14), S_WEST = new /datum/position(-40, -10))
 	offsets_right = list(S_NORTH = new /datum/position(-36, -12), S_SOUTH = new /datum/position(-56, -18), S_EAST = new /datum/position(-42, -8), S_WEST = new /datum/position(-46, -6))
@@ -118,27 +108,21 @@
 
 
 //Swing FX
-/obj/effect/effect/swing/hunter_left
+/obj/effect/temp_visual/swing/hunter_left
 	icon_state = "hunter_left"
 
-/obj/effect/effect/swing/hunter_right
+/obj/effect/temp_visual/swing/hunter_right
 	icon_state = "hunter_right"
 
 //At the end of the windup, just before we start, we'll set the user's density to false
 /datum/component/swing/arm/hunter/windup_animation()
 	.=..()
-	user.density = FALSE
+	parent:density = FALSE
 
 /datum/component/swing/arm/hunter/hit_mob(mob/living/L)
 	. = ..()
 	if (.)
-		//If we hit someone, we'll pull them in a direction which is generally towards us
-		//Since our density is false, they can pass through us
-		var/push_angle = rand_between(140, 220)
-
-		var/datum/position/push_direction = target_direction.Turn(push_angle)
-		var/angle = push_direction.AngleFrom()
-		var/fling_dir = angle2dir(angle)
+		var/fling_dir = pick(GLOB.cardinals - ((parent:dir & (NORTH|SOUTH)) ? list(NORTH, SOUTH) : list(EAST, WEST)))
 		var/fling_dist = 2
 		var/turf/destination = L.loc
 		var/turf/temp
@@ -151,8 +135,39 @@
 		if(destination != L.loc)
 			L.throw_at(destination, fling_dist, 1, parent, TRUE)
 
-		push_direction = null
-
 /datum/component/swing/arm/hunter/cleanup_effect()
 	. = ..()
-	addtimer(CALLBACK(user, TYPE_PROC_REF(/atom, set_density), TRUE), 15)
+	addtimer(CALLBACK(parent, TYPE_PROC_REF(/atom/, set_density), TRUE), 15)
+
+/datum/action/cooldown/necro/taunt/hunter
+	desc = "Provides a defensive buff to the hunter, and a larger one to his allies."
+	type_buff = /datum/component/statmod/taunt_buff
+	var/obj/effect/temp_visual/expanding_circle/EC
+
+/datum/action/cooldown/necro/taunt/hunter/Activate()
+	owner:play_necro_sound(SOUND_SHOUT_LONG, VOLUME_MAX, 1, 3)
+	. = ..()
+	EC = new /obj/effect/temp_visual/expanding_circle(owner.loc, 1.5 SECONDS, 1.5,"#ff0000")
+	EC.pixel_y += 40	//Offset it so it appears to be at our mob's head
+	addtimer(CALLBACK(src, PROC_REF(effects)), 4)
+	addtimer(CALLBACK(src, PROC_REF(effects)), 8)
+
+/datum/action/cooldown/necro/taunt/hunter/proc/effects()
+	EC = new /obj/effect/temp_visual/expanding_circle(owner.loc, 1.5 SECONDS, 1.5,"#ff0000")
+	EC.pixel_y += 40	//Offset it so it appears to be at our mob's head
+
+/*
+	Passive regen is triggered during false death
+*/
+/datum/component/regenerate/hunter_passive
+	duration = 8 SECONDS
+	max_limbs = 5
+	lasting_damage_heal = 35
+	burn_heal_mult = 0.01
+	heal_amount = 100
+
+/datum/component/statmod/taunt_buff
+	//These stats apply to self
+	statmods = list(STATMOD_MOVESPEED_ADDITIVE = 0.15,
+					STATMOD_INCOMING_DAMAGE_MULTIPLICATIVE = 0.85
+	)
