@@ -25,10 +25,3 @@
 		power++ //Transfer to output, increment power, repeat until the input pile is all used
 
 	return output
-
-
-/proc/rand_between(lower, upper)
-	return (rand() * (upper - lower)) + lower
-
-/proc/shortest_angle(delta)
-	return (delta - round(delta, 360))

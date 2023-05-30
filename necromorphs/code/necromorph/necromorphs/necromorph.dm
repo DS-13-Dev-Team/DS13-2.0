@@ -53,6 +53,9 @@
 	else if(stat == UNCONSCIOUS)
 		set_stat(CONSCIOUS)
 
+/mob/living/carbon/human/necromorph/proc/handle_death_check()
+	return TRUE
+
 /mob/living/carbon/human/necromorph/set_stat(new_stat)
 	.=..()
 	if(stat < UNCONSCIOUS)

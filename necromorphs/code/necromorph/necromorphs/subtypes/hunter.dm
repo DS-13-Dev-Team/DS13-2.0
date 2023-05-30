@@ -10,6 +10,34 @@
 /mob/living/carbon/human/necromorph/hunter/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.hunter_sounds[audio_type]), volume, vary, extra_range)
 
+/mob/living/carbon/human/necromorph/hunter/proc/can_false_death()
+	if(GetComponent(/datum/component/regenerate/hunter_passive))
+		return TRUE
+	return FALSE
+
+/mob/living/carbon/human/necromorph/hunter/handle_death_check()
+	var/total_burn = 0
+	var/total_brute = 0
+	for(var/obj/item/bodypart/BP as anything in bodyparts) //hardcoded to streamline things a bit
+		total_brute += (BP.brute_dam * BP.body_damage_coeff)
+		total_burn += (BP.burn_dam * BP.body_damage_coeff)
+	var/damage = getOxyLoss() + getToxLoss() - getCloneLoss() - total_burn - total_brute
+	if(damage >= maxHealth)
+
+		if(total_burn >= (maxHealth * 0.5))
+			return TRUE
+
+		if (getLastingDamage() >= maxHealth)
+			return TRUE
+
+		if (can_false_death())
+			AddComponent(/datum/component/regenerate/hunter_passive)
+			play_necro_sound(SOUND_DEATH, VOLUME_HIGH)
+
+		return FALSE
+
+	return FALSE
+
 /datum/necro_class/hunter
 	display_name = "Hunter"
 	desc = "A rapidly regenerating vanguard, designed to lead the charge, suffer a glorious death, then get back up and do it again. \
