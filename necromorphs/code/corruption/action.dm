@@ -43,9 +43,9 @@
 			to_chat(signal, span_warning("Turf is obstructed!"))
 			return
 	if(istype(signal, /mob/camera/marker_signal/marker))
-		signal.marker.marker_biomass -= cost
+		signal.marker.change_marker_biomass(-cost)
 	else
-		signal.marker.signal_biomass -= cost
+		signal.marker.change_signal_biomass(-cost)
 	var/obj/structure/necromorph/structure = new place_structure(target_turf, signal.marker)
 	structure.dir = template.dir
 	..()

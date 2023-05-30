@@ -16,8 +16,11 @@
 	desc = "An expendable suicide bomber, the exploder's sole purpose is to go out in a blaze of glory, and hopefully take a few people with it."
 	ui_icon = 'necromorphs/icons/necromorphs/exploder/exploder.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/exploder
-	melee_damage_lower = 10
-	melee_damage_upper = 16
+	tier = 1
+	biomass_cost = 75
+	biomass_spent_required = 0
+	melee_damage_lower = 4
+	melee_damage_upper = 8
 	max_health = 100
 	actions = list(
 		/datum/action/cooldown/necro/shout,

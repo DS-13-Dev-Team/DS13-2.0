@@ -142,7 +142,7 @@
 	. = list()
 	.["biomass"] = marker_biomass
 	.["biomass_income"] = last_biomass_income
-	.["biomass_invested"] = spent_biomass
+	.["biomass_invested"] = biomass_invested
 	.["use_necroqueue"] = use_necroqueue
 	.["signal_biomass"] = signal_biomass
 	.["signal_biomass_percent"] = signal_biomass_percent
