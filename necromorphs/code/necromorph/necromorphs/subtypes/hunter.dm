@@ -80,6 +80,11 @@
 		'necromorphs/sound/effects/footstep/ubermorph_footstep_4.ogg'
 	)
 
+/datum/species/necromorph/hunter/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/H, forced, spread_damage, sharpness, attack_direction)
+	if(H.health - damage <= 0)
+		return H.handle_death_check()
+	. = ..()
+
 /datum/action/cooldown/necro/regenerate/hunter
 	desc = "Regrows a missing limb and restores some of your health."
 	cooldown_time = 30 SECONDS
