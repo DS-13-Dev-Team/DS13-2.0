@@ -1,0 +1,126 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/supply)
+"b" = (
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"c" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"d" = (
+/obj/machinery/door/unpowered/shuttle,
+/turf/open/floor/deadspace/mono,
+/area/shuttle/supply)
+"e" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"g" = (
+/obj/machinery/light/floor/has_bulb,
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"h" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"i" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/open/floor/plating,
+/area/shuttle/supply)
+"q" = (
+/obj/machinery/door/unpowered/shuttle,
+/obj/docking_port/mobile/supply{
+	dir = 4;
+	dheight = 2
+	},
+/turf/open/floor/deadspace/mono,
+/area/shuttle/supply)
+
+(1,1,1) = {"
+a
+a
+a
+d
+q
+d
+d
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+b
+b
+e
+e
+e
+e
+b
+a
+i
+"}
+(3,1,1) = {"
+a
+c
+b
+b
+b
+b
+b
+h
+a
+i
+"}
+(4,1,1) = {"
+a
+b
+b
+b
+g
+b
+b
+b
+a
+i
+"}
+(5,1,1) = {"
+a
+c
+b
+b
+b
+b
+b
+h
+a
+i
+"}
+(6,1,1) = {"
+a
+b
+b
+b
+b
+b
+b
+b
+a
+i
+"}
+(7,1,1) = {"
+a
+a
+a
+d
+d
+d
+d
+a
+a
+a
+"}
