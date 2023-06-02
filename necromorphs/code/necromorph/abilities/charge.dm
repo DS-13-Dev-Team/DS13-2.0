@@ -17,18 +17,10 @@
 	var/speed_per_step = 0.15
 	var/max_steps_buildup = 14
 
-/datum/action/cooldown/necro/charge/New(Target, cooldown, delay, time, speed, damage)
-	.=..()
-	if(!isnull(delay))
-		charge_delay = delay
-	if(!isnull(time))
-		charge_time = time
-	if(!isnull(speed))
-		charge_speed = speed
-	if(!isnull(damage))
-		charge_damage = damage
+	var/atom/target_atom
 
 /datum/action/cooldown/necro/charge/Activate(atom/target_atom)
+	. = TRUE
 	var/turf/T = get_turf(target_atom)
 	if(!T)
 		return
@@ -41,9 +33,10 @@
 		return
 	// Start pre-cooldown so that the ability can't come up while the charge is happening
 	StartCooldown(charge_time+charge_delay+1)
-	do_charge(owner, target_atom)
+	src.target_atom = target_atom
+	addtimer(CALLBACK(src, PROC_REF(do_charge), owner), charge_delay)
 
-/datum/action/cooldown/necro/charge/proc/do_charge(mob/living/carbon/human/necromorph/charger, atom/target_atom)
+/datum/action/cooldown/necro/charge/proc/do_charge(mob/living/carbon/human/necromorph/charger)
 	actively_moving = FALSE
 	charger.charging = TRUE
 	SEND_SIGNAL(charger, COMSIG_STARTED_CHARGE)
@@ -53,14 +46,12 @@
 	charger.setDir(get_dir(charger, target_atom))
 	do_charge_indicator(target_atom)
 
-	SLEEP_CHECK_DEATH(charge_delay, charger)
-
-	var/datum/move_loop/new_loop = SSmove_manager.home_onto(charger, target_atom, timeout = charge_time, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
+	var/datum/move_loop/new_loop = SSmove_manager.move_towards(charger, target_atom, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
 	if(!new_loop)
 		return
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, PROC_REF(pre_move))
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_POSTPROCESS, PROC_REF(post_move))
-	RegisterSignal(new_loop, COMSIG_PARENT_QDELETING, PROC_REF(charge_end))
+	RegisterSignal(new_loop, list(COMSIG_PARENT_QDELETING, COMSIG_MOVELOOP_STOP), PROC_REF(charge_end))
 	RegisterSignal(charger, COMSIG_MOB_STATCHANGE, PROC_REF(stat_changed))
 	RegisterSignal(charger, COMSIG_LIVING_UPDATED_RESTING, PROC_REF(update_resting))
 
@@ -75,17 +66,29 @@
 /datum/action/cooldown/necro/charge/proc/charge_end(datum/move_loop/source)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/charger = source.moving
-	UnregisterSignal(charger, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING))
+	UnregisterSignal(charger, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING, COMSIG_MOVELOOP_STOP))
 	charger.charging = FALSE
+	charger.remove_movespeed_modifier(/datum/movespeed_modifier/necro_charge)
 	SEND_SIGNAL(owner, COMSIG_FINISHED_CHARGE)
 	actively_moving = FALSE
 	StartCooldown()
+
+//Called when we reach max time or range
+//Drain the user's stamina?
+/datum/action/cooldown/necro/charge/proc/stop_peter_out()
+	if (isliving(owner))
+		peter_out_effects()
+	SSmove_manager.stop_looping(owner)
+
+//Called when the charge reaches max time or range
+/datum/action/cooldown/necro/charge/proc/peter_out_effects()
+	return
 
 /datum/action/cooldown/necro/charge/proc/stat_changed(mob/source, new_stat, old_stat)
 	SIGNAL_HANDLER
 	if(new_stat > CONSCIOUS)
 		//This will cause the loop to qdel, triggering an end to our charging
-		SSmove_manager.stop_looping(source)
+		stop_peter_out()
 
 /datum/action/cooldown/necro/charge/proc/do_charge_indicator(atom/charge_target)
 	return
@@ -100,13 +103,21 @@
 	var/mob/living/carbon/human/necromorph/charger = source
 	if(++valid_steps_taken <= max_steps_buildup)
 		charger.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/necro_charge, TRUE, -CHARGE_SPEED(src))
+
+	//If we have entered the same turf as our target then it must have been nondense. Let's hit it
+	if (source.loc == target_atom.loc || source.loc == target_atom)
+		. = on_bump(source, target_atom)
+	else
+		//Light shake with each step
+		shake_camera(source, 1.5, 0.5)
+
 	return
 
 /datum/action/cooldown/necro/charge/proc/on_bump(atom/movable/source, atom/target)
 	SIGNAL_HANDLER
 	if(ismob(target) || target.uses_integrity)
 		hit_target(source, target)
-	SSmove_manager.stop_looping(source)
+	SSmove_manager.stop_looping(owner)
 
 /datum/action/cooldown/necro/charge/proc/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	target.attack_necromorph(source, dealt_damage = charge_damage)

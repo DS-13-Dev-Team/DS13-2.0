@@ -1267,6 +1267,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if(!damage || (!forced && hit_percent <= 0))
 		return 0
 
+	damage *= H.incoming_damage_mult
+
 	var/obj/item/bodypart/BP = null
 	if(!spread_damage)
 		if(isbodypart(def_zone))
