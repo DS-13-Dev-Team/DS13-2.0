@@ -1,0 +1,6 @@
+author: DTraitor
+delete-after: true
+changes:
+  - rscadd: Added enhanced slasher
+  - qol: You can see invested biomass in the Marker UI
+  - balance: Necromorphs have proper cost now
