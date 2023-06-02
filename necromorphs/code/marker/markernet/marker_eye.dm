@@ -188,6 +188,9 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	if(necro.stat == DEAD)
 		to_chat(src, span_notice("This vessel was damaged beyond use!"))
 		return
+	if(necro.controlling)
+		to_chat(src, span_notice("This vessel is already possessed!"))
+		return
 	necro.controlling = src
 	mind.transfer_to(necro, TRUE)
 	abstract_move(null)
