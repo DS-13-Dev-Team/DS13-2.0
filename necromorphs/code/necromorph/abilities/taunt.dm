@@ -54,7 +54,7 @@
 	StartCooldown()
 	if (type_buff && !buff)
 		buff = owner.AddComponent(type_buff)
-	if (!M.get_filter("taunt"))
+	if (!owner.get_filter("taunt"))
 		var/newfilter = filter(type="outline", size = 1, color = rgb(255,0,0,128))
 		owner.add_filter("taunt", 1, newfilter)
 	ongoing_timer = addtimer(CALLBACK(src, PROC_REF(stop)), duration, TIMER_STOPPABLE)
@@ -68,7 +68,7 @@
 	if (buff)
 		qdel(buff)
 		buff = null
-	if (M.get_filter("taunt"))
+	if (owner.get_filter("taunt"))
 		owner.remove_filter("taunt")
 	if (comps_observations != list())
 		for(var/datum/component/statmod/taunt_companion/comp as anything in comps_observations)
