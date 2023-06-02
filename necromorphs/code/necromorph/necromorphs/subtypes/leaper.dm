@@ -36,7 +36,7 @@
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "leaper"
-	implemented = TRUE
+	implemented = FALSE
 
 /datum/species/necromorph/leaper
 	name = "Leaper"

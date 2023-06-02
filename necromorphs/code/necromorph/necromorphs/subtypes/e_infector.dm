@@ -9,7 +9,7 @@
 	display_name = "Enhanced Infector"
 	desc = "Unlike the more fragile counterpart, this infector is a capable fighter. However, nothing compares to its supportive capabilities."
 	ui_icon = 'necromorphs/icons/necromorphs/infector.dmi'
-	necromorph_type_path = /mob/living/carbon/human/necromorph/infector
+	necromorph_type_path = /mob/living/carbon/human/necromorph/infector/enhanced
 	melee_damage_lower = 10
 	melee_damage_upper = 16
 	max_health = 185

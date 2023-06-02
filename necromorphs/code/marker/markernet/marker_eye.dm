@@ -231,6 +231,8 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	interaction_range = null
 	pixel_x = -7
 	pixel_y = -7
+	psy_energy_maximum = 4500
+	psy_energy_generation = 5
 	///Used when spawning necromorphs
 	var/image/necro_preview
 	///Necro class of a necromorph we are going to spawn
@@ -303,7 +305,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	A.attack_marker_signal(src)
 
 /mob/camera/marker_signal/marker/proc/spawn_necromorph(turf/A)
-	if(marker.spent_biomass < marker.necro_classes[spawning_necromorph].biomass_spent_required)
+	if(marker.biomass_invested < marker.necro_classes[spawning_necromorph].biomass_spent_required)
 		to_chat(src, span_warning("Not enough biomass spent!"))
 		return
 	if(marker.marker_biomass < marker.necro_classes[spawning_necromorph].biomass_cost)
@@ -328,7 +330,8 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		if(!can_see(turf_loc, A, 4))
 			spawnloc_cantsee = TRUE
 			continue
-		marker.marker_biomass -= marker.necro_classes[spawning_necromorph].biomass_cost
+		marker.change_marker_biomass(-marker.necro_classes[spawning_necromorph].biomass_cost)
+		marker.biomass_invested += marker.necro_classes[spawning_necromorph].biomass_cost
 		var/path = marker.necro_classes[spawning_necromorph].necromorph_type_path
 		var/mob/living/carbon/human/necromorph/mob = new path(A, marker)
 		if(marker.use_necroqueue && length(marker.marker_signals-src))

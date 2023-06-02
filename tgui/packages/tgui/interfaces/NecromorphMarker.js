@@ -6,8 +6,9 @@ export const NecromorphMarker = (props, context) => {
   const { act, data } = useBackend(context);
   const {
     necromorphs,
-    sprites,
     use_necroqueue,
+    biomass_invested,
+    biomass,
   } = data;
 
   const [chosenNecromorph, setChosenNecromorph] = useLocalState(context, 'picked_necromorph', necromorphs.sort((a, b) => { return a.cost - b.cost; })[0]);
@@ -22,19 +23,9 @@ export const NecromorphMarker = (props, context) => {
             <Stack vertical fill>
               <Stack.Item grow>
                 {chosenNecromorph ? (
-                  <Stack>
-                    <Stack.Item>
-                      <Box className={"MarkerIconFrame necromorphs"+sprites[chosenNecromorph.name]+" "+chosenNecromorph.name} />
-                    </Stack.Item>
-                    <Stack.Item>
-                      <Box bold>
-                        {chosenNecromorph.name} | Cost: {chosenNecromorph.cost}
-                      </Box>
-                      {chosenNecromorph.desc}
-                    </Stack.Item>
-                  </Stack>
+                  <NecromorphDisplay chosenNecromorph={chosenNecromorph} />
                 ) : (
-                  <Box>Test</Box>
+                  <Box>Choose a necromorph!</Box>
                 )}
               </Stack.Item>
               <Stack.Item>
@@ -88,7 +79,11 @@ export const NecromorphMarker = (props, context) => {
                     fluid
                     fontSize={2.5}
                     textAlign="center"
-                    disabled={!chosenNecromorph}
+                    disabled={
+                      !chosenNecromorph
+                      || biomass_invested < chosenNecromorph.biomass_required
+                      || biomass < chosenNecromorph.cost
+                    }
                     onClick={() => act('spawn_necromorph', { "class": chosenNecromorph.type })}>
                     Spawn
                   </Button>
@@ -99,6 +94,45 @@ export const NecromorphMarker = (props, context) => {
         </Stack>
       </Window.Content>
     </Window>
+  );
+};
+
+export const NecromorphDisplay = (props, context) => {
+  const { act, data } = useBackend(context);
+  const {
+    sprites,
+    biomass_invested,
+  } = data;
+  const {
+    chosenNecromorph,
+  } = props;
+
+  return (
+    <Stack>
+      <Stack.Item>
+        <Box
+          className={
+            "MarkerIconFrame necromorphs"+sprites[chosenNecromorph.name.replace(/[^a-zA-Z0-9]/g, '')]+" "
+          +chosenNecromorph.name.replace(/[^a-zA-Z0-9]/g, '')
+          }
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Box bold>
+          {chosenNecromorph.name} | Cost: {chosenNecromorph.cost} | {
+            ((chosenNecromorph.biomass_required > 0)
+            && (biomass_invested < chosenNecromorph.biomass_required)) ? (
+                "To unlock: "+biomass_invested+"/"+chosenNecromorph.biomass_required
+              ) : (
+                <Box inline color="green">
+                  Unlocked
+                </Box>
+              )
+          }
+        </Box>
+        {chosenNecromorph.desc}
+      </Stack.Item>
+    </Stack>
   );
 };
 

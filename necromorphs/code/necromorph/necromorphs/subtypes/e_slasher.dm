@@ -11,17 +11,21 @@
 	display_name = "Enhanced Slasher"
 	desc = "The frontline soldier of the necromorph horde. Slow when not charging, but its blade arms make for powerful melee attacks"
 	ui_icon = 'necromorphs/icons/necromorphs/slasher_enhanced.dmi'
-	necromorph_type_path = /mob/living/carbon/human/necromorph/slasher
-	melee_damage_lower = 10
-	melee_damage_upper = 16
+	necromorph_type_path = /mob/living/carbon/human/necromorph/slasher/enhanced
+	tier = 2
+	biomass_cost = 125
+	biomass_spent_required = 680
+	melee_damage_lower = 18
+	melee_damage_upper = 22
 	max_health = 215
 	actions = list(
-		/datum/action/cooldown/necro/charge/slasher,
+		/datum/action/cooldown/necro/charge/slasher/enhanced,
 		/datum/action/cooldown/necro/dodge/enhanced,
-
+		/datum/action/cooldown/necro/shout,
+		/datum/action/cooldown/necro/scream,
 	)
 	minimap_icon = "e_slasher"
-	implemented = FALSE
+	implemented = TRUE
 
 /datum/species/necromorph/slasher/enhanced
 	name = "Enhanced Slasher"
@@ -44,5 +48,10 @@
 		'necromorphs/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_3.ogg'
 	)
 
+/datum/action/cooldown/necro/charge/slasher/enhanced
+	cooldown_time = 20 SECONDS
+	charge_delay = 0.75 SECONDS
+	charge_time = 4 SECONDS
+
 /datum/action/cooldown/necro/dodge/enhanced
-	cooldown_time = 5 SECONDS
+	cooldown_time = 6 SECONDS

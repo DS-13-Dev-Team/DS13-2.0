@@ -10,8 +10,11 @@
 	desc = "A tough and flexible elite who fights by dousing enemies in acid, and is effective at all ranges. Good for crowd control and direct firefights"
 	ui_icon = 'necromorphs/icons/necromorphs/puker/puker.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/puker
-	melee_damage_lower = 10
-	melee_damage_upper = 16
+	tier = 2
+	biomass_cost = 125
+	biomass_spent_required = 680
+	melee_damage_lower = 7
+	melee_damage_upper = 10
 	max_health = 100
 	actions = list(
 		/datum/action/cooldown/necro/shoot/puker_snapshot,

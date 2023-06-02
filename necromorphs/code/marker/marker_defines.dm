@@ -26,7 +26,7 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	/// Biomass signals can use
 	var/signal_biomass = 0
 	/// Biomass marker spent since the start of the round
-	var/spent_biomass = 0
+	var/biomass_invested = 0
 	/// Sources of biomass income
 	var/list/datum/biomass_source/biomass_sources = list()
 	/// Biomass recieve by the marker in the last process() call

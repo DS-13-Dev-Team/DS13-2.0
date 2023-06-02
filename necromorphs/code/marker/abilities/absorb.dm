@@ -42,8 +42,8 @@
 	for(var/obj/item/item as anything in absorbed_atoms)
 		new /obj/effect/temp_visual/decoy/absorb(get_turf(item), item, target)
 		qdel(item)
-	caller.marker.marker_biomass += (absorbed_biomass * 0.4)
-	caller.marker.signal_biomass += (absorbed_biomass * 0.6)
+	caller.marker.change_marker_biomass(absorbed_biomass * 0.4)
+	caller.marker.change_signal_biomass(absorbed_biomass * 0.6)
 	to_chat(caller, span_notice("Gained total of [absorbed_biomass] biomass from absorbing [length(absorbed_atoms)] thing\s!"))
 	return TRUE
 
