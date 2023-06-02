@@ -138,8 +138,6 @@
 					STATMOD_INCOMING_DAMAGE_MULTIPLICATIVE = 0.6
 	)
 
-	var/dm_filter/outline
-
 /datum/component/statmod/regenerate_afterbuff/Initialize(duration)
 	. = ..()
 	if (duration)
@@ -150,10 +148,9 @@
 /datum/component/statmod/regenerate_afterbuff/proc/start()
 	started_at	=	world.time
 	var/mob/living/M = parent
-	if (!outline)
+	if (!M.get_filter("afterbuff"))
 		var/newfilter = filter(type="outline", size = 1, color = rgb(255,0,0,128))
-		M.filters.Add(newfilter)
-		outline = M.filters[M.filters.len]
+		M.add_filter("afterbuff", 1, newfilter)
 
 	ongoing_timer = addtimer(CALLBACK(src, PROC_REF(stop)), duration, TIMER_STOPPABLE)
 
@@ -161,8 +158,7 @@
 	deltimer(ongoing_timer)
 	stopped_at = world.time
 	var/mob/living/M = parent
-	if (outline)
-		M.filters.Remove(outline)
-		outline = null
+	if (M.get_filter("afterbuff"))
+		M.remove_filter("afterbuff")
 
 	qdel(src)

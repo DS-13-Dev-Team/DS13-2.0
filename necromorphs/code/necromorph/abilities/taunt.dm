@@ -35,8 +35,6 @@
 	var/type_buff = null
 	var/datum/component/statmod/buff
 
-	var/dm_filter/outline
-
 /datum/action/cooldown/necro/taunt/PreActivate(atom/target)
 	if (owner.incapacitated())
 		return FALSE
@@ -56,10 +54,9 @@
 	StartCooldown()
 	if (type_buff && !buff)
 		buff = owner.AddComponent(type_buff)
-	if (!outline)
+	if (!M.get_filter("taunt"))
 		var/newfilter = filter(type="outline", size = 1, color = rgb(255,0,0,128))
-		owner.filters.Add(newfilter)
-		outline = owner.filters[owner.filters.len]
+		owner.add_filter("taunt", 1, newfilter)
 	ongoing_timer = addtimer(CALLBACK(src, PROC_REF(stop)), duration, TIMER_STOPPABLE)
 	if (tick_interval)
 		tick_timer = addtimer(CALLBACK(src, PROC_REF(tick)), tick_interval, TIMER_STOPPABLE)
@@ -71,9 +68,8 @@
 	if (buff)
 		qdel(buff)
 		buff = null
-	if (outline)
-		owner.filters.Remove(outline)
-		outline = null
+	if (M.get_filter("taunt"))
+		owner.remove_filter("taunt")
 	if (comps_observations != list())
 		for(var/datum/component/statmod/taunt_companion/comp as anything in comps_observations)
 			comp.end()
