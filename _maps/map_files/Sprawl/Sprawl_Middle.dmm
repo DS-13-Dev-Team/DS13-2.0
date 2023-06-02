@@ -9877,7 +9877,7 @@
 /area/sprawl/civilian/medical/med_storage)
 "aPd" = (
 /obj/machinery/defibrillator_mount/charging{
-	pixel_w = -32
+	pixel_y = -32
 	},
 /turf/open/floor/iron/smooth_large,
 /area/sprawl/civilian/medical/med_storage)
@@ -12877,7 +12877,6 @@
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/engi/reactor_control)
 "bbd" = (
-/obj/structure/lattice,
 /turf/closed/wall/r_wall,
 /area/sprawl/civilian/engi/atmos)
 "bbe" = (

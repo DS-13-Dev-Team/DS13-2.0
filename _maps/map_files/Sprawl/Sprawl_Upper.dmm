@@ -1304,7 +1304,6 @@
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/service/church/upper/daina_office)
 "fI" = (
-/obj/structure/lattice,
 /turf/closed/wall/r_wall,
 /area/sprawl/civilian)
 "fJ" = (
