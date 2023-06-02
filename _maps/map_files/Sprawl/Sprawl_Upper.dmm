@@ -60,10 +60,6 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/command/upper/misc_room1)
-"ar" = (
-/obj/machinery/power/apc/auto_name/directional/north,
-/turf/open/floor/iron/dark,
-/area/sprawl/civilian/science/upper/site_12_diagnostic)
 "as" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced/spawner/west,
@@ -1303,9 +1299,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/service/church/upper/daina_office)
-"fI" = (
-/turf/closed/wall/r_wall,
-/area/sprawl/civilian)
 "fJ" = (
 /obj/structure/chair/sofa/corp/right,
 /turf/open/floor/carpet/black,
@@ -64861,7 +64854,7 @@ pc
 pc
 pc
 pc
-ar
+ak
 ak
 aQ
 ba
@@ -82897,7 +82890,7 @@ fl
 fl
 ru
 pc
-fI
+pc
 pc
 pc
 pc
@@ -84709,7 +84702,7 @@ fl
 fl
 ru
 pc
-fI
+pc
 pc
 pc
 pc
@@ -86521,7 +86514,7 @@ fl
 fl
 ru
 pc
-fI
+pc
 pc
 pc
 pc
@@ -88333,7 +88326,7 @@ fl
 fl
 ru
 pc
-fI
+pc
 pc
 pc
 pc

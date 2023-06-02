@@ -6549,9 +6549,9 @@
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/hallway/hallway_sec_north)
 "aBp" = (
-/obj/machinery/airalarm/directional/north,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
-/area/sprawl/civilian/command/exterior_checkpoint)
+/area/sprawl/civilian/command/storage2)
 "aBq" = (
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/checkpoint/_concourse_cassini)
@@ -7142,11 +7142,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/command/hallway_nwest)
-"aDW" = (
-/obj/machinery/power/apc/auto_name/directional/east,
-/obj/structure/cable,
-/turf/open/floor/iron/dark,
-/area/sprawl/civilian/command/hallway_north)
 "aDX" = (
 /obj/structure/table/wood,
 /obj/machinery/light/directional/west,
@@ -12865,8 +12860,10 @@
 /turf/open/floor/iron/smooth_large,
 /area/sprawl/civilian/engi/reactor_control)
 "bba" = (
-/turf/closed/wall/r_wall,
-/area/sprawl/civilian/engi/atmos)
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/sprawl/civilian/command/storage2)
 "bbb" = (
 /obj/machinery/door/airlock/highsecurity,
 /obj/structure/cable,
@@ -18216,15 +18213,13 @@
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/hallway/plaza_east)
 "bxS" = (
-/obj/machinery/power/apc/auto_name/directional/north,
+/obj/machinery/light/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
-/area/sprawl/civilian/hallway/plaza_east)
+/area/sprawl/civilian/command/storage2)
 "bxT" = (
-/obj/machinery/airalarm/directional/north,
-/obj/structure/cable,
 /turf/open/floor/iron/dark,
-/area/sprawl/civilian/hallway/plaza_east)
+/area/sprawl/civilian/command/storage2)
 "bxU" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark,
@@ -21075,7 +21070,7 @@
 "bJD" = (
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/dark,
-/area/sprawl/civilian/command/storage1)
+/area/sprawl/civilian/command/storage2)
 "bJE" = (
 /obj/machinery/door/airlock,
 /obj/structure/cable,
@@ -65859,8 +65854,8 @@ aeu
 aeu
 aeP
 aeu
-ard
-aDW
+aeu
+aeP
 aeu
 aeu
 aeP
@@ -72794,9 +72789,9 @@ aSC
 aSC
 aSC
 aSC
-bJy
+bba
 bJD
-bJw
+bxT
 aSC
 aie
 aid
@@ -73096,9 +73091,9 @@ aSC
 aSC
 aSC
 aSC
-bJx
-bJB
-bJB
+bxS
+aBp
+aBp
 bJJ
 aid
 aid
@@ -73398,9 +73393,9 @@ aHU
 aHU
 aHU
 aSC
-bJw
-bJw
-bJw
+bxT
+bxT
+bxT
 bJI
 aie
 aie
@@ -75690,7 +75685,7 @@ aXf
 aXl
 aXp
 aHU
-bxS
+bxI
 bxH
 bxH
 bxH
@@ -75992,7 +75987,7 @@ aXf
 aXm
 aXq
 aHU
-bxT
+bxI
 bxH
 bxH
 bxH
@@ -77064,7 +77059,7 @@ aln
 aln
 aSC
 aSC
-aBc
+aFL
 aFL
 aFL
 aFL
@@ -77366,7 +77361,7 @@ aln
 aln
 aSC
 aSC
-aBp
+aAF
 aAF
 aAF
 aAF
@@ -94732,9 +94727,9 @@ aZY
 aZY
 aZY
 aZY
-bba
-bba
-bba
+bbd
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -95034,9 +95029,9 @@ aZY
 aZY
 aZY
 aZY
-bba
-bba
-bba
+bbd
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -95336,9 +95331,9 @@ aZY
 aZY
 aZY
 aZY
-bba
-bba
-bba
+bbd
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -96544,9 +96539,9 @@ aZY
 aZY
 aZY
 aZY
-bba
-bba
-bba
+bbd
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -96846,9 +96841,9 @@ aZY
 aZY
 aZY
 aZY
-bba
 bbd
-bba
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -97148,9 +97143,9 @@ aZY
 aZY
 aZY
 aZY
-bba
-bba
-bba
+bbd
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -98356,9 +98351,9 @@ aZY
 aZY
 aZY
 aZY
-bba
-bba
-bba
+bbd
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -98658,9 +98653,9 @@ aZY
 aZY
 aZY
 aZY
-bba
 bbd
-bba
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -98960,9 +98955,9 @@ aZY
 aZY
 aZY
 aZY
-bba
-bba
-bba
+bbd
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -100168,9 +100163,9 @@ aZY
 aZY
 aZY
 aZY
-bba
-bba
-bba
+bbd
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -100470,9 +100465,9 @@ aZY
 aZY
 aZY
 aZY
-bba
 bbd
-bba
+bbd
+bbd
 aZY
 aZY
 aZY
@@ -100772,9 +100767,9 @@ aZY
 aZY
 aZY
 aZY
-bba
-bba
-bba
+bbd
+bbd
+bbd
 aZY
 aZY
 aZY
