@@ -23014,6 +23014,14 @@
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/open/misc/grass,
 /area/sprawl/civilian/command/hallway_nwest)
+"iaF" = (
+/obj/effect/turf_decal/delivery,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/machinery/door/airlock/external{
+	name = "Departure Lounge Airlock"
+	},
+/turf/open/floor/iron,
+/area/sprawl/civilian/theights/civ_evac)
 "ijo" = (
 /obj/structure/rack/shelf,
 /obj/item/cultivator,
@@ -23037,6 +23045,11 @@
 /obj/item/storage/toolbox/electrical,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/command/smes_storage)
+"iVq" = (
+/obj/machinery/light/small/directional/west,
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/iron,
+/area/sprawl/civilian/theights/civ_evac)
 "iYy" = (
 /obj/machinery/light/directional/north,
 /obj/structure/chair/sofa/bench/right,
@@ -23046,6 +23059,17 @@
 /obj/structure/chair/sofa/bench,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/hallway/vandal_east)
+"jql" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 9;
+	height = 25;
+	id = "emergency_home";
+	name = "MetaStation emergency evac bay";
+	width = 29
+	},
+/turf/open/space/basic,
+/area/space)
 "jrv" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/misc/grass,
@@ -23063,6 +23087,13 @@
 	},
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/command/hallway_nwest)
+"jUP" = (
+/obj/machinery/door/airlock{
+	name = "Titan Heights"
+	},
+/obj/structure/cable,
+/turf/open/floor/carpet,
+/area/sprawl/civilian/theights/hallway)
 "kby" = (
 /obj/structure/chair/sofa/bench,
 /turf/open/floor/iron/dark,
@@ -23091,6 +23122,12 @@
 /obj/structure/chair/sofa/bench,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/hallway/vandal_east)
+"lrJ" = (
+/obj/machinery/door/airlock{
+	name = "Titan Heights"
+	},
+/turf/open/floor/carpet,
+/area/sprawl/civilian/theights/hallway)
 "lJO" = (
 /obj/structure/chair/sofa/bench{
 	dir = 1
@@ -23145,6 +23182,9 @@
 /obj/structure/railing,
 /turf/open/floor/grass,
 /area/sprawl/civilian/command/hallway_north)
+"mQn" = (
+/turf/open/floor/carpet,
+/area/sprawl/civilian/theights/civ_evac)
 "mWl" = (
 /obj/structure/rack/shelf,
 /obj/item/reagent_containers/glass/bucket,
@@ -23190,6 +23230,10 @@
 /obj/item/hatchet,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/service/hydrophonics)
+"pdq" = (
+/obj/structure/cable,
+/turf/open/floor/carpet,
+/area/sprawl/civilian/theights/civ_evac)
 "pjK" = (
 /obj/structure/chair/sofa/bench/right,
 /turf/open/floor/iron/dark,
@@ -23203,6 +23247,10 @@
 	},
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/hallway/plaza_med)
+"qgO" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/carpet,
+/area/sprawl/civilian/theights/civ_evac)
 "qiZ" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood,
@@ -23368,6 +23416,17 @@
 /obj/structure/chair,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/science/subject_waiting)
+"xQG" = (
+/obj/machinery/door/airlock/external{
+	name = "Departure Lounge Airlock";
+	space_dir = 2
+	},
+/obj/effect/turf_decal/delivery,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/sprawl/civilian/theights/civ_evac)
 "xWj" = (
 /obj/structure/chair/sofa/bench/left{
 	dir = 1
@@ -81339,13 +81398,13 @@ bEc
 bDY
 bDX
 bDW
-bDP
-bDP
-bDP
-aHU
-aHU
-aSC
-aSC
+mQn
+mQn
+mQn
+iaF
+iVq
+iVq
+xQG
 aaa
 aaa
 aaa
@@ -81641,8 +81700,8 @@ bDP
 bDZ
 bDW
 bDW
-bDP
-bDP
+mQn
+mQn
 bDP
 aHU
 aHU
@@ -81943,13 +82002,13 @@ bDP
 bDZ
 bDW
 bDW
-bDP
-bDP
-bDP
-aHU
-aHU
-aSC
-aSC
+mQn
+mQn
+mQn
+iaF
+iVq
+iVq
+xQG
 aaa
 aaa
 aaa
@@ -82245,8 +82304,8 @@ bEd
 bDY
 bDX
 bDW
-bDP
-bDP
+mQn
+mQn
 bDP
 aHU
 aHU
@@ -82547,8 +82606,8 @@ bEm
 bDY
 bDX
 bDW
-bDP
-bDP
+mQn
+mQn
 bDP
 aHU
 aHU
@@ -82849,8 +82908,8 @@ bEl
 bDY
 bDX
 bDW
-bDP
-bDP
+mQn
+mQn
 bEn
 aHU
 aHU
@@ -83151,8 +83210,8 @@ bEl
 bDY
 bDX
 bDW
-bDP
-bDP
+mQn
+mQn
 bDP
 aHU
 aHU
@@ -83431,12 +83490,12 @@ bzx
 bzx
 bzx
 bzx
-bzq
-bDO
-bDO
-bDO
-bDO
-bDO
+lrJ
+pdq
+pdq
+pdq
+pdq
+pdq
 bDP
 bDP
 bDP
@@ -83453,8 +83512,8 @@ bEl
 bDY
 bDX
 bDW
-bDP
-bDP
+mQn
+mQn
 bDP
 aHU
 aHU
@@ -83733,12 +83792,12 @@ bzw
 bzw
 bzw
 bzw
-bzp
-bDO
-bDP
-bDP
-bDP
-bDP
+jUP
+pdq
+mQn
+mQn
+mQn
+mQn
 bDP
 bDP
 bDP
@@ -83755,14 +83814,14 @@ bDY
 bDY
 bDX
 bDW
-bDP
-bDP
-bDP
-aHU
-aHU
-aSC
-aSC
-aaa
+mQn
+mQn
+mQn
+iaF
+iVq
+iVq
+xQG
+jql
 aaa
 aaa
 aaa
@@ -84039,8 +84098,8 @@ aHU
 pjK
 bDP
 bDP
-bDP
-bDP
+mQn
+mQn
 bDP
 bDV
 bDP
@@ -84057,8 +84116,8 @@ bDP
 bDY
 bDX
 bDW
-bDP
-bDP
+mQn
+mQn
 bDP
 aHU
 aHU
@@ -84341,8 +84400,8 @@ aHU
 nLw
 bDP
 bDP
-bDP
-bDP
+mQn
+mQn
 bDP
 aHU
 pjK
@@ -84359,13 +84418,13 @@ bDP
 bDY
 bDX
 bDW
-bDP
-bDP
-bDP
-aHU
-aHU
-aSC
-aSC
+mQn
+mQn
+mQn
+iaF
+iVq
+iVq
+xQG
 aaa
 aaa
 aaa
@@ -84643,8 +84702,8 @@ aHU
 aHU
 aHU
 iYy
-bDP
-bDP
+mQn
+mQn
 aHU
 aHU
 fsq
@@ -84661,8 +84720,8 @@ bDP
 bDY
 bDX
 bDW
-bDP
-bDP
+mQn
+mQn
 bDP
 aHU
 aHU
@@ -84945,8 +85004,8 @@ aHU
 aHU
 aHU
 kby
-bDP
-bDP
+mQn
+mQn
 bDP
 bDP
 bDP
@@ -84963,8 +85022,8 @@ bDY
 bDY
 bDX
 bDW
-bDP
-bDP
+mQn
+mQn
 bEn
 aHU
 aHU
@@ -85247,8 +85306,8 @@ aHU
 aHU
 aHU
 nLw
-bDP
-bDP
+mQn
+mQn
 bDP
 bDP
 bDP
@@ -85265,8 +85324,8 @@ bDX
 bDX
 bDX
 bDW
-bDP
-bDP
+mQn
+mQn
 bDP
 aHU
 aHU
@@ -85549,12 +85608,12 @@ aHU
 aHU
 aHU
 bDP
+mQn
+mQn
 bDP
 bDP
 bDP
 bDP
-bDP
-bDP
 bDW
 bDW
 bDW
@@ -85567,8 +85626,8 @@ bDW
 bDW
 bDW
 bDW
-bDP
-bDP
+mQn
+mQn
 bDP
 aHU
 aHU
@@ -85851,26 +85910,26 @@ aHU
 aHU
 aHU
 bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
 bDP
 aHU
 aHU
@@ -86153,26 +86212,26 @@ aHU
 aHU
 aHU
 pjK
-bDP
-bDP
-bDP
-bDU
-bDP
-bDP
-bDP
-bDU
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
-bDP
+mQn
+mQn
+mQn
+qgO
+mQn
+mQn
+mQn
+qgO
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
+mQn
 bDP
 aHU
 aHU
