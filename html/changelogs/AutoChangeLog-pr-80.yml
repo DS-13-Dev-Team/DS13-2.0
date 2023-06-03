@@ -1,0 +1,8 @@
+author: DTraitor
+delete-after: true
+changes:
+  - rscadd: Added necrochat
+  - balance: Necromorphs can't ventcrawl anymore
+  - bugfix: Corruption doesn't damage living humans on it
+  - bugfix: Dismembering works correctly now
+  - bugfix: Lying necromorphs are now rotated
