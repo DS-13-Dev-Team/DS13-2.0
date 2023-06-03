@@ -14,7 +14,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	interaction_range = null
 	var/psy_energy = 0
 	var/psy_energy_maximum = 900
-	var/psy_energy_generation = 1.5
+	var/psy_energy_generation = 3
 	var/updatedir = null
 	var/list/abilities
 	var/list/visibleChunks
