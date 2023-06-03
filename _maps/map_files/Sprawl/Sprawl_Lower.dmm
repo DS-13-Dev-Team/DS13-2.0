@@ -212,6 +212,11 @@
 /obj/item/camera_film,
 /turf/open/floor/iron/grimy,
 /area/sprawl/civilian/maint/lower/book_store)
+"bc" = (
+/obj/structure/closet/crate/cardboard,
+/obj/item/disk/holodisk/ds13/odd_shanty,
+/turf/open/floor/iron/grimy,
+/area/sprawl/civilian/maint/lower/book_store)
 "bd" = (
 /obj/structure/rack/shelf,
 /obj/item/book/manual/wiki/detective,
@@ -376,8 +381,9 @@
 /turf/open/floor/iron/grimy,
 /area/sprawl/civilian/maint/lower/book_store)
 "bO" = (
-/obj/structure/chair/office,
-/obj/machinery/light/small/directional/east,
+/obj/structure/chair/office{
+	dir = 8
+	},
 /turf/open/floor/iron/grimy,
 /area/sprawl/civilian/maint/lower/book_store)
 "bP" = (
@@ -60504,7 +60510,7 @@ aZ
 aG
 bh
 bf
-bh
+bc
 aG
 aZ
 aZ
@@ -62622,7 +62628,7 @@ aZ
 aZ
 aZ
 bL
-bf
+bO
 bP
 bf
 cN
@@ -62924,7 +62930,7 @@ aZ
 aZ
 aZ
 aG
-bO
+cO
 bQ
 bf
 cO
