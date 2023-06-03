@@ -1,13 +1,21 @@
-/mob/living/carbon/human/necromorph/proc/hivemind_talk(message)
+/mob/living/carbon/human/necromorph/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null, filterproof = null)
 	if(!message || stat)
 		return
+
+	if (src.client)
+		if(client.prefs.muted & MUTE_IC)
+			to_chat(src, span_boldwarning("You cannot send IC messages (muted)."))
+			return
+		if (!(ignore_spam || forced) && src.client.handle_spam_prevention(message,MUTE_IC))
+			return
+
 	if(!marker)
 		to_chat(src, span_warning("There is no connection between you and the Marker!"))
 		return
 
-	message = "<span class='necromorph'>[name] roars, '[message]'</span>"
+	message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
 
-	log_talk(message, LOG_SAY)
+	message = "<span class='necromorph'>[name]([client.key]): [message]</span>"
 
 	marker.hive_mind_message(src, message)
 
