@@ -18,13 +18,6 @@
 	acceptable_bodytype = BODYTYPE_NECROMORPH
 	can_be_disabled = FALSE
 
-/obj/item/bodypart/chest/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
-		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
-
-	else if(burn >= max_damage)
-		return dismember(DROPLIMB_BURN, FALSE, FALSE)
-
 /obj/item/bodypart/head/necromorph
 	name = BODY_ZONE_HEAD
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
@@ -45,10 +38,10 @@
 	show_organs_on_examine = TRUE
 
 /obj/item/bodypart/head/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/bodypart/arm/left/necromorph
@@ -69,10 +62,10 @@
 	wound_resistance = 0
 
 /obj/item/bodypart/arm/left/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/bodypart/arm/right/necromorph
@@ -93,10 +86,10 @@
 	wound_resistance = 0
 
 /obj/item/bodypart/arm/right/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/bodypart/leg/left/necromorph
@@ -117,10 +110,10 @@
 	wound_resistance = 0
 
 /obj/item/bodypart/leg/left/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/bodypart/leg/right/necromorph
@@ -143,10 +136,10 @@
 	wound_resistance = 0
 
 /obj/item/bodypart/leg/right/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/organ/external/tail/necromorph

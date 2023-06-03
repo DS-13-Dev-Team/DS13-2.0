@@ -195,4 +195,8 @@ h1.alert, h2.alert		{color: #000000;}
 
 .monkeyhive				{color: #774704;}
 .monkeylead				{color: #774704;	font-size: 2;}
+
+.necromorph					{color: #800080; font-weight: bold;}
+.necrosignal				{color: #800080;}
+.necromarker				{color: #800080; font-weight: bold; font-size: 12px;}
 </style>"}

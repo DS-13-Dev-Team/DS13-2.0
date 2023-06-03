@@ -4896,7 +4896,6 @@
 #include "necromorphs\code\necromorph\necromorphs\necro_defines.dm"
 #include "necromorphs\code\necromorph\necromorphs\necro_helpers.dm"
 #include "necromorphs\code\necromorph\necromorphs\necromorph.dm"
-#include "necromorphs\code\necromorph\necromorphs\say.dm"
 #include "necromorphs\code\necromorph\necromorphs\species.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\brute.dm"
 #include "necromorphs\code\necromorph\necromorphs\subtypes\divider.dm"
