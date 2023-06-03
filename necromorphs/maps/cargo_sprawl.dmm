@@ -7,6 +7,9 @@
 /area/shuttle/supply)
 "c" = (
 /obj/machinery/light/directional/north,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
 /turf/open/floor/deadspace/heavy,
 /area/shuttle/supply)
 "d" = (
@@ -24,12 +27,34 @@
 /turf/open/floor/deadspace/heavy,
 /area/shuttle/supply)
 "h" = (
-/obj/machinery/light/directional/south,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/delivery,
 /turf/open/floor/deadspace/heavy,
 /area/shuttle/supply)
 "i" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/open/floor/plating,
+/area/shuttle/supply)
+"j" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"k" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/shuttle/engine/heater,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating/airless,
+/area/shuttle/supply)
+"l" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/shuttle/engine/heater,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating/airless,
 /area/shuttle/supply)
 "q" = (
 /obj/machinery/door/unpowered/shuttle,
@@ -39,6 +64,49 @@
 	dwidth = 4
 	},
 /turf/open/floor/deadspace/mono,
+/area/shuttle/supply)
+"s" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"C" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"H" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"M" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"Q" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"S" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"T" = (
+/turf/template_noop,
+/area/template_noop)
+"Y" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/deadspace/heavy,
 /area/shuttle/supply)
 
 (1,1,1) = {"
@@ -51,17 +119,17 @@ d
 d
 a
 a
-a
+T
 "}
 (2,1,1) = {"
 a
-b
-b
+C
 e
 e
 e
 e
-b
+M
+a
 a
 i
 "}
@@ -72,21 +140,21 @@ b
 b
 b
 b
-b
+Q
 h
-a
+l
 i
 "}
 (4,1,1) = {"
 a
-b
+S
 b
 b
 g
 b
-b
-b
-a
+Q
+h
+k
 i
 "}
 (5,1,1) = {"
@@ -96,20 +164,20 @@ b
 b
 b
 b
-b
-h
-a
+Q
+j
+k
 i
 "}
 (6,1,1) = {"
 a
-b
-b
-b
-b
-b
-b
-b
+s
+H
+H
+H
+H
+Y
+a
 a
 i
 "}
@@ -123,5 +191,5 @@ d
 d
 a
 a
-a
+T
 "}
