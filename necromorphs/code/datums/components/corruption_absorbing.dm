@@ -28,8 +28,8 @@
 		return
 	if(bio_source)
 		master.remove_biomass_source(bio_source)
+		bio_source = new_master.add_biomass_source(/datum/biomass_source/corruption_absorbing, parent)
 	master = new_master
-	bio_source = new_master.add_biomass_source(/datum/biomass_source/corruption_absorbing, parent)
 
 /datum/component/corruption_absorbing/proc/start_absorbing()
 	bio_source = master.add_biomass_source(/datum/biomass_source/corruption_absorbing, parent)
