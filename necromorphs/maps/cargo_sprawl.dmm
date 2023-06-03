@@ -35,7 +35,8 @@
 /obj/machinery/door/unpowered/shuttle,
 /obj/docking_port/mobile/supply{
 	dir = 4;
-	dheight = 2
+	width = 10;
+	dwidth = 4
 	},
 /turf/open/floor/deadspace/mono,
 /area/shuttle/supply)
