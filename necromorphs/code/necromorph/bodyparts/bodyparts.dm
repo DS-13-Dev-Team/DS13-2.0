@@ -45,10 +45,10 @@
 	show_organs_on_examine = TRUE
 
 /obj/item/bodypart/head/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/bodypart/arm/left/necromorph
