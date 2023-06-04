@@ -4789,7 +4789,6 @@
 #include "necromorphs\code\__HELPERS\math.dm"
 #include "necromorphs\code\__HELPERS\matrices.dm"
 #include "necromorphs\code\__HELPERS\mobs.dm"
-#include "necromorphs\code\_global_vars\lists\flavor.dm"
 #include "necromorphs\code\_global_vars\lists\necromorph_sounds.dm"
 #include "necromorphs\code\_onclick\hud\rendering\plane_master.dm"
 #include "necromorphs\code\_subsystems\corruption.dm"
