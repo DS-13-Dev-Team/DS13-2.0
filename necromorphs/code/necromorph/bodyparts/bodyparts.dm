@@ -142,13 +142,13 @@
 	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
-/obj/item/organ/external/tail/necromorph
+/obj/item/organ/tail/necromorph
 	name = "tail"
 	visual = TRUE
 	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_EXTERNAL_TAIL
 
-/obj/item/organ/external/tail/necromorph/get_global_feature_list()
+/obj/item/organ/tail/necromorph/get_global_feature_list()
 	return GLOB.necromorph_tails
 
 /datum/sprite_accessory/necromorph

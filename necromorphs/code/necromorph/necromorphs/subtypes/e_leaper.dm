@@ -41,6 +41,6 @@
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/necromorph/leaper/enhanced,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/leaper/enhanced,
 	)
-	external_organs = list(
-		/obj/item/organ/external/tail/necromorph/leaper/enhanced = "Leaper Tail",
+	cosmetic_organs = list(
+		/obj/item/organ/tail/necromorph/leaper/enhanced = "Leaper Tail",
 	)
