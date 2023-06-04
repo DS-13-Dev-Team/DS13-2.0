@@ -108,7 +108,6 @@
 	max_ammo = 10
 	multiload = FALSE
 	caliber = ENERGY
-	var/chargerate = 100
 
 /obj/item/ammo_box/magazine/plasmacutter/update_icon_state()
 	..()
