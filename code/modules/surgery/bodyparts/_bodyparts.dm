@@ -160,8 +160,8 @@
 	/// If something is currently grasping this bodypart and trying to staunch bleeding (see [/obj/item/hand_item/self_grasp])
 	var/obj/item/hand_item/self_grasp/grasped_by
 
-	///A list of all the external organs we've got stored to draw horns, wings and stuff with (special because we are actually in the limbs unlike normal organs :/ )
-	var/list/obj/item/organ/external/external_organs = list()
+	///A list of all the cosmetic organs we've got stored to draw horns, wings and stuff with (special because we are actually in the limbs unlike normal organs :/ )
+	var/list/obj/item/organ/cosmetic_organs = list()
 
 	/// Type of an attack from this limb does. Arms will do punches, Legs for kicks, and head for bites. (TO ADD: tactical chestbumps)
 	var/attack_type = BRUTE
@@ -193,8 +193,8 @@
 		minimum_break_damage = max_damage * BODYPART_MINIMUM_BREAK_MOD
 
 	if(can_be_disabled)
-		RegisterSignal(src, SIGNAL_ADDTRAIT(TRAIT_PARALYSIS), .proc/on_paralysis_trait_gain)
-		RegisterSignal(src, SIGNAL_REMOVETRAIT(TRAIT_PARALYSIS), .proc/on_paralysis_trait_loss)
+		RegisterSignal(src, SIGNAL_ADDTRAIT(TRAIT_PARALYSIS), PROC_REF(on_paralysis_trait_gain))
+		RegisterSignal(src, SIGNAL_REMOVETRAIT(TRAIT_PARALYSIS), PROC_REF(on_paralysis_trait_loss))
 	if(!IS_ORGANIC_LIMB(src))
 		grind_results = null
 
@@ -210,7 +210,7 @@
 		wounds.Cut()
 	if(owner)
 		drop_limb(TRUE)
-	for(var/external_organ in external_organs)
+	for(var/external_organ in cosmetic_organs)
 		qdel(external_organ)
 	return ..()
 
@@ -334,9 +334,16 @@
 	if(IS_ORGANIC_LIMB(src))
 		playsound(bodypart_turf, 'sound/misc/splort.ogg', 50, TRUE, -1)
 	seep_gauze(9999) // destroy any existing gauze if any exists
+
 	for(var/obj/item/organ/bodypart_organ in get_organs())
-		bodypart_organ.transfer_to_limb(src, owner)
+		bodypart_organ.transfer_to_limb(src, null)
+
 	for(var/obj/item/item_in_bodypart in src)
+		if(istype(item_in_bodypart, /obj/item/organ))
+			var/obj/item/organ/O = item_in_bodypart
+			if(O.organ_flags & ORGAN_UNREMOVABLE)
+				continue
+
 		item_in_bodypart.forceMove(bodypart_turf)
 
 ///since organs aren't actually stored in the bodypart themselves while attached to a person, we have to query the owner for what we should have
@@ -348,7 +355,7 @@
 		return FALSE
 
 	var/list/bodypart_organs
-	for(var/obj/item/organ/organ_check as anything in owner.internal_organs) //internal organs inside the dismembered limb are dropped.
+	for(var/obj/item/organ/organ_check as anything in owner.processing_organs) //internal organs inside the dismembered limb are dropped.
 		if(check_zone(organ_check.zone) == body_zone)
 			LAZYADD(bodypart_organs, organ_check) // this way if we don't have any, it'll just return null
 
@@ -434,23 +441,23 @@
 	var/pure_brute = brute
 	var/damagable = ((brute_dam + burn_dam) < max_damage)
 
-	if(!damagable)
-		spillover = brute_dam + burn_dam + brute - max_damage
+	spillover = brute_dam + burn_dam + brute - max_damage
+	if(spillover > 0)
+		brute = max(brute - spillover, 0)
+	else
+		spillover = brute_dam + burn_dam + brute + burn - max_damage
 		if(spillover > 0)
-			brute = max(brute - spillover, 0)
-		else
-			spillover = brute_dam + burn_dam + brute + burn - max_damage
-			if(spillover > 0)
-				burn = max(burn - spillover, 0)
+			burn = max(burn - spillover, 0)
 
 	/*
 	// DISMEMBERMENT
 	*/
 	if(owner)
-		var/total_damage = brute_dam + burn_dam + brute + burn + spillover
-		if(total_damage > max_damage)
+		var/total_damage = brute_dam + burn_dam + burn + brute
+		if(total_damage >= max_damage * LIMB_DISMEMBERMENT_PERCENT)
 			if(attempt_dismemberment(pure_brute, burn, sharpness))
 				return update_bodypart_damage_state() || .
+
 
 	//blunt damage is gud at fracturing
 	if(breaks_bones)
@@ -459,6 +466,9 @@
 			if((brute_dam + brute > minimum_break_damage) && prob((brute_dam + brute * (1 + !sharpness)) * BODYPART_BONES_BREAK_CHANCE_MOD))
 				break_bones()
 
+
+	if(!damagable)
+		return FALSE
 
 	/*
 	// START WOUND HANDLING
@@ -622,7 +632,7 @@
 			last_maxed = FALSE
 		else
 			if(!last_maxed && owner.stat < UNCONSCIOUS)
-				INVOKE_ASYNC(owner, /mob.proc/emote, "scream")
+				INVOKE_ASYNC(owner, TYPE_PROC_REF(/mob, emote), "scream")
 			last_maxed = TRUE
 		set_disabled(FALSE) // we only care about the paralysis trait
 		return
@@ -631,7 +641,7 @@
 	if(total_damage >= max_damage * disable_threshold)
 		if(!last_maxed)
 			if(owner.stat < UNCONSCIOUS)
-				INVOKE_ASYNC(owner, /mob.proc/emote, "scream")
+				INVOKE_ASYNC(owner, TYPE_PROC_REF(/mob, emote), "scream")
 			last_maxed = TRUE
 		set_disabled(TRUE)
 		return
@@ -707,11 +717,11 @@
 			if(HAS_TRAIT(owner, TRAIT_NOLIMBDISABLE))
 				set_can_be_disabled(FALSE)
 				needs_update_disabled = FALSE
-			RegisterSignal(owner, SIGNAL_REMOVETRAIT(TRAIT_NOLIMBDISABLE), .proc/on_owner_nolimbdisable_trait_loss)
-			RegisterSignal(owner, SIGNAL_ADDTRAIT(TRAIT_NOLIMBDISABLE), .proc/on_owner_nolimbdisable_trait_gain)
+			RegisterSignal(owner, SIGNAL_REMOVETRAIT(TRAIT_NOLIMBDISABLE), PROC_REF(on_owner_nolimbdisable_trait_loss))
+			RegisterSignal(owner, SIGNAL_ADDTRAIT(TRAIT_NOLIMBDISABLE), PROC_REF(on_owner_nolimbdisable_trait_gain))
 			// Bleeding stuff
-			RegisterSignal(owner, SIGNAL_REMOVETRAIT(TRAIT_NOBLEED), .proc/on_owner_nobleed_loss)
-			RegisterSignal(owner, SIGNAL_ADDTRAIT(TRAIT_NOBLEED), .proc/on_owner_nobleed_gain)
+			RegisterSignal(owner, SIGNAL_REMOVETRAIT(TRAIT_NOBLEED), PROC_REF(on_owner_nobleed_loss))
+			RegisterSignal(owner, SIGNAL_ADDTRAIT(TRAIT_NOBLEED), PROC_REF(on_owner_nobleed_gain))
 
 		if(needs_update_disabled)
 			update_disabled()
@@ -732,8 +742,8 @@
 		if(owner)
 			if(HAS_TRAIT(owner, TRAIT_NOLIMBDISABLE))
 				CRASH("set_can_be_disabled to TRUE with for limb whose owner has TRAIT_NOLIMBDISABLE")
-			RegisterSignal(owner, SIGNAL_ADDTRAIT(TRAIT_PARALYSIS), .proc/on_paralysis_trait_gain)
-			RegisterSignal(owner, SIGNAL_REMOVETRAIT(TRAIT_PARALYSIS), .proc/on_paralysis_trait_loss)
+			RegisterSignal(owner, SIGNAL_ADDTRAIT(TRAIT_PARALYSIS), PROC_REF(on_paralysis_trait_gain))
+			RegisterSignal(owner, SIGNAL_REMOVETRAIT(TRAIT_PARALYSIS), PROC_REF(on_paralysis_trait_loss))
 		update_disabled()
 	else if(.)
 		if(owner)
@@ -802,7 +812,7 @@
 	if(embed in embedded_objects) // go away
 		return
 	// We don't need to do anything with projectile embedding, because it will never reach this point
-	RegisterSignal(embed, COMSIG_ITEM_EMBEDDING_UPDATE, .proc/embedded_object_changed)
+	RegisterSignal(embed, COMSIG_ITEM_EMBEDDING_UPDATE, PROC_REF(embedded_object_changed))
 	embedded_objects += embed
 	refresh_bleed_rate()
 
@@ -851,6 +861,7 @@
 
 	var/old_bleed_rate = cached_bleed_rate
 	cached_bleed_rate = 0
+	bodypart_flags &= ~BP_BLEEDING
 	if(!owner)
 		return
 
@@ -872,6 +883,7 @@
 	for(var/datum/wound/iter_wound as anything in wounds)
 		if(iter_wound.bleeding())
 			cached_bleed_rate += round(iter_wound.damage / 40, DAMAGE_PRECISION)
+			bodypart_flags |= BP_BLEEDING
 
 	if(!cached_bleed_rate)
 		QDEL_NULL(grasped_by)
@@ -973,8 +985,8 @@
 		SEND_SIGNAL(src, COMSIG_BODYPART_GAUZE_DESTROYED)
 
 ///Loops through all of the bodypart's external organs and update's their color.
-/obj/item/bodypart/proc/recolor_external_organs()
-	for(var/obj/item/organ/external/ext_organ as anything in external_organs)
+/obj/item/bodypart/proc/recolor_cosmetic_organs()
+	for(var/obj/item/organ/ext_organ as anything in cosmetic_organs)
 		ext_organ.inherit_color(force = TRUE)
 
 ///A multi-purpose setter for all things immediately important to the icon and iconstate of the limb.

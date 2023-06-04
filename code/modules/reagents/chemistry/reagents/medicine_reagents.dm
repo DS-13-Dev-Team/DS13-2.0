@@ -93,9 +93,8 @@
 		M.blood_volume = BLOOD_VOLUME_NORMAL
 
 	M.cure_all_traumas(TRAUMA_RESILIENCE_MAGIC)
-	for(var/organ in M.internal_organs)
-		var/obj/item/organ/O = organ
-		O.setOrganDamage(0)
+	for(var/obj/item/organ/organ as anything in M.processing_organs)
+		organ.setOrganDamage(0)
 	for(var/thing in M.diseases)
 		var/datum/disease/D = thing
 		if(D.severity == DISEASE_SEVERITY_POSITIVE)
@@ -647,14 +646,14 @@
 /datum/reagent/medicine/oculine/on_mob_add(mob/living/owner)
 	if(!iscarbon(owner))
 		return
-	RegisterSignal(owner, COMSIG_CARBON_GAIN_ORGAN, .proc/on_gained_organ)
-	RegisterSignal(owner, COMSIG_CARBON_LOSE_ORGAN, .proc/on_removed_organ)
-	var/obj/item/organ/internal/eyes/eyes = owner.getorganslot(ORGAN_SLOT_EYES)
+	RegisterSignal(owner, COMSIG_CARBON_GAIN_ORGAN, PROC_REF(on_gained_organ))
+	RegisterSignal(owner, COMSIG_CARBON_LOSE_ORGAN, PROC_REF(on_removed_organ))
+	var/obj/item/organ/eyes/eyes = owner.getorganslot(ORGAN_SLOT_EYES)
 	if(!eyes)
 		return
 	improve_eyesight(owner, eyes)
 
-/datum/reagent/medicine/oculine/proc/improve_eyesight(mob/living/carbon/owner, obj/item/organ/internal/eyes/eyes)
+/datum/reagent/medicine/oculine/proc/improve_eyesight(mob/living/carbon/owner, obj/item/organ/eyes/eyes)
 	delta_light = creation_purity*30
 	if(eyes.lighting_alpha)
 		eyes.lighting_alpha -= delta_light
@@ -663,29 +662,29 @@
 	eyes.see_in_dark += 3
 	owner.update_sight()
 
-/datum/reagent/medicine/oculine/proc/restore_eyesight(mob/living/carbon/owner, obj/item/organ/internal/eyes/eyes)
+/datum/reagent/medicine/oculine/proc/restore_eyesight(mob/living/carbon/owner, obj/item/organ/eyes/eyes)
 	eyes.lighting_alpha += delta_light
 	eyes.see_in_dark -= 3
 	owner.update_sight()
 
 /datum/reagent/medicine/oculine/proc/on_gained_organ(mob/owner, obj/item/organ/organ)
 	SIGNAL_HANDLER
-	if(!istype(organ, /obj/item/organ/internal/eyes))
+	if(!istype(organ, /obj/item/organ/eyes))
 		return
-	var/obj/item/organ/internal/eyes/eyes = organ
+	var/obj/item/organ/eyes/eyes = organ
 	improve_eyesight(owner, eyes)
 
 /datum/reagent/medicine/oculine/proc/on_removed_organ(mob/prev_owner, obj/item/organ/organ)
 	SIGNAL_HANDLER
-	if(!istype(organ, /obj/item/organ/internal/eyes))
+	if(!istype(organ, /obj/item/organ/eyes))
 		return
-	var/obj/item/organ/internal/eyes/eyes = organ
+	var/obj/item/organ/eyes/eyes = organ
 	restore_eyesight(prev_owner, eyes)
 
 /datum/reagent/medicine/oculine/on_mob_life(mob/living/carbon/owner, delta_time, times_fired)
 	owner.adjust_blindness(-2 * REM * delta_time * normalise_creation_purity())
 	owner.adjust_blurriness(-2 * REM * delta_time * normalise_creation_purity())
-	var/obj/item/organ/internal/eyes/eyes = owner.getorganslot(ORGAN_SLOT_EYES)
+	var/obj/item/organ/eyes/eyes = owner.getorganslot(ORGAN_SLOT_EYES)
 	if (!eyes)
 		return ..()
 	var/fix_prob = 10
@@ -705,7 +704,7 @@
 	..()
 
 /datum/reagent/medicine/oculine/on_mob_delete(mob/living/owner)
-	var/obj/item/organ/internal/eyes/eyes = owner.getorganslot(ORGAN_SLOT_EYES)
+	var/obj/item/organ/eyes/eyes = owner.getorganslot(ORGAN_SLOT_EYES)
 	if(!eyes)
 		return
 	restore_eyesight(owner, eyes)
@@ -724,7 +723,7 @@
 /datum/reagent/medicine/inacusiate/on_mob_add(mob/living/owner, amount)
 	. = ..()
 	if(creation_purity >= 1)
-		RegisterSignal(owner, COMSIG_MOVABLE_HEAR, .proc/owner_hear)
+		RegisterSignal(owner, COMSIG_MOVABLE_HEAR, PROC_REF(owner_hear))
 
 //Lets us hear whispers from far away!
 /datum/reagent/medicine/inacusiate/proc/owner_hear(datum/source, message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, list/message_mods = list())
@@ -737,7 +736,7 @@
 		message = composer.compose_message(owner, message_language, message, , spans, message_mods)
 
 /datum/reagent/medicine/inacusiate/on_mob_life(mob/living/carbon/owner, delta_time, times_fired)
-	var/obj/item/organ/internal/ears/ears = owner.getorganslot(ORGAN_SLOT_EARS)
+	var/obj/item/organ/ears/ears = owner.getorganslot(ORGAN_SLOT_EARS)
 	if(!ears)
 		return ..()
 	ears.adjustEarDamage(-4 * REM * delta_time * normalise_creation_purity(), -4 * REM * delta_time * normalise_creation_purity())
@@ -861,9 +860,9 @@
 	exposed_mob.notify_ghost_cloning("Your body is being revived with Strange Reagent!")
 	exposed_mob.do_jitter_animation(10)
 	var/excess_healing = 5*(reac_volume-amount_to_revive) //excess reagent will heal blood and organs across the board
-	addtimer(CALLBACK(exposed_mob, /mob/living/carbon.proc/do_jitter_animation, 10), 40) //jitter immediately, then again after 4 and 8 seconds
-	addtimer(CALLBACK(exposed_mob, /mob/living/carbon.proc/do_jitter_animation, 10), 80)
-	addtimer(CALLBACK(exposed_mob, /mob/living.proc/revive, FALSE, FALSE, excess_healing), 79)
+	addtimer(CALLBACK(exposed_mob, TYPE_PROC_REF(/mob/living/carbon, do_jitter_animation), 10), 40) //jitter immediately, then again after 4 and 8 seconds
+	addtimer(CALLBACK(exposed_mob, TYPE_PROC_REF(/mob/living/carbon, do_jitter_animation), 10), 80)
+	addtimer(CALLBACK(exposed_mob, TYPE_PROC_REF(/mob/living, revive), FALSE, FALSE, excess_healing), 79)
 	..()
 
 /datum/reagent/medicine/strange_reagent/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
@@ -1514,7 +1513,6 @@
 				if(W.bleeding())
 					W.bleed_timer = 0
 					W.clamp_wound()
-					BP.bodypart_flags &= ~BP_BLEEDING
 
 /datum/reagent/medicine/coagulant/overdose_process(mob/living/M, delta_time, times_fired)
 	. = ..()
@@ -1531,10 +1529,10 @@
 			M.adjustOxyLoss(rand(3, 4))
 
 		if(prob(50))
-			var/obj/item/organ/internal/lungs/our_lungs = M.getorganslot(ORGAN_SLOT_LUNGS)
+			var/obj/item/organ/lungs/our_lungs = M.getorganslot(ORGAN_SLOT_LUNGS)
 			our_lungs.applyOrganDamage(1)
 		else
-			var/obj/item/organ/internal/heart/our_heart = M.getorganslot(ORGAN_SLOT_HEART)
+			var/obj/item/organ/heart/our_heart = M.getorganslot(ORGAN_SLOT_HEART)
 			our_heart.applyOrganDamage(1)
 
 /datum/reagent/medicine/coagulant/on_mob_metabolize(mob/living/M)
