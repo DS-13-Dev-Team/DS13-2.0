@@ -19,8 +19,8 @@
 	circuit = /obj/item/circuitboard/machine/oven
 	processing_flags = START_PROCESSING_MANUALLY
 	resistance_flags = FIRE_PROOF
+	zmm_flags = ZMM_MANGLE_PLANES
 	biomass_produce = BIOMASS_HARVEST_SMALL
-
 	///The tray inside of this oven, if there is one.
 	var/obj/item/plate/oven_tray/used_tray
 	///Whether or not the oven is open.
@@ -105,7 +105,7 @@
 	oven_tray.pixel_y = OVEN_TRAY_Y_OFFSET
 	oven_tray.pixel_x = OVEN_TRAY_X_OFFSET
 
-	RegisterSignal(used_tray, COMSIG_MOVABLE_MOVED, .proc/ItemMoved)
+	RegisterSignal(used_tray, COMSIG_MOVABLE_MOVED, PROC_REF(ItemMoved))
 	update_baking_audio()
 	update_appearance()
 

@@ -51,19 +51,3 @@
 	px_y = 12
 	max_stamina_damage = 50
 	wound_resistance = 0
-
-/obj/item/organ/external/tail/necromorph/leaper
-	name = "tail"
-	desc = "A severed tail. What did you cut this off of?"
-	visual = TRUE
-	icon = 'necromorphs/icons/necromorphs/leaper.dmi'
-	icon_state = "necromorph_tail"
-	zone = BODY_ZONE_PRECISE_GROIN
-	slot = ORGAN_SLOT_EXTERNAL_TAIL
-	feature_key = "necro_tail"
-	dna_block = DNA_NECROMORPH_TAIL_BLOCK
-	layers = EXTERNAL_BEHIND
-
-/datum/sprite_accessory/necromorph/leaper
-	icon = 'necromorphs/icons/necromorphs/leaper.dmi'
-	icon_state = "necromorph_tail"
