@@ -246,8 +246,6 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		L[DNA_VOX_FACIAL_HAIR_BLOCK] = construct_block(GLOB.vox_facial_hair_list.Find(features["vox_facial_hair"]), GLOB.vox_facial_hair_list.len)
 	if(features["vox_snout"])
 		L[DNA_VOX_SNOUT_BLOCK] = construct_block(GLOB.vox_snouts_list.Find(features["vox_snout"]), GLOB.vox_snouts_list.len)
-	if(features["necro_tail"])
-		L[DNA_NECROMORPH_TAIL_BLOCK] = construct_block(GLOB.necromorph_tails.Find(features["necro_tail"]), GLOB.necromorph_tails.len)
 
 	for(var/blocknum in 1 to DNA_FEATURE_BLOCKS)
 		. += L[blocknum] || random_string(GET_UI_BLOCK_LEN(blocknum), GLOB.hex_characters)
@@ -401,8 +399,6 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 			set_uni_feature_block(blocknumber, construct_block(GLOB.vox_facial_hair_list.Find(features["vox_facial_hair"]), GLOB.vox_facial_hair_list.len))
 		if(DNA_VOX_SNOUT_BLOCK)
 			set_uni_feature_block(blocknumber, construct_block(GLOB.vox_snouts_list.Find(features["vox_snout"]), GLOB.vox_snouts_list.len))
-		if(DNA_NECROMORPH_TAIL_BLOCK)
-			set_uni_feature_block(blocknumber, construct_block(GLOB.necromorph_tails.Find(features["necro_tal"]), GLOB.necromorph_tails.len))
 
 //Please use add_mutation or activate_mutation instead
 /datum/dna/proc/force_give(datum/mutation/human/HM)
@@ -698,8 +694,6 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		dna.features["vox_facial_hair"] = GLOB.vox_facial_hair_list[deconstruct_block(get_uni_feature_block(features, DNA_VOX_FACIAL_HAIR_BLOCK), GLOB.vox_facial_hair_list.len)]
 	if(dna.features["vox_snout"])
 		dna.features["vox_snout"] = GLOB.vox_snouts_list[deconstruct_block(get_uni_feature_block(features, DNA_VOX_SNOUT_BLOCK), GLOB.vox_snouts_list.len)]
-	if(dna.features["necro_tail"])
-		dna.features["necro_tail"] = GLOB.necromorph_tails[deconstruct_block(get_uni_feature_block(features, DNA_NECROMORPH_TAIL_BLOCK), GLOB.necromorph_tails.len)]
 
 	for(var/obj/item/organ/O as anything in cosmetic_organs)
 		O.mutate_feature(features, src)
