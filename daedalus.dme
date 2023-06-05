@@ -4818,6 +4818,7 @@
 #include "necromorphs\code\datums\components\statmods\component_statmod.dm"
 #include "necromorphs\code\datums\keybindingins\signal.dm"
 #include "necromorphs\code\game\atoms.dm"
+#include "necromorphs\code\game\gun.dm"
 #include "necromorphs\code\game\human.dm"
 #include "necromorphs\code\game\mob.dm"
 #include "necromorphs\code\game\movable.dm"

@@ -7,6 +7,7 @@
 	lefthand_file = 'necromorphs/icons/mob/inhands/guns/guns_left.dmi'
 	righthand_file = 'necromorphs/icons/mob/inhands/guns/guns_right.dmi'
 	inhand_icon_state = "pulserifle"
+	wielded_icon_state = "pulserifle-wielded"
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = 0
 	mag_display = FALSE
