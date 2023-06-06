@@ -123,7 +123,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
 	energy_drain = 30
-	projectile = /obj/projectile/plasma/adv/mech
+	projectile = /obj/projectile/beam/cutter/adv/mech
 	fire_sound = 'sound/weapons/plasma_cutter.ogg'
 	harmful = TRUE
 

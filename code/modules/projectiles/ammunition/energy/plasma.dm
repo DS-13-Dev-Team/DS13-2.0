@@ -1,11 +1,11 @@
 /obj/item/ammo_casing/energy/plasma
-	projectile_type = /obj/projectile/plasma
+	projectile_type = /obj/projectile/beam/cutter
 	select_name = "plasma burst"
-	fire_sound = 'sound/weapons/plasma_cutter.ogg'
-	delay = 15
-	e_cost = 25
+	fire_sound = 'necromorphs/sound/weapons/guns/plasma_cutter.ogg'
+	delay = 5
+	e_cost = 100
 
 /obj/item/ammo_casing/energy/plasma/adv
-	projectile_type = /obj/projectile/plasma/adv
-	delay = 10
-	e_cost = 10
+	projectile_type = /obj/projectile/beam/cutter/adv
+	delay = 3
+	e_cost = 62.5
