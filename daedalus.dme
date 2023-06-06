@@ -4820,6 +4820,7 @@
 #include "necromorphs\code\game\atoms.dm"
 #include "necromorphs\code\game\gun.dm"
 #include "necromorphs\code\game\human.dm"
+#include "necromorphs\code\game\items.dm"
 #include "necromorphs\code\game\mob.dm"
 #include "necromorphs\code\game\movable.dm"
 #include "necromorphs\code\game\objs.dm"
