@@ -26,22 +26,26 @@
 	var/list/untiology_candidates = list()
 	var/ready_pop = 0
 
-	for(var/mob/dead/new_player/player as anything in GLOB.new_player_list)
-		if(player.ready != PLAYER_READY_TO_PLAY || !player.mind || !player.check_preferences())
+	for(var/mob/dead/new_player/candidate_player as anything in GLOB.new_player_list)
+		var/client/candidate_client = GET_CLIENT(candidate_player)
+		if (!candidate_client || !candidate_player.mind) // Are they connected?
 			continue
+
+		if(candidate_player.ready != PLAYER_READY_TO_PLAY || !candidate_player.mind || !candidate_player.check_preferences())
+			continue
+
 		++ready_pop
 
-		if(player.mind.special_role) // We really don't want to give antag to an antag.
+		if(candidate_player.mind.special_role) // We really don't want to give antag to an antag.
 			continue
 
-		var/client/candidate_client = player.client
-		if(ROLE_EARTHGOV_AGENT in candidate_client.prefs.be_special)
-			if(!is_banned_from(player.ckey, ROLE_EARTHGOV_AGENT))
-				egov_candidates += player
+		var/list/client_antags = candidate_client.prefs.read_preference(/datum/preference/blob/antagonists)
 
-		if(ROLE_UNITOLOGIST_ZEALOT in candidate_client.prefs.be_special)
-			if(is_banned_from(player.ckey, ROLE_UNITOLOGIST_ZEALOT))
-				untiology_candidates += player
+		if(client_antags[ROLE_EARTHGOV_AGENT] && !is_banned_from(candidate_player.ckey, ROLE_EARTHGOV_AGENT))
+			egov_candidates += candidate_player
+
+		if(client_antags[ROLE_UNITOLOGIST_ZEALOT] && !is_banned_from(candidate_player.ckey, ROLE_UNITOLOGIST_ZEALOT))
+			untiology_candidates += candidate_player
 
 	var/list/restricted_roles = list(
 		JOB_AI,
