@@ -120,10 +120,6 @@
 	desc = "A light power pack designed for use with high energy cutting tools."
 	icon = 'necromorphs/icons/obj/ammo.dmi'
 	icon_state = "darts"
-
-/obj/effect/projectile/plasmacutter/
-	light_color = COLOR_ORANGE
-
 /obj/effect/projectile/plasmacutter/muzzle
 	icon = 'necromorphs/icons/obj/projectiles.dmi'
 	icon_state = "muzzle_plasmacutter"
@@ -142,14 +138,6 @@
 	. = ..()
 	if(cell)
 		. += span_notice("[src] is [round(cell.percent())]% charged.")
-
-/obj/item/gun/energy/plasmacutter/proc/eject_cell(mob/user)
-	cell.forceMove(drop_location())
-	var/obj/item/stock_parts/cell/plasmacutter/old_cell = cell
-	user.put_in_hands(old_cell)
-	old_cell.update_appearance()
-	cell = null
-	playsound(src, 'sound/weapons/gun/general/magazine_remove_full.ogg', 40, TRUE)
 
 /obj/item/gun/energy/plasmacutter/attack_hand(mob/living/user, list/modifiers)
 	if(loc == user && user.is_holding(src) && cell)

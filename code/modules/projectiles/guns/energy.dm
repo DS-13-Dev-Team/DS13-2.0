@@ -65,6 +65,14 @@
 /obj/item/gun/energy/get_cell()
 	return cell
 
+/obj/item/gun/energy/proc/eject_cell(mob/user)
+	cell.forceMove(drop_location())
+	var/obj/item/stock_parts/cell/old_cell = cell
+	user.put_in_hands(old_cell)
+	old_cell.update_appearance()
+	cell = null
+	playsound(src, 'sound/weapons/gun/general/magazine_remove_full.ogg', 40, TRUE)
+
 /obj/item/gun/energy/Initialize(mapload)
 	. = ..()
 	if(cell_type)
