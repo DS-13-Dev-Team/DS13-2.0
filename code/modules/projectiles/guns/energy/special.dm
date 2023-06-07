@@ -128,6 +128,14 @@
 	icon = 'necromorphs/icons/obj/projectiles.dmi'
 	icon_state = "impact_plasmacutter"
 
+/obj/item/gun/energy/plasma_cutter/proc/eject_cell(mob/user)
+	cell.forceMove(drop_location())
+	var/obj/item/stock_parts/cell/old_cell = cell
+	user.put_in_hands(old_cell)
+	old_cell.update_appearance()
+	cell = null
+	playsound(src, 'sound/weapons/gun/general/magazine_remove_full.ogg', 40, TRUE)
+
 /obj/item/gun/energy/plasmacutter/Initialize(mapload)
 	AddElement(/datum/element/update_icon_blocker)
 	. = ..()
