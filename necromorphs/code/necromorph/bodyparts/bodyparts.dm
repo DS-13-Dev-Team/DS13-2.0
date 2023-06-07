@@ -11,8 +11,6 @@
 	is_dimorphic = FALSE
 	px_x = 0
 	px_y = 0
-	stam_damage_coeff = 1
-	max_stamina_damage = 120
 	grind_results = null
 	wound_resistance = 10
 	acceptable_bodytype = BODYTYPE_NECROMORPH
@@ -30,8 +28,6 @@
 	max_damage = 200
 	px_x = 0
 	px_y = -8
-	stam_damage_coeff = 1
-	max_stamina_damage = 100
 	wound_resistance = 5
 	is_dimorphic = FALSE
 	can_be_disabled = FALSE
@@ -54,7 +50,6 @@
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
 	max_damage = 50
-	max_stamina_damage = 50
 	body_damage_coeff = 0.75
 	px_x = -6
 	px_y = 0
@@ -81,7 +76,6 @@
 	body_damage_coeff = 0.75
 	px_x = 6
 	px_y = 0
-	max_stamina_damage = 50
 	can_be_disabled = FALSE
 	wound_resistance = 0
 
@@ -105,7 +99,6 @@
 	body_damage_coeff = 0.75
 	px_x = -2
 	px_y = 12
-	max_stamina_damage = 50
 	can_be_disabled = FALSE
 	wound_resistance = 0
 
@@ -131,7 +124,6 @@
 	body_damage_coeff = 0.75
 	px_x = 2
 	px_y = 12
-	max_stamina_damage = 50
 	can_be_disabled = FALSE
 	wound_resistance = 0
 

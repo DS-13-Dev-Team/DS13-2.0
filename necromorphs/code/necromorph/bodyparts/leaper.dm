@@ -6,8 +6,6 @@
 	max_damage = 200
 	px_x = 0
 	px_y = 0
-	stam_damage_coeff = 1
-	max_stamina_damage = 120
 	wound_resistance = 10
 
 /obj/item/bodypart/head/necromorph/leaper
@@ -18,8 +16,6 @@
 	max_damage = 200
 	px_x = 0
 	px_y = -8
-	stam_damage_coeff = 1
-	max_stamina_damage = 100
 	wound_resistance = 5
 
 //Leapers use arms to walk
@@ -35,7 +31,6 @@
 	body_damage_coeff = 0.75
 	px_x = -2
 	px_y = 12
-	max_stamina_damage = 50
 	wound_resistance = 0
 
 /obj/item/bodypart/leg/right/necromorph/leaper
@@ -49,5 +44,4 @@
 	body_damage_coeff = 0.75
 	px_x = 2
 	px_y = 12
-	max_stamina_damage = 50
 	wound_resistance = 0

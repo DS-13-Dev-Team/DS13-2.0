@@ -66,9 +66,6 @@
 /mob/living/carbon/human/necromorph/adjustToxLoss(amount, updating_health = TRUE, forced = FALSE)
 	return FALSE
 
-/mob/living/carbon/human/necromorph/adjustStaminaLoss(amount, updating_health = 1, forced = FALSE)
-	return FALSE
-
 /mob/living/carbon/human/necromorph/setStaminaLoss(amount, updating_health = 1)
 	return FALSE
 
