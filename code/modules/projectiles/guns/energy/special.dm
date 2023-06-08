@@ -128,7 +128,7 @@
 	icon = 'necromorphs/icons/obj/projectiles.dmi'
 	icon_state = "impact_plasmacutter"
 
-/obj/item/gun/energy/plasma_cutter/proc/eject_cell(mob/user)
+/obj/item/gun/energy/plasmacutter/proc/eject_cell(mob/user)
 	cell.forceMove(drop_location())
 	var/obj/item/stock_parts/cell/old_cell = cell
 	user.put_in_hands(old_cell)
