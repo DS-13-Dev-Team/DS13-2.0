@@ -1,17 +1,19 @@
-/obj/projectile/plasma
-	name = "plasma blast"
-	icon_state = "plasmacutter"
-	damage_type = BRUTE
-	damage = 5
-	range = 4
+/obj/projectile/beam/cutter
+	name = "plasma arc"
+	icon = null
+	damage = 12
+	hitscan = TRUE
 	dismemberment = 20
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/purple_laser
-	var/mine_range = 3 //mines this many additional tiles of rock
-	tracer_type = /obj/effect/projectile/tracer/plasma_cutter
-	muzzle_type = /obj/effect/projectile/muzzle/plasma_cutter
-	impact_type = /obj/effect/projectile/impact/plasma_cutter
+	damage_type = BRUTE //plasma is a physical object with mass, rather than purely burning. this also means you can decapitate/sever limbs, not just ash them.
+	armor_flag = LASER
+	range = 5 //mining tools are not exactly known for their ability to replace firearms, they're good against necros, not so much against anything else.
+	pass_flags = PASSTABLE
+	var/mine_range = 5
+	muzzle_type = /obj/effect/projectile/plasmacutter/muzzle
+	tracer_type = null
+	impact_type = /obj/effect/projectile/plasmacutter/impact
 
-/obj/projectile/plasma/on_hit(atom/target)
+/obj/projectile/beam/cutter/on_hit(atom/target)
 	. = ..()
 	if(ismineralturf(target))
 		var/turf/closed/mineral/M = target
@@ -22,17 +24,17 @@
 		if(range > 0)
 			return BULLET_ACT_FORCE_PIERCE
 
-/obj/projectile/plasma/adv
-	damage = 7
-	range = 5
-	mine_range = 5
+/obj/projectile/beam/cutter/adv
+	damage = 18.5
+	range = 7
+	mine_range = 7
 
-/obj/projectile/plasma/adv/mech
+/obj/projectile/beam/cutter/adv/mech
 	damage = 10
 	range = 9
 	mine_range = 3
 
-/obj/projectile/plasma/turret
+/obj/projectile/beam/cutter/turret
 	//Between normal and advanced for damage, made a beam so not the turret does not destroy glass
 	name = "plasma beam"
 	damage = 24
