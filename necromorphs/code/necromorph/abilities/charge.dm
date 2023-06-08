@@ -19,21 +19,24 @@
 
 	var/atom/target_atom
 
-/datum/action/cooldown/necro/charge/Activate(atom/target_atom)
-	. = TRUE
-	var/turf/T = get_turf(target_atom)
+/datum/action/cooldown/necro/charge/PreActivate(atom/target)
+	var/turf/T = get_turf(target)
 	if(!T)
-		return
+		return FALSE
 	if(!ishuman(target_atom))
 		for(var/mob/living/carbon/human/hummie in view(1, T))
 			if(!isnecromorph(hummie))
 				target_atom = hummie
 				break
 	if(target_atom == owner || isnecromorph(target_atom))
-		return
+		return FALSE
+	src.target_atom = target_atom
+	. = ..()
+
+/datum/action/cooldown/necro/charge/Activate(atom/target)
+	. = TRUE
 	// Start pre-cooldown so that the ability can't come up while the charge is happening
 	StartCooldown(charge_time+charge_delay+1)
-	src.target_atom = target_atom
 	addtimer(CALLBACK(src, PROC_REF(do_charge), owner), charge_delay)
 
 /datum/action/cooldown/necro/charge/proc/do_charge(mob/living/carbon/human/necromorph/charger)

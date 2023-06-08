@@ -232,15 +232,15 @@ div.notice
 			transparent 2px
 		),
 		radial-gradient(
-			rgba(185, 134, 4, 0.75),
+			#19A7CE,
 			black 120%
 		);
 }
 
 .computerPane hr{
-	background-color: rgba(255, 183, 0, 0.5);
-	border: 1px solid rgba(255, 183, 0, 0.5);
-	box-shadow: 0 0 10px #FFCC00;
+	background-color: #AFD3E2;
+	border: 1px solid #AFD3E2;
+	box-shadow: 0 0 10px #F6F1F1;
 }
 
 .computerPaneSimple /*Do not mix simple and non simple computerPanes*/
@@ -254,24 +254,24 @@ div.notice
 .computerLegend
 {
 	background-color: black;
-	color: #FFCC00;
-	border: 2px solid rgba(255, 183, 0, 0.5);
+	color: #F6F1F1;
+	border: 2px solid #AFD3E2;
 	padding: 4px;
 	margin: 3px 0;
 	text-align: center;
-	text-shadow: 0 0 5px #FFCC00;
+	text-shadow: 0 0 5px #F6F1F1;
 	overflow: hidden;
 }
 
 .computerPaneNested
 {
-	border: 1px solid rgba(255, 183, 0, 0.5);
+	border: 1px solid #AFD3E2;
 	padding: 4px;
 	margin: 3px 0;
 	color: #ffffff;
 	overflow: hidden;
 	background-image: inherit;
-	box-shadow: 0 0 10px #FFCC00
+	box-shadow: 0 0 10px #F6F1F1
 }
 
 .computerPaneNested::selection {
@@ -562,13 +562,14 @@ span.color_holder_box{
 }
 
 .zebraTable{
-	border: 1px solid rgba(255, 183, 0, 0.5);
+	border: 1px solid #AFD3E2;
 }
 
 .zebraTable tr:nth-child(even){
-	background-color: #7c5500;
+	background-color: #0e4057;
+
 }
 
 .zebraTable tr:nth-child(odd){
-	background-color: #533200;
+	background-color: #0d3d53;
 }
