@@ -275,7 +275,6 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	verbs -= /mob/camera/marker_signal/verb/become_master
 
 /mob/camera/marker_signal/marker/Destroy()
-	QDEL_NULL(marker_ui_action)
 	marker?.camera_mob = null
 	return ..()
 
