@@ -37,6 +37,11 @@
 
 /datum/map_template/proc/preload_size(path, cache = FALSE)
 	var/datum/parsed_map/parsed = new(file(path))
+	world.log << "--------"
+	world.log << path
+	world.log << "Parsed map exist? [parsed ? TRUE : FALSE]"
+	world.log << json_encode(parsed.bounds)
+	world.log << "--------"
 	var/bounds = parsed?.bounds
 	if(bounds)
 		width = bounds[MAP_MAXX] // Assumes all templates are rectangular, have a single Z level, and begin at 1,1,1
