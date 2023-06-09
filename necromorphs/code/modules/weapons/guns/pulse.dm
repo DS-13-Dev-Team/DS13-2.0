@@ -7,6 +7,7 @@
 	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = "pulserifle"
+	worn_icon = 'necromorphs/icons/mob/onmob/back.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	mag_display = FALSE
 	mag_type = /obj/item/ammo_box/magazine/pulse
