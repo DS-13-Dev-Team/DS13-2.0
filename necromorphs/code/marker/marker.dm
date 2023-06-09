@@ -22,6 +22,7 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/structure/marker/Destroy()
+	QDEL_NULL(marker_ui_action)
 	STOP_PROCESSING(SSobj, src)
 	for(var/datum/biomass_source/source as anything in biomass_sources)
 		remove_biomass_source(source)
