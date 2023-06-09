@@ -54,3 +54,8 @@ endmap
 map pubbystation
 	voteable
 endmap
+
+map sprawl
+	minplayers 25
+	#votable
+endmap
