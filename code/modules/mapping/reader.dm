@@ -62,6 +62,10 @@
 	bounds = parsed_bounds = list(1.#INF, 1.#INF, 1.#INF, -1.#INF, -1.#INF, -1.#INF)
 	var/stored_index = 1
 
+
+	if(original_path == "necromorphs/maps/cargo_sprawl.dmm")
+		worlod.log << tfile
+
 	//multiz lool
 	while(dmmRegex.Find(tfile, stored_index))
 		stored_index = dmmRegex.next
@@ -126,11 +130,6 @@
 
 			bounds[MAP_MAXX] = clamp(max(bounds[MAP_MAXX], maxx), x_lower, x_upper)
 		CHECK_TICK
-
-	world.log << "--------"
-	world.log << original_path
-	world.log << json_encode(bounds)
-	world.log << "--------"
 
 	// Indicate failure to parse any coordinates by nulling bounds
 	if(bounds[1] == 1.#INF)
