@@ -60,6 +60,7 @@
 #define COLOR_BLUE_LIGHT "#33CCFF"
 #define COLOR_NAVY "#000080"
 #define COLOR_BLUE_GRAY "#75A2BB"
+#define COLOR_DEEP_SKY_BLUE    "#00E1FF"
 
 #define COLOR_PINK "#FFC0CB"
 #define COLOR_LIGHT_PINK "#ff3cc8"
@@ -219,6 +220,23 @@
 // Medical colors
 #define COLOR_MEDICAL_BRUTE "#ff0000"
 #define COLOR_MEDICAL_BURN "#ff7700"
+
+// DS13 colors
+#define COLOR_BLOOD_HUMAN      "#A10808"
+#define COLOR_BLOOD_NECRO      "#583001"
+
+#define COLOR_NECRO_YELLOW		"#FFFF00"
+#define COLOR_NECRO_DARK_YELLOW		"#AAAA00"
+#define COLOR_MARKER_RED		"#FF4444"
+#define COLOR_HARVESTER_RED		rgb(255, 68, 68, 128)
+#define COLOR_BIOMASS_GREEN		"#82BF26"
+#define COLOR_BIOLUMINESCENT_ORANGE "#FFB347"
+
+#define COLOR_KINESIS_INDIGO	"#4D59DB"
+#define COLOR_KINESIS_INDIGO_PALE	"#9FA6F5"
+
+#define COLOR_LUMINOL          "#66ffff"
+#define COLOR_MUZZLE_FLASH     "#ffffb2"
 
 /// The default color for admin say, used as a fallback when the preference is not enabled
 #define DEFAULT_ASAY_COLOR COLOR_MOSTLY_PURE_RED

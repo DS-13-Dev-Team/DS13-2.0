@@ -76,3 +76,10 @@
 
 /obj/effect/projectile/tracer/sniper
 	icon_state = "sniper"
+
+// DS13 //
+
+/obj/effect/projectile/tracer/trilaser
+	icon = 'icons/obj/guns/projectiles_tracer.dmi'
+	icon_state = "plasmacutter"
+	light_color = COLOR_LUMINOL
