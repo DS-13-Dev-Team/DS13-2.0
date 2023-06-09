@@ -6,8 +6,6 @@
 	max_damage = 200
 	px_x = 0
 	px_y = 0
-	stam_damage_coeff = 1
-	max_stamina_damage = 120
 	wound_resistance = 10
 
 /obj/item/bodypart/head/necromorph/leaper/hopper
@@ -18,8 +16,6 @@
 	max_damage = 200
 	px_x = 0
 	px_y = -8
-	stam_damage_coeff = 1
-	max_stamina_damage = 100
 	wound_resistance = 5
 
 //Leapers use arms to walk
@@ -35,7 +31,6 @@
 	body_damage_coeff = 0.75
 	px_x = -2
 	px_y = 12
-	max_stamina_damage = 50
 	wound_resistance = 0
 
 /obj/item/bodypart/leg/right/necromorph/leaper/hopper
@@ -49,21 +44,4 @@
 	body_damage_coeff = 0.75
 	px_x = 2
 	px_y = 12
-	max_stamina_damage = 50
 	wound_resistance = 0
-
-/obj/item/organ/external/tail/necromorph/leaper/hopper
-	name = "tail"
-	desc = "A severed tail. What did you cut this off of?"
-	visual = TRUE
-	icon = 'necromorphs/icons/necromorphs/leaper_hopper.dmi'
-	icon_state = "necromorph_tail"
-	zone = BODY_ZONE_PRECISE_GROIN
-	slot = ORGAN_SLOT_EXTERNAL_TAIL
-	feature_key = "necro_tail"
-	dna_block = DNA_NECROMORPH_TAIL_BLOCK
-	layers = EXTERNAL_BEHIND
-
-/datum/sprite_accessory/necromorph/leaper/hopper
-	icon = 'necromorphs/icons/necromorphs/leaper_hopper.dmi'
-	icon_state = "necromorph_tail"

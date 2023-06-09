@@ -128,8 +128,6 @@ GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
 			continue
 		if(!is_unique_objective(possible_target,dupe_search_range))
 			continue
-		if(!HAS_TRAIT(SSstation, STATION_TRAIT_LATE_ARRIVALS) && istype(target_area, /area/shuttle/arrival))
-			continue
 		if(possible_target in blacklist)
 			continue
 		if(is_type_in_typecache(target_area, blacklisted_target_areas))
@@ -293,7 +291,7 @@ GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
 
 
 /datum/objective/protect/check_completion()
-	var/obj/item/organ/internal/brain/brain_target
+	var/obj/item/organ/brain/brain_target
 	if(human_check)
 		brain_target = target.current?.getorganslot(ORGAN_SLOT_BRAIN)
 	//Protect will always suceed when someone suicides
@@ -964,7 +962,7 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 		/datum/objective/capture,
 		/datum/objective/absorb,
 		/datum/objective/custom
-	),/proc/cmp_typepaths_asc)
+	),GLOBAL_PROC_REF(cmp_typepaths_asc))
 
 	for(var/T in allowed_types)
 		var/datum/objective/X = T

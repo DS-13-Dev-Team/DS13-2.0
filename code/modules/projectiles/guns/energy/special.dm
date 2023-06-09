@@ -100,10 +100,11 @@
 	icon_state = "plasmacutter"
 	inhand_icon_state = "plasmacutter"
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
+	cell_type = /obj/item/stock_parts/cell/plasmacutter
 	flags_1 = CONDUCT_1
 	attack_verb_continuous = list("attacks", "slashes", "cuts", "slices")
 	attack_verb_simple = list("attack", "slash", "cut", "slice")
-	force = 12
+	force = 8
 	sharpness = SHARP_EDGED
 	can_charge = FALSE
 	gun_flags = NOT_A_REAL_GUN
@@ -113,6 +114,27 @@
 	tool_behaviour = TOOL_WELDER
 	toolspeed = 0.7 //plasmacutters can be used as welders, and are faster than standard welders
 	var/charge_weld = 25 //amount of charge used up to start action (multiplied by amount) and per progress_flash_divisor ticks of welding
+
+/obj/item/stock_parts/cell/plasmacutter
+	name = "plasma energy"
+	desc = "A light power pack designed for use with high energy cutting tools."
+	icon = 'necromorphs/icons/obj/ammo.dmi'
+	icon_state = "darts"
+/obj/effect/projectile/plasmacutter/muzzle
+	icon = 'necromorphs/icons/obj/projectiles.dmi'
+	icon_state = "muzzle_plasmacutter"
+
+/obj/effect/projectile/plasmacutter/impact
+	icon = 'necromorphs/icons/obj/projectiles.dmi'
+	icon_state = "impact_plasmacutter"
+
+/obj/item/gun/energy/plasmacutter/proc/eject_cell(mob/user)
+	cell.forceMove(drop_location())
+	var/obj/item/stock_parts/cell/old_cell = cell
+	user.put_in_hands(old_cell)
+	old_cell.update_appearance()
+	cell = null
+	playsound(src, 'sound/weapons/gun/general/magazine_remove_full.ogg', 40, TRUE)
 
 /obj/item/gun/energy/plasmacutter/Initialize(mapload)
 	AddElement(/datum/element/update_icon_blocker)
@@ -125,19 +147,23 @@
 	if(cell)
 		. += span_notice("[src] is [round(cell.percent())]% charged.")
 
+/obj/item/gun/energy/plasmacutter/attack_hand(mob/living/user, list/modifiers)
+	if(loc == user && user.is_holding(src) && cell)
+		eject_cell(user)
+		update_appearance()
+		return
+	return ..()
+
 /obj/item/gun/energy/plasmacutter/attackby(obj/item/I, mob/user)
-	var/charge_multiplier = 0 //2 = Refined stack, 1 = Ore
-	if(istype(I, /obj/item/stack/sheet/mineral/plasma))
-		charge_multiplier = 2
-	if(istype(I, /obj/item/stack/ore/plasma))
-		charge_multiplier = 1
-	if(charge_multiplier)
-		if(cell.charge == cell.maxcharge)
-			to_chat(user, span_notice("You try to insert [I] into [src], but it's fully charged."))
-			return
-		I.use(1)
-		cell.give(500*charge_multiplier)
-		to_chat(user, span_notice("You insert [I] in [src], recharging it."))
+	if(istype(I, cell_type))
+		var/obj/item/stock_parts/cell/plasmacutter/new_cell = I
+		if(!cell)
+			if(user.transferItemToLoc(new_cell, src))
+				cell = new_cell
+				playsound(src, 'sound/weapons/gun/general/magazine_insert_full.ogg', 40, TRUE)
+				to_chat(user, span_notice("You insert a cell into \the [src]."))
+		else
+			to_chat(user, span_alert("[src] already has a cell installed."))
 	else
 		..()
 
@@ -293,6 +319,10 @@
 
 /obj/item/gun/energy/wormhole_projector/core_inserted
 	firing_core = TRUE
+
+/obj/item/gun/energy/wormhole_projector/suicide_act(mob/living/user)
+	user.visible_message(span_suicide("[user] is looking into the operational end of the device! It looks like [user.p_theyre()] trying to commit suicide!"))
+	return (FIRELOSS)
 
 #undef AMMO_SELECT_BLUE
 #undef AMMO_SELECT_ORANGE

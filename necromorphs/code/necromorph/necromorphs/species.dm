@@ -2,6 +2,10 @@
 /datum/species/necromorph
 	name = "Necromorph"
 	id = SPECIES_NECROMORPH
+
+	var/icon/icobase
+	var/icon/deform
+
 	//There is no way to become it. Period.
 	changesource_flags = NONE
 	exotic_bloodtype = "X"
@@ -89,3 +93,14 @@
 		H.reduce_shield(absorbed_damage)
 		blocked += (absorbed_damage / damage) * 100
 	return ..()
+
+//Does animations for regenerating a limb
+/datum/species/necromorph/proc/regenerate_limb(mob/living/carbon/human/H, limb, duration)
+	var/regen_icon = get_icobase()
+	var/image/LR = image(regen_icon, H, "[limb]_regen")
+	LR.plane = H.plane
+	LR.layer = H.layer -0.1 //Slightly below the layer of the mob, so that the healthy limb will draw over it
+	flick_overlay(LR, GLOB.clients, duration + 2)
+
+/datum/species/necromorph/proc/get_icobase(mob/living/carbon/human/H, get_deform)
+	return (get_deform ? deform : icobase)

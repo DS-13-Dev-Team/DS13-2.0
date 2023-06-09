@@ -11,19 +11,10 @@
 	is_dimorphic = FALSE
 	px_x = 0
 	px_y = 0
-	stam_damage_coeff = 1
-	max_stamina_damage = 120
 	grind_results = null
 	wound_resistance = 10
 	acceptable_bodytype = BODYTYPE_NECROMORPH
 	can_be_disabled = FALSE
-
-/obj/item/bodypart/chest/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
-		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
-
-	else if(burn >= max_damage)
-		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/bodypart/head/necromorph
 	name = BODY_ZONE_HEAD
@@ -37,18 +28,16 @@
 	max_damage = 200
 	px_x = 0
 	px_y = -8
-	stam_damage_coeff = 1
-	max_stamina_damage = 100
 	wound_resistance = 5
 	is_dimorphic = FALSE
 	can_be_disabled = FALSE
 	show_organs_on_examine = TRUE
 
 /obj/item/bodypart/head/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/bodypart/arm/left/necromorph
@@ -61,7 +50,6 @@
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
 	max_damage = 50
-	max_stamina_damage = 50
 	body_damage_coeff = 0.75
 	px_x = -6
 	px_y = 0
@@ -69,10 +57,10 @@
 	wound_resistance = 0
 
 /obj/item/bodypart/arm/left/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/bodypart/arm/right/necromorph
@@ -88,15 +76,14 @@
 	body_damage_coeff = 0.75
 	px_x = 6
 	px_y = 0
-	max_stamina_damage = 50
 	can_be_disabled = FALSE
 	wound_resistance = 0
 
 /obj/item/bodypart/arm/right/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/bodypart/leg/left/necromorph
@@ -112,15 +99,14 @@
 	body_damage_coeff = 0.75
 	px_x = -2
 	px_y = 12
-	max_stamina_damage = 50
 	can_be_disabled = FALSE
 	wound_resistance = 0
 
 /obj/item/bodypart/leg/left/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
 
 /obj/item/bodypart/leg/right/necromorph
@@ -138,27 +124,12 @@
 	body_damage_coeff = 0.75
 	px_x = 2
 	px_y = 12
-	max_stamina_damage = 50
 	can_be_disabled = FALSE
 	wound_resistance = 0
 
 /obj/item/bodypart/leg/right/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute >= max_damage)
+	if(brute_dam >= max_damage)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn >= max_damage)
+	else if(burn_dam >= max_damage)
 		return dismember(DROPLIMB_BURN, FALSE, FALSE)
-
-/obj/item/organ/external/tail/necromorph
-	name = "tail"
-	visual = TRUE
-	zone = BODY_ZONE_PRECISE_GROIN
-	slot = ORGAN_SLOT_EXTERNAL_TAIL
-
-/obj/item/organ/external/tail/necromorph/get_global_feature_list()
-	return GLOB.necromorph_tails
-
-/datum/sprite_accessory/necromorph
-	name = "Necromorph Tail"
-	em_block = TRUE
-	locked = TRUE

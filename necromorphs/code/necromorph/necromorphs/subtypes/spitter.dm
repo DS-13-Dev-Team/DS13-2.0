@@ -10,8 +10,11 @@
 	desc = "A midline skirmisher with the ability to spit acid at medium range. Works best when accompanied by slashers to protect it from attacks. Weak and fragile in direct combat."
 	ui_icon = 'necromorphs/icons/necromorphs/spitter.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/spitter
+	tier = 1
+	biomass_cost = 50
+	biomass_spent_required = 0
 	melee_damage_lower = 10
-	melee_damage_upper = 16
+	melee_damage_upper = 13
 	max_health = 100
 	actions = list(
 		/datum/action/cooldown/necro/shoot/spitter_snapshoot,

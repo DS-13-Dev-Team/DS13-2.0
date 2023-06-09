@@ -228,7 +228,7 @@
 		speed_round = TRUE
 
 	popcount = gather_roundend_feedback()
-	INVOKE_ASYNC(SScredits, /datum/controller/subsystem/credits/proc/draft) //Must always come after popcount is set
+	INVOKE_ASYNC(SScredits, TYPE_PROC_REF(/datum/controller/subsystem/credits, draft)) //Must always come after popcount is set
 	for(var/client/C in GLOB.clients)
 		C.playcreditsmusic(50)
 
@@ -571,7 +571,7 @@
 		parts += "<b>[marker.name]</b> | "
 		parts += "<b>Marker player:</b> [marker.camera_mob?.key ? marker.camera_mob?.key : "Missing"] | "
 		parts += "<b>Total biomass:</b> [marker.marker_biomass + marker.signal_biomass] | "
-		parts += "<b>Spent biomass:</b> [marker.spent_biomass] | "
+		parts += "<b>Invested biomass:</b> [marker.biomass_invested] | "
 		parts += "<b>Biomass income:</b> [marker.last_biomass_income] bio/second"
 
 	parts += "</div>"
@@ -648,7 +648,7 @@
 	var/currrent_category
 	var/datum/antagonist/previous_category
 
-	sortTim(all_antagonists, /proc/cmp_antag_category)
+	sortTim(all_antagonists, GLOBAL_PROC_REF(cmp_antag_category))
 
 	for(var/datum/antagonist/A in all_antagonists)
 		if(!A.show_in_roundend)

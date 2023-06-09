@@ -33,8 +33,9 @@ COMMENDATION_PERCENT_POLL 0.05
 ## To speed things up make the number negative, to slow things down, make the number positive.
 
 ## These modify the run/walk speed of all mobs before the mob-specific modifiers are applied.
-RUN_DELAY 1.5
+RUN_DELAY 1.8
 WALK_DELAY 4
+SPRINT_DELAY 1.2
 
 ## The variables below affect the movement of specific mob types. THIS AFFECTS ALL SUBTYPES OF THE TYPE YOU CHOOSE!
 ## Entries completely override all subtypes. Later entries have precedence over earlier entries.
@@ -424,10 +425,10 @@ Space_Budget 16
 
 ## Time in ds from when a player latejoins till the arrival shuttle docks at the station
 ## Must be at least 30. At least 55 recommended to be visually/aurally appropriate
-ARRIVALS_SHUTTLE_DOCK_WINDOW 55
+ARRIVALS_SHUTTLE_DOCK_WINDOW 150
 
 ## Uncomment to require the arrivals shuttle to be in flight (if it can fly) before late join players can join
-#ARRIVALS_SHUTTLE_REQUIRE_UNDOCKED
+ARRIVALS_SHUTTLE_REQUIRE_UNDOCKED
 
 ## Uncomment to prevent late join players from spawning if the arrivals shuttle is depressurized
 #ARRIVALS_SHUTTLE_REQUIRE_SAFE_LATEJOIN

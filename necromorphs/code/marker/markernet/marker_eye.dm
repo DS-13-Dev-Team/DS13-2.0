@@ -20,6 +20,8 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	var/list/visibleChunks
 	var/obj/structure/marker/marker
 	var/static_visibility_range = 16
+	//CSS class used by this signal in the chat
+	var/necrochat_class = "necrosignal"
 
 /mob/camera/marker_signal/Initialize(mapload, obj/structure/marker/master)
 	visibleChunks = list()
@@ -75,6 +77,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	. = ..()
 	if(!. || !client)
 		return FALSE
+	name = "[initial(name)]([client.key])"
 	for(var/datum/markerchunk/chunk as anything in visibleChunks)
 		client.images += chunk.active_masks
 	marker.markernet.visibility(src)
@@ -188,6 +191,9 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	if(necro.stat == DEAD)
 		to_chat(src, span_notice("This vessel was damaged beyond use!"))
 		return
+	if(necro.controlling)
+		to_chat(src, span_notice("This vessel is already possessed!"))
+		return
 	necro.controlling = src
 	mind.transfer_to(necro, TRUE)
 	abstract_move(null)
@@ -203,6 +209,29 @@ GLOBAL_LIST_EMPTY(markers_signals)
 /mob/camera/marker_signal/proc/update_biomass_hud(hud_override)
 	var/datum/hud/marker/our_hud = hud_override || hud_used
 	our_hud?.foreground_bio.maptext = MAPTEXT("[round(marker.signal_biomass, 1)] | +[marker.last_biomass_income*marker.signal_biomass_percent] bio/sec")
+
+/mob/camera/marker_signal/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null, filterproof = null)
+	if(!message || stat)
+		return
+
+	if (src.client)
+		if(client.prefs.muted & MUTE_IC)
+			to_chat(src, span_boldwarning("You cannot send IC messages (muted)."))
+			return
+		if (!(ignore_spam || forced) && src.client.handle_spam_prevention(message,MUTE_IC))
+			return
+
+	if(!marker)
+		to_chat(src, span_warning("There is no connection between you and the Marker!"))
+		return
+
+	message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
+
+	message = "<span class='[src.necrochat_class]'>[name]: [message]</span>"
+
+	marker.hive_mind_message(src, message)
+
+	return TRUE
 
 /mob/camera/marker_signal/verb/become_master()
 	set name = "Become master signal"
@@ -231,6 +260,9 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	interaction_range = null
 	pixel_x = -7
 	pixel_y = -7
+	psy_energy_maximum = 4500
+	psy_energy_generation = 5
+	necrochat_class = "necromarker"
 	///Used when spawning necromorphs
 	var/image/necro_preview
 	///Necro class of a necromorph we are going to spawn
@@ -303,7 +335,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	A.attack_marker_signal(src)
 
 /mob/camera/marker_signal/marker/proc/spawn_necromorph(turf/A)
-	if(marker.spent_biomass < marker.necro_classes[spawning_necromorph].biomass_spent_required)
+	if(marker.biomass_invested < marker.necro_classes[spawning_necromorph].biomass_spent_required)
 		to_chat(src, span_warning("Not enough biomass spent!"))
 		return
 	if(marker.marker_biomass < marker.necro_classes[spawning_necromorph].biomass_cost)
@@ -328,7 +360,8 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		if(!can_see(turf_loc, A, 4))
 			spawnloc_cantsee = TRUE
 			continue
-		marker.marker_biomass -= marker.necro_classes[spawning_necromorph].biomass_cost
+		marker.change_marker_biomass(-marker.necro_classes[spawning_necromorph].biomass_cost)
+		marker.biomass_invested += marker.necro_classes[spawning_necromorph].biomass_cost
 		var/path = marker.necro_classes[spawning_necromorph].necromorph_type_path
 		var/mob/living/carbon/human/necromorph/mob = new path(A, marker)
 		if(marker.use_necroqueue && length(marker.marker_signals-src))

@@ -22,6 +22,7 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/structure/marker/Destroy()
+	QDEL_NULL(marker_ui_action)
 	STOP_PROCESSING(SSobj, src)
 	for(var/datum/biomass_source/source as anything in biomass_sources)
 		remove_biomass_source(source)
@@ -57,16 +58,21 @@
 		signal.update_biomass_hud()
 
 /obj/structure/marker/proc/hive_mind_message(mob/sender, message)
+	if(!message)
+		return
+
+	src.log_talk(message, LOG_SAY)
+
 	for(var/mob/dead/observer/observer as anything in GLOB.current_observers_list)
 		if(!observer?.client?.prefs || !(observer.client.prefs.chat_toggles & CHAT_NECROMORPH))
 			continue
-		observer.show_message("[FOLLOW_LINK(observer, sender)] [message]")
+		to_chat(observer, "[FOLLOW_LINK(observer, sender)] [message]")
 
 	for(var/mob/camera/marker_signal/signal as anything in marker_signals)
-		signal.show_message(message)
+		to_chat(signal, message)
 
 	for(var/mob/living/carbon/human/necromorph/necro as anything in necromorphs)
-		necro.show_message(message)
+		to_chat(necro, message)
 
 /obj/structure/marker/proc/add_necro(mob/living/carbon/human/necromorph/necro)
 	// If the necro is part of another hivemind, they should be removed from that one first
@@ -142,7 +148,7 @@
 	. = list()
 	.["biomass"] = marker_biomass
 	.["biomass_income"] = last_biomass_income
-	.["biomass_invested"] = spent_biomass
+	.["biomass_invested"] = biomass_invested
 	.["use_necroqueue"] = use_necroqueue
 	.["signal_biomass"] = signal_biomass
 	.["signal_biomass_percent"] = signal_biomass_percent

@@ -28,7 +28,7 @@
 		return
 	if(bio_source)
 		master.remove_biomass_source(bio_source)
-	bio_source = new_master.add_biomass_source(/datum/biomass_source/corruption_absorbing, parent)
+		bio_source = new_master.add_biomass_source(/datum/biomass_source/corruption_absorbing, parent)
 	master = new_master
 
 /datum/component/corruption_absorbing/proc/start_absorbing()
@@ -43,9 +43,13 @@
 	qdel(src)
 
 /datum/component/corruption_absorbing/proc/on_death(mob/living/source, gibbed)
+	UnregisterSignal(parent, COMSIG_LIVING_DEATH)
+	RegisterSignal(parent, COMSIG_LIVING_REVIVE, .proc/on_revive)
 	timerid = addtimer(CALLBACK(src, .proc/start_absorbing), 2 MINUTES, TIMER_STOPPABLE)
 
 /datum/component/corruption_absorbing/proc/on_revive(mob/living/source, full_heal, admin_revive)
 	master.remove_biomass_source(bio_source)
-	deltimer(timerid)
 	bio_source = null
+	deltimer(timerid)
+	UnregisterSignal(parent, COMSIG_LIVING_REVIVE)
+	RegisterSignal(parent, COMSIG_LIVING_DEATH, .proc/on_revive)

@@ -10,6 +10,7 @@
 //movement intent defines for the m_intent var
 #define MOVE_INTENT_WALK "walk"
 #define MOVE_INTENT_RUN  "run"
+#define MOVE_INTENT_SPRINT "sprint"
 
 //Blood levels
 #define BLOOD_VOLUME_MAX_LETHAL 2150
@@ -160,8 +161,6 @@
 
 #define HUMAN_MAX_OXYLOSS 3
 #define HUMAN_CRIT_MAX_OXYLOSS (SSMOBS_DT/3)
-
-#define STAMINA_REGEN_BLOCK_TIME (10 SECONDS)
 
 #define HEAT_DAMAGE_LEVEL_1 1 //Amount of damage applied when your body temperature just passes the 360.15k safety point
 #define HEAT_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when your body temperature passes the 400K point
@@ -344,11 +343,18 @@
 #define ENVIRONMENT_SMASH_WALLS (1<<1)  //walls
 #define ENVIRONMENT_SMASH_RWALLS (1<<2) //rwalls
 
+// Slip flags, also known as lube flags
+/// The mob will not slip if they're walking intent
 #define NO_SLIP_WHEN_WALKING (1<<0)
+/// Slipping on this will send them sliding a few tiles down
 #define SLIDE (1<<1)
-#define GALOSHES_DONT_HELP (1<<2)
-#define SLIDE_ICE (1<<3)
-#define SLIP_WHEN_CRAWLING (1<<4) //clown planet ruin
+/// Ice slides only go one tile and don't knock you over, they're intended to cause a "slip chain"
+/// where you slip on ice until you reach a non-slippable tile (ice puzzles)
+#define SLIDE_ICE (1<<2)
+/// [TRAIT_NO_SLIP_WATER] does not work on this slip. ONLY [TRAIT_NO_SLIP_ALL] will
+#define GALOSHES_DONT_HELP (1<<3)
+/// Slip works even if you're already on the ground
+#define SLIP_WHEN_CRAWLING (1<<4)
 
 #define MAX_CHICKENS 50
 
@@ -562,6 +568,9 @@
 #define AI_EMOTION_BLUE_GLOW "Blue Glow"
 #define AI_EMOTION_RED_GLOW "Red Glow"
 
+/// Icon state to use for ai displays that just turns them off
+#define AI_DISPLAY_DONT_GLOW "ai_off"
+
 /// Throw modes, defines whether or not to turn off throw mode after
 #define THROW_MODE_DISABLED 0
 #define THROW_MODE_TOGGLE 1
@@ -658,16 +667,6 @@
 #define HALO_LAYER 2
 /// Fire layer when you're on fire
 #define FIRE_LAYER 1
-
-//Bitflags for the layers an external organ can draw on (organs can be drawn on multiple layers)
-/// Draws organ on the BODY_FRONT_LAYER
-#define EXTERNAL_FRONT (1 << 1)
-/// Draws organ on the BODY_ADJ_LAYER
-#define EXTERNAL_ADJACENT (1 << 2)
-/// Draws organ on the BODY_BEHIND_LAYER
-#define EXTERNAL_BEHIND (1 << 3)
-/// Draws organ on all EXTERNAL layers
-#define ALL_EXTERNAL_OVERLAYS EXTERNAL_FRONT | EXTERNAL_ADJACENT | EXTERNAL_BEHIND
 
 //Mob Overlay Index Shortcuts for alternate_worn_layer, layers
 //Because I *KNOW* somebody will think layer+1 means "above"

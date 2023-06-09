@@ -18,6 +18,8 @@
 #define ROLE_THIEF "Thief"
 #define ROLE_TRAITOR "Traitor"
 #define ROLE_WIZARD "Wizard"
+#define ROLE_EARTHGOV_AGENT "EarthGov Agent"
+#define ROLE_UNITOLOGIST_ZEALOT "Unitologist Zealot"
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -40,8 +42,6 @@
 #define ROLE_SPIDER "Spider"
 #define ROLE_WIZARD_MIDROUND "Wizard (Midround)"
 #define ROLE_DRIFTING_CONTRACTOR "Drifting Contractor"
-#define ROLE_EARTHGOV_AGENT "EarthGov Agent"
-#define ROLE_UNITOLOGIST_ZEALOT "Unitologist Zealot"
 
 // Latejoin roles
 #define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
@@ -109,6 +109,8 @@
 /// first connection in order to play.
 GLOBAL_LIST_INIT(special_roles, list(
 	// Roundstart
+	ROLE_EARTHGOV_AGENT = 0,
+	ROLE_UNITOLOGIST_ZEALOT = 0,
 	ROLE_BROTHER = 0,
 	ROLE_CHANGELING = 0,
 	ROLE_CLOWN_OPERATIVE = 14,
@@ -155,6 +157,6 @@ GLOBAL_LIST_INIT(special_roles, list(
 ))
 
 //Job defines for what happens when you fail to qualify for any job during job selection
-#define BEOVERFLOW 1
-#define BERANDOMJOB 2
-#define RETURNTOLOBBY 3
+#define BEOVERFLOW "Join as Assistant"
+#define BERANDOMJOB "Join as Random"
+#define RETURNTOLOBBY "Return to Lobby"
