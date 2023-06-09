@@ -129,7 +129,7 @@
 
 	world.log << "--------"
 	world.log << original_path
-	world.log << json_encode(parsed.bounds)
+	world.log << json_encode(bounds)
 	world.log << "--------"
 
 	// Indicate failure to parse any coordinates by nulling bounds
