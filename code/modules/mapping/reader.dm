@@ -62,11 +62,6 @@
 	bounds = parsed_bounds = list(1.#INF, 1.#INF, 1.#INF, -1.#INF, -1.#INF, -1.#INF)
 	var/stored_index = 1
 
-	world.log << "Loading map: [original_path]"
-	world.log << "-----"
-	world.log << tfile
-	world.log << "-----"
-
 	//multiz lool
 	while(dmmRegex.Find(tfile, stored_index))
 		stored_index = dmmRegex.next
