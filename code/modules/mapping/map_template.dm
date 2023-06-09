@@ -39,7 +39,7 @@
 	var/datum/parsed_map/parsed = new(file(path))
 	world.log << "--------"
 	world.log << path
-	world.log << "Parsed map exist? [parsed ? TRUE : FALSE]"
+	world.log << "File exists [file(path) ? TRUE : FALSE]"
 	world.log << json_encode(parsed.bounds)
 	world.log << "--------"
 	var/bounds = parsed?.bounds
