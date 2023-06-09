@@ -19,6 +19,13 @@
 	worn_icon = 'necromorphs/icons/mob/onmob/uniform.dmi'
 	icon_state = "ds_surgeon"
 
+/obj/item/clothing/under/rank/medical/whitegrey/medic
+	name = "plain medic uniform"
+	desc = "A white-grey uniform, plain and unassuming. Has a bit of a hood to use. This one has a couple of red crosses, being a uniform for medical staff."
+	icon = 'necromorphs/icons/obj/clothing/uniforms.dmi'
+	worn_icon = 'necromorphs/icons/mob/onmob/uniform.dmi'
+	icon_state = "medic_jumpsuit"
+
 /obj/item/clothing/under/rank/rnd/research_director/ds_chief_sci
 	name = "chief science officer's uniform"
 	desc = "A neatly pressed, white uniform with light green patches on each shoulder and burgundy cuffs."
