@@ -64,7 +64,7 @@
 
 
 	if(original_path == "necromorphs/maps/cargo_sprawl.dmm")
-		worlod.log << tfile
+		world.log << tfile
 
 	//multiz lool
 	while(dmmRegex.Find(tfile, stored_index))
