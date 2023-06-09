@@ -4931,6 +4931,7 @@
 #include "necromorphs\code\necromorph\necromorphs\subtypes\ubermorph.dm"
 #include "necromorphs\code\reagents\Chemistry-Reagents\acid.dm"
 #include "necromorphs\code\tools\mining_tools.dm"
+#include "necromorphs\code\weapons\guns\deadspace.dm"
 #include "necromorphs\code\weapons\guns\divet.dm"
 #include "necromorphs\code\weapons\guns\pulse.dm"
 #include "necromorphs\code\weapons\handheld\melee.dm"

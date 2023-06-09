@@ -1,12 +1,13 @@
-/obj/item/gun/ballistic/automatic/pulse
+/obj/item/gun/ballistic/deadspace/twohanded/pulse
 	name = "SWS Motorized Pulse Rifle"
 	desc = "The SWS Motorized Pulse Rifle is a military-grade, triple-barreled assault rifle, manufactured by Winchester Arms, is capable of a rapid rate of fire. \
 			The Pulse Rifle is the standard-issue service rifle of the Earth Defense Force and is also common among corporate security officers. "
 	icon = 'necromorphs/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "pulserifle"
+	base_icon_state = "pulserifle"
 	lefthand_file = 'necromorphs/icons/mob/inhands/guns/guns_left.dmi'
 	righthand_file = 'necromorphs/icons/mob/inhands/guns/guns_right.dmi'
-	inhand_icon_state = "pulserifle"
+	inhand_icon_state = null
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = 0
 	mag_display = FALSE
@@ -16,12 +17,19 @@
 	burst_size = 3
 	bolt_type = BOLT_TYPE_OPEN
 	can_suppress = FALSE
+	one_handed_penalty = 20
 	spread = 5
 	fire_sound = 'necromorphs/sound/weapons/guns/pulse_shot.ogg'
 
-/obj/item/gun/ballistic/automatic/pulse/Initialize(mapload)
+/obj/item/gun/ballistic/deadspace/twohanded/pulse/Initialize(mapload)
 	. = ..()
+	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
+	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
+
+/obj/item/gun/ballistic/deadspace/twohanded/pulse/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]-wielded")
 
 /obj/item/ammo_box/magazine/pulse
 	name = "magazine (pulse rounds)"
