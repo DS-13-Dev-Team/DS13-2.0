@@ -127,6 +127,11 @@
 			bounds[MAP_MAXX] = clamp(max(bounds[MAP_MAXX], maxx), x_lower, x_upper)
 		CHECK_TICK
 
+	world.log << "--------"
+	world.log << original_path
+	world.log << json_encode(parsed.bounds)
+	world.log << "--------"
+
 	// Indicate failure to parse any coordinates by nulling bounds
 	if(bounds[1] == 1.#INF)
 		bounds = null
