@@ -62,9 +62,10 @@
 	bounds = parsed_bounds = list(1.#INF, 1.#INF, 1.#INF, -1.#INF, -1.#INF, -1.#INF)
 	var/stored_index = 1
 
-
-	if(original_path == "necromorphs/maps/cargo_sprawl.dmm")
-		world.log << tfile
+	world.log << "Loading map: [original_path]"
+	world.log << "-----"
+	world.log << tfile
+	world.log << "-----"
 
 	//multiz lool
 	while(dmmRegex.Find(tfile, stored_index))
