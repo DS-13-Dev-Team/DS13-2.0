@@ -19,3 +19,9 @@
 	worn_icon = 'necromorphs/icons/mob/onmob/head.dmi'
 	icon_state = "titan_colonel_helmet"
 
+/obj/item/clothing/head/helmet/hunk
+	name = "HUNK helmet"
+	desc = "It's headwear specifically designed to protect against biohazards close range attacks."
+	icon = 'necromorphs/icons/obj/clothing/hats.dmi'
+	worn_icon = 'necromorphs/icons/mob/onmob/head.dmi'
+	icon_state = "hunk_helmet"

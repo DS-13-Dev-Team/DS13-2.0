@@ -4,6 +4,7 @@
 	icon = 'necromorphs/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'necromorphs/icons/mob/onmob/uniform.dmi'
 	icon_state = "ds_engineer"
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/engineering/ds_mechanic
 	name = "mechanic's uniform"

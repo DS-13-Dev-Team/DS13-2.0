@@ -5,7 +5,7 @@
 	worn_icon = 'necromorphs/icons/mob/onmob/uniform.dmi'
 	icon_state = "ds_hydro_bot"
 
-/obj/item/clothing/under/rank/civilian/chaplain/ds_clergy
+/obj/item/clothing/under/rank/civilian/ds_clergy
 	name = "clergy uniform"
 	desc = "a unitologist robe for a clergy member"
 	icon = 'necromorphs/icons/obj/clothing/uniforms.dmi'

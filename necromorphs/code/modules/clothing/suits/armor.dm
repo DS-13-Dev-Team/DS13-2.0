@@ -19,3 +19,8 @@
 	name = "titan station security suit"
 	desc = "Standard issue suit, typically given to colonel ranked security members.."
 	icon_state = "titan_colonel_suit"
+
+/obj/item/clothing/suit/armor/pcsi/hunk
+	name = "HUNK armored vest"
+	desc = "A heavy armored vest in a fetching black. Used to protect the wearer from dangerous, unknown biohazards. It is surprisingly flexible and light, even with the extra webbing and advanced ceramic plates."
+	icon_state = "hunk_armor"

@@ -1,4 +1,4 @@
-/obj/item/clothing/under/rank/security/officer/kellion_jumpsuit
+/obj/item/clothing/under/rank/security/kellion_jumpsuit
 	name = "C.E.C. security contractor jumpsuit"
 	desc = "A dark green uniform issued to C.E.C. security contractors."
 	icon = 'necromorphs/icons/obj/clothing/uniforms.dmi'
@@ -11,6 +11,7 @@
 	icon = 'necromorphs/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'necromorphs/icons/mob/onmob/uniform.dmi'
 	icon_state = "kellion_lead"
+	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/engineering/kellion_tech
 	name = "sweatshirt"
@@ -18,3 +19,4 @@
 	icon = 'necromorphs/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'necromorphs/icons/mob/onmob/uniform.dmi'
 	icon_state = "kellion_tech"
+	can_adjust = FALSE
