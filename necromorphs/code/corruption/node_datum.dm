@@ -48,6 +48,11 @@
 	marker?.nodes -= src
 	for(var/obj/structure/corruption/corrupt as anything in corruption)
 		corrupt.on_master_delete()
+	turfs_to_watch.Cut()
+	turfs_to_spread.Cut()
+	corruption = null
+	turfs_to_watch = null
+	turfs_to_spread = null
 	marker = null
 	parent = null
 	return ..()
@@ -65,7 +70,7 @@
 					continue
 				var/turned_dir = turn(dir, 180)
 				//Checks if we can leave our turf and enter the next one
-				if(get_step(T, turned_dir).CanCorrupt(turned_dir) && T.CanCorrupt(dir))
+				if(get_step(T, turned_dir)?.CanCorrupt(turned_dir) && T.CanCorrupt(dir))
 					if(remaining_weed_amount > 0 && IN_GIVEN_RANGE(T, parent, control_range))
 						new /obj/structure/corruption(T, src)
 						processed_turfs++
