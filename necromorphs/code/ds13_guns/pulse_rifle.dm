@@ -6,10 +6,10 @@ Pulse Rifles
 	name = "SWS Motorized Pulse Rifle"
 	desc = "The SWS Motorized Pulse Rifle is a military-grade, triple-barreled assault rifle, manufactured by Winchester Arms, is capable of a rapid rate of fire. \
 			The Pulse Rifle is the standard-issue service rifle of the Earth Defense Force and is also common among corporate security officers. "
-	icon = 'icons/obj/guns_ds13/guns48x32.dmi'
+	icon = 'necromorphs/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "pulserifle"
-	lefthand_file = 'necromorphs/icons/mob/inhands/guns/guns_left.dmi'
-	righthand_file = 'necromorphs/icons/mob/inhands/guns/guns_right.dmi'
+	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
+	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = "pulserifle"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
@@ -52,7 +52,7 @@ Magazines
 /obj/item/ammo_box/magazine/pulse
 	name = "pulse magazine (standard)"
 	desc = "With a distinctive \"bell and stock\" design, pulse magazines can be inserted and removed from the Pulse Rifle with minimal effort and risk."
-	icon = 'icons/obj/guns_ds13/ammo.dmi'
+	icon = 'necromorphs/icons/obj/ammo.dmi'
 	icon_state = "pulse_rounds"
 	caliber = CALIBER_PULSE
 	ammo_type = /obj/item/ammo_casing/caseless/pulse
@@ -131,7 +131,7 @@ Projectiles for the casings
 
 /obj/projectile/bullet/pulse
 	name = "pulse"
-	icon = 'icons/obj/guns_ds13/projectiles.dmi'
+	icon = 'necromorphs/icons/obj/projectiles.dmi'
 	icon_state = "pulse"
 	damage = 8
 	//It sonic fast
@@ -139,24 +139,54 @@ Projectiles for the casings
 	armour_penetration = 4 //Should be quite low I'd think, especially for standard rounds. Bullet made to shred and liquify flesh but not affect materialistic objects much.
 	shrapnel_type = null
 	embedding = null
-	muzzle_type = /obj/effect/projectile/ds_muzzle/pulse
+	//muzzle_type = /obj/effect/projectile/ds_muzzle/pulse
 
 /obj/projectile/bullet/pulse/hv
 	icon_state = "pulse_hv"
 	damage = 9.5
 	armour_penetration = 12
-	muzzle_type = /obj/effect/projectile/ds_muzzle/pulse/hv
+	//muzzle_type = /obj/effect/projectile/ds_muzzle/pulse/hv
 
 /obj/projectile/bullet/pulse/df
 	icon_state = "pulse_df"
 	damage = 5
 	stamina = 8
 	ricochet_chance = 120   //Bounces once, 20% chance to bounce twice. BE WARY.
-							//check and revamp with divet ammo /obj/projectile/bullet/divet/rb
-	muzzle_type = /obj/effect/projectile/ds_muzzle/pulse/df
+						//check and revamp with divet ammo /obj/projectile/bullet/divet/rb
+	//muzzle_type = /obj/effect/projectile/ds_muzzle/pulse/df
 
 /obj/projectile/bullet/pulse/blank //Use Divet blank when it changes
 	damage = 1 //Can maybe do burn damage, reduced range
 	armour_penetration = 0
 	weak_against_armour = TRUE
 	sharpness = NONE
+
+/**
+Projectiles effects
+*/
+
+/obj/effect/projectile/pulse
+	icon = 'necromorphs/icons/obj/weapons/projectiles_effects.dmi'
+	icon_state = "muzzle_pulse"
+	light_power = 0.7
+	light_color = COLOR_DEEP_SKY_BLUE
+
+/obj/effect/projectile/pulse/light
+	icon_state = "muzzle_pulse_light"
+	light_power = 0.6
+	light_color = COLOR_DEEP_SKY_BLUE
+
+/obj/effect/projectile/pulse/hv
+	icon_state = "muzzle_pulse_hv"
+	light_power = 0.6
+	light_color = COLOR_MARKER_RED
+
+/obj/effect/projectile/pulse/df
+	icon_state = "muzzle_pulse_light"
+	light_power = 0.6
+	light_color = COLOR_YELLOW
+
+/obj/effect/projectile/pulse
+	name = "impact"
+	icon = 'necromorphs/icons/obj/weapons/projectiles_effects.dmi'
+	icon_state = "pulse_hit"

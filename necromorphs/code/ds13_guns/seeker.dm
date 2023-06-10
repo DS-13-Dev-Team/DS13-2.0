@@ -5,10 +5,10 @@ Seeker Rifles
 /obj/item/gun/ballistic/automatic/seeker //Based a bit on /obj/item/gun/ballistic/automatic/sniper_rifle
 	name = "Seeker Rifle"
 	desc = "The Seeker Rifle is a riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
-	icon = 'icons/obj/guns_ds13/guns48x32.dmi'
+	icon = 'necromorphs/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "seeker"
-	lefthand_file = 'necromorphs/icons/mob/inhands/guns/guns_left.dmi'
-	righthand_file = 'necromorphs/icons/mob/inhands/guns/guns_right.dmi'
+	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
+	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = "seeker"
 	worn_icon_state = null
 	weapon_weight = WEAPON_HEAVY
@@ -32,9 +32,9 @@ Seeker Rifles
 	spawnwithmagazine = FALSE
 
 //Scope is bugged. Wait until upstream gets merged in.
-// /obj/item/gun/ballistic/automatic/seeker/Initialize(mapload)
-// 	. = ..()
-// 	AddComponent(/datum/component/scope, range_modifier = 2)
+/obj/item/gun/ballistic/automatic/seeker/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/scope, range_modifier = 2)
 
 /obj/item/gun/ballistic/automatic/seeker/egov
 	name = "Earthgov Seeker Rifle"
@@ -57,9 +57,9 @@ Magazines
 /obj/item/ammo_box/magazine/seeker
 	name = "seeker shells"
 	desc = "High caliber armor piercing shells designed for use in the Seeker Rifle."
-	icon = 'icons/obj/guns_ds13/ammo.dmi'
+	icon = 'necromorphs/icons/obj/ammo.dmi'
 	icon_state = "seeker"
-	base_icon_state = "seeker"
+	base_icon_state = "seeker-6"
 	caliber = CALIBER_SEEKER
 	ammo_type = /obj/item/ammo_casing/caseless/seeker
 	max_ammo = 6
@@ -68,7 +68,6 @@ Magazines
 /obj/item/ammo_box/magazine/seeker/egov
 	name = "assault seeker shells"
 	desc = "Medium caliber armor piercing shells designed for use in the Seeker Rifle, designed for use with Earthgov models, to be used more akin to an assault rifle."
-	icon = 'icons/obj/guns_ds13/ammo.dmi'
 	icon_state = "seeker-6"
 	base_icon_state = "seeker"
 	ammo_type = /obj/item/ammo_casing/caseless/seeker/egov

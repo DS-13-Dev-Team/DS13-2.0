@@ -5,10 +5,10 @@ Divet pistols
 /obj/item/gun/ballistic/automatic/pistol/divet
 	name = "divet pistol"
 	desc = "A Winchester Arms NK-series pistol capable of fully automatic fire."
-	icon = 'icons/obj/guns_ds13/guns.dmi'
+	icon = 'necromorphs/icons/obj/weapons/ds13guns.dmi'
 	icon_state = "divet"
-	lefthand_file = 'necromorphs/icons/mob/inhands/guns/guns_left.dmi' //Move over later
-	righthand_file = 'necromorphs/icons/mob/inhands/guns/guns_right.dmi'
+	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi' //Move over later
+	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/divet
 	can_suppress = TRUE
@@ -63,7 +63,7 @@ Magazines
 
 /obj/item/ammo_box/magazine/divet
 	name = "divet magazine (pistol slug)"
-	icon = 'icons/obj/guns_ds13/ammo.dmi'
+	icon = 'necromorphs/icons/obj/ammo.dmi'
 	icon_state = "divet_slug"
 	ammo_type = /obj/item/ammo_casing/divet
 	caliber = CALIBER_DIVET
@@ -157,15 +157,15 @@ Projectiles for the casings
 
 /obj/projectile/bullet/divet
 	name = "divet bullet"
-	icon = 'icons/obj/guns_ds13/projectiles.dmi'
+	icon = 'necromorphs/icons/obj/projectiles.dmi'
 	icon_state = "divet"
 	damage = 17.5
 	armour_penetration = 10
 	wound_falloff_tile = -10
 	dismemberment = 5
 	embedding = list(embed_chance=25, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=1 SECONDS)
-	muzzle_type = /obj/effect/projectile/ds_muzzle/pulse //+/light   dunno where the 'light' part is from. Maybe a calculation on normal pulse muzzle?
-	impact_type = /obj/effect/projectile/ds_impact/divet
+	//muzzle_type = /obj/effect/projectile/pulse //+/light   dunno where the 'light' part is from. Maybe a calculation on normal pulse muzzle?
+	impact_type = /obj/effect/projectile/divet
 
 //More damage and shrapnel, less AP, structure damage and penetration
 /obj/projectile/bullet/divet/hp
@@ -205,7 +205,7 @@ Projectiles for the casings
 //They also have reduced flat damage, likely due to much of the casing space being taken for incindiary use instead (and balance)
 /obj/projectile/bullet/incendiary/divet
 	name = "divet incendiary bullet"
-	icon = 'icons/obj/guns_ds13/projectiles.dmi'
+	icon = 'necromorphs/icons/obj/projectiles.dmi'
 	icon_state = "divet_incend"
 	damage = 12.5
 	armour_penetration = 5
@@ -231,3 +231,12 @@ Projectiles for the casings
 	shrapnel_type = null
 	sharpness = NONE
 	embedding = null
+
+/**
+Projectiles for the casings
+*/
+
+/obj/effect/projectile/divet
+	name = "impact"
+	icon = 'necromorphs/icons/obj/weapons/projectiles_effects.dmi'
+	icon_state = "divet_hit"

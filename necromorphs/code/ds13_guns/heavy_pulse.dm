@@ -5,10 +5,10 @@
 /obj/item/gun/energy/pulse_heavy
 	name = "Heavy Pulse Rifle"
 	desc = "A colossal weapon capable of firing infinitely, but requiring a significant cooldown period. " //It is optimised for continuous fire, and will overheat more quickly if used in bursts."It is optimised for continuous fire, and will overheat more quickly if used in bursts."
-	icon = 'icons/obj/guns_ds13/guns48x32.dmi'
+	icon = 'necromorphs/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "heavypulserifle"
-	lefthand_file = 'necromorphs/icons/mob/inhands/guns/guns_left.dmi'
-	righthand_file = 'necromorphs/icons/mob/inhands/guns/guns_right.dmi'
+	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
+	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = "heavypulserifle-wielded"
 	w_class = WEIGHT_CLASS_BULKY
 	custom_materials = null
@@ -22,7 +22,7 @@
 	item_flags = SLOWS_WHILE_IN_HAND
 	can_charge = FALSE
 	selfcharge = 1
-	charge_delay = 1
+	charge_delay = 0.5
 	fire_sound = 'sound/ds13/pulse_shot.ogg' //Test sound
 	// screen_shake = 0.1 //This needs to be small or people will get seizures.
 	// empty_sound = 'sound/weapons/guns/misc/overheat.ogg'
@@ -33,9 +33,17 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
-/obj/item/gun/energy/pulse_heavy/test //Temporary
-	charge_delay = 0.1
-	ammo_type = list(/obj/item/ammo_casing/energy/pulserifle/test)
+
+/**
+Energy cell
+*/
+
+/obj/item/stock_parts/cell/pulse_heavy
+	name = "Heavy Pulse Rifle power cell"
+	desc = "A heavy power pack designed for use with the Heavy Pulse Rifle."
+	icon_state = "hcell"
+	maxcharge = 10000
+	chargerate = 1000
 
 /**
 Ammo casing
@@ -54,7 +62,3 @@ Ammo casing
 	heavy_metal = FALSE
 	randomspread = 25
 	// select_name = "kill"
-
-/obj/item/ammo_casing/energy/pulserifle/test
-	select_name = "Amongus"
-	randomspread = 40

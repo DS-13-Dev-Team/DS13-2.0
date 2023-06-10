@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/automatic/pistol/divet
 	name = "divet pistol"
 	desc = "A Winchester Arms NK-series pistol capable of fully automatic fire."
-	icon = 'necromorphs/icons/obj/weapons/gun.dmi'
+	icon = 'necromorphs/icons/obj/weapons/ds13guns.dmi'
 	icon_state = "divet"
 	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
