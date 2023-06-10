@@ -1,6 +1,11 @@
 /obj/item/gun/ballistic/deadspace
 	actions_types = list(/datum/action/item_action/toggle_firemode)
+	var/default_fire = "shoot"
+	var/default_ammo = /obj/item/ammo_casing
+	var/alt_fire = null
 	var/alt_fire_ammo = null
+	var/alt_fire_delay = 0
+	var/alt_fire_sound = null
 	var/select = 1 ///fire selector position. 1 = semi, 2 = burst. anything past that can vary between guns.
 	var/selector_switch_icon = FALSE ///if it has an icon for a selector switch indicating current firemode.
 
@@ -9,6 +14,36 @@
 	var/wielded = FALSE
 	var/can_fire_one_handed = TRUE
 	var/one_handed_penalty = 20
+
+/obj/item/gun/ballistic/deadspace/ui_action_click(mob/user, actiontype)
+	if(istype(actiontype, /datum/action/item_action/toggle_firemode))
+		alt_select()
+	else
+		..()
+
+/obj/item/gun/ballistic/deadspace/proc/alt_select()
+	var/mob/living/carbon/human/user = usr
+	if(!select)
+		var/obj/item/ammo_casing/new_ammo_type = default_ammo
+		swap_ammo(new_ammo_type, magazine)
+		to_chat(user, span_notice("You switch to [default_fire] mode."))
+	else
+		var/obj/item/ammo_casing/new_ammo_type = alt_fire_ammo
+		swap_ammo(new_ammo_type, magazine)
+		to_chat(user, span_notice("You switch to [alt_fire] mode."))
+
+	select = !select
+	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
+	update_appearance()
+	update_action_buttons()
+
+/obj/item/gun/ballistic/deadspace/proc/swap_ammo(var/obj/item/ammo_casing/new_round_type, var/obj/item/ammo_box/magazine/mag)
+	chambered = null
+	for(var/obj/item/ammo_casing/bullet in magazine.stored_ammo)
+		magazine.stored_ammo -= bullet
+		magazine.stored_ammo += new new_round_type(src)
+	magazine.stored_ammo += new new_round_type(src)	//to compensate for the chambered round that we shadowrealmed
+	chamber_round()
 
 /obj/item/gun/ballistic/deadspace/twohanded/attack_self(mob/living/user)
 	SEND_SIGNAL(src, COMSIG_ITEM_ATTACK_SELF, user)
