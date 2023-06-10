@@ -12,7 +12,6 @@ DS SCL Shotgun
 	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = "scl_shotgun-wielded"
-	// var/icon_loaded = "scl_shotgun_loaded"//check out
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	weapon_weight = WEAPON_MEDIUM
@@ -24,13 +23,11 @@ DS SCL Shotgun
 	//OLD	list(mode_name = "bolas", projectile_type = /obj/item/projectile/bullet/shotgun/bola, fire_sound = 'sound/weapons/bolathrow.ogg', fire_delay = 1 SECONDS))
 	fire_sound = 'sound/weapons/gun/shotgun/shot_alt.ogg'
 	slot_flags = ITEM_SLOT_BELT
-	//mag_display = TRUE    //Does it?
 	empty_indicator = TRUE
 	empty_alarm = TRUE
-	//special_mags = TRUE     Future endeaver if desired
 	mag_display_ammo = TRUE //Check for, and which sprite
 	semi_auto = TRUE
-	internal_magazine = FALSE
+	internal_magazine = FALSE 
 	tac_reloads = TRUE
 
 /obj/item/gun/ballistic/shotgun/scl_shotgun/no_mag
@@ -91,6 +88,10 @@ Magazines
 /obj/item/ammo_box/magazine/ds12g/stunslug
 	name = "magazine SCL-shotgun stunslug"
 	ammo_type = /obj/item/ammo_casing/shotgun/stunslug
+
+/obj/item/ammo_box/magazine/ds12g/pulseslug
+	name = "magazine SCL-shotgun pulseslug"
+	ammo_type = /obj/item/ammo_casing/shotgun/pulseslug
 
 /obj/item/ammo_box/magazine/ds12g/meteorslug
 	name = "magazine SCL-shotgun meteorslug"

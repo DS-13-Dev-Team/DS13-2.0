@@ -21,7 +21,7 @@ Pulse Rifles
 	bolt_type = BOLT_TYPE_OPEN
 	can_suppress = FALSE
 	spread = 5
-	firing_burst = TRUE
+	//firing_burst = TRUE  //Does this even work?
 	fire_sound = 'sound/ds13/pulse_shot.ogg'
 	load_sound = 'sound/ds13/pulse_magin.ogg'
 	eject_sound = 'sound/ds13/pulse_magout.ogg'

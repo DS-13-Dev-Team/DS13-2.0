@@ -21,8 +21,6 @@ Seeker Rifles
 	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN
 	actions_types = list()
-	//accuracy = -30	//Don't try to hipfire
-	//one_hand_penalty = -30	//Don't try to fire this with one hand
 	//tier_1_bonus = 1 //Cut slashers some slack
 	fire_sound = 'sound/ds13/seeker_fire.ogg'
 	load_sound = 'sound/ds13/seeker_load.ogg'
@@ -80,27 +78,6 @@ Magazines
 
 //Can potentially add alternative ammo, like the .50 cal. Soporific, penetrator, marksman, etc
 
-// /obj/item/ammo_box/magazine/sniper_rounds/soporific
-// 	name = "sniper rounds (Zzzzz)"
-// 	desc = "Soporific sniper rounds, designed for happy days and dead quiet nights..."
-// 	icon_state = "soporific"
-// 	ammo_type = /obj/item/ammo_casing/p50/soporific
-// 	max_ammo = 3
-// 	caliber = CALIBER_50
-
-// /obj/item/ammo_box/magazine/sniper_rounds/penetrator
-// 	name = "sniper rounds (penetrator)"
-// 	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
-// 	ammo_type = /obj/item/ammo_casing/p50/penetrator
-// 	max_ammo = 5
-
-// /obj/item/ammo_box/magazine/sniper_rounds/marksman
-// 	name = "sniper rounds (marksman)"
-// 	desc = "An extremely fast sniper round able to pretty much instantly shoot through something."
-// 	ammo_type = /obj/item/ammo_casing/p50/marksman
-// 	max_ammo = 5
-
-
 /**
 Ammo casings for the mags
 */
@@ -136,8 +113,6 @@ Projectiles for the casings
 	dismemberment = 10
 	armour_penetration = 20
 	embedding = list(embed_chance=40, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=7, rip_time=8)
-
-//code\modules\projectiles\projectile\bullets\sniper.dm
 
 //Taken from .50 sniper. Keeping here for now, as something to check on later
 // /obj/projectile/bullet/seeker/on_hit(atom/target, blocked = 0)

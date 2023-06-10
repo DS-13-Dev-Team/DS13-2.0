@@ -14,25 +14,21 @@
 	custom_materials = null
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	weapon_weight = WEAPON_HEAVY
-	// one_hand_penalty = 10	//Don't try to fire this with one hand
-	// accuracy = 17
-	spread = 10
+	spread = 12
 	ammo_type = list(/obj/item/ammo_casing/energy/pulserifle)
 	cell_type = /obj/item/stock_parts/cell/high
 	item_flags = SLOWS_WHILE_IN_HAND
 	can_charge = FALSE
 	selfcharge = 1
-	charge_delay = 0.5
+	charge_delay = 1
+	recoil = 0.8
 	fire_sound = 'sound/ds13/pulse_shot.ogg' //Test sound
-	// screen_shake = 0.1 //This needs to be small or people will get seizures.
 	// empty_sound = 'sound/weapons/guns/misc/overheat.ogg'
 	// empty_alarm_sound  = ^^above
-	// aiming_modes = list(/datum/extension/aim_mode/rifle)
 
 /obj/item/gun/energy/pulse_heavy/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
-
 
 /**
 Energy cell
@@ -42,7 +38,7 @@ Energy cell
 	name = "Heavy Pulse Rifle power cell"
 	desc = "A heavy power pack designed for use with the Heavy Pulse Rifle."
 	icon_state = "hcell"
-	maxcharge = 10000
+	maxcharge = 6000
 	chargerate = 1000
 
 /**
@@ -59,6 +55,4 @@ Ammo casing
 	e_cost = 50 //The amount of energy a cell needs to expend to create this shot.
 	fire_sound = 'sound/ds13/pulse_shot.ogg'
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/energy
-	heavy_metal = FALSE
 	randomspread = 25
-	// select_name = "kill"
