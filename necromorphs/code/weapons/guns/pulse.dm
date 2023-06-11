@@ -13,9 +13,6 @@
 	mag_display = FALSE
 	mag_type = /obj/item/ammo_box/magazine/pulse
 	default_ammo = /obj/item/ammo_casing/caseless/pulse
-	alt_fire_ammo = /obj/item/ammo_casing/caseless/rocket/pulse
-	alt_fire = "grenade launcher"
-	alt_fire_delay = 20
 	weapon_weight = WEAPON_HEAVY
 	show_bolt_icon = FALSE
 	burst_size = 3
@@ -24,6 +21,10 @@
 	one_handed_penalty = 20
 	spread = 5
 	fire_sound = 'necromorphs/sound/weapons/guns/pulse_shot.ogg'
+	//alt fire stuff
+	alt_fire_ammo = /obj/item/ammo_casing/caseless/rocket/pulse
+	alt_fire = "grenade launcher"
+	alt_fire_delay = 20
 	alt_fire_sound = 'necromorphs/sound/weapons/guns/pulse_grenade.ogg'
 
 /obj/item/gun/ballistic/deadspace/twohanded/pulse/Initialize(mapload)

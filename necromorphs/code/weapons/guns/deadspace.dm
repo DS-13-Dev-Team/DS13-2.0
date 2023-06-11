@@ -2,6 +2,7 @@
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	var/default_fire = "shoot"
 	var/default_ammo = /obj/item/ammo_casing
+	var/default_delay = 0
 	var/alt_fire = null
 	var/alt_fire_ammo = null
 	var/alt_fire_delay = 0
@@ -25,10 +26,12 @@
 	var/mob/living/carbon/human/user = usr
 	if(!select)
 		var/obj/item/ammo_casing/new_ammo_type = default_ammo
+		fire_delay = default_delay
 		swap_ammo(new_ammo_type, magazine)
 		to_chat(user, span_notice("You switch to [default_fire] mode."))
 	else
 		var/obj/item/ammo_casing/new_ammo_type = alt_fire_ammo
+		fire_delay = alt_fire_delay
 		swap_ammo(new_ammo_type, magazine)
 		to_chat(user, span_notice("You switch to [alt_fire] mode."))
 
