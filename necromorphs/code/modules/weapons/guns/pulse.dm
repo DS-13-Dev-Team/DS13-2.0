@@ -5,8 +5,8 @@
 	icon = 'necromorphs/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "pulserifle"
 	base_icon_state = "pulserifle"
-	lefthand_file = 'necromorphs/icons/mob/inhands/guns/guns_left.dmi'
-	righthand_file = 'necromorphs/icons/mob/inhands/guns/guns_right.dmi'
+	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
+	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = null
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = 0
