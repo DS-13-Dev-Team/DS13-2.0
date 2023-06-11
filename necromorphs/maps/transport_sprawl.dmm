@@ -1,0 +1,294 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/sprawl_transport)
+"b" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron/smooth_large,
+/area/shuttle/sprawl_transport)
+"c" = (
+/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron/smooth_half,
+/area/shuttle/sprawl_transport)
+"d" = (
+/obj/machinery/light/directional/north,
+/obj/structure/table/reinforced,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"e" = (
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"f" = (
+/obj/structure/chair/sofa/corp/right,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"g" = (
+/obj/structure/chair/sofa/corp/left,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"h" = (
+/obj/structure/chair/sofa/corp/right,
+/obj/machinery/light/directional/north,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"i" = (
+/obj/structure/chair/sofa/corp/left,
+/obj/machinery/defibrillator_mount/directional/north,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"j" = (
+/obj/effect/turf_decal/caution/stand_clear,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"k" = (
+/obj/structure/chair/sofa/corp/right,
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"l" = (
+/obj/structure/chair/sofa/corp/left,
+/obj/machinery/light/directional/north,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"m" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"n" = (
+/obj/machinery/door/airlock/maintenance,
+/turf/open/floor/iron/smooth_large,
+/area/shuttle/sprawl_transport)
+"o" = (
+/obj/structure/chair/office{
+	dir = 8
+	},
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"p" = (
+/obj/machinery/light/directional/south,
+/obj/structure/table/reinforced,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"q" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 1
+	},
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"r" = (
+/obj/structure/chair/sofa/corp/left{
+	dir = 1
+	},
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"s" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 1
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"t" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 1
+	},
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"u" = (
+/obj/structure/chair/sofa/corp/left{
+	dir = 1
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+"K" = (
+/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/firedoor,
+/obj/docking_port/mobile{
+	name = "transport shuttle (Sprawl)";
+	id = "transport";
+	dir = 8;
+	dheight = 11;
+	height = 21;
+	width = 6
+	},
+/turf/open/floor/iron/smooth_half,
+/area/shuttle/sprawl_transport)
+"T" = (
+/obj/machinery/computer/shuttle/sprawl_transport{
+	dir = 4
+	},
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/shuttle/sprawl_transport)
+
+(1,1,1) = {"
+a
+a
+b
+b
+a
+a
+"}
+(2,1,1) = {"
+a
+d
+m
+T
+p
+a
+"}
+(3,1,1) = {"
+a
+e
+e
+o
+e
+a
+"}
+(4,1,1) = {"
+a
+a
+n
+n
+a
+a
+"}
+(5,1,1) = {"
+a
+f
+e
+e
+q
+a
+"}
+(6,1,1) = {"
+a
+g
+e
+e
+r
+a
+"}
+(7,1,1) = {"
+b
+e
+e
+e
+e
+b
+"}
+(8,1,1) = {"
+a
+h
+e
+e
+s
+a
+"}
+(9,1,1) = {"
+a
+i
+e
+e
+r
+a
+"}
+(10,1,1) = {"
+c
+j
+e
+e
+j
+K
+"}
+(11,1,1) = {"
+c
+j
+e
+e
+j
+c
+"}
+(12,1,1) = {"
+a
+k
+e
+e
+t
+a
+"}
+(13,1,1) = {"
+a
+l
+e
+e
+u
+a
+"}
+(14,1,1) = {"
+c
+j
+e
+e
+j
+c
+"}
+(15,1,1) = {"
+c
+j
+e
+e
+j
+c
+"}
+(16,1,1) = {"
+a
+f
+e
+e
+q
+a
+"}
+(17,1,1) = {"
+a
+g
+e
+e
+r
+a
+"}
+(18,1,1) = {"
+b
+e
+e
+e
+e
+b
+"}
+(19,1,1) = {"
+a
+h
+e
+e
+s
+a
+"}
+(20,1,1) = {"
+a
+g
+e
+e
+r
+a
+"}
+(21,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}

@@ -2,8 +2,13 @@
 	name = "Scry"
 	desc = "Reveals a targeted area in a 6 tile radius for a duration of 1 minute. Creates a spooky ethereal glow there too."
 	button_icon_state = "scry"
-	cost = 20
+	cost = 1
 	click_through_static = TRUE
+	marker_flags = SIGNAL_ABILITY_PRE_ACTIVATION
+
+/datum/action/cooldown/necro/psy/scry/post_activation
+	cost = 15
+	marker_flags = SIGNAL_ABILITY_POST_ACTIVATION
 
 /datum/action/cooldown/necro/psy/scry/Activate(atom/target)
 	var/mob/camera/marker_signal/caller = owner
