@@ -3,10 +3,13 @@
 	var/default_fire = "shoot"
 	var/default_ammo = /obj/item/ammo_casing
 	var/default_delay = 0
+	var/default_fire_sound ='necromorphs/sound/weapons/guns/pulse_shot.ogg'
 	var/alt_fire = null
 	var/alt_fire_ammo = null
+	var/alt_fire_cost = 1
 	var/alt_fire_delay = 0
 	var/alt_fire_sound = null
+	var/last_shot_time = 0
 	var/select = 1 ///fire selector position. 1 = semi, 2 = burst. anything past that can vary between guns.
 	var/selector_switch_icon = FALSE ///if it has an icon for a selector switch indicating current firemode.
 
@@ -27,11 +30,13 @@
 	if(!select)
 		var/obj/item/ammo_casing/new_ammo_type = default_ammo
 		fire_delay = default_delay
+		fire_sound = default_fire_sound
 		swap_ammo(new_ammo_type, magazine)
 		to_chat(user, span_notice("You switch to [default_fire] mode."))
 	else
 		var/obj/item/ammo_casing/new_ammo_type = alt_fire_ammo
 		fire_delay = alt_fire_delay
+		fire_sound = alt_fire_sound
 		swap_ammo(new_ammo_type, magazine)
 		to_chat(user, span_notice("You switch to [alt_fire] mode."))
 
@@ -42,8 +47,14 @@
 
 /obj/item/gun/ballistic/deadspace/proc/swap_ammo(var/obj/item/ammo_casing/new_round_type, var/obj/item/ammo_box/magazine/mag)
 	chambered = null
+	var/bullet_amount = 0
+	if(mag.stored_ammo)
+		bullet_amount = round(mag.stored_ammo.len / alt_fire_cost)
+	if(!select)
+		bullet_amount = mag.stored_ammo.len * alt_fire_cost
 	for(var/obj/item/ammo_casing/bullet in magazine.stored_ammo)
 		magazine.stored_ammo -= bullet
+	for(var/i in 1 to min(bullet_amount, mag.max_ammo))
 		magazine.stored_ammo += new new_round_type(src)
 	magazine.stored_ammo += new new_round_type(src)	//to compensate for the chambered round that we shadowrealmed
 	chamber_round()
@@ -95,6 +106,9 @@
 	if(!can_fire_one_handed && !wielded)
 		to_chat(shooter, span_warning("You need two hands to fire \the [src]!"))
 		return FALSE
+	if(world.time - last_shot_time < fire_delay)
+		return FALSE
+	last_shot_time = world.time
 	return TRUE
 
 /obj/item/gun/ballistic/deadspace/twohanded/do_autofire_shot(datum/source, atom/target, mob/living/shooter, params)
@@ -137,6 +151,9 @@
 
 	if(!can_fire_one_handed && !wielded)
 		to_chat(user, span_warning("You need two hands to fire \the [src]"))
+		return
+
+	if(world.time - last_shot_time < fire_delay)
 		return
 
 	var/bonus_spread = 0

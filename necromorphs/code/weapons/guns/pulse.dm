@@ -15,14 +15,16 @@
 	default_ammo = /obj/item/ammo_casing/caseless/pulse
 	weapon_weight = WEAPON_HEAVY
 	show_bolt_icon = FALSE
-	burst_size = 3
+	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN
 	can_suppress = FALSE
 	one_handed_penalty = 20
 	spread = 5
 	fire_sound = 'necromorphs/sound/weapons/guns/pulse_shot.ogg'
+	default_fire_sound ='necromorphs/sound/weapons/guns/pulse_shot.ogg'
 	//alt fire stuff
 	alt_fire_ammo = /obj/item/ammo_casing/caseless/rocket/pulse
+	alt_fire_cost = 25
 	alt_fire = "grenade launcher"
 	alt_fire_delay = 20
 	alt_fire_sound = 'necromorphs/sound/weapons/guns/pulse_grenade.ogg'
@@ -65,7 +67,6 @@
 	desc = "An ultra light impact grenade, for when riddling your foe with bullets doesn't quite do the trick"
 	icon = 'necromorphs/icons/obj/projectiles.dmi'
 	icon_state = "bolter"
-	delay = 20
 	caliber = CALIBER_PULSE
 	projectile_type = /obj/projectile/bullet/a84mm/pulse
 
