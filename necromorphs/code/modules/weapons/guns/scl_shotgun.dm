@@ -25,7 +25,7 @@ DS SCL Shotgun
 	slot_flags = ITEM_SLOT_BELT
 	empty_indicator = TRUE
 	empty_alarm = TRUE
-	mag_display_ammo = TRUE //Check for, and which sprite
+	mag_display_ammo = TRUE
 	semi_auto = TRUE
 	internal_magazine = FALSE 
 	tac_reloads = TRUE
@@ -33,15 +33,9 @@ DS SCL Shotgun
 /obj/item/gun/ballistic/shotgun/scl_shotgun/no_mag
 	spawnwithmagazine = FALSE
 
-/obj/item/gun/ballistic/shotgun/scl_shotgun/bola
-	mag_type = /obj/item/ammo_box/magazine/ds12g/bola
-
-// /obj/item/gun/ballistic/shotgun/scl_shotgun/update_icon()
-// 	. = ..()
-// 	if(ammo_magazine)
-// 		icon_state = icon_loaded
-// 	else
-// 		icon_state = initial(icon_state)
+/obj/item/gun/ballistic/shotgun/scl_shotgun/bola/Initialize(mapload)
+	magazine = new /obj/item/ammo_box/magazine/ds12g/bola(src)
+	return ..()
 
 /**
 Magazines

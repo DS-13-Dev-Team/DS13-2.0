@@ -38,15 +38,15 @@ Seeker Rifles
 	name = "Earthgov Seeker Rifle"
 	desc = "The Earthgov Seeker Rifle is a riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
 	icon_state = "seeker" //Maybe get a new sprite for it in the future
-	mag_type = /obj/item/ammo_box/magazine/seeker/egov
 	fire_delay = 6
 	recoil = 0.4
 	burst_size = 3
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	projectile_damage_multiplier = 1.15 
 
-/obj/item/gun/ballistic/automatic/seeker/egov/no_mag
-	spawnwithmagazine = FALSE
+/obj/item/gun/ballistic/automatic/seeker/egov/Initialize(mapload)
+	magazine = new /obj/item/ammo_box/magazine/seeker/egov(src)
+	return ..()
 
 /**
 Magazines

@@ -24,14 +24,16 @@ Divet pistols
 	eject_sound = 'necromorphs/sound/weapons/guns/divet_magout.ogg' //They just sound like clockwork cult sounds.
 	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
 
-/obj/item/gun/ballistic/automatic/pistol/divet/extended
-	mag_type = /obj/item/ammo_box/magazine/divet/extended //Figure out how to keep compatability with normal mags, but use special mag. Spcial amg types may work if this doesn't
-
-/obj/item/gun/ballistic/automatic/pistol/divet/extended
-	mag_type = /obj/item/ammo_box/magazine/divet/extended/expanded
-
 /obj/item/gun/ballistic/automatic/pistol/divet/no_mag
 	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/divet/extended/Initialize(mapload)
+	magazine = new /obj/item/ammo_box/magazine/divet/extended(src)
+	return ..()
+
+/obj/item/gun/ballistic/automatic/pistol/divet/extended/expanded/Initialize(mapload)
+	magazine = new /obj/item/ammo_box/magazine/divet/extended/expanded(src)
+	return ..()
 
 /obj/item/gun/ballistic/automatic/pistol/divet/Initialize(mapload)
 	. = ..()

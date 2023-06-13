@@ -36,14 +36,15 @@ Pulse Rifles
 /obj/item/gun/ballistic/automatic/pulse/egov //Same situation as rending divet
 	name = "SWS Earthgov Motorized Pulse Rifle"
 	desc = "The SWS Motorized Pulse Rifle is a military-grade, triple-barreled assault rifle, manufactured by Winchester Arms, is capable of a rapid rate of fire. \
-This variant is the earthgov standard, featuring the highest grade parts. "
+This variant is of standard earthgov issue, featuring the highest grade parts."
 	icon_state = "pulserifle_egov"
 	inhand_icon_state = "pulserifle_egov"
 	projectile_damage_multiplier = 1.10
 	//tier_1_bonus = 0
 
-/obj/item/gun/ballistic/automatic/pulse/egov/no_mag
-	spawnwithmagazine = FALSE
+/obj/item/gun/ballistic/automatic/pulse/egov/Initialize(mapload)
+	magazine = new /obj/item/ammo_box/magazine/pulse/hv(src)
+	return ..()
 
 /**
 Magazines
@@ -58,13 +59,6 @@ Magazines
 	ammo_type = /obj/item/ammo_casing/caseless/pulse
 	max_ammo = 50 //To low? 65 normal
 
-// /obj/item/ammo_box/magazine/pulse/update_icon_state()
-// 	..()
-// 	if (length(stored_ammo))
-// 		icon_state = "pulse_rounds"
-// 	else
-// 		icon_state = "pulse_rounds_empty"
-
 /obj/item/ammo_box/magazine/pulse/hv
 	name = "pulse magazine (high velocity)"
 	desc = "With a distinctive \"bell and stock\" design, pulse magazines can be inserted and removed from the Pulse Rifle with minimal effort and risk. This one contains hypersonic rounds, unsafe for naval usage."
@@ -72,26 +66,12 @@ Magazines
 	ammo_type = /obj/item/ammo_casing/caseless/pulse/hv
 	max_ammo = 80
 
-// /obj/item/ammo_box/magazine/pulse/hv/update_icon_state()
-//	..()
-// 	if (length(stored_ammo))
-// 		icon_state = "pulse_rounds_hv"
-// 	else
-// 		icon_state = "pulse_rounds_empty"
-
 /obj/item/ammo_box/magazine/pulse/df
 	name = "pulse magazine (deflection)"
 	desc = "With a distinctive \"bell and stock\" design, pulse magazines can be inserted and removed from the Pulse Rifle with minimal effort and risk. This one contains EXPERIMENTAL deflection rounds. Extremely dangerous, these rounds are with a deflective tip, letting them bounce of surfaces."
 	icon_state = "pulse_rounds_df"
 	ammo_type = /obj/item/ammo_casing/caseless/pulse/df
 	max_ammo = 130 //Slightly more total damage than a regular pulse mag
-
-// /obj/item/ammo_box/magazine/pulse/df/update_icon_state()
-//	..()
-// 	if (length(stored_ammo))
-// 		icon_state = "pulse_rounds_df"
-// 	else
-// 		icon_state = "pulse_rounds_empty"
 
 /obj/item/ammo_box/magazine/pulse/blank
 	name = "pulse magazine (blank/practice)"
