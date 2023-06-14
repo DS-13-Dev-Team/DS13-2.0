@@ -7,8 +7,9 @@
 	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = "pulserifle"
-	w_class = WEIGHT_CLASS_HUGE
-	slot_flags = 0
+	worn_icon = 'necromorphs/icons/mob/onmob/back.dmi'
+	worn_icon_state = "pulserifle"
+	w_class = WEIGHT_CLASS_BULKY
 	mag_display = FALSE
 	mag_type = /obj/item/ammo_box/magazine/pulse
 	weapon_weight = WEAPON_HEAVY
@@ -17,6 +18,7 @@
 	bolt_type = BOLT_TYPE_OPEN
 	can_suppress = FALSE
 	spread = 5
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	fire_sound = 'necromorphs/sound/weapons/guns/pulse_shot.ogg'
 
 /obj/item/gun/ballistic/automatic/pulse/Initialize(mapload)
