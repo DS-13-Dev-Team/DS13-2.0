@@ -20,6 +20,7 @@
 	can_suppress = FALSE
 	one_handed_penalty = 20
 	spread = 5
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	fire_sound = 'necromorphs/sound/weapons/guns/pulse_shot.ogg'
 	default_fire_sound ='necromorphs/sound/weapons/guns/pulse_shot.ogg'
 	//alt fire stuff
