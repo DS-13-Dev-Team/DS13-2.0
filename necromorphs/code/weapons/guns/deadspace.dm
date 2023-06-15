@@ -14,7 +14,6 @@
 	var/selector_switch_icon = FALSE ///if it has an icon for a selector switch indicating current firemode.
 
 /obj/item/gun/ballistic/deadspace/twohanded
-	var/wielded_icon_state = null
 	var/wielded = FALSE
 	var/can_fire_one_handed = TRUE
 	var/one_handed_penalty = 20
