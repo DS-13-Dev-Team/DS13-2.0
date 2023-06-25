@@ -4828,6 +4828,8 @@
 #include "necromorphs\code\datums\keybindingins\signal.dm"
 #include "necromorphs\code\game\atoms.dm"
 #include "necromorphs\code\game\human.dm"
+#include "necromorphs\code\game\mara_areas.dm"
+#include "necromorphs\code\game\mara_content.dm"
 #include "necromorphs\code\game\mob.dm"
 #include "necromorphs\code\game\movable.dm"
 #include "necromorphs\code\game\objs.dm"

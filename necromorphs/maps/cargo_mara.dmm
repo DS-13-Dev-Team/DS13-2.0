@@ -1,0 +1,127 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/supply)
+"b" = (
+/obj/machinery/door/unpowered/shuttle,
+/turf/open/floor/deadspace/mono,
+/area/shuttle/supply)
+"c" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"d" = (
+/obj/effect/turf_decal/caution,
+/obj/effect/turf_decal/stripes{
+	dir = 1
+	},
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"e" = (
+/obj/effect/turf_decal/caution,
+/obj/effect/turf_decal/stripes{
+	dir = 1
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"f" = (
+/obj/structure/shuttle/engine/propulsion/burst{
+	dir = 4
+	},
+/turf/open/floor/deadspace/mono,
+/area/shuttle/supply)
+"g" = (
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"h" = (
+/obj/effect/turf_decal/caution{
+	icon_state = "caution";
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes,
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"i" = (
+/obj/effect/turf_decal/caution{
+	icon_state = "caution";
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes,
+/obj/machinery/light/directional/east,
+/turf/open/floor/deadspace/heavy,
+/area/shuttle/supply)
+"U" = (
+/obj/machinery/door/unpowered/shuttle,
+/obj/docking_port/mobile/supply{
+	dir = 1;
+	width = 10;
+	dwidth = 4
+	},
+/turf/open/floor/deadspace/mono,
+/area/shuttle/supply)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+c
+g
+g
+c
+a
+"}
+(3,1,1) = {"
+b
+d
+g
+g
+h
+b
+"}
+(4,1,1) = {"
+b
+d
+g
+g
+h
+U
+"}
+(5,1,1) = {"
+b
+d
+g
+g
+h
+b
+"}
+(6,1,1) = {"
+b
+e
+g
+g
+i
+b
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}
+(8,1,1) = {"
+a
+f
+f
+f
+f
+a
+"}

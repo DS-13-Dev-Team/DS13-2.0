@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "map_name": "Mara 17",
+    "map_path": "map_files/Mara17",
+    "map_file": [
+		"Mara17_Low.dmm",
+		"Mara17_Middle.dmm",
+		"Mara17_High.dmm"
+	],
+    "space_ruin_levels": 0,
+    "space_empty_levels": 0,
+    "planetary": 1,
+    "shuttles": {
+        "cargo": "cargo_mara",
+        "emergency": "emergency_mara"
+    },
+    "traits": [
+        {
+            "Up": 1,
+            "Mining": true,
+            "Linkage": "Cross",
+            "Gravity": true,
+            "Ice Ruins Underground": true,
+            "Baseturf": "/turf/open/lava/plasma/ice_moon",
+			"Weather_Snowstorm": true,
+            "No Parallax": true
+        },
+        {
+            "Down": -1,
+            "Up": 1,
+            "Mining": true,
+            "Linkage": "Cross",
+            "Gravity": true,
+            "Ice Ruins Underground": true,
+            "Baseturf": "/turf/open/openspace/icemoon/keep_below",
+			"Weather_Snowstorm": true,
+            "No Parallax": true
+        },
+        {
+            "Down": -1,
+            "Mining": true,
+            "Linkage": "Cross",
+            "Gravity": true,
+            "Ice Ruins": true,
+            "Baseturf": "/turf/open/openspace/icemoon/keep_below",
+			"Weather_Snowstorm": true,
+            "No Parallax": true
+        }
+    ],
+    "minetype": "none",
+    "blacklist_file": "iceruinblacklist.txt",
+    "job_changes": {
+        "Captain": {
+            "special_charter": "moon"
+        }
+    }
+}

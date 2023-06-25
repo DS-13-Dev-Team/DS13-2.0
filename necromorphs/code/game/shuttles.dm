@@ -25,3 +25,13 @@
 	port_id = "transport"
 	suffix = "sprawl"
 	name = "transport shuttle (Sprawl)"
+
+/datum/map_template/shuttle/cargo/mara
+	prefix = "necromorphs/maps/"
+	suffix = "mara"
+	name = "cargo ferry (Mara 17)"
+
+/datum/map_template/shuttle/emergency/mara
+	prefix = "necromorphs/maps/"
+	suffix = "mara"
+	name = "emergency shuttle (Mara 17)"
