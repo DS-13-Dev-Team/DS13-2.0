@@ -53,7 +53,7 @@ Divet pistols
 	can_unsuppress = FALSE
 	//tier_2_bonus = 1
 
-/obj/item/gun/ballistic/automatic/pistol/divet/rending//For Ketrai or another to do
+/obj/item/gun/ballistic/automatic/pistol/divet/rending//For Ketrai or another to do the necro tier bonus/debuff damage stuff
 	name = "jury-rigged divet pistol"
 	desc = "An illegaly modified version of the Winchester Arms NK-series pistol. Shoots bullets at brutal speed, but at an odd angle. Fractures bones easily"
 	//color = "#6e6ec1"
@@ -180,7 +180,7 @@ Projectiles for the casings
 //Less lethal ammo. Rubber bullets, now with bounce!
 /obj/projectile/bullet/divet/rb
 	name = "divet rubber bullet"
-	icon_state = "divet" //Maybe get rubber bullet sprite
+	icon_state = "divet" //Maybe get rubber bullet sprite in future
 	damage = 6
 	stamina = 30
 	armour_penetration = 10

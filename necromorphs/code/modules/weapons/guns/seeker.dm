@@ -2,39 +2,44 @@
 Seeker Rifles
 */
 
-/obj/item/gun/ballistic/automatic/seeker //Based a bit on /obj/item/gun/ballistic/automatic/sniper_rifle
+/obj/item/gun/ballistic/deadspace/twohanded/seeker //Based a bit on /obj/item/gun/ballistic/automatic/sniper_rifle
 	name = "Seeker Rifle"
 	desc = "The Seeker Rifle is a riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
 	icon = 'necromorphs/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "seeker"
+	base_icon_state = "seeker"
 	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
-	inhand_icon_state = "seeker"
+	inhand_icon_state = null
 	worn_icon_state = null
 	weapon_weight = WEAPON_HEAVY
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_HUGE
 	mag_type = /obj/item/ammo_box/magazine/seeker
 	fire_delay = 12
 	can_suppress = FALSE
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
+	one_handed_penalty = 50
 	recoil = 2
 	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN
 	actions_types = list()
 	//tier_1_bonus = 1 //Cut slashers some slack
 	fire_sound = 'sound/ds13/seeker_fire.ogg'
+	fire_sound_volume = 90
 	load_sound = 'sound/ds13/seeker_load.ogg'
 	eject_sound = 'sound/ds13/pulse_magout.ogg'
 
-/obj/item/gun/ballistic/automatic/seeker/no_mag
+/obj/item/gun/ballistic/deadspace/twohanded/seeker/no_mag
 	spawnwithmagazine = FALSE
 
 //Scope is bugged. Wait until upstream gets merged in.
-/obj/item/gun/ballistic/automatic/seeker/Initialize(mapload)
+/obj/item/gun/ballistic/deadspace/twohanded/seeker/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/scope, range_modifier = 2)
+	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
+	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
+	AddComponent(/datum/component/scope, range_modifier = 2) //Scope component seems bugged, will need checking on
 
-/obj/item/gun/ballistic/automatic/seeker/egov
+/obj/item/gun/ballistic/deadspace/twohanded/seeker/egov
 	name = "Earthgov Seeker Rifle"
 	desc = "The Earthgov Seeker Rifle is a riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
 	icon_state = "seeker" //Maybe get a new sprite for it in the future
@@ -44,7 +49,7 @@ Seeker Rifles
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	projectile_damage_multiplier = 1.15 
 
-/obj/item/gun/ballistic/automatic/seeker/egov/Initialize(mapload)
+/obj/item/gun/ballistic/deadspace/twohanded/seeker/egov/Initialize(mapload)
 	magazine = new /obj/item/ammo_box/magazine/seeker/egov(src)
 	return ..()
 

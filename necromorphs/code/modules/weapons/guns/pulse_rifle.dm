@@ -12,19 +12,18 @@ Pulse Rifles
 	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = null
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	mag_display = FALSE
 	mag_type = /obj/item/ammo_box/magazine/pulse
 	default_ammo = /obj/item/ammo_casing/caseless/pulse
 	weapon_weight = WEAPON_HEAVY
 	show_bolt_icon = FALSE
-	burst_size = 1//Old minimum burst was 2. Also, burst fire stacks with the automatic mode, meaning mag dump 3 times faster, in nearly 3 seconds
+	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN
 	can_suppress = FALSE
 	one_handed_penalty = 20
 	spread = 5
-	//firing_burst = TRUE  //Does this even work?
 	fire_sound = 'sound/ds13/pulse_shot.ogg'
 	load_sound = 'sound/ds13/pulse_magin.ogg'
 	eject_sound = 'sound/ds13/pulse_magout.ogg'
@@ -73,7 +72,7 @@ Magazines
 	icon_state = "pulse_rounds"
 	caliber = CALIBER_PULSE
 	ammo_type = /obj/item/ammo_casing/caseless/pulse
-	max_ammo = 50 //To low? 65 normal
+	max_ammo = 50 //To low? 65 normal on 1.0
 
 /obj/item/ammo_box/magazine/pulse/hv
 	name = "pulse magazine (high velocity)"
@@ -87,7 +86,7 @@ Magazines
 	desc = "With a distinctive \"bell and stock\" design, pulse magazines can be inserted and removed from the Pulse Rifle with minimal effort and risk. This one contains EXPERIMENTAL deflection rounds. Extremely dangerous, these rounds are with a deflective tip, letting them bounce of surfaces."
 	icon_state = "pulse_rounds_df"
 	ammo_type = /obj/item/ammo_casing/caseless/pulse/df
-	max_ammo = 130 //Slightly more total damage than a regular pulse mag
+	max_ammo = 100 //Slightly more total damage than a regular pulse mag. Double normal mag capacity, but nearly half damage
 
 /obj/item/ammo_box/magazine/pulse/blank
 	name = "pulse magazine (blank/practice)"
@@ -166,12 +165,16 @@ Projectiles for the casings
 	armour_penetration = 12
 	//muzzle_type = /obj/effect/projectile/ds_muzzle/pulse/hv
 
-/obj/projectile/bullet/pulse/df
+/obj/projectile/bullet/pulse/df //Will change properly later 
 	icon_state = "pulse_df"
 	damage = 5
 	stamina = 8
-	ricochet_chance = 120   //Bounces once, 20% chance to bounce twice. BE WARY.
-						//check and revamp with divet ammo /obj/projectile/bullet/divet/rb
+	ricochets_max = 2
+	ricochet_incidence_leeway = 0
+	ricochet_chance = 120
+	ricochet_auto_aim_angle = 40
+	ricochet_auto_aim_range = 5
+	ricochet_decay_damage = 0.9
 	//muzzle_type = /obj/effect/projectile/ds_muzzle/pulse/df
 
 /obj/projectile/bullet/pulse/blank //Use Divet blank when it changes
