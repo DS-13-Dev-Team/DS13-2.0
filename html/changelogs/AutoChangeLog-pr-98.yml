@@ -1,0 +1,8 @@
+author: CometBlaze
+delete-after: true
+changes:
+  - rscadd: The Pulse Rifle is now able to toggle between a grenade launcher in addition
+      to regular fire
+  - tweak: Using the pulse rifle while holding it will now wield it which causes it
+      to behave the same as before. Firing it with only one hand will cause it to
+      have higher spread.

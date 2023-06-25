@@ -117,29 +117,30 @@
 	UnregisterSignal(A, list(COMSIG_MOVABLE_MOVED, COMSIG_PARENT_QDELETING))
 	visionSources -= A
 	var/turf/T = get_turf(A)
-	if(T)
-		var/x1 = max(0, T.x - (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
-		var/y1 = max(0, T.y - (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
-		var/x2 = min(world.maxx, T.x + (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
-		var/y2 = min(world.maxy, T.y + (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
+	if(!T)
+		return
 
-		for(var/x = x1 to x2 step CHUNK_SIZE)
-			for(var/y = y1 to y2 step CHUNK_SIZE)
-				var/datum/markerchunk/chunk = chunkGenerated(x, y, T.z)
-				if(chunk)
-					chunk.visionSources -= A
-					chunk.rangeVisionSources -= A
-					chunk.viewVisionSources -= A
-					if(chunk.queued_for_update)
-						chunk.queued_for_update -= A
-					if(length(chunk.visionSources))
-						LAZYINITLIST(chunk.queued_for_update)
-						if(length(chunk.seenby))
-							chunk.update()
-					else
-						// We don't need empty chunks
-						chunks -= "[x],[y],[T.z]"
-						qdel(chunk)
+	var/x1 = max(0, T.x - (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
+	var/y1 = max(0, T.y - (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
+	var/x2 = min(world.maxx, T.x + (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
+	var/y2 = min(world.maxy, T.y + (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
+	for(var/x = x1 to x2 step CHUNK_SIZE)
+		for(var/y = y1 to y2 step CHUNK_SIZE)
+			var/datum/markerchunk/chunk = chunkGenerated(x, y, T.z)
+			if(chunk)
+				chunk.visionSources -= A
+				chunk.rangeVisionSources -= A
+				chunk.viewVisionSources -= A
+				if(chunk.queued_for_update)
+					chunk.queued_for_update -= A
+				if(length(chunk.visionSources))
+					LAZYINITLIST(chunk.queued_for_update)
+					if(length(chunk.seenby))
+						chunk.update()
+				else
+					// We don't need empty chunks
+					chunks -= "[x],[y],[T.z]"
+					qdel(chunk)
 
 /// Perhaps just make sure everything that can be in our visualnet calls removeVisionSource(src) in it's Destroy
 /// and remove this signal
