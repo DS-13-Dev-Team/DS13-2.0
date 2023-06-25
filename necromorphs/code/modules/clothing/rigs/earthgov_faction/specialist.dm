@@ -1,4 +1,4 @@
-/datum/mod_theme/deadspace/marine_co
+/datum/mod_theme/deadspace/marine_specialist
 	name = "Advanced Specialist RIG"
 	desc = "A heavily armoured rig suit, designed for military use. This one is kitted out with Command Ensignia"
 	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \

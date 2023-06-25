@@ -1,5 +1,5 @@
-/datum/mod_theme/deadspace/marine
-	name = "Advanced Soldier Engineering RIG"
+/datum/mod_theme/deadspace/marine_engineer
+	name = "Advanced Soldier Engineer RIG"
 	desc = "A heavily armoured rig suit, designed for military use."
 	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
