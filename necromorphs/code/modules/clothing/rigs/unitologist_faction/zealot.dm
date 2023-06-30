@@ -1,5 +1,5 @@
 /datum/mod_theme/deadspace/zealot
-name = "Zealot RIG"
+	name = "Zealot RIG"
 	desc = "An old combat RIG used by SCAF over two hundred years ago.\
 	The armour has seen some wear but still functions as it should, it has been repainted in black and crimson colours. There are unitologist markings across the suit."
 	extended_desc = "Resource Integration Gear, or RIG for short, \
@@ -10,19 +10,18 @@ name = "Zealot RIG"
 	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
-	max_heat_protection_temperature = null
-	min_cold_protection_temperature = null
+	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
+	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
 	permeability_coefficient = 0.01
 	siemens_coefficient = 0.5
 	complexity_max = DEFAULT_MAX_COMPLEXITY
 	charge_drain = DEFAULT_CHARGE_DRAIN
-	slowdown_inactive = 0
-	slowdown_active = 0
+	slowdown_inactive = 1.25
+	slowdown_active = 0.25
 	allowed_suit_storage = list(
 		/obj/item/flashlight,
 		/obj/item/tank/internals,
 	)
-
 	skins = list(
 		"zealot" = list(
 			HELMET_FLAGS = list(
