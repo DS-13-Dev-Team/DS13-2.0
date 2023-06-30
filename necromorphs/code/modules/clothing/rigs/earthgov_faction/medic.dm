@@ -1,4 +1,4 @@
-/datum/mod_theme/deadspace/marine_medic
+/datum/mod_theme/deadspace/marine
 	name = "Advanced Soldier Medic RIG"
 	desc = "A heavily armoured rig suit, designed for military use."
 	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
