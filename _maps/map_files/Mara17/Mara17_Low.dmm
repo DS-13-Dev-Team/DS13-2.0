@@ -342,7 +342,7 @@
 /area/mara17/exterior)
 "bB" = (
 /obj/effect/decal/remains/human{
-	pixel_w = 5;
+	pixel_y = 5;
 	pixel_x = -14
 	},
 /obj/effect/decal/remains/human{
@@ -367,8 +367,7 @@
 /area/mara17/exterior)
 "bE" = (
 /obj/effect/decal/remains/human{
-	pixel_y = 14;
-	pixel_z = -7
+	pixel_y = 14
 	},
 /obj/effect/decal/remains/human{
 	pixel_x = -4;

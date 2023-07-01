@@ -1894,8 +1894,7 @@
 	pixel_y = 11
 	},
 /obj/item/lighter{
-	pixel_x = -7;
-	pixel_z = -6
+	pixel_x = -7
 	},
 /obj/item/stack/spacecash/c100{
 	pixel_x = 7;
@@ -3003,8 +3002,7 @@
 "jz" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/ammo{
-	pixel_y = 8;
-	pixel_z = 4
+	pixel_y = 8
 	},
 /obj/item/storage/toolbox/ammo{
 	pixel_x = -4

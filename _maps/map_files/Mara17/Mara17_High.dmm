@@ -1208,8 +1208,7 @@
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_x = 3;
-	pixel_y = 4;
-	pixel_z = 0
+	pixel_y = 4
 	},
 /obj/item/reagent_containers/food/drinks/bottle/kahlua{
 	pixel_x = -3;
