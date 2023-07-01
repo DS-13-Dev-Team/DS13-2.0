@@ -682,6 +682,12 @@
 "CI" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/abandoned)
+"De" = (
+/obj/effect/turf_decal/stripes{
+	dir = 1
+	},
+/turf/open/misc/asteroid/snow/ice,
+/area/mara17/interior/caves)
 "Dk" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "trails_2"
@@ -3831,7 +3837,7 @@ ak
 ta
 ag
 ag
-ah
+De
 ah
 ah
 ah
@@ -3973,7 +3979,7 @@ ak
 ta
 ag
 ag
-ah
+De
 ah
 ah
 ah
@@ -15583,7 +15589,7 @@ RJ
 RJ
 RJ
 RJ
-RJ
+az
 RJ
 RJ
 RJ
@@ -16432,7 +16438,7 @@ RJ
 RJ
 RJ
 RJ
-az
+RJ
 RJ
 RJ
 RJ
@@ -16849,7 +16855,7 @@ RJ
 RJ
 RJ
 RJ
-az
+RJ
 RJ
 ay
 RJ
@@ -17280,7 +17286,7 @@ RJ
 RJ
 ay
 RJ
-RJ
+az
 RJ
 RJ
 RJ

@@ -62,11 +62,7 @@
 /obj/structure/bed{
 	pixel_y = 14
 	},
-/obj/item/bedsheet/random{
-	pixel_y = 14
-	},
 /obj/structure/bed,
-/obj/item/bedsheet/random,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
@@ -285,11 +281,7 @@
 /obj/structure/bed{
 	pixel_y = 14
 	},
-/obj/item/bedsheet/random{
-	pixel_y = 14
-	},
 /obj/structure/bed,
-/obj/item/bedsheet/random,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/observation/dorms)
 "bi" = (
@@ -800,11 +792,7 @@
 /obj/structure/bed{
 	pixel_y = 14
 	},
-/obj/item/bedsheet/random{
-	pixel_y = 14
-	},
 /obj/structure/bed,
-/obj/item/bedsheet/random,
 /obj/effect/landmark/latejoin,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/civilian)
@@ -1399,11 +1387,7 @@
 /obj/structure/bed{
 	pixel_y = 14
 	},
-/obj/item/bedsheet/random{
-	pixel_y = 14
-	},
 /obj/structure/bed,
-/obj/item/bedsheet/random,
 /obj/item/radio/intercom/directional/west,
 /obj/effect/landmark/latejoin,
 /turf/open/floor/deadspace/hardwood,
@@ -1459,11 +1443,7 @@
 /obj/structure/bed{
 	pixel_y = 14
 	},
-/obj/item/bedsheet/random{
-	pixel_y = 14
-	},
 /obj/structure/bed,
-/obj/item/bedsheet/random,
 /obj/item/radio/intercom/directional/east,
 /obj/effect/landmark/latejoin,
 /turf/open/floor/deadspace/hardwood,
@@ -1821,6 +1801,7 @@
 /obj/item/flashlight/seclite,
 /obj/item/flashlight/seclite,
 /obj/item/flashlight/seclite,
+/obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/warehouse)
 "ge" = (
@@ -1891,6 +1872,7 @@
 /obj/item/food/canned/peaches,
 /obj/item/food/canned/peaches,
 /obj/item/food/canned/peaches,
+/obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/warehouse)
 "gk" = (
@@ -1956,6 +1938,7 @@
 /obj/item/storage/box/ingredients/random,
 /obj/item/storage/box/ingredients/random,
 /obj/item/storage/box/ingredients/random,
+/obj/machinery/light/directional/south,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/warehouse)
 "gp" = (
@@ -2460,10 +2443,6 @@
 /obj/structure/bed{
 	pixel_y = 14
 	},
-/obj/item/bedsheet/brown{
-	pixel_y = 14
-	},
-/obj/item/bedsheet/brown,
 /obj/effect/landmark/start/shaft_miner,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/mining/barracks)
@@ -4159,6 +4138,10 @@
 /obj/item/storage/box/lights/mixed,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/enginieering/interior)
+"mI" = (
+/obj/effect/landmark/observer_start,
+/turf/open/misc/snow,
+/area/mara17/exterior)
 "mQ" = (
 /obj/structure/cable,
 /turf/open/floor/plating/snowed,
@@ -4167,6 +4150,10 @@
 /obj/structure/curtain/bounty,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining/barracks)
+"nr" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/tcomms)
 "ns" = (
 /obj/machinery/light/warm/directional/south,
 /turf/open/floor/deadspace/grater,
@@ -4190,6 +4177,10 @@
 "oE" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining/relax_room)
+"ph" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/warehouse)
 "pm" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor,
@@ -4199,6 +4190,12 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
+"pr" = (
+/obj/machinery/computer/apc_control{
+	dir = 8
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/enginieering)
 "pZ" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access2)
@@ -4456,6 +4453,10 @@
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
+"Bg" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/warehouse)
 "Bx" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -4517,6 +4518,11 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/evacuation)
+"DX" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/table/glass,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "Eb" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/tcomms)
@@ -4634,6 +4640,10 @@
 "JT" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/evacuation)
+"JZ" = (
+/obj/structure/marker_beacon/burgundy,
+/turf/open/misc/snow,
+/area/space)
 "Ko" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -4680,6 +4690,10 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/observation)
+"MX" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/tcomms)
 "MY" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/mining/relax_room)
@@ -4739,6 +4753,12 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/observation)
+"Ql" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 4
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "QM" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -4865,6 +4885,20 @@
 "XE" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/enginieering)
+"XK" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"XQ" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"Ye" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/table/glass,
+/obj/item/storage/medkit,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "Yp" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining/ore_storage)
@@ -8526,11 +8560,11 @@ dF
 dF
 dF
 dF
-dF
+fs
 FC
 ak
 ak
-dF
+fs
 dF
 dF
 dF
@@ -9386,7 +9420,7 @@ dF
 dF
 dF
 aW
-dF
+fs
 ak
 ak
 cy
@@ -9534,7 +9568,7 @@ ak
 cy
 dF
 dF
-dF
+fs
 dF
 dF
 dF
@@ -10075,7 +10109,7 @@ qf
 kt
 dF
 mQ
-dF
+fs
 dF
 aW
 dF
@@ -10247,7 +10281,7 @@ dF
 mQ
 dF
 FC
-dF
+fs
 dF
 dF
 dF
@@ -10511,7 +10545,7 @@ dF
 qU
 lX
 XE
-XE
+pr
 qU
 hv
 xF
@@ -11379,7 +11413,7 @@ Gm
 zx
 zx
 Gm
-dF
+fs
 FC
 ak
 FC
@@ -11491,7 +11525,7 @@ EG
 qf
 qf
 dF
-dF
+fs
 ak
 ak
 FC
@@ -12389,7 +12423,7 @@ dF
 dF
 zf
 Eb
-Eb
+nr
 Eb
 hr
 qB
@@ -12509,7 +12543,7 @@ qU
 dF
 dF
 dF
-dF
+fs
 ak
 ak
 ak
@@ -12523,7 +12557,7 @@ FC
 FC
 FC
 dF
-dF
+fs
 dF
 dF
 dF
@@ -12636,7 +12670,7 @@ dF
 dF
 dF
 dF
-dF
+fs
 mQ
 cy
 dF
@@ -12957,7 +12991,7 @@ ak
 ak
 dK
 Eb
-Eb
+MX
 Eb
 zf
 ht
@@ -13213,7 +13247,7 @@ dF
 dF
 dF
 dF
-dF
+fs
 dF
 dF
 dF
@@ -13515,7 +13549,7 @@ YF
 uI
 uI
 KM
-uI
+Bg
 uI
 uI
 YF
@@ -13912,11 +13946,11 @@ yy
 dF
 dF
 dF
-dF
+fs
 ak
 mQ
 ak
-dF
+fs
 dF
 mQ
 dF
@@ -14207,10 +14241,10 @@ dF
 dF
 wH
 Hj
-Hj
+XK
 rB
 Hj
-Hj
+XK
 Hj
 wH
 dF
@@ -14509,11 +14543,11 @@ YF
 jY
 jY
 jY
+ph
 uI
 uI
 uI
-uI
-uI
+ph
 uI
 uI
 uI
@@ -14777,8 +14811,8 @@ bM
 it
 ap
 rB
-Hj
-Hj
+XQ
+XQ
 Hj
 fp
 Hj
@@ -14911,7 +14945,7 @@ YC
 YC
 YC
 YC
-ab
+JZ
 hQ
 wH
 an
@@ -14919,8 +14953,8 @@ an
 an
 wH
 kK
-Hj
-Hj
+Ql
+Ql
 ca
 wH
 my
@@ -15203,8 +15237,8 @@ Hj
 Hj
 as
 rB
-Hj
-Hj
+Ye
+DX
 Hj
 as
 Hj
@@ -16028,7 +16062,7 @@ zA
 zA
 zA
 zA
-dF
+fs
 dF
 dF
 FC
@@ -16036,7 +16070,7 @@ ak
 dF
 dF
 dF
-dF
+fs
 dF
 dF
 dF
@@ -16047,7 +16081,7 @@ dF
 dF
 dF
 dF
-dF
+fs
 FC
 wH
 wH
@@ -16898,7 +16932,7 @@ aM
 dF
 dF
 dF
-dF
+fs
 dF
 dF
 FC
@@ -17904,7 +17938,7 @@ ak
 dF
 dF
 dF
-dF
+mI
 dF
 dF
 dF
@@ -18043,7 +18077,7 @@ VF
 dF
 FC
 ak
-dF
+fs
 dF
 dF
 dF
@@ -18610,7 +18644,7 @@ KB
 VF
 dF
 dF
-dF
+fs
 ak
 ak
 cy

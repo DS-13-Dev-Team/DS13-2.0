@@ -574,13 +574,9 @@
 /area/mara17/interior/medium/security_center)
 "cc" = (
 /obj/structure/bed,
-/obj/item/bedsheet/random{
-	pixel_y = 14
-	},
 /obj/structure/bed{
 	pixel_y = 14
 	},
-/obj/item/bedsheet/random,
 /obj/effect/landmark/latejoin,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/barracks)
@@ -2187,6 +2183,7 @@
 /area/mara17/interior/medium/security_center)
 "hp" = (
 /obj/structure/cable,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating,
 /area/mara17/interior/medium/bar)
 "hq" = (
@@ -2739,6 +2736,7 @@
 	pixel_y = 8
 	},
 /obj/item/kitchen/rollingpin,
+/obj/machinery/light/directional/south,
 /turf/open/floor/iron/cafeteria,
 /area/mara17/interior/medium/canteen/kitchen)
 "iT" = (
@@ -2834,8 +2832,8 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/restroom)
 "jg" = (
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
+/obj/machinery/power/apc/highcap/ten_k/directional/north,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
 "jh" = (
@@ -3651,7 +3649,7 @@
 /area/mara17/interior/medium/capt_office)
 "lq" = (
 /obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/power/apc/highcap/five_k/directional/south,
 /turf/open/floor/wood,
 /area/mara17/interior/medium/capt_office)
 "lr" = (
@@ -3981,8 +3979,14 @@
 /area/mara17/interior/medium)
 "pm" = (
 /obj/machinery/light/small/directional/north,
+/obj/machinery/computer/apc_control,
+/obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/smes)
+"pn" = (
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/canteen)
 "pw" = (
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/deadspace/grater,
@@ -4179,6 +4183,11 @@
 "Ou" = (
 /turf/open/floor/deadspace/cable_end,
 /area/mara17/interior/medium)
+"Ph" = (
+/obj/effect/spawner/random/trash/food_packaging,
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/canteen)
 "Pu" = (
 /turf/closed/wall,
 /area/mara17/interior/medium/abandoned)
@@ -9439,7 +9448,7 @@ fh
 Hd
 Yv
 fi
-Hd
+Di
 az
 az
 az
@@ -11701,7 +11710,7 @@ Hd
 Yv
 Hd
 re
-gh
+Ph
 cV
 dp
 ds
@@ -12269,7 +12278,7 @@ Yv
 Yv
 Hd
 re
-av
+pn
 do
 dr
 du
