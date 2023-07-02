@@ -819,13 +819,6 @@
 /obj/structure/curtain/bounty,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/enginieering/interior)
-"cZ" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/warehouse)
 "da" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -1002,11 +995,6 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/cargo)
-"dH" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/evacuation)
 "dI" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -1019,14 +1007,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/mara17/interior/upper/observation/comms)
-"dK" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/machinery/door/airlock/external{
-	name = "Telecommunications airlock";
-	req_one_access_txt = "19; 61"
-	},
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/tcomms)
 "dL" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor2-old"
@@ -1579,14 +1559,6 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining/locker_room)
-"fA" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/evacuation)
 "fB" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -2237,12 +2209,12 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining/hallway)
 "hr" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
-	},
 /obj/machinery/door/airlock/external{
 	name = "Telecommunications airlock";
 	req_one_access_txt = "19; 61"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "telecom_link"
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms)
@@ -3405,10 +3377,10 @@
 /area/mara17/interior/upper/medical)
 "kJ" = (
 /obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
-	},
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "warehouse_link"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/warehouse)
 "kK" = (
@@ -3479,13 +3451,15 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/mining/tool_storage)
 "kU" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/external{
 	name = "Telecommunications airlock";
 	req_one_access_txt = "19; 61"
 	},
 /obj/effect/landmark/navigate_destination/tcomms,
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "telecom_link"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms)
 "kV" = (
@@ -3545,14 +3519,14 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/mining/locker_room)
 "le" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
-	},
 /obj/machinery/door/airlock/external{
 	name = "Telecommunications airlock";
 	req_one_access_txt = "19; 61"
 	},
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "telecom_link"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms)
 "lf" = (
@@ -4219,8 +4193,8 @@
 /area/mara17/interior/upper/tcomms)
 "qJ" = (
 /obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "warehouse_link"
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/warehouse)
@@ -4246,8 +4220,8 @@
 /area/mara17/interior/upper/cargo/quartermaster)
 "rv" = (
 /obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "observation_link"
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/observation)
@@ -4577,8 +4551,10 @@
 /area/mara17/interior/upper/observation/bathroom)
 "GX" = (
 /obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "evac_link"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/evacuation)
 "Hj" = (
@@ -4744,27 +4720,12 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/evacuation)
-"Qf" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/observation)
 "Ql" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 4
 	},
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
-"QM" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/observation)
 "QV" = (
 /obj/machinery/light/warm/directional/south,
 /turf/open/floor/deadspace/hardwood,
@@ -4798,14 +4759,6 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining)
-"TG" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/warehouse)
 "TM" = (
 /obj/machinery/space_heater,
 /turf/open/floor/deadspace/grater,
@@ -4847,10 +4800,10 @@
 /area/mara17/interior/upper/access3)
 "Wd" = (
 /obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "observation_link"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/observation)
 "We" = (
@@ -4927,8 +4880,8 @@
 /area/mara17/interior/upper/mining/ore_storage)
 "YY" = (
 /obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "evac_link"
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/evacuation)
@@ -7422,7 +7375,7 @@ jm
 ji
 se
 se
-dH
+YY
 se
 kG
 se
@@ -7708,7 +7661,7 @@ jn
 dB
 Uu
 Uu
-fA
+GX
 YY
 Uu
 Uu
@@ -12988,7 +12941,7 @@ ak
 cy
 ak
 ak
-dK
+hr
 Eb
 MX
 Eb
@@ -13688,8 +13641,8 @@ aM
 aM
 YF
 YF
-cZ
-TG
+qJ
+kJ
 YF
 YF
 YF
@@ -16344,7 +16297,7 @@ OA
 OA
 OA
 OA
-Qf
+Wd
 FC
 cy
 cy
@@ -16765,7 +16718,7 @@ uz
 uz
 zA
 zA
-QM
+rv
 Wd
 zA
 zA
