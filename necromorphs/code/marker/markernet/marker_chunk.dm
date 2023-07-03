@@ -50,8 +50,6 @@
 
 	var/turf/centre_turf = locate(x + (CHUNK_SIZE / 2), y + (CHUNK_SIZE / 2), z)
 	for(var/atom/source as anything in netVisionSources)
-		if(source.z != z)
-			continue
 		if(!IN_GIVEN_RANGE(source, centre_turf, CHUNK_SIZE))
 			continue
 
