@@ -4926,6 +4926,7 @@
 #include "necromorphs\code\modules\clothing\under\jobs\security.dm"
 #include "necromorphs\code\modules\mob\living\simple_animal\amongusflash.dm"
 #include "necromorphs\code\modules\tools\mining_tools.dm"
+#include "necromorphs\code\modules\weapons\guns\deadspace.dm"
 #include "necromorphs\code\modules\weapons\guns\divet.dm"
 #include "necromorphs\code\modules\weapons\guns\pulse.dm"
 #include "necromorphs\code\modules\weapons\handheld\melee.dm"
