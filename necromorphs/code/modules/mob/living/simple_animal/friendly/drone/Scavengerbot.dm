@@ -2,7 +2,7 @@
 	name = "Scavenger bot"
 	desc = "A small robot that perform many tasks where human where human technicians and larger robots cannot go."
 	icon = 'necromorphs/icons/mob/animal.dmi'
-	icon_state = "spiderbot_off"
+	icon_state = "spiderbot"
 	icon_living = "spiderbot"
 	held_state = "spiderbot"
 	held_lh = 'necromorphs/icons/mob/pets_held_lh.dmi'

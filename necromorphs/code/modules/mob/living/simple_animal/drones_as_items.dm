@@ -1,5 +1,5 @@
 /obj/effect/mob_spawn/ghost_role/drone/scavbot
-	name = "Scavanger bot shell"
+	name = "Scavenger bot shell"
 	desc = "A shell of a maintenance drone, an expendable robot built to perform station repairs."
 	icon = 'necromorphs/icons/mob/animal.dmi'
 	icon_state = "spiderbot_off"
@@ -10,9 +10,9 @@
 	mob_type = /mob/living/simple_animal/drone/classic/scavbot
 	role_ban = ROLE_DRONE
 	show_flavor = FALSE
-	prompt_name = "scavanger bot"
-	you_are_text = "You are a scavanger bot."
-	flavour_text = "You are a corporate owned scavanger bot, you've been tasked with the scavanging of the station or ship."
+	prompt_name = "scavenger bot"
+	you_are_text = "You are a scavenger bot."
+	flavour_text = "You are a corporate owned scavenger bot, you've been tasked with the scavanging of the station or ship."
 	important_text = "You MUST read and follow your laws carefully."
 	spawner_job_path = /datum/job/maintenance_drone
 
@@ -20,7 +20,7 @@
 	. = ..()
 	var/area/A = get_area(src)
 	if(A)
-		notify_ghosts("A Scavanger Bot has been created in \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE, ignore_key = POLL_IGNORE_DRONE, notify_suiciders = FALSE)
+		notify_ghosts("A Scavenger Bot has been created in \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE, ignore_key = POLL_IGNORE_DRONE, notify_suiciders = FALSE)
 
 /obj/effect/mob_spawn/ghost_role/drone/scavbot/allow_spawn(mob/user, silent = FALSE)
 	var/client/user_client = user.client
@@ -40,6 +40,6 @@
 		var/minutes_left = required_playtime - current_playtime
 		var/playtime_left = DisplayTimeText(minutes_left * (1 MINUTES))
 		if(!silent)
-			to_chat(user, span_danger("You need to play [playtime_left] more as [required_role] to spawn as a Scavanger Bot!"))
+			to_chat(user, span_danger("You need to play [playtime_left] more as [required_role] to spawn as a Scavenger Bot!"))
 		return FALSE
 	return ..()

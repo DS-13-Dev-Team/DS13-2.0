@@ -34,7 +34,7 @@
 			if(W.tool_behaviour == TOOL_SCREWDRIVER)
 				to_chat(user, span_notice("You start screwing the pieces together..."))
 				if(W.use_tool(src, user, 40, volume=100))
-					var/mob/living/simple_animal/drone/classic/scavbot/B = new(drop_location())
+					var/obj/effect/mob_spawn/ghost_role/drone/scavbot/B = new(drop_location())
 					B.name = created_name
 					to_chat(user, span_notice("You completed the Scavanger bot."))
 					qdel(src)
@@ -50,7 +50,7 @@
 
 /datum/crafting_recipe/scavbot
 	name = "Scavanger bot"
-	result = /mob/living/simple_animal/drone/classic/scavbot
+	result = /obj/effect/mob_spawn/ghost_role/drone/scavbot
 	reqs = list(/obj/item/wallframe/apc = 1,
 				/obj/item/bodypart/arm/right/robot = 1,
 				/obj/item/stack/cable_coil = 15,
