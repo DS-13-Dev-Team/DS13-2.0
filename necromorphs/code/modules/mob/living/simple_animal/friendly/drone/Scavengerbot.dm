@@ -1,8 +1,8 @@
 /mob/living/simple_animal/drone/classic/scavbot
-	name = "Scavenger Bot"
+	name = "Scavenger bot"
 	desc = "A small robot that perform many tasks where human where human technicians and larger robots cannot go."
 	icon = 'necromorphs/icons/mob/animal.dmi'
-	icon_state = "spiderbot"
+	icon_state = "spiderbot_off"
 	icon_living = "spiderbot"
 	picked = TRUE
 	health = 120
