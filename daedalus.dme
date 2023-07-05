@@ -4924,6 +4924,7 @@
 #include "necromorphs\code\modules\clothing\under\jobs\mincar.dm"
 #include "necromorphs\code\modules\clothing\under\jobs\misc.dm"
 #include "necromorphs\code\modules\clothing\under\jobs\security.dm"
+#include "necromorphs\code\modules\mob\living\inhand_holder.dm"
 #include "necromorphs\code\modules\mob\living\simple_animal\drones_as_items.dm"
 #include "necromorphs\code\modules\mob\living\simple_animal\friendly\drone\amongusflash.dm"
 #include "necromorphs\code\modules\mob\living\simple_animal\friendly\drone\construction.dm"

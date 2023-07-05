@@ -48,3 +48,13 @@
 	else
 		..()
 
+/datum/crafting_recipe/scavbot
+	name = "Scavanger bot"
+	result = /mob/living/simple_animal/drone/classic/scavbot
+	reqs = list(/obj/item/wallframe/apc = 1,
+				/obj/item/bodypart/arm/right/robot = 1,
+				/obj/item/stack/cable_coil = 15,
+				/obj/item/electronics/apc = 1)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 40
+	category = CAT_ROBOT
