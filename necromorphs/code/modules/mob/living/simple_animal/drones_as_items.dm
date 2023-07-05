@@ -3,8 +3,10 @@
 	desc = "A shell of a maintenance drone, an expendable robot built to perform station repairs."
 	icon = 'necromorphs/icons/mob/animal.dmi'
 	icon_state = "spiderbot_off"
+	anchored = FALSE
 	layer = BELOW_MOB_LAYER
 	density = FALSE
+	move_resist = 1000
 	mob_name = "scavanger bot"
 	///Type of drone that will be spawned
 	mob_type = /mob/living/simple_animal/drone/classic/scavbot
