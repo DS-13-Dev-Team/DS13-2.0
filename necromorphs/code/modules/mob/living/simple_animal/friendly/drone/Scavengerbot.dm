@@ -16,8 +16,8 @@
 	worn_slot_flags = (ITEM_SLOT_BACK | ITEM_SLOT_BELT)
 	initial_language_holder = /datum/language_holder/synthetic
 	laws = \
-	"1. Collect small out of the way resoruces and items for use as resources.\n"+\
-	"2. Deliver the resources and found items to the appropriate department.\n"+\
-	"3. You may not harm any being, regardless of intent or circumstance"
+	"1. You may not harm any being, regardless of intent or circumstance\n"+\
+	"2. Collect out of the way item and resources.\n"+\
+	"3. Deliver the found items to the appropriate department or personal.\n"
 	default_storage = /obj/item/storage/backpack/duffelbag
 	flavortext = "You are a corporate owned scavanger bot, you've been tasked with the scavanging of the station or ship."

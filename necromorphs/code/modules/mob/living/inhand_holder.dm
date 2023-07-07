@@ -1,5 +1,5 @@
 /obj/item/mob_holder/scavbot
-	examine_mob = FALSE
+	examine_mob = TRUE
 
 /obj/item/mob_holder/drone/scavbot/deposit(mob/living/target_mob)
 	. = ..()

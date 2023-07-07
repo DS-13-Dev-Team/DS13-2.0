@@ -18,4 +18,3 @@
 	icon = 'necromorphs/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'necromorphs/icons/mob/onmob/uniform.dmi'
 	icon_state = "jumpsuit_v2"
-
