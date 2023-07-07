@@ -13,7 +13,7 @@ Seeker Rifles
 	inhand_icon_state = null
 	worn_icon_state = null
 	mag_display = FALSE
-	show_bolt_icon = TRUE
+	show_bolt_icon = FALSE
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_HUGE
 	mag_type = /obj/item/ammo_box/magazine/seeker
