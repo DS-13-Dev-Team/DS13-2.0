@@ -10,6 +10,7 @@
 	lefthand_file = 'necromorphs/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = "heavypulserifle-wielded"
+	display_empty = FALSE
 	w_class = WEIGHT_CLASS_BULKY
 	custom_materials = null
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE

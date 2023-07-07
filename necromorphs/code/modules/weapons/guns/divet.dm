@@ -1,7 +1,7 @@
 /**
 Divet pistols
 */
-
+//This is most handguns and bolt action rifles.  The bolt will lock back when it's empty.  You need yourgun_bolt and yourgun_bolt_locked icon states.
 /obj/item/gun/ballistic/automatic/pistol/divet
 	name = "divet pistol"
 	desc = "A Winchester Arms NK-series pistol capable of fully automatic fire."
@@ -13,7 +13,6 @@ Divet pistols
 	mag_type = /obj/item/ammo_box/magazine/divet
 	can_suppress = TRUE
 	actions_types = list(/datum/action/item_action/toggle_firemode)
-	empty_indicator = TRUE
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
 	burst_size = 3
 	fire_delay = 4
@@ -44,7 +43,7 @@ Divet pistols
 	var/obj/item/suppressor/S = new(src)
 	install_suppressor(S)
 
-/obj/item/gun/ballistic/automatic/pistol/divet/silenced
+/obj/item/gun/ballistic/automatic/pistol/divet/spec_ops
 	name = "special ops divet pistol"
 	desc = "A modified version of the Winchester Arms NK-series pistol. An integrated suppressor lowers the audio profile fairly well."
 	icon_state = "divet_spec"
@@ -182,7 +181,7 @@ Projectiles for the casings
 	name = "divet rubber bullet"
 	icon_state = "divet" //Maybe get rubber bullet sprite in future
 	damage = 6
-	stamina = 30
+	stamina = 60
 	armour_penetration = 10
 	ricochets_max = 5
 	ricochet_incidence_leeway = 0

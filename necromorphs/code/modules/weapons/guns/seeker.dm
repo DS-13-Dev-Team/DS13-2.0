@@ -12,6 +12,8 @@ Seeker Rifles
 	righthand_file = 'necromorphs/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = null
 	worn_icon_state = null
+	mag_display = FALSE
+	show_bolt_icon = TRUE
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_HUGE
 	mag_type = /obj/item/ammo_box/magazine/seeker
@@ -43,7 +45,7 @@ Seeker Rifles
 	name = "Earthgov Seeker Rifle"
 	desc = "The Earthgov Seeker Rifle is a riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
 	icon_state = "seeker" //Maybe get a new sprite for it in the future
-	fire_delay = 6
+	fire_delay = 4
 	recoil = 0.4
 	burst_size = 3
 	actions_types = list(/datum/action/item_action/toggle_firemode)

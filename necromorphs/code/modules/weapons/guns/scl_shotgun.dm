@@ -25,7 +25,7 @@ DS SCL Shotgun
 	slot_flags = ITEM_SLOT_BELT
 	empty_indicator = TRUE
 	empty_alarm = TRUE
-	mag_display_ammo = TRUE
+	mag_display = TRUE
 	semi_auto = TRUE
 	internal_magazine = FALSE 
 	tac_reloads = TRUE
@@ -100,7 +100,7 @@ Magazines
 	desc = "Magazine of rubbershot."
 	ammo_type = /obj/item/ammo_casing/shotgun/rubbershot
 
-/obj/item/ammo_box/magazine/ds12g/incapacitate //Use for bola base?
+/obj/item/ammo_box/magazine/ds12g/incapacitate
 	name = "magazine SCL-shotgun incapacitate"
 	ammo_type = /obj/item/ammo_casing/shotgun/incapacitate
 

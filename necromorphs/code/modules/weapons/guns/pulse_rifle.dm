@@ -48,16 +48,17 @@ Pulse Rifles
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]-wielded")
 
-/obj/item/gun/ballistic/automatic/pulse/egov //Same situation as rending divet
-	name = "SWS Earthgov Motorized Pulse Rifle"
+/obj/item/gun/ballistic/deadspace/twohanded/pulse/egov //Same situation as rending divet
+	name = "Earthgov SWS Motorized Pulse Rifle"
 	desc = "The SWS Motorized Pulse Rifle is a military-grade, triple-barreled assault rifle, manufactured by Winchester Arms, is capable of a rapid rate of fire. \
 This variant is of standard earthgov issue, featuring the highest grade parts."
 	icon_state = "pulserifle_egov"
-	inhand_icon_state = "pulserifle_egov"
+	base_icon_state = "pulserifle_egov"
 	projectile_damage_multiplier = 1.10
+	spread = 4
 	//tier_1_bonus = 0
 
-/obj/item/gun/ballistic/automatic/pulse/egov/Initialize(mapload)
+/obj/item/gun/ballistic/deadspace/twohanded/pulse/egov/Initialize(mapload)
 	magazine = new /obj/item/ammo_box/magazine/pulse/hv(src)
 	return ..()
 
