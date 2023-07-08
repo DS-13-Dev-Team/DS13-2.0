@@ -4837,6 +4837,7 @@
 #include "necromorphs\code\game\turf.dm"
 #include "necromorphs\code\game\gamemodes\containment\containment.dm"
 #include "necromorphs\code\game\turfs\ds13_floor.dm"
+#include "necromorphs\code\game\turfs\walls.dm"
 #include "necromorphs\code\marker\hud.dm"
 #include "necromorphs\code\marker\marker.dm"
 #include "necromorphs\code\marker\marker_defines.dm"
