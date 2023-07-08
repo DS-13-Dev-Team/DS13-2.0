@@ -26,10 +26,10 @@ Seeker Rifles
 	bolt_type = BOLT_TYPE_OPEN
 	actions_types = list()
 	//tier_1_bonus = 1 //Cut slashers some slack
-	fire_sound = 'sound/ds13/seeker_fire.ogg'
+	fire_sound = 'necromorphs/sound/weapons/guns/seeker_fire.ogg'
 	fire_sound_volume = 90
-	load_sound = 'sound/ds13/seeker_load.ogg'
-	eject_sound = 'sound/ds13/pulse_magout.ogg'
+	load_sound = 'necromorphs/sound/weapons/guns/seeker_load.ogg'
+	eject_sound = 'necromorphs/sound/weapons/guns/pulse_magout.ogg'
 
 /obj/item/gun/ballistic/deadspace/twohanded/seeker/no_mag
 	spawnwithmagazine = FALSE

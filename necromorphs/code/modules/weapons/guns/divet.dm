@@ -18,7 +18,7 @@ Divet pistols
 	fire_delay = 4
 	dual_wield_spread = 6
 	firing_burst = TRUE
-	fire_sound= 'sound/ds13/divet_fire.ogg'
+	fire_sound= 'necromorphs/sound/weapons/guns/divet_fire.ogg'
 	load_sound = 'necromorphs/sound/weapons/guns/divet_magin.ogg'  //Old noises from 1.0, but weren't actually working and used before.
 	eject_sound = 'necromorphs/sound/weapons/guns/divet_magout.ogg' //They just sound like clockwork cult sounds.
 	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'

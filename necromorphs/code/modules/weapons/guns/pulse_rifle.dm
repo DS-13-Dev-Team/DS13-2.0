@@ -24,9 +24,9 @@ Pulse Rifles
 	can_suppress = FALSE
 	one_handed_penalty = 20
 	spread = 5
-	fire_sound = 'sound/ds13/pulse_shot.ogg'
-	load_sound = 'sound/ds13/pulse_magin.ogg'
-	eject_sound = 'sound/ds13/pulse_magout.ogg'
+	fire_sound = 'necromorphs/sound/weapons/guns/pulse_shot.ogg'
+	load_sound = 'necromorphs/sound/weapons/guns/pulse_magin.ogg'
+	eject_sound = 'necromorphs/sound/weapons/guns/pulse_magout.ogg'
 	default_fire_sound ='necromorphs/sound/weapons/guns/pulse_shot.ogg'
 	//alt fire stuff
 	alt_fire_ammo = /obj/item/ammo_casing/caseless/rocket/pulse
