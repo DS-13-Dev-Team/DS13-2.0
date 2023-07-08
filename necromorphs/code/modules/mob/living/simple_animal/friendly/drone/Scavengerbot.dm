@@ -12,7 +12,7 @@
 	health = 120
 	maxHealth = 120
 	sight = (SEE_OBJS)
-	held_type = /obj/item/mob_holder/scavbot
+	held_type = /obj/item/mob_holder/drone/scavbot
 	worn_slot_flags = (ITEM_SLOT_BACK | ITEM_SLOT_BELT)
 	initial_language_holder = /datum/language_holder/synthetic
 	laws = \
