@@ -13,3 +13,10 @@
 	worn_icon = 'necromorphs/icons/mob/onmob/uniform.dmi'
 	icon_state = "ds_mechanic"
 
+/obj/item/clothing/under/rank/engineering/ds_flightdeck
+	name = "flight deck's uniform"
+	desc = "A green uniform issued to the flight deck crew."
+	icon = 'necromorphs/icons/obj/clothing/uniforms.dmi'
+	worn_icon = 'necromorphs/icons/mob/onmob/uniform.dmi'
+	icon_state = "ds_flightdeck"
+	can_adjust = FALSE
