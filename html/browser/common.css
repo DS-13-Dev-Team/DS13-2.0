@@ -36,7 +36,7 @@ a, button, a:link, a:visited, a:active, .linkOn, .linkOff
 a:hover
 {
 	color: #ffffff;
-	background: #aa5f36;
+	background: #40628a;
 }
 
 a.white, a.white:link, a.white:visited, a.white:active
@@ -59,7 +59,7 @@ a.white:hover
 .linkOn, a.linkOn:link, a.linkOn:visited, a.linkOn:active, a.linkOn:hover
 {
 	color: #ffffff;
-	background: #aa5f36;
+	background: #40628a;
 	border-color: #202020;
 }
 
@@ -566,7 +566,7 @@ span.color_holder_box{
 }
 
 .zebraTable tr:nth-child(even){
-	background-color: #0e4057;
+	background-color: #156083;
 
 }
 
