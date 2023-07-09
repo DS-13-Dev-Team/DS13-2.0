@@ -118,14 +118,14 @@
 /obj/item/stock_parts/cell/plasmacutter
 	name = "plasma energy"
 	desc = "A light power pack designed for use with high energy cutting tools."
-	icon = 'necromorphs/icons/obj/ammo.dmi'
+	icon = 'deadspace/icons/obj/ammo.dmi'
 	icon_state = "darts"
 /obj/effect/projectile/plasmacutter/muzzle
-	icon = 'necromorphs/icons/obj/projectiles.dmi'
+	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "muzzle_plasmacutter"
 
 /obj/effect/projectile/plasmacutter/impact
-	icon = 'necromorphs/icons/obj/projectiles.dmi'
+	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "impact_plasmacutter"
 
 /obj/item/gun/energy/plasmacutter/proc/eject_cell(mob/user)
