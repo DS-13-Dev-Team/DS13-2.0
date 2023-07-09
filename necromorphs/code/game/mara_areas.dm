@@ -53,6 +53,10 @@ maybe on the future.
 	name = "Iris Outpost - Medical Bay - Morgue"
 	icon_state = "morgue"
 
+/area/mara17/interior/upper/medical/cmo
+	name = "Iris Outpost - Medical Bay - Medical Director Office"
+	icon_state = "CMO"
+
 ///// ENGINIEERING /////
 
 /area/mara17/interior/upper/enginieering
@@ -62,6 +66,10 @@ maybe on the future.
 /area/mara17/interior/upper/enginieering/interior
 	name = "Iris Outpost - Enginieering Bay"
 	icon_state = "engi_lobby"
+
+/area/mara17/interior/upper/enginieering/ce
+	name = "Iris Outpost - Chief Enginieer Office"
+	icon_state = "ce_office"
 
 ///// WAREHOUSE /////
 
@@ -181,6 +189,44 @@ maybe on the future.
 	name = "Iris Outpost - Access 3"
 	icon_state = "checkpoint"
 
+// ABANDONED AREAS - South Area of the map //
+
+/area/mara17/interior/upper/abandoned
+	name = "Iris Outpost - Abandoned Area"
+	icon_state = "unknown"
+
+/area/mara17/interior/upper/abandoned/romero_interior
+	name = "Iris Outpost - Romero Outpost Interior"
+	icon_state = "station"
+
+/area/mara17/interior/upper/abandoned/romero_commander
+	name = "Iris Outpost - Romero Outpost - Commander Office"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/upper/abandoned/romero_checkpoint
+	name = "Iris Outpost - Romero Outpost - Commander Office"
+	icon_state = "checkpoint"
+
+/area/mara17/interior/upper/abandoned/romero_storage
+	name = "Iris Outpost - Romero Outpost - Commander Office"
+	icon_state = "storage"
+
+/area/mara17/interior/upper/abandoned/romero_aux
+	name = "Iris Outpost - Romero Outpost - Auxiliary Building"
+	icon_state = "station"
+
+/area/mara17/interior/upper/abandoned/romero_storage
+	name = "Iris Outpost - Romero Outpost - Auxiliary Armory"
+	icon_state = "storage"
+
+/area/mara17/interior/upper/abandoned/romero_res_medbay
+	name = "Iris Outpost - Romero Outpost - Specimen Dissection Room"
+	icon_state = "patients"
+
+/area/mara17/interior/upper/abandoned/romero_pen
+	name = "Iris Outpost - Romero Outpost - Specimen Pen"
+	icon_state = "sec_prison"
+
 
 // MEDIUM LEVEL - Areas in the middle level
 
@@ -214,6 +260,22 @@ maybe on the future.
 	name = "Mara 17 Interior - Workshop"
 	icon_state = "engine_storage"
 
+/area/mara17/interior/medium/chapel
+	name = "Mara 17 Interior - Church of Unitology Chapel"
+	icon_state = "chapel"
+
+/area/mara17/interior/medium/chapel_office
+	name = "Mara 17 Interior - Chapel Office"
+	icon_state = "chapeloffice"
+
+/area/mara17/interior/medium/chapel_bathroom
+	name = "Mara 17 Interior - Chapel Bathroom"
+	icon_state = "restrooms"
+
+/area/mara17/interior/medium/chapel_dorm
+	name = "Mara 17 Interior - Chapel Dormitories"
+	icon_state = "dorms"
+
 ///// CANTEEN /////
 
 /area/mara17/interior/medium/canteen
@@ -237,8 +299,34 @@ maybe on the future.
 ///// SMES ROOM /////
 
 /area/mara17/interior/medium/smes
-	name = "Mara 17 Interior - SMES Room"
+	name = "Mara 17 Interior - SMES Room 1#"
 	icon_state = "maint_electrical"
+
+/area/mara17/interior/medium/smes2
+	name = "Mara 17 Interior - SMES Room 2#"
+	icon_state = "maint_electrical"
+
+///// RESEARCH /////
+
+/area/mara17/interior/medium/research_dept
+	name = "Mara 17 Interior - Research & Development"
+	icon_state = "science"
+
+/area/mara17/interior/medium/research_lab
+	name = "Mara 17 Interior - R&D Lab"
+	icon_state = "research"
+
+/area/mara17/interior/medium/research_test
+	name = "Mara 17 Interior - R&D Lab Testing Site"
+	icon_state = "ord_test"
+
+/area/mara17/interior/medium/research_breakroom
+	name = "Mara 17 Interior - Research Break Room"
+	icon_state = "lounge"
+
+/area/mara17/interior/medium/research_rd
+	name = "Mara 17 Interior - Research Director Office"
+	icon_state = "rd_office"
 
 ///// LOWER MINING /////
 
@@ -252,6 +340,30 @@ maybe on the future.
 
 ///// COMMAND /////
 
+/area/mara17/interior/medium/command_center
+	name = "Mara 17 Interior - Command Center"
+	icon_state = "bridge"
+
+/area/mara17/interior/medium/command_hallway
+	name = "Mara 17 Interior - Command Center"
+	icon_state = "bridge_hallway"
+
+/area/mara17/interior/medium/command_meeting
+	name = "Mara 17 Interior - Command Conference Room"
+	icon_state = "meeting"
+
+/area/mara17/interior/medium/hop_office
+	name = "Mara 17 Interior - Head of Personnel Office"
+	icon_state = "hop_office"
+
+/area/mara17/interior/medium/hop_quarters
+	name = "Mara 17 Interior - Head of Personnel Quarters"
+	icon_state = "hop_private"
+
+/area/mara17/interior/medium/hop_bathroom
+	name = "Mara 17 Interior - Head of Personnel Bathroom"
+	icon_state = "restrooms"
+
 /area/mara17/interior/medium/capt_office
 	name = "Mara 17 Interior - Overseer Office"
 	icon_state = "captain"
@@ -263,6 +375,12 @@ maybe on the future.
 /area/mara17/interior/medium/capt_bathroom
 	name = "Mara 17 Interior - Overseer's Bathroom"
 	icon_state = "restrooms"
+
+// PSYCHOLOGIST //
+
+/area/mara17/interior/medium/psychology
+	name = "Mara 17 Interior - Psychologist Office"
+	icon_state = "psychology"
 
 ///// SECURITY /////
 
@@ -278,6 +396,41 @@ maybe on the future.
 	name = "Mara 17 Interior - Emergency Armory"
 	icon_state = "armory"
 
+/area/mara17/interior/medium/warden_office
+	name = "Mara 17 Interior - Warden's Office"
+	icon_state = "warden"
+
+/area/mara17/interior/medium/evidence_1
+	name = "Mara 17 Interior - Evidence Room 1#"
+	icon_state = "investigate_office"
+
+/area/mara17/interior/medium/evidence_2
+	name = "Mara 17 Interior - Evidence Room 2#"
+	icon_state = "investigate_office"
+
+/area/mara17/interior/medium/sec_armory
+	name = "Mara 17 Interior - Security Armory"
+	icon_state = "armory"
+
+/area/mara17/interior/medium/detective_office
+	name = "Mara 17 Interior - Detective Office"
+	icon_state = "detective"
+
+/area/mara17/interior/medium/hos_office
+	name = "Mara 17 Interior - Head of Security Office"
+	icon_state = "sec_hos"
+
+/area/mara17/interior/medium/hos_quarters
+	name = "Mara 17 Interior - Head of Security Quarters"
+	icon_state = "sec_hos"
+
+/area/mara17/interior/medium/hos_bathroom
+	name = "Mara 17 Interior - Head of Security Bathroom"
+	icon_state = "restrooms"
+
+/area/mara17/interior/medium/perma
+	name = "Mara 17 Interior - Permanent Confinement"
+	icon_state = "sec_prison"
 
 ///// ABANDONED AREAS /////
 
@@ -292,4 +445,89 @@ maybe on the future.
 /area/mara17/interior/medium/abandoned/watchtower2
 	name = "Mara 17 - Abandoned Watchtower 2#"
 	icon_state = "unknown"
+
+///// LOWER MARA AREAS /////
+
+/area/mara17/interior/lower
+	name = "Mara 17 - Lower Level"
+	icon_state = "unknown"
+
+/area/mara17/interior/lower/sec_checkpoint
+	name = "Mara 17 - Lower Security Checkpoint"
+	icon_state = "checkpoint"
+
+/area/mara17/interior/lower/scaf_storage1
+	name = "Mara 17 - SCAF Equipment Storage"
+	icon_state = "storage"
+
+/area/mara17/interior/lower/scaf_storage2
+	name = "Mara 17 - SCAF Equipment Storage - Auxiliary Supplies Room"
+	icon_state = "storage_wing"
+
+/area/mara17/interior/lower/scaf_storage_hallway
+	name = "Mara 17 - SCAF Equipment Storage Hallway"
+	icon_state = "hall"
+
+/area/mara17/interior/lower/aux_storage
+	name = "Mara 17 - Auxiliary Storage"
+	icon_state = "emergency_storage"
+
+/area/mara17/interior/lower/tunnel
+	name = "Mara 17 - Maintenance Tunnels"
+	icon_state = "centralmaint"
+
+/area/mara17/interior/lower/room1
+	name = "Mara 17 - Abandoned Room 1"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/room2
+	name = "Mara 17 - Abandoned Room 2"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/room3
+	name = "Mara 17 - Abandoned Room 3"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/room4
+	name = "Mara 17 - Abandoned Room 4"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/room5
+	name = "Mara 17 - Abandoned Room 5"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/room6
+	name = "Mara 17 - Abandoned Room 6"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/room7
+	name = "Mara 17 - Abandoned Room 7"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/room8
+	name = "Mara 17 - Abandoned Room 8"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/room9
+	name = "Mara 17 - Abandoned Room 9"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/room10
+	name = "Mara 17 - Abandoned Room 10"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/room11
+	name = "Mara 17 - Abandoned Room 11"
+	icon_state = "vacant_room"
+
+/area/mara17/interior/lower/old_chapel
+	name = "Mara 17 - Abandoned Chapel"
+	icon_state = "chapel"
+
+/area/mara17/interior/lower/old_bunker
+	name = "Mara 17 - Unknown Bunker"
+	icon_state = "vacant_room"
+
+
+
 

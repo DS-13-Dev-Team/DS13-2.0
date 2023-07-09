@@ -100,6 +100,8 @@
 	name = "Mara 17 - Overseer Orders"
 	desc = "A videolog containing the orders to the outpost overseer."
 	color = "red"
+	icon = 'necromorphs/icons/obj/epad.dmi'
+	icon_state = "epad_work"
 	preset_image_type = /datum/preset_holoimage/captain
 	preset_record_text = {"
 	NAME CEC Executive
@@ -110,11 +112,11 @@
 	DELAY 30
 	SAY I will address a few things for you before you get started.
 	DELAY 30
-	SAY First of all, you're currently going to be using the newly established mining facility on the planet, this place called 'Outpost Iris', built by the Sovereign Colonies Armed Forces.
+	SAY First of all, you're currently going to be using the newly established mining facility on the planet, this place called 'Outpost Iris', built by the Sovereign Colonies Armed Forces, around 200 years ago.
 	DELAY 30
 	SAY But it's been reformed, and now is going to be home of you and the personnel of the CEC which are down here with you.
 	DELAY 30
-	SAY The USG Renault will be on the planet's orbit to ensure that mining resources from the planet will be delivered to Titan Station after mining operations are concluded in 32 months.
+	SAY The USG Renault will be on the planet's orbit to ensure that the resources from the planet will be delivered to Titan Station after mining operations are concluded in 32 months.
 	DELAY 30
 	SAY Once mining operations are concluded, your personnel will be relieved and brought onboard to the Renault and back to Titan Station.
 	DELAY 30
@@ -132,20 +134,80 @@
 	DELAY 30
 	SAY We have limited equipment and the CEC cannot afford to waste much on this operations, if you ask me, they probably just wanted to leave sooner and came up with this excuse of 'Dementia' and such.
 	DELAY 30
-	SAY The facilities here are not complete, so you will have to use what you were given by the CEC and what the other team left here.
+	SAY The lower level of the outpost has been closed & sealed aswell due for safety concerns, it's for the best that nobody goes until the next specialized team arrives.
 	DELAY 30
-	SAY We've also made sure to give you an small armory with some of the surplus equipment we had, i dont think you will use it or that personnel will riot, but keep it in mind.
+	SAY The facilities here are not fully supplied, so you will have to use what you were given by the CEC and what the other team left here.
+	DELAY 30
+	SAY We've also made sure to give you an small armory with some of the surplus equipment we found, i dont think you will use it or that personnel will riot, but keep it in mind.
 	DELAY 30
 	SAY Lastly, should any catastrophic event occur on the planet, your only evacuation will be the disposal shuttle left here.
 	DELAY 30
 	SAY I know it's not an evacuation shuttle, but thank the USG Renault for not leaving you stranded.
 	DELAY 30
 	SAY With this said, good luck! And remember! Safety begins with teamwork!
-	DELAY 20"}
+	DELAY 20;"}
+
+
+/obj/item/disk/holodisk/ds13/mara_cpt_confidential
+	name = "Mara 17 - Overseer Orders"
+	desc = "WARNING: COMMANDING STAFF EYES ONLY"
+	color = "blue"
+	icon = 'necromorphs/icons/obj/epad.dmi'
+	icon_state = "epad_work"
+	preset_image_type = /datum/preset_holoimage/captain
+	preset_record_text = {"
+	NAME CEC Executive
+	DELAY 10
+	SAY During the excavation of the 3rd team stationed on the outpost, they discovered what appears to be a genuine marker, the red marker to be precise.
+	DELAY 15
+	SAY After talk with other executives of the CEC, your team will be taking the task of waiting until officials from the church of unitology and specialists of the CEC arrive to Mara 17.
+	DELAY 15
+	SAY Under NO CIRCUMSTANCES the marker must be touched or modified by anyone who is not authorized by the church of Unitology.
+	DELAY 15
+	SAY The team with said specialists will arrive in 4 months, any damage or scratch found in the marker will be personally deducted from your pay and having your men and yourself fired from the CEC.
+	DELAY 15
+	SAY You are to stay there until they arrive, this is all. The CEC is watching this with great interest, do not dissapoint us.
+	DELAY 20;"}
+
+/obj/item/disk/holodisk/ds13/mara_sec
+	name = "Mara 17 - Security Report #17"
+	desc = "A videolog containing a detailed report on the 3rd team stationed on the Outpost Iris."
+	icon = 'necromorphs/icons/obj/epad.dmi'
+	icon_state = "epad_work"
+	preset_image_type = /datum/preset_holoimage/nanotrasenprivatesecurity
+	preset_record_text = {"
+	NAME SGT Alexis Garret
+	DELAY 15
+	SAY This is Sergeant Alexis Garret, 3rd team, Detective.
+	DELAY 10
+	SAY Currently after the excavation done in the lower level of these so called mines, the mining team found a cave with lots of remains.. Human remains.
+	DELAY 25
+	SAY IT appears that those plasma cutting fuckheads found what appears to be a GENUINE marker aswell, we've got pictures and videologs of it, and it's no fucking joke, Altman be fucking praised.
+	DELAY 25
+	SAY However, two weeks have passed since that discovery, and the outpost crew stationed here have grown..Akward ever since we discovered the marker.
+	DELAY 25
+	SAY Most of the miners suffer from hallucinations and headaches and the 55% have been brought back to the USG Renault for further psychological evaluation.
+	DELAY 25
+	SAY And what's worse, other people are reporting odd occurrences happening around, someone has reported that they hear whispers behind the walls, and even scratching noises too.
+	DELAY 25
+	SAY It does not help that we found what appears to be one of the enginieers of our team fucking mauled to death by something in the snow, 3 hours after they went missing during a routine inspection.
+	DELAY 25
+	SAY The personnel have become quite stressed aswell, we had to detain an enginieer and a miner after they tried to rig the marker with explosives, shouting that some fucking ghost warned them that it 'would kill us all!'.
+	DELAY 25
+	SAY EVEN worse too, the USG Renault's arrays have gone fried or something cause we've tried to hail them for the 8th time and they aint picking the phone. The chief enginieer reports grunts and some static though.
+	DELAY 25
+	SAY We have over 7 missing personnel, including Corporal Dumitru Anastasie, i never liked that Romanian fucker, but never thought i'd miss his shenanigans on security.
+	DELAY 25
+	SAY I'll be going on the USG Renault shortly when the 4rth crew arrive on the transport ship they told us about..
+	DELAY 25
+	SAY As a warning for the 4th crew, id suggest not telling anyone about this, stress will not go well and it's better not to worry about it.
+	DELAY 40;"}
 
 /obj/item/disk/holodisk/ds13/mara_exterior
 	name = "Mara 17 - Repairs"
-	desc = "A videolog from a disgruntled CEC employee."
+	desc = "A videolog from a disgruntled CEC employee. Old dried bloodstains seem to cover it."
+	icon = 'necromorphs/icons/obj/epad.dmi'
+	icon_state = "epad_work"
 	preset_image_type = /datum/preset_holoimage/engineer/mod
 	preset_record_text = {"
 	NAME Zack Weller
@@ -164,14 +226,18 @@
 	DELAY 36
 	SAY Who's there ? Is that you Sam ? What the fuck you're doing outside at this hour ?! Last Shift i-
 	SOUND slasher_shout_1
-	DELAY 40"}
+	DELAY 40;"}
+
 
 /obj/item/disk/holodisk/ds13/mara_talk
 	name = "Mara 17 - Gossip"
 	desc = "A videolog from a few CEC employees talking about the outpost, seems from the first team sent here judging by how old it is."
+	icon = 'necromorphs/icons/obj/epad.dmi'
+	icon_state = "epad_work"
 	preset_image_type = /datum/preset_holoimage/researcher
 	preset_record_text = {"
 	NAME Marissa Galvan
+	DELAY 10
 	SAY So, has anyone found anything interesting here ?
 	DELAY 10
 	PRESET /datum/preset_holoimage/engineer
@@ -199,4 +265,74 @@
 	PRESET /datum/preset_holoimage/nanotrasenprivatesecurity
 	NAME James Reed
 	SAY What the fuck you're two doing ? No slacking off! Overseer's orders, get back to work!
-	DELAY 30"}
+	DELAY 30;"}
+
+
+/obj/item/disk/holodisk/ds13/mara_shitsec
+	name = "Mara 17 - Angry"
+	desc = "A videolog from a drunk security officer it seems."
+	icon = 'necromorphs/icons/obj/epad.dmi'
+	icon_state = "epad_work"
+	preset_image_type = /datum/preset_holoimage/nanotrasenprivatesecurity
+	preset_record_text = {"
+    NAME Dumitru Anastasie
+   	DELAY 10
+	SAY Man this shithole is awful.. *HIC*
+	DELAY 20
+    SAY Fuckin' sent here because i beat that ST a bit too hard on the Ishimura 3 years ago.
+    DELAY 10
+    SAY *HIC*
+    DELAY 10
+    SAY What a bunch of idiots, i bet he was a fucking unitologist or even worse..one of those dogshit terrorists.
+	DELAY 20
+    SAY At least they're being replaced by robots heheh..
+	DELAY 20
+    SAY *HIC*
+    DELAY 10
+    SAY Just gotta keep my beating quota high..and just drink myself till i forget this shit.
+    DELAY 30;"}
+
+
+// SIGNS & Floor decals, these are from Rook, for now they work and im more happy with some map content than with nothing - Asi
+
+/obj/effect/turf_decal/scaf_sign
+	icon = 'necromorphs/icons/turf/floor_decals.dmi'
+	icon_state = "scaf_1"
+
+/obj/effect/turf_decal/scaf_sign/one
+	icon_state = "scaf_1"
+
+/obj/effect/turf_decal/scaf_sign/two
+	icon_state = "scaf_2"
+
+/obj/effect/turf_decal/scaf_sign/three
+	icon_state = "scaf_3"
+
+/obj/effect/turf_decal/scaf_sign/four
+	icon_state = "scaf_4"
+
+/obj/effect/turf_decal/scaf_sign/eagle_one
+	icon_state = "eagle_1"
+
+/obj/effect/turf_decal/scaf_sign/eagle_two
+	icon_state = "eagle_2"
+
+// This is just a rename of the nagant revolver, easter egg, you can guess from which game this is - Asi
+
+/obj/item/gun/ballistic/revolver/nagant/model_1892
+	name = "\improper Modèle 1892 revolver"
+	desc = "An old model of a revolver that was once used in WW1, what it's doing here is beyond your knowledge, it could stop a beast if you were amnesiac in a bunker."
+	icon_state = "nagant"
+	can_suppress = TRUE
+
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev762
+
+
+
+
+
+
+
+
+
+

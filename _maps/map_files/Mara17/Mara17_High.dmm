@@ -3,8 +3,8 @@
 /turf/closed/indestructible/rock/snow,
 /area/mara17/interior/caves)
 "ab" = (
-/turf/open/misc/snow,
-/area/space)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
 "ac" = (
 /turf/closed/wall,
 /area/mara17/interior/medium/abandoned/watchtower1)
@@ -137,11 +137,8 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/civilian)
 "aE" = (
-/obj/item/storage/box/bodybags,
-/obj/item/storage/box/bodybags,
-/obj/structure/table/rolling,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/upper/medical/morgue)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_interior)
 "aF" = (
 /turf/closed/wall/rust,
 /area/mara17/interior/medium/abandoned)
@@ -191,11 +188,8 @@
 /turf/open/misc/snow,
 /area/mara17/exterior)
 "aS" = (
-/obj/structure/fence/cut/medium{
-	dir = 8
-	},
-/turf/open/misc/snow,
-/area/mara17/exterior)
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_pen)
 "aT" = (
 /obj/structure/fence/cut/large{
 	dir = 8
@@ -403,9 +397,10 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
 "bC" = (
-/obj/structure/closet/body_bag,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/upper/medical/morgue)
+/obj/structure/cable,
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_pen)
 "bD" = (
 /obj/structure/table/wood,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -440,9 +435,10 @@
 /turf/open/floor/deadspace/medical,
 /area/mara17/interior/upper/observation/bathroom)
 "bJ" = (
-/obj/structure/statue/snow/snowman,
-/turf/open/misc/snow,
-/area/mara17/exterior)
+/obj/structure/cable,
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_storage)
 "bK" = (
 /obj/structure/sink{
 	pixel_y = 14
@@ -502,6 +498,7 @@
 /area/mara17/interior/upper/observation/comms)
 "bU" = (
 /obj/machinery/light/small/directional/north,
+/obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/warehouse)
 "bV" = (
@@ -519,10 +516,9 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
 "bY" = (
-/obj/machinery/light/cold/directional/north,
-/obj/structure/closet/body_bag,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/upper/medical/morgue)
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/exterior)
 "bZ" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/deadspace/grater,
@@ -563,6 +559,7 @@
 /area/mara17/interior/upper/observation/storage)
 "ci" = (
 /obj/effect/turf_decal/delivery,
+/obj/machinery/hydroponics,
 /turf/open/floor/deadspace/grater,
 /area/mara17/exterior)
 "cj" = (
@@ -663,10 +660,8 @@
 /turf/open/floor/deadspace/roller,
 /area/mara17/exterior)
 "cA" = (
-/obj/machinery/door/airlock/medical,
-/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/medical/morgue)
+/area/mara17/interior/upper/medical/cmo)
 "cB" = (
 /obj/structure/closet/secure_closet/medical1,
 /turf/open/floor/deadspace/grater,
@@ -789,13 +784,9 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/cargo/cargo_tech)
 "cU" = (
-/obj/structure/bed{
-	pixel_y = 14
-	},
-/obj/structure/bed,
-/obj/effect/landmark/latejoin,
-/turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/civilian)
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/exterior)
 "cV" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor,
@@ -819,6 +810,10 @@
 /obj/structure/curtain/bounty,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/enginieering/interior)
+"cZ" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_pen)
 "da" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -846,9 +841,9 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/observation/dorms)
 "de" = (
-/obj/structure/cable,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/upper/medical/morgue)
+/obj/machinery/computer/station_alert,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
 "df" = (
 /obj/machinery/door/airlock{
 	name = "Bathroom"
@@ -949,10 +944,44 @@
 /area/mara17/exterior)
 "dw" = (
 /obj/machinery/status_display/evac/directional/west,
+/obj/structure/rack/shelf,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/civilian)
 "dx" = (
 /obj/machinery/status_display/evac/directional/east,
+/obj/structure/rack/shelf,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/civilian)
 "dy" = (
@@ -995,6 +1024,13 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/cargo)
+"dH" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
 "dI" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -1007,6 +1043,9 @@
 /obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/mara17/interior/upper/observation/comms)
+"dK" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical/cmo)
 "dL" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor2-old"
@@ -1204,6 +1243,7 @@
 /obj/item/clothing/gloves/fingerless,
 /obj/machinery/light/warm/directional/north,
 /obj/item/clothing/suit/armor/vest,
+/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/observation/dorms)
 "eq" = (
@@ -1363,14 +1403,9 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/enginieering)
 "eQ" = (
-/obj/structure/bed{
-	pixel_y = 14
-	},
-/obj/structure/bed,
-/obj/item/radio/intercom/directional/west,
-/obj/effect/landmark/latejoin,
-/turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/civilian)
+/obj/structure/bodycontainer/morgue,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
 "eR" = (
 /obj/machinery/vending/engivend,
 /turf/open/floor/deadspace/mono,
@@ -1419,14 +1454,11 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining/relax_room)
 "fb" = (
-/obj/structure/bed{
-	pixel_y = 14
+/obj/structure/bodycontainer/morgue{
+	dir = 8
 	},
-/obj/structure/bed,
-/obj/item/radio/intercom/directional/east,
-/obj/effect/landmark/latejoin,
-/turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/civilian)
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
 "fc" = (
 /obj/structure/statue/snow/snowman{
 	anchored = 1;
@@ -1454,7 +1486,7 @@
 /area/mara17/interior/upper/cargo)
 "fg" = (
 /obj/machinery/light/warm/directional/north,
-/obj/machinery/space_heater,
+/obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/civilian)
 "fh" = (
@@ -1559,6 +1591,11 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining/locker_room)
+"fA" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
 "fB" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -2290,9 +2327,8 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/cargo/quartermaster)
 "hD" = (
-/obj/machinery/camera/autoname/directional/east,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
 "hE" = (
 /obj/structure/rack/shelf,
 /obj/item/clothing/suit/hooded/wintercoat/custom,
@@ -2327,6 +2363,7 @@
 /area/mara17/interior/upper/cargo/quartermaster)
 "hJ" = (
 /obj/machinery/camera/autoname/directional/east,
+/obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining)
 "hK" = (
@@ -2352,14 +2389,14 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/mara17/interior/upper/mining/barracks)
 "hP" = (
-/obj/machinery/light/warm/directional/south,
-/obj/effect/landmark/start/medical_doctor,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
-"hQ" = (
-/obj/structure/cable,
+/obj/structure/sign/ds13/scaf_logo1{
+	pixel_x = 32
+	},
 /turf/open/floor/deadspace/roller,
-/area/space)
+/area/mara17/exterior)
+"hQ" = (
+/turf/closed/wall,
+/area/mara17/interior/upper/abandoned/romero_interior)
 "hR" = (
 /obj/machinery/light/warm/directional/north,
 /obj/structure/chair{
@@ -2380,6 +2417,7 @@
 /obj/structure/closet/secure_closet/miner/mara,
 /obj/effect/turf_decal/ported,
 /obj/item/stock_parts/cell/plasmacutter,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/mining/locker_room)
 "hU" = (
@@ -2546,11 +2584,8 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/enginieering)
 "io" = (
-/obj/structure/rack/shelf,
 /obj/structure/sign/poster/random/directional/west,
-/obj/item/stack/sheet/iron{
-	amount = 30
-	},
+/obj/structure/reagent_dispensers/plumbed/fuel,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/enginieering)
 "ip" = (
@@ -2587,11 +2622,11 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/mining/ore_storage)
 "it" = (
-/obj/structure/table,
-/obj/item/storage/medkit/surgery,
-/obj/item/storage/organbox,
-/obj/item/stack/sticky_tape/surgical,
-/obj/item/stack/medical/bone_gel,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+/obj/machinery/computer/operating{
+	dir = 4
+	},
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
 "iu" = (
@@ -2740,6 +2775,7 @@
 /obj/item/kirbyplants{
 	icon_state = "plant-06"
 	},
+/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/cargo)
 "iR" = (
@@ -2866,6 +2902,7 @@
 /area/mara17/interior/upper/evacuation)
 "jp" = (
 /obj/effect/spawner/random/trash/grime,
+/obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/evacuation)
 "jq" = (
@@ -3231,8 +3268,8 @@
 /area/mara17/interior/upper/mining/tool_storage)
 "km" = (
 /obj/structure/cable,
-/turf/open/floor/plating/snowed,
-/area/space)
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
 "kn" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -3287,17 +3324,21 @@
 /turf/open/floor/deadspace/roller,
 /area/mara17/exterior)
 "ku" = (
-/obj/structure/cable,
+/obj/structure/barricade/wooden/crude/snow,
 /turf/open/misc/snow,
-/area/mara17/exterior)
+/area/mara17/interior/caves)
 "kv" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/civilian)
 "kw" = (
-/obj/machinery/power/apc/auto_name/directional/west,
-/obj/structure/cable,
+/obj/structure/table,
+/obj/item/storage/medkit/surgery,
+/obj/item/storage/organbox,
+/obj/item/stack/sticky_tape/surgical,
+/obj/item/stack/medical/bone_gel,
+/obj/item/surgical_drapes,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
 "kx" = (
@@ -3323,7 +3364,6 @@
 "kA" = (
 /obj/machinery/power/smes/magical,
 /obj/machinery/light/small/directional/north,
-/obj/machinery/power/terminal,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/enginieering)
@@ -3394,10 +3434,12 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
 "kM" = (
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/upper/medical/morgue)
+/obj/structure/marker_beacon/burgundy,
+/obj/structure/sign/ds13/scaf_logo1{
+	pixel_x = 32
+	},
+/turf/open/misc/snow,
+/area/mara17/exterior)
 "kN" = (
 /obj/structure/sign/departments/medbay/alt{
 	pixel_x = 32
@@ -3406,11 +3448,11 @@
 /turf/open/floor/plating/snowed,
 /area/mara17/exterior)
 "kO" = (
-/obj/machinery/door/airlock/medical,
-/obj/machinery/door/firedoor,
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/medical/morgue)
+/obj/structure/sign/ds13/scaf_logo1{
+	pixel_y = 32
+	},
+/turf/open/misc/snow,
+/area/mara17/exterior)
 "kP" = (
 /obj/structure/sign/directions/medical{
 	dir = 1;
@@ -3726,6 +3768,7 @@
 /obj/structure/window/reinforced/spawner,
 /obj/effect/turf_decal/ported,
 /obj/item/stock_parts/cell/plasmacutter,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/mining/locker_room)
 "lG" = (
@@ -3733,6 +3776,7 @@
 /obj/structure/window/reinforced/spawner/north,
 /obj/effect/turf_decal/ported,
 /obj/item/stock_parts/cell/plasmacutter,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/mining/locker_room)
 "lH" = (
@@ -3741,6 +3785,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /obj/item/stock_parts/cell/plasmacutter,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/mining/locker_room)
 "lI" = (
@@ -3847,6 +3892,7 @@
 /obj/structure/sign/warning/enginesafety{
 	pixel_x = 32
 	},
+/obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/enginieering)
 "lZ" = (
@@ -4115,14 +4161,150 @@
 /obj/effect/landmark/observer_start,
 /turf/open/misc/snow,
 /area/mara17/exterior)
+"mJ" = (
+/obj/structure/sign/ds13/scaf_logo1{
+	pixel_y = 32
+	},
+/turf/open/floor/deadspace/roller,
+/area/mara17/exterior)
+"mK" = (
+/obj/structure/cable,
+/obj/structure/sign/ds13/scaf_logo1{
+	pixel_y = 32
+	},
+/turf/open/floor/deadspace/roller,
+/area/mara17/exterior)
+"mL" = (
+/obj/structure/sign/ds13/scaf_logo1{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/snowed,
+/area/mara17/exterior)
+"mM" = (
+/obj/structure/sign/ds13{
+	pixel_y = -32
+	},
+/turf/open/floor/deadspace/roller,
+/area/mara17/exterior)
+"mN" = (
+/turf/closed/wall/r_wall,
+/area/mara17/interior/upper/tcomms)
+"mO" = (
+/turf/open/misc/snow,
+/area/mara17/interior/caves)
+"mP" = (
+/turf/closed/wall,
+/area/mara17/interior/caves)
 "mQ" = (
 /obj/structure/cable,
 /turf/open/floor/plating/snowed,
 /area/mara17/exterior)
+"mR" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/caves)
+"mS" = (
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/caves)
+"mT" = (
+/turf/open/floor/iron/stairs/left{
+	dir = 1
+	},
+/area/mara17/exterior)
+"mU" = (
+/turf/open/floor/iron/stairs/right{
+	dir = 1
+	},
+/area/mara17/exterior)
+"mV" = (
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"mW" = (
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"mX" = (
+/turf/open/floor/plating,
+/area/mara17/exterior)
+"mY" = (
+/turf/open/floor/iron/stairs/left,
+/area/mara17/exterior)
+"mZ" = (
+/turf/open/floor/iron/stairs/right,
+/area/mara17/exterior)
+"na" = (
+/obj/structure/table/wood,
+/obj/machinery/fax_machine,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
+"nb" = (
+/obj/structure/closet/secure_closet/engineering_chief,
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
+"nc" = (
+/obj/structure/table/wood,
+/obj/item/stamp/ce,
+/obj/item/stamp/denied,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
+"nd" = (
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"ne" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"nf" = (
+/obj/effect/spawner/random/trash/mess,
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"ng" = (
+/obj/structure/barricade/wooden/snowed,
+/turf/open/misc/snow,
+/area/mara17/exterior)
+"nh" = (
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_storage)
 "ni" = (
 /obj/structure/curtain/bounty,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining/barracks)
+"nj" = (
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"nk" = (
+/obj/structure/fence,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"nl" = (
+/obj/structure/closet/secure_closet/personal,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"nm" = (
+/obj/structure/fence/cut/large,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"nn" = (
+/obj/structure/table,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"no" = (
+/obj/machinery/computer,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"np" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/marker_beacon/burgundy,
+/turf/open/floor/deadspace/mono,
+/area/mara17/exterior)
+"nq" = (
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_pen)
 "nr" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/deadspace/grater,
@@ -4131,66 +4313,863 @@
 /obj/machinery/light/warm/directional/south,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/mining/tool_storage)
+"nt" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/marker_beacon/burgundy,
+/turf/open/floor/deadspace/mono,
+/area/mara17/exterior)
+"nu" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"nv" = (
+/obj/structure/chair/office{
+	dir = 1
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"nw" = (
+/obj/machinery/light/very_dim/directional/east,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"nx" = (
+/obj/structure/barricade/sandbags,
+/turf/open/misc/snow,
+/area/mara17/exterior)
+"ny" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"nz" = (
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"nA" = (
+/obj/machinery/light/red/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"nB" = (
+/obj/machinery/light/very_dim/directional/south,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
 "nC" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/cargo/quartermaster)
+"nD" = (
+/obj/structure/table/optable,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
 "nE" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access2)
+"nF" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/medical/surgery_tool,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"nG" = (
+/obj/structure/bed/roller,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"nH" = (
+/obj/machinery/iv_drip,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"nI" = (
+/obj/structure/sign/ds13/scaf_logo2{
+	pixel_x = -32
+	},
+/obj/structure/marker_beacon/burgundy,
+/turf/open/misc/snow,
+/area/mara17/exterior)
+"nJ" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = -14
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"nK" = (
+/obj/machinery/door/poddoor{
+	id = "nowhere";
+	name = "SCAF Abandoned Hangar Shutters"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"nL" = (
+/obj/item/pet_carrier,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"nM" = (
+/obj/machinery/vending/sovietsoda,
+/obj/machinery/light/red/directional/west,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"nN" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
+"nO" = (
+/obj/machinery/holopad/secure,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
+"nP" = (
+/obj/machinery/vending/sovietsoda,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"nQ" = (
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"nR" = (
+/obj/structure/rack/shelf,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"nS" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/obj/effect/landmark/start/chief_engineer,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
+"nT" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"nU" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"nV" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"nW" = (
+/obj/effect/spawner/structure/window/ice,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"nX" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"nY" = (
+/obj/structure/reagent_dispensers/plumbed/fuel,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"nZ" = (
+/obj/structure/reagent_dispensers/plumbed/storage,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"oa" = (
+/obj/structure/reagent_dispensers/plumbed,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"ob" = (
+/obj/machinery/vending/sovietsoda,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"oc" = (
+/obj/machinery/light/red/directional/west,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"od" = (
+/obj/machinery/light/very_dim/directional/north,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"oe" = (
+/obj/machinery/vending/sovietsoda,
+/obj/machinery/light/very_dim/directional/north,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
 "of" = (
 /obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/cargo)
+"og" = (
+/turf/closed/wall/r_wall,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"oh" = (
+/obj/structure/table/wood,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
+"oi" = (
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"oj" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"ok" = (
+/obj/effect/spawner/structure/window/ice,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"ol" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/command{
+	name = "Chief Engineer's Office";
+	req_access_txt = "56"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/enginieering/ce)
+"om" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"on" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"oo" = (
+/obj/structure/bodycontainer/morgue,
+/obj/machinery/light/cold/directional/west,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
+"op" = (
+/obj/structure/fence/door,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"oq" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"or" = (
+/obj/structure/rack/shelf,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_interior)
 "os" = (
 /obj/machinery/light/small/directional/south,
+/obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
+"ot" = (
+/obj/structure/rack/gunrack,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"ou" = (
+/obj/machinery/light/very_dim/directional/west,
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"ov" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"ow" = (
+/turf/open/floor/carpet/red,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"ox" = (
+/obj/structure/table/wood,
+/obj/machinery/fax_machine,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"oy" = (
+/obj/effect/turf_decal/scaf_sign/eagle_two,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"oz" = (
+/obj/effect/turf_decal/scaf_sign/eagle_one,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"oA" = (
+/obj/structure/table/wood,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"oB" = (
+/obj/machinery/computer{
+	dir = 4
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"oC" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"oD" = (
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
 "oE" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining/relax_room)
+"oF" = (
+/obj/machinery/modular_computer/console/preset/id{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
+"oG" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"oH" = (
+/obj/machinery/computer/operating{
+	dir = 8
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"oI" = (
+/obj/machinery/camera/autoname/directional/west,
+/obj/structure/bodycontainer/morgue,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
+"oJ" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
+"oK" = (
+/obj/structure/table/optable,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
+"oL" = (
+/obj/machinery/computer/operating{
+	dir = 8
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
+"oM" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/table/glass,
+/obj/item/storage/medkit/emergency,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"oN" = (
+/obj/structure/closet/secure_closet/chief_medical,
+/obj/item/healthanalyzer/advanced,
+/obj/item/reagent_containers/medigel/synthflesh,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"oO" = (
+/obj/structure/table/wood,
+/obj/item/stamp/denied,
+/obj/item/stamp/cmo,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/medical/cmo)
+"oP" = (
+/obj/structure/table/wood,
+/obj/machinery/computer/med_data/laptop,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"oQ" = (
+/obj/structure/rack/shelf,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"oR" = (
+/obj/machinery/modular_computer/console/preset/id{
+	dir = 4
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"oS" = (
+/obj/structure/chair/office{
+	dir = 8
+	},
+/obj/effect/landmark/start/chief_medical_officer,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"oT" = (
+/obj/structure/table/glass,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"oU" = (
+/obj/machinery/computer/crew{
+	dir = 4
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"oV" = (
+/obj/structure/table/glass,
+/obj/machinery/fax_machine,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"oW" = (
+/obj/structure/rack/shelf,
+/obj/item/wheelchair,
+/obj/item/wheelchair,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"oX" = (
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"oY" = (
+/obj/structure/rack/shelf,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"oZ" = (
+/obj/structure/rack/shelf,
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/roller,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"pa" = (
+/obj/structure/rack/shelf,
+/obj/item/storage/backpack/medic,
+/obj/item/storage/backpack/medic,
+/obj/item/storage/backpack/medic,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"pb" = (
+/obj/machinery/computer/apc_control{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
+"pc" = (
+/obj/structure/rack/shelf,
+/obj/item/storage/medkit/emergency,
+/obj/item/storage/medkit/emergency,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"pd" = (
+/obj/machinery/computer/security/wooden_tv,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/enginieering/ce)
+"pe" = (
+/obj/structure/closet/crate/freezer/surplus_limbs,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
+"pf" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
+"pg" = (
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/cable,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
 "ph" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/warehouse)
+"pi" = (
+/obj/machinery/camera/autoname/directional/south,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
+"pj" = (
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
+"pk" = (
+/obj/structure/cable,
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/medical/cmo)
+"pl" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical/cmo)
 "pm" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms/comms)
+"pn" = (
+/obj/machinery/light/warm/directional/north,
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
 "po" = (
 /obj/machinery/light/small/directional/east,
+/obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
+"pp" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"pq" = (
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
 "pr" = (
 /obj/machinery/computer/apc_control{
 	dir = 8
 	},
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/enginieering)
+"ps" = (
+/obj/machinery/holopad/secure,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"pt" = (
+/obj/structure/closet/secure_closet/medical_mara,
+/obj/item/storage/box/syringes,
+/obj/item/clothing/suit/hooded/ds,
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"pu" = (
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
+"pv" = (
+/obj/structure/rack/shelf,
+/obj/item/clothing/suit/hooded/wintercoat/medical,
+/obj/item/clothing/suit/hooded/wintercoat/medical,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/gloves/fingerless,
+/obj/item/clothing/gloves/fingerless,
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"pw" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"px" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"py" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"pz" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"pA" = (
+/obj/machinery/power/port_gen/pacman,
+/turf/open/misc/snow,
+/area/mara17/interior/caves)
+"pB" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_start{
+	dir = 4
+	},
+/area/mara17/interior/upper/abandoned/romero_interior)
+"pC" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_end{
+	dir = 4
+	},
+/area/mara17/exterior)
+"pD" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/caves)
+"pE" = (
+/obj/structure/sign/ds13/scaf_logo2{
+	pixel_y = -32
+	},
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/caves)
+"pF" = (
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/mara17/interior/caves)
+"pG" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_end,
+/area/mara17/exterior)
+"pH" = (
+/obj/structure/barricade/wooden/crude,
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"pI" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable,
+/area/mara17/exterior)
+"pJ" = (
+/obj/structure/rack/shelf,
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"pK" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_start,
+/area/mara17/exterior)
+"pL" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable{
+	dir = 4
+	},
+/area/mara17/interior/upper/abandoned/romero_interior)
+"pM" = (
+/obj/structure/barricade/wooden/crude/snow,
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable{
+	dir = 4
+	},
+/area/mara17/exterior)
+"pN" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"pO" = (
+/obj/structure/extinguisher_cabinet/directional/west,
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"pP" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"pQ" = (
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/enginieering)
+"pR" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/command{
+	name = "Chief Medical Officer's Office";
+	req_access_txt = "40"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/medical/cmo)
+"pS" = (
+/obj/machinery/light/warm/directional/north,
+/obj/effect/landmark/latejoin,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/civilian)
+"pT" = (
+/obj/effect/landmark/latejoin,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/civilian)
+"pU" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"pV" = (
+/obj/effect/decal/remains/xeno,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"pW" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"pX" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"pY" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_aux)
 "pZ" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access2)
+"qa" = (
+/obj/effect/decal/cleanable/cobweb,
+/obj/item/pet_carrier,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"qb" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"qc" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"qd" = (
+/obj/structure/table,
+/obj/machinery/button/door/indestructible{
+	id = "nowhere";
+	name = "SCAF Storage Entrace Lockdown"
+	},
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
 "qe" = (
 /turf/open/openspace,
 /area/mara17/interior/upper/access2)
 "qf" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/cargo)
+"qg" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"qh" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/remains/xeno,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_pen)
+"qi" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/south,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"qj" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"qk" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"ql" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/remains/human,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
 "qm" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/observation/storage)
+"qn" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "ltrails_1"
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"qo" = (
+/obj/machinery/door/airlock,
+/obj/machinery/door/poddoor{
+	id = "loot";
+	name = "SCAF Romero Storage Lockdown"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"qp" = (
+/obj/structure/closet/firecloset,
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
 "qq" = (
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/evacuation)
+"qr" = (
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "ltrails_1"
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"qs" = (
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"qt" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/effect/decal/remains/human,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"qu" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock,
+/obj/machinery/door/poddoor{
+	id = "loot";
+	name = "SCAF Romero Storage Lockdown"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"qv" = (
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "trails_1"
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"qw" = (
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "floor2-old"
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"qx" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"qy" = (
+/obj/structure/rack/shelf,
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/spawner/random/medical/medkit,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"qz" = (
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "trails_1"
+	},
+/obj/effect/decal/remains/human,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"qA" = (
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "floor2-old"
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_aux)
 "qB" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/tcomms)
+"qC" = (
+/turf/closed/wall,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"qD" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "gib5-old"
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"qE" = (
+/obj/structure/rack/shelf,
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/effect/spawner/random/medical/medkit_rare,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"qF" = (
+/obj/structure/rack/shelf,
+/obj/item/gun/ballistic/automatic/pistol/divet,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"qG" = (
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "trails_2"
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"qH" = (
+/obj/structure/rack/shelf,
+/obj/item/storage/toolbox/ammo,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"qI" = (
+/obj/structure/rack/shelf,
+/obj/item/gun/ballistic/rifle/boltaction,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_storage)
 "qJ" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -4198,11 +5177,63 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/warehouse)
+"qK" = (
+/obj/effect/decal/remains/human,
+/obj/item/mod/control/pre_equipped/security,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"qL" = (
+/obj/structure/rack/shelf,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"qM" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"qN" = (
+/obj/item/broken_bottle,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"qO" = (
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "ltrails_1"
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"qP" = (
+/obj/effect/decal/cleanable/glass,
+/obj/item/shard,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"qQ" = (
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 4
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_commander)
 "qR" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/closet/crate,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
+"qS" = (
+/obj/effect/decal/cleanable/glass,
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 4
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"qT" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fountain/captain{
+	name = "expensive fountain pen"
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
 "qU" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/enginieering)
@@ -4214,10 +5245,142 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/cargo)
+"qW" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/bottle/beer/almost_empty{
+	pixel_x = 6
+	},
+/obj/item/reagent_containers/food/drinks/bottle/beer/almost_empty,
+/obj/item/reagent_containers/food/drinks/bottle/beer/almost_empty{
+	pixel_x = 3;
+	pixel_y = -7
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"qX" = (
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"qY" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"qZ" = (
+/obj/structure/grille/broken,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"ra" = (
+/obj/structure/rack/shelf,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"rb" = (
+/obj/structure/table/wood,
+/obj/machinery/button/door/indestructible{
+	id = "loot";
+	name = "SCAF Romero Storage Lockdown"
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"rc" = (
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "gib5-old"
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"rd" = (
+/obj/item/shard,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"re" = (
+/obj/effect/decal/cleanable/necro_rune{
+	icon_state = "rune-2"
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"rf" = (
+/obj/effect/decal/cleanable/glass,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"rg" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_y = 6
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"rh" = (
+/obj/structure/filingcabinet,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"ri" = (
+/obj/effect/decal/cleanable/necro_rune,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"rj" = (
+/obj/effect/decal/cleanable/necro_rune{
+	icon_state = "rune-3"
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"rk" = (
+/obj/structure/closet/cabinet,
+/obj/item/reagent_containers/food/drinks/bottle/maltliquor,
+/obj/item/reagent_containers/food/drinks/bottle/maltliquor,
+/obj/item/reagent_containers/food/drinks/bottle/champagne,
+/obj/item/reagent_containers/food/drinks/bottle/champagne,
+/obj/item/reagent_containers/food/drinks/bottle/applejack,
+/obj/item/reagent_containers/food/drinks/bottle/applejack,
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
+"rl" = (
+/obj/effect/spawner/random/structure/barricade,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"rm" = (
+/obj/machinery/light/very_dim/directional/east,
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
 "rn" = (
 /obj/structure/sign/poster/contraband/random/directional/north,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/cargo/quartermaster)
+"ro" = (
+/obj/effect/spawner/random/structure/crate,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"rp" = (
+/obj/effect/spawner/random/structure/barricade,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"rq" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"rr" = (
+/obj/structure/table,
+/obj/item/reagent_containers/food/drinks/bottle/beer/almost_empty,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"rs" = (
+/obj/structure/table,
+/obj/machinery/light/very_dim/directional/west,
+/obj/item/reagent_containers/food/drinks/bottle/beer/almost_empty,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"rt" = (
+/obj/structure/table,
+/obj/machinery/recharger,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
+"ru" = (
+/obj/structure/reagent_dispensers/beerkeg,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
 "rv" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -4225,10 +5388,64 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/observation)
+"rw" = (
+/obj/structure/rack/shelf,
+/obj/effect/spawner/random/maintenance/four,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"rx" = (
+/obj/structure/rack/shelf,
+/obj/effect/spawner/random/exotic/syndie,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"ry" = (
+/obj/structure/rack/shelf,
+/obj/effect/spawner/random/maintenance/six,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"rz" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_aux)
+"rA" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_storage)
 "rB" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
+"rC" = (
+/obj/effect/spawner/random/trash/garbage,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_storage)
+"rD" = (
+/obj/structure/rack/shelf,
+/obj/effect/turf_decal/bot,
+/obj/effect/spawner/random/maintenance/four,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"rE" = (
+/obj/structure/rack/shelf,
+/obj/machinery/light/small/directional/west,
+/obj/effect/turf_decal/bot,
+/obj/effect/spawner/random/maintenance/eight,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_interior)
+"rF" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/medical{
+	name = "Morgue";
+	req_access_txt = "5;6"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/medical/morgue)
+"rG" = (
+/obj/structure/table/wood,
+/obj/item/disk/holodisk/ds13/mara_shitsec,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/abandoned/romero_commander)
 "rN" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
@@ -4236,6 +5453,7 @@
 /area/mara17/interior/upper/access3)
 "sc" = (
 /obj/machinery/firealarm/directional/west,
+/obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining)
 "se" = (
@@ -4245,6 +5463,10 @@
 /obj/machinery/light/warm/directional/north,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining/ore_storage)
+"sl" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_storage)
 "sm" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/watchtower)
@@ -4292,6 +5514,10 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/observation/storage)
+"uw" = (
+/obj/structure/tank_holder/emergency_oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/tcomms)
 "uy" = (
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/observation)
@@ -4342,6 +5568,19 @@
 "wH" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/medical)
+"wR" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/enginieering)
+"wU" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/medical/minor_healing,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
+"xx" = (
+/obj/item/wrench,
+/turf/open/misc/snow,
+/area/mara17/interior/caves)
 "xE" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/bottle/beer/almost_empty{
@@ -4375,12 +5614,19 @@
 "yI" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/tcomms)
-"zf" = (
-/turf/closed/wall,
-/area/mara17/interior/upper/tcomms)
+"yP" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access3)
 "zk" = (
 /turf/open/floor/carpet/orange,
 /area/mara17/interior/upper/cargo)
+"zm" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_end{
+	dir = 4
+	},
+/area/mara17/interior/upper/abandoned/romero_interior)
 "zp" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/grater,
@@ -4409,6 +5655,11 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access1)
+"AL" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
 "AV" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
@@ -4422,6 +5673,14 @@
 /obj/item/pizzabox/mushroom,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/watchtower)
+"Bb" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/marker_beacon/burgundy,
+/turf/open/floor/deadspace/mono,
+/area/mara17/exterior)
 "Bf" = (
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/deadspace/grater,
@@ -4485,24 +5744,37 @@
 "DN" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
+/obj/structure/rack/shelf,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access2)
 "DO" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/evacuation)
-"DX" = (
-/obj/effect/turf_decal/bot,
-/obj/structure/table/glass,
+"DV" = (
+/obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
+/area/mara17/interior/upper/enginieering)
 "Eb" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/tcomms)
-"Es" = (
-/obj/machinery/light/cold/directional/south,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/upper/medical/morgue)
 "Ew" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
@@ -4517,9 +5789,17 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/cargo/cargo_tech)
+"EU" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "Fc" = (
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/cargo/cargo_tech)
+"Fx" = (
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_storage)
 "Fy" = (
 /turf/open/openspace,
 /area/mara17/interior/upper/mining/hallway)
@@ -4534,6 +5814,10 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/cargo)
+"Ga" = (
+/obj/structure/tank_holder/emergency_oxygen,
+/turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
 "Gm" = (
 /turf/closed/wall,
@@ -4587,6 +5871,11 @@
 "HE" = (
 /turf/open/floor/deadspace/medical,
 /area/mara17/interior/upper/mining/bathrooms)
+"Ic" = (
+/obj/effect/spawner/random/trash/grime,
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/evacuation)
 "Id" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/cable,
@@ -4595,14 +5884,22 @@
 "II" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/mining/hallway)
+"IM" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/tcomms)
 "IZ" = (
-/obj/machinery/space_heater,
+/obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access2)
 "Jg" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/enginieering/interior)
+"Ji" = (
+/obj/structure/tank_holder/emergency_oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/warehouse)
 "Jw" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/cable,
@@ -4616,9 +5913,8 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/evacuation)
 "JZ" = (
-/obj/structure/marker_beacon/burgundy,
-/turf/open/misc/snow,
-/area/space)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_pen)
 "Ko" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -4627,12 +5923,33 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/mining/relax_room)
+"Kv" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/observation)
 "KB" = (
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access1)
 "KL" = (
 /obj/machinery/camera/autoname/directional/north,
+/obj/structure/rack/shelf,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access3)
 "KM" = (
@@ -4658,6 +5975,10 @@
 /obj/machinery/light/warm/directional/west,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/mining/barracks)
+"MS" = (
+/obj/structure/tank_holder/emergency_oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/evacuation)
 "MT" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining/barracks)
@@ -4672,6 +5993,10 @@
 "MY" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/mining/relax_room)
+"Nd" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/mining)
 "Nj" = (
 /turf/open/floor/plating,
 /area/mara17/interior/upper/cargo)
@@ -4698,6 +6023,26 @@
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/evacuation)
+"OQ" = (
+/obj/structure/rack/shelf,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access1)
 "Pm" = (
 /turf/open/floor/deadspace/cable_start,
 /area/mara17/interior/upper/mining)
@@ -4720,32 +6065,58 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/evacuation)
+"Qg" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/warehouse)
 "Ql" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 4
 	},
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
+"QQ" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/marker_beacon/burgundy,
+/turf/open/floor/deadspace/mono,
+/area/mara17/exterior)
+"QS" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
 "QV" = (
 /obj/machinery/light/warm/directional/south,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/cargo/quartermaster)
+"Rf" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_pen)
 "RG" = (
 /turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/cargo)
+"RZ" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
 "Sa" = (
 /turf/open/openspace,
 /area/mara17/interior/upper/access1)
+"Sb" = (
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_aux)
 "Sd" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining)
 "Sy" = (
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/enginieering/interior)
-"SX" = (
-/obj/machinery/light/warm/directional/north,
-/turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/civilian)
+"SG" = (
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_storage)
 "Ta" = (
 /turf/closed/wall,
 /area/mara17/interior/medium/abandoned/watchtower2)
@@ -4769,6 +6140,10 @@
 "TV" = (
 /turf/closed/mineral/snowmountain,
 /area/mara17/exterior)
+"Ua" = (
+/obj/structure/tank_holder/emergency_oxygen,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/abandoned/romero_interior)
 "Uu" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/evacuation)
@@ -4787,6 +6162,10 @@
 "US" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/observation)
+"UZ" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access1)
 "VF" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/access1)
@@ -4810,6 +6189,10 @@
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/mining/barracks)
+"Wo" = (
+/obj/effect/spawner/random/trash/mess,
+/turf/open/floor/deadspace/random/rivets,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
 "Wp" = (
 /obj/structure/lattice,
 /turf/open/openspace,
@@ -4825,6 +6208,11 @@
 "WH" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access1)
+"WL" = (
+/obj/machinery/power/smes/magical,
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/enginieering)
 "Xl" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -4845,12 +6233,20 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
+"XS" = (
+/obj/structure/tank_holder/emergency_oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "Ye" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/table/glass,
 /obj/item/storage/medkit,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
+"Yg" = (
+/obj/item/stack/sheet/mineral/plasma/five,
+/turf/open/misc/snow,
+/area/mara17/interior/caves)
 "Yp" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining/ore_storage)
@@ -4905,6 +6301,9 @@
 /obj/machinery/space_heater,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access1)
+"ZR" = (
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_aux)
 "ZZ" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/deadspace/grater,
@@ -7092,7 +8491,7 @@ se
 iO
 se
 Uu
-iP
+MS
 se
 jr
 jq
@@ -7521,7 +8920,7 @@ Uu
 jp
 DO
 se
-jp
+Ic
 Uu
 aM
 aM
@@ -8924,7 +10323,7 @@ dF
 dF
 FC
 dF
-ku
+mQ
 dF
 dF
 dF
@@ -9076,12 +10475,12 @@ dF
 dF
 dF
 dF
-dF
-dF
-dF
-dF
-dF
-dF
+qU
+qU
+qU
+qU
+qU
+qU
 dF
 dF
 dF
@@ -9217,13 +10616,13 @@ dF
 dF
 dF
 dF
-dF
-dF
-dF
-dF
-dF
-dF
-dF
+qU
+qU
+nb
+oD
+oD
+oF
+qU
 dF
 dF
 dF
@@ -9283,16 +10682,16 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
 aM
 aM
 aM
@@ -9359,13 +10758,13 @@ dF
 dF
 dF
 aW
-dF
-dF
-dF
-dF
-dF
-dF
-dF
+qU
+de
+oD
+nS
+oD
+pb
+qU
 dF
 dF
 dF
@@ -9425,16 +10824,16 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+nD
+nJ
+qC
+nD
+nJ
+qC
+nD
+nJ
+qC
 aM
 aM
 aM
@@ -9501,13 +10900,13 @@ dF
 dF
 dF
 dF
-dF
-dF
-dF
-dF
-dF
-aW
-dF
+qU
+dH
+nc
+oh
+oD
+pd
+qU
 dF
 dF
 dF
@@ -9528,11 +10927,11 @@ dF
 dF
 dF
 xS
-Sd
+Nd
 Sd
 hH
 Sd
-Sd
+Nd
 xS
 sc
 dC
@@ -9567,16 +10966,16 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+nF
+qk
+qC
+wU
+qx
+qC
+nF
+qk
+qC
 aM
 aM
 aM
@@ -9643,21 +11042,21 @@ dF
 dF
 dF
 dF
+qU
+fA
+nN
+nN
+nN
+qU
+qU
 dF
 dF
 dF
 dF
 dF
-dF
-dF
-dF
-dF
-dF
-dF
-dF
-ku
-ku
-ku
+mQ
+mQ
+mQ
 FC
 mQ
 FC
@@ -9709,16 +11108,16 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+qj
+pz
+nj
+qv
+nj
+om
+nj
+qx
+qC
 aM
 aM
 aM
@@ -9785,12 +11184,12 @@ dF
 dF
 dF
 dF
-dF
-dF
-dF
-dF
-dF
-dF
+qU
+na
+nO
+oD
+nN
+qU
 bO
 dF
 dF
@@ -9810,7 +11209,7 @@ ak
 dF
 dF
 dF
-ak
+mM
 xS
 Sd
 Dy
@@ -9851,16 +11250,16 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+nG
+ql
+nj
+nj
+nG
+qz
+nG
+nj
+qC
 aM
 aM
 aM
@@ -9926,12 +11325,12 @@ dF
 dF
 dF
 dF
-dF
 qU
 qU
 qU
 qU
 qU
+ol
 qU
 qU
 qU
@@ -9944,13 +11343,13 @@ cy
 FC
 FC
 FC
-ku
-ku
+mQ
+mQ
 FC
 ak
-ku
-ku
-ku
+mQ
+mQ
+mQ
 FC
 FC
 Bx
@@ -9993,16 +11392,16 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+nH
+pz
+om
+qw
+nH
+nj
+nH
+qC
+qC
 aM
 aM
 aM
@@ -10069,8 +11468,8 @@ dF
 dF
 dF
 qU
-qU
-XE
+WL
+pQ
 xF
 Oq
 xF
@@ -10083,7 +11482,7 @@ dF
 dF
 mQ
 ak
-ku
+mQ
 dF
 dF
 dF
@@ -10096,11 +11495,11 @@ dF
 dF
 dF
 xS
-Sd
+Nd
 Sd
 fX
 Sd
-Sd
+Nd
 xS
 hJ
 cp
@@ -10135,15 +11534,15 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+nG
+pz
+nj
+qx
+nG
+qk
+nG
+qC
 aM
 aM
 aM
@@ -10269,23 +11668,23 @@ LK
 xS
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+pz
+qr
+om
+qC
+qC
+qC
+qC
 aM
 aM
 aM
@@ -10354,7 +11753,7 @@ dF
 dF
 qU
 kA
-xF
+pQ
 xF
 sB
 xF
@@ -10362,7 +11761,7 @@ XE
 XE
 fK
 qU
-XE
+wR
 XE
 qU
 lZ
@@ -10411,20 +11810,20 @@ LK
 xS
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+nL
+pV
+qC
+qa
+cZ
+qC
+nL
+oX
+qC
+pz
+nj
+qx
+qC
 aM
 aM
 aM
@@ -10480,9 +11879,9 @@ tE
 vD
 JA
 Dk
-YM
+RZ
 po
-YM
+Ga
 qf
 db
 dF
@@ -10553,24 +11952,24 @@ LK
 xS
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+cZ
+oX
+qC
+oX
+oX
+qC
+oX
+qh
+qC
+AL
+qs
+qC
+qC
+qC
+qC
+qC
+qC
 aM
 aM
 aM
@@ -10695,24 +12094,24 @@ LK
 xS
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+nk
+nk
+qC
+nk
+nm
+qC
+nk
+nk
+qC
+qY
+Sb
+ZR
+nQ
+qA
+rz
+nV
+qC
 aM
 aM
 aM
@@ -10837,24 +12236,24 @@ LK
 xS
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+pU
+pW
+pw
+pw
+pw
+pw
+pw
+pw
+bC
+qY
+qY
+py
+pH
+qY
+qY
+qY
+qC
 aM
 aM
 aM
@@ -10931,7 +12330,7 @@ XE
 XE
 qU
 lY
-XE
+DV
 qU
 ma
 dF
@@ -10979,29 +12378,29 @@ LK
 xS
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+aS
+pX
+Rf
+aS
+aS
+Rf
+pX
+aS
+qC
+pY
+qY
+qC
+qC
+qC
+qC
+bJ
+og
+og
+og
+og
+og
+og
 aM
 aM
 aM
@@ -11121,29 +12520,29 @@ LK
 xS
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+qC
+qC
+qC
+qC
+nq
+nq
+nq
+qC
+qC
+qn
+qt
+qC
+qy
+ny
+rA
+sl
+Fx
+nh
+rC
+rq
+ot
+og
 aM
 aM
 aM
@@ -11265,27 +12664,27 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+nl
+JZ
+JZ
+qb
+JZ
+nl
+qC
+nV
+qY
+qC
+rw
+SG
+ny
+qD
+Fx
+nh
+nh
+nh
+ot
+og
 aM
 aM
 aM
@@ -11407,27 +12806,27 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+nl
+qb
+qc
+JZ
+JZ
+nl
+qC
+nV
+qY
+qC
+rx
+ry
+ry
+qE
+og
+rC
+nh
+rq
+qI
+og
 aM
 aM
 aM
@@ -11549,27 +12948,27 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+qC
+qC
+nl
+nl
+nl
+qC
+qC
+qC
+qo
+qu
+qC
+qC
+qC
+qC
+og
+og
+rq
+rC
+nh
+qK
+og
 aM
 aM
 aM
@@ -11650,9 +13049,9 @@ Gz
 Gz
 Gm
 Gm
-FC
+mK
 ak
-ku
+mQ
 dF
 dF
 aM
@@ -11692,26 +13091,26 @@ aM
 aM
 aM
 aM
+qC
+qC
+qC
+qC
+qC
+dF
+nI
+dF
+kR
+nI
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+og
+og
+qF
+nh
+rq
+rC
+og
 aM
 aM
 aM
@@ -11836,24 +13235,24 @@ aM
 aM
 aM
 aM
+dF
+dF
+nx
+dF
+dF
+dF
+pC
+dF
+dF
+dF
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+og
+og
+qH
+qH
+qL
+og
 aM
 aM
 aM
@@ -11936,7 +13335,7 @@ wf
 Zg
 cy
 dF
-ku
+mQ
 dF
 dF
 dF
@@ -11954,10 +13353,10 @@ aM
 aM
 aM
 aM
-zf
-zf
-zf
-zf
+mN
+mN
+mN
+mN
 aM
 aM
 aM
@@ -11976,26 +13375,26 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+nx
+nx
+nx
+dF
+cU
+pG
+pI
+pI
+pI
+pK
+cU
+og
+og
+og
+og
+og
 aM
 aM
 aM
@@ -12074,7 +13473,7 @@ Gm
 KL
 Ux
 zp
-wf
+yP
 Gm
 jX
 ak
@@ -12096,10 +13495,10 @@ aM
 aM
 aM
 aM
-zf
+mN
 jy
 jy
-zf
+mN
 aM
 aM
 aM
@@ -12117,22 +13516,22 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+cU
 aM
 aM
 aM
@@ -12218,7 +13617,7 @@ Gm
 Gm
 Gm
 Gm
-cy
+mL
 dF
 FC
 dF
@@ -12231,24 +13630,24 @@ dF
 aM
 aM
 aM
-zf
-zf
-zf
-zf
-zf
-zf
-zf
-zf
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 yI
 yI
-zf
-zf
-zf
-zf
-zf
-zf
-zf
-zf
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 aM
 aM
 aM
@@ -12259,22 +13658,22 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+np
+bi
+bi
+bi
+bi
+bi
+bi
+bi
+QQ
+dF
+dF
+kR
 aM
 aM
 aM
@@ -12373,8 +13772,8 @@ dF
 dF
 dF
 dF
-zf
-Eb
+mN
+uw
 nr
 Eb
 hr
@@ -12390,9 +13789,9 @@ lw
 ly
 jP
 jR
-zf
-zf
-zf
+mN
+mN
+mN
 aM
 aM
 aM
@@ -12400,23 +13799,23 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+dF
+aZ
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+bg
+dF
+dF
+hW
 aM
 aM
 aM
@@ -12515,8 +13914,8 @@ dF
 dF
 cy
 ak
-zf
-Eb
+mN
+uw
 Eb
 WB
 le
@@ -12526,40 +13925,40 @@ yI
 yI
 yI
 jA
-zf
+mN
 pm
-zf
+mN
 lz
 jQ
 jS
 hd
 hj
-zf
+mN
 aM
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+dF
+dF
+aZ
+ad
+mX
+mX
+mX
+mX
+mX
+ad
+bg
+dF
+dF
+hW
+dF
 aM
 aM
 aM
@@ -12609,12 +14008,12 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-dF
+yy
+ND
+yy
+yy
+ND
+yy
 dF
 dF
 dF
@@ -12649,19 +14048,19 @@ FC
 FC
 cy
 ak
-ku
+mQ
 FC
 FC
-ku
 mQ
 mQ
 mQ
+mQ
 FC
-zf
+mN
 Eb
 Eb
 WB
-zf
+mN
 li
 hN
 yI
@@ -12676,32 +14075,32 @@ bv
 jT
 jJ
 jJ
-zf
+mN
 aM
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+dF
+mT
+ae
+ad
+mX
+mX
+mX
+mX
+mX
+ad
+ae
+mY
+dF
+hW
+dF
 aM
 aM
 aM
@@ -12748,17 +14147,17 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-yy
 ND
 yy
 yy
-ND
 yy
-dF
-dF
+eK
+yy
+aC
+aC
+yy
+yy
+yy
 dF
 dF
 dF
@@ -12803,7 +14202,7 @@ kU
 WB
 WB
 WB
-zf
+mN
 hs
 iM
 jv
@@ -12818,32 +14217,32 @@ bv
 jP
 he
 hk
-zf
+mN
 aM
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+dF
+mU
+ae
+ad
+mX
+mX
+mX
+mX
+mX
+ad
+ae
+mZ
+dF
+hW
+dF
 aM
 aM
 aM
@@ -12890,14 +14289,14 @@ aM
 aM
 aM
 aM
-ND
-yy
-yy
-yy
-eK
 yy
 aC
 aC
+aC
+VN
+am
+VN
+VN
 yy
 yy
 yy
@@ -12944,8 +14343,8 @@ ak
 hr
 Eb
 MX
-Eb
-zf
+IM
+mN
 ht
 jt
 jw
@@ -12960,32 +14359,32 @@ bv
 jT
 jJ
 jJ
-zf
+mN
 aM
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+dF
+dF
+aZ
+ad
+mX
+mX
+mX
+mX
+mX
+ad
+bg
+dF
+dF
+hW
+dF
 aM
 aM
 aM
@@ -13033,19 +14432,19 @@ aM
 aM
 aM
 yy
-cU
-eQ
-cU
+pS
+pT
+pT
 VN
 am
 VN
 VN
+dw
+ax
 yy
-yy
-yy
-dF
-dF
-dF
+ae
+ae
+ae
 dF
 dF
 dF
@@ -13083,18 +14482,18 @@ dF
 dF
 cy
 cy
-zf
-zf
-zf
-zf
-zf
+mN
+mN
+mN
+mN
+mN
 hw
 ju
 jx
 yI
 hN
 jD
-zf
+mN
 jG
 bv
 lA
@@ -13102,32 +14501,32 @@ bv
 jP
 hf
 hl
-zf
+mN
 aM
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+dF
+dF
+aZ
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+bg
+dF
+dF
+hW
+dF
 aM
 aM
 aM
@@ -13175,19 +14574,19 @@ aM
 aM
 aM
 yy
-SX
-VN
-VN
+pT
+pT
+pT
 VN
 am
 VN
 VN
-dw
-ax
-yy
-dF
-dF
-dF
+VN
+VN
+ai
+ad
+ad
+ae
 dF
 dF
 dF
@@ -13214,7 +14613,7 @@ dF
 dF
 aM
 YF
-uI
+Qg
 uI
 uI
 KM
@@ -13225,18 +14624,18 @@ dF
 dF
 dF
 dF
-zf
+mN
 aM
 aM
 aM
-zf
-zf
-zf
-zf
+mN
+mN
+mN
+mN
 gN
 gO
 gP
-zf
+mN
 lv
 lx
 lB
@@ -13244,31 +14643,31 @@ jH
 jU
 jJ
 jJ
-zf
+mN
 aM
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+dF
+dF
+nt
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+Bb
+dF
+dF
+hW
 aM
 aM
 aM
@@ -13317,19 +14716,19 @@ aM
 aM
 aM
 yy
-cU
-cU
-cU
-cU
+aD
+aD
+aD
+aD
 yy
 fg
 VN
 VN
 VN
-ai
-cy
-dF
-dF
+yy
+ad
+ad
+ae
 ak
 ak
 ak
@@ -13374,11 +14773,11 @@ aM
 aM
 aM
 aM
-zf
-zf
-zf
-zf
-zf
+mN
+mN
+mN
+mN
+mN
 gQ
 jN
 gW
@@ -13386,31 +14785,31 @@ gZ
 jN
 hg
 hm
-zf
+mN
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+hW
 aM
 aM
 aM
@@ -13469,10 +14868,10 @@ vC
 VN
 VN
 yy
-cy
+ad
+bY
+cU
 mQ
-ku
-ku
 FC
 FC
 mQ
@@ -13498,7 +14897,7 @@ dF
 aM
 aM
 YF
-uI
+Ji
 uI
 KM
 Bg
@@ -13520,7 +14919,7 @@ aM
 aM
 aM
 aM
-zf
+mN
 jI
 jO
 jJ
@@ -13528,31 +14927,31 @@ jJ
 jV
 jJ
 jJ
-zf
+mN
 aM
 aM
 aM
 aM
 aM
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+pM
 aM
 aM
 aM
@@ -13601,27 +15000,27 @@ aM
 aM
 aM
 yy
-cU
-cU
-cU
-cU
+aC
+aC
+aC
+aC
 yy
 eN
 vC
-vC
-vC
-kv
-FC
-FC
-dF
+VN
+VN
+yy
+bY
+bY
+ae
 dF
 dF
 FC
 mQ
 FC
-ku
 mQ
-ku
+mQ
+mQ
 FC
 mQ
 kE
@@ -13662,7 +15061,7 @@ aM
 aM
 aM
 aM
-zf
+mN
 gR
 gU
 gX
@@ -13670,31 +15069,31 @@ ha
 jN
 hh
 hn
-zf
+mN
 aM
 aM
 aM
 aM
 aM
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hW
 aM
 aM
 aM
@@ -13742,20 +15141,20 @@ aM
 aM
 aM
 aM
-ND
-SX
-VN
-VN
+yy
+pT
+pT
+pT
 VN
 am
 VN
-VN
-dx
-hE
-ND
-dF
-dF
-dF
+vC
+vC
+vC
+kv
+bY
+ad
+ae
 dF
 ak
 mQ
@@ -13804,7 +15203,7 @@ aM
 aM
 aM
 aM
-zf
+mN
 jJ
 jJ
 jJ
@@ -13812,31 +15211,31 @@ jJ
 jV
 jJ
 jJ
-zf
+mN
 aM
 aM
 aM
 aM
 aM
 aM
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+pC
 aM
 aM
 aM
@@ -13884,25 +15283,25 @@ aM
 aM
 aM
 aM
-yy
-cU
-fb
-cU
+ND
+pS
+pT
+pT
 VN
 am
 VN
 VN
-yy
-yy
-yy
-dF
-dF
-dF
+dx
+hE
+ND
+ae
+ae
+ae
 fs
-ak
+hP
 mQ
 ak
-fs
+kM
 dF
 mQ
 dF
@@ -13913,7 +15312,7 @@ Hj
 rB
 Hj
 Hj
-Hj
+EU
 wH
 dF
 dF
@@ -13946,7 +15345,7 @@ aM
 aM
 aM
 aM
-zf
+mN
 gS
 gV
 gY
@@ -13954,33 +15353,33 @@ hb
 jN
 hi
 ho
-zf
+mN
+aM
+aM
+aM
+aM
+aM
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
 aM
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+hQ
+qg
+hQ
+hQ
 aM
 aM
 aM
@@ -14027,13 +15426,13 @@ aM
 aM
 aM
 yy
-yy
-yy
-yy
-eL
-yy
 aD
 aD
+aD
+VN
+am
+VN
+VN
 yy
 yy
 yy
@@ -14088,7 +15487,7 @@ aM
 aM
 aM
 aM
-zf
+mN
 jK
 jK
 jK
@@ -14096,7 +15495,19 @@ jK
 jW
 jK
 jK
-zf
+mN
+aM
+aM
+aM
+aM
+dF
+dF
+dF
+dF
+dF
+dF
+dF
+dF
 aM
 aM
 aM
@@ -14106,23 +15517,11 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+oi
+pN
+oi
+hQ
 aM
 aM
 aM
@@ -14168,17 +15567,17 @@ aM
 aM
 aM
 aM
-dF
-dF
-dF
 yy
 yy
-ND
 yy
 yy
-ND
-aW
-dF
+eL
+yy
+aD
+aD
+yy
+yy
+yy
 dF
 dF
 dF
@@ -14197,7 +15596,7 @@ XK
 rB
 Hj
 XK
-Hj
+XS
 wH
 dF
 dF
@@ -14230,15 +15629,25 @@ aM
 aM
 aM
 aM
-zf
-zf
-zf
-zf
-zf
-zf
-zf
-zf
-zf
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+aM
+aM
+aM
+aM
+dF
+dF
+dF
+dF
+dF
+dF
 aM
 aM
 aM
@@ -14250,25 +15659,15 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+oj
+pN
+on
+hQ
+hQ
+hQ
+hQ
+hQ
 aM
 aM
 aM
@@ -14310,16 +15709,16 @@ aM
 aM
 aM
 aM
-aM
-aM
+mO
+mO
 dF
-dF
-dF
+yy
+yy
+ND
+yy
+yy
+ND
 aW
-dF
-dF
-dF
-dF
 dF
 dF
 dF
@@ -14329,8 +15728,8 @@ su
 pZ
 BU
 YC
-ab
-hQ
+dF
+FC
 wH
 wH
 wH
@@ -14387,6 +15786,11 @@ aM
 aM
 aM
 aM
+dF
+dF
+dF
+dF
+hQ
 aM
 aM
 aM
@@ -14396,21 +15800,16 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+hQ
+hQ
+qg
+hQ
+hQ
+or
+rE
+or
+hQ
 aM
 aM
 aM
@@ -14471,12 +15870,12 @@ IZ
 pZ
 vX
 YC
-ab
-km
+dF
+mQ
 wH
 cq
 bW
-kw
+it
 ap
 rB
 Hj
@@ -14529,6 +15928,11 @@ aM
 aM
 aM
 aM
+ng
+ng
+ng
+ng
+hQ
 aM
 aM
 aM
@@ -14537,22 +15941,17 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+hQ
+mW
+km
+km
+aE
+op
+aE
+aE
+aE
+hQ
 aM
 aM
 aM
@@ -14613,8 +16012,8 @@ YC
 qe
 qe
 YC
-ab
-km
+dF
+mQ
 YP
 bK
 Hj
@@ -14668,6 +16067,14 @@ aM
 aM
 aM
 aM
+hQ
+hQ
+hQ
+nK
+nK
+nK
+nK
+hQ
 aM
 aM
 aM
@@ -14676,25 +16083,17 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+nY
+mW
+pB
+mW
+aE
+oq
+rD
+rD
+rD
+hQ
 aM
 aM
 aM
@@ -14755,12 +16154,12 @@ YC
 qe
 qe
 YC
-ab
-km
+dF
+mQ
 wH
 bL
 bM
-it
+kw
 ap
 rB
 XQ
@@ -14809,34 +16208,34 @@ aM
 aM
 aM
 aM
+hQ
+hQ
+ne
+ou
+qX
+Wo
+qX
+qX
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+nZ
+mW
+pL
+mW
+mW
+hQ
+hQ
+hQ
+hQ
+hQ
 aM
 aM
 aM
@@ -14897,8 +16296,8 @@ YC
 YC
 YC
 YC
-JZ
-hQ
+fs
+FC
 wH
 an
 an
@@ -14951,34 +16350,34 @@ aM
 aM
 aM
 aM
+hQ
+ne
+ab
+ab
+qX
+qX
+qX
+Wo
+hQ
+nn
+rs
+rt
+mV
+hQ
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+hQ
+od
+pL
+mW
+aE
+op
+aE
+ov
+aE
+hQ
 aM
 aM
 aM
@@ -15093,34 +16492,34 @@ aM
 aM
 aM
 aM
+hQ
+ne
+nu
+ab
+qX
+qX
+qX
+qX
+oG
+nn
+ab
+ab
+mV
+hQ
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+oa
+mW
+pL
+mW
+aE
+oq
+rD
+or
+rD
+hQ
 aM
 aM
 aM
@@ -15190,7 +16589,7 @@ Hj
 as
 rB
 Ye
-DX
+oM
 Hj
 as
 Hj
@@ -15235,34 +16634,34 @@ aM
 aM
 aM
 aM
+hQ
+ne
+ab
+ab
+ro
+ro
+ro
+ro
+oG
+no
+nv
+ab
+nB
+hQ
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+ob
+mW
+pL
+mW
+mW
+hQ
+hQ
+hQ
+hQ
+hQ
 aM
 aM
 aM
@@ -15339,6 +16738,10 @@ Hj
 eV
 cB
 wH
+wH
+wH
+wH
+wH
 dF
 dF
 dF
@@ -15360,10 +16763,6 @@ dF
 dF
 dF
 dF
-dF
-dF
-dF
-dF
 aM
 aM
 aM
@@ -15377,34 +16776,34 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+ne
+ab
+ab
+rp
+rp
+rp
+rp
+oG
+qd
+ab
+QS
+qi
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+nX
+pL
+mW
+aE
+op
+aE
+ov
+aE
+hQ
 aM
 aM
 aM
@@ -15481,6 +16880,10 @@ an
 an
 an
 wH
+oW
+oY
+pa
+wH
 dF
 dF
 dF
@@ -15501,10 +16904,6 @@ dF
 dF
 dF
 dF
-dF
-dF
-dF
-dF
 aM
 aM
 aM
@@ -15515,38 +16914,38 @@ aM
 aM
 aM
 aM
+mP
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+nf
+ab
+rl
+rp
+qX
+qX
+qX
+hQ
+rr
+nw
+px
+ru
+hQ
+qp
+nM
+nP
+nT
+hQ
+mW
+pL
+mW
+aE
+oq
+rD
+or
+or
+hQ
 aM
 aM
 aM
@@ -15612,7 +17011,7 @@ mQ
 wH
 bL
 bM
-it
+kw
 ap
 rB
 Hj
@@ -15622,11 +17021,11 @@ ar
 gF
 iq
 gH
+Hj
+Hj
+Hj
+Hj
 wH
-dF
-dF
-dF
-aQ
 tn
 aP
 aP
@@ -15649,46 +17048,46 @@ aM
 aM
 aM
 aM
+dF
+dF
+aM
+mP
+aM
+mO
+mO
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+hQ
+ne
+rm
+qX
+qX
+qX
+qX
+hQ
+hQ
+hQ
+qg
+hQ
+hQ
+aE
+aE
+aE
+aE
+hQ
+oe
+pL
+mW
+mW
+hQ
+hQ
+hQ
+hQ
+hQ
 aM
 aM
 aM
@@ -15759,16 +17158,19 @@ at
 rB
 rB
 rB
-Hj
+rB
 as
 hK
 hK
-hP
+hK
+Hj
+Hj
+Hj
+pv
 wH
 dF
 dF
 dF
-aR
 dF
 dF
 dF
@@ -15784,53 +17186,50 @@ dF
 dF
 dF
 dF
+aM
+aM
+aM
 dF
 dF
 dF
+dF
+mO
+mO
+mO
+mO
+mO
+mO
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+hQ
+hQ
+nK
+nK
+nK
+nK
+hQ
+Ua
+mW
+km
+km
+km
+km
+km
+km
+mW
+hQ
+ob
+zm
+mW
+aE
+op
+aE
+ov
+aE
+hQ
 aM
 aM
 aM
@@ -15896,21 +17295,21 @@ FC
 wH
 cq
 bX
-Hj
+oH
 ap
 fh
-hD
 rB
 Hj
+rB
 ar
 dD
 dD
-dD
+pt
+Hj
+Hj
+Hj
+Hj
 wH
-dF
-dF
-dF
-aR
 dF
 dF
 dF
@@ -15931,48 +17330,48 @@ dF
 dF
 dF
 dF
+dF
+dF
+dF
+dF
+dF
+mO
+ku
+mO
+mO
+mO
+mO
+mO
+mO
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+mO
+mO
+mO
+mO
+hQ
+Ua
+aE
+nA
+mW
+mW
+aE
+aE
+km
+mW
+hQ
+ob
+km
+mW
+aE
+oq
+or
+or
+rD
+hQ
 aM
 aM
 aM
@@ -16041,18 +17440,18 @@ wH
 YP
 wH
 wH
+rF
 wH
-kO
-cA
+pR
 wH
 wH
 YP
 wH
 wH
-dF
-dF
-dF
-aR
+eV
+oZ
+pc
+wH
 dF
 aW
 dF
@@ -16073,53 +17472,53 @@ dF
 dF
 dF
 dF
-aM
 dF
 dF
+dF
+dF
+dF
 aM
 aM
 aM
+mO
+mO
+mO
+mO
+mO
+mO
+mO
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+mO
+mO
+mO
+mO
+mO
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+km
+mW
+hQ
+hQ
+qg
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
 aM
 aM
 aM
@@ -16149,7 +17548,7 @@ el
 GE
 cb
 zA
-US
+Kv
 aj
 US
 US
@@ -16177,24 +17576,24 @@ dF
 dF
 dF
 mQ
-dF
-dF
-dF
-dF
-dF
 wH
-kM
-de
+eQ
+oo
+eQ
+oI
 au
-aE
+pf
 wH
-bO
-dF
-dF
-dF
-dF
-dF
-aS
+pl
+dK
+cA
+oT
+oV
+wH
+wH
+wH
+wH
+wH
 dF
 dF
 dF
@@ -16218,6 +17617,25 @@ dF
 bO
 dF
 aW
+dF
+TV
+mP
+aM
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+aM
+mO
+mO
+mO
+mO
+mO
 aM
 aM
 aM
@@ -16225,44 +17643,25 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+km
+km
+km
+km
+km
+km
+pO
+km
+mW
+hQ
+hQ
+hQ
+ox
+nd
+ra
+ra
+hQ
+hQ
 aM
 aM
 aM
@@ -16319,20 +17718,20 @@ mQ
 dF
 dF
 FC
-dF
-dF
-bJ
-dF
-dF
 wH
-bC
 au
 au
 au
+au
+au
+pg
 wH
-dF
-dF
-dF
+pl
+dK
+cA
+hD
+hD
+wH
 dF
 dF
 dF
@@ -16363,48 +17762,48 @@ dF
 dF
 ae
 aM
+mO
+mO
+mO
+mO
+aM
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
 aM
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+mW
+nA
+aE
+mW
+mW
+aE
+nA
+km
+mW
+hQ
+qM
+nd
+nd
+nd
+nd
+nd
+rh
+hQ
 aM
 aM
 aM
@@ -16461,20 +17860,20 @@ FC
 FC
 dF
 FC
-dF
-dF
-dF
-dF
-bO
-YP
-bC
-bC
-au
-au
 wH
-dF
-dF
-dF
+pe
+au
+au
+au
+au
+pi
+wH
+pk
+oO
+oR
+oU
+pu
+wH
 dF
 dF
 dF
@@ -16505,48 +17904,48 @@ dF
 dF
 ae
 aM
+mO
+mO
+mO
+mO
+mP
+aM
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+aM
+mO
+mO
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+qg
+nz
+hQ
+pP
+ow
+oy
+oA
+oB
+nd
+rh
+hQ
 aM
 aM
 aM
@@ -16603,20 +18002,20 @@ dF
 FC
 mQ
 FC
-dF
-dF
-dF
-dF
-dF
 wH
-bY
-bC
+wH
+fb
 au
-Es
-YP
-dF
-dF
-dF
+au
+au
+pj
+wH
+pn
+oP
+oS
+hD
+hD
+wH
 dF
 dF
 dF
@@ -16649,46 +18048,46 @@ bj
 al
 al
 al
+mO
 aM
 aM
 aM
 aM
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
 aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+nR
+oc
+mW
+mW
+oc
+aE
+km
+mW
+hQ
+pP
+ow
+ow
+qT
+oC
+nd
+ri
+hQ
 aM
 aM
 aM
@@ -16746,19 +18145,19 @@ dF
 cy
 FC
 mQ
-dF
-dF
-dF
-dF
 wH
-bC
-bC
+wH
+fb
+au
 au
 au
 wH
-dF
-dF
-dF
+pp
+pp
+pq
+ps
+wH
+wH
 dF
 dF
 dF
@@ -16798,39 +18197,39 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mS
+mR
+pD
+qg
+pJ
+pJ
+km
+km
+km
+km
+km
+km
+qg
+pP
+ow
+oz
+rG
+nd
+re
+nd
+hQ
 aM
 aM
 aM
@@ -16889,17 +18288,17 @@ dF
 dF
 FC
 mQ
-dF
-dF
-dF
 wH
-bC
-bC
-bC
+wH
+oJ
+au
 au
 wH
-dF
-aX
+oN
+oQ
+wH
+wH
+wH
 dF
 dF
 dF
@@ -16940,39 +18339,39 @@ aM
 aM
 aM
 aM
+mP
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mS
+mR
+pD
+nz
+nU
+mW
+mW
+mW
+mW
+qG
+mW
+mW
+hQ
+nd
+qN
+ow
+qW
+rb
+nd
+rj
+hQ
 aM
 aM
 aM
@@ -17032,10 +18431,10 @@ dF
 dF
 mQ
 FC
-dF
-dF
 wH
 wH
+oK
+oL
 wH
 wH
 wH
@@ -17084,37 +18483,37 @@ aM
 aM
 aM
 aM
+mO
+mO
+mO
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+mO
+mO
+mO
+mO
+mO
+mO
+mS
+mR
+pE
+hQ
+hQ
+hQ
+hQ
+ok
+ok
+ok
+hQ
+hQ
+hQ
+nd
+qO
+qP
+nd
+rc
+rf
+nd
+hQ
 aM
 aM
 aM
@@ -17175,10 +18574,10 @@ dF
 dF
 FC
 FC
-dF
-dF
-dF
-dF
+wH
+wH
+wH
+wH
 dF
 dF
 dF
@@ -17231,14 +18630,14 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+mO
+mO
+mO
+mO
+mO
+mS
+mR
+pF
 aM
 aM
 aM
@@ -17246,17 +18645,17 @@ aM
 al
 al
 al
-aM
+hQ
 al
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+hQ
+hQ
+nW
+qQ
+rf
+rd
+rg
+rk
+hQ
 aM
 aM
 aM
@@ -17371,15 +18770,15 @@ aM
 aM
 aM
 aM
+mP
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+mO
+mO
+mO
+mO
+mS
+mS
 aM
 aM
 aM
@@ -17393,12 +18792,12 @@ al
 aM
 aM
 al
-aM
-aM
-aM
-aM
-aM
-aM
+qS
+qZ
+qO
+hQ
+hQ
+hQ
 aM
 aM
 aM
@@ -17510,18 +18909,18 @@ al
 al
 al
 al
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+xx
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
 aM
 aM
 aM
@@ -17536,9 +18935,9 @@ al
 al
 al
 al
-aM
-aM
-aM
+nW
+hQ
+hQ
 aM
 aM
 aM
@@ -17654,15 +19053,15 @@ al
 al
 al
 al
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+mO
 aM
 aM
 aM
@@ -17796,15 +19195,15 @@ al
 al
 al
 al
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+Yg
+mO
+mO
+mO
+mO
+mO
+mO
+mO
+pA
 aM
 aM
 aM
@@ -17940,11 +19339,11 @@ al
 al
 aM
 aM
-aM
-aM
-aM
-aM
-aM
+mO
+mO
+mO
+mO
+mO
 aM
 aM
 aM
@@ -18022,11 +19421,11 @@ VF
 VF
 VF
 VF
-WH
+UZ
 td
 WH
 VF
-dF
+kO
 FC
 ak
 fs
@@ -18452,7 +19851,7 @@ yE
 WH
 WH
 VF
-ak
+mJ
 FC
 mQ
 FC
@@ -18734,7 +20133,7 @@ aM
 VF
 Zz
 dz
-WH
+OQ
 VF
 bO
 dF

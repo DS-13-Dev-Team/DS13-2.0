@@ -3,8 +3,8 @@
 /turf/closed/indestructible/rock/snow,
 /area/mara17/interior/caves)
 "ab" = (
-/turf/closed/mineral/snowmountain,
-/area/space)
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
 "ac" = (
 /turf/closed/wall,
 /area/mara17/interior/medium/mining)
@@ -77,8 +77,11 @@
 /turf/open/floor/iron/cafeteria,
 /area/mara17/interior/medium/canteen/kitchen)
 "ay" = (
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/restroom)
+/obj/item/bedsheet/hos,
+/obj/structure/bed,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/hos_quarters)
 "az" = (
 /turf/closed/wall/r_wall,
 /area/mara17/interior/medium)
@@ -103,20 +106,17 @@
 	},
 /area/mara17/interior/medium/barracks)
 "aD" = (
-/turf/open/floor/deadspace/cable_end{
-	dir = 4
-	},
-/area/mara17/interior/medium)
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
 "aE" = (
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/medium/abandoned/watchtower2)
 "aF" = (
-/obj/effect/turf_decal/box,
-/obj/structure/closet/secure_closet/brig{
-	id = "cell_1"
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/security_center)
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
 "aG" = (
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/medium/barracks)
@@ -291,12 +291,8 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/canteen)
 "bm" = (
-/obj/structure/rack/shelf,
-/obj/item/melee/baseball_bat,
-/obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/item/toy/beach_ball/holoball,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+/area/mara17/interior/medium/chapel)
 "bn" = (
 /obj/item/pickaxe/rusted,
 /turf/open/misc/asteroid/snow/ice,
@@ -399,9 +395,8 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/mara17/interior/medium/barracks)
 "bD" = (
-/obj/structure/rack/shelf,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/security_center)
 "bE" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -423,24 +418,8 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/medium/security_center)
 "bI" = (
-/obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/bottle/beer/almost_empty{
-	pixel_x = -6
-	},
-/obj/item/reagent_containers/food/drinks/bottle/beer/almost_empty{
-	pixel_y = 5
-	},
-/obj/item/reagent_containers/food/drinks/bottle/beer/almost_empty{
-	pixel_x = 6;
-	pixel_y = 9
-	},
-/obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/item/disk/holodisk/ds13/mara_talk{
-	pixel_x = 6;
-	pixel_y = -4
-	},
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/perma)
 "bJ" = (
 /obj/item/chair{
 	pixel_x = 13;
@@ -473,11 +452,9 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
 "bM" = (
-/obj/item/gun/ballistic/shotgun/doublebarrel{
-	pixel_x = -32
-	},
-/turf/open/floor/plating,
-/area/mara17/interior/medium/bar)
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_test)
 "bN" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/hydroponics{
@@ -495,27 +472,21 @@
 /turf/open/floor/plating/snowed,
 /area/mara17/exterior)
 "bP" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/obj/structure/cable,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_breakroom)
 "bQ" = (
-/obj/effect/decal/cleanable/blood/old{
-	icon_state = "gib5-old"
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+/obj/structure/chair/sofa/corp/right,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_breakroom)
 "bR" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/mining)
 "bS" = (
-/obj/structure/bed/maint,
-/obj/item/bedsheet/black,
-/obj/item/kinginyellow{
-	pixel_y = -4
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+/obj/structure/chair/sofa/corp/left,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_breakroom)
 "bT" = (
 /obj/machinery/button/door/indestructible{
 	id = "gib_guns_plz";
@@ -531,10 +502,9 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
 "bV" = (
-/obj/effect/turf_decal/box,
-/obj/structure/closet/secure_closet/brig,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/security_center)
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
 "bW" = (
 /obj/structure/reagent_dispensers/water_cooler{
 	pixel_x = -6
@@ -566,12 +536,9 @@
 /turf/open/floor/carpet/black,
 /area/mara17/interior/medium/bar)
 "cb" = (
-/obj/effect/turf_decal/box,
-/obj/structure/closet/secure_closet/brig{
-	id = "cell_2"
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/security_center)
+/obj/structure/rack/shelf,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_test)
 "cc" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -653,7 +620,7 @@
 /area/mara17/interior/medium)
 "cq" = (
 /obj/effect/turf_decal/siding/red/corner,
-/obj/machinery/camera/autoname/directional/south,
+/obj/machinery/light/warm/directional/south,
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/medium/security_center)
 "cr" = (
@@ -705,10 +672,10 @@
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium/clothing_storage)
 "cy" = (
-/obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
-/turf/open/floor/deadspace/random/golf_gray,
-/area/mara17/interior/medium/security_center)
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/hop_bathroom)
 "cz" = (
 /obj/structure/rack/shelf,
 /obj/item/clothing/suit/hawaiian,
@@ -731,9 +698,12 @@
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium)
 "cD" = (
-/obj/machinery/firealarm/directional/west,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/security_center)
+/obj/structure/chair/office{
+	dir = 1
+	},
+/obj/effect/landmark/start/detective,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/detective_office)
 "cE" = (
 /obj/structure/rack/shelf,
 /obj/item/clothing/under/color/random,
@@ -925,24 +895,21 @@
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium)
 "dk" = (
-/obj/effect/decal/cleanable/blood/old{
-	icon_state = "floor2-old"
+/obj/machinery/computer/security{
+	dir = 8
 	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/security_center)
 "dl" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chem_dispenser/drinks/beer,
 /turf/open/floor/carpet/black,
 /area/mara17/interior/medium/bar)
 "dm" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = -14
-	},
-/obj/structure/mirror/directional/west,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/restroom)
+/obj/machinery/firealarm/directional/south,
+/obj/structure/window/reinforced/spawner/east,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_test)
 "dn" = (
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/deadspace/hardwood,
@@ -1034,9 +1001,10 @@
 /turf/open/misc/snow,
 /area/mara17/exterior)
 "dC" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/security_center)
+/obj/structure/cable,
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/hos_quarters)
 "dD" = (
 /obj/structure/fence,
 /turf/open/misc/snow,
@@ -1105,19 +1073,18 @@
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium)
 "dP" = (
+/obj/structure/rack/shelf,
+/obj/item/roller,
 /obj/machinery/light/small/directional/west,
-/obj/machinery/door/firedoor,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium)
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
 "dQ" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium)
 "dR" = (
-/obj/machinery/light/small/directional/east,
-/obj/machinery/door/firedoor,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium)
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/hos_quarters)
 "dS" = (
 /obj/structure/rack/shelf,
 /obj/item/storage/toolbox/electrical,
@@ -1292,11 +1259,11 @@
 /turf/open/floor/iron/freezer,
 /area/mara17/interior/medium/canteen/cold_room)
 "ey" = (
-/obj/effect/decal/cleanable/blood/old{
-	icon_state = "trails_2"
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/security_center)
+/obj/structure/table/rolling,
+/obj/item/bodybag/environmental/prisoner,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
 "ez" = (
 /obj/effect/landmark/navigate_destination/sec,
 /obj/structure/cable,
@@ -1380,6 +1347,7 @@
 /obj/item/reagent_containers/spray/cleaner,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/item/reagent_containers/spray/cleaner,
+/obj/item/disk/holodisk/ds13/mara_talk,
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium)
 "eO" = (
@@ -1426,15 +1394,15 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/medium/security_center)
 "eU" = (
-/obj/machinery/light/small/directional/north,
-/obj/machinery/door/firedoor,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium)
+/obj/effect/landmark/start/head_of_security,
+/obj/structure/chair/office,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/hos_quarters)
 "eV" = (
-/obj/machinery/light/small/directional/south,
-/obj/machinery/door/firedoor,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium)
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/hos_quarters)
 "eW" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
@@ -1442,6 +1410,7 @@
 /area/mara17/interior/medium/canteen/kitchen)
 "eX" = (
 /obj/machinery/space_heater,
+/obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
 "eY" = (
@@ -1456,11 +1425,11 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/mining)
 "fa" = (
-/obj/structure/toilet{
-	dir = 4
-	},
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/capt_bathroom)
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
 "fb" = (
 /obj/machinery/light/cold/directional/east,
 /obj/structure/window/reinforced/spawner/north,
@@ -1499,10 +1468,8 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
 "fg" = (
-/obj/machinery/light/small/directional/north,
-/obj/structure/chair/sofa/bench/right,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
 "fh" = (
 /obj/structure/sign/directions/command{
 	pixel_x = -32
@@ -1523,9 +1490,10 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium)
 "fk" = (
-/obj/machinery/computer/security{
-	dir = 8
-	},
+/obj/structure/rack/shelf,
+/obj/machinery/light/warm/directional/east,
+/obj/item/megaphone/sec,
+/obj/item/storage/fancy/donut_box,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/security_center)
 "fl" = (
@@ -1559,9 +1527,8 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
 "fr" = (
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
 "fs" = (
 /obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/deadspace/grater,
@@ -1581,7 +1548,7 @@
 /turf/open/floor/plating/snowed,
 /area/mara17/exterior)
 "fw" = (
-/obj/item/gun/ballistic/rifle/boltaction,
+/obj/structure/table,
 /turf/open/floor/plating/snowed,
 /area/mara17/exterior)
 "fx" = (
@@ -1666,11 +1633,9 @@
 /turf/open/floor/carpet/black,
 /area/mara17/interior/medium/bar)
 "fM" = (
-/obj/structure/closet/secure_closet/bar,
-/obj/item/reagent_containers/food/drinks/bottle/champagne,
-/obj/item/storage/box/lethalshot,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/bar)
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/command_meeting)
 "fN" = (
 /obj/machinery/computer/crew{
 	dir = 8
@@ -1712,11 +1677,15 @@
 /turf/open/floor/plating,
 /area/mara17/interior/medium/bar)
 "fT" = (
-/obj/machinery/power/smes/magical,
-/obj/machinery/power/terminal,
-/obj/structure/cable,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium/smes)
+/obj/structure/rack/shelf,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/gun/ballistic/automatic/pistol/divet,
+/obj/item/gun/ballistic/automatic/pistol/divet,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
 "fU" = (
 /obj/effect/spawner/random/trash/mess,
 /turf/open/floor/wood,
@@ -1745,16 +1714,9 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/bar)
 "fZ" = (
-/obj/structure/window/reinforced/spawner,
-/obj/structure/table/wood,
-/obj/item/ammo_box/a762{
-	pixel_x = 6
-	},
-/obj/item/ammo_box/a762{
-	pixel_x = -6
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/capt_office)
+/obj/structure/closet/secure_closet/personal,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_breakroom)
 "ga" = (
 /obj/structure/chair{
 	dir = 1
@@ -1776,11 +1738,9 @@
 /turf/open/floor/plating,
 /area/mara17/interior/medium/bar)
 "gd" = (
-/obj/structure/table,
-/obj/machinery/light/small/directional/north,
-/obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/hos_bathroom)
 "ge" = (
 /obj/structure/sign/poster/contraband/random/directional/west,
 /turf/open/floor/deadspace/grater,
@@ -1825,17 +1785,25 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/barracks)
 "gm" = (
+/obj/structure/cable,
 /obj/machinery/door/airlock{
-	name = "Bar"
+	name = "Bathroom"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/bar)
+/area/mara17/interior/medium/chapel_bathroom)
 "gn" = (
-/obj/structure/sign/departments/restroom{
-	pixel_y = -32
-	},
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/obj/structure/rack/shelf,
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
 "go" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/box/drinkingglasses,
@@ -1860,12 +1828,11 @@
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium)
 "gs" = (
-/obj/machinery/computer,
-/obj/effect/decal/cleanable/cobweb/cobweb2{
-	desc = "No, the spider web doesn't have any secrets. For fucksake."
+/obj/effect/turf_decal/tile/purple/anticorner{
+	dir = 1
 	},
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
 "gt" = (
 /obj/structure/rack/shelf,
 /obj/item/clothing/under/pants/blackjeans,
@@ -1888,32 +1855,22 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/barracks)
 "gw" = (
-/obj/structure/table/wood,
-/obj/item/storage/fancy/cigarettes/cigars/havana{
-	pixel_x = 3;
-	pixel_y = 11
-	},
-/obj/item/lighter{
-	pixel_x = -7
-	},
-/obj/item/stack/spacecash/c100{
-	pixel_x = 7;
-	pixel_y = -3
-	},
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hop_office)
 "gx" = (
-/obj/structure/filingcabinet/security{
-	pixel_x = -8
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/capt_office)
+/obj/structure/rack/shelf,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
 "gy" = (
-/obj/machinery/computer{
-	dir = 8
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 1
 	},
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
 "gz" = (
 /obj/structure/stairs/east,
 /obj/structure/sign/directions/command{
@@ -1942,12 +1899,11 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
 "gD" = (
-/obj/machinery/light/warm/directional/west,
-/obj/structure/filingcabinet/employment{
-	pixel_x = -8
+/obj/effect/turf_decal/tile/purple/anticorner{
+	dir = 4
 	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
 "gE" = (
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 1
@@ -1955,8 +1911,13 @@
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/medium/armory)
 "gF" = (
-/obj/machinery/computer/security/wooden_tv{
-	pixel_y = -4
+/obj/structure/window/reinforced/spawner,
+/obj/structure/table/wood,
+/obj/item/ammo_box/a762{
+	pixel_x = 6
+	},
+/obj/item/ammo_box/a762{
+	pixel_x = -6
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/capt_office)
@@ -1969,15 +1930,16 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/armory)
 "gH" = (
-/obj/structure/table/wood,
-/obj/machinery/button/door/indestructible{
-	id = "command_emergency";
-	name = "Command Office Shutters";
-	pixel_x = -4;
-	pixel_y = -6;
-	req_access_txt = "19"
+/obj/item/gun/ballistic/rifle/boltaction/brand_new{
+	pixel_y = 32
 	},
-/turf/open/floor/deadspace/random/golf_brown,
+/obj/machinery/door/window/brigdoor/right/directional/west{
+	req_access_txt = "20"
+	},
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 4
+	},
+/turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/capt_office)
 "gI" = (
 /obj/machinery/grill,
@@ -2095,9 +2057,10 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
 "gZ" = (
-/obj/machinery/light/cold/directional/west,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/restroom)
+/obj/machinery/airalarm/directional/south,
+/obj/structure/table,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_test)
 "ha" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -2117,10 +2080,9 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/canteen/kitchen)
 "he" = (
-/obj/structure/chair/office{
-	dir = 4
-	},
-/turf/open/floor/deadspace/random/golf_brown,
+/obj/structure/fireplace,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
 /area/mara17/interior/medium/capt_office)
 "hf" = (
 /obj/structure/sign/poster/random/directional/east,
@@ -2203,12 +2165,9 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/sec_barracks)
 "hu" = (
-/obj/structure/rack/shelf,
-/obj/machinery/light/warm/directional/east,
-/obj/item/megaphone/sec,
-/obj/item/storage/fancy/donut_box,
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/security_center)
+/area/mara17/interior/medium/research_rd)
 "hv" = (
 /obj/structure/table,
 /obj/item/storage/medkit/regular,
@@ -2220,10 +2179,19 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/barracks)
 "hx" = (
-/obj/machinery/computer/communications{
-	dir = 8
+/obj/structure/table/wood,
+/obj/item/storage/fancy/cigarettes/cigars/havana{
+	pixel_x = 3;
+	pixel_y = 11
 	},
-/turf/open/floor/deadspace/random/golf_brown,
+/obj/item/lighter{
+	pixel_x = -7
+	},
+/obj/item/stack/spacecash/c100{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/capt_office)
 "hy" = (
 /obj/structure/rack/shelf,
@@ -2275,11 +2243,8 @@
 /turf/open/floor/iron/freezer,
 /area/mara17/interior/medium/canteen/cold_room)
 "hF" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 9
-	},
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_test)
 "hG" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/red/line{
@@ -2301,9 +2266,6 @@
 	pixel_y = 14
 	},
 /obj/item/bedsheet/syndie,
-/obj/item/bedsheet/ian{
-	pixel_y = 14
-	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/watchtower)
 "hJ" = (
@@ -2338,10 +2300,10 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/janitor)
 "hN" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
+/obj/structure/filingcabinet/security{
+	pixel_x = -8
 	},
-/turf/open/floor/wood,
+/turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/capt_office)
 "hO" = (
 /obj/structure/table/reinforced,
@@ -2510,16 +2472,17 @@
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium)
 "io" = (
-/obj/machinery/door/airlock,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/restroom)
-"ip" = (
-/obj/structure/toilet{
-	dir = 8
+/obj/structure/sign/ds13/cec_sci{
+	pixel_x = -32
 	},
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/restroom)
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/research_dept)
+"ip" = (
+/obj/structure/sign/ds13/cec_sci{
+	pixel_x = 32
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/research_dept)
 "iq" = (
 /obj/structure/rack/shelf,
 /obj/item/storage/bag/trash,
@@ -2530,10 +2493,10 @@
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium)
 "ir" = (
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 1
+/obj/effect/turf_decal/siding/thinplating/dark/corner{
+	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/capt_office)
 "is" = (
 /obj/machinery/door/airlock{
@@ -2608,15 +2571,19 @@
 	},
 /area/mara17/interior/medium/barracks)
 "iA" = (
-/obj/machinery/light/warm/directional/north,
-/turf/open/floor/wood,
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/capt_office)
 "iB" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "command_emergency";
-	name = "Emergency Command Shutters"
+/obj/effect/turf_decal/siding/thinplating/dark/corner{
+	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/capt_office)
 "iC" = (
 /obj/effect/landmark/start/cook,
@@ -2639,12 +2606,11 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/barracks)
 "iF" = (
-/obj/structure/rack/shelf,
-/obj/item/stack/sheet/glass{
-	amount = 30
-	},
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/obj/machinery/status_display/evac/directional/east,
+/obj/machinery/space_heater,
+/obj/machinery/firealarm/directional/north,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/capt_office)
 "iG" = (
 /obj/machinery/vending/dinnerware,
 /turf/open/floor/iron/cafeteria,
@@ -2772,40 +2738,37 @@
 /turf/open/floor/plating/snowed,
 /area/mara17/exterior)
 "iW" = (
-/obj/structure/aquarium/prefilled,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/chapel_office)
 "iX" = (
-/obj/machinery/door/airlock{
-	name = "Bar"
-	},
 /obj/structure/cable,
+/obj/machinery/door/airlock/research{
+	name = "Testing Labs";
+	req_one_access_txt = "7"
+	},
 /turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/bar)
+/area/mara17/interior/medium/research_test)
 "iY" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/medium/janitor)
 "iZ" = (
-/obj/machinery/light/warm/directional/west,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
 "ja" = (
-/obj/structure/bed,
-/obj/item/bedsheet/captain,
-/obj/effect/landmark/start/captain,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_quarters)
-"jb" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 4
+/obj/machinery/light/warm/directional/west,
+/obj/structure/filingcabinet/employment{
+	pixel_x = -8
 	},
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_quarters)
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/capt_office)
+"jb" = (
+/obj/machinery/computer/security/wooden_tv{
+	pixel_y = -4
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/capt_office)
 "jc" = (
 /obj/machinery/status_display/evac/directional/north,
 /obj/structure/chair{
@@ -2814,22 +2777,20 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/sec_barracks)
 "jd" = (
-/obj/machinery/status_display/evac/directional/west,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
-"je" = (
 /obj/structure/table/wood,
-/obj/machinery/fax_machine,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
+/obj/item/flashlight/lamp/green,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/hos_quarters)
+"je" = (
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/detective_office)
 "jf" = (
-/obj/machinery/door/airlock{
-	name = "Public Restroom"
+/obj/structure/sign/directions/science{
+	dir = 4;
+	pixel_y = 32
 	},
-/obj/structure/cable,
-/obj/machinery/door/firedoor,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/restroom)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium)
 "jg" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/highcap/ten_k/directional/north,
@@ -2841,27 +2802,21 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/medium/janitor)
 "ji" = (
+/obj/structure/table,
 /obj/machinery/light/warm/directional/south,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
+/obj/item/bodypart/arm/right/robot,
+/obj/item/bodypart/arm/right/robot,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_test)
 "jj" = (
-/obj/structure/table/wood,
-/obj/item/paper_bin{
-	pixel_x = 8
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 1
 	},
-/obj/item/pen/fourcolor{
-	pixel_x = 8
-	},
-/obj/item/stamp/captain{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/item/stamp/denied{
-	pixel_x = -6;
-	pixel_y = -4
-	},
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
 "jk" = (
 /obj/structure/chair{
 	dir = 1
@@ -2869,31 +2824,29 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/sec_barracks)
 "jl" = (
-/obj/structure/dresser,
-/turf/open/floor/carpet/red,
-/area/mara17/interior/medium/capt_quarters)
-"jm" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/command{
-	name = "Outpost Iris - Overseer Office";
-	req_access_txt = "20";
-	req_one_access_txt = "0"
+/obj/structure/chair/office{
+	dir = 4
 	},
-/obj/effect/landmark/navigate_destination/bridge,
-/turf/open/floor/deadspace/mono,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/capt_office)
+"jm" = (
+/obj/machinery/computer/communications{
+	dir = 8
+	},
+/turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/capt_office)
 "jn" = (
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/obj/effect/turf_decal/siding/wood{
+	dir = 9
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
 "jo" = (
-/obj/machinery/light/warm/directional/south,
-/obj/structure/closet/cabinet,
-/obj/item/clothing/suit/hooded/wintercoat/captain,
-/obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/mask/balaclava,
-/obj/item/clothing/gloves/fingerless,
-/turf/open/floor/carpet/red,
-/area/mara17/interior/medium/capt_quarters)
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
 "jp" = (
 /obj/structure/marker_beacon/burgundy,
 /turf/open/misc/snow,
@@ -2911,17 +2864,10 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/smes)
 "js" = (
-/obj/structure/table/wood,
-/obj/item/fish_feed{
-	pixel_x = 8;
-	pixel_y = -4
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
 	},
-/obj/item/book/fish_catalog{
-	pixel_x = -7;
-	pixel_y = 5
-	},
-/obj/machinery/airalarm/directional/west,
-/turf/open/floor/deadspace/random/golf_brown,
+/turf/open/floor/wood,
 /area/mara17/interior/medium/capt_office)
 "jt" = (
 /obj/structure/sign/directions/security{
@@ -3000,15 +2946,11 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/watchtower)
 "jz" = (
-/obj/structure/table,
-/obj/item/storage/toolbox/ammo{
-	pixel_y = 8
-	},
-/obj/item/storage/toolbox/ammo{
-	pixel_x = -4
-	},
-/turf/open/floor/plating/snowed,
-/area/mara17/exterior)
+/obj/structure/closet/secure_closet/evidence,
+/obj/machinery/light/small/directional/west,
+/obj/item/disk/holodisk/ds13/mara_exterior,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/evidence_1)
 "jA" = (
 /obj/structure/table,
 /obj/effect/spawner/random/exotic/antag_gear_weak,
@@ -3022,137 +2964,116 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/watchtower)
 "jC" = (
-/obj/structure/rack/shelf,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
 "jD" = (
-/obj/structure/rack/shelf,
-/obj/machinery/light/small/directional/north,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/obj/item/reagent_containers/food/drinks/bottle/beer,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_breakroom)
 "jE" = (
-/turf/open/floor/deadspace/cable_start{
-	dir = 4
-	},
-/area/mara17/interior/medium)
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_center)
 "jF" = (
 /obj/structure/rack/shelf,
-/turf/open/floor/deadspace/random/rivets,
-/area/mara17/interior/medium)
+/obj/machinery/camera/autoname/directional/west,
+/obj/item/storage/medkit/advanced,
+/obj/item/storage/medkit/brute,
+/obj/item/storage/medkit/fire,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
 "jG" = (
-/obj/structure/rack/gunrack,
-/turf/open/floor/deadspace/random/rivets,
-/area/mara17/interior/medium)
+/obj/structure/rack/shelf,
+/obj/item/gun/ballistic/automatic/wt550,
+/obj/item/gun/ballistic/automatic/wt550,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
 "jH" = (
-/obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/obj/structure/table/wood,
+/obj/item/disk/holodisk/ds13/mara_intro_cpt{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/capt_office)
 "jI" = (
-/obj/machinery/computer{
-	dir = 1
-	},
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
-"jJ" = (
-/obj/item/chair,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
-"jK" = (
-/obj/structure/chair{
-	dir = 4
-	},
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
-"jL" = (
-/obj/structure/chair{
-	dir = 1
-	},
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
-"jM" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
-"jN" = (
-/obj/structure/table,
-/obj/machinery/light/small/directional/east,
-/obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/item/ammo_box/magazine/m45{
-	pixel_y = 4
-	},
-/obj/item/ammo_box/magazine/m45{
-	pixel_y = -4
-	},
-/obj/item/ammo_box/magazine/m45{
-	pixel_x = -8
-	},
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
-"jO" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/deadspace/random/rivets,
-/area/mara17/interior/medium)
-"jP" = (
-/obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
-"jQ" = (
-/obj/item/gun/ballistic/rifle/boltaction/brand_new{
-	pixel_y = 32
-	},
-/obj/machinery/door/window/brigdoor/right/directional/west{
-	req_access_txt = "20"
-	},
-/obj/effect/turf_decal/siding/thinplating/dark{
-	dir = 4
-	},
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/capt_office)
-"jR" = (
-/obj/structure/fireplace,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/mara17/interior/medium/capt_office)
-"jS" = (
-/obj/machinery/light/warm/directional/north,
-/obj/effect/turf_decal/siding/thinplating/dark{
+/obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/turf/open/floor/deadspace/mono,
+/obj/structure/cable,
+/turf/open/floor/wood,
 /area/mara17/interior/medium/capt_office)
+"jJ" = (
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
+"jK" = (
+/obj/structure/cable,
+/obj/structure/sign/poster/random/directional/south,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
+"jL" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock{
+	name = "Head of Security's Quarters"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_quarters)
+"jM" = (
+/obj/structure/rack/shelf,
+/obj/item/storage/box/lethalshot,
+/obj/item/storage/box/lethalshot,
+/obj/item/storage/belt/bandolier,
+/obj/item/storage/belt/bandolier,
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
+"jN" = (
+/obj/machinery/light/warm/directional/west,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
+"jO" = (
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
+"jP" = (
+/turf/open/floor/wood,
+/area/mara17/interior/medium/chapel_office)
+"jQ" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_breakroom)
+"jR" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable,
+/area/mara17/interior/medium/security_center)
+"jS" = (
+/obj/structure/bed,
+/obj/item/bedsheet/captain,
+/obj/effect/landmark/start/captain,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_quarters)
 "jT" = (
-/obj/effect/turf_decal/siding/thinplating/dark/corner{
+/obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_quarters)
 "jU" = (
-/obj/structure/chair/comfy/black{
-	dir = 1
-	},
-/obj/effect/turf_decal/siding/thinplating/dark{
-	dir = 1
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/capt_office)
+/obj/structure/table,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
 "jV" = (
-/obj/effect/turf_decal/siding/thinplating/dark/corner{
-	dir = 1
-	},
-/turf/open/floor/deadspace/random/golf_brown,
+/obj/machinery/status_display/evac/directional/west,
+/turf/open/floor/wood,
 /area/mara17/interior/medium/capt_office)
 "jW" = (
 /obj/structure/rack/shelf,
@@ -3183,66 +3104,56 @@
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/medium/armory)
 "jX" = (
-/obj/structure/bookcase,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
-"jY" = (
-/obj/structure/rack/shelf,
+/obj/structure/closet/secure_closet/evidence,
 /obj/machinery/light/small/directional/west,
-/obj/item/crowbar/red,
-/obj/item/crowbar/red,
-/turf/open/floor/deadspace/random/rivets,
-/area/mara17/interior/medium)
-"jZ" = (
-/obj/structure/rack/shelf,
-/obj/machinery/light/small/directional/east,
-/obj/item/clothing/shoes/workboots,
-/obj/item/clothing/shoes/workboots,
-/obj/item/clothing/shoes/workboots,
-/obj/item/clothing/shoes/workboots,
-/turf/open/floor/deadspace/random/rivets,
-/area/mara17/interior/medium)
-"ka" = (
-/obj/structure/rack/shelf,
-/obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/shoes/winterboots,
-/turf/open/floor/deadspace/random/rivets,
-/area/mara17/interior/medium)
-"kb" = (
-/obj/machinery/door/airlock/maintenance,
-/obj/effect/mapping_helpers/airlock/locked,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/evidence_1)
+"jY" = (
+/obj/structure/table/wood,
+/obj/machinery/fax_machine,
 /turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium)
-"kc" = (
-/obj/structure/ore_box{
-	pixel_x = -4
-	},
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
-"kd" = (
-/obj/structure/barricade/wooden/crude,
+/area/mara17/interior/medium/hos_office)
+"jZ" = (
+/obj/effect/turf_decal/scaf_sign/one,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_center)
+"ka" = (
 /turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/area/mara17/interior/medium/evidence_1)
+"kb" = (
+/obj/effect/turf_decal/scaf_sign/two,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_center)
+"kc" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = -14
+	},
+/obj/structure/mirror/directional/west,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/capt_bathroom)
+"kd" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/capt_bathroom)
 "ke" = (
-/obj/structure/rack/shelf{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/obj/effect/turf_decal/siding/wood,
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_quarters)
 "kf" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
-"kg" = (
-/obj/effect/decal/remains/human{
-	desc = "They look like human remains. They're covered in scratch marks.";
-	name = "mangled remains"
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
 	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_quarters)
+"kg" = (
+/obj/structure/cable,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/hos_quarters)
 "kh" = (
 /obj/structure/rack/shelf,
 /obj/item/clothing/suit/armor/pcsi/cec{
@@ -3274,147 +3185,115 @@
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/medium/armory)
 "ki" = (
-/obj/structure/table,
-/obj/machinery/light/small/directional/east,
-/obj/item/camera_film,
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/obj/machinery/door/airlock/command{
+	name = "Overseer Quarters"
+	},
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/capt_quarters)
 "kj" = (
-/obj/structure/rack/shelf,
-/obj/item/stack/sheet/iron{
-	amount = 30
+/obj/machinery/readybutton{
+	pixel_y = -32
 	},
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
 "kk" = (
-/obj/structure/rack/shelf,
-/obj/item/stack/sheet/plasteel{
-	amount = 15
-	},
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/obj/structure/cable,
+/obj/machinery/power/apc/highcap/five_k/directional/south,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
 "kl" = (
-/obj/effect/decal/cleanable/garbage,
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/obj/structure/closet/secure_closet/evidence,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/evidence_1)
 "km" = (
-/obj/structure/table,
-/obj/machinery/light/small/directional/south,
-/obj/item/camera,
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
+/obj/structure/rack/shelf,
+/obj/item/roller,
+/obj/machinery/airalarm/directional/west,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
 "kn" = (
-/obj/structure/rack/shelf,
-/obj/machinery/light/small/directional/west,
-/obj/item/stack/sticky_tape,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/obj/effect/turf_decal/scaf_sign/three,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_center)
 "ko" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/command_hallway)
 "kp" = (
-/obj/structure/rack/shelf,
-/obj/item/stack/sticky_tape,
 /turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/area/mara17/interior/medium/command_center)
 "kq" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/random/entertainment/money_small,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/barracks)
 "kr" = (
-/obj/machinery/door/airlock/maintenance,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium)
-"ks" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
-"kt" = (
-/obj/item/broken_bottle,
-/turf/open/floor/deadspace/roller,
-/area/mara17/interior/medium)
-"ku" = (
-/obj/structure/rack/shelf,
-/obj/machinery/light/small/directional/west,
-/obj/item/stack/sheet/rglass{
-	amount = 30;
-	pixel_x = 2;
-	pixel_y = -2
-	},
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
-"kv" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/deadspace/cable{
+/obj/structure/toilet{
 	dir = 4
 	},
-/area/mara17/interior/medium)
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/hos_bathroom)
+"ks" = (
+/obj/machinery/light/cold/directional/south,
+/obj/structure/cable,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/capt_bathroom)
+"kt" = (
+/obj/machinery/door/airlock{
+	name = "Bathroom"
+	},
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/capt_bathroom)
+"ku" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/south,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/capt_quarters)
+"kv" = (
+/obj/structure/table,
+/obj/item/wallframe/apc,
+/obj/item/wallframe/apc,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_test)
 "kw" = (
-/obj/structure/rack/shelf,
-/obj/item/reagent_containers/blood/random,
-/obj/item/reagent_containers/blood/random,
-/obj/item/reagent_containers/blood/random,
-/obj/item/reagent_containers/blood/random,
-/obj/item/reagent_containers/blood/random,
-/obj/item/reagent_containers/blood/random,
-/obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/deadspace/random/rivets,
-/area/mara17/interior/medium)
+/obj/structure/dresser,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/capt_quarters)
 "kx" = (
-/obj/structure/rack/shelf,
-/obj/item/clothing/suit/armor/vest/old{
-	pixel_y = -4
-	},
-/obj/item/clothing/suit/armor/vest/old{
-	pixel_y = -2
-	},
-/obj/item/clothing/head/helmet/old{
-	pixel_y = 6
-	},
-/obj/item/clothing/head/helmet/old{
-	pixel_y = 4
-	},
-/obj/effect/decal/cleanable/cobweb/cobweb2,
-/turf/open/floor/deadspace/random/rivets,
-/area/mara17/interior/medium)
+/turf/open/floor/deadspace/hardwood/alt,
+/area/mara17/interior/medium/command_meeting)
 "ky" = (
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/medium/janitor)
 "kz" = (
-/obj/machinery/light/small/directional/west,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+/obj/structure/table/wood,
+/turf/open/floor/deadspace/hardwood/alt,
+/area/mara17/interior/medium/command_meeting)
 "kA" = (
-/obj/structure/rack/shelf,
-/obj/item/clothing/head/sybil_slickers,
-/obj/item/clothing/shoes/sybil_slickers,
-/obj/item/clothing/suit/sybil_slickers,
-/obj/item/clothing/under/costume/sybil_slickers,
-/obj/item/clothing/gloves/tackler/football,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
 "kB" = (
-/obj/effect/decal/cleanable/garbage,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
 "kC" = (
-/obj/structure/rack/shelf,
-/obj/item/clothing/head/basil_boys,
-/obj/item/clothing/shoes/basil_boys,
-/obj/item/clothing/suit/basil_boys,
-/obj/item/clothing/under/costume/basil_boys,
-/obj/item/clothing/gloves/tackler/football,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+/obj/effect/turf_decal/tile/purple/anticorner,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
 "kD" = (
-/obj/structure/rack/shelf,
-/obj/item/storage/cans/sixbeer,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
+/obj/structure/table/reinforced,
+/obj/item/storage/backpack/duffelbag/med/surgery,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
 "kE" = (
 /obj/effect/landmark/start/janitor,
 /turf/open/floor/deadspace/random/golf_gray,
@@ -3485,18 +3364,22 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/barracks)
 "kQ" = (
-/obj/machinery/airalarm/directional/north,
-/obj/structure/closet/secure_closet/captains/mara,
-/turf/open/floor/carpet/red,
-/area/mara17/interior/medium/capt_quarters)
+/obj/effect/turf_decal/tile/purple/anticorner{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
 "kR" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/cable_end,
 /area/mara17/interior/medium)
 "kS" = (
-/obj/structure/cable,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/restroom)
+/obj/structure/closet/secure_closet/security/mara,
+/obj/structure/sign/ds13/cec_sec{
+	pixel_y = -32
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/security_center)
 "kT" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/cable,
@@ -3535,28 +3418,20 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/canteen)
 "kY" = (
-/obj/effect/turf_decal/siding/wood{
+/obj/effect/turf_decal/tile/purple/half,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"kZ" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/watchtower)
+"la" = (
+/obj/machinery/light/warm/directional/north,
+/obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 8
 	},
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
-"kZ" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "command_emergency";
-	name = "Emergency Command Shutters"
+/obj/item/stack/sheet/mineral/wood{
+	amount = 5
 	},
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
-"la" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/command{
-	name = "Outpost Iris - Overseer Office";
-	req_access_txt = "20";
-	req_one_access_txt = "0"
-	},
-/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/capt_office)
 "lb" = (
@@ -3571,17 +3446,16 @@
 /turf/open/floor/iron/freezer,
 /area/mara17/interior/medium/canteen/cold_room)
 "ld" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/south,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/restroom)
-"le" = (
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 1
+/obj/structure/sign/directions/science{
+	dir = 1;
+	pixel_x = 32
 	},
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium)
+"le" = (
+/obj/effect/turf_decal/scaf_sign/four,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_center)
 "lf" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/cable_start,
@@ -3610,46 +3484,44 @@
 /turf/open/floor/iron/freezer,
 /area/mara17/interior/medium/canteen/cold_room)
 "lk" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/east,
-/obj/machinery/airalarm/directional/north,
+/obj/structure/table/rolling,
+/obj/item/bodybag/environmental/prisoner,
 /turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/capt_bathroom)
+/area/mara17/interior/medium/evidence_2)
 "ll" = (
-/obj/effect/turf_decal/siding/wood,
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_quarters)
+/obj/structure/window/reinforced/spawner/west,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_test)
 "lm" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 6
+/obj/structure/sign/ds13/cec_enginieering{
+	pixel_y = 32
 	},
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_quarters)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium)
 "ln" = (
 /obj/structure/cable,
-/turf/open/floor/carpet/red,
-/area/mara17/interior/medium/capt_quarters)
-"lo" = (
-/obj/machinery/door/airlock/command{
-	name = "Overseer Quarters"
+/obj/structure/sign/ds13/cec_service{
+	pixel_x = 32
 	},
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/capt_quarters)
-"lp" = (
-/obj/machinery/readybutton{
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium)
+"lo" = (
+/obj/structure/sign/ds13/cec_service{
 	pixel_y = -32
 	},
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium)
+"lp" = (
+/obj/structure/rack/shelf,
+/obj/item/mod/control/pre_equipped/security,
+/obj/item/mod/control/pre_equipped/security,
+/obj/item/mod/control/pre_equipped/security,
+/obj/item/mod/control/pre_equipped/security,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
 "lq" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/highcap/five_k/directional/south,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/deadspace/random/rectangles,
+/area/mara17/interior/medium/chapel)
 "lr" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/shutters/window{
@@ -3669,22 +3541,18 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/canteen/cold_room)
 "lt" = (
-/obj/machinery/light/cold/directional/south,
-/obj/structure/cable,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/capt_bathroom)
+/obj/structure/rack/shelf,
+/obj/item/gun/ballistic/shotgun/automatic/combat,
+/obj/item/gun/ballistic/shotgun/automatic/combat,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
 "lu" = (
-/obj/machinery/door/airlock{
-	name = "Bathroom"
-	},
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/capt_bathroom)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/chapel)
 "lv" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/south,
-/turf/open/floor/carpet/red,
-/area/mara17/interior/medium/capt_quarters)
+/obj/structure/chair/pew/left,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/chapel)
 "lw" = (
 /obj/structure/rack/shelf,
 /obj/item/ammo_box/magazine/divet,
@@ -3732,13 +3600,8 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/canteen)
 "lB" = (
-/obj/structure/table/wood,
-/obj/item/disk/holodisk/ds13/mara_intro_cpt{
-	pixel_x = -6;
-	pixel_y = 7
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/psychology)
 "lC" = (
 /obj/structure/flora/rock/icy,
 /turf/open/misc/snow,
@@ -3810,16 +3673,15 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/canteen)
 "lM" = (
-/obj/machinery/status_display/evac/directional/east,
-/obj/machinery/space_heater,
-/obj/machinery/firealarm/directional/north,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/capt_office)
-"lN" = (
 /obj/structure/cable,
-/obj/structure/sign/poster/random/directional/south,
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
+"lN" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/chapel)
 "lO" = (
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/freezer,
@@ -3859,11 +3721,10 @@
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/medium/armory)
 "lT" = (
-/obj/machinery/power/smes/magical,
-/obj/machinery/power/terminal,
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/mining/ore_storage)
+/obj/machinery/light/warm/directional/north,
+/obj/effect/landmark/start/scientist,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_breakroom)
 "lU" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -3962,19 +3823,888 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/workshop)
+"ml" = (
+/obj/structure/chair/pew,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/chapel)
+"mm" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/chapel)
+"mn" = (
+/turf/open/floor/iron/stairs{
+	dir = 8
+	},
+/area/mara17/interior/medium/chapel)
+"mo" = (
+/turf/open/floor/iron/stairs{
+	dir = 4
+	},
+/area/mara17/interior/medium/chapel)
+"mp" = (
+/obj/structure/sign/ds13/scaf_logo2{
+	pixel_y = 32
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/command_meeting)
+"mq" = (
+/obj/structure/chair/comfy/black,
+/turf/open/floor/deadspace/hardwood/alt,
+/area/mara17/interior/medium/command_meeting)
+"mr" = (
+/obj/structure/chair/comfy/black{
+	dir = 4
+	},
+/turf/open/floor/deadspace/hardwood/alt,
+/area/mara17/interior/medium/command_meeting)
+"ms" = (
+/obj/structure/chair/comfy/black{
+	dir = 8
+	},
+/turf/open/floor/deadspace/hardwood/alt,
+/area/mara17/interior/medium/command_meeting)
+"mt" = (
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/turf/open/floor/deadspace/hardwood/alt,
+/area/mara17/interior/medium/command_meeting)
+"mu" = (
+/obj/structure/sign/ds13/scaf_logo2{
+	pixel_y = -32
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/command_meeting)
+"mv" = (
+/obj/structure/chair/pew/right,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/chapel)
+"mw" = (
+/obj/structure/railing,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/chapel)
+"mx" = (
+/obj/structure/table/reinforced{
+	icon = 'icons/obj/hand_of_god_structures.dmi';
+	icon_state = "convertaltar";
+	name = "Altar"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel)
+"my" = (
+/obj/structure/filingcabinet/security,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"mz" = (
+/obj/machinery/modular_computer/console/preset/id{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"mA" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Armory";
+	req_access_txt = "3"
+	},
+/obj/machinery/door/poddoor{
+	id = "murdering_civilians";
+	name = "Armory Shutters"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/sec_armory)
+"mB" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Armory";
+	req_access_txt = "3"
+	},
+/obj/machinery/door/poddoor{
+	id = "murdering_civilians";
+	name = "Armory Shutters"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/sec_armory)
+"mC" = (
+/obj/structure/bookcase/random/religion,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel_office)
+"mD" = (
+/obj/structure/mirror/directional/west,
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = -14
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/hos_bathroom)
+"mE" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/chapel_bathroom)
+"mF" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = 11;
+	pixel_y = -2
+	},
+/obj/structure/mirror/directional/east,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/chapel_bathroom)
+"mG" = (
+/obj/structure/filingcabinet/filingcabinet,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"mH" = (
+/obj/structure/sign/ds13/cec_sec{
+	pixel_x = -32
+	},
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/security_center)
+"mI" = (
+/obj/machinery/firealarm/directional/west,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
+"mJ" = (
+/obj/structure/table/optable{
+	desc = "A cold, hard place for your final rest.";
+	name = "Morgue Slab"
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
+"mK" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 9
+	},
+/obj/effect/landmark/start/scientist,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
+"mL" = (
+/obj/machinery/computer/operating,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
+"mM" = (
+/obj/machinery/holopad/secure,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"mN" = (
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"mO" = (
+/obj/structure/cable,
+/obj/structure/table/reinforced/plastitaniumglass,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"mP" = (
+/obj/machinery/vending/snack,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_breakroom)
+"mQ" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
 "mR" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/watchtower)
+"mS" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/wood{
+	dir = 5
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
+"mT" = (
+/obj/machinery/camera/autoname/directional/south,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/security_center)
+"mU" = (
+/obj/effect/turf_decal/siding/purple{
+	dir = 9
+	},
+/obj/item/kirbyplants{
+	icon_state = "plant-24"
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"mV" = (
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"mW" = (
+/obj/structure/closet/secure_closet/evidence,
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/evidence_1)
+"mX" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/evidence_1)
+"mY" = (
+/obj/machinery/camera/autoname/directional/north,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/research_dept)
+"mZ" = (
+/obj/machinery/camera/autoname/directional/west,
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/security_center)
+"na" = (
+/obj/structure/chair/office,
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hos_office)
+"nb" = (
+/obj/structure/table/wood,
+/obj/machinery/fax_machine,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hop_office)
+"nc" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/hydrophonics)
 "nd" = (
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/medium/abandoned/watchtower1)
+"ne" = (
+/obj/machinery/camera/autoname/directional/west,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/watchtower)
+"nf" = (
+/obj/machinery/camera/autoname/directional/east,
+/obj/structure/table/rolling,
+/obj/item/bodybag/environmental/prisoner,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
+"ng" = (
+/obj/structure/curtain/cloth/fancy,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_quarters)
+"nh" = (
+/obj/structure/rack/shelf,
+/obj/item/storage/box/evidence,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/evidence_1)
+"ni" = (
+/obj/effect/turf_decal/scaf_sign/eagle_two,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hos_office)
+"nj" = (
+/obj/structure/closet/secure_closet/evidence,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/evidence_1)
 "nk" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/barracks)
+"nl" = (
+/obj/machinery/vending/cola/pwr_game,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_breakroom)
+"nm" = (
+/obj/effect/turf_decal/siding/purple{
+	dir = 5
+	},
+/obj/item/kirbyplants{
+	icon_state = "plant-24"
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"nn" = (
+/obj/effect/turf_decal/siding/purple{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"no" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/effect/landmark/start/scientist,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
+"np" = (
+/obj/machinery/camera/autoname/directional/east,
+/obj/structure/closet/secure_closet/evidence,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/evidence_1)
+"nq" = (
+/obj/machinery/rnd/destructive_analyzer,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"nr" = (
+/obj/machinery/camera/autoname/directional/north,
+/obj/machinery/rnd/production/fabricator/omni,
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"ns" = (
+/obj/machinery/module_duplicator,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"nt" = (
+/obj/structure/rack/shelf,
+/obj/item/clothing/suit/armor/riot,
+/obj/item/clothing/suit/armor/riot,
+/obj/item/clothing/head/helmet/riot,
+/obj/item/clothing/head/helmet/riot,
+/obj/item/shield/riot/ds/advanced,
+/obj/item/shield/riot/ds/advanced,
+/obj/machinery/firealarm/directional/west,
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
+"nu" = (
+/obj/machinery/component_printer,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"nv" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 10
+	},
+/obj/effect/landmark/start/scientist,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
+"nw" = (
+/obj/structure/rack/shelf,
+/obj/item/gun/ballistic/automatic/pulse,
+/obj/item/gun/ballistic/automatic/pulse,
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/sec_armory)
+"nx" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
+"ny" = (
+/obj/structure/table,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
+"nz" = (
+/obj/structure/rack/shelf,
+/obj/item/stack/sheet/plastic/fifty,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"nA" = (
+/obj/item/kirbyplants{
+	icon_state = "applebush"
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/security_center)
+"nB" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/obj/structure/chair{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
+"nC" = (
+/obj/effect/turf_decal/siding/purple{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"nD" = (
+/obj/effect/turf_decal/siding/purple{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"nE" = (
+/obj/effect/turf_decal/scaf_sign/eagle_one,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hos_office)
+"nF" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/purple/corner,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"nG" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/research_dept)
+"nH" = (
+/obj/item/kirbyplants{
+	icon_state = "plant-13"
+	},
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/warden_office)
+"nI" = (
+/obj/structure/rack/shelf,
+/obj/item/storage/box/evidence,
+/obj/item/storage/box/evidence,
+/obj/item/taperecorder,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
+"nJ" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/warden_office)
+"nK" = (
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"nL" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/purple{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/purple,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"nM" = (
+/obj/structure/closet/secure_closet/detective,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
+"nN" = (
+/obj/structure/closet/secure_closet/research_director,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"nO" = (
+/obj/structure/sign/ds13{
+	pixel_y = -32
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/security_center)
+"nP" = (
+/obj/effect/landmark/start/scientist,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"nQ" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/security_center)
+"nR" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_end,
+/area/mara17/interior/medium/security_center)
+"nS" = (
+/obj/item/kirbyplants{
+	icon_state = "plant-10"
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/detective_office)
+"nT" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable,
+/area/mara17/interior/medium/command_hallway)
+"nU" = (
+/obj/structure/table/wood,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"nV" = (
+/obj/structure/closet/secure_closet/evidence,
+/obj/machinery/airalarm/directional/east,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/evidence_1)
+"nW" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/warden_office)
+"nX" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp/green,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
+"nY" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hop_office)
+"nZ" = (
+/obj/structure/rack/shelf,
+/obj/item/bodybag,
+/obj/item/bodybag,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
+"oa" = (
+/obj/structure/closet/secure_closet/warden,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/warden_office)
+"ob" = (
+/obj/item/kirbyplants{
+	icon_state = "plant-20";
+	pixel_y = 3
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"oc" = (
+/obj/machinery/computer/secure_data{
+	dir = 8
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
+"od" = (
+/obj/structure/chair/office{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/effect/landmark/start/warden,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/warden_office)
+"oe" = (
+/obj/machinery/computer/crew{
+	dir = 8
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/warden_office)
+"of" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/purple,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"og" = (
+/obj/machinery/computer/med_data{
+	dir = 8
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
+"oh" = (
+/obj/effect/turf_decal/siding/red{
+	dir = 4
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/warden_office)
+"oi" = (
+/obj/machinery/computer/warrant{
+	dir = 8
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/warden_office)
+"oj" = (
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/detective_office)
+"ok" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_start,
+/area/mara17/interior/medium/security_center)
+"ol" = (
+/obj/structure/closet/secure_closet/bar,
+/obj/item/reagent_containers/food/drinks/bottle/champagne,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/bar)
+"om" = (
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/purple,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"on" = (
+/obj/machinery/airalarm/directional/north,
+/obj/item/kirbyplants{
+	icon_state = "plant-20";
+	pixel_y = 3
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/research_rd)
+"oo" = (
+/obj/structure/table/wood,
+/obj/machinery/button/door/indestructible{
+	id = "murdering_civilians";
+	name = "Security Armory Lockdown";
+	req_access_txt = "58"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"op" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"oq" = (
+/obj/structure/chair/wood,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/psychology)
+"or" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/chapel)
+"os" = (
+/obj/structure/table/wood,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/psychology)
+"ot" = (
+/obj/structure/cable,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
+"ou" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_center)
+"ov" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
+"ow" = (
+/obj/structure/chair/office{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/psychology)
+"ox" = (
+/obj/machinery/holopad/secure,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/capt_office)
+"oy" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/command_hallway)
+"oz" = (
+/obj/structure/railing,
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/chapel)
+"oA" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/rectangles,
+/area/mara17/interior/medium/chapel)
+"oB" = (
+/obj/machinery/status_display/evac/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/hop_office)
+"oC" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hos_office)
+"oD" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/detective_office)
+"oE" = (
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/purple/corner{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
 "oF" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/cable_start,
 /area/mara17/interior/medium)
+"oG" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/machinery/holopad/secure,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/warden_office)
+"oH" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/highcap/five_k/directional/south,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/security_center)
+"oI" = (
+/obj/machinery/power/smes/magical,
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/smes)
+"oJ" = (
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/turf/open/floor/deadspace/heavy,
+/area/mara17/interior/medium/smes)
+"oK" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/smes2)
+"oL" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/smes2)
+"oM" = (
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/detective_office)
+"oN" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Evidence Storage";
+	req_one_access_txt = "1;4"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/evidence_1)
+"oO" = (
+/obj/structure/cable,
+/obj/machinery/power/terminal,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/smes2)
+"oP" = (
+/obj/structure/rack/shelf,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/smes2)
+"oQ" = (
+/obj/structure/cable,
+/obj/machinery/power/smes/magical,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/smes2)
+"oR" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/psychology)
+"oS" = (
+/obj/structure/closet/secure_closet/psychology,
+/obj/item/taperecorder,
+/obj/item/tape/random,
+/obj/item/tape/random,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/psychology)
+"oT" = (
+/obj/structure/sign/ds13/scaf_logo2{
+	pixel_y = 32
+	},
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/command_meeting)
+"oU" = (
+/obj/structure/rack/shelf,
+/obj/item/storage/belt/utility/full/engi,
+/obj/item/storage/belt/utility/full/engi,
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"oV" = (
+/obj/structure/rack/shelf,
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/south,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel_office)
+"oW" = (
+/obj/machinery/power/smes/magical,
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/mining/ore_storage)
+"oX" = (
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/mining/ore_storage)
+"oY" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Evidence Storage #2";
+	req_one_access_txt = "1;4"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/evidence_2)
+"oZ" = (
+/obj/machinery/door/airlock/research{
+	name = "Research and Development Lab";
+	req_one_access_txt = "7"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"pa" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"pb" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/research{
+	name = "Research and Development Lab";
+	req_one_access_txt = "7"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"pc" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/command{
+	name = "Head of Security's Office";
+	req_access_txt = "58"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"pd" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Detective's Office";
+	req_access_txt = "4"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
+"pe" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/command{
+	name = "Research Director's Office";
+	req_access_txt = "30"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_rd)
+"pf" = (
+/obj/machinery/door/airlock{
+	name = "R&D Entrace"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_dept)
+"pg" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock{
+	name = "R&D Entrace"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_dept)
+"ph" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Warden's Office";
+	req_access_txt = "3"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/warden_office)
+"pi" = (
+/obj/machinery/door/airlock{
+	name = "R&D Entrace"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium)
+"pj" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock{
+	name = "R&D Entrace"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium)
+"pk" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/security_center)
+"pl" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/security_center)
 "pm" = (
 /obj/machinery/light/small/directional/north,
 /obj/machinery/computer/apc_control,
@@ -3985,38 +4715,1444 @@
 /obj/machinery/light/warm/directional/north,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/canteen)
+"po" = (
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hop_office)
+"pp" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	name = "Bathroom"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hop_bathroom)
+"pq" = (
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"pr" = (
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hos_office)
+"ps" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hop_quarters)
+"pt" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/bar)
+"pu" = (
+/obj/machinery/door/airlock{
+	name = "Bar"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/bar)
+"pv" = (
+/obj/machinery/door/airlock{
+	name = "Bar"
+	},
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/bar)
 "pw" = (
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
+"px" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/obj/effect/landmark/start/research_director,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"py" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/command{
+	name = "Head of Personnel";
+	req_access_txt = "57"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hop_office)
+"pz" = (
+/obj/structure/rack/shelf,
+/obj/item/stack/sheet/glass/fifty,
+/obj/machinery/airalarm/directional/east,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"pA" = (
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/command_meeting)
+"pB" = (
+/obj/machinery/door/airlock{
+	name = "Unitologist Chapel"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel)
+"pC" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock{
+	name = "Unitologist Chapel"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel)
+"pD" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/detective_office)
+"pE" = (
+/obj/machinery/modular_computer/console/preset/id,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/command_center)
+"pF" = (
+/obj/machinery/computer/crew,
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"pG" = (
+/obj/machinery/computer/security,
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"pH" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/highcap/five_k/directional/north,
+/obj/structure/rack/shelf,
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"pI" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/smes2)
+"pJ" = (
+/obj/machinery/light/small/directional/north,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "brigador";
+	name = "Outpost Lockdown Shutters"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium)
+"pK" = (
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
+"pL" = (
+/obj/structure/chair/office{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"pM" = (
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"pN" = (
+/obj/machinery/light/small/directional/west,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "brigador";
+	name = "Outpost Lockdown Shutters"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium)
+"pO" = (
+/obj/machinery/light/small/directional/east,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "brigador";
+	name = "Outpost Lockdown Shutters"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium)
+"pP" = (
+/obj/machinery/light/small/directional/south,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "brigador";
+	name = "Outpost Lockdown Shutters"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium)
+"pQ" = (
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"pR" = (
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/research_dept)
+"pS" = (
+/obj/structure/chair/office,
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"pT" = (
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/command_hallway)
+"pU" = (
+/obj/machinery/computer/communications{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"pV" = (
+/obj/machinery/modular_computer/console/preset/command{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"pW" = (
+/obj/machinery/computer/station_alert{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"pX" = (
+/obj/machinery/computer/med_data{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
 "pY" = (
 /turf/closed/wall,
 /area/mara17/interior/medium/mining/ore_storage)
+"pZ" = (
+/obj/machinery/computer/warrant{
+	dir = 1
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/command_center)
+"qa" = (
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/security_center)
+"qb" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock{
+	name = "Chapel Office";
+	req_access_txt = "22"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel)
+"qc" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock,
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel_dorm)
+"qd" = (
+/obj/machinery/firealarm/directional/south,
+/obj/effect/turf_decal/siding/wood,
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
+"qe" = (
+/obj/machinery/airalarm/directional/south,
+/obj/effect/turf_decal/siding/wood,
+/obj/structure/table,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
+"qf" = (
+/obj/structure/cable,
+/obj/machinery/light/warm/directional/south,
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
+	},
+/obj/structure/chair{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/research_breakroom)
 "qg" = (
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/medium/armory)
+"qh" = (
+/obj/machinery/door/airlock/medical{
+	name = "Psychology";
+	req_access_txt = "70"
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/psychology)
+"qi" = (
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/perma)
+"qj" = (
+/obj/structure/table/wood,
+/obj/item/candle/infinite,
+/turf/open/floor/deadspace/random/rectangles,
+/area/mara17/interior/medium/chapel)
+"qk" = (
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/command_hallway)
+"ql" = (
+/obj/machinery/button/door/indestructible{
+	color = "red";
+	id = "brigador";
+	name = "Interior Outpost Lockdown";
+	pixel_y = 32;
+	req_access_txt = "19"
+	},
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"qm" = (
+/obj/machinery/button/door/indestructible{
+	color = "cyan";
+	id = "revs_moment";
+	name = "Command Area Lockdown";
+	pixel_y = 32;
+	req_access_txt = "19"
+	},
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"qn" = (
+/obj/structure/table/wood,
+/obj/machinery/button/door/indestructible{
+	id = "command_emergency";
+	name = "Command Office Shutters";
+	pixel_x = -4;
+	pixel_y = -6;
+	req_access_txt = "20"
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/capt_office)
+"qo" = (
+/obj/structure/sign/ds13{
+	pixel_x = 32
+	},
+/obj/item/kirbyplants{
+	icon_state = "plant-24"
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/capt_office)
+"qp" = (
+/obj/structure/table/wood,
+/obj/item/fish_feed{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/obj/item/book/fish_catalog{
+	pixel_x = -7;
+	pixel_y = 5
+	},
+/obj/machinery/airalarm/directional/west,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/capt_office)
+"qq" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "command_emergency";
+	name = "Emergency Command Shutters"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command{
+	name = "Overseer Office";
+	req_access_txt = "20"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/capt_office)
+"qr" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command{
+	name = "Command Center Entrace";
+	req_access_txt = "19"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_center)
+"qs" = (
+/obj/machinery/door/firedoor,
+/obj/effect/landmark/navigate_destination/bridge,
+/obj/machinery/door/airlock/command{
+	name = "Command Center Entrace";
+	req_access_txt = "19"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "revs_moment";
+	name = "Command Lockdown"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_center)
+"qt" = (
+/obj/structure/aquarium/prefilled,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/capt_office)
+"qu" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "command_emergency";
+	name = "Emergency Command Shutters"
+	},
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command{
+	name = "Overseer Office";
+	req_access_txt = "20"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/capt_office)
+"qv" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/obj/machinery/door/airlock/command{
+	name = "Command Center Entrace";
+	req_access_txt = "19"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "revs_moment";
+	name = "Command Lockdown"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_center)
+"qw" = (
+/obj/structure/sign/ds13{
+	pixel_x = 32
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
+"qx" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command{
+	name = "Command Center Entrace";
+	req_access_txt = "19"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_center)
+"qy" = (
+/obj/machinery/light/warm/directional/south,
+/obj/item/kirbyplants{
+	icon_state = "applebush"
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
+"qz" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin{
+	pixel_x = 8
+	},
+/obj/item/pen/fourcolor{
+	pixel_x = 8
+	},
+/obj/item/stamp/captain{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/stamp/denied{
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/capt_office)
+"qA" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/command{
+	name = "Command Meeting Area";
+	req_access_txt = "19"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/command_meeting)
+"qB" = (
+/obj/structure/bed,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel_dorm)
+"qC" = (
+/obj/structure/closet/secure_closet/personal/cabinet,
+/obj/item/clothing/under/rank/civilian/ds_clergy,
+/obj/item/clothing/head/hooded/clergyhood,
+/obj/item/clothing/suit/hooded/chaplainsuit/clergy,
+/obj/item/clothing/shoes/laceup,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/suit/hooded/wintercoat/custom,
+/obj/item/clothing/gloves/fingerless,
+/obj/item/clothing/mask/balaclava,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel_dorm)
+"qD" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/chapel_office)
+"qE" = (
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 8
+	},
+/obj/item/kirbyplants{
+	icon_state = "plant-21"
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"qF" = (
+/obj/structure/cable,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/chapel_office)
+"qG" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/obj/effect/landmark/start/chaplain,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/chapel_office)
+"qH" = (
+/obj/structure/table/wood,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/chapel_office)
+"qI" = (
+/obj/structure/chair{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/chapel_office)
+"qJ" = (
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/chapel_dorm)
+"qK" = (
+/obj/structure/table/wood,
+/obj/structure/cable,
+/obj/item/flashlight/lamp/green,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/chapel_office)
+"qL" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/chapel_office)
+"qM" = (
+/obj/machinery/light/warm/directional/west,
+/obj/structure/table/reinforced/plastitaniumglass,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/command_meeting)
+"qN" = (
+/obj/machinery/light/warm/directional/east,
+/obj/structure/table/reinforced/plastitaniumglass,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/command_meeting)
+"qO" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/chapel_office)
+"qP" = (
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/chapel_office)
+"qQ" = (
+/obj/structure/closet/secure_closet/hos,
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"qR" = (
+/obj/machinery/photocopier,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/command_meeting)
+"qS" = (
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/obj/structure/table/reinforced/plastitaniumglass,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/command_meeting)
+"qT" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/fax_machine,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/command_meeting)
+"qU" = (
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/chapel_dorm)
+"qV" = (
+/obj/machinery/computer/security/hos{
+	dir = 8
+	},
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"qW" = (
+/obj/structure/closet/secure_closet/evidence,
+/obj/machinery/firealarm/directional/east,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/evidence_1)
+"qX" = (
+/obj/structure/rack/shelf,
+/obj/item/bodybag,
+/obj/item/bodybag,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
+"qY" = (
+/obj/structure/rack/shelf,
+/obj/item/camera,
+/obj/item/camera_film,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/evidence_2)
+"qZ" = (
+/obj/structure/rack/shelf,
+/obj/item/stack/sheet/iron/fifty,
+/obj/machinery/firealarm/directional/east,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"ra" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/purple{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"rb" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/purple{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"rc" = (
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/security_center)
+"rd" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_start{
+	dir = 4
+	},
+/area/mara17/interior/medium/security_center)
 "re" = (
 /turf/closed/wall,
 /area/mara17/interior/medium)
-"rU" = (
+"rf" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable{
+	dir = 4
+	},
+/area/mara17/interior/medium/security_center)
+"rg" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_end{
+	dir = 4
+	},
+/area/mara17/interior/medium/security_center)
+"rh" = (
+/obj/machinery/photocopier,
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
+"ri" = (
+/obj/structure/table,
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/micro_laser,
+/obj/item/stock_parts/micro_laser,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"rj" = (
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/capt_office)
+/area/mara17/interior/medium/detective_office)
+"rk" = (
+/obj/machinery/airalarm/directional/west,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/detective_office)
+"rl" = (
+/obj/structure/bed/dogbed/mcgriff{
+	desc = "A bed for the ST slaughtering beast, sometimes war criminals need some snuggle time.";
+	name = "Princess bed"
+	},
+/obj/effect/turf_decal/siding/red{
+	dir = 4
+	},
+/mob/living/simple_animal/pet/dog/bullterrier{
+	desc = "A dog that has been here since the first expedition on the Mara 17 Moon, famous for mauling to death several ST's on rigs and other employees in maint.";
+	name = "\improper Princess"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/warden_office)
+"rm" = (
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/warden_office)
+"rn" = (
+/obj/structure/table,
+/obj/machinery/cell_charger,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"ro" = (
+/obj/machinery/computer/security{
+	dir = 8
+	},
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/warden_office)
+"rp" = (
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/security_center)
+"rq" = (
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
+"rr" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/red{
+	dir = 4
+	},
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/warden_office)
+"rs" = (
+/obj/machinery/firealarm/directional/west,
+/obj/effect/landmark/start/security_officer,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/security_center)
+"rt" = (
+/obj/structure/cable,
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/warden_office)
+"ru" = (
+/obj/structure/cable,
+/obj/machinery/airalarm/directional/south,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/warden_office)
+"rv" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/security_center)
+"rw" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/security_center)
+"rx" = (
+/obj/machinery/airalarm/directional/west,
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/security_center)
+"ry" = (
+/obj/effect/turf_decal/box,
+/obj/structure/closet/secure_closet/brig{
+	id = "cell_1"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/security_center)
+"rz" = (
+/obj/effect/turf_decal/box,
+/obj/structure/closet/secure_closet/brig{
+	id = "cell_2"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/security_center)
+"rA" = (
+/obj/effect/turf_decal/box,
+/obj/structure/closet/secure_closet/brig,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/security_center)
+"rB" = (
+/obj/effect/decal/cleanable/blood/old{
+	icon_state = "trails_2"
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/security_center)
+"rC" = (
+/obj/effect/landmark/start/security_officer,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/security_center)
+"rD" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_dept)
+"rE" = (
+/obj/structure/cable,
+/obj/machinery/light/warm/directional/east,
+/obj/effect/turf_decal/siding/purple{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"rF" = (
+/obj/machinery/firealarm/directional/east,
+/turf/open/floor/deadspace/random/maint_center,
+/area/mara17/interior/medium/command_hallway)
+"rG" = (
+/obj/machinery/airalarm/directional/north,
+/obj/structure/rack/shelf,
+/obj/item/storage/toolbox/electrical,
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"rH" = (
+/obj/machinery/airalarm/directional/east,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/psychology)
+"rI" = (
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/psychology)
+"rJ" = (
+/obj/structure/cable,
+/obj/machinery/airalarm/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/chapel)
+"rK" = (
+/obj/structure/table/wood,
+/obj/item/food/meat/slab/gondola,
+/obj/item/food/meat/slab/gondola,
+/obj/item/food/meat/rawbacon,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/warden_office)
+"rL" = (
+/obj/machinery/firealarm/directional/east,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/command_meeting)
+"rM" = (
+/obj/structure/rack/shelf,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel_office)
+"rN" = (
+/obj/structure/rack/shelf,
+/obj/machinery/airalarm/directional/south,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/chapel_office)
+"rO" = (
+/obj/effect/turf_decal/siding/purple{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"rP" = (
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 8
+	},
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"rQ" = (
+/obj/structure/table,
+/obj/item/stock_parts/scanning_module,
+/obj/item/stock_parts/scanning_module,
+/obj/item/stock_parts/cell,
+/obj/item/stock_parts/cell,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"rR" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/fax_machine,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"rS" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/stamp/rd,
+/obj/item/stamp/denied,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"rT" = (
+/obj/structure/table/wood,
+/obj/machinery/button/door/indestructible{
+	id = "murdering_civilians";
+	name = "Security Armory Lockdown";
+	req_access_txt = "58"
+	},
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/warden_office)
+"rU" = (
+/obj/machinery/firealarm/directional/north,
+/obj/machinery/photocopier,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/research_rd)
+"rV" = (
+/obj/structure/table,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"rW" = (
+/obj/structure/table,
+/obj/item/wrench{
+	name = "wronche"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"rX" = (
+/obj/machinery/camera/autoname/directional/west,
+/obj/effect/turf_decal/siding/purple{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"rY" = (
+/obj/structure/cable,
+/obj/structure/table,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"rZ" = (
+/obj/structure/table,
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"sa" = (
+/obj/structure/table,
+/obj/item/clothing/glasses/welding,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"sb" = (
+/obj/effect/turf_decal/tile/purple,
+/obj/effect/turf_decal/siding/purple{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
 "sc" = (
 /turf/closed/wall,
 /area/mara17/interior/caves)
+"sd" = (
+/obj/structure/rack/shelf,
+/obj/item/stack/sheet/rglass{
+	amount = 50
+	},
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
+"se" = (
+/obj/structure/cable,
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/clipboard,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"sf" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"sg" = (
+/obj/machinery/light/warm/directional/west,
+/obj/effect/turf_decal/siding/purple{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sh" = (
+/obj/effect/turf_decal/tile/purple/half,
+/obj/machinery/light/warm/directional/south,
+/obj/effect/turf_decal/siding/purple/corner{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"si" = (
+/obj/effect/turf_decal/tile/purple/half,
+/obj/effect/turf_decal/siding/purple{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"sj" = (
+/obj/effect/turf_decal/tile/purple/half,
+/obj/machinery/light/warm/directional/south,
+/obj/effect/turf_decal/siding/purple{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
 "sk" = (
 /turf/closed/wall/rust,
 /area/mara17/interior/caves)
+"sl" = (
+/obj/effect/turf_decal/tile/purple/anticorner,
+/obj/effect/turf_decal/siding/purple/corner{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"sm" = (
+/obj/machinery/light/warm/directional/west,
+/obj/machinery/holopad/secure,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"sn" = (
+/obj/effect/turf_decal/siding{
+	dir = 9
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/research_rd)
+"so" = (
+/obj/effect/turf_decal/siding{
+	dir = 1
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/research_rd)
+"sp" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/left/directional/south{
+	name = "Research Desk";
+	req_one_access_txt = "7"
+	},
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_dept)
+"sq" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/right/directional/south{
+	name = "Research Desk";
+	req_one_access_txt = "7"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_dept)
+"sr" = (
+/obj/machinery/modular_computer/console/preset/research{
+	dir = 4
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"ss" = (
+/obj/structure/cable,
+/obj/machinery/modular_computer/console/preset/id{
+	dir = 8
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
+"st" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding{
+	dir = 8
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/research_rd)
+"su" = (
+/obj/effect/turf_decal/tile/purple/anticorner{
+	dir = 1
+	},
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sv" = (
+/obj/machinery/light/warm/directional/north,
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sw" = (
+/obj/machinery/firealarm/directional/east,
+/obj/effect/turf_decal/tile/purple/anticorner{
+	dir = 4
+	},
+/obj/structure/chair/sofa/corp/right{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sx" = (
+/obj/effect/turf_decal/siding{
+	dir = 10
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/research_rd)
+"sy" = (
+/obj/effect/turf_decal/siding,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/research_rd)
+"sz" = (
+/obj/structure/chair/sofa/left{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/psychology)
+"sA" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/effect/turf_decal/tile/purple/half{
+	dir = 4
+	},
+/obj/structure/chair/sofa/corp{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sB" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/purple{
+	dir = 10
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sC" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/purple,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sD" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/purple{
+	dir = 6
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sE" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/purple/anticorner{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sF" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/purple/half,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sG" = (
+/obj/machinery/airalarm/directional/east,
+/obj/effect/turf_decal/tile/purple/anticorner,
+/obj/structure/chair/sofa/corp/left{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"sH" = (
+/turf/open/floor/holofloor/grass,
+/area/mara17/interior/medium/research_rd)
 "sI" = (
 /turf/open/floor/deadspace/random/maint_center,
 /area/mara17/interior/medium/barracks)
+"sJ" = (
+/mob/living/simple_animal/pet/gondola,
+/turf/open/floor/holofloor/grass,
+/area/mara17/interior/medium/research_rd)
+"sK" = (
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/chapel)
+"sL" = (
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/research_dept)
+"sM" = (
+/obj/structure/bed/dogbed/mcgriff,
+/mob/living/simple_animal/pet/dog/pug/mcgriff,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sN" = (
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sO" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sP" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp/green,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sQ" = (
+/obj/structure/cable,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sR" = (
+/obj/structure/cable,
+/obj/structure/chair/office{
+	dir = 4
+	},
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sS" = (
+/obj/structure/table/wood,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sT" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = -12
+	},
+/obj/structure/mirror/directional/west,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/hop_bathroom)
+"sU" = (
+/obj/structure/closet/cabinet,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sV" = (
+/obj/item/bedsheet/hop,
+/obj/structure/bed,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sW" = (
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sX" = (
+/obj/structure/closet/secure_closet/hop,
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hop_quarters)
+"sY" = (
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
+"sZ" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
+"ta" = (
+/obj/machinery/computer/secure_data{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
+"tb" = (
+/obj/machinery/light/warm/directional/north,
+/obj/item/kirbyplants{
+	icon_state = "plant-04"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hop_office)
+"tc" = (
+/obj/structure/table/wood,
+/obj/machinery/firealarm/directional/west,
+/obj/item/stamp/hop,
+/obj/item/stamp/denied,
+/obj/item/clipboard,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hop_office)
+"td" = (
+/obj/effect/landmark/start/head_of_personnel,
+/obj/structure/chair/office,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
+"te" = (
+/obj/machinery/modular_computer/console/preset/id{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
+"tf" = (
+/obj/machinery/status_display/evac/directional/west,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/hop_office)
+"tg" = (
+/obj/machinery/holopad/secure,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
+"th" = (
+/obj/structure/table/wood,
+/obj/structure/cable,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
+"ti" = (
+/obj/structure/table/wood,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
+"tj" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
+"tk" = (
+/obj/machinery/status_display/evac/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/command_meeting)
+"tl" = (
+/obj/machinery/photocopier,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hop_office)
+"tm" = (
+/obj/structure/sign/ds13{
+	pixel_y = -32
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hop_office)
+"tn" = (
+/obj/item/kirbyplants{
+	icon_state = "plant-03"
+	},
+/obj/structure/sign/ds13{
+	pixel_y = -32
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hop_office)
+"to" = (
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hop_office)
+"tp" = (
+/obj/machinery/airalarm/directional/north,
+/obj/structure/closet/secure_closet/captains/mara,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/capt_quarters)
+"tq" = (
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/deadspace/random/old,
+/area/mara17/interior/medium/command_center)
+"tr" = (
+/obj/structure/chair/sofa/right{
+	dir = 4
+	},
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/psychology)
 "ts" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/barracks)
+"tt" = (
+/obj/structure/table/wood,
+/obj/item/candle/infinite,
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/deadspace/random/rectangles,
+/area/mara17/interior/medium/chapel)
+"tu" = (
+/obj/structure/table/wood,
+/obj/item/candle/infinite,
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/random/rectangles,
+/area/mara17/interior/medium/chapel)
+"tv" = (
+/obj/structure/cable,
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/chapel)
+"tw" = (
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/chapel)
+"tx" = (
+/obj/structure/cable,
+/obj/machinery/firealarm/directional/east,
+/obj/machinery/power/apc/auto_name/directional/south,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/chapel)
+"ty" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/chapel_office)
+"tz" = (
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/chapel_dorm)
+"tA" = (
+/obj/structure/cable,
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/chapel_bathroom)
+"tB" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/chapel_office)
+"tC" = (
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_test)
+"tD" = (
+/obj/structure/table/wood,
+/obj/item/disk/holodisk/ds13/mara_sec,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/hos_quarters)
+"tE" = (
+/obj/structure/table/wood,
+/obj/item/disk/holodisk/ds13/mara_sec,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
+"tF" = (
+/obj/machinery/light/warm/directional/south,
+/obj/structure/closet/cabinet,
+/obj/item/clothing/suit/hooded/wintercoat/captain,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/gloves/fingerless,
+/obj/item/disk/holodisk/ds13/mara_cpt_confidential,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/capt_quarters)
+"tG" = (
+/obj/machinery/door/airlock/security{
+	name = "Permanent Cell";
+	req_access_txt = "63"
+	},
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/perma)
+"tH" = (
+/obj/machinery/light/warm/directional/west,
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/perma)
+"tI" = (
+/obj/machinery/airalarm/directional/east,
+/obj/structure/closet/secure_closet/brig,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/perma)
+"tJ" = (
+/obj/machinery/door/airlock/security{
+	name = "Permanent Cell";
+	req_access_txt = "63"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/perma)
+"tK" = (
+/obj/structure/bed,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/perma)
+"tL" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/perma)
+"tX" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock{
+	name = "Bathroom"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_bathroom)
+"uf" = (
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/hop_office)
 "ut" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/mining/ore_storage)
+"uA" = (
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/psychology)
 "uF" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -4032,36 +6168,97 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/canteen)
-"vv" = (
-/obj/structure/rack/shelf,
-/obj/item/stack/rods/twentyfive,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/medium)
 "vM" = (
 /turf/open/floor/wood,
 /area/mara17/interior/medium/bar)
+"vY" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_test)
+"wf" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/capt_bathroom)
+"wM" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/mara17/interior/medium/capt_office)
+"xg" = (
+/obj/structure/sign/poster/random/directional/west,
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium)
+"xo" = (
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/psychology)
+"yr" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_test)
+"ys" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_breakroom)
 "yu" = (
 /turf/closed/wall/rust,
 /area/mara17/exterior)
+"yF" = (
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/capt_office)
 "yH" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/closet/crate,
 /obj/item/stack/spacecash/c200,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/mining/ore_storage)
+"yJ" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hop_office)
 "yN" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/mara17/interior/medium/canteen)
+"ze" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_breakroom)
+"zz" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/chapel_dorm)
+"zJ" = (
+/obj/effect/turf_decal/siding/purple{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
 "zS" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/caves)
-"An" = (
-/turf/open/floor/wood,
-/area/mara17/interior/medium/capt_office)
 "AO" = (
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium/clothing_storage)
+"AT" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_end,
+/area/mara17/interior/medium/command_hallway)
+"Bv" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/research{
+	name = "Research and Development Lab";
+	req_one_access_txt = "7"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_dept)
 "Bx" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/deadspace/grater,
@@ -4069,27 +6266,49 @@
 "BG" = (
 /turf/open/floor/plating/snowed,
 /area/mara17/exterior)
+"BH" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium)
+"BQ" = (
+/obj/machinery/firealarm/directional/west,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/perma)
+"BY" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/research_rd)
 "Ca" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/workshop)
+"Cd" = (
+/obj/machinery/firealarm/directional/east,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/chapel_dorm)
 "Ci" = (
 /turf/closed/wall/rust,
 /area/mara17/interior/medium/abandoned)
+"Ct" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
 "Cw" = (
 /turf/open/openspace,
 /area/mara17/exterior)
-"CO" = (
-/obj/machinery/holopad,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium/capt_office)
+"Cy" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/evidence_2)
+"Da" = (
+/obj/machinery/status_display/evac/directional/west,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/command_meeting)
 "Db" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/hydrophonics)
-"Df" = (
-/obj/structure/curtain/bounty,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium)
 "Di" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/deadspace/grater,
@@ -4107,28 +6326,40 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/security_center)
+"ET" = (
+/obj/machinery/light/warm/directional/west,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/research_dept)
 "FD" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/hydrophonics)
+"FK" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/perma)
 "Gm" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/security_center)
-"Hb" = (
-/obj/machinery/holopad,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+"Gx" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
+"GQ" = (
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
 "Hd" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
 "Hq" = (
 /turf/open/floor/deadspace/cable_end,
 /area/mara17/interior/medium/mining/ore_storage)
-"HU" = (
-/turf/open/floor/deadspace/cable{
-	dir = 4
-	},
-/area/mara17/interior/medium)
+"Hr" = (
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/chapel_dorm)
 "Ib" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/deadspace/mono,
@@ -4136,16 +6367,24 @@
 "IR" = (
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium)
+"IT" = (
+/obj/machinery/holopad/secure,
+/turf/open/floor/carpet,
+/area/mara17/interior/medium/detective_office)
+"Jl" = (
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/perma)
 "JH" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/ore_box,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/mining/ore_storage)
+"JW" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/warden_office)
 "Kv" = (
 /turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium)
-"Kz" = (
-/turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/medium)
 "KT" = (
 /obj/effect/decal/cleanable/blood/old{
@@ -4153,53 +6392,100 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/security_center)
+"KZ" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/psychology)
 "Lq" = (
 /turf/open/openspace,
 /area/mara17/interior/caves)
+"LA" = (
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hos_office)
 "Mq" = (
 /turf/closed/mineral/snowmountain,
 /area/mara17/interior/caves)
+"MB" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/purple{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_lab)
+"MS" = (
+/turf/closed/wall,
+/area/mara17/interior/medium/chapel)
 "Ne" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/mara17/interior/medium/bar)
+"Nz" = (
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/mara17/interior/medium/chapel_office)
+"NK" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/hos_bathroom)
 "NL" = (
 /turf/open/floor/deadspace/random/maint_center,
 /area/mara17/interior/medium/workshop)
-"NP" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = -14
-	},
-/obj/structure/mirror/directional/west,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/capt_bathroom)
+"NS" = (
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hos_office)
+"NX" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/evidence_2)
 "Of" = (
 /obj/structure/stairs/north,
 /turf/open/floor/deadspace/mono,
 /area/mara17/exterior)
-"Ou" = (
-/turf/open/floor/deadspace/cable_end,
-/area/mara17/interior/medium)
+"ON" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_rd)
 "Ph" = (
 /obj/effect/spawner/random/trash/food_packaging,
 /obj/machinery/light/warm/directional/north,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/canteen)
+"Pl" = (
+/obj/structure/cable,
+/turf/open/floor/carpet/red,
+/area/mara17/interior/medium/capt_quarters)
+"Pp" = (
+/obj/machinery/light/warm/directional/south,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hop_office)
 "Pu" = (
 /turf/closed/wall,
 /area/mara17/interior/medium/abandoned)
-"PB" = (
-/turf/open/floor/deadspace/cable_start,
-/area/mara17/interior/medium)
+"Px" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
 "PV" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
+"Qw" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/hop_bathroom)
 "Qx" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/sec_barracks)
+"QK" = (
+/turf/open/floor/carpet/black,
+/area/mara17/interior/medium/hos_office)
+"Rv" = (
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_breakroom)
 "RE" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/watchtower)
@@ -4214,11 +6500,30 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/smes)
+"RO" = (
+/obj/machinery/computer/security{
+	dir = 8
+	},
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/detective_office)
+"RU" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable_start,
+/area/mara17/interior/medium/command_hallway)
+"Sx" = (
+/obj/structure/rack/shelf,
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/command_center)
 "Sz" = (
 /turf/open/floor/deadspace/cable_end{
 	dir = 4
 	},
 /area/mara17/interior/medium/barracks)
+"SB" = (
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/medium/warden_office)
 "SG" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/exterior)
@@ -4228,46 +6533,104 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/caves)
+"SJ" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/hop_office)
+"SP" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/chapel_bathroom)
 "Tc" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/mining/ore_storage)
+"Ti" = (
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/mara17/interior/medium/research_dept)
+"Tp" = (
+/obj/structure/table/wood,
+/obj/machinery/fax_machine,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/capt_office)
+"Tt" = (
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/hop_bathroom)
 "Tz" = (
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium/smes)
+"TJ" = (
+/obj/machinery/light/warm/directional/east,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/psychology)
 "TX" = (
 /turf/closed/wall/rust,
 /area/mara17/interior/medium/mining/ore_storage)
-"Ul" = (
-/turf/open/floor/deadspace/cable,
-/area/mara17/interior/medium)
-"UI" = (
-/obj/effect/spawner/structure/window/reinforced,
+"Uz" = (
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/command_meeting)
+"Vb" = (
 /turf/open/floor/deadspace/mono,
-/area/mara17/interior/medium/bar)
-"UJ" = (
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/medium)
+/area/mara17/interior/medium/evidence_2)
 "Wc" = (
 /obj/machinery/light/warm/directional/south,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/canteen)
+"Wm" = (
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/medium/research_test)
+"WM" = (
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/hos_office)
 "WW" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
+"Xe" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/command_meeting)
+"Xg" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/perma)
+"Xn" = (
+/obj/machinery/light/warm/directional/north,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/command_meeting)
 "Yv" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
+"YC" = (
+/turf/open/openspace,
+/area/mara17/interior/medium)
 "YE" = (
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/medium/sec_barracks)
+"YR" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/medium/hos_office)
 "YY" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/workshop)
+"Zc" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/warden_office)
+"Zq" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/medium/warden_office)
 "Zy" = (
 /turf/closed/wall,
 /area/mara17/exterior)
+"ZB" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/medium/security_center)
 
 (1,1,1) = {"
 aa
@@ -4890,22 +7253,22 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
+am
+am
+am
+am
+am
+am
 am
 Mq
 Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
 Mq
 Mq
 Mq
@@ -5031,25 +7394,25 @@ Mq
 Mq
 Mq
 Mq
-Mq
 am
 am
 am
 am
 am
+am
+am
 Mq
 Mq
 Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+kc
+wf
+re
+am
+am
 Mq
 Mq
 Mq
@@ -5179,24 +7542,24 @@ am
 am
 am
 am
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+re
+kd
+ks
+re
 am
 am
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+am
 Mq
 Mq
 am
 am
-am
-Mq
-Mq
-Mq
-Mq
-Mq
 Mq
 Mq
 Mq
@@ -5314,8 +7677,6 @@ Mq
 Mq
 Mq
 Mq
-Mq
-am
 am
 am
 am
@@ -5329,14 +7690,16 @@ Mq
 Mq
 Mq
 Mq
-Mq
+re
+re
+re
+kt
+re
 am
 am
 am
 am
 am
-Mq
-Mq
 am
 am
 Mq
@@ -5455,26 +7818,6 @@ Mq
 Mq
 Mq
 Mq
-Mq
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
 am
 am
 am
@@ -5482,7 +7825,27 @@ am
 am
 am
 Mq
+am
 Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+re
+jS
+ke
+ku
+re
+am
+am
+am
+am
+am
+am
+am
+am
+am
 Mq
 Mq
 Mq
@@ -5597,35 +7960,35 @@ Mq
 Mq
 Mq
 Mq
-am
-am
-am
-am
-am
-am
 Mq
 am
 am
-Mq
 am
 am
 Mq
 Mq
 Mq
 Mq
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
 Mq
+Mq
+re
+re
+re
+re
+jT
+kf
+tF
+re
+am
+am
+am
+am
+am
+am
+am
+am
+am
+am
 Mq
 Mq
 Mq
@@ -5742,22 +8105,22 @@ Mq
 Mq
 am
 am
-am
-am
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 Mq
 Mq
 Mq
 Mq
 am
-am
-am
-am
+re
+re
+re
+re
+qp
+qt
+re
+tp
+Pl
+kw
+re
 am
 am
 am
@@ -5882,24 +8245,24 @@ Mq
 Mq
 Mq
 Mq
-am
-am
 Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
 Mq
 Mq
 Mq
 Mq
 am
-Mq
-Mq
 am
+re
+gF
+hN
+ja
+yF
+yF
+re
+re
+ki
+re
+re
 am
 am
 am
@@ -6028,20 +8391,20 @@ Mq
 Mq
 Mq
 Mq
-Mq
 am
 am
 am
-am
-am
-am
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
+re
+gH
+ir
+yF
+ox
+yF
+jN
+jV
+kj
+re
+re
 am
 am
 am
@@ -6173,6 +8536,19 @@ Mq
 am
 am
 am
+re
+he
+iA
+jb
+jl
+yF
+wM
+jJ
+kk
+re
+Mq
+am
+am
 am
 am
 am
@@ -6181,19 +8557,6 @@ am
 Mq
 Mq
 Mq
-Mq
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
 am
 am
 am
@@ -6311,28 +8674,28 @@ Mq
 Mq
 Mq
 Mq
+am
+am
+am
+am
+re
+la
+iB
+qn
+jm
+jH
+wM
+jJ
+qy
+re
 Mq
 am
-am
-am
-am
-am
-am
-am
-am
 Mq
 Mq
 Mq
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
@@ -6457,18 +8820,18 @@ am
 am
 am
 am
-am
-am
-am
-am
-am
+re
+hx
+yF
+yF
+jn
+jI
+jO
+jJ
+qz
+re
 Mq
 Mq
-Mq
-am
-am
-am
-am
 Mq
 Mq
 Mq
@@ -6586,23 +8949,10 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-am
-am
+re
+re
+re
+re
 Mq
 Mq
 Mq
@@ -6610,13 +8960,26 @@ Mq
 am
 am
 am
+am
+am
+re
+re
+iF
+qo
+wM
+jJ
+qw
+Tp
+re
+re
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
+re
 Mq
 Mq
 Mq
@@ -6728,38 +9091,38 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-am
+re
+Qw
+sT
+re
+re
+re
+re
+re
+re
+re
+re
 am
 am
 Mq
+re
+re
+re
+js
+jJ
+re
+re
+re
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+Da
+qM
+Xe
+re
+re
 Mq
 Mq
 Mq
@@ -6870,40 +9233,40 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
-am
-am
+re
+cy
+Tt
+re
+re
+nY
+tc
+tf
+tl
+nb
+re
 am
 am
 Mq
 Mq
 Mq
+re
+jC
+jK
+re
 Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+Uz
+pA
+kx
+pA
+pA
+re
+re
+am
 Mq
 am
 am
@@ -7011,41 +9374,41 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-am
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+pp
+re
+re
+re
+po
+gw
+gw
+gw
+Pp
 re
 re
 re
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
+re
+re
+re
+qq
+qu
+re
+re
+re
+re
+re
+re
+mp
+pA
+mr
+mr
+mr
+pA
+mu
+re
+re
 am
 am
 am
@@ -7153,41 +9516,41 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 re
-NP
-fa
+sM
+sQ
+mN
+sV
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
+sY
+uf
+tg
+gw
+tm
+re
+ko
+ko
+ko
+ko
+ko
+ko
+ko
+oy
+oy
+ko
+ko
+ko
+re
+Xn
+pA
+mq
+kz
+kz
+kz
+mt
+pA
+qR
+re
 am
 am
 am
@@ -7295,41 +9658,41 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-am
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 re
-lk
-lt
+sN
+sQ
+mN
+sW
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
+sZ
+ot
+th
+yJ
+yJ
+py
+oy
+oy
+oy
+AT
+nT
+nT
+nT
+nT
+RU
+oy
+oy
+oy
+qA
+fM
+fM
+mq
+kz
+kx
+kz
+mt
+kx
+qS
+re
 am
 am
 Mq
@@ -7437,41 +9800,41 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 re
+sO
+sR
+sQ
+sQ
+ps
+ot
+td
+ti
+gw
+tn
 re
+ko
+pT
+rF
+ko
+qk
+pT
+ko
+ko
+oy
+ko
+pT
+ko
 re
-lu
+Xn
+fM
+mq
+kz
+kz
+kz
+mt
+pA
+qT
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
 am
 am
 Mq
@@ -7579,41 +9942,41 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 re
-ja
-ll
-lv
+sP
+sS
+sU
+sX
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
+ta
+te
+tj
+gw
+SJ
+re
+re
+re
+re
+re
+re
+re
+qr
+qr
+qx
+re
+re
+re
+re
+re
+oT
+pA
+ms
+ms
+ms
+pA
+mu
+re
+re
 am
 am
 Mq
@@ -7721,40 +10084,40 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 re
 re
 re
 re
-jb
-lm
-jo
+re
+re
+tb
+SJ
+oB
+SJ
+to
 re
 Mq
 Mq
+re
+pE
+pQ
+iZ
+iZ
+iZ
+op
+pQ
+kp
+re
 Mq
-Mq
-Mq
-Mq
-am
-am
-am
+re
+re
+rL
+pA
+kx
+pA
+pA
+re
+re
 am
 am
 am
@@ -7868,34 +10231,34 @@ Mq
 Mq
 Mq
 Mq
-am
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 re
 re
 re
 re
-js
-iW
 re
-kQ
-ln
-jl
+re
 re
 Mq
 Mq
+re
+pF
+pL
+op
+op
+op
+op
+pS
+pU
+re
 Mq
 Mq
-Mq
-am
-am
-am
+re
+re
+tk
+qN
+Xe
+re
+re
 am
 am
 am
@@ -8020,23 +10383,23 @@ Mq
 Mq
 Mq
 re
-fZ
-gx
-gD
-rU
-rU
-re
-re
-lo
-re
+pG
+iZ
+ou
+jZ
+jE
+kn
+iZ
+pV
 re
 Mq
 Mq
 Mq
-Mq
-am
-am
-am
+re
+re
+re
+re
+re
 am
 am
 am
@@ -8162,14 +10525,13 @@ Mq
 Mq
 Mq
 re
-jQ
-jT
-rU
-CO
-rU
-iZ
-jd
-lp
+re
+ql
+ou
+jE
+jE
+jE
+tq
 re
 re
 Mq
@@ -8177,11 +10539,12 @@ Mq
 Mq
 Mq
 Mq
-am
-am
-am
-am
-am
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
@@ -8304,25 +10667,25 @@ Mq
 Mq
 Mq
 re
-jR
-jU
-gF
-he
-rU
-hN
-fr
-lq
+re
+qm
+ou
+kb
+jE
+le
+tq
+re
 re
 Mq
 Mq
 Mq
 Mq
 Mq
-am
-am
-am
-am
-am
+Mq
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
@@ -8446,25 +10809,25 @@ Mq
 Mq
 Mq
 re
-jS
-jV
-gH
-hx
-lB
-hN
-fr
-ji
+rG
+iZ
+ou
+jE
+jE
+jE
+iZ
+pW
 re
 Mq
 Mq
 Mq
 Mq
 Mq
-am
-am
-am
-am
-am
+Mq
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
@@ -8547,10 +10910,10 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
 Mq
 Mq
 Mq
@@ -8588,14 +10951,14 @@ re
 re
 re
 re
-gw
-rU
-rU
-hF
-kY
-le
-fr
-jj
+pH
+op
+op
+op
+op
+iZ
+pS
+pX
 re
 Mq
 Mq
@@ -8689,10 +11052,10 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
+re
+kr
+mD
+re
 Mq
 Mq
 Mq
@@ -8730,14 +11093,14 @@ dy
 dy
 re
 re
-re
-lM
-rU
-hN
-fr
-An
-je
-re
+Sx
+pM
+iZ
+iZ
+op
+iZ
+pM
+pZ
 re
 Mq
 Mq
@@ -8831,18 +11194,18 @@ Mq
 Mq
 Mq
 Mq
+re
+NK
+gd
+re
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
+re
+re
+re
 Mq
 Mq
 Mq
@@ -8871,16 +11234,16 @@ Db
 Db
 Db
 re
-ab
 re
 re
 re
-ir
-fr
+re
+jE
+ou
 re
 re
 re
-Mq
+re
 Mq
 Mq
 Mq
@@ -8907,8 +11270,8 @@ eH
 ac
 an
 ac
-an
 eK
+ao
 bd
 bd
 bp
@@ -8973,19 +11336,19 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+tX
+re
+re
+re
+re
+my
+mG
+mM
+jY
+rh
+re
+re
 Mq
 Mq
 Mq
@@ -9013,12 +11376,12 @@ aA
 aA
 aA
 re
-ab
-ab
-ab
+oK
+oK
+oP
 re
-iA
-lN
+jE
+ou
 re
 Mq
 Mq
@@ -9047,9 +11410,9 @@ iL
 lf
 ap
 ac
-Mq
-Mq
-an
+ao
+ao
+ao
 ao
 dL
 bd
@@ -9115,19 +11478,19 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+kg
+dR
+jd
+re
+qQ
+LA
+WM
+QK
+ni
+LA
+ob
+re
 Mq
 Mq
 Mq
@@ -9143,24 +11506,24 @@ re
 cS
 aA
 aA
+nc
+nc
+nc
 aA
 aA
-aA
-aA
-aA
-aA
-aA
-aA
+nc
+nc
+nc
 aA
 aA
 hY
 re
-ab
-ab
-ab
+oL
+oO
+oQ
 re
-iB
-kZ
+jE
+ou
 re
 Mq
 Mq
@@ -9189,9 +11552,9 @@ iN
 lf
 ap
 ac
-Mq
-Mq
-ac
+ao
+ao
+ao
 ao
 dL
 bd
@@ -9255,21 +11618,21 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+dC
+eU
+tD
+re
+NS
+LA
+oo
+QK
+QK
+LA
+LA
+re
 Mq
 Mq
 Mq
@@ -9298,11 +11661,11 @@ aA
 ij
 re
 re
+pI
 re
 re
-re
-jm
-la
+qs
+qv
 re
 re
 re
@@ -9331,10 +11694,10 @@ ag
 lX
 eH
 ac
-an
-ac
-an
 eK
+ao
+ao
+ao
 dL
 dL
 bp
@@ -9397,21 +11760,21 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+ay
+ng
+kg
+eV
+kg
+jL
+YR
+na
+nU
+QK
+nE
+LA
+LA
+re
 Mq
 Mq
 Mq
@@ -9440,7 +11803,7 @@ aA
 ik
 re
 re
-Ee
+Yv
 Di
 fh
 Hd
@@ -9539,21 +11902,21 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
+re
+re
+re
+qV
+mz
+fa
+QK
+QK
+LA
+ob
+re
 Mq
 Mq
 Mq
@@ -9582,7 +11945,7 @@ ii
 il
 re
 hT
-Hd
+Yv
 Hd
 Hd
 Hd
@@ -9687,15 +12050,15 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+oC
+YR
+YR
+LA
+pr
+re
+re
 Mq
 Mq
 Mq
@@ -9724,7 +12087,7 @@ re
 re
 re
 fq
-Hd
+Yv
 Hd
 Hd
 Hd
@@ -9748,8 +12111,8 @@ am
 Mq
 Mq
 pY
-lT
-ut
+oW
+oX
 JH
 JH
 JH
@@ -9830,17 +12193,17 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+pa
+pc
+pa
+re
+re
+re
+re
+re
+re
 re
 re
 re
@@ -9866,7 +12229,7 @@ Di
 Hd
 Hd
 Hd
-Hd
+Yv
 Hd
 Hd
 Hd
@@ -9968,25 +12331,25 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+az
+az
+az
+az
+az
+af
+ZB
+ZB
+tG
+tH
+BQ
+FK
+bI
+tK
 re
 aK
 af
-aF
+ry
 Gm
 dF
 bH
@@ -10110,25 +12473,25 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+fT
+jF
+nt
+lp
+az
+rc
+ZB
+af
+FK
+Xg
+Jl
+tJ
+bI
+tL
 re
-dC
-af
-af
+rv
+rw
+rw
 cf
 dF
 bH
@@ -10252,21 +12615,21 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+jM
+fg
+fg
+fg
+mA
+af
+rd
+af
+FK
+qi
+tI
+FK
+bI
+bI
 re
 af
 af
@@ -10394,21 +12757,21 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+gn
+mQ
+mQ
+mQ
+mB
+ZB
+rf
+af
+re
+re
+re
+re
+re
+re
 re
 re
 re
@@ -10440,7 +12803,7 @@ Hd
 Hd
 Hd
 PV
-Hd
+BH
 az
 az
 az
@@ -10536,25 +12899,25 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+gx
+jG
+nw
+lt
+az
+af
+rf
+mT
+re
+re
+re
+nI
+rq
+nM
 re
 aK
 af
-cb
+rz
 Gm
 dF
 bH
@@ -10579,8 +12942,8 @@ re
 re
 re
 re
-eU
-eV
+pJ
+pP
 re
 re
 re
@@ -10678,25 +13041,25 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+az
+az
+az
+az
+az
+af
+rg
+nO
 re
-dC
-af
-af
+rj
+rk
+je
+je
+je
+re
+rv
+rw
+rw
 ci
 dF
 bH
@@ -10705,8 +13068,8 @@ re
 re
 re
 re
-fT
-fV
+oI
+oJ
 Tz
 hb
 re
@@ -10820,21 +13183,21 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
+re
+re
+rc
+ZB
+af
+Gx
+je
+pD
+nX
+oj
+oj
 re
 af
 af
@@ -10843,8 +13206,8 @@ Gm
 dF
 bH
 ic
-cD
-ce
+rs
+kS
 re
 re
 pm
@@ -10961,22 +13324,22 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+jX
+nj
+mW
+jz
+re
+af
+ZB
+af
+Gx
+je
+pD
+tE
+cD
+oM
 re
 re
 re
@@ -10985,8 +13348,8 @@ re
 ee
 bH
 ic
-af
-gU
+rC
+ce
 re
 re
 dS
@@ -10994,7 +13357,7 @@ Tz
 fV
 Tz
 re
-Hd
+lm
 Yv
 Yv
 mb
@@ -11103,32 +13466,32 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+nh
+ka
+ka
+mX
+mX
+oN
+ZB
+ZB
+af
+Gx
+je
+pD
+Ct
+IT
+oj
 re
 ck
 KT
-bV
+rA
 Gm
 dF
 bJ
 ic
-af
-ce
+rC
+gU
 re
 re
 re
@@ -11245,31 +13608,31 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 re
-dC
+re
+kl
+np
+nV
+qW
+re
 af
-ey
+rd
+ZB
+pd
+oD
+je
+je
+je
+je
+re
+rv
+rw
+rB
 cu
 dF
 bK
 ic
-af
+rC
 ce
 re
 re
@@ -11387,22 +13750,22 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
+re
+re
+re
+af
+rf
+af
+re
+re
+nS
+RO
+oc
+og
 re
 Ej
 af
@@ -11410,9 +13773,9 @@ af
 Gm
 dF
 bH
-id
-re
-re
+ic
+rC
+kS
 re
 re
 re
@@ -11526,25 +13889,25 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
+dP
+km
+mI
+nZ
+qX
+re
+rc
+rf
+af
+bD
+re
+re
+re
+re
+re
 re
 re
 re
@@ -11552,9 +13915,9 @@ re
 re
 eT
 bH
-cy
+id
 re
-Mq
+re
 re
 ct
 dT
@@ -11668,33 +14031,33 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 re
-vh
-ma
-vh
+kD
+aF
+Vb
+pK
+pK
+pK
+pK
+pK
+re
+af
+rg
+af
+bD
+bD
+bD
+rp
+bD
+mZ
+mH
+rp
+rx
+bD
+pk
+bH
+bH
+oH
 re
 Mq
 re
@@ -11706,7 +14069,7 @@ AO
 gk
 Hd
 Yv
-Hd
+lo
 re
 Ph
 cV
@@ -11810,33 +14173,33 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 re
-fk
-hu
-fN
+mJ
+pK
+Vb
+pK
+NX
+NX
+Cy
+lM
+oY
+ZB
+ZB
+ZB
+nQ
+nR
+jR
+jR
+jR
+jR
+jR
+jR
+ok
+nQ
+pl
+bH
+ma
+vh
 re
 Mq
 re
@@ -11952,33 +14315,33 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
 re
+mL
+bV
+Vb
+pK
+pK
+pK
+lM
+pK
 re
+af
+af
+af
+bD
+bD
+bD
+bD
+bD
+bD
+nQ
+bD
+bD
+bD
 re
-re
+dk
+fk
+fN
 re
 Mq
 re
@@ -12094,34 +14457,34 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
+ey
+lk
+nf
+ov
+qY
+re
+qa
+rw
+rw
+bD
+re
+re
+re
+Zc
+Zc
+ph
+re
+re
+re
+re
+re
+re
+re
+re
 Mq
 re
 cx
@@ -12239,27 +14602,27 @@ Mq
 Mq
 Mq
 Mq
+re
+re
+re
+re
+re
+re
+re
+nA
+af
+nA
+re
+re
+rK
+Zq
+Zq
+Zq
+JW
+re
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
 Mq
 Mq
 Mq
@@ -12274,7 +14637,7 @@ RF
 iH
 Yv
 Yv
-Hd
+lo
 re
 pn
 do
@@ -12387,18 +14750,18 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
+re
+re
+rl
+oh
+oh
+oh
+rr
+re
 Mq
 Mq
 Mq
@@ -12534,19 +14897,19 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+rm
+SB
+rT
+nJ
+rt
+re
 Mq
 re
 re
 re
 re
-fM
+ol
 re
 re
 re
@@ -12676,17 +15039,17 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+oG
+nW
+od
+nW
+ru
+re
 Mq
 re
 bb
-bM
+fK
 fL
 fL
 fO
@@ -12697,7 +15060,7 @@ ga
 gb
 gW
 hm
-UI
+pt
 Hd
 Yv
 iw
@@ -12818,13 +15181,13 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+nH
+SB
+SB
+SB
+SB
+re
 Mq
 re
 bA
@@ -12839,18 +15202,18 @@ fK
 fK
 fX
 vM
-UI
+pt
 Hd
 Yv
 pw
 re
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+sz
+tr
+lB
+uA
+uA
 re
 lO
 aw
@@ -12960,13 +15323,13 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+oa
+oe
+ro
+oi
+re
 Mq
 re
 ca
@@ -12981,18 +15344,18 @@ vM
 vM
 vM
 fK
-gm
+pu
 Hd
 Yv
 Hd
 Hd
+Hd
 re
-re
-Mq
-Mq
-Mq
-Mq
-Mq
+lB
+lB
+lB
+oR
+uA
 re
 ex
 aw
@@ -13103,12 +15466,12 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
+re
+re
 Mq
 re
 dl
@@ -13123,18 +15486,18 @@ Ne
 gS
 hf
 hp
-iX
+pv
+ln
 Yv
 Yv
 Yv
 Yv
-Yv
-re
-Mq
-Mq
-Mq
-Mq
-Mq
+qh
+KZ
+KZ
+oq
+os
+ow
 re
 lc
 lj
@@ -13273,10 +15636,10 @@ Hd
 Yv
 re
 re
-Mq
-Mq
-Mq
-Mq
+xo
+rH
+TJ
+rI
 re
 gB
 hr
@@ -13418,7 +15781,7 @@ re
 re
 re
 re
-Mq
+oS
 re
 re
 re
@@ -13561,7 +15924,7 @@ in
 gr
 re
 re
-Mq
+re
 Mq
 Mq
 Mq
@@ -13987,17 +16350,17 @@ IR
 IR
 hy
 re
+re
+re
+re
+re
+re
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
 Mq
 Mq
 Mq
@@ -14129,18 +16492,18 @@ re
 re
 re
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+qj
+qj
+qj
+re
+re
+re
+re
+qB
+tz
+re
+re
 Mq
 Mq
 Mq
@@ -14227,11 +16590,6 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-re
 re
 re
 re
@@ -14239,10 +16597,6 @@ re
 re
 re
 Mq
-Mq
-re
-re
-re
 re
 re
 re
@@ -14252,9 +16606,18 @@ Mq
 Mq
 Mq
 Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
 re
-eU
-eV
+pJ
+pP
 re
 Mq
 Mq
@@ -14268,21 +16631,21 @@ Hd
 kM
 re
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
+qj
+qj
+tt
+lq
+lq
+lq
+lq
+sK
+lu
+lu
+re
+qU
+Hr
+qJ
+re
 Mq
 Mq
 Mq
@@ -14369,28 +16732,28 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
 re
-re
-kn
-kp
-Hd
-iF
-ku
-re
+fZ
+fZ
+fZ
+fZ
 re
 Mq
 re
-Hd
-Hd
-kr
-UJ
-kz
-kB
+nN
+sm
+sr
 re
-re
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 re
@@ -14410,21 +16773,21 @@ Hd
 Yv
 gR
 re
+lu
+lv
+lu
+lv
+lu
+lv
+lu
+bm
+lu
+lu
 re
+qC
+Cd
+zz
 re
-re
-re
-re
-re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
 Mq
 Mq
 Mq
@@ -14510,30 +16873,30 @@ Mq
 Mq
 Mq
 Mq
+re
+re
+lT
+mK
+no
+nv
+re
+re
+re
+ab
+ab
+ab
+re
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
 Mq
 re
-kj
-Hd
-Hd
-Hd
-Hd
-ko
-vv
 re
-Mq
 re
-Hd
-Hd
-re
-UJ
-UJ
-kf
-kD
-re
-Mq
 re
 re
 eX
@@ -14550,25 +16913,25 @@ Hd
 Hd
 Hd
 Yv
-Hd
+lo
 re
-dm
-dm
-gZ
-dm
-dm
+lu
+ml
+lu
+ml
+lu
+ml
+mw
+lN
+lN
+mn
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-Mq
-Mq
+re
+re
+qc
+re
+re
+re
 am
 am
 am
@@ -14652,34 +17015,34 @@ Mq
 Mq
 Mq
 Mq
+re
+bQ
+Rv
+jo
+nx
+qd
+re
+rR
+ab
+ab
+px
+ab
+re
+re
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
 Mq
 re
-kk
-Hd
-ko
-Hd
-Hd
-Hd
-vv
-re
-Mq
-re
+YC
+YC
+Kv
 Hd
 Hd
-re
-UJ
-UJ
-UJ
-kD
-re
-Mq
-re
-fg
-Hd
-Hd
+Yv
 Yv
 Yv
 Yv
@@ -14692,25 +17055,25 @@ Yv
 Yv
 kJ
 Yv
-Yv
-jf
-kS
-kS
-kS
-kS
-ld
+Hd
+pB
+lu
+mv
+lu
+mv
+lu
+mv
+mw
+bm
+bm
+bm
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-Mq
-Mq
+jP
+jP
+Nz
+qO
+mC
+re
 am
 am
 am
@@ -14794,34 +17157,34 @@ Mq
 Mq
 Mq
 Mq
+re
+bS
+Rv
+jo
+ny
+qe
+re
+rS
+ON
+se
+mO
+ss
+GQ
+re
+re
+re
+re
 Mq
 Mq
 Mq
 Mq
 re
-re
-re
-re
-re
-kr
-kr
-kr
-re
-re
-re
+YC
+YC
+Kv
 Hd
 Hd
-re
-bm
-kA
-kC
-re
-re
-Mq
-re
-gT
-Hd
-Hd
+Yv
 Hd
 gY
 Hd
@@ -14834,25 +17197,25 @@ Hd
 Yv
 Hd
 Yv
-gn
+Yv
+pC
+or
+or
+or
+or
+or
+or
+oz
+mx
+bm
+tw
 re
-ay
-ay
-ay
-ay
-ay
+jP
+qG
+Nz
+qO
+mC
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-Mq
-Mq
-Mq
 Mq
 am
 am
@@ -14936,34 +17299,34 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+ys
+mS
+nB
+qf
+re
+on
+ab
+sf
+sn
+st
+sx
+hu
+sH
+sJ
+re
 Mq
 Mq
 Mq
 Mq
 re
-Hd
-Hd
-Hd
-re
-Hd
-Hd
-ko
-Hd
 re
 re
 re
-re
-re
-Mq
-Mq
-re
 Hd
 Hd
-Hd
+Yv
 Hd
 re
 re
@@ -14977,24 +17340,24 @@ Yv
 Hd
 Yv
 Hd
+pB
+lu
+lv
+lu
+lv
+lu
+lv
+oz
+bm
+bm
+bm
 re
-io
+qD
+qH
+qK
+tB
 re
-io
 re
-io
-re
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-Mq
-Mq
-Mq
 Mq
 am
 am
@@ -15079,6 +17442,23 @@ Mq
 Mq
 Mq
 Mq
+re
+mP
+nl
+Rv
+bP
+re
+rU
+pq
+ab
+so
+BY
+sy
+hu
+sH
+sH
+re
+Mq
 Mq
 Mq
 Mq
@@ -15086,27 +17466,10 @@ Mq
 Mq
 re
 re
-re
-Hd
-Hd
-Hd
-Hd
-Hd
-Hd
-Hd
-Hd
-re
-Mq
-Mq
-Mq
-Mq
-Mq
-re
-re
-Hd
-Hd
-Hd
-Hd
+Yv
+Yv
+Yv
+ld
 re
 cK
 cK
@@ -15120,23 +17483,23 @@ Hd
 Yv
 re
 re
-ip
+lu
+ml
+lu
+ml
+lu
+ml
+oz
+mm
+mm
+mo
 re
-ip
+ty
+qI
+qL
+qP
+rM
 re
-ip
-re
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-Mq
-Mq
-Mq
 Mq
 am
 am
@@ -15221,23 +17584,23 @@ Mq
 Mq
 Mq
 Mq
+re
+re
+ze
+jD
+jQ
+re
+re
+re
+re
+hu
+pe
+hu
+re
+re
+re
+re
 Mq
-Mq
-Mq
-re
-re
-re
-bD
-re
-Hd
-jE
-Hd
-re
-re
-re
-re
-re
-re
 Mq
 Mq
 Mq
@@ -15245,7 +17608,7 @@ Mq
 re
 re
 WW
-Hd
+Yv
 Hd
 Hd
 re
@@ -15262,23 +17625,23 @@ Hd
 Yv
 re
 re
+lu
+mv
+lu
+mv
+lu
+mv
+or
+bm
+lu
+or
+qb
+qF
+qF
+qF
+qF
+oV
 re
-re
-re
-re
-re
-re
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-Mq
-Mq
-Mq
 Mq
 am
 am
@@ -15364,30 +17727,30 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
 re
-jC
-Hd
-Hd
-re
-WW
-HU
-Hd
-re
-kw
-jY
-jG
-re
+mU
+rO
+ra
+rO
+rO
+rX
+sg
+rO
+ra
+ra
+sB
 re
 Mq
 Mq
 Mq
+Mq
+Mq
+Mq
 re
 re
 Hd
 Hd
-Hd
+Yv
 Hd
 re
 re
@@ -15403,24 +17766,24 @@ Yv
 Hd
 kN
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-Mq
-Mq
-Mq
+MS
+qj
+qj
+tu
+lq
+lq
+lq
+oA
+tv
+rJ
+tx
+re
+iW
+qF
+iW
+iW
+rN
+re
 Mq
 Mq
 Mq
@@ -15506,30 +17869,30 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
 re
-jD
-ko
-Hd
-re
-Hd
-HU
-Hd
-re
-Kz
-Hd
-Kz
-Kz
+nn
+fr
+Ti
+fr
+fr
+fr
+fr
+fr
+fr
+fr
+sC
 re
 Mq
 Mq
+Mq
+Mq
+Mq
 re
 re
 Hd
-Hd
-Hd
-Hd
+Yv
+Yv
+Yv
 Hd
 fj
 IR
@@ -15545,24 +17908,24 @@ Yv
 Hd
 Yv
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-am
-am
-am
-am
-am
-am
-Mq
-Mq
-Mq
+re
+re
+re
+re
+re
+qj
+qj
+qj
+re
+re
+re
+re
+re
+gm
+re
+re
+re
+re
 Mq
 am
 Mq
@@ -15648,28 +18011,28 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
 re
-bD
-Hd
-ko
-re
-Hd
-kv
-Hd
-kr
-Kz
-Hd
-Hd
-jO
+nm
+zJ
+rb
+rE
+rb
+rb
+rb
+rb
+rE
+rb
+sD
 re
 Mq
 Mq
+Mq
+Mq
+Mq
 re
 Hd
 Hd
-Hd
+Yv
 Hd
 Hd
 re
@@ -15691,17 +18054,17 @@ re
 re
 re
 re
-Mq
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
+re
+re
 am
 am
-am
-am
-am
-am
+re
+SP
+tA
+re
 Mq
 Mq
 Mq
@@ -15790,28 +18153,28 @@ Mq
 Mq
 Mq
 Mq
-Mq
-Mq
+re
+Px
+Px
+Px
+re
+oZ
+pb
+oZ
 re
 re
-Hd
-Hd
-kr
-Hd
-HU
-Hd
-kr
-Kz
-Hd
-Hd
-Kz
+re
+Bv
 re
 Mq
+Mq
+Mq
+Mq
 re
 re
-WW
-Hd
-Hd
+gC
+Yv
+Yv
 re
 fj
 re
@@ -15840,10 +18203,10 @@ Mq
 am
 am
 am
-am
-am
-am
-Mq
+re
+mE
+mF
+re
 Mq
 Mq
 Mq
@@ -15926,32 +18289,32 @@ Cw
 Cw
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+az
+az
+az
+az
+az
+re
+gs
+kA
+kA
+rP
+kA
+nK
+kQ
+rD
+su
+qE
+sE
+re
+re
 re
 re
 re
 re
 Hd
-aD
-Hd
-re
-kx
-jZ
-ka
-jF
-re
-re
-re
-Hd
-Hd
+Yv
 Hd
 re
 re
@@ -15982,10 +18345,10 @@ Mq
 am
 Mq
 am
-am
-am
-am
-am
+re
+re
+re
+re
 am
 Mq
 Mq
@@ -16068,32 +18431,32 @@ Cw
 Cw
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+cb
+cb
+hF
+bM
+bM
+iX
+jj
+nF
+nD
+nD
+nD
+MB
+sh
 re
-WW
+sv
+fr
+sF
+re
+mY
+io
+ET
+re
+jf
 Hd
-Hd
-re
-re
-re
-re
-re
-re
-re
-Hd
-Hd
-Hd
+Yv
 aH
 re
 IR
@@ -16210,32 +18573,32 @@ Cw
 Cw
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+tC
+Wm
+Wm
+vY
+dm
 re
-re
-re
-re
-re
-re
-re
-re
+gD
+nL
+ri
+rQ
+rV
+rY
+si
+rD
+gy
+fr
+sF
+pf
+pR
+pR
+pR
+pi
 Hd
-Hd
-Hd
-Hd
-Di
-Hd
-Hd
-Hd
-Di
-Hd
-Hd
-Hd
-Hd
+Yv
+Yv
 re
 re
 co
@@ -16352,31 +18715,31 @@ Cw
 Cw
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+hF
+Wm
+Wm
+vY
+gZ
 re
-jP
-Hd
-Hd
-Hd
-Hd
-Hd
-ko
-Hd
-Hd
-Hd
-Ou
-Ul
-Ul
-Ul
-Ul
-PB
-Hd
-Hd
-Hd
+nq
+of
+jU
+nP
+nP
+rY
+si
+sp
+gy
+Ti
+sF
+pg
+nG
+nG
+nG
+pj
+Yv
+Yv
 re
 re
 cn
@@ -16494,29 +18857,29 @@ Cw
 Cw
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+yr
+vY
+vY
+vY
+ji
 re
-Hd
-Hd
-Hd
-PV
-Hd
-Hd
-Hd
-Hd
-PV
-Hd
-Hd
-ko
-Hd
-Hd
-Hd
-Hd
-Hd
+nr
+of
+mV
+mV
+mV
+mV
+si
+sq
+gy
+Ti
+kY
+pf
+pR
+pR
+pR
+pi
 Hd
 Hd
 re
@@ -16636,28 +18999,28 @@ Cw
 Cw
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+hF
+Wm
+Wm
+Wm
+kv
 re
-Hd
-Hd
+aD
+of
+rn
+nP
+nP
+rZ
+sj
 re
+sv
+Ti
+kY
 re
-re
-Df
-Df
-Df
-re
-re
-re
-re
-re
-re
-re
-re
+pR
+ip
+sL
 re
 Hd
 Hd
@@ -16778,28 +19141,28 @@ Cw
 Cw
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+tC
+Wm
+Wm
+Wm
+ll
 re
-Hd
-Hd
+ns
+om
+rn
+jU
+rW
+sa
+si
+rD
+gy
+Ti
+kY
 re
-Mq
 re
-jK
-ks
-jn
 re
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+re
 re
 WW
 Hd
@@ -16920,25 +19283,25 @@ Cw
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
+az
+cb
+cb
+hF
+cb
+cb
 re
-WW
-Hd
+nu
+oE
+nC
+nC
+nC
+sb
+sl
 re
-Mq
+sw
+sA
+sG
 re
-bI
-jL
-kt
-re
-Mq
-Mq
-Mq
-Mq
 Mq
 Mq
 Mq
@@ -17062,25 +19425,25 @@ Cw
 Mq
 Mq
 Mq
-Mq
-Mq
-Mq
-Mq
-Mq
-re
-Hd
-Hd
-re
-Mq
+az
+az
+az
+az
+az
+az
 re
 re
+gD
+kB
+kB
+kB
+kC
 re
 re
 re
-Mq
-Mq
-Mq
-Mq
+re
+re
+re
 Mq
 Mq
 Mq
@@ -17209,15 +19572,15 @@ Mq
 Mq
 Mq
 Mq
+Mq
+Mq
 re
-jX
-kd
+oU
+pz
+qZ
+nz
+sd
 re
-Mq
-Mq
-Mq
-Mq
-Mq
 Mq
 Mq
 Mq
@@ -17350,16 +19713,16 @@ Mq
 Mq
 Mq
 Mq
-re
-re
-kb
-kb
-re
-re
 Mq
 Mq
 Mq
-Mq
+re
+re
+re
+re
+re
+re
+re
 Mq
 Mq
 Mq
@@ -17376,7 +19739,7 @@ Hd
 Hd
 Hd
 Hd
-aJ
+xg
 re
 re
 re
@@ -17491,14 +19854,14 @@ Mq
 Mq
 Mq
 Mq
-re
-re
-jH
-kc
-ke
-bP
-re
-re
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
@@ -17519,7 +19882,7 @@ WW
 Hd
 Hd
 Hd
-dP
+pN
 ai
 ai
 re
@@ -17633,14 +19996,14 @@ Mq
 Mq
 Mq
 Mq
-re
-bP
-jJ
-dk
-kf
-UJ
-kl
-re
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
@@ -17661,7 +20024,7 @@ re
 Hd
 Hd
 Hd
-dR
+pO
 ai
 ai
 re
@@ -17775,14 +20138,14 @@ Mq
 Mq
 Mq
 Mq
-re
-gd
-UJ
-Hb
-kg
-bQ
-km
-re
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
@@ -17917,14 +20280,14 @@ Mq
 Mq
 Mq
 Mq
-re
-gs
-jM
-UJ
-kf
-bS
-jI
-re
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
@@ -18059,14 +20422,14 @@ Mq
 Mq
 Mq
 Mq
-re
-re
-jN
-gy
-gy
-ki
-re
-re
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
@@ -18202,12 +20565,12 @@ Mq
 Mq
 Mq
 Mq
-re
-re
-re
-re
-re
-re
+Mq
+Mq
+Mq
+Mq
+Mq
+Mq
 Mq
 Mq
 Mq
@@ -18969,7 +21332,7 @@ al
 RE
 jB
 mR
-mR
+ne
 jw
 RE
 al
@@ -19110,8 +21473,8 @@ al
 al
 RE
 ly
-mR
-mR
+kZ
+kZ
 jx
 RE
 al
@@ -19252,8 +21615,8 @@ al
 al
 RE
 lI
-mR
-mR
+kZ
+kZ
 jy
 RE
 al
@@ -27574,7 +29937,7 @@ BG
 fu
 BG
 BG
-jz
+fw
 fv
 Ci
 Cw
@@ -27714,7 +30077,7 @@ BG
 fu
 BG
 BG
-fw
+BG
 BG
 fI
 BG
