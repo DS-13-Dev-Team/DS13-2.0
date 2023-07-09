@@ -1,10 +1,11 @@
-/datum/mod_theme/deadspace/marine_engineer
-	name = "Advanced Soldier Engineer"
-	desc = "A heavily armoured rig suit, designed for military use."
+// {Timmypool}
+/datum/mod_theme/deadspace/ventureblack
+	name = "Legacy Venture"
+	desc = "A rig worn by a legendary hero of the Resource Wars, passed down from Father to Son, and then retrofitted with newer features of current rigs."
 	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
-	default_skin = "adv_soldier_dark"
+	default_skin = "ventureblack"
 	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
@@ -22,7 +23,7 @@
 	)
 
 	skins = list(
-		"adv_soldier_dark" = list(
+		"ventureblack" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = NECK_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -49,8 +50,8 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/marine_engineer
-	theme = /datum/mod_theme/deadspace/marine_engineer
+/obj/item/mod/control/pre_equipped/ventureblack
+	theme = /datum/mod_theme/deadspace/ventureblack
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/jetpack,

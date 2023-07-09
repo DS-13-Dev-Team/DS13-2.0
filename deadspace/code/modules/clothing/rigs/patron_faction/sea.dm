@@ -1,7 +1,7 @@
 // {Blackwolf602}
 /datum/mod_theme/deadspace/heavy_diving
-	name = "Hazard Diving"
-	desc = "The heavy-duty hazard diving RIG is the standard among CEC deep sea mining operations. \
+	name = "Mining Diving"
+	desc = "The heavy-duty diving RIG is the standard among CEC deep sea mining operations. \
 	It's plating has been reinforced to withstand extreme undersea pressures and concussive forces."
 	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \

@@ -1,5 +1,4 @@
 // {Dr.Lance}
-
 /datum/mod_theme/deadspace/pcsi_ruined
 	name = "PCSI Survivor"
 	desc = "The RIG remains battered and beaten, dented and missing pieces. The blood remains permanently rusted to the frame. The will of the survivor remains unbroken."

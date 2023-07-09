@@ -1,12 +1,11 @@
 // {Bruholic}
-
 /datum/mod_theme/deadspace/knight
 	name = "Knight"
 	desc = "A rig made from the reforged armor of his family that was passed from generation to generations for decades."
 	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
-	default_skin = "tarnished"
+	default_skin = "knight"
 	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE

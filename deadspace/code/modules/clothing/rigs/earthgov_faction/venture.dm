@@ -1,11 +1,10 @@
-// {plaugewalker}
-/datum/mod_theme/deadspace/scaf_elite
-	name = "Elite SCAF"
-	desc = "A frontline assault RIG suit used by the 401st Division of the S.C.A.F., designed with advanced survival and biophysical support technologies."
+/datum/mod_theme/deadspace/venture
+	name = "Venture"
+	desc = "The colors of the EDF Corps of Engineers, adopted after their victory at Europa's Conamara Chaos Iceworks during the Resource Wars."
 	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
-	default_skin = "scaf_elite"
+	default_skin = "venture"
 	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
@@ -23,7 +22,7 @@
 	)
 
 	skins = list(
-		"scaf_elite" = list(
+		"venture" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = NECK_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -50,8 +49,8 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/scaf_elite
-	theme = /datum/mod_theme/deadspace/scaf_elite
+/obj/item/mod/control/pre_equipped/venture
+	theme = /datum/mod_theme/deadspace/venture
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/jetpack,
