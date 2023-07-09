@@ -326,13 +326,3 @@
 	can_suppress = TRUE
 
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev762
-
-
-
-
-
-
-
-
-
-
