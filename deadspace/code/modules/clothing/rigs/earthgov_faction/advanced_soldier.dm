@@ -1,11 +1,11 @@
-/datum/mod_theme/deadspace/marine_specialist
-	name = "Advanced Specialist"
-	desc = "A heavily armoured rig suit, designed for military use. This one is kitted out with Command Ensignia"
+/datum/mod_theme/deadspace/adv_soldier
+	name = "Advanced Soldier"
+	desc = "A heavily armoured rig suit, designed for military use."
 	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "adv_soldier"
-	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 67.5, BULLET = 70, LASER = 70, ENERGY = 40, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5, RAD = 75)
 	resistance_flags = NONE
 	atom_flags = NONE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
@@ -49,8 +49,8 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/marine_specialist
-	theme = /datum/mod_theme/deadspace/marine_specialist
+/obj/item/mod/control/pre_equipped/adv_soldier
+	theme = /datum/mod_theme/deadspace/adv_soldier
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/jetpack,
