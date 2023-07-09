@@ -12,7 +12,7 @@
 /obj/structure/closet/secure_closet/miner/mara/PopulateContents()
 	..()
 	new /obj/item/shovel(src)
-	new /obj/item/pickaxe/laser(src)
+	new /obj/item/pickaxe/plasma(src)
 	new /obj/item/radio/headset/headset_cargo/mining(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/storage/bag/ore(src)
