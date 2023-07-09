@@ -15,7 +15,7 @@
 	permeability_coefficient = 0.01
 	siemens_coefficient = 0.5
 	complexity_max = DEFAULT_MAX_COMPLEXITY
-	charge_drain = DEFAULT_CHARGE_DRAIN
+	charge_drain = 1
 	slowdown_inactive = 1.25
 	slowdown_active = 0.25
 	allowed_suit_storage = list(
