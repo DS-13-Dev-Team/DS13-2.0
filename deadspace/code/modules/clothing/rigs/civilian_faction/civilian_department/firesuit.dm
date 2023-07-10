@@ -57,5 +57,6 @@
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/magboot,
 		/obj/item/mod/module/welding,
-		/obj/item/mod/module/mister
+		/obj/item/mod/module/mister,
+		/obj/item/mod/module/thermal_regulator
 	)
