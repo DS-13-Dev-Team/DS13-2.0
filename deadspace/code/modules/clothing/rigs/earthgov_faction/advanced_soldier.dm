@@ -12,7 +12,7 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
 	permeability_coefficient = 0.01
 	siemens_coefficient = 0.5
-	complexity_max = DEFAULT_MAX_COMPLEXITY
+	complexity_max = 20
 	charge_drain = 1
 	slowdown_inactive = 1.25
 	slowdown_active = 0.25
