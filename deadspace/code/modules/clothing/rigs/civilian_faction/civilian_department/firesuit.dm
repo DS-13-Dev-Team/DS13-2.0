@@ -6,7 +6,7 @@
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "firesuit"
-	armor = list(MELEE = 37.5, BULLET = 35, LASER = 50, ENERGY = 40, BOMB = 60, BIO = 100, FIRE = 100, ACID = 25, WOUND = 5, RAD = 60)
+	armor = list(MELEE = 37.5, BULLET = 35, LASER = 50, ENERGY = 40, BOMB = 60, BIO = 100, FIRE = 100, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
@@ -54,6 +54,8 @@
 	theme = /datum/mod_theme/deadspace/firesuit
 	initial_modules = list(
 		/obj/item/mod/module/storage,
-		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/mister
 	)

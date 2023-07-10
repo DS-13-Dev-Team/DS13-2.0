@@ -6,7 +6,7 @@
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "patrol"
-	armor = list(MELEE = 54.5, BULLET = 54.5, LASER = 60, ENERGY = 25, BOMB = 50, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5, RAD = 60)
+	armor = list(MELEE = 54.5, BULLET = 54.5, LASER = 60, ENERGY = 25, BOMB = 50, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
@@ -55,5 +55,8 @@
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/magnetic_harness,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/welding,
 	)

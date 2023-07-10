@@ -5,7 +5,7 @@
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "special_forces"
-	armor = list(MELEE = 72.5, BULLET = 75, LASER = 72.5, ENERGY = 40, BOMB = 75, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5, RAD = 75)
+	armor = list(MELEE = 72.5, BULLET = 75, LASER = 72.5, ENERGY = 40, BOMB = 75, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
@@ -52,7 +52,12 @@
 /obj/item/mod/control/pre_equipped/special_forces
 	theme = /datum/mod_theme/deadspace/special_forces
 	initial_modules = list(
-		/obj/item/mod/module/storage,
-		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/storage/syndicate,
+		/obj/item/mod/module/emp_shield,
+		/obj/item/mod/module/magnetic_harness,
+		/obj/item/mod/module/jetpack/advanced,
+		/obj/item/mod/module/magboot/advanced,
+		/obj/item/mod/module/welding,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/dna_lock,
 	)

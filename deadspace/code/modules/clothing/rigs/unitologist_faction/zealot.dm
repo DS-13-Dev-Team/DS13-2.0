@@ -7,7 +7,7 @@
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "zealot"
-	armor = list(MELEE = 56, BULLET = 60, LASER = 30, ENERGY = 20, BOMB = 30, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5, RAD = 40)
+	armor = list(MELEE = 56, BULLET = 60, LASER = 30, ENERGY = 20, BOMB = 30, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
@@ -52,7 +52,12 @@
 /obj/item/mod/control/pre_equipped/zealot
 	theme = /datum/mod_theme/deadspace/zealot
 	initial_modules = list(
-		/obj/item/mod/module/storage,
-		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/storage/syndicate,
+		/obj/item/mod/module/emp_shield,
+		/obj/item/mod/module/magnetic_harness,
+		/obj/item/mod/module/jetpack/advanced,
+		/obj/item/mod/module/magboot/advanced,
+		/obj/item/mod/module/welding,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/dna_lock,
 	)

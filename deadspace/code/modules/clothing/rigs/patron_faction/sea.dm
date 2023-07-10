@@ -7,7 +7,7 @@
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "heavy_diving"
-	armor = list(MELEE = 66.5, BULLET = 70, LASER = 57.5, ENERGY = 25, BOMB = 90, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5, RAD = 70)
+	armor = list(MELEE = 66.5, BULLET = 70, LASER = 57.5, ENERGY = 25, BOMB = 90, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
@@ -54,9 +54,13 @@
 /obj/item/mod/control/pre_equipped/heavy_diving
 	theme = /datum/mod_theme/deadspace/heavy_diving
 	initial_modules = list(
-		/obj/item/mod/module/storage,
-		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/storage/large_capacity,
+		/obj/item/mod/module/jetpack/advanced,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/magboot/advanced,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
+		/obj/item/mod/module/drill,
 	)
 /datum/mod_theme/deadspace/elite_diving
 	name = "Elite Diving"
@@ -66,7 +70,7 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "elite_diving"
-	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5, RAD= 95)
+	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
@@ -113,9 +117,13 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 /obj/item/mod/control/pre_equipped/elite_diving
 	theme = /datum/mod_theme/deadspace/elite_diving
 	initial_modules = list(
-		/obj/item/mod/module/storage,
-		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/storage/large_capacity,
+		/obj/item/mod/module/jetpack/advanced,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/magboot/advanced,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
+		/obj/item/mod/module/drill,
 	)
 
 /datum/mod_theme/deadspace/sister
@@ -126,7 +134,7 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "sister"
-	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5, RAD= 95)
+	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
@@ -173,7 +181,11 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 /obj/item/mod/control/pre_equipped/sister
 	theme = /datum/mod_theme/deadspace/sister
 	initial_modules = list(
-		/obj/item/mod/module/storage,
-		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/storage/large_capacity,
+		/obj/item/mod/module/jetpack/advanced,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/magboot/advanced,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
+		/obj/item/mod/module/drill,
 	)
