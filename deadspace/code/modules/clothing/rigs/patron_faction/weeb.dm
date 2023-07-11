@@ -6,7 +6,7 @@
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "weeb"
-	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
@@ -53,7 +53,10 @@
 /obj/item/mod/control/pre_equipped/evangelion
 	theme = /datum/mod_theme/deadspace/evangelion
 	initial_modules = list(
-		/obj/item/mod/module/storage,
-		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/storage/large_capacity,
+		/obj/item/mod/module/jetpack/advanced,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/magboot/advanced,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
 	)

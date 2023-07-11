@@ -1,4 +1,4 @@
-necromorphs/sound/music/ds13/nicole.ogg
-necromorphs/sound/music/ds13/pensive.ogg
-necromorphs/sound/music/ds13/unitology.ogg
-necromorphs/sound/music/ds13/twinkle.ogg
+deadspace/sound/music/ds13/nicole.ogg
+deadspace/sound/music/ds13/pensive.ogg
+deadspace/sound/music/ds13/unitology.ogg
+deadspace/sound/music/ds13/twinkle.ogg

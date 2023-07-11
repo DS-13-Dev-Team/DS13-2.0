@@ -1,11 +1,11 @@
 /datum/mod_theme/deadspace/titan_security
 	name = "Security"
-	desc = "A lightweight and flexible armoured rig suit used by earthgov, across numerous facilties, also used on Corporate vessels in rare numbers."
+	desc = "A lightweight and flexible armored rig suit used by earthgov, across numerous facilties, also used on Corporate vessels in rare numbers."
 	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
 		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "titan"
-	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 60, BULLET = 64, LASER = 60, ENERGY = 5, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	resistance_flags = NONE
 	atom_flags = NONE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
@@ -53,5 +53,8 @@
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/magnetic_harness,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/welding,
 	)
