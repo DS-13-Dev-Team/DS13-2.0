@@ -395,10 +395,12 @@
 /area/mara17/interior/medium/bar)
 "bB" = (
 /obj/structure/curtain/bounty,
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/barracks)
 "bC" = (
 /obj/structure/curtain/bounty,
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/random/maint_center,
 /area/mara17/interior/medium/barracks)
 "bD" = (
@@ -659,6 +661,7 @@
 	name = "Bar";
 	req_one_access_txt = "25"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/bar)
 "cx" = (
@@ -738,6 +741,9 @@
 /area/mara17/interior/medium)
 "cJ" = (
 /obj/structure/curtain/bounty,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/sec_barracks)
 "cK" = (
@@ -1562,6 +1568,9 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/mining)
 "fz" = (
@@ -1569,11 +1578,15 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/mining)
 "fA" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/mining)
 "fB" = (
@@ -1581,6 +1594,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/mining)
 "fC" = (
@@ -1650,6 +1664,7 @@
 	pixel_x = 6;
 	pixel_y = 9
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/bar)
 "fP" = (
@@ -1698,6 +1713,7 @@
 "fW" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/bar)
 "fX" = (
@@ -1712,6 +1728,7 @@
 	pixel_x = 9;
 	pixel_y = 3
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/bar)
 "fZ" = (
@@ -2746,6 +2763,7 @@
 	name = "Testing Labs";
 	req_one_access_txt = "7"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_test)
 "iY" = (
@@ -2969,6 +2987,9 @@
 /area/mara17/interior/medium/capt_office)
 "jD" = (
 /obj/machinery/door/airlock,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_breakroom)
 "jE" = (
@@ -3045,6 +3066,9 @@
 "jQ" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_breakroom)
 "jR" = (
@@ -4591,6 +4615,9 @@
 	name = "Research and Development Lab";
 	req_one_access_txt = "7"
 	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_lab)
 "pa" = (
@@ -4603,6 +4630,9 @@
 /obj/machinery/door/airlock/research{
 	name = "Research and Development Lab";
 	req_one_access_txt = "7"
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_lab)
@@ -4630,12 +4660,16 @@
 	name = "Research Director's Office";
 	req_access_txt = "30"
 	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_rd)
 "pf" = (
 /obj/machinery/door/airlock{
 	name = "R&D Entrace"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_dept)
 "pg" = (
@@ -4655,6 +4689,7 @@
 	name = "R&D Entrace"
 	},
 /obj/structure/cable,
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_dept)
 "pj" = (
@@ -5111,6 +5146,7 @@
 	name = "Command Meeting Area";
 	req_access_txt = "19"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/command_meeting)
 "qB" = (
@@ -5662,6 +5698,7 @@
 	},
 /obj/item/paper_bin,
 /obj/item/pen/fourcolor,
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_lab)
 "sq" = (
@@ -5670,6 +5707,7 @@
 	name = "Research Desk";
 	req_one_access_txt = "7"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_lab)
 "sr" = (
@@ -6167,6 +6205,9 @@
 /area/mara17/interior/medium/canteen)
 "ze" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_breakroom)
 "zz" = (
@@ -6181,6 +6222,13 @@
 "zS" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/caves)
+"AL" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_lab)
 "AO" = (
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium/clothing_storage)
@@ -6193,6 +6241,9 @@
 /obj/machinery/door/airlock/research{
 	name = "Research and Development Lab";
 	req_one_access_txt = "7"
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_dept)
@@ -6304,6 +6355,13 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/security_center)
+"Gn" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/medium/research_rd)
 "Gx" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor,
@@ -6464,6 +6522,7 @@
 /area/mara17/interior/medium/abandoned)
 "Px" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_lab)
 "PV" = (
@@ -17613,9 +17672,9 @@ kL
 kL
 kL
 kL
-hu
+Gn
 pe
-hu
+Gn
 kL
 kL
 kL
@@ -18174,9 +18233,9 @@ Mq
 Mq
 Mq
 Hr
-Px
-Px
-Px
+AL
+AL
+AL
 Hr
 oZ
 pb

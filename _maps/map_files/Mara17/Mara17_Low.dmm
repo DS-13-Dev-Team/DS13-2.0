@@ -1068,6 +1068,9 @@
 	name = "SCAF Warehouse Lockdown"
 	},
 /obj/structure/cable,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/scaf_storage2)
 "er" = (
@@ -1244,6 +1247,9 @@
 "fa" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/sec_checkpoint)
 "fc" = (
@@ -1383,6 +1389,7 @@
 	id = "bunker";
 	name = "SCAF Warehouse Lockdown"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/sec_checkpoint)
 "fC" = (
@@ -1394,6 +1401,7 @@
 	id = "bunker";
 	name = "SCAF Warehouse Lockdown"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/sec_checkpoint)
 "fD" = (
@@ -1446,6 +1454,9 @@
 /area/mara17/interior/lower/sec_checkpoint)
 "fM" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/sec_checkpoint)
 "fN" = (
@@ -1492,6 +1503,9 @@
 	id = "bunker";
 	name = "SCAF Warehouse Lockdown"
 	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/scaf_storage2)
 "fV" = (
@@ -1503,6 +1517,9 @@
 /obj/machinery/door/airlock/security{
 	name = "Storage Security Checkpoint";
 	req_access_txt = "63"
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/sec_checkpoint)
