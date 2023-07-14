@@ -107,10 +107,6 @@ maybe on the future.
 	name = "Iris Outpost - Mining Facility"
 	icon_state = "mining"
 
-/area/mara17/interior/upper/mining/hallway
-	name = "Iris Outpost - Mining Facility - South Hallway"
-	icon_state = "mining_lobby"
-
 /area/mara17/interior/upper/mining/tool_storage
 	name = "Iris Outpost - Mining Facility - Mining Tool Storage"
 	icon_state = "mining_storage"
@@ -264,31 +260,11 @@ maybe on the future.
 	name = "Mara 17 Interior - Church of Unitology Chapel"
 	icon_state = "chapel"
 
-/area/mara17/interior/medium/chapel_office
-	name = "Mara 17 Interior - Chapel Office"
-	icon_state = "chapeloffice"
-
-/area/mara17/interior/medium/chapel_bathroom
-	name = "Mara 17 Interior - Chapel Bathroom"
-	icon_state = "restrooms"
-
-/area/mara17/interior/medium/chapel_dorm
-	name = "Mara 17 Interior - Chapel Dormitories"
-	icon_state = "dorms"
-
 ///// CANTEEN /////
 
 /area/mara17/interior/medium/canteen
 	name = "Mara 17 Interior - Canteen"
 	icon_state = "cafeteria"
-
-/area/mara17/interior/medium/canteen/kitchen
-	name = "Mara 17 Interior - Canteen Kitchen"
-	icon_state = "kitchen"
-
-/area/mara17/interior/medium/canteen/cold_room
-	name = "Mara 17 Interior - Canteen Freezer Storage"
-	icon_state = "kitchen_cold"
 
 ///// BAR /////
 
@@ -344,10 +320,6 @@ maybe on the future.
 	name = "Mara 17 Interior - Command Center"
 	icon_state = "bridge"
 
-/area/mara17/interior/medium/command_hallway
-	name = "Mara 17 Interior - Command Center"
-	icon_state = "bridge_hallway"
-
 /area/mara17/interior/medium/command_meeting
 	name = "Mara 17 Interior - Command Conference Room"
 	icon_state = "meeting"
@@ -356,25 +328,9 @@ maybe on the future.
 	name = "Mara 17 Interior - Head of Personnel Office"
 	icon_state = "hop_office"
 
-/area/mara17/interior/medium/hop_quarters
-	name = "Mara 17 Interior - Head of Personnel Quarters"
-	icon_state = "hop_private"
-
-/area/mara17/interior/medium/hop_bathroom
-	name = "Mara 17 Interior - Head of Personnel Bathroom"
-	icon_state = "restrooms"
-
 /area/mara17/interior/medium/capt_office
 	name = "Mara 17 Interior - Overseer Office"
 	icon_state = "captain"
-
-/area/mara17/interior/medium/capt_quarters
-	name = "Mara 17 Interior - Overseer's Quarters"
-	icon_state = "captain_private"
-
-/area/mara17/interior/medium/capt_bathroom
-	name = "Mara 17 Interior - Overseer's Bathroom"
-	icon_state = "restrooms"
 
 // PSYCHOLOGIST //
 
@@ -419,14 +375,6 @@ maybe on the future.
 /area/mara17/interior/medium/hos_office
 	name = "Mara 17 Interior - Head of Security Office"
 	icon_state = "sec_hos"
-
-/area/mara17/interior/medium/hos_quarters
-	name = "Mara 17 Interior - Head of Security Quarters"
-	icon_state = "sec_hos"
-
-/area/mara17/interior/medium/hos_bathroom
-	name = "Mara 17 Interior - Head of Security Bathroom"
-	icon_state = "restrooms"
 
 /area/mara17/interior/medium/perma
 	name = "Mara 17 Interior - Permanent Confinement"
