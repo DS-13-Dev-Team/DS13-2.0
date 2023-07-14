@@ -131,3 +131,18 @@
 	name = "Locator"
 	desc = "Your locator knows the way!."
 	icon_state = "locator"
+
+/obj/structure/sign/poster/cec/peng1
+	name = "Always Peng"
+	desc = "Theres always Peng."
+	icon_state = "peng1"
+
+/obj/structure/sign/poster/cec/peng2
+	name = "Just Peng"
+	desc = "Just for you... Peng."
+	icon_state = "peng2"
+
+/obj/structure/sign/poster/cec/peng3
+	name = "Get Peng"
+	desc = "Get ya some!."
+	icon_state = "peng3"
