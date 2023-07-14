@@ -5651,7 +5651,6 @@
 /turf/closed/wall,
 /area/mara17/interior/upper/civilian)
 "yE" = (
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /obj/machinery/door/airlock/external{
 	dir = 4
