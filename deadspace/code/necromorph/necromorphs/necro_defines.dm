@@ -26,7 +26,6 @@
 	base_pixel_x = -8
 	base_pixel_y = 0
 	pixel_x = -8
-	has_human_mood = FALSE
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	var/nicknumber = 0
 
