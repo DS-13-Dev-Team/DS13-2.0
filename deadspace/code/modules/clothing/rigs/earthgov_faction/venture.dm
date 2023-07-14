@@ -6,20 +6,7 @@
 		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "venture"
 	armor = list(MELEE = 67.5, BULLET = 70, LASER = 70, ENERGY = 40, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
-	resistance_flags = NONE
-	atom_flags = NONE
-	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
-	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-	permeability_coefficient = 0.01
-	siemens_coefficient = 0.5
 	complexity_max = 20
-	charge_drain = 1
-	slowdown_inactive = 1.25
-	slowdown_active = 0.25
-	allowed_suit_storage = list(
-		/obj/item/flashlight,
-		/obj/item/tank/internals,
-	)
 
 	skins = list(
 		"venture" = list(

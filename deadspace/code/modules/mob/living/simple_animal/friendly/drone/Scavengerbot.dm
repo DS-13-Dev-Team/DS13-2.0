@@ -5,6 +5,7 @@
 	icon_state = "spiderbot"
 	icon_living = "spiderbot"
 	held_state = "spiderbot"
+	icon_dead = "spiderbot_wreck"
 	held_lh = 'deadspace/icons/mob/pets_held_lh.dmi'
 	held_rh = 'deadspace/icons/mob/pets_held_rh.dmi'
 	head_icon = 'deadspace/icons/mob/pets_held.dmi'

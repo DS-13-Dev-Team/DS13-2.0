@@ -11,13 +11,14 @@ Pulse Rifles
 	base_icon_state = "pulserifle"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
+	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
 	inhand_icon_state = null
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = 2
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	mag_display = FALSE
 	mag_type = /obj/item/ammo_box/magazine/pulse
 	default_ammo = /obj/item/ammo_casing/caseless/pulse
-	weapon_weight = WEAPON_HEAVY
+	weapon_weight = 2
 	show_bolt_icon = FALSE
 	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN

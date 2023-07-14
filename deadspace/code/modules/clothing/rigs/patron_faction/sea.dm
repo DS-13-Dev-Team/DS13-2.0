@@ -3,25 +3,9 @@
 	name = "Hazard Diving"
 	desc = "The heavy-duty diving RIG is the standard among CEC deep sea mining operations. \
 	It's plating has been reinforced to withstand extreme undersea pressures and concussive forces."
-	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
-		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
-		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "heavy_diving"
 	armor = list(MELEE = 66.5, BULLET = 70, LASER = 57.5, ENERGY = 25, BOMB = 90, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
-	resistance_flags = NONE
-	atom_flags = NONE
-	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
-	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-	permeability_coefficient = 0.01
-	siemens_coefficient = 0.5
-	complexity_max = DEFAULT_MAX_COMPLEXITY
-	charge_drain = 1
-	slowdown_inactive = 1.25
-	slowdown_active = 0.25
-	allowed_suit_storage = list(
-		/obj/item/flashlight,
-		/obj/item/tank/internals,
-	)
+	complexity_max = 20
 
 	skins = list(
 		"heavy_diving" = list(
@@ -66,25 +50,10 @@
 	name = "Elite Diving"
 	desc = "The elite diving RIG is the next generation of diving RIGs used among CEC deep sea mining operations. \
 It's flexible reinforcements allow it to withstand extreme undersea pressures while retaining mobility."
-	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
-		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
-		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "elite_diving"
 	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
-	resistance_flags = NONE
-	atom_flags = NONE
-	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
-	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-	permeability_coefficient = 0.01
-	siemens_coefficient = 0.5
-	complexity_max = DEFAULT_MAX_COMPLEXITY
-	charge_drain = 1
-	slowdown_inactive = 1.25
-	slowdown_active = 0.25
-	allowed_suit_storage = list(
-		/obj/item/flashlight,
-		/obj/item/tank/internals,
-	)
+	complexity_max = 20
+
 
 	skins = list(
 		"elite_diving" = list(
@@ -130,25 +99,9 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 	name = "Modified Diving"
 	desc = "a modified diving RIG with a cage on the shoulder and symbols drawn upon the suit. \
 	It's flexible reinforcements allow it to withstand extreme undersea pressures while retaining mobility."
-	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
-		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
-		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "sister"
 	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
-	resistance_flags = NONE
-	atom_flags = NONE
-	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
-	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-	permeability_coefficient = 0.01
-	siemens_coefficient = 0.5
-	complexity_max = DEFAULT_MAX_COMPLEXITY
-	charge_drain = 1
-	slowdown_inactive = 1.25
-	slowdown_active = 0.25
-	allowed_suit_storage = list(
-		/obj/item/flashlight,
-		/obj/item/tank/internals,
-	)
+	complexity_max = 20
 
 	skins = list(
 		"sister" = list(

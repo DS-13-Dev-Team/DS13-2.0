@@ -1,27 +1,10 @@
 // Doesn't have a speific sprite for it, Using the basic medical one.
-/datum/mod_theme/deadspace/MED_SMO
+/datum/mod_theme/deadspace/med_smo
 	name = "Senior medical officer"
 	desc = "A durable RIG designed for medical rescue in high risk areas, and protecting the wearer against acids. This one was made for the SMO and is well taken care of."
-	extended_desc = "Resource Integration Gear, or RIG for short, \
-		is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
-		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
-		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "med"
 	armor = list(MELEE = 37.5, BULLET = 15, LASER = 70, ENERGY = 70, BOMB = 30, BIO = 100, FIRE = 25, ACID = 100, WOUND = 5)
-	resistance_flags = NONE
-	atom_flags = NONE
-	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
-	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-	permeability_coefficient = 0.01
-	siemens_coefficient = 0.5
-	complexity_max = DEFAULT_MAX_COMPLEXITY
-	charge_drain = 1
-	slowdown_inactive = 1.25
-	slowdown_active = 0.25
-	allowed_suit_storage = list(
-		/obj/item/flashlight,
-		/obj/item/tank/internals,
-	)
+	complexity_max = 20
 
 	skins = list(
 		"med" = list(
@@ -51,8 +34,8 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/MED_SMO
-	theme = /datum/mod_theme/deadspace/MED_SMO
+/obj/item/mod/control/pre_equipped/med_smo
+	theme = /datum/mod_theme/deadspace/med_smo
 	initial_modules = list(
 		/obj/item/mod/module/storage/large_capacity,
 		/obj/item/mod/module/jetpack/advanced,

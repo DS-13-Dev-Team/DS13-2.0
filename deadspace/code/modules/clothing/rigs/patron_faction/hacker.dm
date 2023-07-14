@@ -2,25 +2,10 @@
 /datum/mod_theme/deadspace/hacker
 	name = "Hacker"
 	desc = "A lightweight suit cobbled together from civilian parts, with some high end tech hidden within, suprisngly not illegal."
-	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
-		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
-		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "hacker"
 	armor = list(MELEE = 37.5, BULLET = 35, LASER = 40, ENERGY = 40, BOMB = 40, BIO = 80, FIRE = 25, ACID = 25, WOUND = 5)
-	resistance_flags = NONE
-	atom_flags = NONE
-	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
-	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-	permeability_coefficient = 0.01
-	siemens_coefficient = 0.5
-	complexity_max = DEFAULT_MAX_COMPLEXITY
-	charge_drain = 1
-	slowdown_inactive = 1.25
-	slowdown_active = 0.25
-	allowed_suit_storage = list(
-		/obj/item/flashlight,
-		/obj/item/tank/internals,
-	)
+	max_heat_protection_temperature = 0
+	min_cold_protection_temperature = 0
 
 	skins = list(
 		"hacker" = list(

@@ -50,9 +50,25 @@
 	base_icon_state = "grate"
 	icon_state = "grate"
 
-/turf/open/floor/deadspace/grater //who names this stuff
+/turf/open/floor/deadspace/grater
 	base_icon_state = "grater"
 	icon_state = "grater"
+
+/turf/open/floor/deadspace/grille_spare1
+	base_icon_state = "grille-spare1"
+	icon_state = "grille-spare1"
+
+/turf/open/floor/deadspace/grille_spare2
+	base_icon_state = "grille-spare2"
+	icon_state = "grille-spare2"
+
+/turf/open/floor/deadspace/grille_spare3
+	base_icon_state = "grille-spare3"
+	icon_state = "grille-spare3"
+
+/turf/open/floor/deadspace/grille_spare4
+	base_icon_state = "grille-spare4"
+	icon_state = "grille-spare4"
 
 /turf/open/floor/deadspace/cable_start
 	base_icon_state = "cable_start"
