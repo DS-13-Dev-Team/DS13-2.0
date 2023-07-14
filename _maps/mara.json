@@ -47,7 +47,17 @@
     "minetype": "none",
     "blacklist_file": "iceruinblacklist.txt",
     "job_changes": {
-        "Captain": {
+		"assistant": null,
+		"atmospheric_technician": null,
+		"ai": null,
+		"clown": null,
+		"geneticist": null,
+		"curator": null,
+		"mime": null,
+		"prisoner": null,
+		"virologist": null,
+		"roboticist": null,
+        "captain": {
             "special_charter": "moon"
         }
     }
