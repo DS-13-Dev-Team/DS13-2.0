@@ -9,8 +9,8 @@
 	base_icon_state = "corruption"
 	layer = NECROMORPH_CORRUPTION_LAYER
 	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = list(SMOOTH_GROUP_NECROMORPHS)
-	canSmoothWith = list(SMOOTH_GROUP_WALLS, SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_NECROMORPHS)
+	smoothing_groups = SMOOTH_GROUP_NECROMORPHS
+	canSmoothWith = SMOOTH_GROUP_WALLS + SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_NECROMORPHS
 	anchored = TRUE
 	max_integrity = 20
 	integrity_failure = 0.5
