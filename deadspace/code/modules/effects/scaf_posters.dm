@@ -55,3 +55,8 @@
 	name = "Sovereign"
 	desc = "The symbol of the S.C.A.F."
 	icon_state = "sovereign"
+
+/obj/structure/sign/poster/scaf/hand
+	name = "Hands"
+	desc = "Get back to work! Let your hands do the talking!"
+	icon_state = "hand"
