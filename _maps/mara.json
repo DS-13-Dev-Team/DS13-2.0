@@ -13,7 +13,6 @@
     "traits": [
         {
             "Up": 1,
-            "Mining": true,
             "Linkage": "Cross",
             "Gravity": true,
             "Ice Ruins Underground": true,
@@ -24,7 +23,6 @@
         {
             "Down": -1,
             "Up": 1,
-            "Mining": true,
             "Linkage": "Cross",
             "Gravity": true,
             "Ice Ruins Underground": true,
@@ -34,7 +32,6 @@
         },
         {
             "Down": -1,
-            "Mining": true,
             "Linkage": "Cross",
             "Gravity": true,
             "Ice Ruins": true,
