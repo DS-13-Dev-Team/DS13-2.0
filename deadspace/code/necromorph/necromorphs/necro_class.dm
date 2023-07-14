@@ -24,7 +24,6 @@
 
 	var/list/necro_armor
 
-	// *** Health *** //
 	///Maximum health a necromorph has.
 	var/max_health = 100
 
@@ -33,7 +32,6 @@
 	///see_in_dark value while unconscious
 	var/unconscious_see_in_dark = 5
 
-	// *** Flags *** //
 	///bitwise flags denoting things a necromorph can and cannot do, or things a necromorph is or is not. uses defines.
 	var/necro_flags = NONE
 
