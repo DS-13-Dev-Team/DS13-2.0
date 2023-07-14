@@ -24,9 +24,8 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/mining/barracks)
 "ai" = (
-/obj/machinery/door/airlock/external,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/civilian)
+/turf/closed/wall/rust,
+/area/mara17/interior/upper/cargo/quartermaster)
 "aj" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/deadspace/grater,
@@ -60,7 +59,7 @@
 /area/mara17/interior/upper/medical)
 "aq" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/medical/morgue)
+/area/mara17/interior/upper/observation/bathroom)
 "ar" = (
 /obj/structure/fence{
 	dir = 4
@@ -985,7 +984,8 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/evacuation)
 "dz" = (
-/obj/machinery/status_display/evac/directional/east,
+/obj/machinery/camera/autoname/directional/south,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access1)
 "dA" = (
@@ -1303,8 +1303,13 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/observation/dorms)
 "ez" = (
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/exterior)
+/obj/structure/bed{
+	pixel_y = 14
+	},
+/obj/effect/landmark/start/shaft_miner,
+/obj/structure/bed,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/mining/barracks)
 "eA" = (
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron/dark,
@@ -2004,11 +2009,11 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/mining/locker_room)
 "gz" = (
-/turf/closed/wall,
-/area/mara17/interior/upper/mining/locker_room)
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/caves)
 "gA" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/mining/ore_storage)
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
 "gB" = (
 /obj/structure/rack/shelf,
 /obj/item/chair/plastic,
@@ -2063,10 +2068,8 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
 "gG" = (
-/obj/machinery/light/small/directional/north,
-/obj/structure/chair,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/access1)
+/turf/closed/wall/rust,
+/area/mara17/interior/upper/cargo/cargo_tech)
 "gH" = (
 /obj/machinery/vending/medical,
 /turf/open/floor/deadspace/grater,
@@ -2176,8 +2179,8 @@
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/mara17/interior/upper/tcomms/comms)
 "hc" = (
-/turf/closed/wall/r_wall,
-/area/mara17/interior/upper/tcomms/comms)
+/turf/closed/wall,
+/area/mara17/interior/upper/observation/storage)
 "hd" = (
 /obj/machinery/telecomms/server/presets/common,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -2269,8 +2272,8 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/enginieering)
 "hv" = (
-/turf/closed/wall,
-/area/mara17/interior/upper/cargo/quartermaster)
+/turf/open/openspace,
+/area/mara17/interior/medium/abandoned)
 "hw" = (
 /obj/machinery/announcement_system,
 /turf/open/floor/deadspace/mono,
@@ -2381,8 +2384,9 @@
 /obj/structure/sign/poster/scaf/forces{
 	pixel_x = 32
 	},
+/obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/roller,
-/area/mara17/exterior)
+/area/mara17/interior/upper/access2)
 "hQ" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/abandoned/romero_interior)
@@ -3129,17 +3133,12 @@
 /turf/open/floor/iron/dark/telecomms,
 /area/mara17/interior/upper/tcomms/comms)
 "jX" = (
-/obj/structure/sign/directions/command{
-	dir = 8;
-	pixel_y = 30
+/obj/machinery/status_display/evac/directional/east,
+/obj/structure/chair{
+	dir = 8
 	},
-/obj/structure/sign/directions/security{
-	dir = 8;
-	pixel_y = 36
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/snowed,
-/area/mara17/exterior)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access1)
 "jY" = (
 /obj/structure/rack/shelf,
 /obj/effect/spawner/random/maintenance/eight,
@@ -3297,22 +3296,22 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/civilian)
 "ks" = (
-/turf/closed/wall,
-/area/mara17/interior/upper/abandoned/romero_pen)
-"kt" = (
-/obj/structure/cable,
-/obj/machinery/door/airlock,
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/abandoned/romero_checkpoint)
+/area/mara17/interior/upper/access2)
+"kt" = (
+/turf/closed/wall,
+/area/mara17/interior/upper/mining/ore_storage)
 "ku" = (
 /obj/structure/barricade/wooden/crude/snow,
 /turf/open/misc/snow,
 /area/mara17/interior/caves)
 "kv" = (
-/obj/machinery/door/airlock/external,
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/civilian)
+/turf/closed/wall,
+/area/mara17/interior/upper/abandoned/romero_res_medbay)
 "kw" = (
 /obj/structure/table,
 /obj/item/storage/medkit/surgery,
@@ -3413,12 +3412,26 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
 "kM" = (
-/obj/structure/marker_beacon/burgundy,
-/obj/structure/sign/poster/scaf/forces{
-	pixel_x = 32
-	},
-/turf/open/misc/snow,
-/area/mara17/exterior)
+/obj/structure/rack/shelf,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access2)
 "kN" = (
 /obj/structure/sign/departments/medbay/alt{
 	pixel_x = 32
@@ -3500,7 +3513,7 @@
 /area/mara17/interior/upper/mining/locker_room)
 "kY" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/abandoned/romero_commander)
+/area/mara17/interior/upper/observation/dorms)
 "kZ" = (
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
@@ -3522,7 +3535,7 @@
 /area/mara17/interior/upper/mining/ore_storage)
 "lc" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/observation/comms)
+/area/mara17/interior/upper/abandoned/romero_commander)
 "ld" = (
 /obj/machinery/firealarm/directional/north,
 /obj/effect/decal/cleanable/dirt,
@@ -3530,7 +3543,7 @@
 /area/mara17/interior/upper/mining/locker_room)
 "le" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/abandoned/romero_checkpoint)
+/area/mara17/interior/upper/cargo/cargo_tech)
 "lf" = (
 /obj/machinery/door/airlock{
 	name = "Mining Restroom"
@@ -3540,7 +3553,7 @@
 /area/mara17/interior/upper/mining/bathrooms)
 "lg" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/abandoned/romero_res_medbay)
+/area/mara17/interior/upper/cargo/quartermaster)
 "lh" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
@@ -3593,10 +3606,10 @@
 /area/mara17/interior/upper/mining/relax_room)
 "lo" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/abandoned/romero_storage)
+/area/mara17/interior/upper/medical/morgue)
 "lp" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/enginieering/interior)
+/area/mara17/interior/upper/abandoned/romero_storage)
 "lq" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
@@ -3612,7 +3625,7 @@
 /area/mara17/interior/upper/mining)
 "ls" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/observation/storage)
+/area/mara17/interior/upper/mining/locker_room)
 "lt" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/cable,
@@ -4106,19 +4119,11 @@
 /turf/open/floor/deadspace/roller,
 /area/mara17/exterior)
 "mK" = (
-/obj/structure/cable,
-/obj/structure/sign/poster/scaf/forces{
-	pixel_y = 32
-	},
-/turf/open/floor/deadspace/roller,
-/area/mara17/exterior)
+/turf/closed/wall,
+/area/mara17/interior/upper/enginieering/ce)
 "mL" = (
-/obj/structure/sign/poster/scaf/forces{
-	pixel_y = 32
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/snowed,
-/area/mara17/exterior)
+/turf/closed/wall,
+/area/mara17/interior/upper/mining/bathrooms)
 "mM" = (
 /obj/structure/sign/cec/deck{
 	pixel_y = -32
@@ -4736,10 +4741,14 @@
 /turf/closed/wall,
 /area/mara17/interior/upper/mining/tool_storage)
 "pq" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/mining)
+/obj/structure/closet/secure_closet/miner/mara,
+/obj/structure/window/reinforced/spawner/north,
+/obj/effect/turf_decal/ported,
+/obj/item/stock_parts/cell/plasmacutter,
+/obj/item/clothing/mask/breath,
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_gray,
+/area/mara17/interior/upper/mining/locker_room)
 "pr" = (
 /obj/machinery/computer/apc_control{
 	dir = 8
@@ -5382,11 +5391,24 @@
 /obj/item/disk/holodisk/ds13/mara_shitsec,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/abandoned/romero_commander)
+"rL" = (
+/obj/machinery/door/airlock/external{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "access2"
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/access1)
 "rN" = (
-/obj/machinery/power/apc/auto_name/directional/west,
-/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/exterior)
+"rV" = (
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/access3)
+/area/mara17/interior/upper/access1)
 "sc" = (
 /obj/machinery/firealarm/directional/west,
 /obj/structure/tank_holder/emergency_oxygen,
@@ -5411,6 +5433,12 @@
 /obj/structure/chair,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access2)
+"sx" = (
+/obj/structure/sign/poster/scaf/forces{
+	pixel_x = -32
+	},
+/turf/open/misc/snow,
+/area/mara17/exterior)
 "sz" = (
 /obj/docking_port/stationary{
 	dwidth = 6;
@@ -5425,8 +5453,11 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/enginieering)
-"sR" = (
-/turf/open/floor/deadspace/random/slides_end,
+"sF" = (
+/obj/machinery/door/airlock/mining,
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining)
 "sW" = (
 /obj/structure/cable,
@@ -5441,6 +5472,26 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/observation/storage)
+"ti" = (
+/obj/structure/rack/shelf,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/mining)
 "tn" = (
 /turf/closed/wall,
 /area/mara17/exterior)
@@ -5454,10 +5505,17 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/observation/storage)
+"uh" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/civilian)
 "uw" = (
 /obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/tcomms)
+"ux" = (
+/turf/open/space/basic,
+/area/mara17/exterior)
 "uy" = (
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/observation)
@@ -5470,6 +5528,9 @@
 /area/mara17/interior/upper/warehouse)
 "uO" = (
 /obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/access2)
 "uW" = (
@@ -5479,12 +5540,14 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
-"vd" = (
-/turf/closed/wall,
-/area/mara17/interior/upper/cargo/cargo_tech)
 "vl" = (
-/turf/closed/wall/rust,
-/area/mara17/interior/upper/medical/morgue)
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/random/rectangles,
+/area/mara17/exterior)
+"vA" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access3)
 "vC" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
@@ -5502,28 +5565,30 @@
 /area/mara17/interior/upper/cargo/quartermaster)
 "vX" = (
 /obj/machinery/camera/autoname/directional/south,
-/turf/open/floor/deadspace/grater,
+/turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/access2)
 "wf" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access3)
+"wg" = (
+/turf/open/floor/deadspace/random/slides_end,
+/area/mara17/interior/upper/mining)
 "wl" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/watchtower)
+"wu" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical/cmo)
+"wF" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/civilian)
 "wH" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/medical)
-"wI" = (
-/obj/effect/turf_decal/loading_area{
-	dir = 4
-	},
-/obj/structure/cable,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
-"wM" = (
-/turf/closed/wall,
-/area/mara17/interior/upper/mining/bathrooms)
 "wR" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/grater,
@@ -5533,6 +5598,15 @@
 /obj/effect/spawner/random/medical/minor_healing,
 /turf/open/floor/deadspace/medical,
 /area/mara17/interior/upper/abandoned/romero_res_medbay)
+"xb" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/civilian)
+"xd" = (
+/obj/structure/cable,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access1)
 "xx" = (
 /obj/item/wrench,
 /turf/open/misc/snow,
@@ -5556,42 +5630,36 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/enginieering)
-"xM" = (
-/obj/machinery/stasis,
-/obj/structure/cable,
+"xN" = (
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
+/area/mara17/interior/upper/access1)
 "xS" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/mining)
-"yr" = (
-/obj/structure/rack/shelf,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/turf/open/floor/deadspace/random/rectangles,
-/area/mara17/exterior)
+"ye" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/observation/dorms)
+"yn" = (
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/civilian)
 "yy" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/civilian)
 "yE" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
-/turf/open/floor/deadspace/grater,
+/obj/machinery/door/airlock/external{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "access2"
+	},
+/turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/access1)
 "yI" = (
 /turf/open/floor/deadspace/random/golf_brown,
@@ -5600,6 +5668,11 @@
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access3)
+"za" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/abandoned/romero_checkpoint)
 "zk" = (
 /turf/open/floor/carpet/orange,
 /area/mara17/interior/upper/cargo)
@@ -5610,20 +5683,14 @@
 	},
 /area/mara17/interior/upper/abandoned/romero_interior)
 "zp" = (
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/access3)
+/turf/closed/wall,
+/area/mara17/interior/upper/observation/comms)
 "zx" = (
 /turf/open/openspace,
 /area/mara17/interior/upper/access3)
 "zA" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/observation)
-"zN" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/north,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical/cmo)
 "zO" = (
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/cargo/quartermaster)
@@ -5638,33 +5705,39 @@
 "Ao" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/watchtower)
-"Ar" = (
-/obj/structure/railing{
-	dir = 8
+"At" = (
+/obj/structure/bed{
+	pixel_y = 14
 	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/upper/mining)
-"Aw" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/east,
+/obj/item/bedsheet/yellow{
+	pixel_y = 14
+	},
+/obj/effect/landmark/start/station_engineer,
+/obj/item/bedsheet/yellow,
+/obj/structure/bed,
 /turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/observation/dorms)
+/area/mara17/interior/upper/enginieering/interior)
 "AB" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access1)
+"AE" = (
+/turf/closed/wall/rust,
+/area/mara17/interior/upper/medical/cmo)
 "AL" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/abandoned/romero_res_medbay)
-"AO" = (
-/obj/structure/railing{
-	dir = 8
+"AQ" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "access3"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/upper/mining)
+/obj/machinery/door/airlock/external{
+	dir = 4
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/access3)
 "AV" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
@@ -5703,14 +5776,6 @@
 "Bz" = (
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/observation/dorms)
-"BG" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "warehouse_link"
-	},
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/warehouse)
 "BI" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/deadspace/mono,
@@ -5722,11 +5787,20 @@
 /obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access2)
-"Cb" = (
+"BX" = (
+/obj/machinery/status_display/evac/directional/east,
+/turf/open/floor/deadspace/roller,
+/area/mara17/exterior)
+"Cn" = (
 /obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
 /turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/enginieering)
+/area/mara17/interior/upper/civilian)
+"Co" = (
+/turf/closed/wall,
+/area/mara17/interior/upper/medical/cmo)
 "Cq" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
@@ -5749,37 +5823,41 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/medical)
+"Dg" = (
+/obj/structure/sign/directions/security{
+	dir = 8;
+	pixel_y = 36
+	},
+/obj/structure/sign/directions/command{
+	dir = 8;
+	pixel_y = 30
+	},
+/turf/open/floor/deadspace/roller,
+/area/mara17/exterior)
 "Dk" = (
 /turf/closed/wall/rust,
 /area/mara17/interior/upper/cargo)
+"Do" = (
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/enginieering)
 "Dp" = (
 /obj/structure/chair/office,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/watchtower)
+"Dq" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/civilian)
 "Dy" = (
 /turf/open/floor/deadspace/cable_end,
 /area/mara17/interior/upper/mining)
 "DN" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
-/obj/structure/rack/shelf,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access2)
 "DO" = (
@@ -5793,13 +5871,17 @@
 "Eb" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/tcomms)
+"Ef" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access3)
 "Ew" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/mining/relax_room)
 "EC" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/mining/relax_room)
+/area/mara17/interior/upper/mining/barracks)
 "EG" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor,
@@ -5812,13 +5894,28 @@
 "Fc" = (
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/cargo/cargo_tech)
+"Fo" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
+"Ft" = (
+/obj/machinery/door/airlock/external,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/civilian)
 "Fx" = (
 /obj/machinery/door/airlock,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/abandoned/romero_storage)
 "Fy" = (
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/caves)
+/turf/closed/wall/r_wall,
+/area/mara17/interior/upper/tcomms/comms)
 "FB" = (
 /turf/open/floor/deadspace/cable,
 /area/mara17/interior/upper/mining)
@@ -5826,9 +5923,16 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/roller,
 /area/mara17/exterior)
-"FP" = (
-/turf/closed/wall/rust,
-/area/mara17/interior/upper/cargo/cargo_tech)
+"FL" = (
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "access3"
+	},
+/obj/machinery/door/airlock/external{
+	dir = 4
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/access3)
 "FU" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor,
@@ -5838,23 +5942,9 @@
 /obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
-"Gd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/upper/mining)
 "Gm" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/access3)
-"Gv" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
-	},
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/mining)
 "Gy" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
@@ -5866,6 +5956,10 @@
 "GE" = (
 /turf/open/floor/deadspace/medical,
 /area/mara17/interior/upper/observation/bathroom)
+"GO" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/cable,
+/area/mara17/interior/upper/mining)
 "GX" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/cable,
@@ -5874,19 +5968,13 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/evacuation)
-"He" = (
-/turf/closed/wall,
-/area/mara17/interior/upper/medical/cmo)
-"Hg" = (
-/turf/open/space/basic,
-/area/mara17/exterior)
+"Hh" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/openspace,
+/area/mara17/interior/upper/access1)
 "Hj" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
-"Hn" = (
-/obj/structure/cable,
-/turf/open/floor/deadspace/cable,
-/area/mara17/interior/upper/mining)
 "Ho" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -5914,9 +6002,9 @@
 "HE" = (
 /turf/open/floor/deadspace/medical,
 /area/mara17/interior/upper/mining/bathrooms)
-"HG" = (
-/turf/closed/wall,
-/area/mara17/interior/upper/observation/bathroom)
+"HZ" = (
+/turf/open/misc/snow,
+/area/mara17/interior/upper/access1)
 "Ic" = (
 /obj/effect/spawner/random/trash/grime,
 /obj/structure/tank_dispenser/oxygen,
@@ -5925,8 +6013,15 @@
 "Id" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/access2)
+"Iy" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access3)
 "II" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/mining)
@@ -5935,7 +6030,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/tcomms)
 "IZ" = (
-/obj/structure/tank_dispenser/oxygen,
+/obj/machinery/space_heater,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access2)
 "Jg" = (
@@ -5949,6 +6044,9 @@
 "Jw" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "access2"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/access1)
 "JA" = (
@@ -5967,56 +6065,17 @@
 /area/mara17/interior/upper/enginieering/interior)
 "Kp" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/mining/barracks)
+/area/mara17/interior/upper/mining/relax_room)
 "Kv" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/observation)
 "KB" = (
-/obj/machinery/camera/autoname/directional/south,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/access1)
-"KC" = (
-/obj/structure/rack/shelf,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/upper/mining)
+/turf/closed/wall,
+/area/mara17/interior/upper/enginieering/interior)
 "KL" = (
-/obj/machinery/camera/autoname/directional/north,
-/obj/structure/rack/shelf,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/access3)
+/turf/closed/wall/rust,
+/area/mara17/interior/upper/medical/morgue)
 "KM" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
@@ -6025,9 +6084,36 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
+"KR" = (
+/obj/structure/sign/poster/scaf/forces{
+	pixel_x = -32
+	},
+/turf/open/floor/plating/snowed,
+/area/mara17/exterior)
 "KU" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/enginieering/interior)
+"Ld" = (
+/obj/structure/rack/shelf,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/turf/open/floor/deadspace/random/rectangles,
+/area/mara17/exterior)
 "Lx" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -6040,16 +6126,18 @@
 /obj/machinery/light/warm/directional/west,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/mining/barracks)
-"Mp" = (
-/obj/effect/turf_decal/delivery,
+"Mw" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/mining)
+"MN" = (
+/obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
-"MK" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/east,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/mining/tool_storage)
+/area/mara17/interior/upper/access3)
 "MS" = (
 /obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
@@ -6094,14 +6182,6 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/observation)
-"OF" = (
-/turf/open/floor/deadspace/random/rectangles,
-/area/mara17/exterior)
-"OK" = (
-/obj/machinery/power/apc/auto_name/directional/south,
-/obj/structure/cable,
-/turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/civilian)
 "OL" = (
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/deadspace/grater,
@@ -6129,21 +6209,15 @@
 "Pm" = (
 /turf/open/floor/deadspace/cable_start,
 /area/mara17/interior/upper/mining)
+"Pn" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/east,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/mining/tool_storage)
 "Pr" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms/comms)
-"Py" = (
-/obj/machinery/door/airlock/external{
-	name = "Telecommunications airlock";
-	req_one_access_txt = "19; 61"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "telecom_link"
-	},
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/tcomms)
 "PE" = (
 /obj/machinery/light/warm/directional/west,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -6155,9 +6229,13 @@
 "PL" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/access1)
-"PM" = (
-/turf/closed/wall/rust,
-/area/mara17/interior/upper/medical/cmo)
+"PZ" = (
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/mining)
 "Qc" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/deadspace/mono,
@@ -6192,6 +6270,9 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/abandoned/romero_pen)
+"Rh" = (
+/turf/open/floor/deadspace/random/rectangles,
+/area/mara17/exterior)
 "RG" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/cargo)
@@ -6208,6 +6289,13 @@
 "Sd" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining)
+"Si" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/mining)
 "Sy" = (
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/enginieering/interior)
@@ -6217,33 +6305,42 @@
 "Ta" = (
 /turf/closed/wall,
 /area/mara17/interior/medium/abandoned/watchtower2)
-"Td" = (
-/obj/machinery/door/airlock/mining,
-/obj/machinery/door/firedoor,
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/mining)
 "Tt" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/observation/storage)
 "TE" = (
-/turf/open/openspace,
-/area/mara17/interior/medium/abandoned)
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "warehouse_link"
+	},
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/warehouse)
 "TM" = (
 /obj/machinery/space_heater,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/evacuation)
 "TN" = (
-/obj/structure/bed{
-	pixel_y = 14
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "access3"
 	},
-/obj/effect/landmark/start/shaft_miner,
-/obj/structure/bed,
-/turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/mining/barracks)
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/access3)
+"TO" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/access2)
 "TQ" = (
-/turf/closed/wall,
-/area/mara17/interior/upper/observation/dorms)
+/obj/machinery/door/airlock/external,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/civilian)
 "TV" = (
 /turf/closed/mineral/snowmountain,
 /area/mara17/exterior)
@@ -6251,13 +6348,38 @@
 /obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/abandoned/romero_interior)
+"Uc" = (
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/access2)
+"Us" = (
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/civilian)
+"Ut" = (
+/obj/machinery/door/airlock/external{
+	name = "Telecommunications airlock";
+	req_one_access_txt = "19; 61"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "telecom_link"
+	},
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/tcomms)
 "Uu" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/evacuation)
 "Ux" = (
-/obj/machinery/status_display/evac/directional/east,
+/obj/structure/chair,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access3)
+"UL" = (
+/obj/effect/turf_decal/delivery,
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "UM" = (
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/deadspace/grater,
@@ -6269,13 +6391,25 @@
 "US" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/observation)
-"UT" = (
-/turf/closed/wall/rust,
-/area/mara17/interior/upper/cargo/quartermaster)
+"UW" = (
+/obj/machinery/space_heater,
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access1)
 "UZ" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/access1)
+"Vn" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/civilian)
+"Vt" = (
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/enginieering)
 "VF" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/access1)
@@ -6283,9 +6417,12 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/civilian)
 "VS" = (
-/obj/machinery/light/small/directional/north,
-/obj/structure/chair,
-/turf/open/floor/deadspace/grater,
+/obj/machinery/door/airlock/external,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "access3"
+	},
+/turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/access3)
 "Wd" = (
 /obj/machinery/door/airlock/external,
@@ -6297,11 +6434,7 @@
 /area/mara17/interior/upper/observation)
 "We" = (
 /turf/closed/wall,
-/area/mara17/interior/upper/enginieering/ce)
-"Wn" = (
-/obj/structure/tank_dispenser/oxygen,
-/turf/open/floor/deadspace/random/rectangles,
-/area/mara17/exterior)
+/area/mara17/interior/upper/abandoned/romero_pen)
 "Wo" = (
 /obj/effect/spawner/random/trash/mess,
 /turf/open/floor/deadspace/random/rivets,
@@ -6326,9 +6459,9 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/enginieering)
-"Xh" = (
+"Xf" = (
 /obj/structure/railing{
-	dir = 4
+	dir = 8
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining)
@@ -6341,11 +6474,6 @@
 /obj/item/storage/medkit/regular,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/observation/storage)
-"XC" = (
-/obj/machinery/power/apc/auto_name/directional/east,
-/obj/structure/cable,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/enginieering)
 "XE" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/enginieering)
@@ -6375,29 +6503,22 @@
 "Yp" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining/ore_storage)
-"Yr" = (
-/obj/structure/bed{
-	pixel_y = 14
-	},
-/obj/item/bedsheet/yellow{
-	pixel_y = 14
-	},
-/obj/effect/landmark/start/station_engineer,
-/obj/item/bedsheet/yellow,
-/obj/structure/bed,
-/turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/enginieering/interior)
 "Yu" = (
 /turf/open/floor/deadspace/random/maint_center,
 /area/mara17/interior/upper/mining/barracks)
+"Yv" = (
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/mining)
 "YC" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/access2)
 "YE" = (
-/obj/machinery/door/airlock/external,
+/obj/machinery/stasis,
 /obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/access3)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "YF" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/warehouse)
@@ -6418,12 +6539,19 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/evacuation)
-"Zg" = (
+"Za" = (
 /obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/access3)
+/area/mara17/interior/upper/enginieering)
+"Zg" = (
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/civilian)
 "Zl" = (
 /obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "access2"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/access1)
 "Zt" = (
@@ -6433,26 +6561,34 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/medical)
-"Zz" = (
-/obj/machinery/space_heater,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/access1)
-"ZH" = (
-/obj/machinery/door/airlock/external,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
+"Zw" = (
+/obj/structure/railing{
+	dir = 4
 	},
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/enginieering)
-"ZL" = (
-/obj/structure/closet/secure_closet/miner/mara,
-/obj/structure/window/reinforced/spawner/north,
-/obj/effect/turf_decal/ported,
-/obj/item/stock_parts/cell/plasmacutter,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mara17/interior/upper/mining)
+"Zz" = (
+/obj/machinery/camera/autoname/directional/north,
+/obj/structure/rack/shelf,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
 /obj/item/clothing/mask/breath,
-/obj/structure/cable,
-/turf/open/floor/deadspace/random/golf_gray,
-/area/mara17/interior/upper/mining/locker_room)
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/access3)
 "ZR" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/abandoned/romero_aux)
@@ -7374,18 +7510,18 @@ aM
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
@@ -7400,13 +7536,13 @@ aM
 aM
 aM
 aM
-EC
-EC
-EC
-EC
-EC
-EC
-EC
+Kp
+Kp
+Kp
+Kp
+Kp
+Kp
+Kp
 aM
 aM
 aM
@@ -7516,18 +7652,18 @@ aM
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
@@ -7541,15 +7677,15 @@ aM
 aM
 aM
 aM
-EC
-EC
+Kp
+Kp
 MY
 fa
 tO
 dj
 tO
-EC
-EC
+Kp
+Kp
 aM
 aM
 aM
@@ -7658,18 +7794,18 @@ aM
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
@@ -7683,7 +7819,7 @@ aM
 aM
 aM
 aM
-EC
+Kp
 dg
 MY
 oE
@@ -7691,7 +7827,7 @@ tO
 tO
 hU
 hU
-EC
+Kp
 aM
 aM
 aM
@@ -7800,18 +7936,18 @@ aM
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
@@ -7825,7 +7961,7 @@ aM
 aM
 aM
 aM
-EC
+Kp
 dh
 MY
 oE
@@ -7833,7 +7969,7 @@ tO
 tO
 lP
 mE
-EC
+Kp
 aM
 aM
 aM
@@ -7942,18 +8078,18 @@ aM
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
@@ -7967,7 +8103,7 @@ aM
 aM
 aM
 aM
-EC
+Kp
 lK
 Ew
 oE
@@ -7975,7 +8111,7 @@ tO
 tO
 mD
 mE
-EC
+Kp
 aM
 aM
 aM
@@ -8084,18 +8220,18 @@ aM
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
@@ -8109,7 +8245,7 @@ aM
 aM
 aM
 aM
-EC
+Kp
 eZ
 Ew
 hM
@@ -8117,7 +8253,7 @@ tO
 tO
 hX
 hX
-EC
+Kp
 aM
 aM
 aM
@@ -8226,46 +8362,46 @@ aM
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
 aM
 aM
 aM
-wM
-wM
-wM
-wM
-wM
-wM
-wM
-EC
-EC
+mL
+mL
+mL
+mL
+mL
+mL
+mL
+Kp
+Kp
 ln
-EC
-EC
-EC
-EC
-EC
-EC
 Kp
 Kp
 Kp
 Kp
 Kp
 Kp
+EC
+EC
+EC
+EC
+EC
+EC
 aM
 aM
 aM
@@ -8368,46 +8504,46 @@ aM
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
 aM
 aM
 aM
-wM
+mL
 gT
-wM
+mL
 fv
-wM
+mL
 fv
-wM
+mL
 hR
 lQ
 bm
 Mg
 fx
-Kp
-Kp
-TN
-Kp
+EC
+EC
+ez
+EC
 hY
-Kp
-TN
-Kp
-TN
-Kp
+EC
+ez
+EC
+ez
+EC
 aM
 aM
 aM
@@ -8510,31 +8646,31 @@ Uu
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
 aM
 aM
 aM
-wM
+mL
 bl
-wM
+mL
 bl
-wM
+mL
 bl
-wM
+mL
 lL
 ce
 bm
@@ -8549,7 +8685,7 @@ MT
 MT
 cd
 MT
-Kp
+EC
 aM
 aM
 aM
@@ -8652,13 +8788,13 @@ Uu
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 mP
 mP
@@ -8670,13 +8806,13 @@ aM
 aM
 aM
 aM
-wM
+mL
 HE
 HE
 HE
 HE
 kZ
-wM
+mL
 hS
 hV
 bm
@@ -8691,7 +8827,7 @@ Yu
 Yu
 Yu
 fe
-Kp
+EC
 aM
 aM
 aM
@@ -8794,13 +8930,13 @@ Uu
 aM
 aM
 mP
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
-Fy
+gz
+gz
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
@@ -8812,7 +8948,7 @@ aM
 aM
 aM
 aM
-wM
+mL
 iw
 iw
 cu
@@ -8833,7 +8969,7 @@ Yu
 Yu
 Yu
 hO
-Kp
+EC
 aM
 aM
 aM
@@ -8936,13 +9072,13 @@ Uu
 aM
 aM
 mP
-ez
-ez
-Fy
-Fy
-Fy
-Fy
-Fy
+rN
+rN
+gz
+gz
+gz
+gz
+gz
 mP
 aM
 aM
@@ -8954,13 +9090,13 @@ aM
 aM
 aM
 aM
-wM
-wM
-wM
-wM
-wM
-wM
-wM
+mL
+mL
+mL
+mL
+mL
+mL
+mL
 eY
 ah
 ah
@@ -8975,7 +9111,7 @@ MT
 MT
 MT
 MT
-Kp
+EC
 aM
 aM
 aM
@@ -9078,13 +9214,13 @@ Uu
 aM
 aM
 mP
-ez
-ez
-ez
-Fy
-Fy
-Fy
-Fy
+rN
+rN
+rN
+gz
+gz
+gz
+gz
 mP
 aM
 aM
@@ -9102,22 +9238,22 @@ aM
 aM
 aM
 aM
-Kp
+EC
 ah
 ah
 ah
 bm
 dE
-Kp
-Kp
-TN
-Kp
-TN
-Kp
-TN
-Kp
-TN
-Kp
+EC
+EC
+ez
+EC
+ez
+EC
+ez
+EC
+ez
+EC
 aM
 aM
 aM
@@ -9221,10 +9357,10 @@ dF
 dF
 mP
 mP
-ez
-ez
-ez
-ez
+rN
+rN
+rN
+rN
 mP
 mP
 mP
@@ -9244,22 +9380,22 @@ aM
 aM
 aM
 aM
-Kp
+EC
 lM
 ah
 ah
 bm
 dk
-Kp
-Kp
-Kp
-Kp
-Kp
-Kp
-Kp
-Kp
-Kp
-Kp
+EC
+EC
+EC
+EC
+EC
+EC
+EC
+EC
+EC
+EC
 aM
 aM
 aM
@@ -9386,13 +9522,13 @@ aM
 aM
 aM
 aM
-Kp
+EC
 lN
 lR
 lC
 bm
 dl
-Kp
+EC
 aM
 aM
 aM
@@ -9504,12 +9640,12 @@ dF
 dF
 dF
 tn
-yr
+Ld
 ad
 ad
 ad
 ad
-OF
+Rh
 mP
 aM
 aM
@@ -9517,24 +9653,24 @@ aM
 aM
 aM
 aM
-gA
-gA
-gA
-gA
-gA
-gA
-gA
-gA
-gA
-gA
-gA
-Kp
-Kp
-Kp
-Kp
+kt
+kt
+kt
+kt
+kt
+kt
+kt
+kt
+kt
+kt
+kt
+EC
+EC
+EC
+EC
 lq
-Kp
-Kp
+EC
+EC
 xS
 xS
 xS
@@ -9646,12 +9782,12 @@ dF
 dF
 dF
 tn
-Wn
+vl
 ad
 bY
 ad
 ad
-OF
+Rh
 tn
 aM
 aM
@@ -9659,7 +9795,7 @@ aM
 aM
 aM
 aM
-gA
+kt
 ir
 Ah
 cD
@@ -9672,7 +9808,7 @@ cK
 iD
 iD
 cH
-gA
+kt
 Sd
 lr
 eX
@@ -9801,7 +9937,7 @@ aM
 aM
 aM
 aM
-gA
+kt
 ir
 Ah
 cE
@@ -9814,11 +9950,11 @@ cL
 Ah
 iD
 cH
-gA
+kt
 Sd
 lT
 Sd
-sR
+wg
 LK
 LK
 xS
@@ -9943,7 +10079,7 @@ dF
 aM
 aM
 aM
-gA
+kt
 Yp
 Yp
 cF
@@ -9956,13 +10092,13 @@ cF
 Yp
 Yp
 lO
-gA
+kt
 ft
 lr
 Sd
 eX
-Ar
-AO
+Xf
+Mw
 cV
 LK
 LK
@@ -10085,7 +10221,7 @@ dF
 dF
 aM
 aM
-gA
+kt
 sg
 Yp
 Yp
@@ -10098,7 +10234,7 @@ iz
 Yp
 Yp
 cv
-gA
+kt
 co
 lr
 Sd
@@ -10515,16 +10651,16 @@ YQ
 Yp
 Yp
 cG
-gA
-gA
-gA
+kt
+kt
+kt
 Yp
 Yp
 iC
 Yp
 Yp
 Yp
-gA
+kt
 Sd
 fq
 Sd
@@ -10628,12 +10764,12 @@ dF
 dF
 dF
 dF
-We
-We
-We
-We
-We
-We
+mK
+mK
+mK
+mK
+mK
+mK
 dF
 dF
 dF
@@ -10653,11 +10789,11 @@ dF
 dF
 dF
 dF
-gA
+kt
 is
 is
 cH
-gA
+kt
 is
 is
 Yp
@@ -10666,7 +10802,7 @@ Yp
 cJ
 is
 is
-gA
+kt
 Sd
 fq
 Sd
@@ -10769,13 +10905,13 @@ dF
 dF
 dF
 dF
-We
-We
+mK
+mK
 nb
 oD
 oD
 oF
-We
+mK
 dF
 dF
 dF
@@ -10795,11 +10931,11 @@ dF
 dF
 dF
 dF
-gA
+kt
 is
 is
 cH
-gA
+kt
 is
 is
 kV
@@ -10808,7 +10944,7 @@ Ho
 cJ
 is
 is
-gA
+kt
 Sd
 lr
 Sd
@@ -10835,16 +10971,16 @@ aM
 aM
 aM
 aM
-lg
-lg
-lg
-lg
-lg
-lg
-lg
-lg
-lg
-lg
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 aM
 aM
 aM
@@ -10911,13 +11047,13 @@ dF
 dF
 dF
 aW
-We
+mK
 de
 oD
 nS
 oD
 pb
-We
+mK
 dF
 dF
 dF
@@ -10937,20 +11073,20 @@ dF
 dF
 dF
 dF
-gA
-gA
-gA
-gA
-gA
-gA
-gA
-gA
-gA
+kt
+kt
+kt
+kt
+kt
+kt
+kt
+kt
+kt
 AV
 fo
-gA
-gA
-gA
+kt
+kt
+kt
 co
 lr
 Sd
@@ -10977,16 +11113,16 @@ aM
 aM
 aM
 aM
-lg
+kv
 nD
 nJ
-lg
+kv
 nD
 nJ
-lg
+kv
 nD
 nJ
-lg
+kv
 aM
 aM
 aM
@@ -11053,13 +11189,13 @@ dF
 dF
 dF
 dF
-We
+mK
 dH
 nc
 oh
 oD
 pd
-We
+mK
 dF
 dF
 dF
@@ -11119,16 +11255,16 @@ aM
 aM
 aM
 aM
-lg
+kv
 nF
 qk
-lg
+kv
 wU
 qx
-lg
+kv
 nF
 qk
-lg
+kv
 aM
 aM
 aM
@@ -11195,13 +11331,13 @@ dF
 dF
 dF
 dF
-We
+mK
 fA
 nN
 nN
 nN
-We
-We
+mK
+mK
 dF
 dF
 dF
@@ -11221,13 +11357,13 @@ ak
 ak
 ak
 ak
-pq
+Yv
 Sd
 Sd
 Sd
 Sd
 Sd
-Gv
+PZ
 Sd
 Sd
 sW
@@ -11261,7 +11397,7 @@ aM
 aM
 aM
 aM
-lg
+kv
 qj
 pz
 nj
@@ -11270,7 +11406,7 @@ nj
 om
 nj
 qx
-lg
+kv
 aM
 aM
 aM
@@ -11337,12 +11473,12 @@ dF
 dF
 dF
 dF
-We
+mK
 na
 nO
 oD
 nN
-We
+mK
 bO
 dF
 dF
@@ -11372,7 +11508,7 @@ Sd
 xS
 Sd
 Dy
-Hn
+GO
 FB
 Pm
 Sd
@@ -11403,7 +11539,7 @@ aM
 aM
 aM
 aM
-lg
+kv
 nG
 ql
 nj
@@ -11412,7 +11548,7 @@ nG
 qz
 nG
 nj
-lg
+kv
 aM
 aM
 aM
@@ -11479,12 +11615,12 @@ dF
 dF
 dF
 qU
-We
-We
-We
-We
+mK
+mK
+mK
+mK
 ol
-We
+mK
 qU
 qU
 dF
@@ -11518,7 +11654,7 @@ sW
 sW
 sW
 sW
-Td
+sF
 sW
 fq
 aG
@@ -11545,7 +11681,7 @@ aM
 aM
 aM
 aM
-lg
+kv
 nH
 pz
 om
@@ -11553,8 +11689,8 @@ qw
 nH
 nj
 nH
-lg
-lg
+kv
+kv
 aM
 aM
 aM
@@ -11633,7 +11769,7 @@ qU
 dF
 dF
 dF
-Hg
+ux
 ak
 mQ
 dF
@@ -11649,7 +11785,7 @@ dF
 dF
 xS
 Nd
-KC
+ti
 fX
 Sd
 Nd
@@ -11687,7 +11823,7 @@ aM
 aM
 aM
 aM
-lg
+kv
 nG
 pz
 nj
@@ -11695,7 +11831,7 @@ qx
 nG
 qk
 nG
-lg
+kv
 aM
 aM
 aM
@@ -11795,14 +11931,14 @@ pp
 pp
 pp
 pp
-gz
-gz
-gz
+ls
+ls
+ls
 kX
 fz
-gz
-gz
-gz
+ls
+ls
+ls
 co
 aL
 Sd
@@ -11821,23 +11957,23 @@ LK
 xS
 aM
 aM
-ks
-ks
-ks
-ks
-ks
-ks
-ks
-ks
-ks
-ks
+We
+We
+We
+We
+We
+We
+We
+We
+We
+We
 pz
 qr
 om
-lg
-lg
-lg
-lg
+kv
+kv
+kv
+kv
 aM
 aM
 aM
@@ -11937,14 +12073,14 @@ fN
 fO
 Nu
 fR
-gz
+ls
 hT
 lF
 kW
 aK
 lG
 hT
-gz
+ls
 Sd
 aL
 Sd
@@ -11963,20 +12099,20 @@ LK
 xS
 aM
 aM
-ks
+We
 nL
 pV
-ks
+We
 qa
 cZ
-ks
+We
 nL
 oX
-ks
+We
 pz
 nj
 qx
-lg
+kv
 aM
 aM
 aM
@@ -12079,14 +12215,14 @@ Nu
 Nu
 fU
 fS
-gz
+ls
 ld
 aK
 kW
 aK
 aK
 aK
-gz
+ls
 ft
 II
 Sd
@@ -12105,20 +12241,20 @@ LK
 xS
 aM
 aM
-ks
+We
 cZ
 oX
-ks
+We
 oX
 oX
-ks
+We
 oX
 qh
-ks
+We
 AL
 qs
-lg
-lg
+kv
+kv
 qC
 qC
 qC
@@ -12221,14 +12357,14 @@ Nu
 Nu
 Nu
 fT
-gz
+ls
 ct
 aK
 kW
 aK
 iF
 iG
-gz
+ls
 Sd
 II
 Sd
@@ -12247,16 +12383,16 @@ Wp
 xS
 aM
 aM
-ks
+We
 nk
 nk
-ks
+We
 nk
 nm
-ks
+We
 nk
 nk
-ks
+We
 qY
 Sb
 ZR
@@ -12339,10 +12475,10 @@ xF
 XE
 XE
 XE
-Cb
+Za
 XE
 XE
-ZH
+Do
 ak
 ak
 ak
@@ -12363,14 +12499,14 @@ fU
 iK
 Nu
 ns
-gz
+ls
 fk
 aK
 kW
 aK
 lI
 fr
-gz
+ls
 Sd
 II
 Sd
@@ -12389,7 +12525,7 @@ LK
 xS
 aM
 aM
-ks
+We
 pU
 pW
 pw
@@ -12505,14 +12641,14 @@ Nu
 js
 Nu
 Nu
-gz
+ls
 gy
 kW
-ZL
+pq
 lH
 hT
 hT
-gz
+ls
 Sd
 aL
 Sd
@@ -12531,7 +12667,7 @@ LK
 xS
 aM
 aM
-ks
+We
 aS
 pX
 Rf
@@ -12540,13 +12676,13 @@ aS
 Rf
 pX
 aS
-ks
+We
 pY
 qY
-lo
-lo
-lo
-lo
+lp
+lp
+lp
+lp
 bJ
 og
 og
@@ -12647,20 +12783,20 @@ Nu
 Nu
 Nu
 gM
-gz
-gz
+ls
+ls
 kX
-gz
-gz
-gz
-gz
-gz
+ls
+ls
+ls
+ls
+ls
 lS
 aL
 Sd
 Sd
-Xh
-Gd
+Zw
+Si
 cV
 LK
 LK
@@ -12673,19 +12809,19 @@ LK
 xS
 aM
 aM
-ks
-ks
-ks
-ks
-ks
+We
+We
+We
+We
+We
 nq
 nq
 nq
-ks
-ks
+We
+We
 qn
 qt
-lo
+lp
 qy
 ny
 rA
@@ -12754,11 +12890,11 @@ dF
 dF
 dF
 dF
-lp
-lp
-lp
-lp
-XC
+KB
+KB
+KB
+KB
+Vt
 xF
 Oq
 xF
@@ -12817,17 +12953,17 @@ aM
 aM
 aM
 aM
-ks
+We
 nl
 JZ
 JZ
 qb
 JZ
 nl
-ks
+We
 nV
 qY
-lo
+lp
 rw
 SG
 ny
@@ -12871,14 +13007,14 @@ qf
 Dk
 Dk
 qf
-hv
-hv
+lg
+lg
 vW
 eg
 vW
-hv
-hv
-UT
+lg
+lg
+ai
 tE
 tE
 Hu
@@ -12895,20 +13031,20 @@ dF
 dF
 dF
 dF
-lp
-lp
-Yr
+KB
+KB
+At
 cl
-lp
-lp
-lp
-lp
+KB
+KB
+KB
+KB
 kD
-lp
-lp
-lp
-lp
-lp
+KB
+KB
+KB
+KB
+KB
 dF
 dF
 dF
@@ -12942,7 +13078,7 @@ xS
 fu
 fw
 Sd
-sR
+wg
 LK
 LK
 xS
@@ -12959,17 +13095,17 @@ aM
 aM
 aM
 aM
-ks
+We
 nl
 qb
 qc
 JZ
 JZ
 nl
-ks
+We
 nV
 qY
-lo
+lp
 rx
 ry
 ry
@@ -13013,21 +13149,21 @@ aM
 aM
 aM
 aM
-hv
+lg
 hB
 zO
 nC
 zO
 eG
 eJ
-UT
+ai
 EG
 EG
 jM
 EG
 EG
-vd
-vd
+le
+le
 dF
 fs
 ak
@@ -13037,8 +13173,8 @@ dF
 dF
 dF
 dF
-lp
-Yr
+KB
+At
 Sy
 Sy
 Sy
@@ -13050,11 +13186,11 @@ uW
 uW
 KU
 mz
-lp
+KB
 dF
-dF
-dF
-dF
+Gm
+Gm
+Gm
 Gm
 zx
 zx
@@ -13071,7 +13207,7 @@ pp
 fM
 fP
 kl
-MK
+Pn
 eW
 eW
 eW
@@ -13101,20 +13237,20 @@ aM
 aM
 aM
 aM
-ks
-ks
+We
+We
 nl
 nl
 nl
-ks
-ks
-ks
+We
+We
+We
 qo
 qu
-lo
-lo
-lo
-lo
+lp
+lp
+lp
+lp
 og
 og
 rq
@@ -13155,21 +13291,21 @@ aM
 aM
 aM
 aM
-UT
+ai
 bH
 zO
 nC
 zO
 zO
 iI
-hv
+lg
 Fc
 Fc
 Cq
 Cq
 Cq
 kq
-vd
+le
 dF
 dF
 dF
@@ -13179,8 +13315,8 @@ dF
 dF
 dF
 dF
-lp
-Yr
+KB
+At
 Sy
 eu
 Sy
@@ -13192,17 +13328,17 @@ BO
 uW
 KU
 mA
-lp
-dF
-dF
+KB
 dF
 Gm
+yP
+Zz
 Gm
 Gz
 Gz
 Gm
-Gm
-mK
+dF
+FC
 ak
 cy
 dF
@@ -13244,11 +13380,11 @@ aM
 aM
 aM
 aM
-ks
-ks
-ks
-ks
-ks
+We
+We
+We
+We
+We
 dF
 nI
 dF
@@ -13297,21 +13433,21 @@ aM
 aM
 aM
 aM
-hv
-hv
+lg
+lg
 bR
 nC
 zO
 zO
 QV
-UT
+ai
 gr
 Fc
 Fc
 Fc
 Fc
 kj
-FP
+gG
 bO
 dF
 ak
@@ -13321,29 +13457,29 @@ dF
 dF
 dF
 dF
-lp
-lp
-lp
-lp
-lp
-lp
+KB
+KB
+KB
+KB
+KB
+KB
 ew
 Jg
 Jg
 BO
 uW
-lp
-lp
-lp
-dF
-dF
+KB
+KB
+KB
 dF
 Gm
-UN
 wf
 wf
-rN
-YE
+TN
+wf
+vA
+Gm
+dF
 mQ
 ak
 ak
@@ -13440,20 +13576,20 @@ aM
 aM
 aM
 aM
-UT
+ai
 rn
 cC
 hI
 dm
 zO
-hv
+lg
 cT
 cT
 cT
 da
 Fc
 fH
-vd
+le
 dF
 dF
 dF
@@ -13468,7 +13604,7 @@ dF
 dF
 dF
 dF
-lp
+KB
 mH
 BO
 BO
@@ -13476,16 +13612,16 @@ mk
 uW
 mr
 mB
-lp
-dF
-dF
+KB
 dF
 Gm
+Iy
+Ef
 VS
-wf
-wf
-wf
-Zg
+Ef
+MN
+Gm
+dF
 mQ
 dF
 cy
@@ -13582,20 +13718,20 @@ aM
 aM
 aM
 aM
-hv
+lg
 rn
 eT
 ip
 fE
 zO
-hv
+lg
 di
 di
 eM
 iV
 mF
 mG
-vd
+le
 dF
 dF
 ak
@@ -13610,7 +13746,7 @@ FC
 FC
 dF
 dF
-lp
+KB
 im
 BO
 BO
@@ -13618,17 +13754,17 @@ ml
 mm
 uW
 mC
-lp
-dF
-dF
+KB
 dF
 Gm
-KL
+wf
+Ef
+Gm
 Ux
-zp
-yP
+UN
 Gm
-jX
+dF
+mQ
 ak
 ak
 dF
@@ -13724,20 +13860,20 @@ aM
 aM
 aM
 aM
-UT
+ai
 hC
 fm
 il
 il
 iJ
-UT
-vd
-vd
-FP
-vd
-FP
-vd
-vd
+ai
+le
+le
+gG
+le
+gG
+le
+le
 dF
 dF
 ak
@@ -13752,7 +13888,7 @@ ak
 FC
 dF
 dF
-lp
+KB
 im
 uW
 BO
@@ -13760,17 +13896,17 @@ mm
 mp
 uW
 mB
-lp
-dF
-dF
+KB
 dF
 Gm
+AQ
+FL
 Gm
 Gm
 Gm
 Gm
-Gm
-mL
+dF
+FC
 dF
 ak
 dF
@@ -13794,13 +13930,13 @@ mN
 yI
 yI
 mN
-hc
-hc
-hc
-hc
-hc
-hc
-hc
+Fy
+Fy
+Fy
+Fy
+Fy
+Fy
+Fy
 aM
 aM
 aM
@@ -13866,13 +14002,13 @@ aM
 aM
 aM
 aM
-hv
-hv
-UT
-hv
-hv
-hv
-hv
+lg
+lg
+ai
+lg
+lg
+lg
+lg
 aM
 aM
 aM
@@ -13894,24 +14030,24 @@ ak
 mQ
 dF
 dF
-lp
-lp
+KB
+KB
 mv
 BO
 mn
 mn
 ms
-lp
-lp
+KB
+KB
 dF
+sx
 cy
-cy
+FC
+KR
+Dg
 ak
-cy
-ak
-ak
-cy
-ak
+dF
+dF
 mQ
 dF
 ak
@@ -13929,7 +14065,7 @@ mN
 uw
 nr
 WB
-Py
+Ut
 qB
 lk
 lm
@@ -13942,9 +14078,9 @@ lw
 ly
 jP
 jR
-hc
-hc
-hc
+Fy
+Fy
+Fy
 aM
 aM
 aM
@@ -14037,21 +14173,21 @@ mQ
 dF
 dF
 dF
-lp
+KB
 mw
 uW
 BO
 BO
 mx
-lp
+KB
 dF
 dF
 dF
 fs
+mQ
 ak
-ak
-ak
-ak
+BX
+dF
 cy
 cy
 mQ
@@ -14078,15 +14214,15 @@ yI
 yI
 yI
 jA
-hc
+Fy
 pm
-hc
+Fy
 lz
 jQ
 jS
 hd
 hj
-hc
+Fy
 aM
 aM
 aM
@@ -14179,16 +14315,16 @@ mQ
 cy
 dF
 dF
-lp
-lp
+KB
+KB
 uW
 BO
 BO
 uW
-lp
+KB
 dF
 dF
-ak
+dF
 ak
 FC
 FC
@@ -14228,7 +14364,7 @@ bv
 jT
 jJ
 jJ
-hc
+Fy
 aM
 aM
 aM
@@ -14322,12 +14458,12 @@ dF
 dF
 dF
 dF
-lp
+KB
 mi
 mo
 mq
 mt
-lp
+KB
 dF
 dF
 dF
@@ -14370,7 +14506,7 @@ bv
 jP
 he
 hk
-hc
+Fy
 aM
 aM
 aM
@@ -14464,12 +14600,12 @@ cy
 dF
 dF
 dF
-lp
-lp
-lp
-lp
-lp
-lp
+KB
+KB
+KB
+KB
+KB
+KB
 dF
 dF
 ak
@@ -14512,7 +14648,7 @@ bv
 jT
 jJ
 jJ
-hc
+Fy
 aM
 aM
 aM
@@ -14595,9 +14731,9 @@ VN
 dw
 ax
 yy
-ae
-ae
-ae
+yy
+yy
+yy
 dF
 dF
 dF
@@ -14626,7 +14762,7 @@ aM
 YF
 YF
 YF
-BG
+TE
 qJ
 YF
 YF
@@ -14646,7 +14782,7 @@ jx
 yI
 hN
 jD
-hc
+Fy
 jG
 bv
 lA
@@ -14654,7 +14790,7 @@ bv
 jP
 hf
 hl
-hc
+Fy
 aM
 aM
 aM
@@ -14736,10 +14872,10 @@ VN
 VN
 VN
 VN
-ai
-ad
-ad
-ae
+yy
+Vn
+Zg
+yy
 dF
 dF
 dF
@@ -14788,7 +14924,7 @@ mN
 gN
 gO
 gP
-hc
+Fy
 lv
 lx
 lB
@@ -14796,7 +14932,7 @@ jH
 jU
 jJ
 jJ
-hc
+Fy
 aM
 aM
 aM
@@ -14878,10 +15014,10 @@ fg
 VN
 VN
 VN
-yy
-ad
-ad
-ae
+Us
+Zg
+Zg
+Cn
 ak
 ak
 ak
@@ -14930,7 +15066,7 @@ mN
 mN
 mN
 mN
-hc
+Fy
 gQ
 jN
 gW
@@ -14938,7 +15074,7 @@ gZ
 jN
 hg
 hm
-hc
+Fy
 aM
 aM
 aM
@@ -15019,12 +15155,12 @@ yy
 kr
 VN
 VN
-OK
+yn
 yy
-ad
-ad
-ae
-dF
+Zg
+uh
+yy
+fs
 ak
 ak
 mQ
@@ -15072,7 +15208,7 @@ aM
 aM
 aM
 aM
-hc
+Fy
 jI
 jO
 jJ
@@ -15080,7 +15216,7 @@ jJ
 jV
 jJ
 jJ
-hc
+Fy
 aM
 aM
 aM
@@ -15162,12 +15298,12 @@ eN
 VN
 VN
 vC
-yy
-ad
-ad
-ae
-dF
-dF
+TQ
+wF
+wF
+Ft
+mQ
+FC
 FC
 mQ
 FC
@@ -15214,7 +15350,7 @@ aM
 aM
 aM
 aM
-hc
+Fy
 gR
 gU
 gX
@@ -15222,7 +15358,7 @@ ha
 jN
 hh
 hn
-hc
+Fy
 aM
 aM
 aM
@@ -15303,17 +15439,17 @@ am
 VN
 VN
 VN
-vC
-kv
-bY
-bY
-cU
-mQ
-FC
-mQ
-cy
-dF
-dF
+VN
+yy
+Dq
+xb
+yy
+YC
+YC
+TO
+ks
+YC
+YC
 mQ
 dF
 dF
@@ -15356,7 +15492,7 @@ aM
 aM
 aM
 aM
-hc
+Fy
 jJ
 jJ
 jJ
@@ -15364,7 +15500,7 @@ jJ
 jV
 jJ
 jJ
-hc
+Fy
 aM
 aM
 aM
@@ -15447,18 +15583,18 @@ VN
 dx
 hE
 ND
-ae
-ae
-ae
-fs
+yy
+yy
+yy
+YC
 hP
-mQ
-ak
+nE
+pZ
 kM
-dF
+YC
 mQ
 dF
-dF
+bO
 wH
 Hj
 Hj
@@ -15498,7 +15634,7 @@ aM
 aM
 aM
 aM
-hc
+Fy
 gS
 gV
 gY
@@ -15506,7 +15642,7 @@ hb
 jN
 hi
 ho
-hc
+Fy
 aM
 aM
 aM
@@ -15597,7 +15733,7 @@ YC
 Id
 uO
 YC
-bO
+YC
 FC
 dF
 dF
@@ -15640,7 +15776,7 @@ aM
 aM
 aM
 aM
-hc
+Fy
 jK
 jK
 jK
@@ -15648,7 +15784,7 @@ jK
 jW
 jK
 jK
-hc
+Fy
 aM
 aM
 aM
@@ -15738,8 +15874,8 @@ YC
 DN
 nE
 pZ
+pZ
 YC
-dF
 mQ
 dF
 dF
@@ -15782,15 +15918,15 @@ aM
 aM
 aM
 aM
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
+Fy
+Fy
+Fy
+Fy
+Fy
+Fy
+Fy
+Fy
+Fy
 aM
 aM
 aM
@@ -15879,9 +16015,9 @@ dF
 YC
 su
 pZ
+pZ
 BU
 YC
-dF
 FC
 wH
 wH
@@ -15943,7 +16079,7 @@ dF
 dF
 dF
 dF
-le
+gA
 aM
 aM
 aM
@@ -16020,10 +16156,10 @@ dF
 dF
 YC
 IZ
-pZ
+Uc
 vX
 YC
-dF
+YC
 mQ
 wH
 cq
@@ -16085,7 +16221,7 @@ ng
 ng
 ng
 ng
-le
+gA
 aM
 aM
 aM
@@ -16220,14 +16356,14 @@ aM
 aM
 aM
 aM
-le
-le
-le
+gA
+gA
+gA
 nK
 nK
 nK
 nK
-le
+gA
 aM
 aM
 aM
@@ -16315,7 +16451,7 @@ bM
 kw
 ap
 Hj
-Mp
+UL
 XQ
 Hj
 fp
@@ -16361,20 +16497,20 @@ aM
 aM
 aM
 aM
-le
-le
+gA
+gA
 ne
 ou
 qX
 Wo
 qX
 qX
-le
-le
-le
-le
-le
-le
+gA
+gA
+gA
+gA
+gA
+gA
 aM
 aM
 aM
@@ -16457,7 +16593,7 @@ an
 an
 wH
 kK
-wI
+Fo
 Ql
 ca
 wH
@@ -16503,7 +16639,7 @@ aM
 aM
 aM
 aM
-le
+gA
 ne
 ab
 ab
@@ -16511,12 +16647,12 @@ qX
 qX
 qX
 Wo
-le
+gA
 nn
 rs
 rt
 mV
-le
+gA
 aM
 aM
 aM
@@ -16599,7 +16735,7 @@ bx
 bA
 ar
 Hj
-xM
+YE
 eS
 Hj
 ar
@@ -16645,7 +16781,7 @@ aM
 aM
 aM
 aM
-le
+gA
 ne
 nu
 ab
@@ -16658,7 +16794,7 @@ nn
 ab
 ab
 mV
-le
+gA
 aM
 aM
 aM
@@ -16787,7 +16923,7 @@ aM
 aM
 aM
 aM
-le
+gA
 ne
 ab
 ab
@@ -16800,7 +16936,7 @@ no
 nv
 ab
 nB
-le
+gA
 aM
 aM
 aM
@@ -16929,7 +17065,7 @@ aM
 aM
 aM
 aM
-le
+gA
 ne
 ab
 ab
@@ -16942,7 +17078,7 @@ qd
 ab
 QS
 qi
-le
+gA
 hQ
 hQ
 hQ
@@ -17071,7 +17207,7 @@ mP
 aM
 aM
 aM
-le
+gA
 nf
 ab
 rl
@@ -17079,12 +17215,12 @@ rp
 qX
 qX
 qX
-le
+gA
 rr
 nw
 px
 ru
-le
+gA
 qp
 nM
 nP
@@ -17213,20 +17349,20 @@ aM
 aM
 aM
 aM
-le
-le
+gA
+gA
 ne
 rm
 qX
 qX
 qX
 qX
-le
-le
-le
-kt
-le
-le
+gA
+gA
+gA
+za
+gA
+gA
 aE
 aE
 aE
@@ -17356,14 +17492,14 @@ aM
 aM
 aM
 aM
-le
-le
-le
+gA
+gA
+gA
 nK
 nK
 nK
 nK
-le
+gA
 Ua
 mW
 km
@@ -17412,11 +17548,11 @@ aM
 aM
 aM
 aM
-HG
-HG
-HG
-HG
-HG
+aq
+aq
+aq
+aq
+aq
 aM
 aM
 aM
@@ -17554,11 +17690,11 @@ aM
 aM
 aM
 aM
-HG
+aq
 dX
 bo
 bI
-HG
+aq
 zA
 zA
 zA
@@ -17587,20 +17723,20 @@ dF
 dF
 fs
 FC
-aq
-aq
-aq
-vl
-aq
-aq
+lo
+lo
+lo
+KL
+lo
+lo
 rF
-He
+Co
 pR
-He
-He
-PM
-He
-He
+Co
+Co
+AE
+Co
+Co
 eV
 oZ
 pc
@@ -17666,12 +17802,12 @@ hQ
 hQ
 hQ
 hQ
-kY
-kY
-kY
-kY
-kY
-kY
+lc
+lc
+lc
+lc
+lc
+lc
 aM
 aM
 aM
@@ -17696,11 +17832,11 @@ aM
 aM
 aM
 aM
-HG
+aq
 el
 GE
 cb
-HG
+aq
 Kv
 aj
 US
@@ -17729,20 +17865,20 @@ dF
 dF
 dF
 mQ
-aq
+lo
 eQ
 oo
 eQ
 oI
 au
 pf
-He
+Co
 pl
 dK
 cA
 oT
 oV
-He
+Co
 wH
 wH
 wH
@@ -17807,14 +17943,14 @@ pO
 km
 mW
 hQ
-kY
-kY
+lc
+lc
 ox
 nd
 ra
 ra
-kY
-kY
+lc
+lc
 aM
 aM
 aM
@@ -17838,11 +17974,11 @@ al
 aZ
 ae
 dF
-HG
+aq
 en
 ex
 kB
-HG
+aq
 US
 US
 OA
@@ -17871,20 +18007,20 @@ mQ
 dF
 dF
 FC
-aq
+lo
 au
 au
 au
 au
 au
 pg
-He
-zN
+Co
+wu
 dK
 cA
 hD
 hD
-He
+Co
 dF
 dF
 dF
@@ -17956,7 +18092,7 @@ nd
 nd
 nd
 rh
-kY
+lc
 aM
 aM
 aM
@@ -17980,11 +18116,11 @@ aY
 bb
 dF
 dF
-HG
-HG
-HG
+aq
+aq
+aq
 df
-HG
+aq
 US
 US
 OA
@@ -18013,20 +18149,20 @@ FC
 FC
 dF
 FC
-aq
+lo
 pe
 au
 au
 au
 au
 pi
-He
+Co
 pk
 oO
 oR
 oU
 pu
-He
+Co
 dF
 dF
 dF
@@ -18098,7 +18234,7 @@ oA
 oB
 nd
 rh
-kY
+lc
 aM
 aM
 aM
@@ -18122,11 +18258,11 @@ bb
 dF
 dF
 dF
-TQ
-TQ
+kY
+kY
 ey
 uz
-TQ
+kY
 US
 US
 OA
@@ -18155,20 +18291,20 @@ dF
 FC
 mQ
 FC
-aq
-aq
+lo
+lo
 fb
 au
 au
 au
 pj
-He
+Co
 pn
 oP
 oS
 hD
 hD
-He
+Co
 dF
 dF
 dF
@@ -18240,7 +18376,7 @@ qT
 oC
 nd
 ri
-kY
+lc
 aM
 aM
 aM
@@ -18263,12 +18399,12 @@ aZ
 ae
 dF
 dF
-TQ
-TQ
+kY
+kY
 eq
 Bz
 uz
-TQ
+kY
 zA
 rv
 Wd
@@ -18298,19 +18434,19 @@ dF
 cy
 FC
 mQ
-aq
-aq
+lo
+lo
 fb
 au
 au
 au
-He
+Co
 hD
 hD
 hD
 ps
-He
-He
+Co
+Co
 dF
 dF
 dF
@@ -18382,7 +18518,7 @@ rG
 nd
 re
 nd
-kY
+lc
 aM
 aM
 aM
@@ -18404,22 +18540,22 @@ al
 aZ
 dF
 dF
-TQ
-TQ
+kY
+kY
 ep
 uz
 dd
 ec
-TQ
+kY
 dW
 MU
 MU
 eH
 zA
-ls
-ls
-ls
-ls
+hc
+hc
+hc
+hc
 dF
 dF
 aM
@@ -18441,17 +18577,17 @@ dF
 dF
 FC
 mQ
-aq
-aq
+lo
+lo
 oJ
 au
 au
-He
+Co
 oN
 oQ
-He
-He
-He
+Co
+Co
+Co
 dF
 dF
 dF
@@ -18524,7 +18660,7 @@ qW
 rb
 nd
 rj
-kY
+lc
 aM
 aM
 aM
@@ -18546,23 +18682,23 @@ al
 aZ
 dF
 dF
-TQ
+kY
 bh
 Bz
 uz
 em
 ed
-TQ
+kY
 hz
 uy
 MU
 uy
 uy
-ls
+hc
 ke
 kf
-ls
-ls
+hc
+hc
 dF
 aM
 aM
@@ -18584,14 +18720,14 @@ dF
 dF
 mQ
 FC
-aq
-aq
+lo
+lo
 oK
 oL
-He
-He
-He
-He
+Co
+Co
+Co
+Co
 dF
 dF
 dF
@@ -18666,7 +18802,7 @@ nd
 rc
 rf
 nd
-kY
+lc
 aM
 aM
 aM
@@ -18688,23 +18824,23 @@ al
 aZ
 dF
 dF
-TQ
+kY
 bh
-Aw
+ye
 uz
 Bz
-TQ
-TQ
+kY
+kY
 iH
 uy
 MU
 uy
 eI
-ls
+hc
 Tt
 Tt
 if
-ls
+hc
 dF
 aM
 aM
@@ -18727,10 +18863,10 @@ dF
 dF
 FC
 FC
-aq
-aq
-aq
-He
+lo
+lo
+lo
+Co
 dF
 dF
 dF
@@ -18801,14 +18937,14 @@ al
 hQ
 al
 hQ
-kY
+lc
 nW
 qQ
 rf
 rd
 rg
 rk
-kY
+lc
 aM
 aM
 aM
@@ -18830,12 +18966,12 @@ al
 aZ
 dF
 dF
-TQ
-TQ
-TQ
+kY
+kY
+kY
 br
-TQ
-TQ
+kY
+kY
 cR
 uy
 uy
@@ -18846,7 +18982,7 @@ hp
 tP
 Tt
 Xw
-ls
+hc
 dF
 aM
 aM
@@ -18948,9 +19084,9 @@ al
 qS
 qZ
 qO
-kY
-kY
-kY
+lc
+lc
+lc
 aM
 aM
 aM
@@ -18977,18 +19113,18 @@ dL
 dN
 bs
 dZ
-lc
-lc
+zp
+zp
 iL
 jZ
 MU
 uy
 uy
-ls
+hc
 th
 Tt
 kh
-ls
+hc
 aM
 aM
 aM
@@ -19089,8 +19225,8 @@ al
 al
 al
 nW
-kY
-kY
+lc
+lc
 aM
 aM
 aM
@@ -19120,17 +19256,17 @@ dQ
 bT
 dT
 hy
-lc
-lc
-lc
+zp
+zp
+zp
 gp
 ei
-lc
-ls
+zp
+hc
 qm
 Tt
 bu
-ls
+hc
 aM
 aM
 aM
@@ -19268,11 +19404,11 @@ es
 dO
 dO
 fF
-ls
+hc
 ch
-ls
-ls
-ls
+hc
+hc
+hc
 aM
 aM
 aM
@@ -19398,7 +19534,7 @@ aZ
 dF
 dF
 dF
-lc
+zp
 cm
 dR
 cP
@@ -19410,9 +19546,9 @@ et
 dO
 dT
 dT
-ls
-ls
-ls
+hc
+hc
+hc
 aM
 aM
 aM
@@ -19540,7 +19676,7 @@ bb
 ae
 dF
 dF
-lc
+zp
 dP
 dS
 cX
@@ -19551,8 +19687,8 @@ dO
 dO
 dO
 dT
-lc
-lc
+zp
+zp
 dF
 dF
 bg
@@ -19570,13 +19706,13 @@ aM
 aM
 aM
 aM
-VF
-VF
-VF
+aM
+aM
+aM
 VF
 UZ
 td
-WH
+OQ
 VF
 kO
 FC
@@ -19682,8 +19818,8 @@ ae
 dF
 ej
 dF
-lc
-lc
+zp
+zp
 dT
 dT
 dT
@@ -19692,8 +19828,8 @@ dT
 dT
 dT
 dT
-lc
-lc
+zp
+zp
 dF
 dF
 be
@@ -19712,10 +19848,10 @@ aM
 aM
 aM
 aM
+aM
+aM
+aM
 VF
-Sa
-Sa
-PL
 WH
 WH
 WH
@@ -19825,16 +19961,16 @@ dF
 ej
 dF
 dF
-lc
-lc
+zp
+zp
 er
 dT
 dT
 dT
 dT
 eE
-lc
-lc
+zp
+zp
 dF
 dF
 be
@@ -19854,11 +19990,11 @@ aM
 aM
 aM
 aM
+aM
+aM
+aM
 VF
-Sa
-Sa
-PL
-AB
+xd
 AB
 AB
 Jw
@@ -19968,14 +20104,14 @@ dF
 dF
 dF
 dF
-lc
-lc
+zp
+zp
 dP
 dT
 kk
 dT
 eF
-lc
+zp
 dF
 dF
 ae
@@ -20001,8 +20137,8 @@ VF
 VF
 VF
 yE
-WH
-WH
+rL
+VF
 VF
 mJ
 FC
@@ -20111,13 +20247,13 @@ dF
 dF
 dF
 dF
-lc
-lc
+zp
+zp
 eh
 eo
 eD
-lc
-lc
+zp
+zp
 dF
 dF
 be
@@ -20138,14 +20274,14 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
 VF
-gG
+Sa
+Sa
+rV
+AB
 WH
-KB
 VF
+HZ
 dF
 dF
 fs
@@ -20254,11 +20390,11 @@ dF
 dF
 dF
 dF
-lc
+zp
 aN
 aN
 aN
-lc
+zp
 dF
 dF
 be
@@ -20280,14 +20416,14 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
 VF
-Zz
+Hh
+Sa
+rV
+AB
 dz
-OQ
 VF
+HZ
 bO
 dF
 dF
@@ -20422,14 +20558,14 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
 VF
+PL
+PL
+WH
+AB
+WH
 VF
-VF
-VF
-VF
+HZ
 dF
 dF
 dF
@@ -20564,13 +20700,13 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+VF
+WH
+WH
+xN
+UW
+jX
+VF
 dF
 aW
 dF
@@ -20706,13 +20842,13 @@ aM
 aM
 aM
 aM
-aM
-aM
-aM
-aM
-aM
-aM
-aM
+VF
+VF
+VF
+VF
+VF
+VF
+VF
 aM
 dF
 dF
@@ -29051,14 +29187,14 @@ al
 al
 al
 aF
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 aF
 al
 al
@@ -29192,15 +29328,15 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 aF
 al
 al
@@ -29334,16 +29470,16 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 al
 al
 al
@@ -29476,16 +29612,16 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 al
 al
 al
@@ -29618,15 +29754,15 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 aF
 al
 al
@@ -29760,16 +29896,16 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 al
 al
 al
@@ -29902,15 +30038,15 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 aF
 al
 al
@@ -30044,16 +30180,16 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 al
 al
 al
@@ -30187,15 +30323,15 @@ al
 al
 al
 aF
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 al
 al
 al
@@ -30328,15 +30464,15 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 aF
 al
 al
@@ -30470,16 +30606,16 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 al
 al
 al
@@ -30612,15 +30748,15 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 aF
 al
 al
@@ -30754,15 +30890,15 @@ al
 al
 al
 al
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
-TE
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
 aF
 al
 al
@@ -30896,12 +31032,12 @@ al
 al
 al
 al
-TE
-TE
-TE
+hv
+hv
+hv
 aF
-TE
-TE
+hv
+hv
 aF
 aF
 aF
