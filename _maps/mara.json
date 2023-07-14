@@ -2,11 +2,7 @@
     "version": 1,
     "map_name": "Mara 17",
     "map_path": "map_files/Mara17",
-    "map_file": [
-		"Mara17_Low.dmm",
-		"Mara17_Middle.dmm",
-		"Mara17_High.dmm"
-	],
+    "map_file": "Mara17.dmm",
     "space_ruin_levels": 0,
     "space_empty_levels": 0,
     "planetary": 1,
