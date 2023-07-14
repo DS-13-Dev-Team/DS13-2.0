@@ -115,10 +115,6 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 				original_baseturf_count = length(original_baseturfs)
 		else
 			var/atom/creation = new type_path(spawn_at)
-			#ifdef REFERENCE_TRACKING
-			if(istype(creation, /obj/structure/marker))
-				creation.find_references()
-			#endif
 			if(QDELETED(creation))
 				continue
 			//Go all in
