@@ -44,8 +44,6 @@ Pulse Rifles
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
-/obj/item/gun/ballistic/deadspace/twohanded/pulse/ComponentInitialize()
-	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]-wielded")
 
 /obj/item/gun/ballistic/deadspace/twohanded/pulse/egov //Same situation as rending divet

@@ -12,9 +12,9 @@
 		/obj/item/bodypart/leg/right/necromorph/leaper,
 	)
 
-/mob/living/carbon/human/necromorph/leaper/ComponentInitialize()
+/mob/living/carbon/human/necromorph/leaper/Initialize(mapload, obj/structure/marker/marker_master)
+	. = ..()
 	AddComponent(/datum/component/wallrun)
-	return ..()
 
 /mob/living/carbon/human/necromorph/leaper/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.leaper_sounds[audio_type]), volume, vary, extra_range)
