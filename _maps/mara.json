@@ -47,16 +47,39 @@
     "minetype": "none",
     "blacklist_file": "iceruinblacklist.txt",
     "job_changes": {
-		"assistant": null,
-		"atmospheric_technician": null,
-		"ai": null,
-		"clown": null,
-		"geneticist": null,
-		"curator": null,
-		"mime": null,
-		"prisoner": null,
-		"virologist": null,
-		"roboticist": null,
+		"assistant": {
+			"total_positions": 0
+		},
+		"atmospheric_technician": {
+			"total_positions": 0
+		},
+		"ai": {
+			"total_positions": 0
+		},
+		"clown": {
+			"total_positions": 0
+		},
+		"geneticist": {
+			"total_positions": 0
+		},
+		"curator": {
+			"total_positions": 0
+		},
+		"mime": {
+			"total_positions": 0
+		},
+		"prisoner": {
+			"total_positions": 0
+		},
+		"virologist": {
+			"total_positions": 0
+		},
+		"roboticist": {
+			"total_positions": 0
+		},
+		"cook":{
+			"additional_cqc_areas": ["/area/mara17/interior/medium/canteen"]
+		},
         "captain": {
             "special_charter": "moon"
         }
