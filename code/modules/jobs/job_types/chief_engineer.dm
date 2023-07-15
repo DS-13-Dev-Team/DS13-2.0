@@ -68,8 +68,8 @@
 	id_trim = /datum/id_trim/job/chief_engineer
 	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer
 	backpack_contents = list(
-		/obj/item/melee/baton/telescopic = 1,
-		)
+		/obj/item/assembly/flash/handheld
+	)
 	belt = /obj/item/storage/belt/utility/chief/full
 	ears = /obj/item/radio/headset/heads/ce
 	gloves = /obj/item/clothing/gloves/color/black
@@ -106,3 +106,5 @@
 	mask = /obj/item/clothing/mask/breath
 	shoes = /obj/item/clothing/shoes/magboots/advance
 	internals_slot = ITEM_SLOT_SUITSTORE
+	backpack_contents = null
+	box = null
