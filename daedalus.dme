@@ -4709,7 +4709,6 @@
 #include "deadspace\code\datums\components\statmods\component_statmod.dm"
 #include "deadspace\code\datums\keybindingins\signal.dm"
 #include "deadspace\code\game\atoms.dm"
-#include "deadspace\code\game\human.dm"
 #include "deadspace\code\game\mara_areas.dm"
 #include "deadspace\code\game\mara_content.dm"
 #include "deadspace\code\game\mob.dm"
