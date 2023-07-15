@@ -69,8 +69,6 @@
 	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 
-/obj/item/plasma_modified/ComponentInitialize()
-	. = ..()
 	AddComponent(/datum/component/butchering, 30, 100, 0, 'sound/weapons/blade1.ogg', TRUE)
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
 

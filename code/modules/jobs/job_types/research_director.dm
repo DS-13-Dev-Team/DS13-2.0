@@ -39,8 +39,6 @@
 
 	liver_traits = list(TRAIT_ROYAL_METABOLISM, TRAIT_BALLMER_SCIENTIST)
 
-	bounty_types = CIV_JOB_SCI
-
 	mail_goodies = list(
 		/obj/item/storage/box/monkeycubes = 30,
 		/obj/item/circuitboard/machine/sleeper/party = 3,
@@ -99,3 +97,5 @@
 	suit = null
 	mask = /obj/item/clothing/mask/breath
 	internals_slot = ITEM_SLOT_SUITSTORE
+	backpack_contents = null
+	box = null

@@ -11,7 +11,7 @@
 	attack_verb_simple = list("bash", "batter", "bludgeon", "whack")
 	hitsound = 'sound/weapons/smash.ogg'
 
-/obj/item/fireaxe/hugewrench/ComponentInitialize()
+/obj/item/fireaxe/hugewrench/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=24, icon_wielded="[base_icon_state]1")
 

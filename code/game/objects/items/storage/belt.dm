@@ -80,6 +80,7 @@
 		/obj/item/inducer,
 		/obj/item/plunger,
 		/obj/item/airlock_painter,
+		/obj/item/paint_sprayer,
 		))
 
 /obj/item/storage/belt/utility/chief
@@ -230,7 +231,6 @@
 		/obj/item/clothing/mask/breath,
 		/obj/item/clothing/mask/muzzle,
 		/obj/item/clothing/mask/surgical,
-		/obj/item/construction/plumbing,
 		/obj/item/dnainjector,
 		/obj/item/extinguisher/mini,
 		/obj/item/flashlight/pen,
@@ -284,7 +284,6 @@
 		/obj/item/implanter,
 		/obj/item/pinpointer/crew,
 		/obj/item/holosign_creator/medical,
-		/obj/item/construction/plumbing,
 		/obj/item/plunger,
 		/obj/item/reagent_containers/spray,
 		/obj/item/shears,
@@ -343,18 +342,16 @@
 		/obj/item/grenade,
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/restraints/handcuffs,
-		/obj/item/assembly/flash/handheld,
 		/obj/item/clothing/glasses,
 		/obj/item/ammo_casing/shotgun,
 		/obj/item/ammo_box,
 		/obj/item/food/donut,
 		/obj/item/knife/combat,
 		/obj/item/flashlight/seclite,
-		/obj/item/melee/baton/telescopic,
 		/obj/item/radio,
 		/obj/item/clothing/gloves,
 		/obj/item/restraints/legcuffs/bola,
-		/obj/item/holosign_creator/security
+		/obj/item/holosign_creator/security,
 		))
 
 /obj/item/storage/belt/security/full/PopulateContents()
