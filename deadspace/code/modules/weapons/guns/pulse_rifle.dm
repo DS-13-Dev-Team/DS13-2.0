@@ -18,7 +18,7 @@ Pulse Rifles
 	mag_display = FALSE
 	mag_type = /obj/item/ammo_box/magazine/pulse
 	default_ammo = /obj/item/ammo_casing/caseless/pulse
-	weapon_weight = 2
+	weapon_weight = 3
 	show_bolt_icon = FALSE
 	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN

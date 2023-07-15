@@ -9,14 +9,13 @@
 	..()
 	switch(build_step)
 		if(ASSEMBLY_FIRST_STEP)
-			if(istype(W, /obj/item/stack/cable_coil))
+			if(istype(W, /obj/item/restraints/handcuffs/cable))
 				if(!user.temporarilyRemoveItemFromInventory(W))
 					return
 				to_chat(user,span_notice("You add the [W] to [src]!"))
 				qdel(W)
-				inhand_icon_state = "spiderbot_construction2"
 				icon_state = "spiderbot_construction2"
-				desc = "An incomplete scavanger bot assembly with wires."
+				desc = "An incomplete scavenger bot assembly with wires."
 				build_step++
 
 		if(ASSEMBLY_SECOND_STEP)
@@ -25,8 +24,7 @@
 					return
 				to_chat(user, span_notice("You add [W] to [src]."))
 				qdel(W)
-				name = "incomplete Scavanger bot assembly"
-				inhand_icon_state = "spiderbot_construction3"
+				name = "incomplete scavenger bot assembly"
 				icon_state = "spiderbot_construction3"
 				build_step++
 
@@ -44,7 +42,7 @@
 	result = /obj/effect/mob_spawn/ghost_role/drone/scavbot
 	reqs = list(/obj/item/wallframe/apc = 1,
 				/obj/item/bodypart/arm/right/robot = 1,
-				/obj/item/stack/cable_coil = 15,
+				/obj/item/restraints/handcuffs/cable = 1,
 				/obj/item/electronics/apc = 1)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 40
