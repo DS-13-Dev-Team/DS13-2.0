@@ -1,4 +1,4 @@
-/obj/effect/spawner/random/rig
+/obj/effect/spawner/random/clothing/rig
 	name = "Random Rig"
 	desc = "This is a random RIG."
 	icon_state = "showcase"
