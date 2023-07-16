@@ -4,25 +4,9 @@
 	desc = "A heavy-duty vintage CEC RIG that is used in the most hazardous engineering operations aboard CEC vessels. \
 	Its heavier armor plating can withstand more blunt damage than most CEC suits, and can withstand radiation just as well. \
 	As working conditions on CEC ships have improved, this RIG has been discontinued, but some heavy variants can still be found on old planet crackers."
-	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
-		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
-		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "heavy_vintage"
 	armor = list(MELEE = 66.5, BULLET = 70, LASER = 57.5, ENERGY = 25, BOMB = 90, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
-	resistance_flags = NONE
-	atom_flags = NONE
-	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
-	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-	permeability_coefficient = 0.01
-	siemens_coefficient = 0.5
-	complexity_max = DEFAULT_MAX_COMPLEXITY
-	charge_drain = 1
-	slowdown_inactive = 1.25
-	slowdown_active = 0.25
-	allowed_suit_storage = list(
-		/obj/item/flashlight,
-		/obj/item/tank/internals,
-	)
+	complexity_max = 20
 
 	skins = list(
 		"heavy_vintage" = list(
