@@ -91,7 +91,7 @@
     desc = "An incomplete cargobot assembly with wires."
     build_step++
 
-/obj/item/bot_assembly/scavbot/assembly_second_step(obj/item/W, mob/user)
+/obj/item/bot_assembly/cargobot/assembly_second_step(obj/item/W, mob/user)
     if(!istype(W, /obj/item/electronics/apc))
         return
     if(!user.temporarilyRemoveItemFromInventory(W))
