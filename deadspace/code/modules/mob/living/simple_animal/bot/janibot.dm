@@ -1,7 +1,7 @@
 /mob/living/simple_animal/bot/cleanbot/janibot
 	name = "Janibot"
 	desc = "A little cleaning robot, he looks so excited!"
-	icon = 'deadspace/icons/mob/animal.dmi'
+	icon = 'deadspace/icons/mob/dsbots.dmi'
 	held_lh = 'deadspace/icons/mob/pets_held_lh.dmi'
 	held_rh = 'deadspace/icons/mob/pets_held_rh.dmi'
 	held_state = "cleanbot"

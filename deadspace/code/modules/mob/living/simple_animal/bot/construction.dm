@@ -52,7 +52,7 @@
 // cargobot
 
 /obj/item/bot_assembly/cargobot
-	icon = 'deadspace/icons/mob/animal48x48.dmi'
+	icon = 'deadspace/icons/mob/dsbots48x48.dmi'
 	name = "incomplete cargobot assembly"
 	desc = "A frame with an leg attached to it."
 	icon_state = "cargobot_construction1"

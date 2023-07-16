@@ -1,7 +1,7 @@
 /mob/living/simple_animal/bot/mulebot/cargobot
 	name = "Cargobot"
 	desc = "A fourlegged durable, delivery bot."
-	icon = 'deadspace/icons/mob/animal48x48.dmi'
+	icon = 'deadspace/icons/mob/dsbots48x48.dmi'
 
 /mob/living/simple_animal/bot/mulebot/cargobot/explode()
 	var/atom/Tsec = drop_location()

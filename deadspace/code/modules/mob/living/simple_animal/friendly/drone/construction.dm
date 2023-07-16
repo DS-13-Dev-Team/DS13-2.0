@@ -1,9 +1,9 @@
 /obj/item/bot_assembly/scavbot
-	icon = 'deadspace/icons/mob/animal.dmi'
-	name = "incomplete scavanger bot assembly"
+	icon = 'deadspace/icons/mob/dsbots.dmi'
+	name = "incomplete scavenger bot assembly"
 	desc = "A frame with an arm attached to it."
 	icon_state = "spiderbot_construction1"
-	created_name = "Scavanger bot"
+	created_name = "Scavenger bot"
 
 /obj/item/bot_assembly/scavbot/attackby(obj/item/W, mob/user, params)
 	..()
@@ -34,11 +34,11 @@
 				if(W.use_tool(src, user, 40, volume=100))
 					var/obj/effect/mob_spawn/ghost_role/drone/scavbot/B = new(drop_location())
 					B.name = created_name
-					to_chat(user, span_notice("You completed the Scavanger bot."))
+					to_chat(user, span_notice("You completed the scavenger bot."))
 					qdel(src)
 
 /datum/crafting_recipe/scavbot
-	name = "Scavanger bot"
+	name = "scavenger bot"
 	result = /obj/effect/mob_spawn/ghost_role/drone/scavbot
 	reqs = list(/obj/item/wallframe/apc = 1,
 				/obj/item/bodypart/arm/right/robot = 1,

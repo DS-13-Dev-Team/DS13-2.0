@@ -1,7 +1,7 @@
 /mob/living/simple_animal/drone/classic/amogusflash
 	name = "Flash"
 	desc = "Recent advances in CEC robotics technology have allowed command's favourite toy to walk among us."
-	icon = 'deadspace/icons/mob/animal.dmi'
+	icon = 'deadspace/icons/mob/dsbots.dmi'
 	icon_state = "amogusflash"
 	icon_living = "amogusflash"
 	picked = TRUE

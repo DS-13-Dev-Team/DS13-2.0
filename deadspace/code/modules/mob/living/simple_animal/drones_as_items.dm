@@ -1,7 +1,7 @@
 /obj/effect/mob_spawn/ghost_role/drone/scavbot
 	name = "Scavenger bot shell"
 	desc = "A shell of a maintenance drone, an expendable robot built to perform station repairs."
-	icon = 'deadspace/icons/mob/animal.dmi'
+	icon = 'deadspace/icons/mob/dsbots.dmi'
 	icon_state = "spiderbot_off"
 	anchored = FALSE
 	layer = BELOW_MOB_LAYER

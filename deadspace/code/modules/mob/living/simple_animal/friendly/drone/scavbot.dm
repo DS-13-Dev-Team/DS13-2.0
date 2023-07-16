@@ -1,7 +1,7 @@
 /mob/living/simple_animal/drone/classic/scavbot
 	name = "Scavenger bot"
 	desc = "A small robot that perform many tasks where human where human technicians and larger robots cannot go."
-	icon = 'deadspace/icons/mob/animal.dmi'
+	icon = 'deadspace/icons/mob/dsbots.dmi'
 	icon_state = "spiderbot"
 	icon_living = "spiderbot"
 	held_state = "spiderbot"
@@ -22,4 +22,4 @@
 	"2. Collect out of the way item and resources.\n"+\
 	"3. Deliver the found items to the appropriate department or personal.\n"
 	default_storage = /obj/item/storage/backpack/duffelbag
-	flavortext = "You are a corporate owned scavanger bot, you've been tasked with the scavanging of the station or ship."
+	flavortext = "You are a corporate owned scavenger bot, you've been tasked with the scavanging of the station or ship."
