@@ -205,7 +205,6 @@
 	icon_state = "rwindow"
 	},
 /obj/structure/rack,
-/obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/space)
 "cl" = (
@@ -331,8 +330,8 @@
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/space)
 "dh" = (
@@ -349,6 +348,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /turf/open/floor/deadspace/grater,
 /area/space)
@@ -377,7 +377,6 @@
 /obj/machinery/door/window/brigdoor/left/directional{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/space)
 "du" = (
@@ -480,7 +479,6 @@
 	req_one_access = list(2,3)
 	},
 /obj/machinery/door/firedoor,
-/obj/structure/cable,
 /turf/open/floor/deadspace/medical,
 /area/space)
 "ea" = (
@@ -538,11 +536,8 @@
 /turf/open/water,
 /area/space)
 "ev" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/structure/cable,
-/turf/open/floor/catwalk_floor/iron_dark,
+/turf/open/floor/deadspace/mono,
 /area/space)
 "ew" = (
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -765,12 +760,11 @@
 /area/space)
 "fI" = (
 /obj/structure/cable,
-/obj/structure/cable,
-/turf/open/floor/catwalk_floor/iron_dark,
+/turf/open/water,
 /area/space)
 "fJ" = (
-/obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
 /turf/open/floor/deadspace/medical,
 /area/space)
 "fK" = (
@@ -822,10 +816,6 @@
 "gc" = (
 /obj/machinery/hydroponics/constructable,
 /turf/open/floor/plating,
-/area/space)
-"ge" = (
-/obj/structure/cable,
-/turf/open/floor/iron/freezer,
 /area/space)
 "gg" = (
 /obj/item/wirecutters/abductor,
@@ -1345,7 +1335,6 @@
 /turf/open/misc/asteroid,
 /area/space)
 "jC" = (
-/obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/iron/freezer,
 /area/space)
@@ -1930,13 +1919,6 @@
 /obj/item/mining_scanner,
 /turf/open/floor/deadspace/random/rectangles,
 /area/space)
-"om" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/cable,
-/turf/open/floor/deadspace/grater,
-/area/space)
 "on" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/deadspace/mono,
@@ -2430,7 +2412,6 @@
 /area/space)
 "rY" = (
 /obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/space)
 "sa" = (
@@ -2458,9 +2439,9 @@
 /turf/open/floor/deadspace/grater,
 /area/space)
 "sf" = (
-/obj/structure/closet/body_bag,
+/obj/structure/rack,
 /obj/structure/cable,
-/turf/open/floor/deadspace/medical,
+/turf/open/floor/deadspace/grater,
 /area/space)
 "sh" = (
 /obj/machinery/door/airlock/medical{
@@ -2755,14 +2736,6 @@
 /obj/effect/landmark,
 /turf/open/floor/deadspace/roller,
 /area/space)
-"vW" = (
-/obj/machinery/door/firedoor{
-	dir = 4
-	},
-/obj/effect/spawner/structure/window/reinforced/grille,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/space)
 "vZ" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -2952,7 +2925,6 @@
 /turf/closed/wall/r_wall,
 /area/space)
 "yC" = (
-/obj/structure/cable,
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/deadspace/mono,
 /area/space)
@@ -3245,10 +3217,6 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/space)
-"BW" = (
-/obj/structure/cable,
-/turf/open/floor/deadspace/random/maint_right,
-/area/space)
 "BX" = (
 /obj/effect/turf_decal/bot_white,
 /obj/effect/turf_decal/ported/outline,
@@ -3304,7 +3272,6 @@
 /obj/machinery/power/port_gen/pacman,
 /obj/item/stack/sheet/mineral/plasma/thirty,
 /obj/item/wrench,
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_left,
 /area/space)
 "Cq" = (
@@ -3433,8 +3400,11 @@
 /turf/open/floor/plating,
 /area/space)
 "Du" = (
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/structure/cable,
-/turf/open/floor/deadspace/random/maint_center,
+/turf/open/floor/iron/dark,
 /area/space)
 "Dy" = (
 /turf/closed/wall/mineral/titanium/survival/pod,
@@ -3887,7 +3857,6 @@
 	name = "Chapel Office Maintenance";
 	req_one_access_txt = "22"
 	},
-/obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/space)
 "Kq" = (
@@ -4278,8 +4247,8 @@
 /turf/open/floor/deadspace/grater,
 /area/space)
 "Pn" = (
-/obj/structure/cable,
 /obj/effect/turf_decal/box/white,
+/obj/structure/cable,
 /turf/open/space/basic,
 /turf/open/floor/plating,
 /turf/open/floor/deadspace/grater,
@@ -4435,7 +4404,6 @@
 /area/space)
 "RP" = (
 /obj/machinery/power/apc/auto_name/directional/east,
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_right,
 /area/space)
 "RR" = (
@@ -4889,6 +4857,7 @@
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/space)
 "WZ" = (
@@ -5149,7 +5118,6 @@
 	dir = 8
 	},
 /obj/machinery/power/terminal,
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_left,
 /area/space)
 "ZW" = (
@@ -15598,7 +15566,7 @@ we
 Xd
 Xd
 Xd
-Du
+aa
 GJ
 GJ
 GJ
@@ -15800,7 +15768,7 @@ aa
 Xd
 Xd
 Xd
-Du
+aa
 Vs
 GJ
 GJ
@@ -15854,7 +15822,7 @@ GJ
 xG
 er
 ch
-cm
+sf
 cy
 te
 lo
@@ -16002,7 +15970,7 @@ PK
 Xd
 Xd
 Xd
-Du
+aa
 GJ
 GJ
 GJ
@@ -16055,16 +16023,16 @@ GJ
 GJ
 ML
 jL
-vF
+IV
 vF
 IV
 az
 Cs
 GJ
-ST
-ST
-ST
-Vy
+ev
+ev
+ev
+Qw
 re
 mu
 jP
@@ -16204,7 +16172,7 @@ aa
 Xd
 Xd
 Xd
-Du
+aa
 RI
 GJ
 GJ
@@ -16257,16 +16225,16 @@ GJ
 GJ
 GJ
 GJ
-vW
+lU
 du
-vW
+lU
 GJ
 GJ
 GJ
-LP
+Du
 Vy
 YW
-Vy
+Qw
 eU
 QC
 Jv
@@ -16406,7 +16374,7 @@ aa
 Xd
 Xd
 Xd
-Du
+aa
 wU
 sN
 sN
@@ -16468,8 +16436,8 @@ GJ
 aU
 Vy
 hk
-Vy
-eU
+Qw
+re
 GJ
 nX
 Fq
@@ -16609,7 +16577,7 @@ gr
 zb
 PL
 RP
-BW
+ea
 sN
 sN
 Hz
@@ -16663,15 +16631,15 @@ aU
 eU
 eU
 Qw
-Vy
+Qw
 Vy
 Au
 GJ
-eU
+re
 Vb
 hk
-Vy
-eU
+Qw
+re
 GJ
 MR
 MR
@@ -16865,15 +16833,15 @@ Vy
 eU
 LV
 LV
-On
+cV
 On
 hM
 GJ
 dt
 KF
 GJ
-Vy
-eU
+Qw
+re
 GJ
 Yr
 Yr
@@ -17013,7 +16981,7 @@ QW
 QW
 GJ
 lc
-ge
+Hz
 jC
 Hz
 Hz
@@ -17065,8 +17033,8 @@ GJ
 GJ
 Xi
 qn
-cV
-eU
+On
+re
 eU
 eU
 eU
@@ -18881,12 +18849,12 @@ GJ
 GJ
 rY
 yC
-om
+Gp
 MR
 MR
 EF
 dA
-FY
+Sf
 Sf
 GJ
 vP
@@ -18894,7 +18862,7 @@ Fg
 Fg
 FY
 Fg
-Fg
+sb
 Sf
 JZ
 GJ
@@ -19083,12 +19051,12 @@ GJ
 GJ
 ST
 ds
-FY
+Sf
 Gj
 Sf
 XP
 Ym
-FY
+Sf
 Sf
 GJ
 QM
@@ -19096,7 +19064,7 @@ xC
 UA
 sN
 dj
-FY
+Sf
 HI
 zF
 GJ
@@ -19285,20 +19253,20 @@ GJ
 GJ
 ST
 ds
-FY
+Sf
 Hb
 Sf
 XP
 Sf
-FY
+Sf
 Sf
 GJ
 Kr
 sc
 sc
 ak
-sc
-sf
+Pn
+gE
 HI
 zF
 GJ
@@ -19487,20 +19455,20 @@ GJ
 GJ
 ST
 ds
-FY
+Sf
 Cj
 Sf
 XP
 Sf
-FY
+Sf
 Sf
 GJ
 Kr
 sc
 sc
 ZF
-sc
-sf
+Pn
+gE
 HI
 zF
 GJ
@@ -19689,20 +19657,20 @@ GJ
 GJ
 ST
 ds
-FY
-FY
-FY
+Sf
+Sf
+Sf
 dZ
-FY
-FY
+Sf
+Sf
 Rb
 GJ
 Kr
 sc
 sc
 ZF
-sc
-FY
+Pn
+Sf
 HI
 zF
 GJ
@@ -19903,8 +19871,8 @@ EF
 Cn
 Sf
 Sf
-Sf
 FY
+Sf
 sr
 EF
 GJ
@@ -20105,7 +20073,7 @@ EF
 SI
 Sf
 sM
-Sf
+FY
 FY
 Vx
 EF
@@ -21500,22 +21468,22 @@ JA
 ny
 dY
 ar
-og
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
+GJ
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
 GJ
 GJ
 GJ
@@ -21701,7 +21669,7 @@ EF
 EF
 ny
 dY
-dY
+fI
 ZH
 dY
 dY
@@ -21717,7 +21685,7 @@ dY
 dY
 dY
 dY
-ar
+ny
 GJ
 id
 Yf
@@ -21904,22 +21872,22 @@ EF
 ny
 dY
 ar
-og
-ar
-ar
-ev
-ar
-ar
-ar
-ev
-ar
-ar
-ar
-ev
-ar
-ar
-ar
-ar
+GJ
+ny
+ny
+sU
+ny
+ny
+ny
+sU
+ny
+ny
+ny
+sU
+ny
+ny
+ny
+ny
 wz
 id
 id
@@ -24135,19 +24103,19 @@ ar
 ar
 ar
 ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
+ny
 GJ
 gm
 gm
@@ -24336,6 +24304,7 @@ dY
 dY
 dY
 dY
+fI
 dY
 dY
 dY
@@ -24348,8 +24317,7 @@ dY
 dY
 dY
 dY
-dY
-ar
+ny
 GJ
 gm
 gm
@@ -24538,20 +24506,20 @@ ny
 ny
 ny
 ny
+fI
+ny
+sU
+ny
+ny
+ny
+ny
+ny
+sU
+ny
+ny
 dY
-ar
-ev
-ar
-ar
-ar
-ar
-ar
-ev
-ar
-ar
 dY
-dY
-ar
+ny
 GJ
 gm
 gm
@@ -24740,20 +24708,20 @@ GJ
 GJ
 GJ
 ny
+fI
+ny
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+ny
 dY
-ar
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-ar
 dY
-dY
-ar
+ny
 GJ
 gm
 gm
@@ -24942,20 +24910,20 @@ ny
 dY
 aQ
 aQ
+fI
+ny
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+ny
 dY
-ar
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-GJ
-ar
 dY
-dY
-ar
+ny
 GJ
 gm
 gm
@@ -25144,8 +25112,8 @@ dY
 dY
 dY
 eF
-dY
-ar
+fI
+ny
 GJ
 GJ
 fd
@@ -25154,10 +25122,10 @@ fk
 Xo
 fk
 EF
-ar
+ny
 dY
 dY
-ar
+ny
 GJ
 gm
 gm
@@ -25346,8 +25314,8 @@ eC
 dY
 dY
 aQ
-fI
 ar
+ny
 GJ
 GJ
 DN
@@ -25356,10 +25324,10 @@ Xo
 Xo
 Xo
 EK
-ar
-ev
-ar
-ar
+ny
+sU
+ny
+ny
 GJ
 gm
 gm
