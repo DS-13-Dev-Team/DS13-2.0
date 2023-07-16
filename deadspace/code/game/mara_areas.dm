@@ -2,18 +2,11 @@
 
 Mara 17, an icy planet god knows where (i didint know where to put it), a prototype map for DS13 lowpop, hopefully it's fun - Asi
 
-I specially thank here DTtraitor and Kapu for helping with the weather system, without em, the map would not be possible,
-aswell as having a fancy storm system to make it cool.
-
-The Current areas will be the following
-
-
 EXTERIOR = The 'Outskirts' of Mara 17, beyond and the exterior of the Iris outpost
 INTERIOR = Most areas inside of the Iris outpost.
 
 Note: There was a hatch on the map and another 2 files for an easter egg, but due funds and spriter being busy it wasnt possible to add,
 maybe on the future.
-
 
 */
 
@@ -29,6 +22,7 @@ maybe on the future.
 	icon_state = "explored"
 	ambience_index = AMBIENCE_MINING
 	outdoors = TRUE
+	base_lighting_alpha = 60
 
 
 // INTERIOR
@@ -66,6 +60,10 @@ maybe on the future.
 /area/mara17/interior/upper/enginieering/interior
 	name = "Iris Outpost - Enginieering Bay"
 	icon_state = "engi_lobby"
+
+/area/mara17/interior/upper/enginieering/atmos
+	name = "Iris Outpost - Atmospherics"
+	icon_state = "atmos"
 
 /area/mara17/interior/upper/enginieering/ce
 	name = "Iris Outpost - Chief Enginieer Office"

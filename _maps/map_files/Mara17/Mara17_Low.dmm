@@ -882,7 +882,6 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/old_chapel)
 "dB" = (
-/obj/structure/reagent_dispensers/plumbed/storage,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage1)
 "dC" = (
@@ -890,9 +889,12 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage1)
 "dD" = (
-/obj/structure/reagent_dispensers/plumbed/fuel,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/mara17/interior/lower/scaf_storage1)
+/obj/structure/rack/shelf,
+/obj/machinery/light/small/directional/east,
+/obj/effect/spawner/random/maintenance/four,
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/lower/scaf_storage2)
 "dE" = (
 /obj/machinery/light/small/red/directional/south,
 /turf/open/floor/deadspace/grater,
@@ -2329,6 +2331,7 @@
 /area/mara17/interior/caves)
 "Mo" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage2)
 "Mq" = (
@@ -2367,6 +2370,10 @@
 "OQ" = (
 /turf/closed/wall,
 /area/mara17/interior/lower/room4)
+"Pi" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/lower/scaf_storage2)
 "Pk" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
@@ -13821,7 +13828,7 @@ sD
 dX
 pB
 rd
-rd
+Pi
 em
 rd
 rd
@@ -13963,7 +13970,7 @@ sD
 dX
 pB
 fI
-fP
+dD
 en
 fI
 fP
@@ -14654,9 +14661,9 @@ ad
 ad
 ac
 Wg
-dD
-dD
-dD
+dB
+dB
+dB
 dJ
 dn
 dn
