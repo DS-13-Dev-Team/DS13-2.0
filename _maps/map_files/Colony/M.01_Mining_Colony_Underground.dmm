@@ -558,6 +558,12 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/deadspace/random/rectangles,
 /area/space)
+"ex" = (
+/obj/structure/railing,
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/space)
 "ey" = (
 /obj/item/mop,
 /turf/open/water,
@@ -2197,6 +2203,15 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"ql" = (
+/obj/effect/turf_decal/trimline/yellow/filled/warning{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/space)
 "qm" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/three,
@@ -2385,6 +2400,13 @@
 "rB" = (
 /obj/structure/table,
 /obj/effect/spawner/random/food_or_drink/snack,
+/turf/open/space/basic,
+/turf/open/floor/plating,
+/area/space)
+"rC" = (
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/open/space/basic,
 /turf/open/floor/plating,
 /area/space)
@@ -2931,6 +2953,13 @@
 "yn" = (
 /obj/structure/frame/machine,
 /obj/structure/frame/machine,
+/turf/open/floor/plating,
+/area/space)
+"yx" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/space/basic,
 /turf/open/floor/plating,
 /area/space)
 "yB" = (
@@ -4532,6 +4561,15 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/space)
+"Tb" = (
+/obj/effect/turf_decal/trimline/yellow/filled/warning{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
 "Td" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 8
@@ -5034,6 +5072,11 @@
 "YO" = (
 /obj/structure/sign/departments/psychology,
 /turf/closed/wall/r_wall,
+/area/space)
+"YU" = (
+/obj/structure/railing,
+/turf/open/space/basic,
+/turf/open/floor/deadspace/random/golf_brown,
 /area/space)
 "YW" = (
 /obj/structure/table/reinforced,
@@ -42660,34 +42703,34 @@ Gw
 Gw
 xK
 GP
-uw
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
+Tb
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
 MR
 MR
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
+rC
+rC
+rC
+rC
+rC
+rC
+rC
+rC
 GJ
 uU
 uU
@@ -43064,33 +43107,33 @@ vn
 vn
 xK
 GP
-uw
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
+ql
+yx
+yx
+yx
+yx
+yx
+yx
+yx
+yx
+yx
+yx
+yx
+yx
+yx
+yx
+yx
+yx
+yx
 MR
 MR
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
-xJ
+yx
+yx
+yx
+yx
+yx
+yx
+yx
 qY
 GJ
 Pt
@@ -43292,7 +43335,7 @@ jP
 jP
 jP
 jP
-jP
+ex
 LW
 GJ
 bW
@@ -43494,7 +43537,7 @@ JS
 JS
 JS
 JS
-JS
+YU
 LW
 Sk
 Pt
