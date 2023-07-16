@@ -1,25 +1,8 @@
 /datum/mod_theme/deadspace/emergency
-	name = "Emergency"
+	name = "EVA"
 	desc = "A light, emergency rig for use by non-qualified personnel in the case of emergency decompression."
-	extended_desc = "Resource Integration Gear, or RIG for short is an integrated health management and strength augmentation system that assists users in previously impossible and dangerous environments, \
-		this suit is a staple across the galaxy for civilian applications. These suits are oxygenated, \
-		spaceworthy, resistant to fire and chemical threats."
 	default_skin = "emergency"
 	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
-	resistance_flags = NONE
-	atom_flags = NONE
-	max_heat_protection_temperature = SPACE_SUIT_MAX_TEMP_PROTECT
-	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-	permeability_coefficient = 0.01
-	siemens_coefficient = 0.5
-	complexity_max = DEFAULT_MAX_COMPLEXITY
-	charge_drain = 1
-	slowdown_inactive = 1.25
-	slowdown_active = 0.25
-	allowed_suit_storage = list(
-		/obj/item/flashlight,
-		/obj/item/tank/internals,
-	)
 
 	skins = list(
 		"emergency" = list(
@@ -49,7 +32,7 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/emergency
+/obj/item/mod/control/pre_equipped/eva
 	theme = /datum/mod_theme/deadspace/emergency
 	initial_modules = list(
 		/obj/item/mod/module/storage,

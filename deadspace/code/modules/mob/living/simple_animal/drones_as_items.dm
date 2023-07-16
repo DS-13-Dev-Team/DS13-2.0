@@ -1,7 +1,7 @@
 /obj/effect/mob_spawn/ghost_role/drone/scavbot
 	name = "Scavenger bot shell"
 	desc = "A shell of a maintenance drone, an expendable robot built to perform station repairs."
-	icon = 'deadspace/icons/mob/animal.dmi'
+	icon = 'deadspace/icons/mob/dsbots.dmi'
 	icon_state = "spiderbot_off"
 	anchored = FALSE
 	layer = BELOW_MOB_LAYER
@@ -12,7 +12,7 @@
 	mob_type = /mob/living/simple_animal/drone/classic/scavbot
 	role_ban = ROLE_DRONE
 	show_flavor = FALSE
-	prompt_name = "scavenger bot"
+	prompt_name = "Scavenger bot"
 	you_are_text = "You are a scavenger bot."
 	flavour_text = "You are a corporate owned scavenger bot, you've been tasked with the scavanging of the station or ship."
 	important_text = "You MUST read and follow your laws carefully."

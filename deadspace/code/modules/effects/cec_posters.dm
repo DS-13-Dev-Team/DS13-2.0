@@ -40,12 +40,12 @@
 /obj/structure/sign/poster/cec/safety3
 	name = "Team Safety"
 	desc = "Teamwork improves safety."
-	icon_state = "future3"
+	icon_state = "safety3"
 
 /obj/structure/sign/poster/cec/safety4
 	name = "Safety for loved ones"
 	desc = "Work safely today, remember.... Someone expects you home tomorrow."
-	icon_state = "future4"
+	icon_state = "safety4"
 
 /obj/structure/sign/poster/cec/aim
 	name = "Our Aim"
