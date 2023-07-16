@@ -328,11 +328,11 @@
 /turf/open/floor/plating,
 /area/space)
 "df" = (
-/obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/space)
 "dh" = (
@@ -769,8 +769,8 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/space)
 "fJ" = (
-/obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/deadspace/medical,
 /area/space)
 "fK" = (
@@ -1345,8 +1345,8 @@
 /turf/open/misc/asteroid,
 /area/space)
 "jC" = (
-/obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/iron/freezer,
 /area/space)
 "jD" = (
@@ -4617,7 +4617,6 @@
 /turf/open/floor/plating,
 /area/space)
 "TO" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/smes,
 /turf/open/floor/deadspace/random/maint_left,
 /area/space)
@@ -24540,7 +24539,7 @@ ny
 ny
 ny
 dY
-fI
+ar
 ev
 ar
 ar
@@ -40780,9 +40779,9 @@ gm
 gm
 gm
 GJ
-cm
+qB
 fw
-cm
+qB
 GJ
 gm
 gm
@@ -40982,9 +40981,9 @@ gm
 gm
 gm
 GJ
-cm
+qB
 fw
-cm
+qB
 GJ
 gm
 gm
@@ -41184,9 +41183,9 @@ gm
 gm
 gm
 GJ
-cm
+qB
 fw
-cm
+qB
 GJ
 gm
 gm
@@ -43406,7 +43405,7 @@ gm
 gm
 gm
 GJ
-cm
+qB
 fw
 MR
 GJ
@@ -43608,7 +43607,7 @@ gm
 gm
 gm
 GJ
-cm
+qB
 fw
 MR
 GJ
