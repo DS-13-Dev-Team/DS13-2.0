@@ -166,7 +166,6 @@
 "cc" = (
 /obj/structure/table,
 /obj/item/circular_saw/bonecutter,
-/turf/open/floor/plating,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space)
 "cf" = (
@@ -245,7 +244,6 @@
 /obj/structure/rack,
 /obj/item/clothing/head/beret/sec,
 /turf/open/floor/plating,
-/turf/open/floor/plating,
 /area/space)
 "cP" = (
 /obj/structure/closet,
@@ -295,7 +293,6 @@
 "de" = (
 /obj/effect/spawner/random/food_or_drink/snack,
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/space)
 "df" = (
 /obj/effect/turf_decal/trimline/yellow/warning{
@@ -319,7 +316,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/plating,
 /turf/open/floor/deadspace/grater,
 /area/space)
 "dm" = (
@@ -333,7 +329,6 @@
 	dir = 1
 	},
 /obj/structure/cable,
-/turf/open/floor/plating,
 /turf/open/floor/deadspace/grater,
 /area/space)
 "ds" = (
@@ -572,11 +567,6 @@
 /obj/item/clothing/glasses/sunglasses,
 /turf/open/floor/plating,
 /area/space)
-"eQ" = (
-/obj/structure/barricade/wooden,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/space)
 "eT" = (
 /obj/item/shield/riot/buckler,
 /turf/open/floor/plating,
@@ -609,7 +599,6 @@
 /area/space)
 "fd" = (
 /obj/structure/kitchenspike,
-/turf/open/floor/plating,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space)
 "ff" = (
@@ -627,14 +616,11 @@
 /area/space)
 "fi" = (
 /obj/effect/decal/cleanable/blood/gibs,
-/turf/open/floor/plating,
-/turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space)
 "fk" = (
 /obj/structure/kitchenspike,
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space)
 "fl" = (
@@ -642,8 +628,6 @@
 	dir = 4
 	},
 /obj/item/clothing/suit/apron/chef,
-/turf/open/floor/plating,
-/turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space)
 "fp" = (
@@ -660,17 +644,8 @@
 	},
 /turf/open/floor/plating,
 /area/space)
-"fs" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/space)
 "ft" = (
 /obj/structure/closet/body_bag,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
 /turf/open/floor/plating,
 /area/space)
 "fu" = (
@@ -710,7 +685,6 @@
 /area/space)
 "fD" = (
 /obj/machinery/iv_drip,
-/turf/open/floor/plating,
 /turf/open/floor/plating,
 /area/space)
 "fE" = (
@@ -807,18 +781,9 @@
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/misc/asteroid,
 /area/space)
-"gq" = (
-/obj/effect/spawner/structure/window/reinforced/grille,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/space)
 "gr" = (
 /obj/structure/table/wood/fancy/red,
 /turf/open/floor/deadspace/random/maint_right,
-/area/space)
-"gA" = (
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/deadspace/grater,
 /area/space)
 "gE" = (
 /obj/structure/closet/body_bag,
@@ -1139,7 +1104,6 @@
 "iK" = (
 /obj/machinery/jukebox,
 /turf/open/floor/plating,
-/turf/open/floor/plating,
 /area/space)
 "iL" = (
 /obj/structure/chair/stool/bar/directional/south,
@@ -1235,7 +1199,6 @@
 /obj/structure/table/wood,
 /obj/effect/spawner/random/food_or_drink/booze,
 /turf/open/floor/plating,
-/turf/open/floor/plating,
 /area/space)
 "jk" = (
 /obj/structure/reagent_dispensers/water_cooler,
@@ -1307,11 +1270,6 @@
 /obj/structure/closet/athletic_mixed,
 /turf/open/floor/iron/dark,
 /area/space)
-"jK" = (
-/turf/closed/wall/r_wall,
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/deadspace/grater,
-/area/space)
 "jL" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1
@@ -1337,12 +1295,6 @@
 /obj/effect/spawner/random/exotic,
 /obj/effect/spawner/random/maintenance/two,
 /obj/effect/spawner/random/entertainment/money_large,
-/turf/open/floor/plating,
-/area/space)
-"jX" = (
-/obj/structure/rack,
-/obj/effect/spawner/random/maintenance/two,
-/turf/open/floor/deadspace/grater,
 /turf/open/floor/plating,
 /area/space)
 "jY" = (
@@ -1419,15 +1371,6 @@
 /obj/item/bedsheet/random,
 /turf/open/floor/plating,
 /area/space)
-"kK" = (
-/turf/closed/wall/r_wall,
-/turf/open/misc/asteroid,
-/area/space)
-"kN" = (
-/obj/effect/decal/cleanable/oil,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/space)
 "kO" = (
 /obj/effect/landmark{
 	name = "ShuttleRepairPart"
@@ -1440,7 +1383,6 @@
 	dir = 6;
 	id = "mining_colony"
 	},
-/turf/open/floor/plating,
 /turf/open/floor/plating,
 /area/space)
 "kQ" = (
@@ -1482,12 +1424,10 @@
 /obj/effect/spawner/random/clothing/gloves,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/deadspace/grater,
-/turf/open/floor/plating,
 /area/space)
 "le" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/turf_decal/box/white,
-/turf/open/floor/plating,
 /turf/open/floor/deadspace/grater,
 /area/space)
 "lh" = (
@@ -1531,12 +1471,6 @@
 /obj/structure/rack,
 /turf/open/floor/deadspace/random/rectangles,
 /area/space)
-"lA" = (
-/turf/closed/wall/r_wall,
-/turf/open/misc/asteroid,
-/turf/open/misc/asteroid,
-/turf/open/misc/asteroid,
-/area/space)
 "lB" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 5
@@ -1551,16 +1485,10 @@
 /obj/machinery/light/small,
 /obj/structure/chair/stool/bar/directional/west,
 /turf/open/floor/plating,
-/turf/open/floor/plating,
 /area/space)
 "lI" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/plating,
-/area/space)
-"lK" = (
-/turf/open/floor/plating,
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/deadspace/grater,
 /area/space)
 "lN" = (
 /obj/machinery/light,
@@ -1587,12 +1515,6 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/space)
-"me" = (
-/obj/structure/bed/maint,
-/obj/item/bedsheet/random,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/space)
 "mf" = (
 /obj/item/clothing/under/shorts/red,
 /obj/item/clothing/under/shorts/red,
@@ -1602,16 +1524,8 @@
 /obj/item/clothing/under/shorts/blue,
 /turf/open/floor/deadspace/hardwood,
 /area/ruin/unpowered/no_grav)
-"mg" = (
-/obj/structure/rack,
-/obj/effect/turf_decal/ported/outline,
-/obj/effect/spawner/random/maintenance/two,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/space)
 "mk" = (
 /obj/effect/turf_decal/ported/outline,
-/turf/open/floor/deadspace/grater,
 /turf/open/floor/deadspace/grater,
 /area/space)
 "mm" = (
@@ -1659,11 +1573,6 @@
 "mM" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/space)
-"mO" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/deadspace/grater,
 /area/space)
 "mQ" = (
 /obj/structure/table,
@@ -1713,12 +1622,6 @@
 "nm" = (
 /obj/machinery/vending/wardrobe/det_wardrobe,
 /turf/open/floor/wood,
-/area/space)
-"no" = (
-/obj/structure/rack,
-/obj/effect/spawner/random/maintenance/two,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
 /area/space)
 "nr" = (
 /obj/effect/landmark{
@@ -1842,7 +1745,6 @@
 /obj/effect/turf_decal/ported/outline,
 /obj/effect/turf_decal/ported/outline,
 /turf/open/floor/deadspace/grater,
-/turf/open/floor/deadspace/grater,
 /area/space)
 "oy" = (
 /obj/structure/rack,
@@ -1942,11 +1844,6 @@
 /turf/open/floor/iron/dark,
 /turf/open/floor/iron/dark,
 /area/space)
-"pn" = (
-/obj/structure/sign/cec/orange,
-/turf/closed/wall/r_wall,
-/turf/open/floor/deadspace/grater,
-/area/space)
 "po" = (
 /turf/open/floor/stone,
 /area/space)
@@ -2029,7 +1926,6 @@
 "qb" = (
 /obj/structure/table/wood,
 /obj/item/clothing/gloves/ring/silver,
-/turf/open/floor/plating,
 /turf/open/floor/plating,
 /area/space)
 "qc" = (
@@ -2128,14 +2024,6 @@
 "qX" = (
 /obj/structure/closet/crate/medical,
 /turf/open/floor/deadspace/grater,
-/area/space)
-"qY" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "aegis"
-	},
-/turf/open/floor/plating,
-/turf/open/floor/plating,
 /area/space)
 "qZ" = (
 /obj/machinery/light/small{
@@ -2287,20 +2175,9 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/space)
-"sa" = (
-/obj/structure/rack,
-/obj/effect/spawner/random/maintenance/three,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/space)
 "sb" = (
 /obj/structure/bed/roller,
 /turf/open/floor/deadspace/medical,
-/area/space)
-"sc" = (
-/obj/effect/turf_decal/box/white,
-/turf/open/floor/plating,
-/turf/open/floor/deadspace/grater,
 /area/space)
 "sd" = (
 /obj/structure/rack,
@@ -2381,16 +2258,8 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/deadspace/medical,
 /area/space)
-"sN" = (
-/turf/closed/wall/r_wall,
-/turf/open/floor/deadspace/grater,
-/area/space)
 "sO" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/space)
-"sP" = (
-/turf/open/floor/plating,
 /turf/open/floor/plating,
 /area/space)
 "sU" = (
@@ -2462,7 +2331,6 @@
 "ub" = (
 /obj/effect/spawner/random/ammo,
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/space)
 "ud" = (
 /obj/machinery/door/airlock/maintenance,
@@ -2661,8 +2529,6 @@
 /turf/open/floor/plating,
 /area/space)
 "wP" = (
-/turf/open/floor/plating,
-/turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space)
 "wT" = (
@@ -2716,7 +2582,6 @@
 "xC" = (
 /obj/structure/closet/body_bag,
 /obj/effect/turf_decal/box/white,
-/turf/open/floor/plating,
 /turf/open/floor/deadspace/grater,
 /area/space)
 "xF" = (
@@ -2746,11 +2611,6 @@
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/medical/minor_healing,
 /obj/effect/spawner/random/engineering/tool_advanced,
-/turf/open/floor/plating,
-/area/space)
-"yh" = (
-/turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /turf/open/floor/plating,
 /area/space)
 "yn" = (
@@ -2842,17 +2702,9 @@
 /obj/machinery/conveyor,
 /turf/open/floor/plating,
 /area/space)
-"zu" = (
-/turf/open/floor/deadspace/random/rectangles,
-/turf/open/floor/deadspace/grater,
-/area/space)
 "zx" = (
 /obj/structure/barricade/wooden,
 /turf/open/water,
-/area/space)
-"zy" = (
-/turf/open/floor/catwalk_floor/iron_dark,
-/turf/open/floor/catwalk_floor/iron_dark,
 /area/space)
 "zB" = (
 /obj/structure/rack,
@@ -2889,10 +2741,6 @@
 "zW" = (
 /obj/item/flashlight/flare,
 /turf/open/misc/asteroid,
-/area/space)
-"zX" = (
-/turf/closed/wall/mineral/titanium/survival/pod,
-/turf/open/floor/plating,
 /area/space)
 "Aa" = (
 /obj/machinery/conveyor{
@@ -2963,11 +2811,6 @@
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/mono,
 /area/space)
-"AT" = (
-/obj/machinery/door/airlock/maintenance,
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/plating,
-/area/space)
 "Bb" = (
 /obj/machinery/button/door/directional/east{
 	id = "UndergroundMining";
@@ -2978,10 +2821,6 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/mono,
-/area/space)
-"Bc" = (
-/turf/open/water,
-/turf/open/water,
 /area/space)
 "Bh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3023,11 +2862,6 @@
 /obj/effect/spawner/random/engineering/tool_advanced,
 /turf/open/floor/plating,
 /area/space)
-"BO" = (
-/turf/closed/wall/r_wall,
-/turf/open/floor/plating,
-/turf/open/misc/asteroid,
-/area/space)
 "BP" = (
 /obj/effect/spawner/random/maintenance/two,
 /obj/structure/rack,
@@ -3056,11 +2890,6 @@
 /obj/item/ammo_box/magazine/divet,
 /turf/open/misc/asteroid,
 /area/space)
-"Cb" = (
-/turf/open/misc/asteroid,
-/turf/open/misc/asteroid,
-/turf/open/misc/asteroid,
-/area/space)
 "Cg" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -3076,10 +2905,6 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/medical,
-/area/space)
-"Ck" = (
-/turf/open/misc/asteroid,
-/turf/open/misc/asteroid,
 /area/space)
 "Cm" = (
 /obj/machinery/light{
@@ -3234,12 +3059,6 @@
 	},
 /turf/open/floor/iron/freezer,
 /area/space)
-"DL" = (
-/turf/closed/wall/r_wall,
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/space)
 "DM" = (
 /obj/machinery/conveyor,
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
@@ -3249,17 +3068,11 @@
 /area/space)
 "DN" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/plating,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space)
 "DS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mob_spawn/corpse/human/charredskeleton,
-/turf/open/floor/plating,
-/area/space)
-"Ee" = (
-/turf/closed/wall/r_wall,
-/turf/open/floor/deadspace/grater,
 /turf/open/floor/plating,
 /area/space)
 "Em" = (
@@ -3289,10 +3102,6 @@
 /obj/effect/spawner/random/food_or_drink/snack,
 /turf/open/floor/plating,
 /area/space)
-"EF" = (
-/turf/closed/wall/r_wall,
-/turf/open/floor/plating,
-/area/space)
 "EK" = (
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
@@ -3304,7 +3113,6 @@
 /area/space)
 "EW" = (
 /obj/structure/closet/secure_closet/freezer/meat,
-/turf/open/floor/plating,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space)
 "EZ" = (
@@ -3344,11 +3152,6 @@
 	},
 /turf/open/floor/plating,
 /area/space)
-"FJ" = (
-/turf/closed/wall/mineral/titanium/survival/pod,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/space)
 "FN" = (
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
@@ -3383,13 +3186,6 @@
 /obj/structure/table,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
-/area/space)
-"Go" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/deadspace/grater,
 /area/space)
 "Gp" = (
 /obj/machinery/light{
@@ -3510,13 +3306,6 @@
 	},
 /turf/open/floor/plating,
 /area/space)
-"IA" = (
-/obj/effect/landmark{
-	name = "ShuttleRepairPart"
-	},
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/deadspace/grater,
-/area/space)
 "IB" = (
 /obj/structure/fence/door/barred,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -3567,10 +3356,6 @@
 /obj/structure/grille,
 /turf/open/misc/asteroid,
 /area/space)
-"Ju" = (
-/turf/open/floor/plating,
-/turf/open/floor/deadspace/grater,
-/area/space)
 "Jv" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -3598,7 +3383,6 @@
 "JZ" = (
 /obj/machinery/firealarm,
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/space)
 "Kb" = (
 /obj/machinery/chem_master,
@@ -3652,11 +3436,6 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
-/area/space)
-"KQ" = (
-/obj/structure/closet/emcloset/anchored,
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/plating,
 /area/space)
 "KW" = (
 /obj/machinery/light{
@@ -3733,13 +3512,6 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
 /area/space)
-"LT" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/deadspace/grater,
-/area/space)
 "LV" = (
 /turf/open/floor/iron/dark,
 /turf/open/floor/iron/dark,
@@ -3760,10 +3532,6 @@
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 6
 	},
-/turf/open/floor/plating,
-/area/space)
-"Mj" = (
-/turf/open/floor/deadspace/grater,
 /turf/open/floor/plating,
 /area/space)
 "Mk" = (
@@ -3828,16 +3596,10 @@
 "Nd" = (
 /obj/structure/sign/cec/cyan,
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/space)
 "Nf" = (
 /obj/structure/closet/emcloset/anchored,
 /turf/open/floor/deadspace/grater,
-/area/space)
-"Ng" = (
-/obj/structure/grille/broken,
-/turf/open/misc/asteroid,
-/turf/open/misc/asteroid,
 /area/space)
 "Nh" = (
 /obj/machinery/light/small{
@@ -3901,10 +3663,6 @@
 /obj/structure/rack/shelf,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
-/area/space)
-"NX" = (
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/catwalk_floor/iron_dark,
 /area/space)
 "Of" = (
 /obj/structure/cable,
@@ -3970,7 +3728,6 @@
 "Pn" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/box/white,
-/turf/open/floor/plating,
 /turf/open/floor/deadspace/grater,
 /area/space)
 "Po" = (
@@ -4084,10 +3841,6 @@
 /obj/machinery/mineral/equipment_vendor,
 /turf/open/floor/deadspace/random/rectangles,
 /area/space)
-"RD" = (
-/turf/open/floor/deadspace/random/rectangles,
-/turf/open/floor/deadspace/random/rectangles,
-/area/space)
 "RI" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/deadspace/random/maint_center,
@@ -4168,11 +3921,6 @@
 /obj/structure/closet/secure_closet/personal/patient,
 /turf/open/floor/deadspace/medical,
 /area/space)
-"SL" = (
-/obj/structure/closet/firecloset/full,
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/plating,
-/area/space)
 "SM" = (
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/deadspace/grater,
@@ -4242,13 +3990,6 @@
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/deadspace/grater,
 /area/space)
-"Tv" = (
-/obj/effect/landmark{
-	name = "ShuttleRepairPart"
-	},
-/turf/open/floor/plating,
-/turf/open/floor/plating,
-/area/space)
 "TE" = (
 /obj/structure/closet/crate/secure/hydroponics,
 /turf/open/floor/plating,
@@ -4268,11 +4009,6 @@
 /obj/structure/janitorialcart,
 /obj/effect/turf_decal/ported/outline,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/space)
-"TN" = (
-/obj/machinery/door/airlock/maintenance,
-/turf/open/floor/plating,
-/turf/open/floor/plating,
 /area/space)
 "TO" = (
 /obj/machinery/power/smes,
@@ -4305,21 +4041,11 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/space)
-"Um" = (
-/obj/effect/spawner/random/trash,
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/plating,
-/area/space)
 "Ux" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/closed/wall/r_wall,
-/area/space)
-"UA" = (
-/obj/machinery/light/small,
-/turf/open/floor/plating,
-/turf/open/floor/deadspace/grater,
 /area/space)
 "UE" = (
 /obj/structure/rack,
@@ -4410,12 +4136,10 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/engineering/flashlight,
 /turf/open/floor/plating,
-/turf/open/floor/plating,
 /area/space)
 "VQ" = (
 /obj/structure/sign/poster/cec/g_ball,
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/space)
 "VR" = (
 /turf/open/floor/deadspace/random/slides{
@@ -4425,7 +4149,6 @@
 "VW" = (
 /obj/structure/sign/poster/contraband/lusty_xenomorph,
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/space)
 "Wa" = (
 /obj/item/toy/plush/carpplushie,
@@ -4452,13 +4175,6 @@
 /obj/effect/spawner/random/entertainment/money_large,
 /turf/open/floor/deadspace/grater,
 /area/space)
-"Wn" = (
-/obj/structure/rack,
-/obj/effect/turf_decal/ported/outline,
-/obj/effect/spawner/random/maintenance/two,
-/turf/open/floor/deadspace/grater,
-/turf/open/floor/deadspace/grater,
-/area/space)
 "Wr" = (
 /obj/effect/landmark{
 	name = "ShuttleRepairPart"
@@ -4472,7 +4188,6 @@
 	dir = 8;
 	pixel_x = 14
 	},
-/turf/open/floor/plating,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space)
 "Wz" = (
@@ -4482,11 +4197,6 @@
 "WB" = (
 /obj/structure/table/wood/poker,
 /obj/effect/spawner/random/maintenance,
-/turf/open/floor/plating,
-/area/space)
-"WH" = (
-/turf/open/floor/plating,
-/turf/open/floor/plating,
 /turf/open/floor/plating,
 /area/space)
 "WR" = (
@@ -4537,10 +4247,6 @@
 "Xi" = (
 /obj/structure/ladder,
 /turf/open/floor/deadspace/mono,
-/area/space)
-"Xo" = (
-/turf/open/floor/plating,
-/turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space)
 "Xs" = (
 /obj/effect/spawner/random/maintenance,
@@ -4600,12 +4306,6 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/mono,
-/area/space)
-"XT" = (
-/turf/open/misc/asteroid,
-/turf/open/misc/asteroid,
-/turf/open/misc/asteroid,
-/turf/open/misc/asteroid,
 /area/space)
 "Ya" = (
 /obj/machinery/light/small{
@@ -6365,7 +6065,7 @@ wz
 id
 MR
 id
-sP
+id
 GJ
 GJ
 GJ
@@ -6563,7 +6263,7 @@ GJ
 ny
 dY
 ny
-EF
+GJ
 Yf
 id
 MR
@@ -6765,7 +6465,7 @@ GJ
 ny
 dY
 ny
-EF
+GJ
 Yf
 id
 MR
@@ -6925,11 +6625,11 @@ GJ
 yG
 pV
 QP
-EF
+GJ
 ny
 op
 ny
-EF
+GJ
 Dt
 id
 id
@@ -6967,7 +6667,7 @@ GJ
 ny
 dY
 ny
-EF
+GJ
 Yf
 vz
 MR
@@ -7127,11 +6827,11 @@ GJ
 id
 id
 id
-EF
+GJ
 ny
 dY
 ny
-EF
+GJ
 id
 id
 yG
@@ -7174,10 +6874,10 @@ GJ
 Wd
 GJ
 GJ
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -7329,11 +7029,11 @@ GJ
 tJ
 id
 id
-EF
+GJ
 ny
 dY
 ny
-EF
+GJ
 id
 id
 Yf
@@ -7517,10 +7217,10 @@ gm
 gm
 GJ
 GJ
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 gm
@@ -7531,11 +7231,11 @@ GJ
 id
 id
 id
-EF
+GJ
 ny
 dY
 ny
-EF
+GJ
 id
 id
 Dt
@@ -7733,7 +7433,7 @@ GJ
 kg
 id
 id
-EF
+GJ
 ny
 dY
 ny
@@ -7939,10 +7639,10 @@ wz
 ny
 dY
 ny
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 gm
@@ -7982,10 +7682,10 @@ GJ
 GJ
 GJ
 GJ
-EF
+GJ
 Wd
-EF
-EF
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -8325,10 +8025,10 @@ GJ
 GJ
 GJ
 GJ
-EF
+GJ
 Wd
-EF
-EF
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -8531,7 +8231,7 @@ CT
 id
 id
 id
-EF
+GJ
 GJ
 GJ
 GJ
@@ -8553,12 +8253,12 @@ GJ
 GJ
 GJ
 GJ
-Ee
-Mj
-Mj
-Mj
-SL
-jX
+GJ
+MR
+MR
+MR
+Qy
+qB
 GJ
 GJ
 gm
@@ -8733,7 +8433,7 @@ id
 id
 id
 id
-EF
+GJ
 ny
 ny
 ny
@@ -8755,12 +8455,12 @@ ny
 ny
 ny
 ny
-Ee
-Mj
+GJ
+MR
 ro
-Mj
-Mj
-Mj
+MR
+MR
+MR
 GJ
 GJ
 GJ
@@ -8957,12 +8657,12 @@ dY
 dY
 dY
 ny
-AT
-Mj
-Mj
-Mj
-Um
-Mj
+ud
+MR
+MR
+MR
+Df
+MR
 GJ
 GJ
 GJ
@@ -9137,7 +8837,7 @@ id
 id
 id
 id
-EF
+GJ
 ny
 ny
 ny
@@ -9159,12 +8859,12 @@ ny
 ny
 sU
 ny
-Ee
-Mj
-Mj
-Mj
-Mj
-Mj
+GJ
+MR
+MR
+MR
+MR
+MR
 GJ
 GJ
 GJ
@@ -9339,15 +9039,15 @@ Zr
 id
 id
 id
-EF
 GJ
 GJ
 GJ
-EF
-EF
+GJ
+GJ
+GJ
 Wd
-EF
-EF
+GJ
+GJ
 GJ
 GJ
 ny
@@ -9359,14 +9059,14 @@ GJ
 GJ
 GJ
 GJ
-EF
+GJ
 Wd
-DL
-jX
-jX
+GJ
+qB
+qB
 ld
-Mj
-KQ
+MR
+Nf
 GJ
 GJ
 GJ
@@ -9555,34 +9255,34 @@ GJ
 ny
 dY
 ny
-EF
+GJ
 ZM
 iT
 tr
 hf
-EF
+GJ
 CL
 fg
-EF
-GJ
-EF
-EF
-EF
-EF
 GJ
 GJ
 GJ
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
 id
 ro
 id
-EF
+GJ
 GJ
 fL
 id
 id
 MR
-EF
+GJ
 GJ
 GJ
 GJ
@@ -9593,7 +9293,7 @@ GJ
 ny
 dY
 ny
-sN
+GJ
 Nf
 Qy
 Fy
@@ -9757,12 +9457,12 @@ GJ
 ny
 dY
 ny
-EF
+GJ
 ro
 id
 ro
 id
-EF
+GJ
 ji
 CL
 eY
@@ -9791,11 +9491,11 @@ GJ
 sy
 Yf
 Yf
-EF
+GJ
 ny
 dY
 ny
-sN
+GJ
 MR
 vz
 MR
@@ -9959,12 +9659,12 @@ GJ
 ny
 dY
 ny
-EF
+GJ
 id
 id
 id
 id
-EF
+GJ
 fg
 id
 gX
@@ -9986,7 +9686,7 @@ ka
 MR
 Yo
 gc
-EF
+GJ
 GJ
 GJ
 GJ
@@ -10161,12 +9861,12 @@ GJ
 ny
 dY
 ny
-EF
+GJ
 id
 ro
 id
 id
-EF
+GJ
 fg
 Zr
 Mk
@@ -10178,11 +9878,11 @@ id
 GJ
 GJ
 GJ
-EF
-EF
+GJ
+GJ
 Wd
-EF
-EF
+GJ
+GJ
 GJ
 GJ
 Wd
@@ -10363,20 +10063,20 @@ GJ
 ny
 dY
 ny
-EF
-EF
-Wd
-EF
-EF
-EF
-EF
-EF
-EF
 GJ
-EF
-EF
+GJ
 Wd
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+Wd
+GJ
 GJ
 GJ
 ny
@@ -10397,7 +10097,7 @@ GJ
 dE
 id
 id
-EF
+GJ
 ny
 dY
 ny
@@ -10790,7 +10490,7 @@ ny
 ny
 ny
 ny
-zy
+ny
 dY
 hN
 GJ
@@ -10992,7 +10692,7 @@ GJ
 GJ
 GJ
 GJ
-NX
+MR
 dY
 ny
 GJ
@@ -11194,7 +10894,7 @@ GJ
 GJ
 GJ
 GJ
-NX
+MR
 dY
 ny
 GJ
@@ -11984,23 +11684,23 @@ GJ
 GJ
 GJ
 GJ
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 ny
 dY
 ny
 GJ
 eA
 GJ
-EF
-EF
+GJ
+GJ
 Wd
-EF
-EF
-EF
+GJ
+GJ
+GJ
 GJ
 ny
 dY
@@ -12025,11 +11725,11 @@ GJ
 GJ
 GJ
 GJ
-EF
-EF
+GJ
+GJ
 Wd
-EF
-EF
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -12215,7 +11915,7 @@ GJ
 lI
 id
 Yf
-EF
+GJ
 ny
 dY
 ny
@@ -12392,7 +12092,7 @@ fr
 eY
 id
 id
-EF
+GJ
 ny
 dY
 ny
@@ -12594,7 +12294,7 @@ TY
 eV
 id
 id
-EF
+GJ
 Ic
 dY
 ny
@@ -12619,7 +12319,7 @@ GJ
 kk
 Lz
 Yf
-EF
+GJ
 ny
 dY
 ny
@@ -12796,7 +12496,7 @@ id
 id
 id
 id
-EF
+GJ
 ny
 dY
 ny
@@ -12998,7 +12698,7 @@ eA
 eA
 eA
 eA
-EF
+GJ
 ny
 dY
 ny
@@ -13200,7 +12900,7 @@ wL
 eB
 eA
 gJ
-EF
+GJ
 ny
 dY
 ny
@@ -13402,7 +13102,7 @@ wL
 gT
 eA
 gK
-EF
+GJ
 ny
 dY
 ny
@@ -13441,7 +13141,7 @@ GJ
 GJ
 GJ
 GJ
-sP
+id
 Yf
 fO
 Yf
@@ -13600,11 +13300,11 @@ gm
 GJ
 GJ
 GJ
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 ny
 dY
 ny
@@ -13827,22 +13527,22 @@ GJ
 dh
 CT
 pY
-sP
-WH
-sP
+id
+id
+id
 qf
 GJ
 GJ
-EF
-EF
-EF
-EF
-EF
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
 Ey
 GJ
 sO
@@ -14030,7 +13730,7 @@ qg
 id
 pY
 pY
-sP
+id
 qe
 Zy
 GJ
@@ -14049,8 +13749,8 @@ id
 GJ
 id
 id
-sP
-sP
+id
+id
 id
 sO
 id
@@ -14210,7 +13910,7 @@ Ky
 Ky
 Ky
 mf
-EF
+GJ
 ny
 dY
 ny
@@ -14230,10 +13930,10 @@ ny
 GJ
 pX
 pY
-sP
+id
 pY
-sP
-sP
+id
+id
 qh
 GJ
 GJ
@@ -14249,10 +13949,10 @@ hl
 Lz
 ro
 Wd
-kN
-sP
-sP
-sP
+BB
+id
+id
+id
 id
 id
 id
@@ -14424,18 +14124,18 @@ id
 Lz
 id
 kq
-EF
+GJ
 GJ
 GJ
 ZH
 GJ
 GJ
-EF
+GJ
 pZ
 qb
-fs
+Zr
 LG
-sP
+id
 id
 GJ
 GJ
@@ -14445,7 +14145,7 @@ id
 id
 rX
 hr
-EF
+GJ
 hu
 ro
 id
@@ -14625,8 +14325,8 @@ it
 id
 id
 cP
-EF
-EF
+GJ
+GJ
 ny
 ny
 dY
@@ -14634,10 +14334,10 @@ ny
 ny
 GJ
 GJ
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
 eA
 GJ
 GJ
@@ -14647,7 +14347,7 @@ id
 id
 hn
 ZL
-EF
+GJ
 id
 id
 ro
@@ -14787,7 +14487,7 @@ gm
 gm
 gm
 JB
-Ck
+JB
 JB
 JB
 JB
@@ -14836,7 +14536,7 @@ dY
 ny
 hN
 GJ
-EF
+GJ
 qc
 CT
 id
@@ -14849,11 +14549,11 @@ id
 id
 hc
 ht
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -15038,24 +14738,24 @@ dY
 dY
 ny
 ny
-EF
+GJ
 GJ
 qd
 id
 pY
 GJ
 GJ
-EF
-EF
+GJ
+GJ
 CL
-EF
-EF
-EF
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -15247,17 +14947,17 @@ GJ
 GJ
 GJ
 GJ
-EF
-EF
+GJ
+GJ
 Wd
-EF
-EF
-EF
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 xG
@@ -15455,7 +15155,7 @@ ny
 ny
 ny
 ny
-EF
+GJ
 gl
 yO
 gj
@@ -16019,22 +15719,22 @@ Xd
 Xd
 Du
 wU
-sN
-sN
+GJ
+GJ
 MZ
-sN
-sN
 GJ
 GJ
 GJ
 GJ
 GJ
-EF
+GJ
+GJ
+GJ
 Wd
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -16221,8 +15921,8 @@ zb
 PL
 RP
 BW
-sN
-sN
+GJ
+GJ
 Hz
 iG
 cT
@@ -16263,7 +15963,7 @@ GJ
 ny
 dY
 ar
-EF
+GJ
 jH
 Of
 id
@@ -16423,8 +16123,8 @@ GJ
 GJ
 GJ
 Ki
-sN
-sN
+GJ
+GJ
 Hz
 SD
 SD
@@ -16438,7 +16138,7 @@ id
 id
 id
 cP
-EF
+GJ
 GJ
 GJ
 GJ
@@ -16639,13 +16339,13 @@ Gk
 Gk
 Gk
 id
-EF
-yh
+GJ
+GJ
 fu
 fv
 fB
 GJ
-EF
+GJ
 GJ
 ny
 ny
@@ -16843,13 +16543,13 @@ GJ
 GJ
 GJ
 ft
-sP
-sP
-sP
+id
+id
+id
 fD
 GJ
-EF
-EF
+GJ
+GJ
 MR
 MR
 GJ
@@ -17027,13 +16727,13 @@ gm
 gm
 gm
 GJ
-sN
-sN
+GJ
+GJ
 hD
 hD
 Ag
-sN
-sN
+GJ
+GJ
 GJ
 gm
 gm
@@ -17051,7 +16751,7 @@ id
 id
 id
 GJ
-EF
+GJ
 MR
 MR
 GJ
@@ -17253,7 +16953,7 @@ iq
 id
 id
 id
-EF
+GJ
 MR
 MR
 GJ
@@ -17455,7 +17155,7 @@ xz
 id
 bh
 id
-EF
+GJ
 MR
 QK
 GJ
@@ -17489,10 +17189,10 @@ GJ
 GJ
 GJ
 GJ
-EF
+GJ
 yW
-sc
-sc
+HI
+HI
 ak
 Pn
 gE
@@ -17661,9 +17361,9 @@ Nd
 MR
 MR
 GJ
-EF
-EF
-EF
+GJ
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -17691,9 +17391,9 @@ Sf
 bS
 fJ
 Sf
-EF
+GJ
 Kr
-sc
+HI
 xC
 ZF
 Pn
@@ -17893,10 +17593,10 @@ Sf
 Sf
 FY
 Rb
-EF
+GJ
 Kr
 le
-sc
+HI
 ZF
 Pn
 gE
@@ -18059,13 +17759,13 @@ PZ
 fy
 eA
 id
-EF
-EF
+GJ
+GJ
 Nd
 MR
 MR
 wz
-sP
+id
 id
 id
 GJ
@@ -18095,10 +17795,10 @@ Ks
 Sf
 FY
 Sf
-EF
+GJ
 QM
-sc
-UA
+HI
+QK
 GJ
 do
 Sf
@@ -18256,18 +17956,18 @@ gm
 gm
 gm
 GJ
-EF
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
 cO
-gq
+uU
 MR
 MR
 uU
-sP
+id
 id
 id
 GJ
@@ -18290,10 +17990,10 @@ GJ
 GJ
 GJ
 GJ
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
 OY
 FY
 FY
@@ -18305,7 +18005,7 @@ Sf
 Fg
 sb
 sM
-EF
+GJ
 GJ
 gm
 Cr
@@ -18463,13 +18163,13 @@ GJ
 GJ
 GJ
 kw
-EF
-EF
-EF
+GJ
+GJ
+GJ
 MR
 MR
-EF
-sa
+GJ
+QP
 QP
 QP
 GJ
@@ -18495,7 +18195,7 @@ yC
 om
 MR
 MR
-EF
+GJ
 dA
 FY
 Sf
@@ -18667,13 +18367,13 @@ GJ
 id
 id
 kB
-EF
+GJ
 MR
 MR
-EF
-yh
-EF
-EF
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -18704,8 +18404,8 @@ Sf
 GJ
 QM
 xC
-UA
-sN
+QK
+GJ
 dj
 FY
 HI
@@ -18869,7 +18569,7 @@ GJ
 id
 id
 id
-EF
+GJ
 MR
 MR
 GJ
@@ -18905,10 +18605,10 @@ FY
 Sf
 GJ
 Kr
-sc
-sc
+HI
+HI
 ak
-sc
+HI
 sf
 HI
 zF
@@ -18929,9 +18629,9 @@ xK
 xK
 xK
 Dy
-zX
+Dy
 uU
-zX
+Dy
 po
 po
 JB
@@ -19071,7 +18771,7 @@ GJ
 id
 id
 id
-EF
+GJ
 MR
 QK
 GJ
@@ -19107,10 +18807,10 @@ FY
 Sf
 GJ
 Kr
-sc
-sc
+HI
+HI
 ZF
-sc
+HI
 sf
 HI
 zF
@@ -19130,16 +18830,16 @@ xK
 xK
 xK
 Dy
-zX
+Dy
 id
 id
 id
 id
 id
-zX
+Dy
 uU
 uU
-zX
+Dy
 Dy
 xK
 xK
@@ -19277,10 +18977,10 @@ wz
 MR
 MR
 GJ
-EF
+GJ
 id
 id
-EF
+GJ
 GJ
 GJ
 re
@@ -19309,10 +19009,10 @@ FY
 Rb
 GJ
 Kr
-sc
-sc
+HI
+HI
 ZF
-sc
+HI
 FY
 HI
 zF
@@ -19509,15 +19209,15 @@ XP
 Sf
 Sf
 Sf
-EF
-EF
+GJ
+GJ
 Cn
 Sf
 Sf
 Sf
 FY
 sr
-EF
+GJ
 GJ
 gm
 Cr
@@ -19534,7 +19234,7 @@ xK
 xK
 xK
 Dy
-mg
+qr
 MR
 MR
 Sh
@@ -19543,8 +19243,8 @@ MR
 FN
 nx
 pE
-sP
-zX
+id
+Dy
 Dy
 xK
 xK
@@ -19711,15 +19411,15 @@ XP
 Sf
 Sf
 Sf
-EF
-EF
+GJ
+GJ
 SI
 Sf
 sM
 Sf
 FY
 Vx
-EF
+GJ
 GJ
 gm
 Cr
@@ -19913,15 +19613,15 @@ XP
 Zt
 Sf
 Sf
-EF
-EF
-yh
+GJ
+GJ
+GJ
 lU
 lU
 lU
 sh
-yh
-EF
+GJ
+GJ
 GJ
 gm
 Cr
@@ -19938,8 +19638,8 @@ xK
 xK
 Dy
 qr
-sP
-sP
+id
+id
 MR
 MR
 MR
@@ -20090,14 +19790,14 @@ GJ
 GJ
 GJ
 GJ
-EF
-EF
-EF
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
 ny
 dY
 ar
@@ -20111,18 +19811,18 @@ XF
 dc
 iu
 lm
-EF
-EF
+GJ
+GJ
 lU
 rP
-EF
+GJ
 GJ
 lw
 nG
 nG
 nG
 sj
-EF
+GJ
 gm
 gm
 gm
@@ -20139,9 +19839,9 @@ xK
 xK
 xK
 Dy
-zX
-FJ
-sP
+Dy
+Dy
+id
 La
 rG
 MR
@@ -20298,8 +19998,8 @@ ia
 id
 ia
 re
-EF
-EF
+GJ
+GJ
 ny
 dY
 ar
@@ -20308,23 +20008,23 @@ GJ
 gm
 GJ
 GJ
-EF
-EF
-yh
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
 SM
 MR
 MR
 GJ
-EF
+GJ
 hV
 Sr
 nG
 ZK
-EF
+GJ
 gm
 gm
 gm
@@ -20342,7 +20042,7 @@ xK
 xK
 xK
 xK
-zX
+Dy
 id
 id
 id
@@ -20500,8 +20200,8 @@ re
 re
 re
 re
-EF
-EF
+GJ
+GJ
 ny
 dY
 ar
@@ -20512,21 +20212,21 @@ GJ
 GJ
 GJ
 GJ
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 RZ
 MR
 VB
 GJ
-EF
+GJ
 nO
 nG
 nG
 nR
-EF
+GJ
 gm
 gm
 gm
@@ -20547,10 +20247,10 @@ xK
 Dy
 uU
 uU
-zX
+Dy
 id
 id
-zX
+Dy
 uU
 uU
 Dy
@@ -20668,7 +20368,7 @@ JB
 JB
 JB
 JB
-Ng
+oK
 JB
 ST
 uw
@@ -20702,8 +20402,8 @@ rw
 EC
 Hx
 id
-EF
-EF
+GJ
+GJ
 ny
 dY
 Mn
@@ -20723,12 +20423,12 @@ qX
 MR
 SN
 GJ
-EF
+GJ
 jE
 fE
 Su
 IX
-EF
+GJ
 gm
 gm
 gm
@@ -20921,9 +20621,9 @@ GJ
 GJ
 GJ
 GJ
-EF
-EF
-EF
+GJ
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -21067,7 +20767,7 @@ JB
 JB
 JB
 JB
-Ck
+JB
 JB
 JB
 JB
@@ -21272,7 +20972,7 @@ po
 JB
 JB
 JB
-Ck
+JB
 JB
 KK
 JB
@@ -21308,8 +21008,8 @@ re
 re
 id
 id
-EF
-EF
+GJ
+GJ
 ny
 dY
 dY
@@ -21469,7 +21169,7 @@ JB
 po
 JB
 gm
-Ck
+JB
 JB
 JB
 gm
@@ -21510,8 +21210,8 @@ re
 re
 re
 re
-EF
-EF
+GJ
+GJ
 ny
 dY
 ar
@@ -21712,8 +21412,8 @@ cb
 re
 rx
 id
-EF
-EF
+GJ
+GJ
 ny
 dY
 ar
@@ -21908,14 +21608,14 @@ GJ
 GJ
 GJ
 GJ
-EF
-EF
-EF
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
 ny
 dY
 Mn
@@ -22107,11 +21807,11 @@ gm
 gm
 GJ
 GJ
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -23112,11 +22812,11 @@ gm
 gm
 GJ
 GJ
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 ie
 id
 ie
@@ -23317,19 +23017,19 @@ GJ
 aS
 id
 id
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 CL
 CL
 GJ
 GJ
-EF
+GJ
 Wd
-EF
-EF
+GJ
+GJ
 sU
 dY
 ar
@@ -23521,8 +23221,8 @@ id
 id
 eY
 eY
-EF
-EF
+GJ
+GJ
 iB
 id
 id
@@ -23531,7 +23231,7 @@ GJ
 lI
 id
 id
-EF
+GJ
 GJ
 iY
 og
@@ -23723,8 +23423,8 @@ id
 id
 ep
 Cx
-EF
-EF
+GJ
+GJ
 hW
 id
 id
@@ -23733,7 +23433,7 @@ GJ
 id
 id
 id
-EF
+GJ
 ny
 dY
 ar
@@ -23925,8 +23625,8 @@ id
 CL
 id
 id
-EF
-EF
+GJ
+GJ
 hW
 id
 id
@@ -23935,7 +23635,7 @@ GJ
 kk
 Yf
 Yf
-EF
+GJ
 ny
 dY
 dY
@@ -24122,16 +23822,16 @@ GJ
 GJ
 GJ
 GJ
-EF
-EF
+GJ
+GJ
 Wd
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 Wd
-EF
+GJ
 GJ
 GJ
 GJ
@@ -24762,9 +24462,9 @@ GJ
 fd
 fi
 fk
-Xo
+wP
 fk
-EF
+GJ
 ar
 dY
 dY
@@ -24963,9 +24663,9 @@ GJ
 GJ
 DN
 wP
-Xo
-Xo
-Xo
+wP
+wP
+wP
 EK
 ar
 ev
@@ -25166,9 +24866,9 @@ GJ
 cc
 fl
 Ww
-Xo
+wP
 EW
-EF
+GJ
 GJ
 GJ
 GJ
@@ -25735,13 +25435,13 @@ gm
 gm
 GJ
 GJ
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 Wd
-EF
+GJ
 GJ
 GJ
 GJ
@@ -25750,16 +25450,16 @@ uU
 uU
 uU
 Wd
-EF
+GJ
 GJ
 GJ
 ny
 dY
 ny
 GJ
-EF
+GJ
 Wd
-EF
+GJ
 GJ
 dY
 id
@@ -25939,7 +25639,7 @@ GJ
 GJ
 id
 aJ
-EF
+GJ
 aJ
 id
 id
@@ -26141,7 +25841,7 @@ GJ
 GJ
 id
 eY
-EF
+GJ
 aJ
 eY
 eY
@@ -26343,7 +26043,7 @@ GJ
 GJ
 id
 Mu
-EF
+GJ
 GJ
 cY
 la
@@ -26957,7 +26657,7 @@ GJ
 GJ
 zB
 id
-EF
+GJ
 GJ
 GJ
 GJ
@@ -27159,12 +26859,12 @@ id
 GJ
 Yf
 id
-yh
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 ny
@@ -27354,14 +27054,14 @@ id
 lr
 GJ
 hZ
-EF
+GJ
 id
 VW
 iV
 GJ
 Yf
 id
-yh
+GJ
 id
 dF
 id
@@ -27555,15 +27255,15 @@ gF
 id
 id
 GJ
-EF
-EF
+GJ
+GJ
 id
-EF
-EF
+GJ
+GJ
 GJ
 CL
 id
-yh
+GJ
 id
 Gi
 id
@@ -27765,7 +27465,7 @@ nz
 GJ
 id
 CL
-yh
+GJ
 id
 Gi
 id
@@ -27967,7 +27667,7 @@ Yf
 GJ
 id
 id
-TN
+wz
 id
 id
 id
@@ -28154,27 +27854,27 @@ JB
 JB
 GJ
 GJ
-EF
-EF
+GJ
+GJ
 oX
-EF
-EF
+GJ
+GJ
 ub
 GJ
-EF
-EF
-Wd
-EF
-EF
 GJ
-EF
-EF
-yh
-EF
-EF
+GJ
 Wd
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+GJ
+Wd
+GJ
+GJ
 GJ
 GJ
 ny
@@ -28972,7 +28672,7 @@ GJ
 GJ
 GJ
 Wd
-EF
+GJ
 GJ
 jp
 jp
@@ -29386,7 +29086,7 @@ iI
 iL
 iP
 iI
-sP
+id
 GJ
 GJ
 ny
@@ -29780,13 +29480,13 @@ Gk
 GJ
 Yf
 id
-sP
-CL
-id
-id
 id
 CL
-sP
+id
+id
+id
+CL
+id
 id
 ff
 ff
@@ -29982,17 +29682,17 @@ Gk
 GJ
 ig
 id
-eQ
+CL
 id
 CL
 Yf
 id
-EF
+GJ
 iK
 Zr
-sP
-sP
-sP
+id
+id
+id
 GJ
 GJ
 ny
@@ -30174,13 +29874,13 @@ gm
 gm
 GJ
 GJ
-EF
-EF
-EF
+GJ
+GJ
+GJ
 Wd
-EF
-EF
-EF
+GJ
+GJ
+GJ
 GJ
 GJ
 GJ
@@ -30200,8 +29900,8 @@ GJ
 ny
 dY
 ny
-Ju
-lK
+MR
+MR
 MR
 nM
 CU
@@ -30606,7 +30306,7 @@ dY
 ny
 GJ
 us
-sP
+id
 id
 wz
 uP
@@ -30808,7 +30508,7 @@ dY
 ny
 GJ
 gX
-sP
+id
 id
 uU
 uP
@@ -31010,7 +30710,7 @@ dY
 ny
 GJ
 hy
-sP
+id
 id
 GJ
 mV
@@ -32434,9 +32134,9 @@ ny
 MR
 GJ
 GJ
-EF
+GJ
 Wd
-EF
+GJ
 GJ
 GJ
 GJ
@@ -33450,11 +33150,11 @@ ny
 GJ
 GJ
 GJ
-kK
-kK
-kK
-kK
-kK
+GJ
+GJ
+GJ
+GJ
+GJ
 JB
 xK
 xK
@@ -33639,7 +33339,7 @@ ny
 sU
 ny
 GJ
-EF
+GJ
 jn
 id
 Xs
@@ -33652,9 +33352,9 @@ ny
 GJ
 GJ
 JB
-Ck
-Ck
-Ck
+JB
+JB
+JB
 tQ
 tQ
 JB
@@ -33830,7 +33530,7 @@ ny
 GJ
 GJ
 GJ
-EF
+GJ
 Ic
 ny
 dY
@@ -33840,7 +33540,7 @@ ny
 ny
 GJ
 id
-EF
+GJ
 CL
 id
 cX
@@ -34236,7 +33936,7 @@ GJ
 id
 VP
 GJ
-EF
+GJ
 ny
 dY
 ny
@@ -34255,10 +33955,10 @@ GJ
 ny
 dY
 ny
-Ck
+JB
 ny
-Ck
-Ck
+JB
+JB
 JB
 tQ
 ny
@@ -34436,9 +34136,9 @@ ny
 GJ
 GJ
 id
-sP
+id
 eZ
-EF
+GJ
 ny
 dY
 ny
@@ -34447,8 +34147,8 @@ Gq
 id
 id
 id
-sP
-sP
+id
+id
 id
 cE
 fg
@@ -34457,10 +34157,10 @@ GJ
 Ic
 dY
 ny
-Ck
 JB
-Ck
-Ck
+JB
+JB
+JB
 ny
 JB
 tQ
@@ -34638,7 +34338,7 @@ ny
 GJ
 GJ
 Yf
-sP
+id
 id
 wz
 ny
@@ -34649,8 +34349,8 @@ id
 mm
 id
 mm
-eQ
-sP
+CL
+id
 id
 eT
 id
@@ -34662,7 +34362,7 @@ ny
 ny
 JB
 ny
-Ck
+JB
 JB
 JB
 tQ
@@ -34839,10 +34539,10 @@ dY
 dY
 ny
 GJ
-EF
-no
+GJ
+Yf
 Lz
-EF
+GJ
 ny
 dY
 ny
@@ -34851,8 +34551,8 @@ id
 in
 id
 im
-eQ
-sP
+CL
+id
 fg
 Xs
 Xs
@@ -35042,9 +34742,9 @@ dY
 dY
 ny
 GJ
-EF
+GJ
 Yf
-EF
+GJ
 ny
 dY
 ny
@@ -35053,11 +34753,11 @@ id
 mm
 id
 mm
-eQ
-sP
-EF
-EF
-EF
+CL
+id
+GJ
+GJ
+GJ
 GJ
 GJ
 ny
@@ -35066,7 +34766,7 @@ ny
 ny
 JB
 JB
-Ck
+JB
 JB
 ny
 JB
@@ -35268,7 +34968,7 @@ ny
 tQ
 ny
 JB
-Ck
+JB
 JB
 JB
 JB
@@ -35463,7 +35163,7 @@ GJ
 GJ
 Np
 Yf
-EF
+GJ
 ny
 dY
 ny
@@ -35472,11 +35172,11 @@ ny
 JB
 ny
 ny
-Ck
-Ck
-Ck
-Ck
-Ck
+JB
+JB
+JB
+JB
+JB
 JB
 Cr
 Cr
@@ -35669,15 +35369,15 @@ wz
 ny
 dY
 ny
-Ck
-Ck
-Ck
-XT
-Cb
-Cb
-Cb
-Cb
-Cb
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
 tQ
 xK
 Cr
@@ -35854,7 +35554,7 @@ dY
 dY
 iY
 dY
-Bc
+dY
 ny
 GJ
 Qm
@@ -35867,7 +35567,7 @@ GJ
 GJ
 id
 id
-EF
+GJ
 ny
 dY
 ny
@@ -35875,11 +35575,11 @@ ny
 ny
 JB
 tQ
-Ck
-Ck
-Ck
-Ck
-Ck
+JB
+JB
+JB
+JB
+JB
 tQ
 xK
 Cr
@@ -36069,18 +35769,18 @@ GJ
 GJ
 vE
 cP
-EF
+GJ
 Ic
 dY
 ny
-kK
-kK
-kK
-lA
-Ck
-Ck
-Ck
-Ck
+GJ
+GJ
+GJ
+GJ
+JB
+JB
+JB
+JB
 tQ
 tQ
 JB
@@ -36278,8 +35978,8 @@ ny
 GJ
 GJ
 GJ
-kK
-kK
+GJ
+GJ
 JB
 JB
 tQ
@@ -36480,9 +36180,9 @@ ny
 wz
 id
 id
-BO
-kK
-kK
+GJ
+GJ
+GJ
 JB
 JB
 xK
@@ -36665,7 +36365,7 @@ ny
 dY
 hN
 GJ
-EF
+GJ
 BM
 CL
 CL
@@ -36679,10 +36379,10 @@ GJ
 ny
 dY
 ny
-EF
-Tv
-sP
-no
+GJ
+Lz
+id
+Yf
 GJ
 GJ
 xK
@@ -36867,16 +36567,16 @@ ny
 dY
 ny
 GJ
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 CL
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
 GJ
 ny
 dY
@@ -37069,16 +36769,16 @@ ny
 dY
 ny
 GJ
-EF
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
+GJ
 CL
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
 GJ
 ny
 dY
@@ -37086,7 +36786,7 @@ ny
 GJ
 cP
 cP
-EF
+GJ
 GJ
 GJ
 xK
@@ -37667,8 +37367,8 @@ GJ
 kJ
 UE
 Ps
-EF
-EF
+GJ
+GJ
 GJ
 GJ
 ny
@@ -37864,15 +37564,15 @@ gm
 gm
 gm
 GJ
-EF
+GJ
 id
-sP
-sP
-sP
-sP
-me
-EF
-EF
+id
+id
+id
+id
+kJ
+GJ
+GJ
 ny
 dY
 ny
@@ -38066,29 +37766,29 @@ gm
 gm
 gm
 GJ
-EF
+GJ
 id
-yh
-sP
-sP
-yh
-sP
+GJ
 id
-EF
+id
+GJ
+id
+id
+GJ
 ny
 dY
 hN
 GJ
-EF
+GJ
 uU
 uU
 uU
 uU
 uU
 uU
-EF
-EF
-EF
+GJ
+GJ
+GJ
 GJ
 ny
 dY
@@ -38268,15 +37968,15 @@ gm
 gm
 gm
 GJ
-EF
+GJ
 id
-EF
+GJ
 kJ
 HV
-EF
+GJ
 id
 CL
-EF
+GJ
 ny
 dY
 ny
@@ -38470,12 +38170,12 @@ gm
 gm
 gm
 GJ
-EF
+GJ
 id
-EF
-EF
+GJ
+GJ
 de
-EF
+GJ
 CL
 id
 wz
@@ -38672,15 +38372,15 @@ gm
 gm
 gm
 GJ
-EF
+GJ
 id
-EF
+GJ
 qN
 kJ
-EF
+GJ
 id
 CL
-EF
+GJ
 ny
 dY
 ny
@@ -38874,15 +38574,15 @@ gm
 gm
 gm
 GJ
-EF
+GJ
 id
-EF
-id
-id
-EF
+GJ
 id
 id
-EF
+GJ
+id
+id
+GJ
 ny
 dY
 ny
@@ -38903,7 +38603,7 @@ GJ
 GJ
 GJ
 MR
-mO
+xf
 MR
 MR
 MR
@@ -39076,15 +38776,15 @@ gm
 gm
 gm
 GJ
-EF
+GJ
 id
 id
 id
 id
 id
 id
-EF
-EF
+GJ
+GJ
 ny
 dY
 ny
@@ -39105,7 +38805,7 @@ GJ
 GJ
 GJ
 MR
-IA
+vz
 Df
 MR
 xf
@@ -39278,15 +38978,15 @@ gm
 gm
 gm
 GJ
-EF
-EF
+GJ
+GJ
 dy
 Yf
 kJ
-EF
-EF
-EF
-EF
+GJ
+GJ
+GJ
+GJ
 ny
 dY
 hN
@@ -39494,14 +39194,14 @@ dY
 ny
 GJ
 GJ
-RD
-RD
-RD
-RD
-RD
-RD
-RD
-RD
+tc
+tc
+tc
+tc
+tc
+tc
+tc
+tc
 GJ
 GJ
 gm
@@ -40269,7 +39969,7 @@ xK
 xK
 JB
 JB
-Ck
+JB
 JB
 xK
 GJ
@@ -40658,10 +40358,10 @@ xK
 xK
 xK
 xK
-Ck
-Ck
-Ck
-Cb
+JB
+JB
+JB
+JB
 JB
 JB
 JB
@@ -40710,9 +40410,9 @@ tc
 MR
 Ch
 LR
-Wn
-Wn
-gA
+Jh
+Jh
+MR
 tc
 GJ
 GJ
@@ -40863,7 +40563,7 @@ xK
 JB
 JB
 JB
-Ck
+JB
 JB
 JB
 JB
@@ -40882,7 +40582,7 @@ GJ
 uU
 uU
 uU
-sN
+GJ
 MR
 Vt
 MR
@@ -41095,11 +40795,11 @@ GJ
 lD
 lD
 lD
-sN
+GJ
 pC
 pC
 pC
-sN
+GJ
 mz
 qJ
 Wi
@@ -41111,7 +40811,7 @@ db
 MR
 GJ
 tc
-zu
+tc
 MR
 MR
 MR
@@ -41297,10 +40997,10 @@ GJ
 MR
 MR
 MR
-LT
-gA
-gA
-gA
+Gp
+MR
+MR
+MR
 Gp
 MR
 MR
@@ -41502,10 +41202,10 @@ MR
 MR
 MR
 MR
-gA
-gA
-gA
-gA
+MR
+MR
+MR
+MR
 MR
 MR
 MR
@@ -42724,7 +42424,7 @@ yx
 yx
 yx
 yx
-qY
+LW
 GJ
 tc
 MR
@@ -43082,7 +42782,7 @@ JB
 JB
 JB
 JB
-Ck
+JB
 JB
 JB
 JB
@@ -43284,7 +42984,7 @@ JB
 JB
 JB
 JB
-Ck
+JB
 JB
 JB
 JB
@@ -43486,7 +43186,7 @@ JB
 JB
 JB
 JB
-Ck
+JB
 JB
 JB
 JB
@@ -43525,15 +43225,15 @@ MR
 MR
 MR
 MR
-gA
-gA
-gA
-gA
-gA
-gA
-gA
-gA
-sN
+MR
+MR
+MR
+MR
+MR
+MR
+MR
+MR
+GJ
 tc
 MR
 MR
@@ -43688,7 +43388,7 @@ JB
 JB
 JB
 JB
-Ck
+JB
 JB
 JB
 JB
@@ -43727,14 +43427,14 @@ oa
 MR
 MR
 MR
-gA
-gA
+MR
+MR
 mk
 mk
 ov
-gA
-gA
-gA
+MR
+MR
+MR
 Gu
 tc
 MR
@@ -43890,7 +43590,7 @@ JB
 JB
 JB
 JB
-Ck
+JB
 JB
 JB
 JB
@@ -43929,14 +43629,14 @@ MR
 of
 MR
 MR
-gA
-Go
-gA
-gA
-gA
-gA
+MR
+of
+MR
+MR
+MR
+MR
 mk
-gA
+MR
 Gu
 tc
 MR
@@ -44092,7 +43792,7 @@ JB
 JB
 JB
 JB
-Ck
+JB
 JB
 JB
 JB
@@ -44128,18 +43828,18 @@ MR
 MR
 MR
 MR
-sN
-sN
+GJ
+GJ
 uU
 uU
-jK
-gA
-gA
-gA
-gA
+GJ
+MR
+MR
+MR
+MR
 mk
-gA
-sN
+MR
+GJ
 bW
 MR
 MR
@@ -44330,26 +44030,26 @@ MR
 of
 MR
 MR
-pn
-sN
+Sk
+GJ
 ph
 ST
 ST
-gA
-gA
-gA
-Go
-gA
-gA
-sN
-RD
+MR
+MR
+MR
+of
+MR
+MR
+GJ
 tc
 tc
 tc
 tc
 tc
 tc
-RD
+tc
+tc
 GJ
 GJ
 gm
@@ -44540,7 +44240,7 @@ ST
 MR
 MR
 MR
-sN
+GJ
 MR
 MR
 GJ
@@ -44737,14 +44437,14 @@ GJ
 GJ
 GJ
 GJ
-sN
-sN
+GJ
+GJ
 Xi
-sN
-sN
-sN
-sN
-sN
+GJ
+GJ
+GJ
+GJ
+GJ
 GJ
 GJ
 GJ
