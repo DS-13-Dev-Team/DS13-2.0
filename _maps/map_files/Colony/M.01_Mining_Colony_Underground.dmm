@@ -76,12 +76,7 @@
 /turf/open/floor/plating,
 /area/space)
 "aU" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 15;
-	req_access = list(201)
-	},
+/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/space)
@@ -333,11 +328,7 @@
 /turf/open/floor/plating,
 /area/space)
 "df" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
+/obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 4
 	},
@@ -363,7 +354,6 @@
 /area/space)
 "dm" = (
 /obj/machinery/light,
-/obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /turf/open/floor/iron/dark,
@@ -779,11 +769,7 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/space)
 "fJ" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
+/obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
 /turf/open/floor/deadspace/medical,
 /area/space)
@@ -1748,6 +1734,12 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"mu" = (
+/obj/machinery/door/firedoor,
+/obj/effect/spawner/structure/window/reinforced/grille,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/space)
 "mz" = (
 /obj/structure/closet/crate/large/ds/green_horizontal,
 /obj/effect/spawner/random/maintenance/three,
@@ -1903,12 +1895,7 @@
 /turf/open/floor/deadspace/grater,
 /area/space)
 "nX" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 15;
-	req_access = list(201)
-	},
+/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/slides,
 /area/space)
@@ -2442,12 +2429,7 @@
 /turf/open/floor/plating,
 /area/space)
 "rY" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 15;
-	req_access = list(201)
-	},
+/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/space)
@@ -2761,12 +2743,7 @@
 /turf/open/misc/asteroid,
 /area/space)
 "vP" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 15;
-	req_access = list(201)
-	},
+/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/medical,
 /area/space)
@@ -2777,6 +2754,14 @@
 "vR" = (
 /obj/effect/landmark,
 /turf/open/floor/deadspace/roller,
+/area/space)
+"vW" = (
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/obj/effect/spawner/structure/window/reinforced/grille,
+/obj/structure/cable,
+/turf/open/floor/plating,
 /area/space)
 "vZ" = (
 /obj/machinery/light/small{
@@ -4111,12 +4096,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/space)
 "MP" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 15;
-	req_access = list(201)
-	},
+/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/closet/crate/freezer,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
@@ -16087,7 +16067,7 @@ ST
 ST
 Vy
 re
-XP
+mu
 jP
 jP
 xp
@@ -16278,9 +16258,9 @@ GJ
 GJ
 GJ
 GJ
-lU
+vW
 du
-lU
+vW
 GJ
 GJ
 GJ
