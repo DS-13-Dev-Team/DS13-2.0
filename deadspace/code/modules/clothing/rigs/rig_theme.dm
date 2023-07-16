@@ -49,7 +49,6 @@
 		/obj/item/storage/bag/chemistry,
 		/obj/item/storage/bag/bio,
 		/obj/item/dnainjector,
-		/obj/item/biopsy_tool,
 		/obj/item/ammo_box,
 		/obj/item/ammo_casing,
 		/obj/item/reagent_containers/spray/pepper,
