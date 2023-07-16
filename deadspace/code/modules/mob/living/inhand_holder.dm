@@ -5,7 +5,7 @@
 	. = ..()
 	name = "scavenger bot"
 	desc = "The drone has folded into a holdable mode"
-	icon = 'deadspace/icons/mob/animal.dmi'
+	icon = 'deadspace/icons/mob/dsbots.dmi'
 	icon_state = "spiderbot_console"
 
 /obj/item/mob_holder/janibot
@@ -20,5 +20,5 @@
 	. = ..()
 	name = "Janibot"
 	desc = "The bot has folded into a holdable mode"
-	icon = 'deadspace/icons/mob/animal.dmi'
+	icon = 'deadspace/icons/mob/dsbots.dmi'
 	icon_state = "cleanbot_console"
