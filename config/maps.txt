@@ -59,3 +59,7 @@ map sprawl
 	minplayers 25
 	#votable
 endmap
+
+map mara
+	#votable
+endmap

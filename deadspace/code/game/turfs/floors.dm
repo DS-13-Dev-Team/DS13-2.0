@@ -1,11 +1,11 @@
 /turf/open/floor/plating/deadspace
-	icon = 'deadspace/icons/turf/floors_ds13.dmi'
+	icon = 'deadspace/icons/turf/floors.dmi'
 	base_icon_state = "dank_plating"
 	icon_state = "dank_plating"
 
 /turf/open/floor/deadspace
 	name = "floor"
-	icon = 'deadspace/icons/turf/floors_ds13.dmi'
+	icon = 'deadspace/icons/turf/floors.dmi'
 	base_icon_state = "dank_tile"
 	icon_state = "dank_tile"
 	baseturfs = /turf/open/floor/plating/deadspace
