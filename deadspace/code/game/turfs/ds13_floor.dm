@@ -23,8 +23,8 @@
 	icon_state = "dank_tile_medical"
 
 /turf/open/floor/deadspace/bathroom
-	base_icon_state = "dank_tile_bathroom"
-	icon_state = "dank_tile_bathroom"
+	base_icon_state = "bathroom"
+	icon_state = "bathroom"
 
 /turf/open/floor/deadspace/mono
 	base_icon_state = "dank_tile_mono"
