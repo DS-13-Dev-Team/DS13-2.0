@@ -10,7 +10,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	sight = SEE_MOBS|SEE_OBJS|SEE_TURFS
 	mouse_opacity = MOUSE_OPACITY_ICON
 	movement_type = GROUND|FLYING
-	hud_type = /datum/hud/marker
+	hud_type = /datum/hud/marker_signal
 	interaction_range = null
 	var/psy_energy = 0
 	var/psy_energy_maximum = 900
@@ -201,13 +201,13 @@ GLOBAL_LIST_EMPTY(markers_signals)
 /mob/camera/marker_signal/proc/change_psy_energy(amount)
 	psy_energy = clamp(psy_energy+amount, 0, psy_energy_maximum)
 	if(hud_used)
-		var/datum/hud/marker/our_hud = hud_used
+		var/datum/hud/marker_signal/our_hud = hud_used
 		var/filter = our_hud.psy_energy.get_filter("alpha_filter")
 		animate(filter, x = clamp(HUD_METER_PIXEL_WIDTH*(psy_energy/psy_energy_maximum), 0, HUD_METER_PIXEL_WIDTH), time = 0.5 SECONDS)
 		our_hud.foreground_psy.maptext = MAPTEXT("[round(psy_energy, 1)]/[psy_energy_maximum] | +[psy_energy_generation] psy/sec")
 
 /mob/camera/marker_signal/proc/update_biomass_hud(hud_override)
-	var/datum/hud/marker/our_hud = hud_override || hud_used
+	var/datum/hud/marker_signal/our_hud = hud_override || hud_used
 	our_hud?.foreground_bio.maptext = MAPTEXT("[round(marker.signal_biomass, 1)] | +[marker.last_biomass_income*marker.signal_biomass_percent] bio/sec")
 
 /mob/camera/marker_signal/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null, filterproof = null)
@@ -256,7 +256,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	icon = 'deadspace/icons/signals/mastersignal.dmi'
 	invisibility = INVISIBILITY_OBSERVER
 	see_invisible = SEE_INVISIBLE_OBSERVER
-	hud_type = /datum/hud/marker
+	hud_type = /datum/hud/marker_signal/marker
 	interaction_range = null
 	pixel_x = -7
 	pixel_y = -7
@@ -279,7 +279,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	return ..()
 
 /mob/camera/marker_signal/marker/update_biomass_hud(hud_override)
-	var/datum/hud/marker/our_hud = hud_override || hud_used
+	var/datum/hud/marker_signal/our_hud = hud_override || hud_used
 	our_hud?.foreground_bio.maptext = MAPTEXT("[round(marker.marker_biomass, 1)] | +[marker.last_biomass_income*(1-marker.signal_biomass_percent)] bio/sec")
 
 /mob/camera/marker_signal/marker/verb/downgrade()

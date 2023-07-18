@@ -1,4 +1,4 @@
-/datum/hud/marker
+/datum/hud/marker_signal
 	var/atom/movable/screen/meter/background/psy/background_psy
 	var/atom/movable/screen/meter/foreground/psy/foreground_psy
 	var/atom/movable/screen/meter/background/bio/background_bio
@@ -7,7 +7,7 @@
 	var/atom/movable/screen/meter/biomass/biomass
 	var/atom/movable/screen/cameranet_static/cameranet_static
 
-/datum/hud/marker/New(mob/camera/marker_signal/owner)
+/datum/hud/marker_signal/New(mob/camera/marker_signal/owner)
 	cameranet_static = new(null, owner)
 	background_psy = new
 	foreground_psy = new
@@ -32,7 +32,7 @@
 	infodisplay += foreground_bio
 	..()
 
-/datum/hud/marker/show_hud(version, mob/viewmob)
+/datum/hud/marker_signal/show_hud(version, mob/viewmob)
 	if(!..())
 		return FALSE
 	var/mob/screenmob = viewmob || mymob
