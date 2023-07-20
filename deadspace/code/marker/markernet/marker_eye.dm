@@ -185,6 +185,42 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 	qdel(src)
 
+/mob/camera/marker_signal/verb/switch_necroqueue()
+	set name = "Join/Leave Necroqueue"
+	set category = "Necromorph"
+
+	if(!marker.active)
+		to_chat(src, span_notice("Marker is not active yet!"))
+		return
+	if(src in marker.necroqueue)
+		to_chat(src, span_notice("You are now in the necroqueue. When a necromorph vessel is available, you will be automatically placed in control of it. You can still manually posess necromorphs."))
+		marker.necroqueue += src
+	else
+		to_chat(src, span_notice("You have left the necroqueue."))
+		marker.necroqueue -= src
+
+/mob/camera/marker_signal/verb/jump_to_maker()
+	set name = "Jump to Marker"
+	set category = "Necromorph"
+
+	forceMove(get_turf(marker))
+
+/mob/camera/marker_signal/verb/jump_to_necro()
+	set name = "Jump to Necromorph"
+	set category = "Necromorph"
+
+	var/mob/living/carbon/human/necromorph/necro = tgui_input_list(src, "Select necromorph to jump to", "Jump To Necromorph", marker.necromorphs)
+	if(necro)
+		forceMove(get_turf(necro))
+
+/mob/camera/marker_signal/verb/jump_to_span_locs()
+	set name = "Jump to Necromorph Spawn Locs"
+	set category = "Necromorph"
+
+	var/atom/location = tgui_input_list(src, "Select object to jump to", "Jump To Spawn Loc", marker.necro_spawn_atoms)
+	if(necro)
+		forceMove(get_turf(location))
+
 /mob/camera/marker_signal/verb/possess_necromorph(mob/living/carbon/human/necromorph/necro in world)
 	set name = "Possess Necromorph"
 	set category = "Object"
@@ -270,9 +306,8 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 /mob/camera/marker_signal/marker/Initialize(mapload, obj/structure/marker/master)
 	. = ..()
-	master?.marker_ui_action.Grant(src)
 	icon_state = "mastersignal"
-	verbs -= /mob/camera/marker_signal/verb/become_master
+	remove_verb(src, /mob/camera/marker_signal/verb/become_master)
 
 /mob/camera/marker_signal/marker/Destroy()
 	marker?.camera_mob = null
@@ -291,6 +326,12 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	signal.ckey = src.ckey
 	signal.change_psy_energy(psy_energy)
 	qdel(src)
+
+/mob/camera/marker_signal/marker/verb/open_marker_ui()
+	set name = "Open Marker UI"
+	set category = "Necromorph"
+
+	marker.ui_interact(src)
 
 /mob/camera/marker_signal/marker/ClickOn(atom/A, params)
 	if(check_click_intercept(params,A))
@@ -364,9 +405,15 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		marker.biomass_invested += marker.necro_classes[spawning_necromorph].biomass_cost
 		var/path = marker.necro_classes[spawning_necromorph].necromorph_type_path
 		var/mob/living/carbon/human/necromorph/mob = new path(A, marker)
-		if(marker.use_necroqueue && length(marker.marker_signals-src))
-			var/mob/camera/marker_signal/signal = pick(marker.marker_signals-src)
-			signal.possess_necromorph(mob)
+		if(marker.use_necroqueue && length(marker.necroqueue))
+			var/list/necroqueue_copy = marker.necroqueue.Copy()
+			//If current signal has no key and there are other signals in the queue, pick another one
+			while(length(necroqueue_copy))
+				var/mob/camera/marker_signal/signal = pick_n_take(marker.necroqueue_copy)
+				signal = pick_n_take(marker.necroqueue_copy)
+				if(signal.key)
+					signal.possess_necromorph(mob)
+					return
 		return
 	if(!spawnloc_cantsee)
 		to_chat(src, span_warning("There are no possible spawn locations nearby!"))

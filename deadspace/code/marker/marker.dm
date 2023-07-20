@@ -7,8 +7,6 @@
 	markernet = new
 	markernet.addVisionSource(src, VISION_SOURCE_RANGE)
 
-	marker_ui_action = new(src)
-
 	for(var/datum/necro_class/class as anything in subtypesof(/datum/necro_class))
 		//Temp check to see if this class is implemented
 		if(initial(class.implemented))
@@ -22,7 +20,6 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/structure/marker/Destroy()
-	QDEL_NULL(marker_ui_action)
 	STOP_PROCESSING(SSobj, src)
 	for(var/datum/biomass_source/source as anything in biomass_sources)
 		remove_biomass_source(source)
@@ -209,20 +206,3 @@
 /obj/structure/marker/proc/remove_biomass_source(datum/biomass_source/source)
 	biomass_sources -= source
 	qdel(source)
-
-/datum/action/marker_ui
-	name = "Open Marker UI"
-
-/datum/action/marker_ui/Trigger(trigger_flags)
-	if(!..())
-		return FALSE
-	target.ui_interact(owner)
-	return TRUE
-
-/datum/action/marker_ui/IsAvailable(feedback)
-	if(!istype(owner, /mob/camera/marker_signal/marker))
-		if(feedback)
-			to_chat(owner, span_warning("You can't open the marker UI!"))
-		return FALSE
-	return ..()
-
