@@ -218,7 +218,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	set category = "Necromorph"
 
 	var/atom/location = tgui_input_list(src, "Select object to jump to", "Jump To Spawn Loc", marker.necro_spawn_atoms)
-	if(necro)
+	if(location)
 		forceMove(get_turf(location))
 
 /mob/camera/marker_signal/verb/possess_necromorph(mob/living/carbon/human/necromorph/necro in world)
@@ -409,8 +409,8 @@ GLOBAL_LIST_EMPTY(markers_signals)
 			var/list/necroqueue_copy = marker.necroqueue.Copy()
 			//If current signal has no key and there are other signals in the queue, pick another one
 			while(length(necroqueue_copy))
-				var/mob/camera/marker_signal/signal = pick_n_take(marker.necroqueue_copy)
-				signal = pick_n_take(marker.necroqueue_copy)
+				var/mob/camera/marker_signal/signal = pick_n_take(necroqueue_copy)
+				signal = pick_n_take(necroqueue_copy)
 				if(signal.key)
 					signal.possess_necromorph(mob)
 					return
