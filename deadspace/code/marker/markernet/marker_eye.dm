@@ -193,11 +193,11 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		to_chat(src, span_notice("Marker is not active yet!"))
 		return
 	if(src in marker.necroqueue)
-		to_chat(src, span_notice("You are now in the necroqueue. When a necromorph vessel is available, you will be automatically placed in control of it. You can still manually posess necromorphs."))
-		marker.necroqueue += src
-	else
 		to_chat(src, span_notice("You have left the necroqueue."))
 		marker.necroqueue -= src
+	else
+		to_chat(src, span_notice("You are now in the necroqueue. When a necromorph vessel is available, you will be automatically placed in control of it. You can still manually posess necromorphs."))
+		marker.necroqueue += src
 
 /mob/camera/marker_signal/verb/jump_to_maker()
 	set name = "Jump to Marker"
@@ -208,6 +208,10 @@ GLOBAL_LIST_EMPTY(markers_signals)
 /mob/camera/marker_signal/verb/jump_to_necro()
 	set name = "Jump to Necromorph"
 	set category = "Necromorph"
+
+	if(!length(marker.necromorphs))
+		to_chat(src, span_notice("There are no necromorphs to jump to!"))
+		return
 
 	var/mob/living/carbon/human/necromorph/necro = tgui_input_list(src, "Select necromorph to jump to", "Jump To Necromorph", marker.necromorphs)
 	if(necro)
@@ -307,7 +311,10 @@ GLOBAL_LIST_EMPTY(markers_signals)
 /mob/camera/marker_signal/marker/Initialize(mapload, obj/structure/marker/master)
 	. = ..()
 	icon_state = "mastersignal"
-	remove_verb(src, /mob/camera/marker_signal/verb/become_master)
+	remove_verb(src, list(
+		/mob/camera/marker_signal/verb/become_master,
+		/mob/camera/marker_signal/verb/switch_necroqueue,
+	))
 
 /mob/camera/marker_signal/marker/Destroy()
 	marker?.camera_mob = null

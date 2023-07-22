@@ -108,6 +108,7 @@
 
 /datum/action/cooldown/necro/corruption/harvester
 	name = "Harvester"
+	button_icon_state = "harvester"
 	place_structure = /obj/structure/necromorph/harvester
 	cost = 50
 	marker_only = TRUE
