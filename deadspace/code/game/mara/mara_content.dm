@@ -4,12 +4,11 @@
 
 // Mining Closet
 
-/obj/structure/closet/secure_closet/miner/mara
-	name = "miner's equipment"
+/obj/structure/closet/secure_closet/mara/miner
 	icon_state = "mining"
 	req_access = list(ACCESS_MINING)
 
-/obj/structure/closet/secure_closet/miner/mara/PopulateContents()
+/obj/structure/closet/secure_closet/mara/miner/PopulateContents()
 	..()
 	new /obj/item/clothing/mask/gas/explorer(src)
 	new /obj/item/mod/control/pre_equipped/ds/min(src)
@@ -71,12 +70,12 @@
 
 // Capitan (Overseer on this map since it sounds fitting) Closet
 
-/obj/structure/closet/secure_closet/captains/mara
+/obj/structure/closet/secure_closet/mara/captains
 	name = "\proper overseer's locker"
 	req_access = list(ACCESS_CAPTAIN)
 	icon_state = "cap"
 
-/obj/structure/closet/secure_closet/captains/mara/PopulateContents()
+/obj/structure/closet/secure_closet/mara/captains/PopulateContents()
 	..()
 
 	new /obj/item/storage/backpack/captain(src)

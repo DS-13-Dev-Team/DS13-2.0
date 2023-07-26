@@ -2465,7 +2465,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/mining/barracks)
 "hT" = (
-/obj/structure/closet/secure_closet/miner/mara,
+/obj/structure/closet/secure_closet/mara/miner,
 /obj/effect/turf_decal/ported,
 /obj/item/stock_parts/cell/plasmacutter,
 /obj/item/clothing/mask/breath,
@@ -3855,7 +3855,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining)
 "lF" = (
-/obj/structure/closet/secure_closet/miner/mara,
+/obj/structure/closet/secure_closet/mara/miner,
 /obj/structure/window/reinforced/spawner,
 /obj/effect/turf_decal/ported,
 /obj/item/stock_parts/cell/plasmacutter,
@@ -3863,7 +3863,7 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/mining/locker_room)
 "lG" = (
-/obj/structure/closet/secure_closet/miner/mara,
+/obj/structure/closet/secure_closet/mara/miner,
 /obj/structure/window/reinforced/spawner/north,
 /obj/effect/turf_decal/ported,
 /obj/item/stock_parts/cell/plasmacutter,
@@ -3871,7 +3871,7 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/mining/locker_room)
 "lH" = (
-/obj/structure/closet/secure_closet/miner/mara,
+/obj/structure/closet/secure_closet/mara/miner,
 /obj/effect/turf_decal/ported,
 /obj/item/stock_parts/cell/plasmacutter,
 /obj/item/clothing/mask/breath,
