@@ -416,8 +416,7 @@
 					/obj/item/clothing/shoes/sneakers/black = 1,
 					/obj/item/plate_shard/marker_shard = 5,
 					/obj/item/storage/book/bible/unitology = 5,
-					/obj/item/storage/fancy/candle_box = 2,
-					/obj/item/clothing/suit/chaplainsuit/whiterobe = 1)
+					/obj/item/storage/fancy/candle_box = 2)
 	contraband = list(/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
 					/obj/item/clothing/head/clownmitre = 1)
 	refill_canister = /obj/item/vending_refill/wardrobe/chap_wardrobe
