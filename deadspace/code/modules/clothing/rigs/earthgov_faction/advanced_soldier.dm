@@ -8,7 +8,7 @@
 	skins = list(
 		"adv_soldier" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -33,7 +33,7 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/adv_soldier
+/obj/item/mod/control/pre_equipped/ds/adv_soldier
 	theme = /datum/mod_theme/deadspace/adv_soldier
 	initial_modules = list(
 		/obj/item/mod/module/storage/syndicate,

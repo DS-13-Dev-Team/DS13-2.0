@@ -8,7 +8,7 @@
 	skins = list(
 		"patrol" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -33,7 +33,7 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/patrol
+/obj/item/mod/control/pre_equipped/ds/patrol
 	theme = /datum/mod_theme/deadspace/patrol
 	initial_modules = list(
 		/obj/item/mod/module/storage,

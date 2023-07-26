@@ -10,7 +10,7 @@
 	skins = list(
 		"heavy_diving" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -35,7 +35,7 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/heavy_diving
+/obj/item/mod/control/pre_equipped/ds/heavy_diving
 	theme = /datum/mod_theme/deadspace/heavy_diving
 	initial_modules = list(
 		/obj/item/mod/module/storage/large_capacity,
@@ -58,7 +58,7 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 	skins = list(
 		"elite_diving" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -83,7 +83,7 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/elite_diving
+/obj/item/mod/control/pre_equipped/ds/elite_diving
 	theme = /datum/mod_theme/deadspace/elite_diving
 	initial_modules = list(
 		/obj/item/mod/module/storage/large_capacity,
@@ -106,7 +106,7 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 	skins = list(
 		"sister" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -131,7 +131,7 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/sister
+/obj/item/mod/control/pre_equipped/ds/sister
 	theme = /datum/mod_theme/deadspace/sister
 	initial_modules = list(
 		/obj/item/mod/module/storage/large_capacity,
