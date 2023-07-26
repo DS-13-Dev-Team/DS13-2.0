@@ -1,5 +1,5 @@
 /obj/item/knife/unitology
-	name = "unitology_ritual_blade"
+	name = "Unitolgist ritual blade"
 	icon = 'deadspace/icons/obj/weapons/ds13handheld.dmi'
 	icon_state = "unitology_ritual_blade"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand.dmi'

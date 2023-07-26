@@ -126,6 +126,7 @@
 	backpack_contents = list(
 		/obj/item/camera/spooky = 1,
 		/obj/item/stamp/chap = 1,
+		/obj/item/knife/unitology,
 		)
 	belt = /obj/item/modular_computer/tablet/pda/chaplain
 	ears = /obj/item/radio/headset/headset_srv
