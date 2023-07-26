@@ -26,7 +26,7 @@
 	name = "Feline Ears"
 	path = /obj/item/organ/ears/cat
 	allowed_species = list(
-		SPECIES_HUMAN
+		SPECIES_PLASMAMAN
 	)
 
 /datum/augment_item/implant/cat_ears/get_choices()
@@ -36,7 +36,7 @@
 	name = "Feline Tail"
 	path = /obj/item/organ/tail/cat
 	allowed_species = list(
-		SPECIES_HUMAN
+		SPECIES_PLASMAMAN
 	)
 
 /datum/augment_item/implant/cat_tail/get_choices()

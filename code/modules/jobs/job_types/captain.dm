@@ -18,7 +18,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/daedalus //Captains cannot be contracted.
+		/datum/employer/cec //Captains cannot be contracted.
 	)
 
 	outfits = list(

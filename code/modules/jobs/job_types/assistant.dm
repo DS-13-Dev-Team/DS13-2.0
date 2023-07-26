@@ -13,16 +13,8 @@ Assistant
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/daedalus,
-		/datum/employer/ananke,
-		/datum/employer/aether,
-		/datum/employer/priapus,
-		/datum/employer/mars_exec,
-		/datum/employer/hermes,
-		/datum/employer/contractor,
-		/datum/employer/none
+		/datum/employer/cec,
 	)
-
 	outfits = list(
 		"Default" = list(
 			SPECIES_HUMAN = /datum/outfit/job/assistant,

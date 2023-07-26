@@ -32,8 +32,7 @@
 		)
 
 	employers = list(
-		/datum/employer/daedalus,
-		/datum/employer/contractor
+		/datum/employer/cec
 	)
 
 	family_heirlooms = list(/obj/item/lighter, /obj/item/lighter/greyscale, /obj/item/storage/box/matches)

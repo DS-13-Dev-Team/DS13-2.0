@@ -13,8 +13,7 @@
 	bounty_types = CIV_JOB_ROBO
 
 	employers = list(
-		/datum/employer/contractor,
-		/datum/employer/ananke
+		/datum/employer/cec,
 	)
 
 	outfits = list(
