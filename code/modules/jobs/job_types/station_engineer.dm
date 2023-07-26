@@ -108,12 +108,9 @@
 
 /datum/outfit/job/engineer/enginetech
 	name = "Engine Technician"
-	uniform = /obj/item/clothing/under/rank/engineering/engineer/enginetech
 
 /datum/outfit/job/engineer/electrician
 	name = "Electrician"
-	uniform = /obj/item/clothing/under/rank/engineering/engineer/electrician
 
 /datum/outfit/job/engineer/mainttech
 	name = "Maintenance Technician"
-	uniform = /obj/item/clothing/under/rank/engineering/engineer/hazard
