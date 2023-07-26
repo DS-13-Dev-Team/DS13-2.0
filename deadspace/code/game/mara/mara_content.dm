@@ -44,16 +44,15 @@
 	new /obj/item/clothing/suit/hooded/wintercoat/medical(src)
 	new /obj/item/clothing/mask/balaclava(src)
 	new /obj/item/clothing/shoes/winterboots(src)
-	new /obj/item/circular_saw/bonecutter(src)
 
  // Sec Closet
 
-/obj/structure/closet/secure_closet/security/mara
+/obj/structure/closet/secure_closet/mara/security
 	name = "security officer's locker"
 	req_access = list(ACCESS_SECURITY)
 	icon_state = "sec"
 
-/obj/structure/closet/secure_closet/security/mara/PopulateContents()
+/obj/structure/closet/secure_closet/mara/security/PopulateContents()
 	..()
 	new /obj/item/clothing/suit/armor/pcsi(src)
 	new /obj/item/clothing/suit/toggle/cseco(src)
