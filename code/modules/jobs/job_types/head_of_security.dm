@@ -60,7 +60,6 @@
 	id_trim = /datum/id_trim/job/head_of_security
 	uniform = /obj/item/clothing/under/rank/security/cseco
 	suit = /obj/item/clothing/suit/toggle/cseco
-	suit_store = /obj/item/gun/energy/e_gun
 	backpack_contents = list(
 		/obj/item/evidencebag = 1,
 		)
