@@ -5445,7 +5445,6 @@
 "qC" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/under/rank/civilian/ds_clergy,
-/obj/item/clothing/head/hooded/clergyhood,
 /obj/item/clothing/suit/hooded/chaplainsuit/clergy,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/shoes/winterboots,
