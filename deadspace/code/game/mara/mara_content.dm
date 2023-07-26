@@ -11,6 +11,8 @@
 
 /obj/structure/closet/secure_closet/miner/mara/PopulateContents()
 	..()
+	new /obj/item/clothing/mask/gas/explorer(src)
+	new /obj/item/mod/control/pre_equipped/ds/min(src)
 	new /obj/item/shovel(src)
 	new /obj/item/pickaxe/rock(src)
 	new /obj/item/radio/headset/headset_cargo/mining(src)
@@ -18,6 +20,7 @@
 	new /obj/item/storage/bag/ore(src)
 	new /obj/item/t_scanner/adv_mining_scanner/lesser(src)
 	new /obj/item/gun/energy/plasmacutter(src)
+	new /obj/item/stock_parts/cell/plasmacutter(src)
 	new /obj/item/clothing/glasses/meson(src)
 	new /obj/item/survivalcapsule(src)
 	new /obj/item/gun/energy/plasmacutter(src)
