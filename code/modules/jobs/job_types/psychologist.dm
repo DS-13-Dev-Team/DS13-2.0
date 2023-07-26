@@ -48,7 +48,7 @@
 
 	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/job/psychologist
-	uniform = /obj/item/clothing/under/suit/black
+	uniform = /obj/item/clothing/under/rank/medical/ds_med
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/happinesspsych,
 		/obj/item/storage/pill_bottle/lsdpsych,
@@ -58,7 +58,7 @@
 		)
 	belt = /obj/item/modular_computer/tablet/pda/medical
 	ears = /obj/item/radio/headset/headset_srvmed
-	shoes = /obj/item/clothing/shoes/laceup
+	shoes = /obj/item/clothing/shoes/sneakers/white
 	l_hand = /obj/item/clipboard
 
 	backpack = /obj/item/storage/backpack/medic

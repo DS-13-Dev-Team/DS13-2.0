@@ -12,12 +12,12 @@
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
 	icon_state = "ds_med_doctor"
 
-/obj/item/clothing/under/rank/medical/ds_surgeon
-	name = "surgeon's uniform"
-	desc = "A white uniform with a red collar, this uniform is worn by surgeons of the Ishimura medical department."
+/obj/item/clothing/under/rank/medical/ds_chemist
+	name = "chemist's uniform"
+	desc = "A white uniform with a red collar, this uniform is worn by chemist of the Ishimura medical department."
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
-	icon_state = "ds_surgeon"
+	icon_state = "ds_chemist"
 
 /obj/item/clothing/under/rank/medical/whitegrey/medic
 	name = "plain medic uniform"
@@ -40,3 +40,10 @@
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
 	icon_state = "ds_research_assistant"
+
+/obj/item/clothing/under/rank/rnd/roboticist/ds_mechanic
+	name = "mechanic's uniform"
+	desc = "A dirty, tan uniform issued to mechanics department. Typically, a vest and belt is worn over top of this uniform."
+	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
+	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
+	icon_state = "ds_mechanic"

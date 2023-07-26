@@ -54,7 +54,7 @@
 	jobtype = /datum/job/scientist
 
 	id_trim = /datum/id_trim/job/scientist
-	uniform = /obj/item/clothing/under/rank/rnd/scientist
+	uniform = /obj/item/clothing/under/rank/rnd/ds_research
 	suit = /obj/item/clothing/suit/toggle/labcoat/science
 	belt = /obj/item/modular_computer/tablet/pda/science
 	ears = /obj/item/radio/headset/headset_sci

@@ -63,7 +63,7 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/chief_medical_officer
-	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer
+	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer/ds_senior_med
 	backpack_contents = list(
 		/obj/item/assembly/flash/handheld
 	)

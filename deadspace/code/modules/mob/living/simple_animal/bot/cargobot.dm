@@ -5,12 +5,8 @@
 
 /mob/living/simple_animal/bot/mulebot/cargobot/explode()
 	var/atom/Tsec = drop_location()
-
 	new /obj/item/wallframe/apc(Tsec)
 	new /obj/item/bodypart/leg/right/robot(Tsec)
 	new /obj/item/restraints/handcuffs/cable(Tsec)
 	new /obj/item/electronics/apc(Tsec)
-	if(cell)
-		cell.forceMove(Tsec)
-		cell.update_appearance()
-		cell = null
+	return ..()

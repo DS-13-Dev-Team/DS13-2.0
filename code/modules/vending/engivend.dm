@@ -7,7 +7,10 @@
 	req_access = list(ACCESS_ENGINE_EQUIP)
 	products = list(
 		/obj/item/clothing/glasses/meson/engine = 2,
-		/obj/item/clothing/glasses/welding = 3,
+		/obj/item/clothing/head/welding/demon = 1,
+		/obj/item/clothing/head/welding/knight = 1,
+		/obj/item/clothing/head/welding/fancy = 1,
+		/obj/item/clothing/head/welding/engie = 1,
 		/obj/item/multitool = 4,
 		/obj/item/grenade/chem_grenade/smart_metal_foam = 10,
 		/obj/item/geiger_counter = 5,

@@ -48,7 +48,7 @@
 	jobtype = /datum/job/cargo_technician
 
 	id_trim = /datum/id_trim/job/cargo_technician
-	uniform = /obj/item/clothing/under/rank/cargo/tech
+	uniform = /obj/item/clothing/under/rank/cargo/ds_cargo_jumpsuit
 	belt = /obj/item/modular_computer/tablet/pda/cargo
 	ears = /obj/item/radio/headset/headset_cargo
 	l_hand = /obj/item/export_scanner

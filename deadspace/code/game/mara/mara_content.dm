@@ -12,7 +12,7 @@
 /obj/structure/closet/secure_closet/miner/mara/PopulateContents()
 	..()
 	new /obj/item/shovel(src)
-	new /obj/item/pickaxe/plasma(src)
+	new /obj/item/pickaxe/rock(src)
 	new /obj/item/radio/headset/headset_cargo/mining(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/storage/bag/ore(src)
@@ -44,6 +44,7 @@
 	new /obj/item/clothing/suit/hooded/wintercoat/medical(src)
 	new /obj/item/clothing/mask/balaclava(src)
 	new /obj/item/clothing/shoes/winterboots(src)
+	new /obj/item/circular_saw/bonecutter(src)
 
  // Sec Closet
 
@@ -54,8 +55,8 @@
 
 /obj/structure/closet/secure_closet/security/mara/PopulateContents()
 	..()
-	new /obj/item/clothing/under/rank/security/pcsi(src)
 	new /obj/item/clothing/suit/armor/pcsi(src)
+	new /obj/item/clothing/suit/toggle/cseco(src)
 	new /obj/item/clothing/head/helmet/pcsi(src)
 	new /obj/item/radio/headset/headset_sec(src)
 	new /obj/item/radio/headset/headset_sec/alt(src)
@@ -63,7 +64,6 @@
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/gun/ballistic/automatic/pistol/divet(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/security(src)
-	new /obj/item/clothing/gloves/combat(src)
 	new /obj/item/clothing/shoes/winterboots(src)
 	new /obj/item/clothing/mask/balaclava(src)
 
@@ -80,7 +80,6 @@
 	new /obj/item/storage/backpack/captain(src)
 	new /obj/item/storage/backpack/satchel/cap(src)
 	new /obj/item/storage/backpack/duffelbag/captain(src)
-	new /obj/item/storage/bag/garment/captain(src)
 	new /obj/item/computer_hardware/hard_drive/role/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
 	new /obj/item/radio/headset/heads/captain/alt(src)
@@ -92,6 +91,7 @@
 	new /obj/item/clothing/shoes/winterboots(src)
 	new /obj/item/clothing/mask/balaclava(src)
 	new /obj/item/gun/ballistic/automatic/pistol/divet(src)
+	new /obj/item/clothing/suit/armor/pcsi/cec(src)
 
 
 // Holodisk for Mara 17, there were meant to be more, but until i can get more datums for lore & etc, it's gonna be this WIP for now - Asi

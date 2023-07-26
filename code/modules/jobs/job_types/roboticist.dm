@@ -52,7 +52,7 @@
 	jobtype = /datum/job/roboticist
 
 	id_trim = /datum/id_trim/job/roboticist
-	uniform = /obj/item/clothing/under/rank/rnd/roboticist
+	uniform = /obj/item/clothing/under/rank/rnd/roboticist/ds_mechanic
 	suit = /obj/item/clothing/suit/toggle/labcoat/roboticist
 	belt = /obj/item/storage/belt/utility/full
 	ears = /obj/item/radio/headset/headset_sci

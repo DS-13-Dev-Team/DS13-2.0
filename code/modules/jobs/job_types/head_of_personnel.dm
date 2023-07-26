@@ -62,7 +62,7 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/head_of_personnel
-	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel
+	uniform = /obj/item/clothing/under/rank/civilian/ds_firstlieutenant
 	backpack_contents = list(
 		/obj/item/storage/box/ids = 1,
 		/obj/item/assembly/flash/handheld
@@ -70,7 +70,7 @@
 	belt = /obj/item/modular_computer/tablet/pda/heads/hop
 	ears = /obj/item/radio/headset/heads/hop
 	head = /obj/item/clothing/head/hopcap
-	shoes = /obj/item/clothing/shoes/sneakers/brown
+	shoes = /obj/item/clothing/shoes/sneakers/black
 
 	chameleon_extras = list(
 		/obj/item/gun/energy/e_gun,

@@ -1,8 +1,9 @@
-/obj/effect/spawner/random/ammo
+/obj/effect/spawner/random/deadspace/ammo
 	name = "Random Ammunition"
 	desc = "This is random ammunition."
 	icon_state = "clusterbang"
 	loot = list(
+		/obj/item/stock_parts/cell/plasmacutter = 2,
 		/obj/item/ammo_box/magazine/pulse = 2,
 		/obj/item/ammo_box/magazine/pulse/hv = 0.3,
 		/obj/item/ammo_box/magazine/pulse/df = 0.3,

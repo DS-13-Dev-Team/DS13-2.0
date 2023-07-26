@@ -39,7 +39,7 @@
 	jobtype = /datum/job/shaft_miner
 
 	id_trim = /datum/id_trim/job/shaft_miner
-	uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland
+	uniform = /obj/item/clothing/under/rank/cargo/miner/ds_miner
 	backpack_contents = list(
 		/obj/item/flashlight/seclite = 1,
 		/obj/item/knife/combat/survival = 1,

@@ -26,6 +26,7 @@ The Mines = Work in Progress, Easter egg area.
 
 /area/sprawl
 	name = "Titan Station"
+	icon = 'icons/area/areas_station.dmi'
 	icon_state = "medbay_maint_central"
 
 ///// Civilian Areas /////

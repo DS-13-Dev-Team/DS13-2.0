@@ -1,4 +1,4 @@
-/obj/effect/spawner/random/clothing/rig
+/obj/effect/spawner/random/deadspace/rig
 	name = "Random Rig"
 	desc = "This is a random RIG."
 	icon_state = "showcase"
@@ -12,10 +12,6 @@
 		/obj/item/mod/control/pre_equipped/med = 18,
 		/obj/item/mod/control/pre_equipped/excavation = 35,
 		/obj/item/mod/control/pre_equipped/min = 50,
-		/obj/item/mod/control/pre_equipped/arctic_survival = 35,
-		/obj/item/mod/control/pre_equipped/scaf_elite = 25,
-		/obj/item/mod/control/pre_equipped/scaf_legionnaire = 15,
-		/obj/item/mod/control/pre_equipped/scaf_sharpshooter = 25,
 		/obj/item/mod/control/pre_equipped/patrol = 15,
 		/obj/item/mod/control/pre_equipped/pcsi = 25,
 		/obj/item/mod/control/pre_equipped/riot = 15,

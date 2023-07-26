@@ -46,7 +46,8 @@
 	jobtype = /datum/job/quartermaster
 
 	id_trim = /datum/id_trim/job/quartermaster
-	uniform = /obj/item/clothing/under/rank/cargo/qm
+	uniform = /obj/item/clothing/under/rank/cargo/ds_rdalt
+	suit = /obj/item/clothing/suit/toggle/ds_cargo_jacket
 	belt = /obj/item/modular_computer/tablet/pda/quartermaster
 	ears = /obj/item/radio/headset/headset_cargo
 	glasses = /obj/item/clothing/glasses/sunglasses

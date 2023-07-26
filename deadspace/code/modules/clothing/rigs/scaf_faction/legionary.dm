@@ -40,6 +40,5 @@
 		/obj/item/mod/module/magboot,
 		/obj/item/mod/module/magnetic_harness,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/pepper_shoulders,
 		/obj/item/mod/module/welding,
 	)

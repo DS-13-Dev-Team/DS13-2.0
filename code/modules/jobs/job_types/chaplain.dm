@@ -122,7 +122,8 @@
 	jobtype = /datum/job/chaplain
 
 	id_trim = /datum/id_trim/job/chaplain
-	uniform = /obj/item/clothing/under/rank/civilian/chaplain
+	uniform = /obj/item/clothing/under/rank/civilian/ds_clergy
+	suit = /obj/item/clothing/suit/hooded/chaplainsuit/clergy
 	backpack_contents = list(
 		/obj/item/camera/spooky = 1,
 		/obj/item/stamp/chap = 1,

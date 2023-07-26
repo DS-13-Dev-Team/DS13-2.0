@@ -6,17 +6,10 @@
 	icon_state = "ds_engineer"
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/engineering/ds_mechanic
-	name = "mechanic's uniform"
-	desc = "A dirty, tan uniform issued to mechanics department. Typically, a vest and belt is worn over top of this uniform."
+/obj/item/clothing/under/rank/engineering/ds_rigshirt
+	name = "engineer's bodysuit"
+	desc = "A tight unarmored bodysuit designed to be worn under a RIG suit."
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
-	icon_state = "ds_mechanic"
-
-/obj/item/clothing/under/rank/engineering/ds_flightdeck
-	name = "flight deck's uniform"
-	desc = "A green uniform issued to the flight deck crew."
-	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
-	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
-	icon_state = "ds_flightdeck"
+	icon_state = "ds_rigundershirt"
 	can_adjust = FALSE

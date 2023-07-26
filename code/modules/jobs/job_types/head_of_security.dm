@@ -58,8 +58,8 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/head_of_security
-	uniform = /obj/item/clothing/under/rank/security/head_of_security
-	suit = /obj/item/clothing/suit/armor/hos/trenchcoat
+	uniform = /obj/item/clothing/under/rank/security/cseco
+	suit = /obj/item/clothing/suit/toggle/cseco
 	suit_store = /obj/item/gun/energy/e_gun
 	backpack_contents = list(
 		/obj/item/evidencebag = 1,
@@ -67,9 +67,9 @@
 	belt = /obj/item/modular_computer/tablet/pda/heads/hos
 	ears = /obj/item/radio/headset/heads/hos/alt
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	gloves = /obj/item/clothing/gloves/color/black
-	head = /obj/item/clothing/head/hos/beret
-	shoes = /obj/item/clothing/shoes/jackboots
+	gloves = /obj/item/clothing/gloves/combat/pcsi
+	head = /obj/item/clothing/head/cseco
+	shoes = /obj/item/clothing/shoes/combat/pcsi
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
 

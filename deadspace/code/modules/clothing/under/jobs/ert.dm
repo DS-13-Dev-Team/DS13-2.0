@@ -20,3 +20,13 @@
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
 	icon_state = "kellion_tech"
 	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/security/rigsuit
+	name = "Combat bodysuit"
+	desc = "A tight bodysuit designed to be worn under a RIG suit."
+	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
+	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
+	icon_state = "ds_rigundershirt"
+	armor = list(MELEE = 10, BULLET = 10, LASER = 10,ENERGY = 10, BOMB = 0, BIO = 0, FIRE = 50, ACID = 40)
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	can_adjust = FALSE
