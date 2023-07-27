@@ -1,5 +1,5 @@
-/datum/mod_theme/deadspace/pcsi_riot
-	name = "P-SEC Commander"
+/datum/mod_theme/deadspace/pcsi_commander
+	name = "P-Sec Commander"
 	desc = "A lightweight and flexible armoured rig suit used by CEC shipboard security during crackdowns and for use in hazardous environments. This instance was designed specially for a the Chief Security Officer."
 	default_skin = "pcsi_riot"
 	armor = list(MELEE = 70, BULLET = 67, LASER = 60, ENERGY = 30, BOMB = 75, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
@@ -33,8 +33,8 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/pcsi_riot
-	theme = /datum/mod_theme/deadspace/pcsi_riot
+/obj/item/mod/control/pre_equipped/ds/pcsi_commander
+	theme = /datum/mod_theme/deadspace/pcsi_commander
 	initial_modules = list(
 		/obj/item/mod/module/storage/large_capacity,
 		/obj/item/mod/module/jetpack/advanced,
