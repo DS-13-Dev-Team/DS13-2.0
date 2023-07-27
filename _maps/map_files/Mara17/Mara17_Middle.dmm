@@ -6334,7 +6334,6 @@
 /area/mara17/interior/medium/hop_office)
 "tp" = (
 /obj/machinery/airalarm/directional/north,
-/obj/structure/closet/secure_closet/captains/mara,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/capt_office)
 "tq" = (
