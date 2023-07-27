@@ -4722,6 +4722,7 @@
 #include "deadspace\code\game\objects\items\storage\lunchbox.dm"
 #include "deadspace\code\game\objects\random\ammo.dm"
 #include "deadspace\code\game\objects\random\rig.dm"
+#include "deadspace\code\game\objects\random\scaf_rig.dm"
 #include "deadspace\code\game\objects\structures\doors.dm"
 #include "deadspace\code\game\objects\structures\large.dm"
 #include "deadspace\code\game\objects\structures\obstacles.dm"
