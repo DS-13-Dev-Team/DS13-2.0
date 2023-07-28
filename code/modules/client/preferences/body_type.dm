@@ -7,7 +7,7 @@
 	savefile_identifier = PREFERENCE_CHARACTER
 
 /datum/preference/choiced/body_type/init_possible_values()
-	return list(USE_GENDER, MALE, FEMALE)
+	return list(USE_GENDER)
 
 /datum/preference/choiced/body_type/create_default_value()
 	return USE_GENDER
