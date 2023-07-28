@@ -13,7 +13,7 @@
 	icon_state = "ds_cseco"
 
 
-/obj/item/clothing/under/rank/security/pcsi/ds_vintage
+/obj/item/clothing/under/rank/security/ds_pcsi/ds_vintage
 	name = "vintage security uniform"
 	desc = "An old, dark brown uniform that used to be issued to P.C.S.I officers. While this type of uniform used to be fitted with light armor plates sewn into the chest and thighs, this one seems to be missing them. The initials, 'A.V' have been sown above the breast."
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'

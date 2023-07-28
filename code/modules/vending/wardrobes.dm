@@ -20,7 +20,7 @@
 					/obj/item/storage/backpack/satchel/sec = 3,
 					/obj/item/storage/backpack/duffelbag/sec = 3,
 					/obj/item/clothing/under/rank/security/ds_pcsi = 3,
-					/obj/item/clothing/under/rank/security/pcsi/ds_vintage = 3,
+					/obj/item/clothing/under/rank/security/ds_pcsi/ds_vintage = 3,
 					/obj/item/clothing/under/rank/security/ds_titan = 3,
 					/obj/item/clothing/under/pants/khaki = 3,
 					/obj/item/clothing/gloves/combat/pcsi = 3,

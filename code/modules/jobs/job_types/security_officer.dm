@@ -206,7 +206,7 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	jobtype = /datum/job/security_officer
 
 	id_trim = /datum/id_trim/job/security_officer
-	uniform = /obj/item/clothing/under/rank/security/pcsi
+	uniform = /obj/item/clothing/under/rank/security/ds_pcsi
 	suit = /obj/item/clothing/suit/armor/pcsi
 	suit_store = /obj/item/gun/energy/disabler
 	backpack_contents = list(
