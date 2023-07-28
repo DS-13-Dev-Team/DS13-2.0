@@ -1,4 +1,4 @@
-/obj/effect/spawner/random/ammo
+/obj/effect/spawner/random/deadspace/ammo
 	name = "Random Ammunition"
 	desc = "This is random ammunition."
 	icon_state = "clusterbang"
@@ -22,7 +22,7 @@
 		/obj/item/ammo_box/magazine/ds12g/improvised = 0.7
 	)
 
-/obj/effect/spawner/random/ammo/security
+/obj/effect/spawner/random/deadspace/security
 	name = "Random Ammunition"
 	desc = "This is random ammunition."
 	icon_state = "clusterbang"

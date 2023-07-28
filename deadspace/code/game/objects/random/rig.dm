@@ -1,4 +1,4 @@
-/obj/effect/spawner/random/clothing/rig
+/obj/effect/spawner/random/deadspace/rig
 	name = "Random Rig"
 	desc = "This is a random RIG."
 	icon_state = "showcase"
@@ -22,7 +22,7 @@
 		/obj/item/mod/control/pre_equipped/ds/clown = 1,
 	)
 
-/obj/effect/spawner/random/clothing/rig/scaf
+/obj/effect/spawner/random/deadspace/rig/scaf
 	name = "Random SCAF Rig"
 	desc = "This is a random SCAF RIG."
 	icon_state = "showcase"
