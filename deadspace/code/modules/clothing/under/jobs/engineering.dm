@@ -10,4 +10,7 @@
 	name = "engineer's bodysuit"
 	desc = "A tight unarmored bodysuit designed to be worn under a RIG suit."
 	icon_state = "ds_rigundershirt"
-
+	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
+	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
+	icon_state = "ds_engineer"
+	can_adjust = FALSE
