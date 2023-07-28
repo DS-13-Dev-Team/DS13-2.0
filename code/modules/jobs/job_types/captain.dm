@@ -18,7 +18,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/daedalus //Captains cannot be contracted.
+		/datum/employer/cec,
+		/datum/employer/eg,
+		/datum/employer/uni,
 	)
 
 	outfits = list(
@@ -64,8 +66,7 @@
 
 	id = /obj/item/card/id/advanced/gold
 	id_trim = /datum/id_trim/job/captain
-	uniform = /obj/item/clothing/under/rank/captain
-	suit = /obj/item/clothing/suit/armor/vest/capcarapace
+	uniform = /obj/item/clothing/under/rank/captain/ds_captain
 	backpack_contents = list(
 		/obj/item/station_charter = 1,
 		/obj/item/assembly/flash/handheld
@@ -75,7 +76,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/captain
 	head = /obj/item/clothing/head/caphat
-	shoes = /obj/item/clothing/shoes/sneakers/brown
+	shoes = /obj/item/clothing/shoes/sneakers/black
 
 
 	backpack = /obj/item/storage/backpack/captain

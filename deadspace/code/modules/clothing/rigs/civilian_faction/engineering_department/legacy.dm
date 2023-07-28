@@ -1,13 +1,13 @@
-/datum/mod_theme/deadspace/engineer_standard
-	name = "Standard Engineer"
-	desc = "A CEC Engineering RIG standard issue for hazardous operations"
-	default_skin = "engineer_standard"
+/datum/mod_theme/deadspace/legacy_engineer_standard
+	name = "DS-08 Legacy"
+	desc = "A classic CEC RIG, designed to handle years of faithful service"
+	default_skin = "legacy_engineer_standard"
 	armor = list(MELEE = 45, BULLET = 50, LASER = 50, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 
 	skins = list(
-		"engineer_standard" = list(
+		"legacy_engineer_standard" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -32,8 +32,8 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/engineer_standard
-	theme = /datum/mod_theme/deadspace/engineer_standard
+/obj/item/mod/control/pre_equipped/ds/legacy_engineer_standard
+	theme = /datum/mod_theme/deadspace/legacy_engineer_standard
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,

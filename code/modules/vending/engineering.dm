@@ -7,9 +7,9 @@
 	panel_type = "panel10"
 	req_access = list(ACCESS_ENGINE_EQUIP)
 	products = list(
-		/obj/item/clothing/under/rank/engineering/chief_engineer = 4,
-		/obj/item/clothing/under/rank/engineering/engineer = 4,
-		/obj/item/clothing/shoes/sneakers/orange = 4,
+		/obj/item/clothing/under/rank/engineering/ds_rigshirt = 4,
+		/obj/item/clothing/under/rank/engineering/ds_engineer = 4,
+		/obj/item/clothing/shoes/workboots/engineer = 4,
 		/obj/item/clothing/head/hardhat = 4,
 		/obj/item/storage/belt/utility = 4,
 		/obj/item/clothing/glasses/meson/engine = 4,
@@ -22,7 +22,10 @@
 		/obj/item/t_scanner = 12,
 		/obj/item/stock_parts/cell = 8,
 		/obj/item/weldingtool = 8,
-		/obj/item/clothing/head/welding = 8,
+		/obj/item/clothing/head/welding/demon = 2,
+		/obj/item/clothing/head/welding/knight = 2,
+		/obj/item/clothing/head/welding/fancy = 2,
+		/obj/item/clothing/head/welding/engie = 2,
 		/obj/item/light/tube = 10,
 		/obj/item/clothing/suit/fire = 4,
 		/obj/item/stock_parts/scanning_module = 5,

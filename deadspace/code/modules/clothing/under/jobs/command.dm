@@ -22,7 +22,7 @@
 	icon_state = "ds_bridgeensign"
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/captain/ds_captain/ds_director
+/obj/item/clothing/under/rank/captain/ds_director
 	name = "director's uniform"
 	desc = "A neatly pressed, green and white uniform. Isn't all to fancy."
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'

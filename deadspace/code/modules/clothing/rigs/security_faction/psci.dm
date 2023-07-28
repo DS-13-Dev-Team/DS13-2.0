@@ -7,7 +7,7 @@
 	skins = list(
 		"pcsi" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -32,7 +32,7 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/pcsi
+/obj/item/mod/control/pre_equipped/ds/pcsi
 	theme = /datum/mod_theme/deadspace/pcsi
 	initial_modules = list(
 		/obj/item/mod/module/storage,

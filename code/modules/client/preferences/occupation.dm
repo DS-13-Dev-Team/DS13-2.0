@@ -9,8 +9,8 @@
 	return
 
 /datum/preference/choiced/employer/create_default_value()
-	var/datum/employer/daedalus = /datum/employer/daedalus
-	return initial(daedalus.name)
+	var/datum/employer/cec = /datum/employer/cec
+	return initial(cec.name)
 
 /datum/preference/choiced/employer/init_possible_values()
 	. = list()

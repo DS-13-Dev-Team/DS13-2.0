@@ -13,8 +13,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/aether,
-		/datum/employer/contractor
+		/datum/employer/cec,
+		/datum/employer/eg,
+		/datum/employer/uni,
 	)
 
 	outfits = list(

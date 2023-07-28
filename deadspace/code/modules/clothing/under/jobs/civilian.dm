@@ -12,7 +12,7 @@
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
 	icon_state = "clergy"
 
-/obj/item/clothing/under/rank/civilian/whitegrey
+/obj/item/clothing/under/rank/civilian/ds_whitegrey
 	name = "plain uniform"
 	desc = "A white-grey uniform, plain and unassuming. Has a bit of a hood to use."
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'

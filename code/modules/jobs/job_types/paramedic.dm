@@ -11,8 +11,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/aether,
-		/datum/employer/contractor
+		/datum/employer/cec,
+		/datum/employer/eg,
+		/datum/employer/uni,
 	)
 
 	outfits = list(
@@ -52,7 +53,7 @@
 
 	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/job/paramedic
-	uniform = /obj/item/clothing/under/rank/medical/paramedic
+	uniform = /obj/item/clothing/under/rank/medical/ds_med
 	suit = /obj/item/clothing/suit/toggle/labcoat/paramedic
 	suit_store = /obj/item/flashlight/pen/paramedic
 	backpack_contents = list(

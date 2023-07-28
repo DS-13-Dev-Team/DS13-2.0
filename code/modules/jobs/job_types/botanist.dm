@@ -9,8 +9,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/contractor,
-		/datum/employer/priapus
+		/datum/employer/cec,
+		/datum/employer/eg,
+		/datum/employer/uni,
 	)
 
 	outfits = list(
@@ -46,7 +47,7 @@
 	jobtype = /datum/job/botanist
 
 	id_trim = /datum/id_trim/job/botanist
-	uniform = /obj/item/clothing/under/rank/civilian/hydroponics
+	uniform = /obj/item/clothing/under/rank/civilian/hydroponics/ds_bot
 	suit = /obj/item/clothing/suit/apron
 	suit_store = /obj/item/plant_analyzer
 	belt = /obj/item/modular_computer/tablet/pda/botanist

@@ -11,8 +11,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/aether,
-		/datum/employer/contractor
+		/datum/employer/cec,
+		/datum/employer/eg,
+		/datum/employer/uni,
 	)
 
 	outfits = list(
@@ -52,7 +53,7 @@
 	jobtype = /datum/job/doctor
 
 	id_trim = /datum/id_trim/job/medical_doctor
-	uniform = /obj/item/clothing/under/rank/medical/scrubs/blue
+	uniform = /obj/item/clothing/under/rank/medical/ds_med
 	suit = /obj/item/clothing/suit/toggle/labcoat/md
 	suit_store = /obj/item/flashlight/pen
 	belt = /obj/item/modular_computer/tablet/pda/medical

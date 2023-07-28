@@ -9,7 +9,7 @@
 	skins = list(
 		"med" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -34,7 +34,7 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/med_smo
+/obj/item/mod/control/pre_equipped/ds/med_smo
 	theme = /datum/mod_theme/deadspace/med_smo
 	initial_modules = list(
 		/obj/item/mod/module/storage/large_capacity,
