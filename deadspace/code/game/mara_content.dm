@@ -12,7 +12,7 @@
 /obj/structure/closet/secure_closet/mara/miner/PopulateContents()
 	..()
 	new /obj/item/clothing/mask/gas/explorer(src)
-	new /obj/item/mod/control/pre_equipped/ds/min(src)
+	new /obj/item/mod/control/pre_equipped/ds/standard_miner(src)
 	new /obj/item/shovel(src)
 	new /obj/item/pickaxe/rock(src)
 	new /obj/item/radio/headset/headset_cargo/mining(src)
@@ -23,7 +23,27 @@
 	new /obj/item/stock_parts/cell/plasmacutter(src)
 	new /obj/item/clothing/glasses/meson(src)
 	new /obj/item/survivalcapsule(src)
-	new /obj/item/gun/energy/plasmacutter(src)
+
+// Engineering Closet
+
+/obj/structure/closet/secure_closet/mara/engineering_personal
+	name = "engineer's locker"
+	req_access = list(ACCESS_ENGINE_EQUIP)
+	icon_state = "eng_secure"
+
+/obj/structure/closet/secure_closet/mara/engineering_personal/PopulateContents()
+	..()
+	new /obj/item/radio/headset/headset_eng(src)
+	new /obj/item/storage/toolbox/mechanical(src)
+	new /obj/item/mod/control/pre_equipped/ds/standard_engineer(src)
+	new /obj/item/tank/internals/emergency_oxygen/engi(src)
+	new /obj/item/holosign_creator/engineering(src)
+	new /obj/item/clothing/mask/gas(src)
+	new /obj/item/clothing/glasses/meson/engine(src)
+	new /obj/item/stack/sticky_tape(src)
+	new /obj/item/paint_sprayer(src)
+	new /obj/item/storage/box/emptysandbags(src)
+	new /obj/item/storage/bag/construction(src)
 
  // Med Closet
 
@@ -36,6 +56,7 @@
 	..()
 	new /obj/item/radio/headset/headset_med(src)
 	new /obj/item/defibrillator/loaded(src)
+	new /obj/item/mod/control/pre_equipped/ds/med(src)
 	new /obj/item/clothing/gloves/color/latex/nitrile(src)
 	new /obj/item/storage/belt/medical(src)
 	new /obj/item/clothing/glasses/hud/health(src)
