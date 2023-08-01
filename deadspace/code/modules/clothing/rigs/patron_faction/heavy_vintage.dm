@@ -11,7 +11,7 @@
 	skins = list(
 		"heavy_vintage" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -36,7 +36,7 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/heavy_vintage
+/obj/item/mod/control/pre_equipped/ds/heavy_vintage
 	theme = /datum/mod_theme/deadspace/heavy_vintage
 	initial_modules = list(
 		/obj/item/mod/module/storage/large_capacity,

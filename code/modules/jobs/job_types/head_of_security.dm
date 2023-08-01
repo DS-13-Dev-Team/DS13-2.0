@@ -18,7 +18,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/mars_exec
+		/datum/employer/cec,
+		/datum/employer/eg,
+		/datum/employer/uni,
 	)
 
 	outfits = list(
@@ -58,9 +60,8 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/head_of_security
-	uniform = /obj/item/clothing/under/rank/security/head_of_security
-	suit = /obj/item/clothing/suit/armor/hos/trenchcoat
-	suit_store = /obj/item/gun/energy/e_gun
+	uniform = /obj/item/clothing/under/rank/security/ds_cseco
+	suit = /obj/item/clothing/suit/toggle/cseco
 	backpack_contents = list(
 		/obj/item/evidencebag = 1,
 		)

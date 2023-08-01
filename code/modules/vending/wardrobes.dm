@@ -19,19 +19,17 @@
 					/obj/item/storage/backpack/security = 3,
 					/obj/item/storage/backpack/satchel/sec = 3,
 					/obj/item/storage/backpack/duffelbag/sec = 3,
-					/obj/item/clothing/under/rank/security/officer = 3,
-					/obj/item/clothing/shoes/jackboots = 3,
-					/obj/item/clothing/head/beret/sec = 3,
-					/obj/item/clothing/head/soft/sec = 3,
-					/obj/item/clothing/mask/bandana/striped/security = 3,
-					/obj/item/clothing/gloves/color/black = 3,
-					/obj/item/clothing/under/rank/security/officer/skirt = 3,
-					/obj/item/clothing/under/rank/security/officer/grey = 3,
+					/obj/item/clothing/under/rank/security/ds_pcsi = 3,
+					/obj/item/clothing/under/rank/security/ds_pcsi/ds_vintage = 3,
+					/obj/item/clothing/under/rank/security/ds_titan = 3,
 					/obj/item/clothing/under/pants/khaki = 3,
-					/obj/item/clothing/under/rank/security/officer/blueshirt = 3)
+					/obj/item/clothing/gloves/combat/pcsi = 3,
+					/obj/item/clothing/gloves/combat/pcsi/titan_sec = 3,
+					/obj/item/clothing/shoes/combat/pcsi = 3,)
 	premium = list(/obj/item/clothing/under/rank/security/officer/formal = 3,
-					/obj/item/clothing/suit/security/officer = 3,
-					/obj/item/clothing/head/beret/sec/navyofficer = 3)
+					/obj/item/clothing/head/soft/pcsi = 3,
+					/obj/item/clothing/head/cseco = 3,
+					/obj/item/clothing/mask/bandana/striped/security = 3,)
 	refill_canister = /obj/item/vending_refill/wardrobe/sec_wardrobe
 	payment_department = ACCOUNT_SEC
 	light_color = COLOR_MOSTLY_PURE_RED
@@ -53,13 +51,10 @@
 					/obj/item/storage/backpack/satchel/med = 4,
 					/obj/item/clothing/suit/hooded/wintercoat/medical = 4,
 					/obj/item/clothing/suit/hooded/wintercoat/medical/paramedic = 4,
-					/obj/item/clothing/under/rank/medical/paramedic = 4,
-					/obj/item/clothing/under/rank/medical/paramedic/skirt = 4,
+					/obj/item/clothing/under/rank/medical/ds_med = 4,
 					/obj/item/clothing/head/nursehat = 4,
 					/obj/item/clothing/head/beret/medical = 4,
 					/obj/item/clothing/mask/bandana/striped/medical = 4,
-					/obj/item/clothing/under/rank/medical/doctor = 4,
-					/obj/item/clothing/under/rank/medical/doctor/skirt = 4,
 					/obj/item/clothing/under/rank/medical/scrubs/blue = 4,
 					/obj/item/clothing/under/rank/medical/scrubs/green = 4,
 					/obj/item/clothing/under/rank/medical/scrubs/purple = 4,
@@ -90,15 +85,10 @@
 					/obj/item/storage/backpack/industrial = 3,
 					/obj/item/storage/backpack/satchel/eng = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/engineering = 3,
-					/obj/item/clothing/under/rank/engineering/engineer = 3,
-					/obj/item/clothing/under/rank/engineering/engineer/skirt = 3,
-					/obj/item/clothing/under/rank/engineering/engineer/hazard = 3,
-					/obj/item/clothing/under/rank/engineering/engineer/enginetech = 3,
-					/obj/item/clothing/under/rank/engineering/engineer/enginetech/skirt = 3,
-					/obj/item/clothing/under/rank/engineering/engineer/electrician = 3,
-					/obj/item/clothing/under/rank/engineering/engineer/electrician/skirt = 3,
+					/obj/item/clothing/under/rank/engineering/ds_engineer = 3,
+					/obj/item/clothing/under/rank/engineering/ds_rigshirt = 3,
 					/obj/item/clothing/suit/hazardvest = 3,
-					/obj/item/clothing/shoes/workboots = 3,
+					/obj/item/clothing/shoes/workboots/engineer = 3,
 					/obj/item/clothing/head/beret/engi = 3,
 					/obj/item/clothing/mask/bandana/striped/engineering = 3,
 					/obj/item/clothing/head/hardhat = 3,
@@ -144,8 +134,9 @@
 	products = list(
 		/obj/item/storage/bag/mail = 3,
 		/obj/item/clothing/suit/hooded/wintercoat/cargo = 3,
-		/obj/item/clothing/under/rank/cargo/tech = 3,
-		/obj/item/clothing/under/rank/cargo/tech/skirt = 3,
+		/obj/item/clothing/under/rank/cargo/ds_cargo_jumpsuit = 3,
+		/obj/item/clothing/under/rank/cargo/ds_flightdeck = 3,
+		/obj/item/clothing/shoes/workboots/flightdeck = 3,
 		/obj/item/clothing/shoes/sneakers/black = 3,
 		/obj/item/clothing/gloves/fingerless = 3,
 		/obj/item/clothing/head/beret/cargo = 3,
@@ -154,7 +145,7 @@
 		/obj/item/radio/headset/headset_cargo = 3
 	)
 	premium = list(
-		/obj/item/clothing/under/rank/cargo/miner = 3,
+		/obj/item/clothing/under/rank/cargo/miner/ds_miner = 3,
 		/obj/item/clothing/head/mailman = 1,
 		/obj/item/clothing/under/misc/mailman = 1
 	)
@@ -173,8 +164,7 @@
 	product_ads = "You turn me TRUE, use defines!;0110001101101100011011110111010001101000011001010111001101101000011001010111001001100101"
 	vend_reply = "Thank you for using the RoboDrobe!"
 	products = list(/obj/item/clothing/glasses/hud/diagnostic = 2,
-					/obj/item/clothing/under/rank/rnd/roboticist = 2,
-					/obj/item/clothing/under/rank/rnd/roboticist/skirt = 2,
+					/obj/item/clothing/under/rank/rnd/roboticist/ds_mechanic = 2,
 					/obj/item/clothing/suit/toggle/labcoat/roboticist = 2,
 					/obj/item/clothing/suit/hooded/wintercoat/science/robotics = 3,
 					/obj/item/clothing/shoes/sneakers/black = 2,
@@ -206,8 +196,7 @@
 					/obj/item/clothing/head/beret/science/fancy = 3,
 					/obj/item/clothing/mask/bandana/striped/science = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/science = 3,
-					/obj/item/clothing/under/rank/rnd/scientist = 3,
-					/obj/item/clothing/under/rank/rnd/scientist/skirt = 3,
+					/obj/item/clothing/under/rank/rnd/ds_research = 3,
 					/obj/item/clothing/suit/toggle/labcoat/science = 3,
 					/obj/item/clothing/suit/overalls_sci = 3,
 					/obj/item/clothing/shoes/sneakers/white = 3,
@@ -233,8 +222,7 @@
 					/obj/item/clothing/suit/apron = 2,
 					/obj/item/clothing/suit/apron/overalls = 3,
 					/obj/item/clothing/suit/apron/waders = 3,
-					/obj/item/clothing/under/rank/civilian/hydroponics = 3,
-					/obj/item/clothing/under/rank/civilian/hydroponics/skirt = 3,
+					/obj/item/clothing/under/rank/civilian/hydroponics/ds_bot = 3,
 					/obj/item/clothing/mask/bandana/striped/botany = 3,
 					/obj/item/clothing/accessory/armband/hydro = 3)
 	refill_canister = /obj/item/vending_refill/wardrobe/hydro_wardrobe
@@ -419,27 +407,14 @@
 	products = list(/obj/item/choice_beacon/holy = 1,
 					/obj/item/storage/backpack/cultpack = 1,
 					/obj/item/clothing/accessory/pocketprotector/cosmetology = 1,
-					/obj/item/clothing/under/rank/civilian/chaplain = 1,
-					/obj/item/clothing/under/rank/civilian/chaplain/skirt = 2,
+					/obj/item/clothing/under/rank/civilian/ds_clergy = 5,
 					/obj/item/clothing/shoes/sneakers/black = 1,
-					/obj/item/clothing/suit/chaplainsuit/nun = 1,
-					/obj/item/clothing/head/nun_hood = 1,
-					/obj/item/clothing/suit/chaplainsuit/holidaypriest = 1,
-					/obj/item/clothing/suit/hooded/chaplainsuit/monkhabit = 1,
-					/obj/item/storage/fancy/candle_box = 2,
-					/obj/item/clothing/head/kippah = 3,
-					/obj/item/clothing/suit/chaplainsuit/whiterobe = 1,
-					/obj/item/clothing/head/taqiyahwhite = 1,
-					/obj/item/clothing/head/taqiyahred = 3,
-					/obj/item/clothing/suit/chaplainsuit/monkrobeeast = 1,
-					/obj/item/clothing/head/beanie/rasta = 1)
-	contraband = list(/obj/item/toy/plush/ratplush = 1,
-					/obj/item/toy/plush/narplush = 1,
-					/obj/item/clothing/head/medievaljewhat = 3,
-					/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
+					/obj/item/storage/fancy/candle_box = 2)
+	contraband = list(/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
 					/obj/item/clothing/head/clownmitre = 1)
-	premium = list(/obj/item/clothing/suit/chaplainsuit/bishoprobe = 1,
-					/obj/item/clothing/head/bishopmitre = 1)
+	premium = list(/obj/item/plate_shard/marker_shard = 5,
+					/obj/item/storage/book/bible/unitology = 5,
+					/obj/item/knife/unitology = 2)
 	refill_canister = /obj/item/vending_refill/wardrobe/chap_wardrobe
 	payment_department = ACCOUNT_SRV
 
@@ -454,8 +429,7 @@
 	icon_state = "chemdrobe"
 	product_ads = "Our clothes are 0.5% more resistant to acid spills! Get yours now!"
 	vend_reply = "Thank you for using the ChemDrobe!"
-	products = list(/obj/item/clothing/under/rank/medical/chemist = 2,
-					/obj/item/clothing/under/rank/medical/chemist/skirt = 2,
+	products = list(/obj/item/clothing/under/rank/medical/ds_chemist = 2,
 					/obj/item/clothing/head/beret/medical = 2,
 					/obj/item/clothing/shoes/sneakers/white = 2,
 					/obj/item/clothing/suit/toggle/labcoat/chemist = 2,

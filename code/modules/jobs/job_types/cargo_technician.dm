@@ -12,8 +12,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/contractor,
-		/datum/employer/hermes
+		/datum/employer/cec,
+		/datum/employer/eg,
+		/datum/employer/uni
 	)
 
 	outfits = list(
@@ -48,10 +49,11 @@
 	jobtype = /datum/job/cargo_technician
 
 	id_trim = /datum/id_trim/job/cargo_technician
-	uniform = /obj/item/clothing/under/rank/cargo/tech
+	uniform = /obj/item/clothing/under/rank/cargo/ds_flightdeck
 	belt = /obj/item/modular_computer/tablet/pda/cargo
 	ears = /obj/item/radio/headset/headset_cargo
 	l_hand = /obj/item/export_scanner
+	shoes = /obj/item/clothing/shoes/workboots/flightdeck
 
 /datum/outfit/job/cargo_tech/plasmaman
 	name = "Cargo Technician (Plasmaman)"

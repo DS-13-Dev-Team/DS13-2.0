@@ -586,7 +586,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/hydrophonics)
 "ce" = (
-/obj/structure/closet/secure_closet/security/mara,
+/obj/structure/closet/secure_closet/mara/security,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/security_center)
 "cf" = (
@@ -1151,7 +1151,7 @@
 /obj/machinery/firealarm/directional/west,
 /obj/item/clothing/under/rank/civilian/hydroponics/ds_bot,
 /obj/item/clothing/under/rank/engineering/kellion_tech,
-/obj/item/clothing/under/rank/medical/ds_surgeon,
+/obj/item/clothing/under/rank/medical/ds_chemist,
 /obj/item/clothing/under/misc/tacticasual,
 /obj/item/clothing/under/costume/swagoutfit,
 /turf/open/floor/deadspace/heavy,
@@ -2109,7 +2109,7 @@
 /area/mara17/interior/medium)
 "gU" = (
 /obj/machinery/light/warm/directional/south,
-/obj/structure/closet/secure_closet/security/mara,
+/obj/structure/closet/secure_closet/mara/security,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/security_center)
 "gV" = (
@@ -3536,7 +3536,7 @@
 /turf/open/floor/deadspace/cable_end,
 /area/mara17/interior/medium)
 "kS" = (
-/obj/structure/closet/secure_closet/security/mara,
+/obj/structure/closet/secure_closet/mara/security,
 /obj/structure/sign/cec/deck/security{
 	pixel_y = -32
 	},

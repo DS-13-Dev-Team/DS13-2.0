@@ -18,7 +18,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/daedalus,
+		/datum/employer/cec,
+		/datum/employer/eg,
+		/datum/employer/uni
 	)
 
 	outfits = list(
@@ -66,7 +68,7 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/chief_engineer
-	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer
+	uniform = /obj/item/clothing/under/rank/engineering/ds_rigshirt
 	backpack_contents = list(
 		/obj/item/assembly/flash/handheld
 	)
@@ -74,7 +76,7 @@
 	ears = /obj/item/radio/headset/heads/ce
 	gloves = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/hardhat/white
-	shoes = /obj/item/clothing/shoes/sneakers/brown
+	shoes = /obj/item/clothing/shoes/workboots/engineer
 	l_pocket = /obj/item/modular_computer/tablet/pda/heads/ce
 
 	backpack = /obj/item/storage/backpack/industrial

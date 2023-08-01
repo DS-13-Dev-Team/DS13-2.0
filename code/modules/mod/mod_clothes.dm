@@ -1,6 +1,6 @@
 /obj/item/clothing/head/mod
-	name = "MOD helmet"
-	desc = "A helmet for a MODsuit."
+	name = "RIG helmet"
+	desc = "A helmet for a RIG."
 	icon = 'icons/obj/clothing/modsuit/mod_clothing.dmi'
 	icon_state = "helmet"
 	worn_icon = 'icons/mob/clothing/modsuit/mod_clothing.dmi'
@@ -12,8 +12,8 @@
 	var/alternate_layer = NECK_LAYER
 
 /obj/item/clothing/suit/mod
-	name = "MOD chestplate"
-	desc = "A chestplate for a MODsuit."
+	name = "RIG chestplate"
+	desc = "A chestplate for a RIG."
 	icon = 'icons/obj/clothing/modsuit/mod_clothing.dmi'
 	icon_state = "chestplate"
 	worn_icon = 'icons/mob/clothing/modsuit/mod_clothing.dmi'
@@ -25,8 +25,8 @@
 	obj_flags = IMMUTABLE_SLOW
 
 /obj/item/clothing/gloves/mod
-	name = "MOD gauntlets"
-	desc = "A pair of gauntlets for a MODsuit."
+	name = "RIG gauntlets"
+	desc = "A pair of gauntlets for a RIG."
 	icon = 'icons/obj/clothing/modsuit/mod_clothing.dmi'
 	icon_state = "gauntlets"
 	worn_icon = 'icons/mob/clothing/modsuit/mod_clothing.dmi'
@@ -37,8 +37,8 @@
 	obj_flags = IMMUTABLE_SLOW
 
 /obj/item/clothing/shoes/mod
-	name = "MOD boots"
-	desc = "A pair of boots for a MODsuit."
+	name = "RIG boots"
+	desc = "A pair of boots for a RIG."
 	icon = 'icons/obj/clothing/modsuit/mod_clothing.dmi'
 	icon_state = "boots"
 	worn_icon = 'icons/mob/clothing/modsuit/mod_clothing.dmi'

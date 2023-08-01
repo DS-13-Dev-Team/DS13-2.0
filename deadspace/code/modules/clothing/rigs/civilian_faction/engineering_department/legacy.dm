@@ -1,13 +1,13 @@
-/datum/mod_theme/deadspace/firesuit
-	name = "Firesuit"
-	desc = "A extremely lightweight suit, designed to resist high temperatures whilst reduced armor plating makes it lighter. Soft materials barely impede movement."
-	default_skin = "firesuit"
-	armor = list(MELEE = 37.5, BULLET = 35, LASER = 50, ENERGY = 40, BOMB = 60, BIO = 100, FIRE = 100, ACID = 25, WOUND = 5)
+/datum/mod_theme/deadspace/legacy_standard_engineer
+	name = "DS-08 Legacy"
+	desc = "A classic CEC RIG, designed to handle years of faithful service"
+	default_skin = "legacy_standard_engineer"
+	armor = list(MELEE = 45, BULLET = 50, LASER = 50, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 
 	skins = list(
-		"firesuit" = list(
+		"legacy_standard_engineer" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -32,13 +32,12 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/firesuit
-	theme = /datum/mod_theme/deadspace/firesuit
+/obj/item/mod/control/pre_equipped/ds/legacy_standard_engineer
+	theme = /datum/mod_theme/deadspace/legacy_standard_engineer
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/magboot,
 		/obj/item/mod/module/welding,
-		/obj/item/mod/module/mister,
-		/obj/item/mod/module/thermal_regulator
+		/obj/item/mod/module/t_ray,
 	)

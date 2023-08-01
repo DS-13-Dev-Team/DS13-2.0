@@ -18,7 +18,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/aether,
+		/datum/employer/cec,
+		/datum/employer/eg,
+		/datum/employer/uni,
 	)
 
 	outfits = list(
@@ -63,7 +65,7 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/chief_medical_officer
-	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer
+	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer/ds_senior_med
 	backpack_contents = list(
 		/obj/item/assembly/flash/handheld
 	)

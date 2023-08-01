@@ -10,8 +10,8 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/contractor,
-		/datum/employer/none
+		/datum/employer/cec,
+		/datum/employer/uni
 	)
 
 	outfits = list(
@@ -126,6 +126,7 @@
 	backpack_contents = list(
 		/obj/item/camera/spooky = 1,
 		/obj/item/stamp/chap = 1,
+		/obj/item/knife/unitology,
 		)
 	belt = /obj/item/modular_computer/tablet/pda/chaplain
 	ears = /obj/item/radio/headset/headset_srv
@@ -139,7 +140,7 @@
 /datum/outfit/job/chaplain/plasmaman
 	name = "Chaplain (Plasmaman)"
 
-	uniform = /obj/item/clothing/under/plasmaman/chaplain
+	uniform = /obj/item/clothing/under/rank/civilian/ds_clergy
 	gloves = /obj/item/clothing/gloves/color/plasmaman/black
 	head = /obj/item/clothing/head/helmet/space/plasmaman/chaplain
 	mask = /obj/item/clothing/mask/breath

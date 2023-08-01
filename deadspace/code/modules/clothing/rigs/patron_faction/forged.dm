@@ -8,7 +8,7 @@
 	skins = list(
 		"forged" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -33,7 +33,7 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/forged_rig
+/obj/item/mod/control/pre_equipped/ds/forged_rig
 	theme = /datum/mod_theme/deadspace/forged_rig
 	initial_modules = list(
 		/obj/item/mod/module/storage,

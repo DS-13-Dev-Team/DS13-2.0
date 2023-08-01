@@ -4,39 +4,59 @@
 
 // Mining Closet
 
-/obj/structure/closet/secure_closet/miner/mara
+/obj/structure/closet/secure_closet/mara/miner
 	name = "miner's equipment"
 	icon_state = "mining"
 	req_access = list(ACCESS_MINING)
 
-/obj/structure/closet/secure_closet/miner/mara/PopulateContents()
+/obj/structure/closet/secure_closet/mara/miner/PopulateContents()
 	..()
+	new /obj/item/clothing/mask/gas/explorer(src)
+	new /obj/item/mod/control/pre_equipped/ds/standard_miner(src)
 	new /obj/item/shovel(src)
-	new /obj/item/pickaxe/plasma(src)
+	new /obj/item/pickaxe/rock(src)
 	new /obj/item/radio/headset/headset_cargo/mining(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/storage/bag/ore(src)
 	new /obj/item/t_scanner/adv_mining_scanner/lesser(src)
 	new /obj/item/gun/energy/plasmacutter(src)
+	new /obj/item/stock_parts/cell/plasmacutter(src)
 	new /obj/item/clothing/glasses/meson(src)
 	new /obj/item/survivalcapsule(src)
-	new /obj/item/gun/energy/plasmacutter(src)
-	new /obj/item/clothing/under/rank/cargo/miner/ds_miner(src)
-	new /obj/item/clothing/suit/hooded/wintercoat/miner(src)
-	new /obj/item/clothing/mask/balaclava(src)
-	new /obj/item/clothing/shoes/winterboots(src)
+
+// Engineering Closet
+
+/obj/structure/closet/secure_closet/mara/engineering_personal
+	name = "engineer's locker"
+	req_access = list(ACCESS_ENGINE_EQUIP)
+	icon_state = "eng_secure"
+
+/obj/structure/closet/secure_closet/mara/engineering_personal/PopulateContents()
+	..()
+	new /obj/item/radio/headset/headset_eng(src)
+	new /obj/item/storage/toolbox/mechanical(src)
+	new /obj/item/mod/control/pre_equipped/ds/standard_engineer(src)
+	new /obj/item/tank/internals/emergency_oxygen/engi(src)
+	new /obj/item/holosign_creator/engineering(src)
+	new /obj/item/clothing/mask/gas(src)
+	new /obj/item/clothing/glasses/meson/engine(src)
+	new /obj/item/stack/sticky_tape(src)
+	new /obj/item/paint_sprayer(src)
+	new /obj/item/storage/box/emptysandbags(src)
+	new /obj/item/storage/bag/construction(src)
 
  // Med Closet
 
-/obj/structure/closet/secure_closet/medical_mara
+/obj/structure/closet/secure_closet/mara/medical
 	name = "medical doctor's locker"
 	req_access = list(ACCESS_SURGERY)
 	icon_state = "med_secure"
 
-/obj/structure/closet/secure_closet/medical_mara/PopulateContents()
+/obj/structure/closet/secure_closet/mara/medical/PopulateContents()
 	..()
 	new /obj/item/radio/headset/headset_med(src)
 	new /obj/item/defibrillator/loaded(src)
+	new /obj/item/mod/control/pre_equipped/ds/med(src)
 	new /obj/item/clothing/gloves/color/latex/nitrile(src)
 	new /obj/item/storage/belt/medical(src)
 	new /obj/item/clothing/glasses/hud/health(src)
@@ -47,15 +67,15 @@
 
  // Sec Closet
 
-/obj/structure/closet/secure_closet/security/mara
+/obj/structure/closet/secure_closet/mara/security
 	name = "security officer's locker"
 	req_access = list(ACCESS_SECURITY)
 	icon_state = "sec"
 
-/obj/structure/closet/secure_closet/security/mara/PopulateContents()
+/obj/structure/closet/secure_closet/mara/security/PopulateContents()
 	..()
-	new /obj/item/clothing/under/rank/security/pcsi(src)
 	new /obj/item/clothing/suit/armor/pcsi(src)
+	new /obj/item/clothing/suit/toggle/cseco(src)
 	new /obj/item/clothing/head/helmet/pcsi(src)
 	new /obj/item/radio/headset/headset_sec(src)
 	new /obj/item/radio/headset/headset_sec/alt(src)
@@ -63,7 +83,6 @@
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/gun/ballistic/automatic/pistol/divet(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/security(src)
-	new /obj/item/clothing/gloves/combat(src)
 	new /obj/item/clothing/shoes/winterboots(src)
 	new /obj/item/clothing/mask/balaclava(src)
 
@@ -80,14 +99,14 @@
 	new /obj/item/storage/backpack/captain(src)
 	new /obj/item/storage/backpack/satchel/cap(src)
 	new /obj/item/storage/backpack/duffelbag/captain(src)
-	new /obj/item/storage/bag/garment/captain(src)
 	new /obj/item/computer_hardware/hard_drive/role/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
 	new /obj/item/radio/headset/heads/captain/alt(src)
 	new /obj/item/radio/headset/heads/captain(src)
 	new /obj/item/storage/belt/sabre(src)
 	new /obj/item/gun/energy/e_gun(src)
-	new /obj/item/clothing/under/rank/captain/ds_captain/ds_director(src)
+	new /obj/item/clothing/under/rank/captain/ds_director(src)
+	new /obj/item/clothing/under/rank/captain/ds_captain(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/captain(src)
 	new /obj/item/clothing/shoes/winterboots(src)
 	new /obj/item/clothing/mask/balaclava(src)

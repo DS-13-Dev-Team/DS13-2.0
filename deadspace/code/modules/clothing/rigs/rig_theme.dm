@@ -62,6 +62,7 @@
 		/obj/item/instrument,
 		/obj/item/shield,
 		/obj/item/gun/ballistic,
+		/obj/item/gun/energy,
 		/obj/item/circular_saw,
 		/obj/item/crowbar,
 		/obj/item/screwdriver,

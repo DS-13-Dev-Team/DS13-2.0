@@ -19,7 +19,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	employers = list(
-		/datum/employer/ananke,
+		/datum/employer/cec,
+		/datum/employer/eg,
+		/datum/employer/uni,
 	)
 
 	outfits = list(
@@ -62,7 +64,7 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/research_director
-	uniform = /obj/item/clothing/under/rank/rnd/research_director
+	uniform = /obj/item/clothing/under/rank/rnd/research_director/ds_chief_sci
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic = 1,

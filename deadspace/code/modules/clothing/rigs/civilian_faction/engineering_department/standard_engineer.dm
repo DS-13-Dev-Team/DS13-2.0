@@ -1,13 +1,13 @@
-/datum/mod_theme/deadspace/mining
-	name = "Mining"
-	desc = "A cheaper version of the engineering suit. Commonly used during planet cracking operations."
-	default_skin = "min"
+/datum/mod_theme/deadspace/standard_engineer
+	name = "Standard Engineer"
+	desc = "A standard issued engineering suit, issued to lower ranking engineer; designed for shipboard engineering"
+	default_skin = "standard_engineer"
 	armor = list(MELEE = 43.5, BULLET = 42.5, LASER = 42.5, ENERGY = 15, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 
 	skins = list(
-		"min" = list(
+		"standard_engineer" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = NECK_LAYER,
+				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -32,14 +32,12 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/min
-	theme = /datum/mod_theme/deadspace/mining
+/obj/item/mod/control/pre_equipped/ds/standard_engineer
+	theme = /datum/mod_theme/deadspace/standard_engineer
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/gps,
-		/obj/item/mod/module/orebag,
-		/obj/item/mod/module/clamp,
-		/obj/item/mod/module/drill,
 		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/t_ray,
 	)
