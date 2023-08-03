@@ -19,7 +19,7 @@
 	//Just it for now
 	var/turf/location = pick(GLOB.possible_marker_locations)
 	main_marker = new /obj/structure/marker(location)
-	addtimer(CALLBACK(src, PROC_REF(activate_marker)), rand(45 MINUTES, 60 MINUTES))
+	addtimer(CALLBACK(src, PROC_REF(activate_marker)), rand(25 MINUTES, 40 MINUTES))
 
 /datum/game_mode/containment/proc/get_antag_candidates()
 	var/list/egov_candidates = list()
@@ -202,5 +202,6 @@ GLOBAL_LIST_EMPTY(possible_marker_locations)
 	icon_state = ""
 
 /obj/effect/marker_location/Initialize()
+	..()
 	GLOB.possible_marker_locations += get_turf(src)
-	return ..()
+	return INITIALIZE_HINT_QDEL
