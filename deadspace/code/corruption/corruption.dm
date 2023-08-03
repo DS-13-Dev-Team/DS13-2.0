@@ -104,7 +104,7 @@
 /obj/structure/corruption/process(delta_time)
 	switch(state)
 		if(GROW)
-			repair_damage(3000*delta_time)
+			repair_damage(3*delta_time)
 		if(SPREAD)
 			/*
 				We use get_dist instead of IN_GIVEN_RANGE because we want to spread to turfs that are on different Z levels
