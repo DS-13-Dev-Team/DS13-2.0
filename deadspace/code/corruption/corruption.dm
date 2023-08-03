@@ -1,6 +1,7 @@
 #define GROW 1
 #define SPREAD 2
 #define DECAY 3
+#define IDLE 4
 
 /obj/structure/corruption
 	name = ""
@@ -25,7 +26,9 @@
 	/// If we are growing or decaying
 	var/state = null
 	/// Bitmask of directions we can potentially spread to (those directions have open turfs)
-	var/dirs_to_spread
+	var/dirs_to_spread = 0
+	/// If our loc has stairs. Used to for optimization
+	var/has_stairs = FALSE
 	/// The list of turfs that the corruption will not be able to grow over
 	var/static/list/blacklisted_turfs = list(
 		/turf/open/space,
@@ -37,19 +40,16 @@
 
 /obj/structure/corruption/Initialize(mapload, datum/corruption_node/new_master)
 	.=..()
-	for(var/obj/structure/corruption/corruption in loc)
-		if(corruption == src)
-			continue
-		return INITIALIZE_HINT_QDEL
-
 	if(!new_master)
 		return INITIALIZE_HINT_QDEL
+
+	for(var/obj/structure/corruption/corruption in loc)
+		if(corruption != src)
+			return INITIALIZE_HINT_QDEL
 
 	if(isturf(loc))
 		var/turf/our_loc = loc
 		our_loc.necro_corrupted = TRUE
-	else
-		return INITIALIZE_HINT_QDEL
 
 	set_master(new_master)
 
@@ -61,8 +61,12 @@
 
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_ENTERED = PROC_REF(on_location_entered),
+		COMSIG_ATOM_EXITED = PROC_REF(on_location_exited),
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
+
+	if(locate(/obj/structure/stairs) in loc)
+		has_stairs = TRUE
 
 	update_dirs_to_spread()
 
@@ -71,43 +75,45 @@
 	SEND_SIGNAL(loc, COMSIG_TURF_NECRO_CORRUPTED, src)
 
 /obj/structure/corruption/Destroy()
-	if(isturf(loc))
-		var/turf/our_loc = loc
-		our_loc.necro_corrupted = FALSE
-		for(var/obj/structure/corruption/corruption in loc)
-			if(corruption != src)
-				our_loc.necro_corrupted = TRUE
-				break
 	if(master)
 		master.remaining_weed_amount++
 		master.corruption -= src
-		SEND_SIGNAL(loc, COMSIG_TURF_NECRO_UNCORRUPTED, src)
 	master = null
+
 	STOP_PROCESSING(SScorruption, src)
-	return ..()
+	var/turf/previous_loc = loc
+	.=..()
+
+	if(!(locate(/obj/structure/corruption) in previous_loc))
+		previous_loc.necro_corrupted = FALSE
+		SEND_SIGNAL(loc, COMSIG_TURF_NECRO_UNCORRUPTED, src)
 
 /obj/structure/corruption/Moved(turf/old_loc, movement_dir, forced, list/old_locs, momentum_change)
 	. = ..()
+	if(QDELING(src))
+		return
 	if(istype(old_loc))
 		old_loc.necro_corrupted = FALSE
-	if(isturf(loc))
-		var/turf/our_loc = loc
-		our_loc.necro_corrupted = TRUE
-		update_dirs_to_spread(old_loc)
-	else if(!QDELING(src))
+	if(!isturf(loc))
 		qdel(src)
+		return
+	var/turf/our_loc = loc
+	our_loc.necro_corrupted = TRUE
+	update_dirs_to_spread(old_loc)
 
 /obj/structure/corruption/process(delta_time)
 	switch(state)
 		if(GROW)
-			repair_damage(3*delta_time)
-			return
+			repair_damage(3000*delta_time)
 		if(SPREAD)
-			var/obj/structure/stairs/stairs = locate(/obj/structure/stairs) in loc
-			if(stairs)
-				if(!stairs.isTerminator())
-					stairs = null
-				else
+			/*
+				We use get_dist instead of IN_GIVEN_RANGE because we want to spread to turfs that are on different Z levels
+			*/
+			var/list/dirs_to_process = GLOB.cardinals.Copy()
+			if(has_stairs)
+				var/obj/structure/stairs/stairs = locate(/obj/structure/stairs) in loc
+				if(stairs.isTerminator())
+					dirs_to_process -= stairs.dir
 					var/turf/above_turf = GetAbove(loc)
 					var/turf/check_turf = get_step_multiz(loc, (stairs.dir|UP))
 					if(above_turf?.CanZPass(src, UP, ZMOVE_STAIRS_FLAGS))
@@ -118,7 +124,7 @@
 			if(!dirs_to_spread)
 				return
 
-			for(var/direction in GLOB.cardinals - stairs?.dir)
+			for(var/direction in dirs_to_process)
 				if(!(dirs_to_spread & direction))
 					continue
 				var/turf/check_turf = get_step(src, direction)
@@ -131,16 +137,26 @@
 					for(var/datum/corruption_node/node as anything in master.marker.nodes-master)
 						if(node.remaining_weed_amount > 0 && IN_GIVEN_RANGE(check_turf, node.parent, node.control_range))
 							new /obj/structure/corruption(check_turf, node)
-			return
 		if(DECAY)
 			take_damage(3*delta_time)
-			return
-	. = PROCESS_KILL
-	CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
+		if(IDLE)
+			. = PROCESS_KILL
+			CRASH("Corruption was processing in IDLE state")
+		else
+			. = PROCESS_KILL
+			CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
 
 /obj/structure/corruption/proc/on_location_entered(atom/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	if(isliving(arrived) && !isnecromorph(arrived))
 		arrived.AddComponent(/datum/component/corruption_absorbing, master.marker)
+	else if(istype(arrived, /obj/structure/stairs))
+		has_stairs = TRUE
+		update_spread_state()
+
+/obj/structure/corruption/proc/on_location_exited(atom/source, atom/movable/gone, direction)
+	if(istype(gone, /obj/structure/stairs) && !(locate(/obj/structure/stairs) in loc))
+		has_stairs = FALSE
+		update_spread_state()
 
 /obj/structure/corruption/proc/update_dirs_to_spread(turf/old_loc)
 	dirs_to_spread = 0
@@ -166,23 +182,27 @@
 	update_spread_state()
 
 /obj/structure/corruption/proc/update_spread_state()
-	if(master && !get_integrity_lost())
+	if(!master || get_integrity_lost())
+		return
+	if(dirs_to_spread || has_stairs)
 		state = SPREAD
+		START_PROCESSING(SScorruption, src)
+	else
+		state = IDLE
+		STOP_PROCESSING(SScorruption, src)
 
 /obj/structure/corruption/proc/on_nearby_turf_change(turf/source, path, list/new_baseturfs, flags, list/post_change_callbacks)
-	dirs_to_spread &= ~get_dir(loc, source)
-	UnregisterSignal(source, list(COMSIG_TURF_NECRO_CORRUPTED, COMSIG_TURF_NECRO_UNCORRUPTED))
-	post_change_callbacks += CALLBACK(src, PROC_REF(nearby_turf_changed), source)
-
-/obj/structure/corruption/proc/nearby_turf_changed(turf/source)
-	if(!isopenturf(source) || is_type_in_list(source, blacklisted_turfs))
-		return
-
-	if(!source.necro_corrupted)
+	if(ispath(path, /turf/open) && !is_path_in_list(path, blacklisted_turfs))
+		if(isopenturf(source) && !is_type_in_list(source, blacklisted_turfs))
+			return
+		//Assume turf is not corrupted yet since it couldn't be corrupted before
 		RegisterSignal(source, COMSIG_TURF_NECRO_CORRUPTED, PROC_REF(on_nearby_turf_corrupted))
 		dirs_to_spread |= get_dir(loc, source)
 	else
-		RegisterSignal(source, COMSIG_TURF_NECRO_UNCORRUPTED, PROC_REF(on_nearby_turf_uncorrupted))
+		dirs_to_spread &= ~get_dir(loc, source)
+		UnregisterSignal(source, list(COMSIG_TURF_NECRO_CORRUPTED, COMSIG_TURF_NECRO_UNCORRUPTED))
+
+	update_spread_state()
 
 /obj/structure/corruption/proc/on_nearby_turf_corrupted(turf/source)
 	dirs_to_spread &= ~get_dir(loc, source)
@@ -201,12 +221,14 @@
 			return
 	master = null
 	state = DECAY
+	START_PROCESSING(SScorruption, src)
 
 /obj/structure/corruption/proc/on_integrity_change(atom/source, old_integrity, new_integrity)
 	SIGNAL_HANDLER
 	if(master)
 		if(old_integrity >= max_integrity)
 			state = GROW
+			START_PROCESSING(SScorruption, src)
 		else if(new_integrity >= max_integrity)
 			update_spread_state()
 	alpha = clamp(255*new_integrity/max_integrity, 20, 215)
@@ -224,7 +246,11 @@
 	new_master.remaining_weed_amount--
 	new_master.corruption += src
 	if(state == DECAY)
-		state = GROW
+		if(get_integrity_lost())
+			state = GROW
+			START_PROCESSING(SScorruption, src)
+		else
+			update_spread_state()
 	new_master.marker.markernet.addVisionSource(src, VISION_SOURCE_RANGE)
 
 /obj/structure/corruption/play_attack_sound(damage_amount, damage_type, damage_flag)
@@ -250,7 +276,7 @@
 /obj/structure/corruption/can_see_marker()
 	return RANGE_TURFS(1, src)
 
-
 #undef GROW
 #undef SPREAD
 #undef DECAY
+#undef IDLE
