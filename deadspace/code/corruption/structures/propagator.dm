@@ -11,6 +11,7 @@
 
 /datum/action/cooldown/necro/corruption/propagator
 	name = "Propagator"
+	button_icon_state = "propagator"
 	place_structure = /obj/structure/necromorph/node/propagator
 	cost = 20
 	marker_only = TRUE

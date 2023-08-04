@@ -52,7 +52,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/cameranet_static)
 
 /mob/camera/marker_signal/reload_fullscreen()
 	if(..())
-		var/datum/hud/marker/our_hud = hud_used
+		var/datum/hud/marker_signal/our_hud = hud_used
 		our_hud.cameranet_static.update_o(client.view)
 
 /mob/camera/marker_signal/proc/update_static(turf/previous_turf)
@@ -71,7 +71,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/cameranet_static)
 	if(!offset_x && !offset_y && !force)
 		return
 
-	var/datum/hud/marker/our_hud = hud_used
+	var/datum/hud/marker_signal/our_hud = hud_used
 	var/atom/movable/screen/cameranet_static/cameranet_static = our_hud.cameranet_static
 
 	var/glide_rate = round(world.icon_size / glide_size * world.tick_lag, world.tick_lag)

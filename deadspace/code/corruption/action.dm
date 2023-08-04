@@ -1,5 +1,6 @@
 /datum/action/cooldown/necro/corruption
 	name = "Generic corruption placement ability"
+	button_icon = 'deadspace/icons/hud/action_corruption.dmi'
 	cooldown_time = 0.1 SECONDS
 	click_to_activate = TRUE
 	var/cost = 0
@@ -24,6 +25,15 @@
 	owner.mouse_move_intercept = null
 	owner.client.images -= template
 	template.loc = null
+
+/datum/action/cooldown/necro/corruption/InterceptClickOn(mob/living/caller, params, atom/target)
+	var/list/modifiers = params2list(params)
+	if(LAZYACCESS(modifiers, RIGHT_CLICK))
+		if(unset_after_click)
+			unset_click_ability(caller, refund_cooldown = TRUE)
+		caller.next_click = world.time + click_cd_override
+		return
+	return ..()
 
 /datum/action/cooldown/necro/corruption/Activate(atom/target)
 	var/mob/camera/marker_signal/signal = owner

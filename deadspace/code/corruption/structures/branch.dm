@@ -11,5 +11,6 @@
 
 /datum/action/cooldown/necro/corruption/branch
 	name = "Branch"
+	button_icon_state = "minigrowth"
 	place_structure = /obj/structure/necromorph/node/branch
 	cost = 5

@@ -10,5 +10,6 @@
 
 /datum/action/cooldown/necro/corruption/snare
 	name = "Snare"
+	button_icon_state = "snare"
 	place_structure = /obj/structure/necromorph/snare
 	cost = 40
