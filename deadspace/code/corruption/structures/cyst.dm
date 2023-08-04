@@ -73,7 +73,7 @@
 	name = "Cyst"
 	button_icon_state = "cyst"
 	place_structure = /obj/structure/necromorph/cyst
-	cost = 50
+	cost = 15
 
 /datum/action/cooldown/necro/corruption/cyst/can_place(turf/turf_loc)
 	if(!..())

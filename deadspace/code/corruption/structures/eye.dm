@@ -56,7 +56,7 @@
 	name = "Eye"
 	button_icon_state = "eye"
 	place_structure = /obj/structure/necromorph/eye
-	cost = 50
+	cost = 15
 
 #undef MINIMUM_NOTIFY_DELAY
 

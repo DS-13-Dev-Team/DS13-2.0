@@ -87,7 +87,7 @@
 	var/turf/previous_loc = loc
 	.=..()
 
-	if(!(locate(/obj/structure/corruption) in previous_loc))
+	if(previous_loc && !(locate(/obj/structure/corruption) in previous_loc))
 		previous_loc.necro_corrupted = FALSE
 		SEND_SIGNAL(loc, COMSIG_TURF_NECRO_UNCORRUPTED, src)
 

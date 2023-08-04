@@ -13,4 +13,4 @@
 	name = "Root"
 	button_icon_state = "minigrowth"
 	place_structure = /obj/structure/necromorph/node/root
-	cost = 10
+	cost = 7

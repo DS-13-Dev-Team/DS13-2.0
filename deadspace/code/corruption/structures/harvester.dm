@@ -4,6 +4,7 @@
 	name = "harvester"
 	icon = 'deadspace/icons/effects/corruption96x96.dmi'
 	icon_state = "whole"
+	density = TRUE
 	pixel_x = -32
 	base_pixel_x = -32
 	var/active = FALSE
@@ -34,6 +35,7 @@
 	for(var/atom/movable/controlled as anything in controlled_atoms)
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 		REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
+		controlled.remove_filter("harvester_glow")
 	controlled_atoms = null
 	marker = null
 	return ..()
@@ -71,6 +73,7 @@
 	for(var/atom/movable/controlled as anything in controlled_atoms)
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 		REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
+		controlled.remove_filter("harvester_glow")
 	controlled_atoms.Cut()
 	update_icon(UPDATE_OVERLAYS)
 
@@ -78,12 +81,13 @@
 	var/turf/our_loc = loc
 	if(istype(our_loc) && our_loc.necro_corrupted)
 		active = TRUE
-		FOR_DVIEW(var/atom/movable/controlled, HARVESTER_CONTROL_RANGE, src, INVISIBILITY_LIGHTING)
+		FOR_DVIEW(var/atom/movable/controlled, HARVESTER_CONTROL_RANGE, get_turf(src), INVISIBILITY_LIGHTING)
 			if(controlled.biomass_produce && !HAS_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS))
 				controlled_atoms += controlled
 				RegisterSignal(controlled, COMSIG_PARENT_QDELETING, PROC_REF(on_controlled_delete))
 				RegisterSignal(controlled, COMSIG_MOVABLE_MOVED, PROC_REF(on_controlled_moved))
 				ADD_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
+				controlled.add_filter("harvester_glow", 1, outline_filter(1, COLOR_HARVESTER_RED))
 				biomass_per_tick += controlled.biomass_produce
 		FOR_DVIEW_END
 		our_source = marker.add_biomass_source(/datum/biomass_source/harvester, src)
@@ -95,6 +99,7 @@
 	controlled_atoms -= controlled
 	UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 	REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
+	controlled.remove_filter("harvester_glow")
 
 /obj/structure/necromorph/harvester/proc/on_controlled_moved(atom/movable/controlled)
 	SIGNAL_HANDLER
@@ -103,6 +108,7 @@
 		controlled_atoms -= controlled
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))
 		REMOVE_TRAIT(controlled, TRAIT_PRODUCES_BIOMASS, src)
+		controlled.remove_filter("harvester_glow")
 
 #undef HARVESTER_CONTROL_RANGE
 
