@@ -1,6 +1,7 @@
 /datum/action/cooldown/necro/psy/scrawl
 	name = "Bloody Scrawl"
 	desc = "Writes a message in blood. Should be at least 3 tiles away from another bloody scrawl!"
+	button_icon_state = "writing"
 	cost = 15
 
 /datum/action/cooldown/necro/psy/scrawl/Activate(atom/target)

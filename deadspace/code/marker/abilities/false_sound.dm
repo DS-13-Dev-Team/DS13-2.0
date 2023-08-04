@@ -11,7 +11,7 @@
 	if(!target)
 		return
 	//Add more necromorphs here, perhaps we should make it a define to make sure it's updated
-	var/list/category = GLOB.necromorph_sounds[tgui_input_list(owner, "Pick a necromorph type", "False Sound", GLOB.necromorph_sounds)]
+	var/list/category = tgui_input_list(owner, "Pick a necromorph type", "False Sound", GLOB.necromorph_sounds)
 	if(!category)
 		return TRUE
 	var/list/picked_sound = tgui_input_list(owner, "Pick sound type to play", "False Sound", category)

@@ -113,6 +113,7 @@
 
 /datum/action/cooldown/necro/corruption/nest
 	name = "Nest"
+	button_icon_state = "nest"
 	place_structure = /obj/structure/necromorph/nest
 	cost = 110
 	marker_only = TRUE

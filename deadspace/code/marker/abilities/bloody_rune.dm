@@ -1,6 +1,7 @@
 /datum/action/cooldown/necro/psy/rune
 	name = "Bloody Rune"
 	desc = "Creates a spooky rune. Has no functional effects, just for decoration. Should be at least 3 tiles away from another bloody rune!"
+	button_icon_state = "rune"
 	cost = 16
 
 /datum/action/cooldown/necro/psy/rune/Activate(atom/target)

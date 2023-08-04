@@ -13,6 +13,14 @@
 
 /// Intercepts client owner clicks to activate the ability
 /datum/action/cooldown/necro/psy/InterceptClickOn(mob/camera/marker_signal/caller, params, atom/target)
+	var/list/modifiers = params2list(params)
+
+	if(LAZYACCESS(modifiers, RIGHT_CLICK))
+		if(unset_after_click)
+			unset_click_ability(caller, refund_cooldown = TRUE)
+		caller.next_click = world.time + click_cd_override
+		return
+
 	if(!IsAvailable())
 		return FALSE
 	if(!target)
@@ -24,7 +32,6 @@
 	if(istype(target, /atom/movable/screen/cameranet_static))
 		if(!click_through_static)
 			return FALSE
-		var/list/modifiers = params2list(params)
 		var/new_target = parse_caught_click_modifiers(modifiers, get_turf(caller), caller.client)
 		params = list2params(modifiers)
 		if(!new_target)
