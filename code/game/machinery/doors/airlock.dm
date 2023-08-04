@@ -1369,7 +1369,7 @@
 		return
 	add_fingerprint(user)
 	user.visible_message(span_warning("[user] begins prying open [src]."),\
-						span_warning("You begin digging your claws into [src] with all your might!"),\
+						span_warning("You begin prying open [src] with all your might!"),\
 						span_warning("You hear groaning metal..."))
 	var/time_to_open = 0.5 SECONDS
 	if(hasPower())

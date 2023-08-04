@@ -34,7 +34,7 @@
 /turf/open/floor/deadspace/roller,
 /area/mara17/exterior)
 "al" = (
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/exterior)
 "am" = (
 /obj/structure/curtain/bounty,
@@ -163,7 +163,7 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/mara17/interior/upper/mining)
 "aM" = (
-/turf/closed/mineral/snowmountain,
+/turf/closed/mineral/snowmountain/mara,
 /area/mara17/interior/caves)
 "aN" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -174,23 +174,23 @@
 /area/mara17/interior/upper/observation/comms)
 "aO" = (
 /obj/structure/fence/corner,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aP" = (
 /obj/structure/fence,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aQ" = (
 /obj/structure/fence/corner{
 	dir = 8
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aR" = (
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aS" = (
 /turf/open/floor/deadspace/random/golf_brown,
@@ -199,25 +199,25 @@
 /obj/structure/fence/cut/large{
 	dir = 8
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aU" = (
 /obj/structure/fence/cut/large{
 	dir = 1
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aV" = (
 /obj/structure/fence/cut/medium,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aW" = (
 /obj/structure/flora/rock/pile/icy,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aX" = (
 /obj/structure/flora/rock/icy,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aY" = (
 /obj/structure/railing{
@@ -358,7 +358,7 @@
 /area/mara17/interior/upper/observation/comms)
 "bt" = (
 /obj/structure/lattice,
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/exterior)
 "bu" = (
 /obj/structure/rack/shelf,
@@ -481,12 +481,12 @@
 /area/mara17/interior/upper/watchtower)
 "bO" = (
 /obj/effect/spawner/random/exotic/snow_gear,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bP" = (
 /obj/item/clothing/suit/snowman,
 /obj/item/clothing/head/snowman,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bQ" = (
 /obj/machinery/light/small/directional/east,
@@ -669,7 +669,7 @@
 	color = "cyan";
 	pixel_y = 32
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "cy" = (
 /turf/open/floor/plating/snowed,
@@ -730,7 +730,7 @@
 "cH" = (
 /obj/structure/lattice,
 /obj/machinery/light/warm/directional/south,
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/mining)
 "cI" = (
 /obj/structure/rack/shelf,
@@ -861,7 +861,7 @@
 	color = "cyan";
 	pixel_x = -32
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "dd" = (
 /obj/item/crowbar/large/heavy,
@@ -899,7 +899,7 @@
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/mask/balaclava,
 /obj/item/clothing/gloves/fingerless,
-/obj/item/clothing/under/rank/cargo/cargo_jumpsuit,
+/obj/item/clothing/under/rank/cargo/ds_cargo_jumpsuit,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/cargo/cargo_tech)
 "dj" = (
@@ -1041,7 +1041,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining)
 "dD" = (
-/obj/structure/closet/secure_closet/medical_mara,
+/obj/structure/closet/secure_closet/mara/medical,
 /obj/item/storage/box/syringes,
 /obj/item/clothing/suit/hooded/ds,
 /turf/open/floor/deadspace/grater,
@@ -1051,7 +1051,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/mining/barracks)
 "dF" = (
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "dG" = (
 /obj/machinery/door/airlock/external,
@@ -1238,7 +1238,7 @@
 /area/mara17/interior/upper/observation/comms)
 "ej" = (
 /obj/structure/closet/crate/grave/filled,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "ek" = (
 /obj/structure/chair,
@@ -1428,7 +1428,7 @@
 /obj/item/clothing/mask/balaclava,
 /obj/item/clothing/gloves/fingerless,
 /obj/machinery/light/warm/directional/east,
-/obj/item/clothing/under/rank/cargo/cargo_jumpsuit,
+/obj/item/clothing/under/rank/cargo/ds_cargo_jumpsuit,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/cargo/cargo_tech)
 "eN" = (
@@ -1465,7 +1465,7 @@
 	color = "yellow";
 	pixel_y = 32
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "eV" = (
 /obj/machinery/computer/crew{
@@ -1510,7 +1510,7 @@
 /obj/item/clothing/head/helmet{
 	pixel_y = 8
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "fd" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -1600,7 +1600,7 @@
 /area/mara17/interior/upper/mining/locker_room)
 "fs" = (
 /obj/structure/marker_beacon/burgundy,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "ft" = (
 /obj/structure/sign/poster/random/directional/north,
@@ -2336,7 +2336,7 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/enginieering)
 "hv" = (
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/medium/abandoned)
 "hw" = (
 /obj/machinery/announcement_system,
@@ -2622,7 +2622,7 @@
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/suit/hooded/wintercoat/engineering,
 /obj/item/clothing/under/rank/engineering/ds_engineer,
-/obj/item/clothing/under/rank/engineering/ds_mechanic,
+/obj/item/clothing/under/rank/rnd/roboticist/ds_mechanic,
 /obj/item/clothing/under/rank/engineering/ds_engineer,
 /obj/item/clothing/mask/balaclava,
 /obj/item/clothing/gloves/fingerless,
@@ -3122,8 +3122,7 @@
 /area/mara17/interior/upper/tcomms/comms)
 "jL" = (
 /obj/structure/sign/warning/coldtemp{
-	pixel_x = -32;
-	pixel_y = 0
+	pixel_x = -32
 	},
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -3290,7 +3289,7 @@
 /obj/item/clothing/head/hardhat{
 	pixel_y = 8
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "kh" = (
 /obj/structure/rack/shelf,
@@ -3400,7 +3399,7 @@
 /area/mara17/interior/upper/mining/ore_storage)
 "ku" = (
 /obj/structure/barricade/wooden/crude/snow,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "kv" = (
 /turf/closed/wall,
@@ -3556,7 +3555,7 @@
 /obj/structure/sign/poster/scaf/forces{
 	pixel_y = 32
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "kP" = (
 /obj/structure/sign/directions/medical{
@@ -3973,7 +3972,7 @@
 	desc = "A cozy winter coat, this one does make you feel being inside of a poorly written history..with love triangles on it when you wear it.";
 	name = "Norton's winter coat"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "lX" = (
 /obj/structure/rack/shelf,
@@ -4003,7 +4002,7 @@
 	dir = 1;
 	pixel_y = 32
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "mb" = (
 /obj/structure/chair/office,
@@ -4028,7 +4027,7 @@
 	pixel_x = 6;
 	pixel_y = 14
 	},
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/mining)
 "mf" = (
 /obj/structure/lattice,
@@ -4043,14 +4042,14 @@
 	pixel_y = -6;
 	pixel_x = -4
 	},
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/mining)
 "mg" = (
 /obj/structure/lattice,
 /obj/item/toy/plush/space_lizard_plushie{
 	pixel_y = 6
 	},
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/mining)
 "mh" = (
 /obj/machinery/door/airlock/external,
@@ -4201,7 +4200,7 @@
 /obj/structure/closet/secure_closet/engineering_personal,
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/suit/hooded/wintercoat/engineering,
-/obj/item/clothing/under/rank/engineering/ds_mechanic,
+/obj/item/clothing/under/rank/rnd/roboticist/ds_mechanic,
 /obj/item/clothing/under/rank/engineering/ds_engineer,
 /obj/item/clothing/mask/balaclava,
 /obj/effect/turf_decal/box,
@@ -4212,7 +4211,7 @@
 /obj/structure/closet/secure_closet/engineering_personal,
 /obj/item/clothing/shoes/winterboots,
 /obj/item/clothing/suit/hooded/wintercoat/engineering,
-/obj/item/clothing/under/rank/engineering/ds_mechanic,
+/obj/item/clothing/under/rank/rnd/roboticist/ds_mechanic,
 /obj/item/clothing/under/rank/engineering/ds_engineer,
 /obj/item/clothing/mask/balaclava,
 /obj/effect/turf_decal/box,
@@ -4256,7 +4255,7 @@
 /area/mara17/interior/upper/enginieering/interior)
 "mI" = (
 /obj/effect/landmark/observer_start,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "mJ" = (
 /obj/structure/sign/poster/scaf/forces{
@@ -4280,7 +4279,7 @@
 /turf/closed/wall/r_wall,
 /area/mara17/interior/upper/tcomms)
 "mO" = (
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "mP" = (
 /turf/closed/wall,
@@ -4350,7 +4349,7 @@
 /area/mara17/interior/upper/abandoned/romero_checkpoint)
 "ng" = (
 /obj/structure/barricade/wooden/snowed,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "nh" = (
 /turf/open/floor/deadspace/random/rivets,
@@ -4430,7 +4429,7 @@
 /area/mara17/interior/upper/abandoned/romero_checkpoint)
 "nx" = (
 /obj/structure/barricade/sandbags,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "ny" = (
 /obj/effect/decal/remains/human,
@@ -4481,7 +4480,7 @@
 	pixel_x = -32
 	},
 /obj/structure/marker_beacon/burgundy,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "nJ" = (
 /obj/structure/sink{
@@ -4917,7 +4916,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/medical/cmo)
 "pt" = (
-/obj/structure/closet/secure_closet/medical_mara,
+/obj/structure/closet/secure_closet/mara/medical,
 /obj/item/storage/box/syringes,
 /obj/item/clothing/suit/hooded/ds,
 /obj/machinery/light/warm/directional/east,
@@ -4958,7 +4957,7 @@
 /area/mara17/interior/upper/abandoned/romero_res_medbay)
 "pA" = (
 /obj/machinery/power/port_gen/pacman,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "pB" = (
 /obj/structure/cable,
@@ -5112,7 +5111,7 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/abandoned/romero_checkpoint)
 "qe" = (
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/access2)
 "qf" = (
 /turf/closed/wall,
@@ -5659,7 +5658,7 @@
 /obj/structure/sign/poster/scaf/forces{
 	pixel_x = -32
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "sz" = (
 /obj/docking_port/stationary{
@@ -5995,7 +5994,7 @@
 /area/mara17/interior/upper/civilian)
 "xx" = (
 /obj/item/wrench,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "xB" = (
 /obj/machinery/light/warm/directional/north,
@@ -6087,7 +6086,7 @@
 "yo" = (
 /obj/structure/lattice,
 /obj/machinery/light/warm/directional/west,
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/mining)
 "yu" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -6167,7 +6166,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
 "zx" = (
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/access3)
 "zz" = (
 /obj/machinery/firealarm/directional/south,
@@ -6816,7 +6815,7 @@
 /area/mara17/interior/upper/civilian)
 "Hh" = (
 /obj/machinery/light/small/directional/north,
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/access1)
 "Hj" = (
 /turf/open/floor/deadspace/grater,
@@ -6868,7 +6867,7 @@
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/upper/abandoned/romero_interior)
 "HZ" = (
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/upper/access1)
 "Ic" = (
 /obj/effect/spawner/random/trash/grime,
@@ -7119,7 +7118,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/enginieering/atmos)
 "LK" = (
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/mining)
 "LP" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -7130,7 +7129,7 @@
 "LR" = (
 /obj/structure/lattice,
 /obj/machinery/light/warm/directional/east,
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/mining)
 "LT" = (
 /obj/machinery/firealarm/directional/west,
@@ -7601,7 +7600,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
 "Sa" = (
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/access1)
 "Sb" = (
 /turf/open/floor/deadspace/random/golf_brown,
@@ -7754,7 +7753,7 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/mining/locker_room)
 "TV" = (
-/turf/closed/mineral/snowmountain,
+/turf/closed/mineral/snowmountain/mara,
 /area/mara17/exterior)
 "Ua" = (
 /obj/structure/tank_holder/emergency_oxygen,
@@ -7946,7 +7945,7 @@
 /area/mara17/interior/upper/abandoned/romero_checkpoint)
 "Wp" = (
 /obj/structure/lattice,
-/turf/open/openspace,
+/turf/open/openspace/mara,
 /area/mara17/interior/upper/mining)
 "Wv" = (
 /obj/machinery/camera/autoname/directional/west,
@@ -7991,7 +7990,7 @@
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer2{
 	dir = 4
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "WP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -8092,7 +8091,7 @@
 /area/mara17/interior/upper/evacuation)
 "Yg" = (
 /obj/item/stack/sheet/mineral/plasma/five,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "Yp" = (
 /turf/open/floor/deadspace/random/golf_brown,

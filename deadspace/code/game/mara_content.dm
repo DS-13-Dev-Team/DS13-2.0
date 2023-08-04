@@ -337,7 +337,6 @@
 	icon_state = "eagle_2"
 
 // This is just a rename of the nagant revolver, easter egg, you can guess from which game this is - Asi
-
 /obj/item/gun/ballistic/revolver/nagant/model_1892
 	name = "\improper Modèle 1892 revolver"
 	desc = "An old model of a revolver that was once used in WW1, what it's doing here is beyond your knowledge, it could stop a beast if you were amnesiac in a bunker."
@@ -345,3 +344,32 @@
 	can_suppress = TRUE
 
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev762
+
+/turf/closed/mineral/random/snow/high_chance/mara
+	turf_type = /turf/open/misc/asteroid/snow/mara
+	baseturfs = /turf/open/misc/asteroid/snow/mara
+	initial_gas = MARASTATION_DEFAULT_ATMOS
+
+/turf/closed/mineral/snowmountain/mara
+	baseturfs = /turf/open/misc/asteroid/snow/mara
+	turf_type = /turf/open/misc/asteroid/snow/mara
+	initial_gas = MARASTATION_DEFAULT_ATMOS
+
+/turf/open/misc/asteroid/snow/mara
+	baseturfs = /turf/open/openspace/mara
+	slowdown = 0
+	initial_gas = MARASTATION_DEFAULT_ATMOS
+
+/turf/open/misc/asteroid/snow/ice/mara
+	baseturfs = /turf/open/misc/asteroid/snow/ice/mara
+	slowdown = 0
+	initial_gas = MARASTATION_DEFAULT_ATMOS
+
+/turf/open/openspace/mara
+	baseturfs = /turf/open/openspace/mara
+	initial_gas = MARASTATION_DEFAULT_ATMOS
+	simulated = FALSE
+
+/turf/open/lava/plasma/mara
+	baseturfs = /turf/open/lava/plasma/mara
+	initial_gas = MARASTATION_DEFAULT_ATMOS
