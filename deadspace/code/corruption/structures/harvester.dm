@@ -78,6 +78,8 @@
 	update_icon(UPDATE_OVERLAYS)
 
 /obj/structure/necromorph/harvester/proc/activate()
+	if(active)
+		return
 	var/turf/our_loc = loc
 	if(istype(our_loc) && our_loc.necro_corrupted)
 		active = TRUE
