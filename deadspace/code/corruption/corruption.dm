@@ -3,6 +3,9 @@
 #define DECAY 3
 #define IDLE 4
 
+// Amount of integrity lost and gained per second
+#define INTEGRITY_PER_SECOND 4
+
 /obj/structure/corruption
 	name = ""
 	desc = "There is something scary in it."
@@ -104,7 +107,7 @@
 /obj/structure/corruption/process(delta_time)
 	switch(state)
 		if(GROW)
-			repair_damage(3*delta_time)
+			repair_damage(INTEGRITY_PER_SECOND*delta_time)
 		if(SPREAD)
 			/*
 				We use get_dist instead of IN_GIVEN_RANGE because we want to spread to turfs that are on different Z levels
@@ -129,7 +132,13 @@
 					continue
 				var/turf/check_turf = get_step(src, direction)
 				if(check_turf.Enter(src, TRUE))
-					//Check if our nodes can be used
+					if(isopenspaceturf(check_turf))
+						var/turf/below = GetBelow(check_turf)
+						if(check_turf.CanZPass(src, DOWN) && below?.CanZPass(src, DOWN) && !below.necro_corrupted)
+							if(master.remaining_weed_amount > 0 && get_dist(below, master.parent) <= master.control_range)
+								new /obj/structure/corruption(below, master)
+						return
+					//Check if our node can be used
 					if(master.remaining_weed_amount > 0 && get_dist(check_turf, master.parent) <= master.control_range)
 						new /obj/structure/corruption(check_turf, master)
 						continue
@@ -138,7 +147,7 @@
 						if(node.remaining_weed_amount > 0 && IN_GIVEN_RANGE(check_turf, node.parent, node.control_range))
 							new /obj/structure/corruption(check_turf, node)
 		if(DECAY)
-			take_damage(3*delta_time)
+			take_damage(INTEGRITY_PER_SECOND*delta_time)
 		if(IDLE)
 			. = PROCESS_KILL
 			CRASH("Corruption was processing in IDLE state")
@@ -164,22 +173,29 @@
 	if(old_loc)
 		for(var/potential_dir in GLOB.cardinals)
 			var/turf/turf = get_step(old_loc, potential_dir)
+			if(isopenspaceturf(turf))
+				UnregisterSignal(GetBelow(turf), list(COMSIG_TURF_CHANGE, COMSIG_TURF_NECRO_CORRUPTED, COMSIG_TURF_NECRO_UNCORRUPTED))
 			UnregisterSignal(turf, list(COMSIG_TURF_CHANGE, COMSIG_TURF_NECRO_CORRUPTED, COMSIG_TURF_NECRO_UNCORRUPTED))
 
 	for(var/potential_dir in GLOB.cardinals)
 		var/turf/turf = get_step(loc, potential_dir)
-		RegisterSignal(turf, COMSIG_TURF_CHANGE, PROC_REF(on_nearby_turf_change))
-
-		if(!isopenturf(turf) || is_type_in_list(turf, blacklisted_turfs))
-			continue
-
-		if(!turf.necro_corrupted)
-			RegisterSignal(turf, COMSIG_TURF_NECRO_CORRUPTED, PROC_REF(on_nearby_turf_corrupted))
-			dirs_to_spread |= potential_dir
-		else
-			RegisterSignal(turf, COMSIG_TURF_NECRO_UNCORRUPTED, PROC_REF(on_nearby_turf_uncorrupted))
+		register_turf(turf, potential_dir)
+		if(isopenspaceturf(turf))
+			register_turf(GetBelow(turf), potential_dir)
 
 	update_spread_state()
+
+/obj/structure/corruption/proc/register_turf(turf/target, potential_dir)
+	RegisterSignal(target, COMSIG_TURF_CHANGE, PROC_REF(on_nearby_turf_change))
+
+	if(!isopenturf(target) || is_type_in_list(target, blacklisted_turfs))
+		return
+
+	if(!target.necro_corrupted)
+		RegisterSignal(target, COMSIG_TURF_NECRO_CORRUPTED, PROC_REF(on_nearby_turf_corrupted))
+		dirs_to_spread |= potential_dir
+	else
+		RegisterSignal(target, COMSIG_TURF_NECRO_UNCORRUPTED, PROC_REF(on_nearby_turf_uncorrupted))
 
 /obj/structure/corruption/proc/update_spread_state()
 	if(!master || get_integrity_lost())
@@ -192,6 +208,11 @@
 		STOP_PROCESSING(SScorruption, src)
 
 /obj/structure/corruption/proc/on_nearby_turf_change(turf/source, path, list/new_baseturfs, flags, list/post_change_callbacks)
+	if(isopenspaceturf(source))
+		if(ispath(/turf/open/openspace))
+			return
+		UnregisterSignal(GetBelow(source), list(COMSIG_TURF_CHANGE, COMSIG_TURF_NECRO_CORRUPTED, COMSIG_TURF_NECRO_UNCORRUPTED))
+
 	if(ispath(path, /turf/open) && !is_path_in_list(path, blacklisted_turfs))
 		if(isopenturf(source) && !is_type_in_list(source, blacklisted_turfs))
 			return
@@ -201,6 +222,8 @@
 	else
 		dirs_to_spread &= ~get_dir(loc, source)
 		UnregisterSignal(source, list(COMSIG_TURF_NECRO_CORRUPTED, COMSIG_TURF_NECRO_UNCORRUPTED))
+		if(ispath(/turf/open/openspace))
+			register_turf(GetBelow(source), get_dir(loc, source))
 
 	update_spread_state()
 
@@ -275,6 +298,8 @@
 
 /obj/structure/corruption/can_see_marker()
 	return RANGE_TURFS(1, src)
+
+#undef INTEGRITY_PER_SECOND
 
 #undef GROW
 #undef SPREAD
