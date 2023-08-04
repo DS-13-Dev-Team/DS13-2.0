@@ -1,7 +1,6 @@
 // {Blackwolf602}
-
 /datum/mod_theme/deadspace/wasp
-	name = "Wasp"
+	name = "wasp"
 	desc = "A lightweight and flexible armoured rig suit, offers good protection against light impacts. Use kit on an Engineering RIG."
 	default_skin = "wasp"
 	armor = list(MELEE = 45, BULLET = 50, LASER = 50, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)

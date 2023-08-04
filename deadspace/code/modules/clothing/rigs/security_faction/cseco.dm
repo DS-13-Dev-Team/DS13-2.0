@@ -1,5 +1,5 @@
 /datum/mod_theme/deadspace/pcsi_commander
-	name = "P-Sec Commander"
+	name = "P-Sec commander"
 	desc = "A lightweight and flexible armoured rig suit used by the Chief Security Officer."
 	default_skin = "pcsi_riot"
 	armor = list(MELEE = 70, BULLET = 67, LASER = 60, ENERGY = 30, BOMB = 75, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)

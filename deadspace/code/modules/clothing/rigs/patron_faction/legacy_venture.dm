@@ -1,6 +1,6 @@
 // {Timmypool}
 /datum/mod_theme/deadspace/ventureblack
-	name = "Legacy Venture"
+	name = "legacy venture"
 	desc = "A rig worn by a legendary hero of the Resource Wars, passed down from Father to Son, and then retrofitted with newer features of current rigs."
 	default_skin = "ventureblack"
 	armor = list(MELEE = 45, BULLET = 50, LASER = 50, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)

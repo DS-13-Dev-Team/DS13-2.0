@@ -1,14 +1,15 @@
-/datum/mod_theme/deadspace/adv_soldier
-	name = "advanced soldier"
-	desc = "A military-grade RIG that was issued to the Earth Defense Force personnel."
-	default_skin = "adv_soldier"
-	armor = list(MELEE = 67.5, BULLET = 70, LASER = 70, ENERGY = 40, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
-	complexity_max = 30
+// Doesn't have a speific sprite for it, Using the basic medical one.
+/datum/mod_theme/deadspace/med_smo
+	name = "SMO"
+	desc = "A durable RIG designed for medical rescue in high risk areas, and protecting the wearer against acids. This one was made for the SMO and is well taken care of."
+	default_skin = "med"
+	armor = list(MELEE = 37.5, BULLET = 15, LASER = 70, ENERGY = 70, BOMB = 30, BIO = 100, FIRE = 25, ACID = 100, WOUND = 5)
+	complexity_max = 20
 
 	skins = list(
-		"adv_soldier" = list(
+		"med" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = WOUND_LAYER,
+				UNSEALED_LAYER = NECK_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -33,15 +34,15 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/adv_soldier
-	theme = /datum/mod_theme/deadspace/adv_soldier
+/obj/item/mod/control/pre_equipped/ds/med_smo
+	theme = /datum/mod_theme/deadspace/med_smo
 	initial_modules = list(
-		/obj/item/mod/module/storage/syndicate,
-		/obj/item/mod/module/emp_shield,
-		/obj/item/mod/module/magnetic_harness,
+		/obj/item/mod/module/storage/large_capacity,
 		/obj/item/mod/module/jetpack/advanced,
-		/obj/item/mod/module/magboot/advanced,
-		/obj/item/mod/module/welding,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/dna_lock,
+		/obj/item/mod/module/magboot/advanced,
+		/obj/item/mod/module/health_analyzer,
+		/obj/item/mod/module/quick_carry,
+		/obj/item/mod/module/injector,
+		/obj/item/mod/module/organ_thrower,
 	)

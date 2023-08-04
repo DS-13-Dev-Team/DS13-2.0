@@ -1,6 +1,6 @@
 // {Kuusday}
 /datum/mod_theme/deadspace/venturebronze
-	name = "Salvagers Venture"
+	name = "salvagers venture"
 	desc = "A repurposed RIG from the resource wars used for fringe space salvage operations. The left side of the chest plating reads 'BROGON' and sports several hash marks underneath."
 	default_skin = "venturebronze"
 	armor = list(MELEE = 45, BULLET = 50, LASER = 50, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)

@@ -1,13 +1,13 @@
-/datum/mod_theme/deadspace/standard_miner
-	name = "Standard Mining"
-	desc = "A standard issued mining suit, issued to lower ranking miners; Commonly used during planet cracking operations."
-	default_skin = "standard_miner"
-	armor = list(MELEE = 43.5, BULLET = 42.5, LASER = 42.5, ENERGY = 15, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+/datum/mod_theme/deadspace/legacy_standard_engineer
+	name = "DS-08 Legacy"
+	desc = "A classic CEC RIG, designed to handle years of faithful service"
+	default_skin = "legacy_standard_engineer"
+	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 80, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 
 	skins = list(
-		"standard_miner" = list(
+		"legacy_standard_engineer" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = WOUND_LAYER,
+				UNSEALED_LAYER = NECK_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -32,14 +32,14 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/standard_miner
-	theme = /datum/mod_theme/deadspace/standard_miner
+/obj/item/mod/control/pre_equipped/ds/legacy_standard_engineer
+	theme = /datum/mod_theme/deadspace/legacy_standard_engineer
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/gps,
-		/obj/item/mod/module/orebag,
-		/obj/item/mod/module/clamp,
-		/obj/item/mod/module/drill,
+		/obj/item/mod/module/tether,
 		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
+		/obj/item/mod/module/t_ray,
 	)

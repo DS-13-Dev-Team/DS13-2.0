@@ -1,9 +1,9 @@
 /datum/mod_theme/deadspace/venture
-	name = "Venture"
+	name = "venture"
 	desc = "The colors of the EDF Corps of Engineers, adopted after their victory at Europa's Conamara Chaos Iceworks during the Resource Wars."
 	default_skin = "venture"
 	armor = list(MELEE = 67.5, BULLET = 70, LASER = 70, ENERGY = 40, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
-	complexity_max = 20
+	complexity_max = 30
 
 	skins = list(
 		"venture" = list(

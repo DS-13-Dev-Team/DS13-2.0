@@ -1,5 +1,5 @@
 /datum/mod_theme/deadspace/arctic_survival
-	name = "Arctic Survival"
+	name = "arctic survival"
 	desc = "A standard-issue Sovereign Colonies RIG used for exploring harsh environments, woven with classified S.C.A.F. synthetic fibers that insulate the body from extreme cold and hypothermic conditions."
 	default_skin = "arctic_survival"
 	armor = list(MELEE = 44, BULLET = 44, LASER = 40, ENERGY = 15, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
