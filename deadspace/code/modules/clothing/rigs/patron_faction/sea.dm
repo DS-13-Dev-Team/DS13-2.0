@@ -99,12 +99,12 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 	name = "modified diving"
 	desc = "a modified diving RIG with a cage on the shoulder and symbols drawn upon the suit. \
 	It's flexible reinforcements allow it to withstand extreme undersea pressures while retaining mobility."
-	default_skin = "sister"
+	default_skin = "strange"
 	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	complexity_max = 20
 
 	skins = list(
-		"sister" = list(
+		"strange" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,

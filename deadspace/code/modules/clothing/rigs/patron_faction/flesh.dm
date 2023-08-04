@@ -34,6 +34,7 @@
 	)
 
 /obj/item/mod/control/pre_equipped/ds/flesh
+	theme = /datum/mod_theme/deadspace/flesh
 	initial_modules = list(
 		/obj/item/mod/module/storage/syndicate,
 		/obj/item/mod/module/emp_shield,
