@@ -730,7 +730,7 @@
 "cH" = (
 /obj/structure/lattice,
 /obj/machinery/light/warm/directional/south,
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/mining)
 "cI" = (
 /obj/structure/rack/shelf,
@@ -3436,7 +3436,9 @@
 /area/mara17/interior/upper/evacuation)
 "kA" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/magical,
+/obj/machinery/power/smes/magical{
+	output_level = 400000
+	},
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/enginieering)
 "kB" = (
@@ -4027,7 +4029,7 @@
 	pixel_x = 6;
 	pixel_y = 14
 	},
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/mining)
 "mf" = (
 /obj/structure/lattice,
@@ -4042,14 +4044,14 @@
 	pixel_y = -6;
 	pixel_x = -4
 	},
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/mining)
 "mg" = (
 /obj/structure/lattice,
 /obj/item/toy/plush/space_lizard_plushie{
 	pixel_y = 6
 	},
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/mining)
 "mh" = (
 /obj/machinery/door/airlock/external,
@@ -5111,7 +5113,7 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mara17/interior/upper/abandoned/romero_checkpoint)
 "qe" = (
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/access2)
 "qf" = (
 /turf/closed/wall,
@@ -6086,7 +6088,7 @@
 "yo" = (
 /obj/structure/lattice,
 /obj/machinery/light/warm/directional/west,
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/mining)
 "yu" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -6166,7 +6168,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
 "zx" = (
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/access3)
 "zz" = (
 /obj/machinery/firealarm/directional/south,
@@ -6815,7 +6817,7 @@
 /area/mara17/interior/upper/civilian)
 "Hh" = (
 /obj/machinery/light/small/directional/north,
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/access1)
 "Hj" = (
 /turf/open/floor/deadspace/grater,
@@ -7118,7 +7120,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/enginieering/atmos)
 "LK" = (
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/mining)
 "LP" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -7129,7 +7131,7 @@
 "LR" = (
 /obj/structure/lattice,
 /obj/machinery/light/warm/directional/east,
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/mining)
 "LT" = (
 /obj/machinery/firealarm/directional/west,
@@ -7600,7 +7602,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
 "Sa" = (
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/access1)
 "Sb" = (
 /turf/open/floor/deadspace/random/golf_brown,
@@ -7945,7 +7947,7 @@
 /area/mara17/interior/upper/abandoned/romero_checkpoint)
 "Wp" = (
 /obj/structure/lattice,
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/upper/mining)
 "Wv" = (
 /obj/machinery/camera/autoname/directional/west,

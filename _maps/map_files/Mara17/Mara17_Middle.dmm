@@ -6782,6 +6782,13 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/research_breakroom)
+"zj" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating,
+/area/mara17/interior/medium/mining)
 "zp" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -7114,6 +7121,13 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium/mining/ore_storage)
+"Ez" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating,
+/area/mara17/interior/medium/mining)
 "EF" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
@@ -8095,6 +8109,13 @@
 	},
 /turf/open/floor/deadspace/hardwood/alt,
 /area/mara17/interior/medium/command_meeting)
+"XT" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating,
+/area/mara17/interior/medium/mining)
 "XW" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -8117,7 +8138,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
 "YC" = (
-/turf/open/openspace/mara,
+/turf/open/openspace,
 /area/mara17/interior/medium)
 "YE" = (
 /turf/open/floor/deadspace/hardwood,
@@ -14236,11 +14257,11 @@ Mq
 Mq
 Mq
 ac
+XT
 IC
 IC
 IC
-IC
-IC
+zj
 IC
 IC
 IC
@@ -14660,7 +14681,7 @@ am
 Mq
 Mq
 ac
-Yd
+Ez
 wk
 wk
 ac

@@ -368,7 +368,6 @@
 /turf/open/openspace/mara
 	baseturfs = /turf/open/openspace/mara
 	initial_gas = MARASTATION_DEFAULT_ATMOS
-	simulated = FALSE
 
 /turf/open/lava/plasma/mara
 	baseturfs = /turf/open/lava/plasma/mara

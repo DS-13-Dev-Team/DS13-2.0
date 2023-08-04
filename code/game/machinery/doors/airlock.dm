@@ -1381,6 +1381,8 @@
 		//The airlock is still closed, but something prevented it opening. (Another player noticed and bolted/welded the airlock in time!)
 		if(density && !open(2))
 			to_chat(user, span_warning("Despite your efforts, [src] managed to resist your attempts to open it!"))
+		else
+			atom_break()
 
 /obj/machinery/door/airlock/hostile_lockdown(mob/origin)
 	// Must be powered and have working AI wire.
