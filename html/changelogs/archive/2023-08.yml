@@ -1,0 +1,80 @@
+2023-08-04:
+  CometBlaze:
+  - rscadd: The Pulse Rifle is now able to toggle between a grenade launcher in addition
+      to regular fire
+  - tweak: Using the pulse rifle while holding it will now wield it which causes it
+      to behave the same as before. Firing it with only one hand will cause it to
+      have higher spread.
+  - rscadd: Plasma cutter and respective variants are now in
+  DTraitor:
+  - rscadd: Necromorphs and marker signals have nightvision
+  - bugfix: Ports markernet fixes from 1.0
+  - rscadd: Added Jump to X verbs to marker signals
+  - rscadd: You can join/leave necroqueue at will now
+  - bugfix: Necroqueue won't put players who left the game into necromorphs
+  - bugfix: Marker signals can freely move between Z levels once again
+  - rscadd: Added pulse rifle
+  - rscadd: Added enhanced slasher
+  - qol: You can see invested biomass in the Marker UI
+  - balance: Necromorphs have proper cost now
+  - rscadd: Adds markers to the report in the end of the round
+  - bugfix: Fixes icons in default necromorph limbs
+  - rscadd: Added wall run mechanic
+  - rscadd: Added biomass harvest values to a different machinery. Harvesters are
+      useful now
+  - rscadd: Added biomass bar to the Marker signals HUD
+  - rscadd: Implemented swing ability
+  - bugfix: Marker uses proper biomass variable
+  - bugfix: Necro corruption structures display preview icons now
+  - bugfix: Harvester beak is now closed while harvester is not active
+  - bugfix: Meddle works now
+  - bugfix: Marker properly changes icons when activated
+  - bugfix: Marker has a higher layer now
+  - bugfix: FIxed necromorph icons which could have wrong bodyparts
+  - balance: Increased baseline marker income (0.1->0.5)
+  - balance: Harvester deployment takes 1 minute instead of 3 now
+  - balance: Necromorph projectiles deal damage through exposing acid at targets now
+  - qol: Changes in the Marker UI (mostly from the code perspective)
+  - qol: Moved Marker signals psybar to the bottom of the screen
+  - qol: Marker UI is now opened through an action button instead of a verb
+  - code_imp: Remove a lot of unused/redundant code, including color defines
+  - code_imp: Rewrote "Shoot" ability
+  - code_imp: Added var/implemented to necromorph classes, set to TRUE if this necromorph
+      should appear in the lists
+  - rscadd: Added new map for lowpop - Mara 17
+  - rscadd: Made some progress towards finishing containment gamemode
+  - rscadd: Implements earthgov agent and untiologist zealot antagonists
+  - rscadd: Implements most necromorph types
+  - rscadd: Added necrochat
+  - balance: Necromorphs can't ventcrawl anymore
+  - bugfix: Corruption doesn't damage living humans on it
+  - bugfix: Dismembering works correctly now
+  - bugfix: Lying necromorphs are now rotated
+  - rscadd: Added Sprawl map
+  - rscadd: Implemented a replacement for maws
+  - rscadd: Implemented absorb ability
+  - balance: Changed default move speed
+  - bugfix: You can put pulse rifle in your suit storage now
+  - rscadd: Added divet pistol
+  - bugfix: Fixes pulse rifle not shooting
+  DeadLineSS13:
+  - rscadd: Brute active and passive abilities
+  - rscadd: Armor datum for necro
+  - rscadd: Ubermorph
+  - rscadd: Hunter now there.
+  Kapu1178:
+  - code_imp: Adjusted how Runechat appears.
+  - server: Now supports 514.1587
+  RegJoe:
+  - rscadd: Color selection fix
+  Thegodemperorofmankind11:
+  - rscadd: Civilian Rigs (No balancing)
+  - rscadd: Patreon Rigs
+  - rscadd: scaf rigs
+  - rscadd: Zealot Rig
+  Viz-Titan:
+  - rscadd: 'Added in guns: Seeker Rifle, Heavy Pulse Rifle, and SCL/Pulse Shotgun'
+  - rscadd: Added in various ammo and gun variants for some guns
+  - balance: Tweaked and added to Divet Pistol and Pulse Rifle
+  - imageadd: added scavbot and a tcomms dish machine sprites. Fixed Pulse Rifle sprite.
+  - admin: Removed old Daed Hosts from admins.txt

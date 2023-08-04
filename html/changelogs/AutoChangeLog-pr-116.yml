@@ -1,7 +1,0 @@
-author: DTraitor
-delete-after: true
-changes:
-  - rscadd: Added Jump to X verbs to marker signals
-  - rscadd: You can join/leave necroqueue at will now
-  - bugfix: Necroqueue won't put players who left the game into necromorphs
-  - bugfix: Marker signals can freely move between Z levels once again

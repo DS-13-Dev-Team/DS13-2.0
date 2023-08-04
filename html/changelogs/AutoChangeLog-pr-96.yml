@@ -1,8 +1,0 @@
-author: Viz-Titan
-delete-after: true
-changes:
-  - rscadd: 'Added in guns: Seeker Rifle, Heavy Pulse Rifle, and SCL/Pulse Shotgun'
-  - rscadd: Added in various ammo and gun variants for some guns
-  - balance: Tweaked and added to Divet Pistol and Pulse Rifle
-  - imageadd: added scavbot and a tcomms dish machine sprites. Fixed Pulse Rifle sprite.
-  - admin: Removed old Daed Hosts from admins.txt
