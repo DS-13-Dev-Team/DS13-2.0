@@ -22,7 +22,7 @@
 		/obj/item/ammo_box/magazine/ds12g/improvised = 0.7
 	)
 
-/obj/effect/spawner/random/deadspace/security
+/obj/effect/spawner/random/deadspace/ammo/security
 	name = "Random Ammunition"
 	desc = "This is random ammunition."
 	icon_state = "clusterbang"
