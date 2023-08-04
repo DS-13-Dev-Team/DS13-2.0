@@ -87,9 +87,9 @@
 	var/turf/previous_loc = loc
 	.=..()
 
-	if(previous_loc && !(locate(/obj/structure/corruption) in previous_loc))
+	if(isturf(previous_loc) && !(locate(/obj/structure/corruption) in previous_loc))
 		previous_loc.necro_corrupted = FALSE
-		SEND_SIGNAL(loc, COMSIG_TURF_NECRO_UNCORRUPTED, src)
+		SEND_SIGNAL(previous_loc, COMSIG_TURF_NECRO_UNCORRUPTED, src)
 
 /obj/structure/corruption/Moved(turf/old_loc, movement_dir, forced, list/old_locs, momentum_change)
 	. = ..()
