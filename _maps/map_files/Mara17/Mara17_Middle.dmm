@@ -1622,23 +1622,23 @@
 /turf/open/floor/plating/snowed,
 /area/mara17/interior/medium/abandoned)
 "fy" = (
-/obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
+/obj/machinery/door/airlock/external/glass,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/mining)
 "fz" = (
-/obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
+/obj/machinery/door/airlock/external/glass,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/mining)
 "fA" = (
@@ -4178,10 +4178,6 @@
 /obj/effect/landmark/start/scientist,
 /turf/open/floor/wood,
 /area/mara17/interior/medium/research_breakroom)
-"mL" = (
-/obj/machinery/computer/operating,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/evidence_2)
 "mM" = (
 /obj/machinery/holopad/secure,
 /turf/open/floor/deadspace/mono,
@@ -15892,7 +15888,7 @@ Mq
 Mq
 Mq
 ku
-mL
+pK
 pK
 Vb
 pK

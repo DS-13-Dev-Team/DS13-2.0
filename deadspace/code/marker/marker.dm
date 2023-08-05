@@ -20,6 +20,9 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/structure/marker/Destroy()
+	if(istype(SSticker.mode, /datum/game_mode/containment))
+		var/datum/game_mode/containment/marker = SSticker.mode
+		marker.marker_destroyed(src)
 	STOP_PROCESSING(SSobj, src)
 	for(var/datum/biomass_source/source as anything in biomass_sources)
 		remove_biomass_source(source)
@@ -116,7 +119,7 @@
 		to_chat(src, span_notice("There are no markers to join!"))
 	else
 		var/obj/structure/marker/marker = tgui_input_list(src, "Pick a marker to join", "Join Horde", GLOB.necromorph_markers)
-		if(!marker)
+		if(QDELETED(marker))
 			return
 		var/mob/camera/marker_signal/eye = new(get_turf(marker), marker)
 		eye.ckey = src.ckey

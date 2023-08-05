@@ -1122,7 +1122,7 @@
 /area/mara17/interior/lower/old_chapel)
 "eu" = (
 /obj/structure/rack/shelf,
-/obj/item/stack/medical/gauze,
+/obj/item/stack/gauze,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/old_bunker)
 "ev" = (

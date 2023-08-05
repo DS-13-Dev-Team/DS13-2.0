@@ -20,7 +20,7 @@
 	var/volume = VOLUME_MID
 	if (picked_sound == SOUND_SHOUT || picked_sound == SOUND_SHOUT_LONG || picked_sound == SOUND_DEATH)
 		volume = VOLUME_LOUD
-	playsound(target, pick(category[picked_sound]), volume, 1, 2)
+	playsound(target, pick(picked_sound), volume, 1, 2)
 	..()
 	return TRUE
 
