@@ -2309,7 +2309,10 @@
 	cycle_id = "telecom_link"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external/glass,
+/obj/machinery/door/airlock/external/glass{
+	name = "Telecommunications airlock";
+	req_access_txt = "19; 61"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms)
 "hs" = (
@@ -3602,7 +3605,10 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/door/airlock/external/glass,
+/obj/machinery/door/airlock/external/glass{
+	name = "Telecommunications airlock";
+	req_access_txt = "19; 61"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms)
 "kV" = (
@@ -3766,12 +3772,12 @@
 /area/mara17/interior/upper/tcomms)
 "lu" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/machinery/door/airlock/external{
-	name = "Telecommunications airlock";
-	req_one_access_txt = "19; 61"
-	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/airlock/external/glass{
+	name = "Telecommunications airlock";
+	req_access_txt = "19; 61"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms/comms)
 "lv" = (
@@ -3783,14 +3789,14 @@
 /turf/open/floor/iron/dark/telecomms,
 /area/mara17/interior/upper/tcomms/comms)
 "lw" = (
-/obj/machinery/door/airlock/external{
-	name = "Telecommunications airlock";
-	req_one_access_txt = "19; 61"
-	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor/heavy,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
+	},
+/obj/machinery/door/airlock/external/glass{
+	name = "Telecommunications airlock";
+	req_access_txt = "19; 61"
 	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms/comms)
@@ -7320,7 +7326,10 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/door/airlock/external/glass,
+/obj/machinery/door/airlock/external/glass{
+	name = "Telecommunications airlock";
+	req_access_txt = "19; 61"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms)
 "NR" = (
@@ -7844,7 +7853,10 @@
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external/glass,
+/obj/machinery/door/airlock/external/glass{
+	name = "Telecommunications airlock";
+	req_access_txt = "19; 61"
+	},
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms)
 "Uu" = (

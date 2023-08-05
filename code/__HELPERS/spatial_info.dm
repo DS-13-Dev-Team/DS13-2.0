@@ -115,10 +115,6 @@
 	for(var/mob/oranges_ear/remaining_ear as anything in assigned_oranges_ears)//we need to clean up our mess
 		remaining_ear.unassign()
 
-	for(var/obj/structure/marker/marker as anything in GLOB.necromorph_markers)
-		if(marker.markernet.checkTurfVis(center_turf))
-			. |= marker.marker_signals
-
 	return .
 
 /**
