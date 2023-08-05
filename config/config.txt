@@ -265,7 +265,7 @@ CHECK_RANDOMIZER
 # RULESURL https://daedalus13.net/
 
 ## Github address
-GITHUBURL https://github.com/DaedalusDock/Gameserver
+GITHUBURL https://github.com/DS-13-Dev-Team/DS13-2.0
 
 ## Discord bot command prefix, if the discord bot is used
 # DISCORDBOTCOMMANDPREFIX ?

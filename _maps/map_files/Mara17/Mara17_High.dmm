@@ -4716,11 +4716,11 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/abandoned/romero_checkpoint)
 "oH" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 8
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
 	},
-/turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/medical/cmo)
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "oI" = (
 /obj/machinery/camera/autoname/directional/west,
 /obj/structure/bodycontainer/morgue,
@@ -4736,9 +4736,11 @@
 /turf/open/floor/deadspace/medical,
 /area/mara17/interior/upper/medical/morgue)
 "oL" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/upper/medical/morgue)
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "oM" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/table/glass,
@@ -5584,6 +5586,10 @@
 /obj/item/disk/holodisk/ds13/mara_shitsec,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/abandoned/romero_commander)
+"rJ" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical/cmo)
 "rL" = (
 /obj/machinery/door/airlock/external{
 	dir = 4
@@ -5720,10 +5726,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/mara17/interior/upper/cargo)
-"ta" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
 "td" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/deadspace/grater,
@@ -6052,6 +6054,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/evacuation)
 "xY" = (
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -6145,14 +6148,6 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining/ore_storage)
-"yV" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/deadspace/mono,
-/area/mara17/interior/upper/medical)
 "za" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock,
@@ -6237,6 +6232,10 @@
 /obj/machinery/light/warm/directional/east,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/enginieering/ce)
+"zU" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "zX" = (
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -6321,6 +6320,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining/ore_storage)
+"AX" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/deadspace/mono,
+/area/mara17/interior/upper/medical)
 "Ba" = (
 /obj/structure/table/wood,
 /obj/item/pizzabox/mushroom,
@@ -6850,6 +6857,10 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining/ore_storage)
+"Hr" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
 "Hs" = (
 /obj/machinery/light/warm/directional/west,
 /turf/open/floor/deadspace/grater,
@@ -6892,6 +6903,10 @@
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/upper/abandoned/romero_interior)
+"HY" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
 "HZ" = (
 /turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/upper/access1)
@@ -6928,12 +6943,6 @@
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/observation/dorms)
-"Iu" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 1
-	},
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
 "Iy" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/deadspace/grater,
@@ -7058,6 +7067,10 @@
 "KB" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/enginieering/interior)
+"KD" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/deadspace/medical,
+/area/mara17/interior/upper/medical/morgue)
 "KJ" = (
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/deadspace/medical,
@@ -7187,10 +7200,6 @@
 /obj/machinery/light/warm/directional/west,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/civilian)
-"Ml" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical/cmo)
 "Mw" = (
 /obj/structure/railing{
 	dir = 8
@@ -7201,6 +7210,12 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/mining)
+"ME" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
 "MG" = (
 /obj/structure/tank_holder/emergency_oxygen,
 /obj/machinery/firealarm/directional/west,
@@ -7308,12 +7323,6 @@
 /obj/machinery/door/airlock/external/glass,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/tcomms)
-"NJ" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
-	dir = 1
-	},
-/turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/medical/cmo)
 "NR" = (
 /turf/open/floor/plating,
 /area/mara17/interior/upper/mining)
@@ -7438,10 +7447,6 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
-"Pb" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/upper/medical/morgue)
 "Pg" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/deadspace/grater,
@@ -7623,10 +7628,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/mining/tool_storage)
-"RF" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/deadspace/hardwood,
-/area/mara17/interior/upper/medical/cmo)
 "RG" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/cargo)
@@ -7725,6 +7726,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/enginieering/interior)
+"Tx" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/deadspace/hardwood,
+/area/mara17/interior/upper/medical/cmo)
 "Ty" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -7736,12 +7743,6 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/enginieering/ce)
-"TD" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
 "TE" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "warehouse_link"
@@ -7913,6 +7914,10 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
+"Vm" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "Vn" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/deadspace/grater,
@@ -8123,12 +8128,6 @@
 /obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
-"XX" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
-	dir = 4
-	},
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
 "XY" = (
 /obj/structure/cable,
 /obj/machinery/light/directional/west,
@@ -8165,10 +8164,6 @@
 /obj/machinery/door/airlock/external/glass,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining)
-"Yy" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/turf/open/floor/deadspace/grater,
-/area/mara17/interior/upper/medical)
 "YC" = (
 /turf/closed/wall,
 /area/mara17/interior/upper/access2)
@@ -8193,6 +8188,11 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/mining/ore_storage)
+"YS" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "YU" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -16321,8 +16321,8 @@ KB
 KB
 dF
 dF
-Br
-Br
+ak
+ak
 ux
 dF
 dF
@@ -16463,9 +16463,9 @@ dF
 dF
 dF
 dF
-Br
+ak
 dF
-mQ
+ux
 dF
 dF
 dF
@@ -16606,8 +16606,8 @@ dF
 dF
 dF
 ux
-FC
-FC
+ZM
+ZM
 dF
 dF
 dF
@@ -17312,7 +17312,7 @@ wH
 Hj
 Hj
 Hj
-TD
+xY
 Hj
 EU
 wH
@@ -17454,7 +17454,7 @@ YP
 HB
 Hj
 Hj
-TD
+xY
 Hj
 os
 wH
@@ -17596,7 +17596,7 @@ wH
 kL
 XK
 Hj
-TD
+xY
 XK
 XS
 wH
@@ -17880,7 +17880,7 @@ bW
 it
 ap
 Hj
-TD
+xY
 fn
 fn
 av
@@ -18022,8 +18022,8 @@ Hj
 rB
 kI
 rB
-TD
-Iu
+xY
+oL
 Hj
 aw
 Hj
@@ -18163,7 +18163,7 @@ bL
 bM
 kw
 ap
-Yy
+Vm
 UL
 XQ
 Hj
@@ -18732,7 +18732,7 @@ by
 bB
 ar
 Hj
-TD
+xY
 Hj
 Hj
 ar
@@ -18874,7 +18874,7 @@ an
 an
 wH
 kL
-TD
+xY
 Hj
 Sh
 wH
@@ -19016,8 +19016,8 @@ bM
 kw
 ap
 Hj
-TD
-Iu
+xY
+oL
 Hj
 ar
 gF
@@ -19157,15 +19157,15 @@ bK
 Hj
 Hj
 at
-Yy
-TD
+Vm
+xY
 Hj
 Hj
 as
 hK
 hK
 hK
-XX
+oH
 Hj
 Hj
 pv
@@ -19300,16 +19300,16 @@ bX
 Hj
 ap
 fh
-TD
-TD
-TD
-yV
+xY
+xY
+xY
+AX
 dD
 dD
 pt
-xY
-ta
-Iu
+YS
+zU
+oL
 Hj
 wH
 dF
@@ -19729,10 +19729,10 @@ au
 pg
 Co
 wu
-Ml
+rJ
 cA
-RF
-NJ
+HY
+Tx
 Co
 dF
 dF
@@ -19866,8 +19866,8 @@ lo
 pe
 au
 au
-Pb
-oL
+Hr
+KD
 pi
 Co
 pk
@@ -20154,7 +20154,7 @@ au
 au
 Jj
 Co
-oH
+ME
 hD
 hD
 ps
