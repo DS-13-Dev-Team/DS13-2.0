@@ -1,0 +1,9 @@
+author: DTraitor
+delete-after: true
+changes:
+  - rscadd: Corruption can grow between Z levels now
+  - bugfix: Harvester works once again
+  - balance: Cyst, eyes and corruption nodes cost less biomass
+  - balance: Harvester income is higher now
+  - balance: Mara 17 atmos is different now (has more Carbon Dioxide)
+  - rscadd: Force opening a door as a necromorph now breaks it
