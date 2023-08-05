@@ -20,7 +20,7 @@
             "Linkage": null,
             "Gravity": true,
             "Ice Ruins Underground": true,
-            "Baseturf": "/turf/open/lava/plasma/ice_moon",
+            "Baseturf": "/turf/open/lava/plasma/mara",
 			"Weather_Snowstorm": true,
             "No Parallax": true
         },
@@ -30,7 +30,7 @@
             "Linkage": null,
             "Gravity": true,
             "Ice Ruins Underground": true,
-            "Baseturf": "/turf/open/openspace/icemoon/keep_below",
+            "Baseturf": "/turf/open/openspace/mara",
 			"Weather_Snowstorm": true,
             "No Parallax": true
         },
@@ -39,7 +39,7 @@
             "Linkage": null,
             "Gravity": true,
             "Ice Ruins": true,
-            "Baseturf": "/turf/open/openspace/icemoon/keep_below",
+            "Baseturf": "/turf/open/openspace/mara",
 			"Weather_Snowstorm": true,
             "No Parallax": true
         }

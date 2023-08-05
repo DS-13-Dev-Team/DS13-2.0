@@ -1369,7 +1369,7 @@
 		return
 	add_fingerprint(user)
 	user.visible_message(span_warning("[user] begins prying open [src]."),\
-						span_warning("You begin digging your claws into [src] with all your might!"),\
+						span_warning("You begin prying open [src] with all your might!"),\
 						span_warning("You hear groaning metal..."))
 	var/time_to_open = 0.5 SECONDS
 	if(hasPower())
@@ -1381,6 +1381,8 @@
 		//The airlock is still closed, but something prevented it opening. (Another player noticed and bolted/welded the airlock in time!)
 		if(density && !open(2))
 			to_chat(user, span_warning("Despite your efforts, [src] managed to resist your attempts to open it!"))
+		else
+			atom_break()
 
 /obj/machinery/door/airlock/hostile_lockdown(mob/origin)
 	// Must be powered and have working AI wire.

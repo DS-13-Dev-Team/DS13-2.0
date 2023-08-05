@@ -87,6 +87,8 @@
 	necro.marker = null
 
 /obj/structure/marker/proc/activate()
+	if(active)
+		return
 	active = TRUE
 	change_marker_biomass(300)
 	for(var/mob/camera/marker_signal/eye as anything in marker_signals)
@@ -102,9 +104,6 @@
 			ability.Grant(eye)
 	new /datum/corruption_node/atom/marker(src, src)
 	update_icon(UPDATE_ICON_STATE)
-
-/obj/structure/marker/CanCorrupt(corruption_dir)
-	return TRUE
 
 /obj/structure/marker/can_see_marker()
 	return RANGE_TURFS(12, src)
@@ -197,6 +196,12 @@
 			change_marker_biomass(-add_signal_biomass)
 			change_signal_biomass(add_signal_biomass)
 			return TRUE
+
+/obj/structure/marker/CanAllowThrough(atom/movable/mover, border_dir)
+	. = ..()
+	//Marker shouldn't block corruption
+	if(istype(mover, /obj/structure/corruption))
+		return TRUE
 
 /obj/structure/marker/proc/add_biomass_source(source_type, datum/source)
 	var/datum/biomass_source/new_source = new source_type(src, source)

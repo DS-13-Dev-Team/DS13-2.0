@@ -7,16 +7,16 @@
 /obj/structure/fence/end{
 	dir = 8
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "ac" = (
 /turf/closed/indestructible/rock/snow,
 /area/mara17/interior/caves)
 "ad" = (
-/turf/closed/mineral/snowmountain,
+/turf/closed/mineral/snowmountain/mara,
 /area/mara17/interior/caves)
 "ae" = (
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned/watchtower1)
 "af" = (
 /turf/closed/wall,
@@ -26,7 +26,7 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/caves)
 "ah" = (
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/interior/caves)
 "ai" = (
 /turf/closed/wall/rust,
@@ -35,78 +35,78 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/exterior)
 "ak" = (
-/turf/closed/mineral/random/snow/high_chance,
+/turf/closed/mineral/random/snow/high_chance/mara,
 /area/mara17/interior/caves)
 "al" = (
 /obj/structure/fence/cut/large{
 	dir = 8
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "am" = (
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "an" = (
 /obj/structure/fence/cut/medium{
 	dir = 8
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "ao" = (
 /obj/structure/fence/end{
 	dir = 4
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "ap" = (
 /obj/item/pickaxe/rusted,
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/interior/caves)
 "aq" = (
 /obj/machinery/power/floodlight,
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/interior/caves)
 "ar" = (
 /obj/item/flashlight/lantern,
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/interior/caves)
 "as" = (
 /obj/item/crowbar/large,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "at" = (
 /obj/structure/flora/rock/icy,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "au" = (
 /obj/structure/flora/rock/pile/icy,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "av" = (
 /obj/structure/statue/snow/snowman,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aw" = (
 /obj/structure/barricade/wooden/crude/snow,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned)
 "ax" = (
 /obj/structure/flora/rock/pile/icy,
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/exterior)
 "ay" = (
 /turf/open/floor/plating/snowed,
 /area/mara17/exterior)
 "az" = (
 /obj/structure/marker_beacon/burgundy,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aA" = (
 /obj/structure/fence,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aB" = (
 /turf/open/floor/plating/snowed/smoothed,
@@ -119,15 +119,15 @@
 /area/mara17/interior/medium/abandoned)
 "aE" = (
 /obj/effect/decal/remains/human,
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/interior/caves)
 "aF" = (
 /obj/item/shovel,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aG" = (
 /obj/effect/spawner/random/exotic/snow_gear,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aH" = (
 /obj/structure/fence/cut/large{
@@ -164,26 +164,26 @@
 /area/mara17/interior/medium/abandoned)
 "aO" = (
 /obj/structure/barricade/sandbags,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aP" = (
 /obj/structure/fence/end,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aQ" = (
 /turf/closed/indestructible/rock/snow/ice/ore,
 /area/mara17/interior/caves)
 "aR" = (
 /obj/effect/decal/remains/human,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aS" = (
 /obj/structure/fence/cut/large,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aT" = (
 /obj/structure/fence/cut/medium,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "aU" = (
 /obj/effect/decal/cleanable/glass,
@@ -322,23 +322,23 @@
 /area/mara17/exterior)
 "bx" = (
 /obj/structure/barricade/wooden/snowed,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "by" = (
 /obj/structure/fence/corner{
 	dir = 4
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bz" = (
 /obj/structure/closet/crate/grave,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bA" = (
 /obj/effect/decal/remains/human{
 	pixel_x = 5
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bB" = (
 /obj/effect/decal/remains/human{
@@ -349,21 +349,21 @@
 	pixel_x = 8;
 	pixel_y = -4
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bC" = (
 /obj/effect/decal/remains/human{
 	pixel_x = -14;
 	pixel_y = -6
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bD" = (
 /obj/effect/decal/remains/human{
 	pixel_x = 14;
 	pixel_y = 6
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bE" = (
 /obj/effect/decal/remains/human{
@@ -373,7 +373,7 @@
 	pixel_x = -4;
 	pixel_y = -5
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bF" = (
 /obj/effect/decal/remains/human{
@@ -384,75 +384,75 @@
 	pixel_x = 9;
 	pixel_y = -3
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bG" = (
 /obj/effect/decal/remains/human{
 	pixel_x = -6;
 	pixel_y = 14
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bH" = (
 /obj/effect/decal/remains/human{
 	pixel_y = 13
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bI" = (
 /obj/structure/closet/body_bag,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bJ" = (
 /obj/effect/decal/remains/human{
 	pixel_y = 21
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bK" = (
 /obj/structure/fence/door/opened,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bL" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "floor2-old"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bM" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bN" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "gib5-old"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bO" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "ltrails_1"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "bP" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "trails_1"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "bQ" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "trails_2"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "bR" = (
 /obj/structure/ladder/unbreakable{
 	icon_state = "ladder10";
 	id = "guard_tower1"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned/watchtower1)
 "bS" = (
 /obj/effect/spawner/structure/window/ice,
@@ -464,12 +464,12 @@
 	pixel_y = 14
 	},
 /obj/item/stack/spacecash/c50,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned)
 "bU" = (
 /obj/structure/table,
 /obj/item/toy/mecha/clarke,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned)
 "bV" = (
 /obj/structure/barricade/wooden/crude/snow,
@@ -482,7 +482,7 @@
 /area/mara17/interior/medium/abandoned)
 "bX" = (
 /obj/structure/rack/shelf,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned)
 "bY" = (
 /obj/structure/rack/shelf,
@@ -492,31 +492,31 @@
 /obj/structure/fence/cut/large{
 	dir = 8
 	},
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/exterior)
 "ca" = (
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/exterior)
 "cb" = (
 /obj/structure/fence/cut/medium{
 	dir = 8
 	},
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/exterior)
 "cc" = (
 /obj/structure/closet/crate/grave,
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/exterior)
 "cd" = (
 /obj/effect/marker_location,
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/interior/caves)
 "ce" = (
 /obj/effect/spawner/random/maintenance,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "cf" = (
 /obj/effect/spawner/random/maintenance,
@@ -572,7 +572,7 @@
 	icon_state = "ladder10";
 	id = "guard_tower2"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned/watchtower2)
 "cr" = (
 /obj/item/clothing/head/hardhat/orange{
@@ -580,7 +580,7 @@
 	pixel_y = -8
 	},
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "cs" = (
 /obj/machinery/light/small/red/directional/north,
@@ -643,7 +643,7 @@
 	dir = 1
 	},
 /obj/item/toy/plush/slimeplushie,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned)
 "cB" = (
 /turf/open/floor/deadspace/grater,
@@ -1645,7 +1645,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/scaf_storage1)
 "gB" = (
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "gL" = (
 /turf/open/floor/plating/snowed,
@@ -1849,7 +1849,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "ltrails_1"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "qV" = (
 /obj/structure/cable,
@@ -1905,7 +1905,7 @@
 	pixel_y = 14
 	},
 /obj/item/stack/spacecash/c200,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned)
 "ue" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1960,7 +1960,7 @@
 /area/mara17/interior/lower/room9)
 "wj" = (
 /obj/structure/barricade/sandbags,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned)
 "wq" = (
 /obj/effect/spawner/random/entertainment/arcade,
@@ -2048,7 +2048,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room7)
 "Bv" = (
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned/watchtower2)
 "Bz" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -2085,7 +2085,7 @@
 /obj/effect/turf_decal/stripes{
 	dir = 1
 	},
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/interior/caves)
 "Df" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -2097,7 +2097,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "trails_2"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "Dq" = (
 /obj/structure/cable,
@@ -2140,7 +2140,7 @@
 /area/mara17/interior/lower/scaf_storage1)
 "EB" = (
 /obj/item/shovel,
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "EZ" = (
 /obj/structure/cable,
@@ -2187,7 +2187,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "trails_1"
 	},
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "Gy" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2327,7 +2327,7 @@
 /area/mara17/interior/lower/sec_checkpoint)
 "Mj" = (
 /obj/item/stack/spacecash/c50,
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/interior/caves)
 "Mo" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
@@ -2429,7 +2429,7 @@
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/lower/scaf_storage_hallway)
 "RJ" = (
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "Sa" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
@@ -2460,10 +2460,10 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/room2)
 "TW" = (
-/turf/open/misc/asteroid/snow/ice,
+/turf/open/misc/asteroid/snow/ice/mara,
 /area/mara17/exterior)
 "Ub" = (
-/turf/open/misc/snow,
+/turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned)
 "Ug" = (
 /obj/structure/cable,
