@@ -128,9 +128,8 @@
   Kapu1178:
   - tweak: Player darksight is now DRASTICALLY weaker.
   - bugfix: Limping no longer gets stuck on your character after your legs are fixed.
-  - bugfix: Silicon 'PDAs' will now properly ring.
-
-  - rscadd: Medibelts can store Gauze now
-  - qol: removes ntnet
-  - rscdel: door remotes
   francinum:
+  - rscdel: door remotes
+  - qol: removes ntnet
+  - bugfix: Silicon 'PDAs' will now properly ring.
+  - rscadd: Medibelts can store Gauze now
