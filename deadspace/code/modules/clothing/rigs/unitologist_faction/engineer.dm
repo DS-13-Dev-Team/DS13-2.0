@@ -36,11 +36,14 @@ armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 80, BIO = 
 /obj/item/mod/control/pre_equipped/ds/engineer_advanced_unitologist
 	theme = /datum/mod_theme/deadspace/engineer_advanced_unitologist
 	initial_modules = list(
-		/obj/item/mod/module/storage/large_capacity,
-		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/storage/syndicate,
+		/obj/item/mod/module/emp_shield,
+		/obj/item/mod/module/magnetic_harness,
 		/obj/item/mod/module/jetpack/advanced,
 		/obj/item/mod/module/magboot/advanced,
 		/obj/item/mod/module/welding,
+		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
 		/obj/item/mod/module/t_ray,
 	)
