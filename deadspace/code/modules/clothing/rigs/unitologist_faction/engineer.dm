@@ -1,8 +1,8 @@
 /datum/mod_theme/deadspace/engineer_advanced_unitologist
 	name = "advanced unitologist engineer"
 	desc = "Exclusive only to to the Unitologists who contributed over 400k Credits to the Church."
-	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 80, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	default_skin = "engineer_advanced_unitologist"
+	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 80, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	complexity_max = 25
 
 	skins = list(
