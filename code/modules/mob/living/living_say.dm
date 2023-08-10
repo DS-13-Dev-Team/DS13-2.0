@@ -405,6 +405,18 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 			listening |= player_mob
 			the_dead[player_mob] = TRUE
 
+		for(var/mob/camera/marker_signal/signal as anything in GLOB.markers_signals)
+			if(!signal.marker.markernet.checkTurfVis(get_turf(src))) //Marker doesn't see this location
+				continue
+			if(signal.z != z || get_dist(signal, src) > 7) //they're out of range of normal hearing
+				if(eavesdrop_range)
+					if(!(signal.client?.prefs.chat_toggles & CHAT_GHOSTWHISPER)) //they're whispering and we have hearing whispers at any range off
+						continue
+				else if(!(signal.client?.prefs.chat_toggles & CHAT_GHOSTEARS)) //they're talking normally and we have hearing at any range off
+					continue
+			listening |= signal
+			the_dead[signal] = TRUE
+
 	var/eavesdropping
 	var/eavesrendered
 	if(eavesdrop_range)

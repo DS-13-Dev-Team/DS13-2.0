@@ -14,13 +14,13 @@
 	var/list/category = tgui_input_list(owner, "Pick a necromorph type", "False Sound", GLOB.necromorph_sounds)
 	if(!category)
 		return TRUE
-	var/list/picked_sound = tgui_input_list(owner, "Pick sound type to play", "False Sound", category)
+	var/list/picked_sound = tgui_input_list(owner, "Pick sound type to play", "False Sound", GLOB.necromorph_sounds[category])
 	if(!picked_sound)
 		return TRUE
 	var/volume = VOLUME_MID
 	if (picked_sound == SOUND_SHOUT || picked_sound == SOUND_SHOUT_LONG || picked_sound == SOUND_DEATH)
 		volume = VOLUME_LOUD
-	playsound(target, pick(picked_sound), volume, 1, 2)
+	playsound(target, pick(GLOB.necromorph_sounds[category][picked_sound]), volume, 1, 2)
 	..()
 	return TRUE
 

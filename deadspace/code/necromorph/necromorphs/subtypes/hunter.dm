@@ -101,10 +101,12 @@
 	name = "Hookblade"
 	desc = "A shortrange charge with a swing at the end, pulling in all enemies it hits."
 
+/*
 /datum/action/cooldown/necro/charge/lunge/hunter/peter_out_effects()
 	set waitfor = FALSE
 	var/mob/living/carbon/human/necromorph/N = owner
 	N.hookblade_swing(target_atom)
+*/
 
 /datum/action/cooldown/necro/charge/lunge/hunter/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	set waitfor = FALSE

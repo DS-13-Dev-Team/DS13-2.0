@@ -4649,6 +4649,7 @@
 #include "deadspace\code\__HELPERS\matrices.dm"
 #include "deadspace\code\__HELPERS\mobs.dm"
 #include "deadspace\code\_global_vars\lists\necromorph_sounds.dm"
+#include "deadspace\code\_global_vars\lists\sounds_summary.dm"
 #include "deadspace\code\_onclick\hud\rendering\plane_master.dm"
 #include "deadspace\code\_subsystems\corruption.dm"
 #include "deadspace\code\animations\animation_library.dm"

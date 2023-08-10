@@ -19,30 +19,47 @@
 
 	var/atom/target_atom
 
+/datum/action/cooldown/necro/charge/New(Target, original, cooldown)
+	..()
+	if(!isnecromorph(Target))
+		qdel(src)
+		CRASH("Attempted to create a necro charge action on a non-necromorph")
+
 /datum/action/cooldown/necro/charge/PreActivate(atom/target)
 	var/turf/T = get_turf(target)
 	if(!T)
 		return FALSE
-	if(!ishuman(target_atom))
+	if(!ishuman(target))
 		for(var/mob/living/carbon/human/hummie in view(1, T))
 			if(!isnecromorph(hummie))
-				target_atom = hummie
+				target = hummie
 				break
-	if(target_atom == owner || isnecromorph(target_atom))
+	if(target == owner || isnecromorph(target))
 		return FALSE
-	src.target_atom = target_atom
-	. = ..()
+
+	target_atom = target
+
+	if(isturf(target))
+		RegisterSignal(target, COMSIG_ATOM_ENTERED, PROC_REF(on_target_loc_entered))
+	else
+		var/static/list/loc_connections = list(
+			COMSIG_ATOM_ENTERED = PROC_REF(on_target_loc_entered),
+		)
+		AddComponent(/datum/component/connect_loc_behalf, target, loc_connections)
+
+	return ..()
 
 /datum/action/cooldown/necro/charge/Activate(atom/target)
 	. = TRUE
 	// Start pre-cooldown so that the ability can't come up while the charge is happening
 	StartCooldown(charge_time+charge_delay+1)
-	addtimer(CALLBACK(src, PROC_REF(do_charge), owner), charge_delay)
+	addtimer(CALLBACK(src, PROC_REF(do_charge)), charge_delay)
 
-/datum/action/cooldown/necro/charge/proc/do_charge(mob/living/carbon/human/necromorph/charger)
+/datum/action/cooldown/necro/charge/proc/do_charge()
+	var/mob/living/carbon/human/necromorph/charger = owner
+
 	actively_moving = FALSE
 	charger.charging = TRUE
-	SEND_SIGNAL(charger, COMSIG_STARTED_CHARGE)
 	RegisterSignal(charger, COMSIG_MOVABLE_BUMP, PROC_REF(on_bump))
 	RegisterSignal(charger, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_move))
 	RegisterSignal(charger, COMSIG_MOVABLE_MOVED, PROC_REF(on_moved))
@@ -51,12 +68,21 @@
 
 	var/datum/move_loop/new_loop = SSmove_manager.move_towards(charger, target_atom, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
 	if(!new_loop)
+		UnregisterSignal(charger, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED))
 		return
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, PROC_REF(pre_move))
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_POSTPROCESS, PROC_REF(post_move))
-	RegisterSignal(new_loop, list(COMSIG_PARENT_QDELETING, COMSIG_MOVELOOP_STOP), PROC_REF(charge_end))
+	RegisterSignal(new_loop, COMSIG_MOVELOOP_STOP, PROC_REF(charge_end))
 	RegisterSignal(charger, COMSIG_MOB_STATCHANGE, PROC_REF(stat_changed))
 	RegisterSignal(charger, COMSIG_LIVING_UPDATED_RESTING, PROC_REF(update_resting))
+
+	SEND_SIGNAL(charger, COMSIG_STARTED_CHARGE)
+
+/datum/action/cooldown/necro/charge/proc/on_target_loc_entered(atom/loc, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
+	SIGNAL_HANDLER
+	if(arrived != owner)
+		return
+	on_bump(owner, target_atom)
 
 /datum/action/cooldown/necro/charge/proc/pre_move(datum)
 	SIGNAL_HANDLER
@@ -69,29 +95,19 @@
 /datum/action/cooldown/necro/charge/proc/charge_end(datum/move_loop/source)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/charger = source.moving
-	UnregisterSignal(charger, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING, COMSIG_MOVELOOP_STOP))
+	UnregisterSignal(charger, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING))
 	charger.charging = FALSE
 	charger.remove_movespeed_modifier(/datum/movespeed_modifier/necro_charge)
-	SEND_SIGNAL(owner, COMSIG_FINISHED_CHARGE)
-	actively_moving = FALSE
 	StartCooldown()
+	SEND_SIGNAL(owner, COMSIG_FINISHED_CHARGE)
 
-//Called when we reach max time or range
-//Drain the user's stamina?
-/datum/action/cooldown/necro/charge/proc/stop_peter_out()
-	if (isliving(owner))
-		peter_out_effects()
-	SSmove_manager.stop_looping(owner)
-
-//Called when the charge reaches max time or range
-/datum/action/cooldown/necro/charge/proc/peter_out_effects()
-	return
+	qdel(GetComponent(/datum/component/connect_loc_behalf))
+	target_atom = null
 
 /datum/action/cooldown/necro/charge/proc/stat_changed(mob/source, new_stat, old_stat)
 	SIGNAL_HANDLER
 	if(new_stat > CONSCIOUS)
-		//This will cause the loop to qdel, triggering an end to our charging
-		stop_peter_out()
+		SSmove_manager.stop_looping(owner)
 
 /datum/action/cooldown/necro/charge/proc/do_charge_indicator(atom/charge_target)
 	return
@@ -107,12 +123,8 @@
 	if(++valid_steps_taken <= max_steps_buildup)
 		charger.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/necro_charge, TRUE, -CHARGE_SPEED(src))
 
-	//If we have entered the same turf as our target then it must have been nondense. Let's hit it
-	if (source.loc == target_atom.loc || source.loc == target_atom)
-		. = on_bump(source, target_atom)
-	else
-		//Light shake with each step
-		shake_camera(source, 1.5, 0.5)
+	//Light shake with each step
+	shake_camera(source, 1.5, 0.5)
 
 	return
 
