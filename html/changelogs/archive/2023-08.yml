@@ -1,0 +1,143 @@
+2023-08-01:
+  Kapu1178:
+  - rscadd: The metabolism rate of mobs now slows down as their body chills. At maximum
+      effect (most obvious in the Cryogenics Toob), one life tick will occur every
+      40 seconds.
+  - rscadd: All health analyzers have a Surgerical mode.
+  - rscadd: Cryogenics now has a pump to regulate pressure.
+  - qol: The cryogenics O2 canister starts pre-chilled.
+  - balance: Arterial bleeding rate slowed by 20%
+  - bugfix: Epinephrine no longer heals brute or burn damage.
+  - bugfix: Body scanners now show embedded objects as foreign bodies.
+  - bugfix: Teshari now have their own damage sprites instead of using the human ones.
+  - bugfix: Teshari now have their own bloody clothing sprites instead of using the
+      human ones.
+  francinum:
+  - code_imp: Abstractness changes
+2023-08-02:
+  Kapu1178:
+  - qol: Removed the "syndicate" prefix from some items.
+  francinum:
+  - config: A few config entries with no effect have been removed
+  - server: "Jobs.txt is no longer supported. If you need to change job numbers like\
+      \ that, fork (\u0360\u035C\u0296\u0360)"
+2023-08-03:
+  Kapu1178:
+  - code_imp: Daedalus now supports the Byond-Tracy profiler.
+  - bugfix: Fixed a serious bug with bodypart damage.
+  - balance: Vent Pumps and Vent Scrubbers use 33% less power while idling.
+  - balance: Thermomachine volume from 70 to 400 + (bin_rating * 200)
+2023-08-04:
+  CometBlaze:
+  - rscadd: The Pulse Rifle is now able to toggle between a grenade launcher in addition
+      to regular fire
+  - tweak: Using the pulse rifle while holding it will now wield it which causes it
+      to behave the same as before. Firing it with only one hand will cause it to
+      have higher spread.
+  - rscadd: Plasma cutter and respective variants are now in
+  DTraitor:
+  - rscadd: Necromorphs and marker signals have nightvision
+  - bugfix: Ports markernet fixes from 1.0
+  - rscadd: Added Jump to X verbs to marker signals
+  - rscadd: You can join/leave necroqueue at will now
+  - bugfix: Necroqueue won't put players who left the game into necromorphs
+  - bugfix: Marker signals can freely move between Z levels once again
+  - rscadd: Added pulse rifle
+  - rscadd: Added enhanced slasher
+  - qol: You can see invested biomass in the Marker UI
+  - balance: Necromorphs have proper cost now
+  - rscadd: Adds markers to the report in the end of the round
+  - bugfix: Fixes icons in default necromorph limbs
+  - rscadd: Added wall run mechanic
+  - rscadd: Added biomass harvest values to a different machinery. Harvesters are
+      useful now
+  - rscadd: Added biomass bar to the Marker signals HUD
+  - rscadd: Implemented swing ability
+  - bugfix: Marker uses proper biomass variable
+  - bugfix: Necro corruption structures display preview icons now
+  - bugfix: Harvester beak is now closed while harvester is not active
+  - bugfix: Meddle works now
+  - bugfix: Marker properly changes icons when activated
+  - bugfix: Marker has a higher layer now
+  - bugfix: FIxed necromorph icons which could have wrong bodyparts
+  - balance: Increased baseline marker income (0.1->0.5)
+  - balance: Harvester deployment takes 1 minute instead of 3 now
+  - balance: Necromorph projectiles deal damage through exposing acid at targets now
+  - qol: Changes in the Marker UI (mostly from the code perspective)
+  - qol: Moved Marker signals psybar to the bottom of the screen
+  - qol: Marker UI is now opened through an action button instead of a verb
+  - code_imp: Remove a lot of unused/redundant code, including color defines
+  - code_imp: Rewrote "Shoot" ability
+  - code_imp: Added var/implemented to necromorph classes, set to TRUE if this necromorph
+      should appear in the lists
+  - rscadd: Added new map for lowpop - Mara 17
+  - rscadd: Made some progress towards finishing containment gamemode
+  - rscadd: Implements earthgov agent and untiologist zealot antagonists
+  - rscadd: Implements most necromorph types
+  - rscadd: Added necrochat
+  - balance: Necromorphs can't ventcrawl anymore
+  - bugfix: Corruption doesn't damage living humans on it
+  - bugfix: Dismembering works correctly now
+  - bugfix: Lying necromorphs are now rotated
+  - rscadd: Added Sprawl map
+  - rscadd: Implemented a replacement for maws
+  - rscadd: Implemented absorb ability
+  - balance: Changed default move speed
+  - bugfix: You can put pulse rifle in your suit storage now
+  - rscadd: Added divet pistol
+  - bugfix: Fixes pulse rifle not shooting
+  DeadLineSS13:
+  - rscadd: Brute active and passive abilities
+  - rscadd: Armor datum for necro
+  - rscadd: Ubermorph
+  - rscadd: Hunter now there.
+  Kapu1178:
+  - bugfix: Specific chemical effects no longer last forever
+  - bugfix: ZMimic failing to recognize new atoms
+  MrMelbert:
+  - bugfix: Items getting knocked off (glasses and cigars), bad omens, and spaghetti
+      falling from pockets should trigger on most knockdowns again like they used
+      to.
+  - code_imp: Cleaned up the knockoff component a bit. Also unit tests it.
+  - bugfix: Frozen stuff is now properly actually recognized as frozen and won't re-freeze.
+  - bugfix: Tonic Water heals dizziness instead of causing it
+  - bugfix: Fixes stuttered words with anxiety being capitalized
+  - rscadd: When you are drunk, the strength of your slurring now varies based on
+      how drunk you are. Being "a little drunk" only rarely slurs your words, being
+      average drunk is the same as the old effect, while being very drunk now slurs
+      your words even more.
+  - rscadd: Some non-alcohol sources of slurring, such as concussions, now give "generic
+      slurring" rather than "drunk slurring", which less resemble being drunk (ie,
+      no burping).
+  - rscadd: 'Mind restoration now heals ALL slurring, rather than only drunk slurring
+      (which includes cult / heretic slurring). /:cl:'
+  RegJoe:
+  - rscadd: Color selection fix
+  Thegodemperorofmankind11:
+  - rscadd: Civilian Rigs (No balancing)
+  - rscadd: Patreon Rigs
+  - rscadd: scaf rigs
+  - rscadd: Zealot Rig
+  Viz-Titan:
+  - rscadd: 'Added in guns: Seeker Rifle, Heavy Pulse Rifle, and SCL/Pulse Shotgun'
+  - rscadd: Added in various ammo and gun variants for some guns
+  - balance: Tweaked and added to Divet Pistol and Pulse Rifle
+  - imageadd: added scavbot and a tcomms dish machine sprites. Fixed Pulse Rifle sprite.
+  - admin: Removed old Daed Hosts from admins.txt
+2023-08-05:
+  Kapu1178:
+  - tweak: Player darksight is now DRASTICALLY weaker.
+  - bugfix: Limping no longer gets stuck on your character after your legs are fixed.
+  francinum:
+  - rscdel: door remotes
+  - qol: removes ntnet
+  - bugfix: Silicon 'PDAs' will now properly ring.
+  - rscadd: Medibelts can store Gauze now
+2023-08-06:
+  DTraitor:
+  - rscadd: Corruption can grow between Z levels now
+  - bugfix: Harvester works once again
+  - balance: Cyst, eyes and corruption nodes cost less biomass
+  - balance: Harvester income is higher now
+  - balance: Mara 17 atmos is different now (has more Carbon Dioxide)
+  - rscadd: Force opening a door as a necromorph now breaks it

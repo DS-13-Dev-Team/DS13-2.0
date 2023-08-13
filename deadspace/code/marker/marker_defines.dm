@@ -15,8 +15,9 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	move_resist = MOVE_FORCE_OVERPOWERING
 	density = TRUE
 	var/active = FALSE
-	///Whether we should us necroqueue when spawning necromorphs
+	///Whether we should use necroqueue when spawning necromorphs
 	var/use_necroqueue = TRUE
+	var/list/necroqueue = list()
 	var/mob/camera/marker_signal/marker/camera_mob
 	var/datum/markernet/markernet
 	var/list/marker_signals = list()
@@ -43,4 +44,3 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	var/list/corruption_eyes
 	/// When was the last time all signals were alerted by an eye
 	var/last_eye_notify
-	var/datum/action/marker_ui/marker_ui_action

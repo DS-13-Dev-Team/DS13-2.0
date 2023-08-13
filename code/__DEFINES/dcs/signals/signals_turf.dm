@@ -6,8 +6,6 @@
 /// `post_change_callbacks` is a list that signal handlers can mutate to append `/datum/callback` objects.
 /// They will be called with the new turf after the turf has changed.
 #define COMSIG_TURF_CHANGE "turf_change"
-///from base of turf/ChangeTurf(): (flags)
-#define COMSIG_TURF_CHANGED "turf_changed"
 ///from base of atom/has_gravity(): (atom/asker, list/forced_gravities)
 #define COMSIG_TURF_HAS_GRAVITY "turf_has_gravity"
 ///from base of turf/proc/onShuttleMove(): (turf/new_turf)

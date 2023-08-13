@@ -91,8 +91,11 @@
 				damage_amount *= 2
 	return ..()
 
-/obj/structure/necromorph/CanCorrupt(corruption_dir)
-	return TRUE
+/obj/structure/necromorph/CanAllowThrough(atom/movable/mover, border_dir)
+	. = ..()
+	//Necromorph structures shouldn't block corruption
+	if(istype(mover, /obj/structure/corruption))
+		return TRUE
 
 #undef GROWING
 #undef DECAYING

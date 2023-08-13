@@ -10,7 +10,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	sight = SEE_MOBS|SEE_OBJS|SEE_TURFS
 	mouse_opacity = MOUSE_OPACITY_ICON
 	movement_type = GROUND|FLYING
-	hud_type = /datum/hud/marker
+	hud_type = /datum/hud/marker_signal
 	interaction_range = null
 	var/psy_energy = 0
 	var/psy_energy_maximum = 900
@@ -185,6 +185,46 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 	qdel(src)
 
+/mob/camera/marker_signal/verb/switch_necroqueue()
+	set name = "Join/Leave Necroqueue"
+	set category = "Necromorph"
+
+	if(!marker.active)
+		to_chat(src, span_notice("Marker is not active yet!"))
+		return
+	if(src in marker.necroqueue)
+		to_chat(src, span_notice("You have left the necroqueue."))
+		marker.necroqueue -= src
+	else
+		to_chat(src, span_notice("You are now in the necroqueue. When a necromorph vessel is available, you will be automatically placed in control of it. You can still manually posess necromorphs."))
+		marker.necroqueue += src
+
+/mob/camera/marker_signal/verb/jump_to_maker()
+	set name = "Jump to Marker"
+	set category = "Necromorph"
+
+	forceMove(get_turf(marker))
+
+/mob/camera/marker_signal/verb/jump_to_necro()
+	set name = "Jump to Necromorph"
+	set category = "Necromorph"
+
+	if(!length(marker.necromorphs))
+		to_chat(src, span_notice("There are no necromorphs to jump to!"))
+		return
+
+	var/mob/living/carbon/human/necromorph/necro = tgui_input_list(src, "Select necromorph to jump to", "Jump To Necromorph", marker.necromorphs)
+	if(necro)
+		forceMove(get_turf(necro))
+
+/mob/camera/marker_signal/verb/jump_to_span_locs()
+	set name = "Jump to Necromorph Spawn Locs"
+	set category = "Necromorph"
+
+	var/atom/location = tgui_input_list(src, "Select object to jump to", "Jump To Spawn Loc", marker.necro_spawn_atoms)
+	if(location)
+		forceMove(get_turf(location))
+
 /mob/camera/marker_signal/verb/possess_necromorph(mob/living/carbon/human/necromorph/necro in world)
 	set name = "Possess Necromorph"
 	set category = "Object"
@@ -201,13 +241,13 @@ GLOBAL_LIST_EMPTY(markers_signals)
 /mob/camera/marker_signal/proc/change_psy_energy(amount)
 	psy_energy = clamp(psy_energy+amount, 0, psy_energy_maximum)
 	if(hud_used)
-		var/datum/hud/marker/our_hud = hud_used
+		var/datum/hud/marker_signal/our_hud = hud_used
 		var/filter = our_hud.psy_energy.get_filter("alpha_filter")
 		animate(filter, x = clamp(HUD_METER_PIXEL_WIDTH*(psy_energy/psy_energy_maximum), 0, HUD_METER_PIXEL_WIDTH), time = 0.5 SECONDS)
 		our_hud.foreground_psy.maptext = MAPTEXT("[round(psy_energy, 1)]/[psy_energy_maximum] | +[psy_energy_generation] psy/sec")
 
 /mob/camera/marker_signal/proc/update_biomass_hud(hud_override)
-	var/datum/hud/marker/our_hud = hud_override || hud_used
+	var/datum/hud/marker_signal/our_hud = hud_override || hud_used
 	our_hud?.foreground_bio.maptext = MAPTEXT("[round(marker.signal_biomass, 1)] | +[marker.last_biomass_income*marker.signal_biomass_percent] bio/sec")
 
 /mob/camera/marker_signal/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null, filterproof = null)
@@ -256,7 +296,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	icon = 'deadspace/icons/signals/mastersignal.dmi'
 	invisibility = INVISIBILITY_OBSERVER
 	see_invisible = SEE_INVISIBLE_OBSERVER
-	hud_type = /datum/hud/marker
+	hud_type = /datum/hud/marker_signal/marker
 	interaction_range = null
 	pixel_x = -7
 	pixel_y = -7
@@ -270,16 +310,18 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 /mob/camera/marker_signal/marker/Initialize(mapload, obj/structure/marker/master)
 	. = ..()
-	master?.marker_ui_action.Grant(src)
 	icon_state = "mastersignal"
-	verbs -= /mob/camera/marker_signal/verb/become_master
+	remove_verb(src, list(
+		/mob/camera/marker_signal/verb/become_master,
+		/mob/camera/marker_signal/verb/switch_necroqueue,
+	))
 
 /mob/camera/marker_signal/marker/Destroy()
 	marker?.camera_mob = null
 	return ..()
 
 /mob/camera/marker_signal/marker/update_biomass_hud(hud_override)
-	var/datum/hud/marker/our_hud = hud_override || hud_used
+	var/datum/hud/marker_signal/our_hud = hud_override || hud_used
 	our_hud?.foreground_bio.maptext = MAPTEXT("[round(marker.marker_biomass, 1)] | +[marker.last_biomass_income*(1-marker.signal_biomass_percent)] bio/sec")
 
 /mob/camera/marker_signal/marker/verb/downgrade()
@@ -291,6 +333,12 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	signal.ckey = src.ckey
 	signal.change_psy_energy(psy_energy)
 	qdel(src)
+
+/mob/camera/marker_signal/marker/verb/open_marker_ui()
+	set name = "Open Marker UI"
+	set category = "Necromorph"
+
+	marker.ui_interact(src)
 
 /mob/camera/marker_signal/marker/ClickOn(atom/A, params)
 	if(check_click_intercept(params,A))
@@ -364,9 +412,15 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		marker.biomass_invested += marker.necro_classes[spawning_necromorph].biomass_cost
 		var/path = marker.necro_classes[spawning_necromorph].necromorph_type_path
 		var/mob/living/carbon/human/necromorph/mob = new path(A, marker)
-		if(marker.use_necroqueue && length(marker.marker_signals-src))
-			var/mob/camera/marker_signal/signal = pick(marker.marker_signals-src)
-			signal.possess_necromorph(mob)
+		if(marker.use_necroqueue && length(marker.necroqueue))
+			var/list/necroqueue_copy = marker.necroqueue.Copy()
+			//If current signal has no key and there are other signals in the queue, pick another one
+			while(length(necroqueue_copy))
+				var/mob/camera/marker_signal/signal = pick_n_take(necroqueue_copy)
+				signal = pick_n_take(necroqueue_copy)
+				if(signal.key)
+					signal.possess_necromorph(mob)
+					return
 		return
 	if(!spawnloc_cantsee)
 		to_chat(src, span_warning("There are no possible spawn locations nearby!"))

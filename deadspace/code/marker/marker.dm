@@ -7,8 +7,6 @@
 	markernet = new
 	markernet.addVisionSource(src, VISION_SOURCE_RANGE)
 
-	marker_ui_action = new(src)
-
 	for(var/datum/necro_class/class as anything in subtypesof(/datum/necro_class))
 		//Temp check to see if this class is implemented
 		if(initial(class.implemented))
@@ -22,7 +20,6 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/structure/marker/Destroy()
-	QDEL_NULL(marker_ui_action)
 	STOP_PROCESSING(SSobj, src)
 	for(var/datum/biomass_source/source as anything in biomass_sources)
 		remove_biomass_source(source)
@@ -90,6 +87,8 @@
 	necro.marker = null
 
 /obj/structure/marker/proc/activate()
+	if(active)
+		return
 	active = TRUE
 	change_marker_biomass(300)
 	for(var/mob/camera/marker_signal/eye as anything in marker_signals)
@@ -105,9 +104,6 @@
 			ability.Grant(eye)
 	new /datum/corruption_node/atom/marker(src, src)
 	update_icon(UPDATE_ICON_STATE)
-
-/obj/structure/marker/CanCorrupt(corruption_dir)
-	return TRUE
 
 /obj/structure/marker/can_see_marker()
 	return RANGE_TURFS(12, src)
@@ -201,6 +197,12 @@
 			change_signal_biomass(add_signal_biomass)
 			return TRUE
 
+/obj/structure/marker/CanAllowThrough(atom/movable/mover, border_dir)
+	. = ..()
+	//Marker shouldn't block corruption
+	if(istype(mover, /obj/structure/corruption))
+		return TRUE
+
 /obj/structure/marker/proc/add_biomass_source(source_type, datum/source)
 	var/datum/biomass_source/new_source = new source_type(src, source)
 	biomass_sources += new_source
@@ -209,20 +211,3 @@
 /obj/structure/marker/proc/remove_biomass_source(datum/biomass_source/source)
 	biomass_sources -= source
 	qdel(source)
-
-/datum/action/marker_ui
-	name = "Open Marker UI"
-
-/datum/action/marker_ui/Trigger(trigger_flags)
-	if(!..())
-		return FALSE
-	target.ui_interact(owner)
-	return TRUE
-
-/datum/action/marker_ui/IsAvailable(feedback)
-	if(!istype(owner, /mob/camera/marker_signal/marker))
-		if(feedback)
-			to_chat(owner, span_warning("You can't open the marker UI!"))
-		return FALSE
-	return ..()
-
