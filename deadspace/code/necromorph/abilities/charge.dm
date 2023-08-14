@@ -19,11 +19,6 @@
 
 	var/atom/target_atom
 
-/datum/action/cooldown/necro/charge/Grant(mob/granted_to)
-	if(!isnecromorph(granted_to))
-		stack_trace("Attempted to create a necro charge action on a non-necromorph")
-	return ..()
-
 /datum/action/cooldown/necro/charge/PreActivate(atom/target)
 	var/turf/T = get_turf(target)
 	if(!T)
