@@ -1,0 +1,13 @@
+author: DTraitor
+delete-after: true
+changes:
+  - rscadd: Various changes in the "maints" on the lowest floor (e.g. there are more
+      than 1 way out of some rooms)
+  - rscadd: Added vents and scrubber to medbay
+  - rscadd: Added body scanners to medbay
+  - rscadd: Added keybinds for necromorph abilities (1, 2, 3, 4 by default). Might
+      be unbound, check your preferences!
+  - qol: Airlocks leading to outside have glass now
+  - qol: Signals can hear humans now (only those that are visible for the marker)
+  - bugfix: Fixed false sound ability
+  - bugfix: Fixed slasher charge
