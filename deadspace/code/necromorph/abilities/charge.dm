@@ -19,11 +19,10 @@
 
 	var/atom/target_atom
 
-/datum/action/cooldown/necro/charge/New(Target, original, cooldown)
-	..()
+/datum/action/cooldown/necro/charge/Grant(mob/granted_to)
 	if(!isnecromorph(Target))
-		qdel(src)
-		CRASH("Attempted to create a necro charge action on a non-necromorph")
+		stack_trace("Attempted to create a necro charge action on a non-necromorph")
+	return ..()
 
 /datum/action/cooldown/necro/charge/PreActivate(atom/target)
 	var/turf/T = get_turf(target)
