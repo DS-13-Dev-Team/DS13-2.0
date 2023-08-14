@@ -52,13 +52,14 @@
 	biomass_spent_required = 950
 	melee_damage_lower = 24
 	melee_damage_upper = 28
+	obj_damage_multiplier = 2
 	max_health = 510
 	necro_armor = list(ARMOR_FRONT = 30, ARMOR_FLANK = 20, ARMOR_BACK = 10, CURL_ARMOR_MULT = 1.5, ARMOR_PROTECTION = 300)
 	actions = list(
-		/datum/action/cooldown/necro/long_charge,
-		/datum/action/cooldown/necro/slam,
-		/datum/action/cooldown/necro/curl,
-		/datum/action/cooldown/necro/shoot/brute,
+		/datum/action/cooldown/necro/slam = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
+		/datum/action/cooldown/necro/long_charge = COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN,
+		/datum/action/cooldown/necro/shoot/brute = COMSIG_KB_NECROMORPH_ABILITY_THREE_DOWN,
+		/datum/action/cooldown/necro/curl = COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN,
 	)
 	minimap_icon = "brute"
 	implemented = TRUE

@@ -12,6 +12,12 @@
 	pre_fire(target)
 	var/mob/living/carbon/human/necromorph/necro = owner
 	necro.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 3)
+	INVOKE_ASYNC(src, PROC_REF(shoot), target)
+
+/datum/action/cooldown/necro/shoot/proc/pre_fire()
+	return
+
+/datum/action/cooldown/necro/shoot/proc/shoot(atom/target)
 	if(windup_time > 0)
 		StartCooldown(windup_time)
 		sleep(windup_time)
@@ -30,9 +36,6 @@
 	P.fire()
 	StartCooldown()
 	INVOKE_ASYNC(src, PROC_REF(post_fire))
-
-/datum/action/cooldown/necro/shoot/proc/pre_fire()
-	return
 
 /datum/action/cooldown/necro/shoot/proc/post_fire()
 	return

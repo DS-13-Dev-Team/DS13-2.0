@@ -6401,6 +6401,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/warehouse)
+"BH" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/bodyscanner_console,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "BI" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor,
@@ -6784,6 +6791,10 @@
 /obj/structure/tank_holder/emergency_oxygen,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/cargo)
+"Gc" = (
+/obj/machinery/bodyscanner_console,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "Gj" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -6893,6 +6904,12 @@
 "HE" = (
 /turf/open/floor/deadspace/medical,
 /area/mara17/interior/upper/mining/bathrooms)
+"HM" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "HR" = (
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/deadspace/grater,
@@ -7518,6 +7535,10 @@
 	},
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/upper/civilian)
+"PY" = (
+/obj/machinery/bodyscanner,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "PZ" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -8146,12 +8167,12 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/upper/tcomms)
 "Ye" = (
-/obj/effect/turf_decal/bot,
-/obj/structure/table/glass,
-/obj/item/storage/medkit,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/bot,
+/obj/structure/table/glass,
+/obj/item/storage/medkit,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
 "Yf" = (
@@ -8180,10 +8201,10 @@
 /turf/closed/wall,
 /area/mara17/interior/upper/access2)
 "YE" = (
-/obj/machinery/stasis,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/stasis,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/medical)
 "YF" = (
@@ -8315,6 +8336,13 @@
 "ZR" = (
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/upper/abandoned/romero_aux)
+"ZX" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/bodyscanner,
+/turf/open/floor/deadspace/grater,
+/area/mara17/interior/upper/medical)
 "ZZ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -18886,8 +18914,8 @@ an
 an
 wH
 kL
-xY
-Hj
+BH
+Gc
 Sh
 wH
 an
@@ -19028,8 +19056,8 @@ bM
 kw
 ap
 Hj
-xY
-oL
+ZX
+PY
 Hj
 ar
 gF
@@ -19172,7 +19200,7 @@ at
 Vm
 xY
 Hj
-Hj
+HM
 as
 hK
 hK

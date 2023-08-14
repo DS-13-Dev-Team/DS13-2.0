@@ -6,22 +6,19 @@
 /atom/proc/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(!uses_integrity || (!user.melee_damage_upper && !dealt_damage)) //No damage
 		return FALSE
-	dealt_damage = dealt_damage ? dealt_damage : rand(user.melee_damage_lower, user.melee_damage_upper)
+	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper) * user.obj_damage_multiplier
 	user.do_attack_animation(src, user.attack_effect)
 	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
 
-/mob/living/carbon/human/necromorph/get_eye_protection()
-	return ..() + 2
-
-/mob/living/carbon/human/necromorph/get_ear_protection()
-	return INFINITY
-
-/mob/living/carbon/human/necromorph/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
-	skipcatch = TRUE
-	.=..()
+/obj/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
+	if(!uses_integrity || (!user.melee_damage_upper && !dealt_damage)) //No damage
+		return FALSE
+	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper) * user.obj_damage_multiplier
+	user.do_attack_animation(src, user.attack_effect)
+	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
 
 /mob/living/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
-	dealt_damage = dealt_damage ? dealt_damage : rand(user.melee_damage_lower, user.melee_damage_upper)
+	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper) * user.obj_damage_multiplier
 	user.do_attack_animation(src, user.attack_effect)
 	playsound(loc, 'sound/weapons/slash.ogg', 50, TRUE, -1)
 	visible_message(span_danger("[user.name] slashes [src]!"), \
@@ -41,7 +38,7 @@
 	user.do_attack_animation(src, user.attack_effect)
 	if (w_uniform)
 		w_uniform.add_fingerprint(user)
-	dealt_damage = dealt_damage ? dealt_damage : rand(user.melee_damage_lower, user.melee_damage_upper)
+	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper) * user.obj_damage_multiplier
 	var/damage = prob(90) ? dealt_damage : 0
 	if(!damage)
 		playsound(loc, 'sound/weapons/slashmiss.ogg', 50, TRUE, -1)
@@ -62,6 +59,16 @@
 	if(!dismembering_strike(user, user.zone_selected)) //Dismemberment successful
 		return TRUE
 	apply_damage(damage, BRUTE, affecting, armor_block)
+
+/mob/living/carbon/human/necromorph/get_eye_protection()
+	return ..() + 2
+
+/mob/living/carbon/human/necromorph/get_ear_protection()
+	return INFINITY
+
+/mob/living/carbon/human/necromorph/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
+	skipcatch = TRUE
+	.=..()
 
 /mob/living/carbon/human/necromorph/adjustToxLoss(amount, updating_health = TRUE, forced = FALSE)
 	return FALSE

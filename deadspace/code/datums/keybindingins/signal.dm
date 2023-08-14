@@ -6,11 +6,11 @@
 	return ismarkereye(user.mob)
 
 /datum/keybinding/marker_signal/rotate_necromorph_structure
-	hotkey_keys = list("R", "Southwest") // END
+	hotkey_keys = list("R", "Southwest")
 	name = "rotate_necromorph_structure"
 	full_name = "Rotate structure"
 	description = "Rotates necromorph structure while in placing mode."
-	keybind_signal = COMSIG_KB_CARBON_TOGGLETHROWMODE_DOWN
+	keybind_signal = COMSIG_KB_MSIGNAL_ROTATE_STRUCTURE_DOWN
 
 /datum/keybinding/marker_signal/rotate_necromorph_structure/down(client/user)
 	. = ..()
