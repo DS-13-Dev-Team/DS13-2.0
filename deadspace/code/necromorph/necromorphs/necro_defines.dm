@@ -77,6 +77,9 @@
 	/// How good are we at penetrating armour
 	var/armour_penetration = 0
 
+	/// Damage multiplier when attacking objects
+	var/obj_damage_multiplier = 3
+
 	var/datum/necro_armor/necro_armors
 
 	var/attack_effect = ATTACK_EFFECT_SLASH

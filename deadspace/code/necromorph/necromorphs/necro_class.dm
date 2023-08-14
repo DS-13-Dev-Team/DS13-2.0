@@ -20,6 +20,10 @@
 	///The amount of damage a necromorph will do with a 'slash' attack.
 	var/melee_damage_lower = 10
 	var/melee_damage_upper = 10
+
+	///Damage multiplier when attacking objects
+	var/obj_damage_multiplier = 3
+
 	var/armour_penetration = 0
 
 	var/list/necro_armor
@@ -42,7 +46,8 @@
 	var/fire_resist = 1
 
 	///the 'abilities' available to a necromorph.
-	var/list/datum/action/actions = list()
+	///if list is associative than the key is a keybind signal to trigger an action
+	var/list/datum/action/cooldown/necro/actions = list()
 
 	///List of traits we add in Initialize()
 	var/list/traits = list(
@@ -84,9 +89,11 @@
 	for(var/trait in traits)
 		ADD_TRAIT(necro, trait, NECROMORPH_TRAIT)
 
-	for(var/datum/action/action_datum as anything in actions)
+	for(var/datum/action/cooldown/necro/action_datum as anything in actions)
 		action_datum = new action_datum(necro)
 		action_datum.Grant(necro)
+		if(actions[action_datum.type])
+			action_datum.RegisterSignal(necro, actions[action_datum.type], TYPE_PROC_REF(/datum/action/cooldown/necro, TriggerOnKeybindSignal))
 
 	necro.armor = getArmor(arglist(armor))
 
@@ -117,3 +124,5 @@
 	necro.vent_exit_speed = vent_exit_speed
 
 	necro.silent_vent_crawl = silent_vent_crawl
+
+	necro.obj_damage_multiplier = obj_damage_multiplier

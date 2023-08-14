@@ -48,10 +48,10 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 16
 	actions = list(
-		/datum/action/cooldown/necro/regenerate/hunter,
-		/datum/action/cooldown/necro/charge/lunge/hunter,
-		/datum/action/cooldown/necro/taunt/hunter,
-		/datum/action/cooldown/necro/shout,
+		/datum/action/cooldown/necro/charge/lunge/hunter = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
+		/datum/action/cooldown/necro/taunt/hunter = COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN,
+		/datum/action/cooldown/necro/regenerate/hunter = COMSIG_KB_NECROMORPH_ABILITY_THREE_DOWN,
+		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN,
 	)
 	minimap_icon = "hunter"
 	implemented = TRUE
@@ -101,10 +101,12 @@
 	name = "Hookblade"
 	desc = "A shortrange charge with a swing at the end, pulling in all enemies it hits."
 
+/*
 /datum/action/cooldown/necro/charge/lunge/hunter/peter_out_effects()
 	set waitfor = FALSE
 	var/mob/living/carbon/human/necromorph/N = owner
 	N.hookblade_swing(target_atom)
+*/
 
 /datum/action/cooldown/necro/charge/lunge/hunter/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	set waitfor = FALSE

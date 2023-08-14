@@ -1,0 +1,8 @@
+//Marker Signal
+#define COMSIG_KB_MSIGNAL_ROTATE_STRUCTURE_DOWN "keybinding_msignal_rotate_structure_down"
+
+//Necromorph
+#define COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN "keybinding_necromorph_ability_one_down"
+#define COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN "keybinding_necromorph_ability_two_down"
+#define COMSIG_KB_NECROMORPH_ABILITY_THREE_DOWN "keybinding_necromorph_ability_three_down"
+#define COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN "keybinding_necromorph_ability_four_down"

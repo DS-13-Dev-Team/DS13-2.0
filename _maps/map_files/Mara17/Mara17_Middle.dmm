@@ -1282,6 +1282,7 @@
 "ep" = (
 /obj/machinery/light/warm/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/medium/barracks)
 "eq" = (
@@ -1622,23 +1623,23 @@
 /turf/open/floor/plating/snowed,
 /area/mara17/interior/medium/abandoned)
 "fy" = (
-/obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
+/obj/machinery/door/airlock/external/glass,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/mining)
 "fz" = (
-/obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
+/obj/machinery/door/airlock/external/glass,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/medium/mining)
 "fA" = (
@@ -4178,10 +4179,6 @@
 /obj/effect/landmark/start/scientist,
 /turf/open/floor/wood,
 /area/mara17/interior/medium/research_breakroom)
-"mL" = (
-/obj/machinery/computer/operating,
-/turf/open/floor/deadspace/medical,
-/area/mara17/interior/medium/evidence_2)
 "mM" = (
 /obj/machinery/holopad/secure,
 /turf/open/floor/deadspace/mono,
@@ -8055,12 +8052,6 @@
 /obj/machinery/light/warm/directional/north,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/medium)
-"Wi" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/deadspace/cable{
-	dir = 4
-	},
-/area/mara17/interior/medium/barracks)
 "Wm" = (
 /turf/open/floor/deadspace/medical,
 /area/mara17/interior/medium/research_test)
@@ -15892,7 +15883,7 @@ Mq
 Mq
 Mq
 ku
-mL
+pK
 pK
 Vb
 pK
@@ -21042,8 +21033,8 @@ aG
 aG
 nk
 nk
-ZJ
-Wi
+ts
+aC
 Su
 bC
 sI
@@ -21184,9 +21175,9 @@ aG
 nk
 nk
 hW
-ZJ
+ts
 Sz
-GW
+Su
 bB
 cc
 cc
@@ -21327,7 +21318,7 @@ nk
 hw
 iE
 iy
-ts
+ZJ
 ep
 jP
 jP

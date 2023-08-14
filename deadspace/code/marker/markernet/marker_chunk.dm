@@ -89,7 +89,9 @@
 	for(var/mob/camera/marker_signal/eye as anything in eyes)
 		if(src.z != eye.z)
 			continue
-		if(abs(eye.x - x) >= eye.static_visibility_range || abs(eye.y - y) >= eye.static_visibility_range)
+
+		var/static_range = eye.static_visibility_range * 2
+		if(abs(eye.x - x) >= static_range || abs(eye.y - y) > static_range)
 			continue
 
 		eye.visibleChunks += src

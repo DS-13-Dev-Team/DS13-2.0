@@ -14,7 +14,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	interaction_range = null
 	var/psy_energy = 0
 	var/psy_energy_maximum = 900
-	var/psy_energy_generation = 3
+	var/psy_energy_generation = 1.5
 	var/updatedir = null
 	var/list/abilities
 	var/list/visibleChunks
@@ -83,7 +83,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	marker.markernet.visibility(src)
 
 /mob/camera/marker_signal/process(delta_time)
-	change_psy_energy(psy_energy_generation)
+	change_psy_energy(psy_energy_generation*delta_time)
 
 /mob/camera/marker_signal/Move(NewLoc, direct, glide_size_override = 32)
 	if(updatedir)
@@ -273,6 +273,17 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 	return TRUE
 
+/mob/camera/marker_signal/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods = list(), atom/sound_loc)
+	. = ..()
+	// Create map text prior to modifying message for goonchat
+	if (client?.prefs.read_preference(/datum/preference/toggle/enable_runechat) && (client.prefs.read_preference(/datum/preference/toggle/enable_runechat_non_mobs) || ismob(speaker)))
+		create_chat_message(speaker, message_language, raw_message, spans, sound_loc = sound_loc)
+	// Recompose the message, because it's scrambled by default
+	message = compose_message(speaker, message_language, raw_message, radio_freq, spans, message_mods)
+	to_chat(src,
+		html = message,
+		avoid_highlighting = speaker == src)
+
 /mob/camera/marker_signal/verb/become_master()
 	set name = "Become master signal"
 	set category = "Necromorph"
@@ -301,7 +312,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	pixel_x = -7
 	pixel_y = -7
 	psy_energy_maximum = 4500
-	psy_energy_generation = 5
+	psy_energy_generation = 3
 	necrochat_class = "necromarker"
 	///Used when spawning necromorphs
 	var/image/necro_preview

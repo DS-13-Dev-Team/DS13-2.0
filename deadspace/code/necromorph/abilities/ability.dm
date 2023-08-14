@@ -14,6 +14,11 @@
 	if((next_use_time - world.time) <= 0)
 		CooldownEnd()
 
+/datum/action/cooldown/necro/proc/TriggerOnKeybindSignal(mob/source)
+	SIGNAL_HANDLER
+	Trigger()
+	return COMSIG_KB_ACTIVATED
+
 /*
 	Active abilties that can be activated but can't be deactivated
 */
