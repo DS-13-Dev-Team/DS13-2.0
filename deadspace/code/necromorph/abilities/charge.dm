@@ -20,7 +20,7 @@
 	var/atom/target_atom
 
 /datum/action/cooldown/necro/charge/Grant(mob/granted_to)
-	if(!isnecromorph(Target))
+	if(!isnecromorph(granted_to))
 		stack_trace("Attempted to create a necro charge action on a non-necromorph")
 	return ..()
 
