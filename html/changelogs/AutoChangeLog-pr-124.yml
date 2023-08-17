@@ -1,0 +1,5 @@
+author: DTraitor
+delete-after: true
+changes:
+  - rscadd: Cysts can no longer be placed in sight of survivors
+  - bugfix: Fixed cysts placement, now they require a wall once again
