@@ -27,19 +27,19 @@
 	desc = "A little lunchbox. This one is branded with the EarthGov logo!"
 
 /obj/item/storage/lunchbox/scaf
-	name = "\improper Sovereign Colonies lunchbox"
+	name = "Sovereign Colonies lunchbox"
 	icon_state = "lunchbox_scaf"
 	inhand_icon_state = "toolbox_red"
 	desc = "A little lunchbox. This one is branded with the Sovereign Colonies logo! This one looks rather old, almost collectible..."
 
 /obj/item/storage/lunchbox/cec
-	name = "\improper CEC lunchbox"
+	name = "CEC lunchbox"
 	icon_state = "lunchbox_cec"
 	inhand_icon_state = "toolbox_yellow"
 	desc = "A little lunchbox. This one is branded with the CEC logo!"
 
 /obj/item/storage/lunchbox/unitology
-	name = "\improper Unitology lunchbox"
+	name = "Unitology lunchbox"
 	icon_state = "lunchbox_unit"
 	inhand_icon_state = "toolbox_syndi"
 	desc = "A little lunchbox. This one is a sleek black and red, with a Marker symbol in the middle of it. made of a durable steel!"

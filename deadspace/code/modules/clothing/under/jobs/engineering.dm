@@ -12,5 +12,5 @@
 	icon_state = "ds_rigundershirt"
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
-	icon_state = "ds_engineer"
+	icon_state = "ds_rigundershirt"
 	can_adjust = FALSE

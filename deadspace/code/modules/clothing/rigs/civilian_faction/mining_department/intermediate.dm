@@ -1,11 +1,12 @@
-/datum/mod_theme/deadspace/legacy_standard_engineer
-	name = "DS-08 Legacy"
-	desc = "A classic CEC RIG, designed to handle years of faithful service"
-	default_skin = "legacy_standard_engineer"
-	armor = list(MELEE = 45, BULLET = 50, LASER = 50, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+/datum/mod_theme/deadspace/intermediate_miner
+	name = "intermediate mining"
+	desc = "Exclusive only to class 2 miners and is a standard equipment when working in hostile environments or during a hazardous mining operation."
+	default_skin = "intermediate_miner"
+	armor = list(MELEE = 51.25, BULLET = 51.25, LASER = 51.25, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	complexity_max = 20
 
 	skins = list(
-		"legacy_standard_engineer" = list(
+		"intermediate_miner" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -32,12 +33,16 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/legacy_standard_engineer
-	theme = /datum/mod_theme/deadspace/legacy_standard_engineer
+/obj/item/mod/control/pre_equipped/ds/intermediate_miner
+	theme = /datum/mod_theme/deadspace/intermediate_miner
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/tether,
+		/obj/item/mod/module/gps,
+		/obj/item/mod/module/orebag,
+		/obj/item/mod/module/clamp,
 		/obj/item/mod/module/magboot,
 		/obj/item/mod/module/welding,
-		/obj/item/mod/module/t_ray,
+		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
 	)

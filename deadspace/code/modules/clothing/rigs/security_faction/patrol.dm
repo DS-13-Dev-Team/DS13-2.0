@@ -1,6 +1,6 @@
 
 /datum/mod_theme/deadspace/patrol
-	name = "Patrol"
+	name = "patrol"
 	desc = "A very lightweight yet reasonably armoured suit, designed for long journeys on foot."
 	default_skin = "patrol"
 	armor = list(MELEE = 54.5, BULLET = 54.5, LASER = 60, ENERGY = 25, BOMB = 50, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)

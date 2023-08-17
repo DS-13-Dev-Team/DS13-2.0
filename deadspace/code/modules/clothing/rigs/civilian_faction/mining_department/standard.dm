@@ -1,16 +1,13 @@
-
-/datum/mod_theme/deadspace/hacker
-	name = "hacker"
-	desc = "A lightweight suit cobbled together from civilian parts, with some high end tech hidden within, suprisngly not illegal."
-	default_skin = "hacker"
-	armor = list(MELEE = 37.5, BULLET = 35, LASER = 40, ENERGY = 40, BOMB = 40, BIO = 80, FIRE = 25, ACID = 25, WOUND = 5)
-	max_heat_protection_temperature = 0
-	min_cold_protection_temperature = 0
+/datum/mod_theme/deadspace/standard_miner
+	name = "standard mining"
+	desc = "A standard issued mining suit, issued to class 1 miners; Commonly used during planet cracking operations."
+	default_skin = "standard_miner"
+	armor = list(MELEE = 42.5, BULLET = 42.5, LASER = 42.5, ENERGY = 15, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 
 	skins = list(
-		"hacker" = list(
+		"standard_miner" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = WOUND_LAYER,
+				UNSEALED_LAYER = NECK_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -35,10 +32,12 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/hacker
-	theme = /datum/mod_theme/deadspace/hacker
+/obj/item/mod/control/pre_equipped/ds/standard_miner
+	theme = /datum/mod_theme/deadspace/standard_miner
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/gps,
 		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/tether,
 	)

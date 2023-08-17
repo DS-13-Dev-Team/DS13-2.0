@@ -1,6 +1,6 @@
 // {Blackwolf602}
 /datum/mod_theme/deadspace/heavy_diving
-	name = "Hazard Diving"
+	name = "advanced hazard diving"
 	desc = "The heavy-duty diving RIG is the standard among CEC deep sea mining operations. \
 	It's plating has been reinforced to withstand extreme undersea pressures and concussive forces."
 	default_skin = "heavy_diving"
@@ -47,7 +47,7 @@
 		/obj/item/mod/module/drill,
 	)
 /datum/mod_theme/deadspace/elite_diving
-	name = "Elite Diving"
+	name = "elite diving"
 	desc = "The elite diving RIG is the next generation of diving RIGs used among CEC deep sea mining operations. \
 It's flexible reinforcements allow it to withstand extreme undersea pressures while retaining mobility."
 	default_skin = "elite_diving"
@@ -96,15 +96,15 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 	)
 
 /datum/mod_theme/deadspace/sister
-	name = "Modified Diving"
+	name = "modified diving"
 	desc = "a modified diving RIG with a cage on the shoulder and symbols drawn upon the suit. \
 	It's flexible reinforcements allow it to withstand extreme undersea pressures while retaining mobility."
-	default_skin = "sister"
+	default_skin = "strange"
 	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	complexity_max = 20
 
 	skins = list(
-		"sister" = list(
+		"strange" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,

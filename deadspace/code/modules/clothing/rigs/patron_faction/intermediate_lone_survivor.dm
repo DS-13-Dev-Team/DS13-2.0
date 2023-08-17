@@ -1,13 +1,13 @@
-// Doesn't have a speific sprite for it, Using the basic medical one.
-/datum/mod_theme/deadspace/med_smo
-	name = "Senior medical officer"
-	desc = "A durable RIG designed for medical rescue in high risk areas, and protecting the wearer against acids. This one was made for the SMO and is well taken care of."
-	default_skin = "med"
-	armor = list(MELEE = 37.5, BULLET = 15, LASER = 70, ENERGY = 70, BOMB = 30, BIO = 100, FIRE = 25, ACID = 100, WOUND = 5)
+// {slipinitinjimmy}
+/datum/mod_theme/deadspace/intermediate_engineer_survivor
+	name = "intermediate lone survivor"
+	desc = "For the lost souls forgotten in the depths of the Ishimura, survival comes at a grim cost"
+	default_skin = "intermediate_engineer_survivor"
+	armor = list(MELEE = 51.25, BULLET = 51.25, LASER = 51.25, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	complexity_max = 20
 
 	skins = list(
-		"med" = list(
+		"intermediate_engineer_survivor" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -34,15 +34,14 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/med_smo
-	theme = /datum/mod_theme/deadspace/med_smo
+/obj/item/mod/control/pre_equipped/ds/intermediate_engineer
+	theme = /datum/mod_theme/deadspace/intermediate_engineer
 	initial_modules = list(
-		/obj/item/mod/module/storage/large_capacity,
-		/obj/item/mod/module/jetpack/advanced,
+		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/magboot/advanced,
-		/obj/item/mod/module/health_analyzer,
-		/obj/item/mod/module/quick_carry,
-		/obj/item/mod/module/injector,
-		/obj/item/mod/module/organ_thrower,
+		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
+		/obj/item/mod/module/t_ray,
 	)

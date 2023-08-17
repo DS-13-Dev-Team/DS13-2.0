@@ -1,14 +1,12 @@
-
-/datum/mod_theme/deadspace/hacker
-	name = "hacker"
-	desc = "A lightweight suit cobbled together from civilian parts, with some high end tech hidden within, suprisngly not illegal."
-	default_skin = "hacker"
-	armor = list(MELEE = 37.5, BULLET = 35, LASER = 40, ENERGY = 40, BOMB = 40, BIO = 80, FIRE = 25, ACID = 25, WOUND = 5)
-	max_heat_protection_temperature = 0
-	min_cold_protection_temperature = 0
+/datum/mod_theme/deadspace/intermediate_engineer
+	name = "intermediate engineer"
+	desc = "A intermediate engineering suit, issued to class 2 engineers; designed for shipboard engineering"
+	default_skin = "engineer_intermediate"
+	armor = list(MELEE = 51.25, BULLET = 51.25, LASER = 51.25, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	complexity_max = 20
 
 	skins = list(
-		"hacker" = list(
+		"engineer_intermediate" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -35,10 +33,14 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/hacker
-	theme = /datum/mod_theme/deadspace/hacker
+/obj/item/mod/control/pre_equipped/ds/intermediate_engineer
+	theme = /datum/mod_theme/deadspace/intermediate_engineer
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
+		/obj/item/mod/module/t_ray,
 	)
