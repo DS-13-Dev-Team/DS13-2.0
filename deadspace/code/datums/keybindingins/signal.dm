@@ -20,5 +20,5 @@
 		var/datum/action/cooldown/necro/corruption/placement_action = user.mob.click_intercept
 		var/image/template = placement_action.template
 		template.dir = turn(template.dir, 45)
-		template.color = placement_action.can_place(template.loc) ? COLOR_GREEN : COLOR_RED
+		template.color = placement_action.can_place(template.loc) ?  COLOR_RED : COLOR_GREEN
 	return TRUE
