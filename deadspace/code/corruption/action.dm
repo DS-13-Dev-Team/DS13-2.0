@@ -6,6 +6,7 @@
 	var/cost = 0
 	var/image/template
 	var/obj/structure/necromorph/place_structure = /obj/structure/necromorph
+	var/can_place_in_sight = TRUE
 	var/marker_only = FALSE
 
 /datum/action/cooldown/necro/corruption/New(Target, original, cooldown)
@@ -23,7 +24,8 @@
 /datum/action/cooldown/necro/corruption/unset_click_ability(mob/on_who, refund_cooldown)
 	.=..()
 	owner.mouse_move_intercept = null
-	owner.client.images -= template
+	//Gotta check if client is still there because unset is also called in Logout()
+	owner.client?.images -= template
 	template.loc = null
 
 /datum/action/cooldown/necro/corruption/InterceptClickOn(mob/living/caller, params, atom/target)
@@ -42,16 +44,10 @@
 		to_chat(signal, span_warning("Not enough biomass!"))
 		return TRUE
 	var/turf/target_turf = get_turf(target)
-	if(!target_turf.necro_corrupted)
-		to_chat(signal, span_warning("Turf isn't corrupted!"))
-		return
-	if(locate(/obj/structure/necromorph) in target_turf)
-		to_chat(signal, span_warning("There is another structure on this turf!"))
-		return
-	for(var/atom/movable/movable as anything in target_turf)
-		if(movable.density)
-			to_chat(signal, span_warning("Turf is obstructed!"))
-			return
+	var/result_message = can_place(target_turf)
+	if(result_message)
+		to_chat(signal, span_warning(result_message))
+		return TRUE
 	if(istype(signal, /mob/camera/marker_signal/marker))
 		signal.marker.change_marker_biomass(-cost)
 	else
@@ -64,15 +60,24 @@
 /datum/action/cooldown/necro/corruption/proc/mouse_movement_intercepted(atom/intercepted)
 	var/turf/turf_loc = get_turf(intercepted)
 	template.loc = turf_loc
-	template.color = can_place(turf_loc) ? COLOR_GREEN : COLOR_RED
+	template.color = can_place(turf_loc) ? COLOR_RED : COLOR_GREEN
 
+//Returns a string on fail. Otherwise - null
 /datum/action/cooldown/necro/corruption/proc/can_place(turf/turf_loc)
-	if(!turf_loc || turf_loc.density)
-		return
-	if(!turf_loc.necro_corrupted || locate(/obj/structure/necromorph) in turf_loc)
-		return
+	if(!turf_loc)
+		return "No turf selected!"
+	if(turf_loc.density)
+		return "Turf is obstructed!"
+	if(!turf_loc.necro_corrupted)
+		return "Turf isn't corrupted!"
+	if(locate(/obj/structure/necromorph) in turf_loc)
+		return "There is another necromorph structure on this turf!"
 	//Remove this loop if it causes too much lag when hovering over a pile of items
 	for(var/atom/movable/movable as anything in turf_loc)
 		if(movable.density)
-			return
-	return TRUE
+			return "Turf is obstructed!"
+	if(!can_place_in_sight)
+		for(var/mob/living/living in viewers(world.view, turf_loc))
+			if(!isnecromorph(living) && (living.stat < UNCONSCIOUS) && !HAS_TRAIT(living, TRAIT_BLIND))
+				return "Turf is in sight of a living creature!"
+	return

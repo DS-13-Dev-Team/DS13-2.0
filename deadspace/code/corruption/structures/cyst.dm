@@ -74,15 +74,22 @@
 	button_icon_state = "cyst"
 	place_structure = /obj/structure/necromorph/cyst
 	cost = 15
+	can_place_in_sight = FALSE
 
 /datum/action/cooldown/necro/corruption/cyst/can_place(turf/turf_loc)
-	if(!..())
-		return
-	for(var/dir in GLOB.cardinals)
-		if(template.dir & dir)
-			var/turf/T = get_step(turf_loc, turn(dir, 180))
-			if(!T?.density)
-				return
-	return TRUE
+	.=..()
+	if(.)
+		return .
+	for(var/direction in GLOB.cardinals)
+		if(direction & ~REVERSE_DIR(template.dir))
+			continue
+		var/turf/T = get_step(turf_loc, direction)
+		if(T?.density)
+			continue
+		T = get_step(turf_loc, REVERSE_DIR(template.dir))
+		if(T?.density)
+			return
+		return "You need a wall behind you to place a cyst."
+	return
 
 #undef CYST_SHOOT_ANGLE
