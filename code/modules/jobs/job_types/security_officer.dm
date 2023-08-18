@@ -215,7 +215,7 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	belt = /obj/item/modular_computer/tablet/pda/security
 	ears = /obj/item/radio/headset/headset_sec/alt
 	gloves = /obj/item/clothing/gloves/combat/pcsi
-	head = /obj/item/clothing/head/helmet/pcsi
+	head = /obj/item/clothing/head/helmet/sec/pcsi
 	shoes = /obj/item/clothing/shoes/combat/pcsi
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
