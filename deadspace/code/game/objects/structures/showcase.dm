@@ -1,4 +1,4 @@
-/obj/structure/marker
+/obj/structure/marker_fake
 	name = "Marker"
 	desc = "A perfect showcase of the artifact known as Red Marker."
 	icon = 'deadspace/icons/obj/marker_giant.dmi'
