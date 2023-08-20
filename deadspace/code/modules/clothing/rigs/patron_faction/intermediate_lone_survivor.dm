@@ -34,8 +34,8 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/intermediate_engineer_engineer_survivor
-	theme = /datum/mod_theme/deadspace/intermediate_engineer_engineer_survivor
+/obj/item/mod/control/pre_equipped/ds/intermediate_engineer_survivor
+	theme = /datum/mod_theme/deadspace/intermediate_engineer_survivor
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
