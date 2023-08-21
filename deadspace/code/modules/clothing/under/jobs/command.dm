@@ -1,6 +1,6 @@
 /obj/item/clothing/under/rank/captain/ds_captain
 	name = "captain's uniform"
-	desc = "A neatly pressed, blue uniform with navy blue patches on each shoulder and pure gold cuffs. Looks fancy!"
+	desc = "A neatly pressed, blue uniform with pure gold cuffs. Looks fancy!"
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
 	icon_state = "ds_captain"
@@ -8,7 +8,7 @@
 
 /obj/item/clothing/under/rank/civilian/ds_firstlieutenant
 	name = "first lieutenant's uniform"
-	desc = "A neatly pressed, blue uniform with dark, green patches on each shoulder and gold cuffs with green highlights. Looks fancy!"
+	desc = "A neatly pressed, blue uniform with silver cuffs. Looks fancy!"
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
 	icon_state = "ds_firstlieutenant"
