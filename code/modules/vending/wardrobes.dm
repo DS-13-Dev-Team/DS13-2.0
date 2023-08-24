@@ -86,7 +86,7 @@
 					/obj/item/storage/backpack/satchel/eng = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/engineering = 3,
 					/obj/item/clothing/under/rank/engineering/ds_engineer = 3,
-					/obj/item/clothing/under/rank/engineering/ds_rigshirt = 3,
+					/obj/item/clothing/under/rank/engineering/ds_rigsuit = 3,
 					/obj/item/clothing/suit/hazardvest = 3,
 					/obj/item/clothing/shoes/workboots/engineer = 3,
 					/obj/item/clothing/head/beret/engi = 3,

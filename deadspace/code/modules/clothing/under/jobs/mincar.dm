@@ -22,7 +22,7 @@
 	icon_state = "cargo_jumpsuit"
 
 /obj/item/clothing/under/rank/cargo/ds_flightdeck
-	name = "flight deck's uniform"
+	name = "flight deck uniform"
 	desc = "A green uniform issued to the flight deck crew."
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
