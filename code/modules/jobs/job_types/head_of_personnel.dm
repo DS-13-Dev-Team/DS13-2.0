@@ -71,7 +71,7 @@
 	)
 	belt = /obj/item/modular_computer/tablet/pda/heads/hop
 	ears = /obj/item/radio/headset/heads/hop
-	head = /obj/item/clothing/head/hopcap
+	head = /obj/item/clothing/head/hopcap/cec
 	shoes = /obj/item/clothing/shoes/sneakers/black
 
 	chameleon_extras = list(
