@@ -21,7 +21,7 @@
 /area/station/hallway/primary/central/aft)
 "ag" = (
 /obj/machinery/door/airlock/command{
-	dir = 8;
+	dir = 1;
 	name = "Bridge"
 	},
 /obj/structure/cable,
@@ -882,7 +882,7 @@
 /area/station/security/detectives_office)
 "mF" = (
 /obj/machinery/door/airlock/command{
-	dir = 8;
+	dir = 1;
 	name = "Bridge"
 	},
 /obj/machinery/door/firedoor,
@@ -930,9 +930,8 @@
 /area/station/command/heads_quarters/hos)
 "nC" = (
 /obj/machinery/door/airlock/command{
-	dir = 4;
-	name = "Plaza Balcony";
-	req_access = list()
+	dir = 1;
+	name = "Plaza Balcony"
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/hallway/primary/central/aft)
@@ -1004,9 +1003,8 @@
 /area/station/command/bridge)
 "qd" = (
 /obj/machinery/door/airlock/command{
-	dir = 4;
-	name = "Plaza Balcony";
-	req_access = list()
+	dir = 1;
+	name = "Plaza Balcony"
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)
@@ -1301,8 +1299,9 @@
 /area/station/command/heads_quarters/captain/private)
 "xk" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/command{
-	name = "Bridge"
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge";
+	req_access_txt = "19"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "window command hallway"
@@ -1327,8 +1326,9 @@
 /area/station/security/brig/upper)
 "xA" = (
 /obj/machinery/door/airlock/command{
-	dir = 4;
-	name = "Colony Director's Office"
+	dir = 1;
+	name = "Colony Director's Office";
+	req_access_txt = "20"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -1427,8 +1427,9 @@
 /area/station/hallway/primary/central/aft)
 "za" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/command{
-	name = "Bridge"
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge";
+	req_access_txt = "19"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "window command hallway"
@@ -1503,7 +1504,7 @@
 /area/station/command/bridge)
 "AC" = (
 /obj/machinery/door/airlock/security{
-	dir = 4;
+	dir = 1;
 	name = "P-Sec Upper Storage Room"
 	},
 /obj/structure/cable,
@@ -1588,7 +1589,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/security{
-	dir = 4;
+	dir = 1;
 	name = "P-Sec Upper Hallway"
 	},
 /turf/open/floor/iron/dark,
@@ -1599,7 +1600,7 @@
 /area/station/security/brig/upper)
 "Dw" = (
 /obj/machinery/door/airlock/security{
-	dir = 4;
+	dir = 1;
 	name = "P-Sec Commander Office"
 	},
 /obj/machinery/door/firedoor{
@@ -1672,8 +1673,9 @@
 /area/station/command/bridge)
 "Fd" = (
 /obj/machinery/door/airlock/command{
-	dir = 4;
-	name = "First Lieutenant's Office"
+	dir = 1;
+	name = "First Lieutenant's Office";
+	req_access_txt = "57"
 	},
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hop)
@@ -1738,8 +1740,9 @@
 /area/station/command/heads_quarters/captain/private)
 "Gz" = (
 /obj/machinery/door/airlock/command{
-	dir = 4;
-	name = "First Lieutenant's Office"
+	dir = 1;
+	name = "First Lieutenant's Office";
+	req_access_txt = "57"
 	},
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -1903,7 +1906,7 @@
 /area/station/command/bridge)
 "JC" = (
 /obj/machinery/door/airlock/command{
-	dir = 8;
+	dir = 1;
 	name = "Bridge"
 	},
 /obj/machinery/door/poddoor{
@@ -1938,8 +1941,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance{
-	dir = 4;
-	req_access = list(1,11)
+	dir = 1;
+	req_access_txt = "19"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "Maints Lockdown"
@@ -2059,7 +2062,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/security{
-	dir = 4;
+	dir = 1;
 	name = "P-Sec Upper Hallway"
 	},
 /obj/structure/cable,
@@ -2424,7 +2427,7 @@
 "Ye" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	req_access = list(1,11)
+	req_access_txt = "19"
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -2450,7 +2453,7 @@
 "YY" = (
 /obj/machinery/door/airlock/command{
 	name = "Colony Director's Quarters";
-	req_access = list(100)
+	req_access_txt = "20"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/hardwood,

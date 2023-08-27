@@ -11544,6 +11544,8 @@
 	dir = 4
 	},
 /obj/machinery/light/floor/has_bulb,
+/obj/structure/table/wood/fancy,
+/obj/item/candle,
 /turf/open/floor/wood,
 /area/station/service/chapel)
 "gKN" = (
@@ -12209,6 +12211,8 @@
 	dir = 8
 	},
 /obj/machinery/light/floor/has_bulb,
+/obj/structure/table/wood/fancy,
+/obj/item/candle,
 /turf/open/floor/wood,
 /area/station/service/chapel)
 "hph" = (
@@ -12528,6 +12532,7 @@
 /area/station/service/hydroponics)
 "hzY" = (
 /obj/structure/railing,
+/obj/structure/table/wood/fancy,
 /turf/open/floor/wood,
 /area/station/service/chapel)
 "hAc" = (
