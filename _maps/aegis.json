@@ -1,0 +1,84 @@
+{
+    "version": 1,
+    "map_name": "Aegis VII",
+    "map_path": "map_files/AegisVII",
+    "map_file": [
+		"AegisVII_Low.dmm",
+		"AegisVII_Middle.dmm",
+		"AegisVII_High.dmm"
+	],
+    "space_ruin_levels": 0,
+    "space_empty_levels": 0,
+    "planetary": 1,
+    "shuttles": {
+        "cargo": "cargo_aegis",
+        "emergency": "emergency_aegis1"
+    },
+    "traits": [
+        {
+            "Up": 1,
+            "Linkage": null,
+            "Gravity": true,
+            "Lava Ruins": true,
+            "Baseturf": "/turf/open/misc/asteroid",
+			"Weather_Ashstorm": null,
+            "No Parallax": true
+        },
+        {
+            "Down": -1,
+            "Up": 1,
+            "Linkage": null,
+            "Gravity": true,
+            "Lava Ruins": true,
+            "Baseturf": "/turf/open/openspace",
+			"Weather_Ashstorm": null,
+            "No Parallax": true
+        },
+        {
+            "Down": -1,
+            "Linkage": null,
+            "Gravity": true,
+            "Lava Ruins": true,
+            "Baseturf": "/turf/open/openspace",
+			"Weather_Ashstorm": null,
+            "No Parallax": true
+        }
+    ],
+    "minetype": "none",
+    "blacklist_file": "lavaruinblacklist.txt",
+    "job_changes": {
+		"assistant": {
+			"total_positions": 0
+		},
+		"atmospheric_technician": {
+			"total_positions": 0
+		},
+		"ai": {
+			"total_positions": 0
+		},
+		"clown": {
+			"total_positions": 0
+		},
+		"geneticist": {
+			"total_positions": 0
+		},
+		"curator": {
+			"total_positions": 0
+		},
+		"mime": {
+			"total_positions": 0
+		},
+		"prisoner": {
+			"total_positions": 0
+		},
+		"virologist": {
+			"total_positions": 0
+		},
+		"cook":{
+			"additional_cqc_areas": ["/area/station/service/bar", "/area/station/service/kitchen/coldroom", "/area/station/commons/lounge"]
+		},
+        "captain": {
+            "special_charter": "Aegis"
+        }
+    }
+}

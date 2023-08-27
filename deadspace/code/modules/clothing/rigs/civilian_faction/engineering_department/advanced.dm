@@ -3,6 +3,9 @@
 	desc = "Exclusive only to upper class engineers who have passed rigorous training and performed multiple repairs in hostile environments."
 	default_skin = "advanced_engineer"
 	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 80, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	resistance_flags = FIRE_PROOF
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	siemens_coefficient = 0
 	complexity_max = 25
 
 	skins = list(

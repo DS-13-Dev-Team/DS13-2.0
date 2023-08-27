@@ -3,6 +3,9 @@
 	desc = "An extremely bulky, durable vintage suit that has mostly been replaced by sleeker modern designs. Some collectors still value the good old days though."
 	default_skin = "vintage"
 	armor = list(MELEE = 66.5, BULLET = 70, LASER = 57.5, ENERGY = 25, BOMB = 90, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	resistance_flags = FIRE_PROOF
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	siemens_coefficient = 0
 	complexity_max = 25
 
 	skins = list(

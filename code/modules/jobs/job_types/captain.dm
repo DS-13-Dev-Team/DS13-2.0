@@ -103,7 +103,6 @@
 	if(!special_charter)
 		return
 	backpack_contents.Remove(/obj/item/station_charter)
-	l_hand = /obj/item/station_charter/banner
 
 /datum/outfit/job/captain/post_equip(mob/living/carbon/human/equipped, visualsOnly)
 	. = ..()
