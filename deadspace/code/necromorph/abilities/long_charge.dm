@@ -35,7 +35,7 @@
 	RegisterSignal(charger, COMSIG_MOVABLE_MOVED, PROC_REF(update_charging))
 	RegisterSignal(charger, COMSIG_ATOM_DIR_CHANGE, PROC_REF(on_dir_change))
 	if(verbose)
-		to_chat(charger, span_notice("We will charge when moving, now."))
+		to_chat(charger, span_notice("Now you will charge when moving."))
 
 /datum/action/cooldown/necro/long_charge/proc/charge_off(verbose = TRUE)
 	var/mob/living/carbon/human/necromorph/charger = owner
@@ -43,7 +43,7 @@
 		do_stop_momentum()
 	UnregisterSignal(charger, list(COMSIG_MOVABLE_MOVED, COMSIG_ATOM_DIR_CHANGE))
 	if(verbose)
-		to_chat(charger, span_notice("We will no longer charge when moving."))
+		to_chat(charger, span_notice("You will no longer charge when moving."))
 	valid_steps_taken = 0
 	charge_ability_on = FALSE
 

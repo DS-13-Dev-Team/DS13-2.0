@@ -16,7 +16,7 @@
 	cooldown_time = 8 SECOND
 	var/atom/movable/user		//The mob or thing doing the slam attack
 	var/turf/epicentre			//The turf we've targeted with the slam
-	var/damage	=	40			//Base damage dealt
+	var/damage = 40				//Base damage dealt
 	var/power = 1				//Used for damage to atoms
 	var/down_factor = 2			//Base damage is multiplied by this on lying targets
 	var/weaken_time = 3			//Number of life ticks victims are weakened (knocked down) for. A life tick is generally 1 second
@@ -44,7 +44,7 @@
 	if (owner.incapacitated())
 		return FALSE
 
-	. = ..()
+	return ..()
 
 /datum/action/cooldown/necro/slam/Activate(atom/target)
 	StartCooldown()

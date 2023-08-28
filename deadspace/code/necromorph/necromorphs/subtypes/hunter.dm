@@ -48,7 +48,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 16
 	actions = list(
-		/datum/action/cooldown/necro/charge/lunge/hunter = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
+		/datum/action/cooldown/necro/swing/hunter = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
 		/datum/action/cooldown/necro/taunt/hunter = COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN,
 		/datum/action/cooldown/necro/regenerate/hunter = COMSIG_KB_NECROMORPH_ABILITY_THREE_DOWN,
 		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN,
@@ -97,67 +97,20 @@
 	. = ..()
 	target_necro.play_necro_sound(SOUND_PAIN, VOLUME_HIGH, 1, 3)
 
-/datum/action/cooldown/necro/charge/lunge/hunter
+/datum/action/cooldown/necro/swing/hunter
 	name = "Hookblade"
 	desc = "A shortrange charge with a swing at the end, pulling in all enemies it hits."
+	visual_type = /obj/effect/temp_visual/swing/hunter
 
-/*
-/datum/action/cooldown/necro/charge/lunge/hunter/peter_out_effects()
-	set waitfor = FALSE
-	var/mob/living/carbon/human/necromorph/N = owner
-	N.hookblade_swing(target_atom)
-*/
+/datum/action/cooldown/necro/swing/hunter/windup()
+	var/mob/living/carbon/human/necromorph/necromorph = owner
+	necromorph.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 2)
+	return ..()
 
-/datum/action/cooldown/necro/charge/lunge/hunter/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
-	set waitfor = FALSE
-	var/mob/living/carbon/human/necromorph/N = owner
-	N.hookblade_swing(target)
-
-/*--------------------------------
-	Arm Swing
---------------------------------*/
-
-/mob/living/carbon/human/necromorph/proc/hookblade_swing(atom/target)
-
-	if (!target)
-		target = dir
-
-	//Okay lets actually start the swing
-	. = swing_attack(/datum/component/swing/arm/hunter, target)
-
-	if (.)
-		play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 2)
-		var/sound_effect = pick(list('deadspace/sound/effects/attacks/big_swoosh_1.ogg',
-									'deadspace/sound/effects/attacks/big_swoosh_2.ogg',
-									'deadspace/sound/effects/attacks/big_swoosh_3.ogg',))
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), src, sound_effect, VOLUME_LOW, TRUE), 0.8 SECONDS)
-
-//Component subtype
-/datum/component/swing/arm/hunter
-	left = /obj/effect/temp_visual/swing/hunter_left
-	right = /obj/effect/temp_visual/swing/hunter_right
-
-	offsets_left = list(S_NORTH = new /datum/position(-52, -12), S_SOUTH = new /datum/position(-32, -16), S_EAST = new /datum/position(-42, -14), S_WEST = new /datum/position(-40, -10))
-	offsets_right = list(S_NORTH = new /datum/position(-36, -12), S_SOUTH = new /datum/position(-56, -18), S_EAST = new /datum/position(-42, -8), S_WEST = new /datum/position(-46, -6))
-
-
-
-//Swing FX
-/obj/effect/temp_visual/swing/hunter_left
-	icon_state = "hunter_left"
-
-/obj/effect/temp_visual/swing/hunter_right
-	icon_state = "hunter_right"
-
-//At the end of the windup, just before we start, we'll set the user's density to false
-/datum/component/swing/arm/hunter/windup_animation()
-	.=..()
-	parent:density = FALSE
-
-/datum/component/swing/arm/hunter/hit_mob(mob/living/L)
+/datum/action/cooldown/necro/swing/hunter/hit_mob(mob/living/L)
 	. = ..()
 	if (.)
-		var/fling_dir = pick(GLOB.cardinals - ((parent:dir & (NORTH|SOUTH)) ? list(NORTH, SOUTH) : list(EAST, WEST)))
+		var/fling_dir = pick(GLOB.cardinals - ((owner.dir & (NORTH|SOUTH)) ? list(NORTH, SOUTH) : list(EAST, WEST)))
 		var/fling_dist = 2
 		var/turf/destination = L.loc
 		var/turf/temp
@@ -168,11 +121,12 @@
 				break
 			destination = temp
 		if(destination != L.loc)
-			L.throw_at(destination, fling_dist, 1, parent, TRUE)
+			L.throw_at(destination, fling_dist, 1, owner, TRUE)
 
-/datum/component/swing/arm/hunter/cleanup_effect()
-	. = ..()
-	addtimer(CALLBACK(parent, TYPE_PROC_REF(/atom/, set_density), TRUE), 15)
+/obj/effect/temp_visual/swing/hunter
+	base_icon_state = "hunter"
+	icon_state = "hunter_left"
+	variable_icon = TRUE
 
 /datum/action/cooldown/necro/taunt/hunter
 	desc = "Provides a defensive buff to the hunter, and a larger one to his allies."

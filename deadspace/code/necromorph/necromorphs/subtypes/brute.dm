@@ -69,7 +69,7 @@
 	id = SPECIES_NECROMORPH_BRUTE
 	burnmod = 0.75
 	stunmod = 0.15
-	speedmod = 2
+	speedmod = 4
 	species_mob_size = MOB_SIZE_LARGE
 	special_step_sounds = list(
 		'deadspace/sound/effects/footstep/brute_step_1.ogg',

@@ -5,35 +5,42 @@
 	desc = "Absorbs all pieces of biological matter within a two tile radius of the target location. Only works on or near corruption, or in sight of the marker"
 	cost = 10
 
-/datum/action/cooldown/necro/psy/absorb/PreActivate(turf/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/absorb/PreActivate(turf/target)
+	var/mob/camera/marker_signal/caller = owner
 	target = get_turf(target)
 	if(!target)
 		return FALSE
 	if(target.necro_corrupted)
 		return ..()
+	if(IN_GIVEN_RANGE(target, caller.marker, 5) && can_see(target, caller.marker, 5))
+		return ..()
 	for(var/turf/neraby as anything in RANGE_TURFS(2, target))
 		if(neraby.necro_corrupted)
 			return ..()
-	if(IN_GIVEN_RANGE(target, caller.marker, 6) && can_see(target, caller.marker, 6))
-		return ..()
-	to_chat(target, span_warning("Biomass may only be claimed when the target is <b>near the marker, or corruption</b>"))
+	to_chat(caller, span_warning("Biomass may only be claimed when the target is <b>near the marker, or corruption</b>"))
 	return FALSE
 
-/datum/action/cooldown/necro/psy/absorb/Activate(turf/target, mob/camera/marker_signal/caller)
+/datum/action/cooldown/necro/psy/absorb/Activate(turf/target)
+	var/mob/camera/marker_signal/caller = owner
 	target = get_turf(target)
 	var/absorbed_biomass = 0
 	var/list/absorbed_atoms = list()
-	for(var/obj/item/item in view(2, target))
-		if(item.biomass)
-			absorbed_biomass += item.biomass
-			absorbed_atoms += item
-		if(item.reagents?.flags & OPENCONTAINER)
-			for(var/datum/reagent/consumable/reagent in item.reagents.reagent_list)
+	FOR_DVIEW(var/obj/thing, 2, target, INVISIBILITY_LIGHTING)
+		if(thing.biomass)
+			absorbed_biomass += thing.biomass
+			absorbed_atoms += thing
+		if(thing.is_drainable() || istype(thing, /obj/item/food))
+			for(var/datum/reagent/consumable/reagent in thing.reagents.reagent_list)
 				absorbed_biomass += reagent.nutriment_factor * NUTRIMENTS_TO_BIOMASS_MULTIPLIER
-				item.reagents.remove_reagent(reagent.type, reagent.volume)
+				thing.reagents.remove_reagent(reagent.type, reagent.volume)
+
+			//default value from 1.0
+			absorbed_biomass += thing.reagents.get_reagent_amount(/datum/reagent/blood) * 0.01
+
 			//If it is food and wasn't added to the list before
-			if(istype(item, /obj/item/food) && !item.biomass)
-				absorbed_atoms += item
+			if(!thing.biomass && istype(thing, /obj/item/food))
+				absorbed_atoms += thing
+	FOR_DVIEW_END
 
 	if(!absorbed_biomass)
 		to_chat(caller, span_warning("No things containing asborbable biomass found."))
