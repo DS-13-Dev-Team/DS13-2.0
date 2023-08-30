@@ -1022,7 +1022,6 @@
 /area/station/security/detectives_office)
 "qy" = (
 /obj/machinery/door/airlock/security{
-	dir = 2;
 	name = "P-Sec Commander Quarters"
 	},
 /obj/machinery/door/firedoor,
@@ -1634,7 +1633,6 @@
 "DJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
-	dir = 2;
 	name = "P-Sec Commanding Office"
 	},
 /obj/structure/cable,

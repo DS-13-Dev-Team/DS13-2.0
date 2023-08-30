@@ -740,7 +740,6 @@
 "anc" = (
 /obj/structure/sink{
 	dir = 8;
-	icon_state = "sink";
 	pixel_x = 11
 	},
 /obj/item/reagent_containers/glass/bucket,
@@ -3256,7 +3255,6 @@
 "aRE" = (
 /obj/machinery/firealarm{
 	dir = 4;
-	icon_state = "fire0";
 	pixel_x = 20
 	},
 /obj/structure/disposalpipe/segment,
@@ -4119,9 +4117,7 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/cryo)
 "bcS" = (
-/obj/machinery/cryopod{
-	dir = 2
-	},
+/obj/machinery/cryopod,
 /obj/effect/landmark/latejoin,
 /turf/open/floor/iron/freezer,
 /area/station/commons/dorms/cryo)
@@ -4834,8 +4830,7 @@
 "blb" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Supermatter Engine Control Room";
-	req_access_txt = "10";
-	req_one_access_txt = "0"
+	req_access_txt = "10"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
@@ -5261,7 +5256,6 @@
 "boc" = (
 /obj/machinery/firealarm{
 	dir = 4;
-	icon_state = "fire0";
 	pixel_x = 20
 	},
 /turf/open/floor/deadspace/bathroom,
@@ -5310,7 +5304,6 @@
 "boD" = (
 /obj/machinery/firealarm{
 	dir = 4;
-	icon_state = "fire0";
 	pixel_x = 20
 	},
 /obj/structure/bed/pod{
@@ -7824,7 +7817,6 @@
 /area/station/science/robotics/lab)
 "doa" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/green/visible{
-	icon_state = "manifold-3";
 	dir = 4
 	},
 /turf/open/floor/iron/ported/techfloor_grid,
@@ -7997,7 +7989,6 @@
 /area/station/engineering/supermatter/room)
 "dyy" = (
 /obj/machinery/computer/atmos_control/engine{
-	icon_state = "computer";
 	dir = 4
 	},
 /turf/open/floor/iron,
@@ -8568,7 +8559,6 @@
 /area/lavaland/surface/outdoors)
 "ebQ" = (
 /obj/machinery/door/airlock/security{
-	dir = 2;
 	name = "P-Sec Lobby";
 	req_one_access = list()
 	},
@@ -9521,7 +9511,6 @@
 "eYn" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/caution{
-	icon_state = "caution";
 	dir = 1
 	},
 /turf/open/floor/iron/ported/techfloor,
@@ -10747,7 +10736,6 @@
 /area/station/cargo/warehouse/upper)
 "fYU" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/orange/visible{
-	icon_state = "manifold-3";
 	dir = 4
 	},
 /obj/machinery/meter,
@@ -11771,7 +11759,6 @@
 /area/shuttle/shuttle_arena)
 "gVL" = (
 /obj/structure/chair/stool{
-	icon_state = "stool";
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -14230,14 +14217,12 @@
 "jki" = (
 /obj/effect/turf_decal/tile/red/opposingcorners,
 /obj/effect/turf_decal/tile/yellow/opposingcorners{
-	icon_state = "tile_opposing_corners";
 	dir = 1
 	},
 /obj/structure/window/reinforced/spawner/east,
 /obj/structure/window/reinforced/spawner/west,
 /obj/machinery/button/door{
 	id = "sm_core_vent";
-	id_tag = null;
 	name = "Core Vent Control";
 	pixel_y = 6
 	},
@@ -15100,7 +15085,6 @@
 /area/lavaland/surface/outdoors)
 "kdn" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
-	icon_state = "he1";
 	dir = 4
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -15402,7 +15386,6 @@
 /area/lavaland/surface/outdoors)
 "krV" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
-	icon_state = "he1";
 	dir = 4
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -16097,9 +16080,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/service/library)
 "kZM" = (
-/obj/machinery/cryopod{
-	dir = 2
-	},
+/obj/machinery/cryopod,
 /obj/effect/landmark/latejoin,
 /obj/machinery/computer/cryopod{
 	pixel_y = 28
@@ -16418,7 +16399,6 @@
 /area/lavaland/surface/outdoors)
 "lnQ" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
-	icon_state = "he1";
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -16452,7 +16432,6 @@
 /area/station/medical/surgery/theatre)
 "lpd" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
-	icon_state = "he1";
 	dir = 4
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -17457,11 +17436,11 @@
 /area/station/service/bar)
 "mmz" = (
 /obj/docking_port/stationary{
-	dwidth = 9;
-	height = 7;
+	dwidth = 6;
+	height = 8;
 	id = "aegis1_home";
 	name = "Aegis7 emergency evac bay 1";
-	width = 29;
+	width = 13;
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -17982,7 +17961,6 @@
 /area/station/service/chapel)
 "mSa" = (
 /obj/machinery/modular_computer/console/preset/engineering{
-	icon_state = "console";
 	dir = 4
 	},
 /turf/open/floor/iron,
@@ -18877,7 +18855,6 @@
 /area/shuttle/abandoned)
 "nIM" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
-	icon_state = "he1";
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -19880,8 +19857,8 @@
 	dir = 4
 	},
 /obj/docking_port/stationary{
-	dwidth = 7;
-	height = 6;
+	dwidth = 3;
+	height = 7;
 	id = "supply_home";
 	name = "Cargo Bay";
 	width = 7;
@@ -20424,7 +20401,6 @@
 "pjk" = (
 /obj/effect/turf_decal/trimline/green/line,
 /obj/effect/turf_decal/trimline/green/line{
-	icon_state = "trimline";
 	dir = 1
 	},
 /obj/structure/cable,
@@ -21962,7 +21938,6 @@
 	},
 /obj/effect/turf_decal/trimline/green/line,
 /obj/effect/turf_decal/trimline/green/line{
-	icon_state = "trimline";
 	dir = 1
 	},
 /obj/structure/cable,
@@ -21980,8 +21955,7 @@
 "qJL" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Supermatter Engine Control Room";
-	req_access_txt = "10";
-	req_one_access_txt = "0"
+	req_access_txt = "10"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -22180,7 +22154,6 @@
 /area/station/hallway/secondary/exit)
 "qYx" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/orange/visible{
-	icon_state = "manifold-3";
 	dir = 8
 	},
 /obj/machinery/light/small/directional/west,
@@ -23433,7 +23406,6 @@
 /area/station/engineering/break_room)
 "soB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/green/visible{
-	icon_state = "manifold-3";
 	dir = 4
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -23671,11 +23643,11 @@
 /area/station/science/lobby)
 "sBB" = (
 /obj/docking_port/stationary{
-	dwidth = 9;
-	height = 7;
+	dwidth = 6;
+	height = 8;
 	id = "aegis2_home";
 	name = "Aegis7 emergency evac bay 2";
-	width = 29;
+	width = 13;
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -25266,7 +25238,6 @@
 /area/station/hallway/primary/central)
 "ubj" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
-	icon_state = "he1";
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -27402,7 +27373,6 @@
 /area/station/hallway/secondary/exit)
 "weg" = (
 /obj/machinery/door/airlock/security{
-	dir = 2;
 	name = "P-Sec Receptionist";
 	req_one_access = list()
 	},
@@ -27772,7 +27742,6 @@
 /area/lavaland/surface/outdoors)
 "wyY" = (
 /obj/machinery/door/airlock/security{
-	dir = 2;
 	name = "P-Sec Lobby";
 	req_one_access = list()
 	},

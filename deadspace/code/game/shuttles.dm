@@ -35,3 +35,18 @@
 	prefix = "deadspace/maps/"
 	suffix = "mara"
 	name = "emergency shuttle (Mara 17)"
+
+/datum/map_template/shuttle/cargo/aegis
+	prefix = "deadspace/maps/"
+	suffix = "aegis"
+	name = "cargo ferry (Aegis VII)"
+
+/datum/map_template/shuttle/emergency/aegis_first
+	prefix = "deadspace/maps/"
+	suffix = "aegis1"
+	name = "emergency shuttle 1 (Aegis VII)"
+
+/datum/map_template/shuttle/emergency/aegis_second
+	prefix = "deadspace/maps/"
+	suffix = "aegis2"
+	name = "emergency shuttle 2 (Aegis VII)"
