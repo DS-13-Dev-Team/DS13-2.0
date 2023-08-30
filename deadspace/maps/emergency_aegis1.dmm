@@ -109,13 +109,11 @@
 /turf/open/floor/deadspace/random/slides,
 /area/shuttle/escape)
 "z" = (
-/obj/machinery/light/directional/south,
 /obj/structure/chair/comfy/shuttle{
-	dir = 4
+	dir = 8
 	},
-/turf/open/floor/deadspace/random/slides{
-	dir = 1
-	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/deadspace/random/slides,
 /area/shuttle/escape)
 "A" = (
 /obj/structure/chair/comfy/shuttle{
@@ -170,11 +168,13 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/shuttle/escape)
 "S" = (
-/obj/machinery/light/directional/south,
 /obj/structure/chair/comfy/shuttle{
-	dir = 8
+	dir = 4
 	},
-/turf/open/floor/deadspace/random/slides,
+/obj/machinery/light/directional/west,
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
 /area/shuttle/escape)
 "V" = (
 /turf/closed/wall/mineral/titanium,
@@ -225,8 +225,8 @@ p
 O
 O
 O
+S
 A
-z
 V
 D
 j
@@ -300,8 +300,8 @@ Y
 f
 f
 o
+z
 y
-S
 V
 J
 Q

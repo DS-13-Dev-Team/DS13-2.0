@@ -1096,7 +1096,6 @@
 /turf/open/floor/plating,
 /area/station/service/janitor)
 "ard" = (
-/obj/machinery/light/small/directional/north,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
 	},
@@ -1452,9 +1451,13 @@
 /turf/open/floor/grass,
 /area/station/service/hydroponics)
 "avD" = (
-/obj/machinery/door/window,
-/turf/open/floor/deadspace/random/rectangles,
-/area/mine/production)
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "garbage"
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/plating,
+/area/station/maintenance/disposal)
 "avJ" = (
 /obj/machinery/light/directional/south,
 /obj/structure/railing{
@@ -2196,8 +2199,8 @@
 /area/station/engineering/main)
 "aFB" = (
 /obj/machinery/conveyor{
-	id = "Storage Upper";
-	dir = 4
+	id = "Mining_Receiving";
+	dir = 8
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/production)
@@ -2687,6 +2690,10 @@
 	},
 /area/station/ai_monitored/security/armory)
 "aJV" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "garbage"
+	},
 /obj/machinery/door/poddoor/preopen{
 	id = "Disposal Exit";
 	name = "disposal exit vent"
@@ -3798,10 +3805,6 @@
 "aYL" = (
 /turf/open/floor/deadspace/bathroom,
 /area/station/commons/dorms/barracks)
-"aYM" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/deadspace/random/rectangles,
-/area/mine/living_quarters)
 "aYU" = (
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -4459,6 +4462,10 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced/spawner/east,
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "packageSort2"
+	},
 /turf/open/floor/plating,
 /area/station/cargo/storage)
 "bgb" = (
@@ -5392,9 +5399,15 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "bpl" = (
-/obj/machinery/mineral/stacking_machine,
-/turf/open/floor/deadspace/random/rectangles,
-/area/mine/production)
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "garbage"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/disposal)
 "bpt" = (
 /turf/open/floor/deadspace/grille_spare4,
 /area/mine/production)
@@ -5515,6 +5528,12 @@
 /obj/item/stack/ore/silver,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/production)
+"bqw" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron,
+/area/station/cargo/storage)
 "bqx" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 2
@@ -5605,8 +5624,8 @@
 /area/station/cargo/miningoffice)
 "brb" = (
 /obj/machinery/conveyor{
-	id = "Storage Upper";
-	dir = 4
+	id = "Mining_Receiving";
+	dir = 8
 	},
 /obj/structure/plasticflaps,
 /turf/open/floor/deadspace/random/rectangles,
@@ -5833,8 +5852,8 @@
 /area/station/engineering/supermatter/room)
 "buk" = (
 /obj/machinery/conveyor{
-	id = "Storage Upper";
-	dir = 8
+	id = "Mining_Receiving";
+	dir = 4
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/production)
@@ -7031,11 +7050,11 @@
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
 "cAE" = (
-/obj/machinery/conveyor{
-	id = "Storage Upper";
-	dir = 8
-	},
 /obj/structure/plasticflaps,
+/obj/machinery/conveyor{
+	id = "Mining_Receiving";
+	dir = 4
+	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/production)
 "cBm" = (
@@ -7642,6 +7661,10 @@
 /turf/open/floor/carpet/red,
 /area/shuttle/abandoned)
 "dcv" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "garbage"
+	},
 /obj/machinery/recycler,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
@@ -8169,6 +8192,10 @@
 	dir = 4;
 	name = "Crate Security Door";
 	req_access_txt = "50"
+	},
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "packageSort2"
 	},
 /turf/open/floor/plating,
 /area/station/cargo/storage)
@@ -9221,6 +9248,10 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "eEo" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "garbage"
+	},
 /obj/structure/sign/warning/vacuum{
 	pixel_x = -32
 	},
@@ -9379,11 +9410,12 @@
 /turf/open/misc/asteroid/snow,
 /area/station/science/breakroom)
 "ePF" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/iron,
-/area/station/cargo/storage)
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "garbage"
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/disposal)
 "ePT" = (
 /obj/structure/chair/stool/directional/south,
 /turf/open/floor/iron,
@@ -10036,6 +10068,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/unitology,
 /obj/effect/turf_decal/box,
+/obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "fsj" = (
@@ -10055,6 +10088,10 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "ftr" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "garbage"
+	},
 /obj/effect/spawner/random/trash/garbage{
 	spawn_loot_count = 3
 	},
@@ -10317,9 +10354,10 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "fFw" = (
-/obj/machinery/mineral/unloading_machine,
-/turf/open/floor/deadspace/random/rectangles,
-/area/mine/production)
+/mob/living/simple_animal/mouse,
+/obj/machinery/light/directional/east,
+/turf/open/misc/asteroid,
+/area/station/maintenance/disposal)
 "fFB" = (
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/commons/dorms)
@@ -10651,12 +10689,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
-"fTf" = (
-/obj/machinery/conveyor{
-	id = "Storage Upper"
-	},
-/turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
 "fTJ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -13521,6 +13553,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/egov,
 /obj/effect/turf_decal/box,
+/obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "iwG" = (
@@ -14200,9 +14233,14 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "jgx" = (
-/obj/machinery/light/small,
-/turf/open/floor/deadspace/random/rectangles,
-/area/mine/production)
+/obj/machinery/conveyor_switch/oneway{
+	id = "packageSort2";
+	name = "Disposal Conveyor";
+	pixel_x = -2;
+	pixel_y = 12
+	},
+/turf/open/floor/iron,
+/area/station/cargo/storage)
 "jgG" = (
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
@@ -15134,6 +15172,10 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/mine/storage)
 "kcz" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "garbage"
+	},
 /obj/effect/spawner/random/trash/garbage{
 	spawn_loot_count = 3;
 	spawn_scatter_radius = 1
@@ -18969,15 +19011,6 @@
 /obj/machinery/light/small/red,
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
-"nJz" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "packageSort2";
-	name = "Disposal Conveyor";
-	pixel_x = -2;
-	pixel_y = 12
-	},
-/turf/open/floor/iron,
-/area/station/cargo/storage)
 "nJG" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -20241,12 +20274,12 @@
 /turf/open/floor/carpet/red,
 /area/station/service/chapel)
 "oVI" = (
-/obj/machinery/door/window,
-/obj/machinery/mineral/stacking_unit_console{
-	pixel_x = -32
+/obj/effect/spawner/random/trash/garbage{
+	spawn_loot_count = 3
 	},
-/turf/open/floor/deadspace/random/rectangles,
-/area/mine/production)
+/obj/machinery/light/directional/south,
+/turf/open/misc/asteroid,
+/area/station/maintenance/disposal)
 "oVK" = (
 /obj/effect/landmark/navigate_destination/court,
 /turf/open/floor/deadspace/random/maint_center,
@@ -21108,7 +21141,7 @@
 /area/station/engineering/supermatter/room)
 "pML" = (
 /obj/machinery/conveyor_switch/oneway{
-	id = "Mining Upper"
+	id = "Mining_Receiving"
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/production)
@@ -21192,6 +21225,7 @@
 /area/station/commons/dorms/barracks)
 "pSy" = (
 /obj/machinery/holopad,
+/mob/living/simple_animal/sloth/citrus,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "pSB" = (
@@ -21510,6 +21544,7 @@
 /area/station/hallway/primary/central)
 "qiV" = (
 /obj/machinery/camera/directional/north,
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -21615,10 +21650,10 @@
 /turf/open/floor/deadspace/mono,
 /area/station/hallway/primary/central)
 "qmC" = (
-/obj/machinery/light/small/directional/north,
-/obj/structure/cable,
+/obj/machinery/light/small,
+/obj/structure/ore_box,
 /turf/open/floor/deadspace/random/rectangles,
-/area/mine/living_quarters)
+/area/mine/production)
 "qmG" = (
 /obj/structure/chair/pew/right{
 	dir = 1
@@ -21687,6 +21722,10 @@
 /area/station/hallway/primary/port)
 "qqq" = (
 /obj/machinery/light/small/directional/west,
+/obj/machinery/conveyor{
+	dir = 9;
+	id = "garbage"
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "qqE" = (
@@ -25315,6 +25354,12 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
+"tUs" = (
+/obj/machinery/conveyor{
+	id = "Storage Upper"
+	},
+/turf/open/floor/deadspace/roller,
+/area/lavaland/surface/outdoors)
 "tUQ" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -29305,7 +29350,10 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 4
 	},
-/mob/living/simple_animal/pet/cat/runtime,
+/mob/living/simple_animal/pet/cat/space{
+	dir = 8;
+	name = "Kapu"
+	},
 /obj/item/toy/cattoy,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/cmo)
@@ -29758,7 +29806,7 @@
 /area/station/hallway/primary/central)
 "yfb" = (
 /obj/machinery/conveyor_switch/oneway{
-	id = "Mining Upper"
+	id = "Mining_Receiving"
 	},
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/grater,
@@ -50483,7 +50531,7 @@ qdd
 oHb
 hpS
 lUK
-rSS
+fFw
 hpS
 lUK
 rLH
@@ -51091,7 +51139,7 @@ jZE
 jZE
 jZE
 ftr
-mok
+bpl
 rxj
 mlO
 mlO
@@ -51286,14 +51334,14 @@ fga
 cjU
 bzn
 rSS
-rLH
+oVI
 jZE
 gQo
 dvK
 dHr
 kQg
-mok
-mok
+ePF
+avD
 rxj
 mlO
 mlO
@@ -51906,7 +51954,7 @@ cou
 rLO
 uop
 aSn
-nJz
+jgx
 aQy
 qQr
 hdQ
@@ -52299,7 +52347,7 @@ aYC
 lwL
 lwL
 jBP
-ePF
+bqw
 mwn
 aWB
 aWB
@@ -57546,7 +57594,7 @@ gbG
 lqb
 ecR
 dfE
-aYM
+aLy
 arT
 avP
 chI
@@ -58152,7 +58200,7 @@ arK
 aKW
 ecR
 dfE
-qmC
+vEz
 arT
 erz
 ttA
@@ -59169,7 +59217,7 @@ sdm
 sdm
 sdm
 sdm
-sdm
+mlO
 mlO
 mlO
 mlO
@@ -59369,9 +59417,9 @@ kBt
 aiV
 bqu
 xcc
-bpl
-xcc
+aAd
 sdm
+mlO
 mlO
 mlO
 mlO
@@ -59570,10 +59618,10 @@ xcc
 bpt
 bpt
 bpt
-bpt
+xcc
+aAd
 sdm
-jgx
-sdm
+mlO
 mlO
 mlO
 mlO
@@ -59770,12 +59818,12 @@ xZE
 kNw
 xcc
 xcc
-aAd
-aAd
 xcc
-oVI
 xcc
+xcc
+aAd
 sdm
+mlO
 mlO
 mlO
 mlO
@@ -59971,13 +60019,13 @@ aKW
 xZE
 sdm
 gUG
-bpt
-bpt
-bpt
-bpt
+xcc
+xcc
+xcc
+xcc
+aAd
 sdm
-axB
-sdm
+mlO
 mlO
 mlO
 mlO
@@ -60174,12 +60222,12 @@ nSp
 beX
 qMf
 xcc
-aAd
-aAd
+axB
 xcc
-avD
 xcc
+aAd
 sdm
+mlO
 mlO
 mlO
 mlO
@@ -60376,12 +60424,12 @@ xZE
 sdm
 hra
 xcc
-aAd
-aAd
 xcc
-kNw
 xcc
+xcc
+aAd
 sdm
+mlO
 mlO
 mlO
 mlO
@@ -60580,10 +60628,10 @@ fXB
 bpt
 bpt
 bpt
-bpt
-kNw
-jgx
+xcc
+qmC
 sdm
+mlO
 mlO
 mlO
 mlO
@@ -60783,9 +60831,9 @@ xcc
 pML
 xcc
 xcc
-fFw
-xcc
+aAd
 sdm
+mlO
 mlO
 mlO
 mlO
@@ -60987,7 +61035,7 @@ cAE
 sdm
 sdm
 sdm
-sdm
+mlO
 mlO
 mlO
 mlO
@@ -67224,9 +67272,9 @@ bre
 usW
 hYH
 hYH
-hYH
-hYH
-hYH
+jvc
+jvc
+wwe
 hYH
 sTf
 usW
@@ -67425,11 +67473,11 @@ yfI
 yfI
 ixk
 yfI
-yfI
-yfI
-yfI
-yfI
-yfI
+vba
+dpV
+dpV
+dpV
+lVs
 yfI
 yfI
 yfI
@@ -67602,7 +67650,7 @@ oHb
 oNc
 kkj
 uvo
-fTf
+tUs
 bqn
 hev
 hev
@@ -67829,11 +67877,11 @@ yfI
 yfI
 ixk
 yfI
-yfI
-yfI
-yfI
-yfI
-yfI
+vba
+lxc
+lxc
+lxc
+lVs
 yfI
 yfI
 yfI
@@ -68031,11 +68079,11 @@ aCD
 aCD
 usW
 fYI
-wYy
-wYy
-wYy
-wYy
-wYy
+usW
+kSz
+atv
+cOt
+usW
 wYy
 usW
 wYy

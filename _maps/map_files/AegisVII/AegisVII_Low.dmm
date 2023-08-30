@@ -558,12 +558,11 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/warehouse)
 "ex" = (
-/obj/machinery/conveyor/auto{
-	dir = 4;
-	id = "Lower Marker Conveyor";
-	name = "conveyor"
-	},
 /obj/structure/cable,
+/obj/machinery/conveyor{
+	id = "Lower Marker Conveyor";
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "ey" = (
@@ -1436,10 +1435,9 @@
 /area/station/maintenance/fore/lesser)
 "kP" = (
 /obj/structure/barricade/wooden,
-/obj/machinery/conveyor/auto{
-	dir = 4;
+/obj/machinery/conveyor{
 	id = "Lower Marker Conveyor";
-	name = "conveyor"
+	dir = 4
 	},
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
@@ -1600,10 +1598,9 @@
 /turf/open/floor/deadspace/hardwood,
 /area/station/maintenance/port/lesser)
 "mk" = (
-/obj/machinery/conveyor/auto{
-	dir = 4;
+/obj/machinery/conveyor{
 	id = "Lower Marker Conveyor";
-	name = "conveyor"
+	dir = 4
 	},
 /turf/open/floor/stone,
 /area/lavaland/surface/outdoors)
@@ -2443,9 +2440,8 @@
 /turf/open/floor/deadspace/bathroom,
 /area/station/medical/morgue)
 "tx" = (
-/obj/machinery/conveyor/auto{
-	id = "Lower Marker Conveyor";
-	name = "conveyor"
+/obj/machinery/conveyor{
+	id = "Lower Marker Conveyor"
 	},
 /turf/open/floor/deadspace/mono,
 /area/lavaland/surface/outdoors)
@@ -2579,12 +2575,6 @@
 /obj/structure/sign/warning,
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
-"vn" = (
-/obj/effect/turf_decal/trimline/yellow/filled/warning{
-	dir = 8
-	},
-/turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
 "vs" = (
 /obj/machinery/door/airlock/mining,
 /turf/open/floor/deadspace/grater,
@@ -2686,11 +2676,10 @@
 /turf/open/water,
 /area/station/maintenance/port/lesser)
 "wi" = (
-/obj/machinery/conveyor/auto{
-	id = "Lower Marker Conveyor";
-	name = "conveyor"
-	},
 /obj/machinery/door/poddoor,
+/obj/machinery/conveyor{
+	id = "Lower Marker Conveyor"
+	},
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/warehouse)
 "wn" = (
@@ -2974,13 +2963,6 @@
 "zp" = (
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/lesser)
-"zs" = (
-/obj/machinery/conveyor/auto{
-	id = "Lower Marker Conveyor";
-	name = "conveyor"
-	},
-/turf/open/floor/plating,
-/area/station/cargo/warehouse)
 "zB" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -2989,9 +2971,8 @@
 /turf/open/floor/deadspace/medical,
 /area/station/medical/medbay/aft)
 "zD" = (
-/obj/machinery/conveyor/auto{
+/obj/machinery/conveyor{
 	id = "Lower Marker Conveyor";
-	name = "conveyor";
 	dir = 1
 	},
 /turf/open/misc/asteroid,
@@ -3017,10 +2998,9 @@
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
 "Aa" = (
-/obj/machinery/conveyor/auto{
-	dir = 4;
+/obj/machinery/conveyor{
 	id = "Lower Marker Conveyor";
-	name = "conveyor"
+	dir = 4
 	},
 /turf/open/floor/deadspace/mono,
 /area/lavaland/surface/outdoors)
@@ -3179,6 +3159,10 @@
 /area/station/service/chapel/monastery)
 "BX" = (
 /obj/effect/marker_location,
+/obj/machinery/conveyor{
+	id = "Lower Marker Conveyor";
+	dir = 4
+	},
 /turf/open/floor/deadspace/roller,
 /area/lavaland/surface/outdoors)
 "BZ" = (
@@ -3202,9 +3186,12 @@
 /turf/open/floor/deadspace/medical,
 /area/station/medical/exam_room)
 "Cm" = (
-/obj/machinery/light/directional/north,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/station/cargo/warehouse)
+/obj/machinery/conveyor{
+	id = "Lower Marker Conveyor";
+	dir = 5
+	},
+/turf/open/misc/asteroid,
+/area/lavaland/surface/outdoors)
 "Cn" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 4
@@ -3272,9 +3259,8 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "CM" = (
-/obj/machinery/conveyor/auto{
-	id = "Lower Marker Conveyor";
-	name = "conveyor"
+/obj/machinery/conveyor{
+	id = "Lower Marker Conveyor"
 	},
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
@@ -3335,17 +3321,11 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/service/chapel/storage)
 "Dr" = (
-/obj/machinery/conveyor/auto{
-	dir = 4;
+/obj/machinery/conveyor{
 	id = "Lower Marker Conveyor";
-	name = "conveyor"
+	dir = 4
 	},
-/obj/machinery/conveyor/auto{
-	dir = 4;
-	id = "Lower Marker Conveyor";
-	name = "conveyor"
-	},
-/turf/open/misc/asteroid,
+/turf/open/floor/deadspace/roller,
 /area/lavaland/surface/outdoors)
 "Dt" = (
 /obj/structure/rack,
@@ -3381,12 +3361,11 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/lesser)
 "DM" = (
-/obj/machinery/conveyor/auto{
-	id = "Lower Marker Conveyor";
-	name = "conveyor"
-	},
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1
+	},
+/obj/machinery/conveyor{
+	id = "Lower Marker Conveyor"
 	},
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
@@ -3715,10 +3694,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
-"IM" = (
-/turf/closed/wall/r_wall,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/station/cargo/warehouse)
 "IO" = (
 /obj/machinery/firealarm/directional/east,
 /obj/machinery/disposal/bin,
@@ -3950,10 +3925,9 @@
 /turf/open/floor/iron/dark,
 /area/station/security)
 "LW" = (
-/obj/machinery/conveyor/auto{
-	dir = 4;
+/obj/machinery/conveyor{
 	id = "Lower Marker Conveyor";
-	name = "conveyor"
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
@@ -4393,7 +4367,9 @@
 /obj/machinery/conveyor_switch{
 	id = "Marker Conveyor"
 	},
-/obj/machinery/conveyor_switch,
+/obj/machinery/conveyor_switch{
+	id = "Lower Marker Conveyor"
+	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/warehouse)
 "Rr" = (
@@ -5002,19 +4978,9 @@
 /obj/machinery/light/small/maintenance/directional/east,
 /turf/open/water,
 /area/station/maintenance/port/lesser)
-"Yy" = (
-/obj/machinery/light/directional/south,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/station/cargo/warehouse)
 "YC" = (
-/obj/machinery/conveyor/auto{
-	dir = 4;
-	id = "Lower Marker Conveyor";
-	name = "conveyor"
-	},
-/obj/machinery/conveyor/auto{
-	id = "Lower Marker Conveyor";
-	name = "conveyor"
+/obj/machinery/conveyor{
+	id = "Lower Marker Conveyor"
 	},
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
@@ -5124,10 +5090,9 @@
 /turf/open/floor/deadspace/mono,
 /area/station/service/chapel/monastery)
 "ZC" = (
-/obj/machinery/conveyor/auto{
-	dir = 4;
+/obj/machinery/conveyor{
 	id = "Lower Marker Conveyor";
-	name = "conveyor"
+	dir = 4
 	},
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
@@ -21494,7 +21459,7 @@ JB
 qw
 uw
 tp
-tp
+Dr
 tp
 Lw
 qw
@@ -30584,7 +30549,7 @@ yG
 yG
 yG
 KK
-Dr
+ZC
 KK
 yG
 yG
@@ -30786,7 +30751,7 @@ yG
 yG
 yG
 KK
-Dr
+ZC
 KK
 yG
 yG
@@ -30988,7 +30953,7 @@ yG
 yG
 yG
 oK
-Dr
+ZC
 KK
 yG
 yG
@@ -31190,7 +31155,7 @@ yG
 yG
 yG
 JB
-Dr
+ZC
 oK
 yG
 yG
@@ -33210,7 +33175,7 @@ yG
 yG
 yG
 KK
-Dr
+ZC
 KK
 yG
 yG
@@ -35432,7 +35397,7 @@ yG
 yG
 yG
 KK
-Dr
+ZC
 oK
 yG
 yG
@@ -38663,7 +38628,7 @@ KK
 KK
 KK
 oK
-ZC
+Cm
 zD
 KK
 yG
@@ -38845,7 +38810,7 @@ yG
 yG
 KK
 JB
-ZC
+Cm
 zD
 zD
 zD
@@ -40459,7 +40424,7 @@ yG
 yG
 yG
 KK
-Dr
+ZC
 KK
 yG
 yG
@@ -42307,14 +42272,14 @@ xK
 xK
 Ht
 tR
-Yy
-Ht
-Cm
 tR
 tR
-Yy
-Ht
-Cm
+Sb
+tR
+tR
+Sb
+tR
+tR
 tR
 Vs
 tR
@@ -42511,10 +42476,10 @@ ti
 qf
 qf
 qf
+ti
 qf
 qf
-qf
-qf
+ti
 qf
 qf
 qf
@@ -42682,7 +42647,7 @@ yG
 yG
 eq
 eq
-ZC
+CM
 ZC
 JB
 JB
@@ -42691,31 +42656,31 @@ JB
 JB
 JB
 JB
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
 xK
 GP
 Tb
 sw
 sw
 sw
-sw
-sw
+Lc
+Lc
 sw
 sw
 sw
@@ -42913,31 +42878,31 @@ CM
 tx
 wi
 DM
-zs
-zs
-zs
-zs
-zs
-zs
-zs
-zs
-zs
-zs
-zs
-zs
-zs
-zs
-zs
-zs
-zs
 YC
-zs
-zs
-zs
-zs
-zs
-zs
-zs
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
+YC
 ex
 Ht
 pu
@@ -43095,31 +43060,31 @@ JB
 JB
 JB
 JB
-vn
-vn
-vn
-vn
-vn
-vn
-vn
-vn
-vn
-vn
-vn
-vn
-vn
-vn
-vn
-vn
-vn
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
 xK
 GP
 ql
 yx
 yx
 yx
-yx
-yx
+Lc
+Lc
 yx
 yx
 yx
@@ -43319,10 +43284,10 @@ ti
 jP
 jP
 jP
+ti
 jP
 jP
-jP
-jP
+ti
 jP
 jP
 jP
@@ -43519,14 +43484,14 @@ xK
 xK
 Ht
 tR
-Yy
-Ht
-Cm
 tR
 tR
-Yy
-IM
-Cm
+gL
+tR
+tR
+gL
+tR
+tR
 tR
 ec
 tR
