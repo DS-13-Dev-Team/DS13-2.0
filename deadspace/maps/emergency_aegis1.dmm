@@ -4,7 +4,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/shuttle/escape)
 "d" = (
 /obj/machinery/status_display/evac/directional/south,
@@ -71,7 +71,7 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/shuttle/escape)
 "r" = (
 /obj/structure/chair/comfy/shuttle,
@@ -89,8 +89,7 @@
 /area/shuttle/escape)
 "v" = (
 /obj/docking_port/mobile/emergency{
-	name = "Aegis7 emergency shuttle 1";
-	id = "aegis1"
+	name = "Aegis7 emergency shuttle 1"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
@@ -136,10 +135,6 @@
 /area/shuttle/escape)
 "F" = (
 /turf/open/floor/deadspace/random/maint_center,
-/area/shuttle/escape)
-"G" = (
-/turf/open/space/basic,
-/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "I" = (
 /obj/machinery/door/airlock/public/glass{
@@ -247,7 +242,7 @@ F
 F
 F
 F
-G
+V
 l
 l
 n

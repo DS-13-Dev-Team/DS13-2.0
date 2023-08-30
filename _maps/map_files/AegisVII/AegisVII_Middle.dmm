@@ -120,10 +120,10 @@
 /turf/open/floor/deadspace/mono,
 /area/lavaland/surface/outdoors)
 "acs" = (
-/obj/machinery/conveyor/auto{
+/obj/structure/lattice,
+/obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
-/obj/structure/lattice,
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
 "acx" = (
@@ -870,6 +870,7 @@
 /obj/effect/spawner/random/maintenance,
 /obj/machinery/telephone,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "aoz" = (
@@ -1105,6 +1106,7 @@
 /obj/structure/table/wood/fancy/blue,
 /obj/machinery/telephone/service,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/ported/lino,
 /area/station/service/library)
 "arf" = (
@@ -1337,13 +1339,6 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/warehouse/upper)
-"atB" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "garbage"
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/disposal)
 "atD" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
@@ -1664,14 +1659,6 @@
 	dir = 8
 	},
 /area/station/security/checkpoint/customs)
-"ayZ" = (
-/obj/machinery/light/small,
-/obj/machinery/conveyor/auto{
-	id = "mining_colony";
-	dir = 8
-	},
-/turf/open/floor/deadspace/random/rectangles,
-/area/mine/production)
 "azb" = (
 /obj/machinery/autolathe,
 /obj/machinery/door/window/right/directional/south{
@@ -2208,8 +2195,8 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "aFB" = (
-/obj/machinery/conveyor/auto{
-	id = "Mining Upper";
+/obj/machinery/conveyor{
+	id = "Storage Upper";
 	dir = 4
 	},
 /turf/open/floor/deadspace/random/rectangles,
@@ -2674,6 +2661,7 @@
 /obj/effect/spawner/random/maintenance,
 /obj/machinery/telephone,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "aJP" = (
@@ -2699,10 +2687,6 @@
 	},
 /area/station/ai_monitored/security/armory)
 "aJV" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "garbage"
-	},
 /obj/machinery/door/poddoor/preopen{
 	id = "Disposal Exit";
 	name = "disposal exit vent"
@@ -3625,6 +3609,7 @@
 	},
 /obj/machinery/telephone/security,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -3759,7 +3744,7 @@
 /turf/open/floor/iron/grimy,
 /area/station/engineering/storage/tcomms)
 "aWU" = (
-/obj/machinery/conveyor/auto{
+/obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
 /turf/open/floor/plating,
@@ -4470,10 +4455,6 @@
 /turf/open/water,
 /area/station/hallway/primary/fore)
 "bga" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "packageSort2"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -4879,6 +4860,7 @@
 /obj/structure/table,
 /obj/machinery/telephone/service,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/plating,
 /area/station/service/janitor)
 "blo" = (
@@ -5510,10 +5492,10 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "bqn" = (
-/obj/machinery/conveyor/auto{
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
-/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
 "bqq" = (
@@ -5533,13 +5515,6 @@
 /obj/item/stack/ore/silver,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/production)
-"bqw" = (
-/obj/machinery/conveyor/auto{
-	id = s
-	},
-/obj/structure/lattice,
-/turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
 "bqx" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 2
@@ -5629,8 +5604,8 @@
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/miningoffice)
 "brb" = (
-/obj/machinery/conveyor/auto{
-	id = "Mining Upper";
+/obj/machinery/conveyor{
+	id = "Storage Upper";
 	dir = 4
 	},
 /obj/structure/plasticflaps,
@@ -5857,8 +5832,8 @@
 /turf/open/floor/iron/ported/techfloor_grid,
 /area/station/engineering/supermatter/room)
 "buk" = (
-/obj/machinery/conveyor/auto{
-	id = "Mining Upper";
+/obj/machinery/conveyor{
+	id = "Storage Upper";
 	dir = 8
 	},
 /turf/open/floor/deadspace/random/rectangles,
@@ -6321,6 +6296,7 @@
 /obj/effect/spawner/random/maintenance,
 /obj/machinery/telephone,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "bRd" = (
@@ -7055,8 +7031,8 @@
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
 "cAE" = (
-/obj/machinery/conveyor/auto{
-	id = "Mining Upper";
+/obj/machinery/conveyor{
+	id = "Storage Upper";
 	dir = 8
 	},
 /obj/structure/plasticflaps,
@@ -7498,6 +7474,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/carpet/blue,
 /area/station/service/chapel/office)
 "cTT" = (
@@ -7599,7 +7576,7 @@
 	},
 /area/station/hallway/secondary/exit/departure_lounge)
 "cZb" = (
-/obj/machinery/light/directional/east,
+/obj/machinery/light/small/directional/east,
 /obj/structure/railing,
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
@@ -7665,10 +7642,6 @@
 /turf/open/floor/carpet/red,
 /area/shuttle/abandoned)
 "dcv" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "garbage"
-	},
 /obj/machinery/recycler,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
@@ -7918,6 +7891,9 @@
 /area/station/engineering/main)
 "dsg" = (
 /obj/effect/turf_decal/box,
+/obj/machinery/conveyor{
+	id = "Storage Upper"
+	},
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
 "dsk" = (
@@ -8186,10 +8162,6 @@
 /turf/open/floor/deadspace/mono,
 /area/station/security/lockers)
 "dEv" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "packageSort2"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -8671,10 +8643,6 @@
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "edT" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "garbage"
-	},
 /obj/machinery/door/window/right/directional/east{
 	base_state = "left";
 	dir = 1;
@@ -8813,6 +8781,7 @@
 /obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/machinery/telephone/medical,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/dark,
 /area/station/medical/break_room)
 "egU" = (
@@ -8873,6 +8842,8 @@
 "eiK" = (
 /obj/structure/table,
 /obj/machinery/telephone/command,
+/obj/machinery/power/data_terminal,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/secondary/exit)
 "eiL" = (
@@ -9250,10 +9221,6 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "eEo" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "garbage"
-	},
 /obj/structure/sign/warning/vacuum{
 	pixel_x = -32
 	},
@@ -9412,12 +9379,11 @@
 /turf/open/misc/asteroid/snow,
 /area/station/science/breakroom)
 "ePF" = (
-/obj/machinery/conveyor/auto{
-	id = "mining_colony";
-	dir = 8
-	},
-/turf/open/floor/deadspace/random/rectangles,
-/area/mine/production)
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron,
+/area/station/cargo/storage)
 "ePT" = (
 /obj/structure/chair/stool/directional/south,
 /turf/open/floor/iron,
@@ -9781,6 +9747,7 @@
 /obj/machinery/telephone/security,
 /obj/item/radio/intercom/directional/north,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/carpet/red,
 /area/station/security/brig)
 "feA" = (
@@ -10088,10 +10055,6 @@
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "ftr" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "garbage"
-	},
 /obj/effect/spawner/random/trash/garbage{
 	spawn_loot_count = 3
 	},
@@ -10153,6 +10116,7 @@
 /obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/machinery/telephone/research,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
 "fvN" = (
@@ -10688,12 +10652,11 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "fTf" = (
-/obj/machinery/conveyor/auto{
-	id = "mining_colony";
-	dir = 9
+/obj/machinery/conveyor{
+	id = "Storage Upper"
 	},
-/turf/open/floor/deadspace/random/rectangles,
-/area/mine/production)
+/turf/open/floor/deadspace/roller,
+/area/lavaland/surface/outdoors)
 "fTJ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -10708,6 +10671,7 @@
 /obj/machinery/telephone/cargo,
 /obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/dark,
 /area/station/cargo/office)
 "fUB" = (
@@ -11223,6 +11187,7 @@
 /obj/structure/table,
 /obj/machinery/telephone/security,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/mono,
 /area/station/security/range)
 "gqN" = (
@@ -11352,6 +11317,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/research,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "gyQ" = (
@@ -11690,6 +11656,7 @@
 /obj/machinery/telephone/research,
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron,
 /area/station/science/lab)
 "gOf" = (
@@ -12043,7 +12010,7 @@
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/central)
 "hev" = (
-/obj/machinery/conveyor/auto{
+/obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -12457,6 +12424,7 @@
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
 "htM" = (
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/hallway/secondary/exit)
 "htU" = (
@@ -12818,6 +12786,7 @@
 	name = "Control Room"
 	},
 /obj/machinery/door/firedoor,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit)
 "hLW" = (
@@ -12855,6 +12824,7 @@
 	dir = 1
 	},
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/miningoffice)
 "hOm" = (
@@ -12992,6 +12962,7 @@
 /obj/machinery/telephone/security,
 /obj/machinery/light/small/directional/south,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "hVc" = (
@@ -13775,6 +13746,7 @@
 	},
 /area/station/security/checkpoint/customs)
 "iKk" = (
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/secondary/exit)
 "iKJ" = (
@@ -14075,10 +14047,10 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "iYh" = (
-/obj/machinery/conveyor/auto{
+/obj/structure/lattice,
+/obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
-/obj/structure/lattice,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/lavaland/surface/outdoors)
 "iYp" = (
@@ -14229,14 +14201,6 @@
 /area/station/maintenance/port/fore)
 "jgx" = (
 /obj/machinery/light/small,
-/obj/machinery/conveyor/auto{
-	id = "mining_colony";
-	dir = 8
-	},
-/obj/machinery/conveyor/auto{
-	id = "mining_colony";
-	dir = 8
-	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/production)
 "jgG" = (
@@ -14854,6 +14818,7 @@
 /obj/effect/spawner/random/maintenance,
 /obj/machinery/telephone,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "jMz" = (
@@ -15169,10 +15134,6 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/mine/storage)
 "kcz" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "garbage"
-	},
 /obj/effect/spawner/random/trash/garbage{
 	spawn_loot_count = 3;
 	spawn_scatter_radius = 1
@@ -16075,6 +16036,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/cargo,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningdock/cafeteria)
 "kTB" = (
@@ -16598,6 +16560,7 @@
 	name = "Quartermaster's Requests Console"
 	},
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/wood,
 /area/station/cargo/qm)
 "lpM" = (
@@ -16999,9 +16962,13 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
 "lIc" = (
-/obj/effect/spawner/structure/window/reinforced/grille,
-/turf/open/floor/plating,
-/area/station/science/lab)
+/obj/effect/turf_decal/trimline/purple/filled/line,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/iron/white,
+/area/station/science/lobby)
 "lIE" = (
 /turf/open/floor/deadspace/bathroom,
 /area/station/commons/toilet/restrooms)
@@ -17452,13 +17419,6 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit)
-"mhK" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "garbage"
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/disposal)
 "miB" = (
 /obj/machinery/light/small/red/directional/west,
 /obj/structure/closet/secure_closet/ds/miner,
@@ -17571,7 +17531,7 @@
 /obj/docking_port/stationary{
 	dwidth = 6;
 	height = 8;
-	id = "aegis1_home";
+	id = "emergency_home";
 	name = "Aegis7 emergency evac bay 1";
 	width = 13;
 	dir = 4
@@ -17723,6 +17683,7 @@
 	dir = 6
 	},
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
 "mwn" = (
@@ -17755,8 +17716,10 @@
 /turf/open/floor/deadspace/random/slides,
 /area/station/security/brig)
 "mxx" = (
-/obj/structure/railing,
-/obj/machinery/light/floor/has_bulb,
+/obj/effect/turf_decal/loading_area{
+	dir = 1
+	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
 "mxF" = (
@@ -18422,6 +18385,7 @@
 	},
 /obj/machinery/telephone/research,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron,
 /area/station/science/misc_lab)
 "neA" = (
@@ -19006,7 +18970,12 @@
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
 "nJz" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/conveyor_switch/oneway{
+	id = "packageSort2";
+	name = "Disposal Conveyor";
+	pixel_x = -2;
+	pixel_y = 12
+	},
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "nJG" = (
@@ -19117,6 +19086,7 @@
 /obj/structure/table/glass,
 /obj/machinery/telephone/medical,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/white,
 /area/station/medical/office)
 "nPZ" = (
@@ -19257,6 +19227,7 @@
 /obj/item/food/grown/poppy/lily,
 /obj/machinery/telephone/service,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/mono,
 /area/station/service/hydroponics)
 "nVV" = (
@@ -19835,6 +19806,7 @@
 /obj/structure/table,
 /obj/machinery/telephone/research,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron,
 /area/station/science/lab)
 "oDR" = (
@@ -19858,6 +19830,7 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/machinery/telephone/service,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/white,
 /area/station/service/kitchen)
 "oEG" = (
@@ -21135,7 +21108,7 @@
 /area/station/engineering/supermatter/room)
 "pML" = (
 /obj/machinery/conveyor_switch/oneway{
-	id = "mining_colony"
+	id = "Mining Upper"
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/production)
@@ -21690,10 +21663,10 @@
 /turf/open/floor/deadspace/random/slides,
 /area/lavaland/surface/outdoors)
 "qps" = (
-/obj/machinery/conveyor/auto{
+/obj/structure/cable,
+/obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
-/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
 "qpG" = (
@@ -21714,10 +21687,6 @@
 /area/station/hallway/primary/port)
 "qqq" = (
 /obj/machinery/light/small/directional/west,
-/obj/machinery/conveyor{
-	dir = 9;
-	id = "garbage"
-	},
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "qqE" = (
@@ -22280,6 +22249,7 @@
 /obj/structure/table,
 /obj/machinery/telephone/cargo,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
 "qUr" = (
@@ -22380,6 +22350,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/security,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/security/checkpoint/customs)
 "qZY" = (
@@ -22792,7 +22763,7 @@
 	},
 /area/lavaland/surface/outdoors)
 "rwk" = (
-/obj/machinery/conveyor/auto{
+/obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
 /turf/open/floor/deadspace/mono,
@@ -23305,11 +23276,11 @@
 /turf/open/floor/iron/freezer,
 /area/station/commons/dorms/cryo)
 "rVU" = (
-/obj/machinery/conveyor/auto{
-	id = "Storage Upper"
-	},
 /obj/machinery/door/poddoor{
 	id = "HangerInnerDoor"
+	},
+/obj/machinery/conveyor{
+	id = "Storage Upper"
 	},
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
@@ -23846,15 +23817,10 @@
 	},
 /area/station/science/lobby)
 "sBB" = (
-/obj/docking_port/stationary{
-	dwidth = 6;
-	height = 8;
-	id = "aegis2_home";
-	name = "Aegis7 emergency evac bay 2";
-	width = 13;
-	dir = 4
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
 	},
-/turf/open/floor/plating,
 /area/station/hallway/secondary/exit)
 "sBC" = (
 /obj/effect/decal/remains/human{
@@ -23972,6 +23938,7 @@
 /obj/item/storage/fancy/donut_box,
 /obj/machinery/camera/autoname/directional/east,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/carpet/red,
 /area/station/security/warden)
 "sGy" = (
@@ -24214,6 +24181,7 @@
 /obj/machinery/newscaster/directional/north,
 /obj/machinery/telephone/service,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron,
 /area/station/service/bar)
 "sTf" = (
@@ -25347,13 +25315,6 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
-"tUs" = (
-/obj/machinery/conveyor/auto{
-	id = "mining_colony";
-	dir = 10
-	},
-/turf/open/floor/deadspace/random/rectangles,
-/area/mine/production)
 "tUQ" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -25834,6 +25795,9 @@
 /area/station/engineering/main)
 "uvo" = (
 /obj/effect/marker_location,
+/obj/machinery/conveyor{
+	id = "Storage Upper"
+	},
 /turf/open/floor/deadspace/roller,
 /area/lavaland/surface/outdoors)
 "uvA" = (
@@ -26547,7 +26511,7 @@
 /turf/open/floor/engine/airless,
 /area/station/engineering/supermatter/room)
 "vfv" = (
-/obj/machinery/light/directional/east,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
 "vfI" = (
@@ -27678,7 +27642,7 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/service/chapel)
 "wjD" = (
-/obj/machinery/conveyor/auto{
+/obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
 /turf/open/floor/plating,
@@ -45470,7 +45434,7 @@ qNo
 tla
 iuq
 mVL
-lIc
+iCl
 gOf
 bcR
 aqq
@@ -45874,7 +45838,7 @@ azP
 fjN
 vTX
 nTg
-lIc
+iCl
 wnh
 aFk
 aqq
@@ -46266,7 +46230,7 @@ aoU
 sYd
 pLG
 qaU
-cri
+lIc
 iCl
 lym
 lym
@@ -51087,7 +51051,7 @@ iOy
 rii
 wJd
 lxf
-tuP
+sBB
 tuP
 ifr
 uwP
@@ -51127,7 +51091,7 @@ jZE
 jZE
 jZE
 ftr
-mhK
+mok
 rxj
 mlO
 mlO
@@ -51328,8 +51292,8 @@ gQo
 dvK
 dHr
 kQg
-atB
-mhK
+mok
+mok
 rxj
 mlO
 mlO
@@ -51942,7 +51906,7 @@ cou
 rLO
 uop
 aSn
-jIO
+nJz
 aQy
 qQr
 hdQ
@@ -52335,7 +52299,7 @@ aYC
 lwL
 lwL
 jBP
-jzy
+ePF
 mwn
 aWB
 aWB
@@ -52537,7 +52501,7 @@ iHR
 iHR
 iHR
 fkw
-nJz
+jIO
 jIO
 jIO
 jIO
@@ -52691,7 +52655,7 @@ iOy
 iOy
 pEj
 iOy
-tUo
+mxx
 iOy
 pEj
 iOy
@@ -52883,15 +52847,15 @@ oHb
 afH
 txn
 aiL
-iOy
 wzg
 iOy
-pEj
 iOy
 pEj
 iOy
+pEj
 iOy
-mxx
+iOy
+pEj
 iOy
 pEj
 iOy
@@ -53095,7 +53059,7 @@ iOy
 iOy
 tUo
 iOy
-pEj
+ciT
 iOy
 tUo
 iOy
@@ -53498,7 +53462,7 @@ kjS
 kjS
 kjS
 kjS
-sBB
+kjS
 kjS
 kjS
 kjS
@@ -59406,7 +59370,7 @@ aiV
 bqu
 xcc
 bpl
-fTf
+xcc
 sdm
 mlO
 mlO
@@ -59810,7 +59774,7 @@ aAd
 aAd
 xcc
 oVI
-ePF
+xcc
 sdm
 mlO
 mlO
@@ -60214,7 +60178,7 @@ aAd
 aAd
 xcc
 avD
-ePF
+xcc
 sdm
 mlO
 mlO
@@ -60416,7 +60380,7 @@ aAd
 aAd
 xcc
 kNw
-ePF
+xcc
 sdm
 mlO
 mlO
@@ -60618,7 +60582,7 @@ bpt
 bpt
 bpt
 kNw
-ayZ
+jgx
 sdm
 mlO
 mlO
@@ -60820,7 +60784,7 @@ pML
 xcc
 xcc
 fFw
-tUs
+xcc
 sdm
 mlO
 mlO
@@ -61222,7 +61186,7 @@ rnn
 aFB
 kNw
 buk
-kNw
+sdm
 apG
 apG
 apG
@@ -61424,7 +61388,7 @@ lHS
 aFB
 kNw
 buk
-kNw
+sdm
 apG
 apG
 apG
@@ -61626,7 +61590,7 @@ lHS
 aFB
 kNw
 buk
-kNw
+sdm
 apG
 apG
 apG
@@ -61828,7 +61792,7 @@ lHS
 aFB
 kNw
 buk
-kNw
+sdm
 apG
 apG
 apG
@@ -62030,7 +61994,7 @@ lHS
 aFB
 kNw
 buk
-kNw
+sdm
 apG
 apG
 apG
@@ -62232,7 +62196,7 @@ lHS
 brb
 mcB
 cAE
-kNw
+sdm
 apG
 apG
 apG
@@ -67638,12 +67602,12 @@ oHb
 oNc
 kkj
 uvo
-kkj
+fTf
 bqn
 hev
 hev
 hev
-bqw
+iYh
 iYh
 iYh
 iYh

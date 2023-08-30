@@ -69,6 +69,7 @@
 /obj/item/stamp/hos,
 /obj/machinery/telephone/command,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/hos)
 "az" = (
@@ -786,6 +787,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/security,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/mono,
 /area/station/security/brig/upper)
 "kX" = (
@@ -920,6 +922,7 @@
 	id = "FL room"
 	},
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/hop)
 "ns" = (
@@ -1218,6 +1221,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/security,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/medical,
 /area/station/security/detectives_office)
 "vH" = (
@@ -1396,6 +1400,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/security,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/hardwood,
 /area/station/security/office)
 "yF" = (
@@ -1764,6 +1769,7 @@
 /obj/item/radio/intercom/directional/west,
 /obj/machinery/telephone/command,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "GP" = (
@@ -2448,6 +2454,7 @@
 /obj/structure/table/wood/fancy/green,
 /obj/machinery/telephone/command,
 /obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/captain/private)
 "YA" = (

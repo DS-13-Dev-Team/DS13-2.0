@@ -370,12 +370,13 @@
 /turf/open/floor/deadspace/mono,
 /area/station/medical/exam_room)
 "dt" = (
-/obj/item/storage/box/evidence,
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor/left/directional{
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/machinery/telephone/security,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "du" = (
@@ -442,6 +443,7 @@
 /obj/structure/chair/office{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/warehouse)
 "dO" = (
@@ -561,12 +563,17 @@
 	id = "Lower Marker Conveyor";
 	name = "conveyor"
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "ey" = (
 /obj/item/mop,
 /turf/open/water,
 /area/station/maintenance/port/lesser)
+"ez" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/cargo/warehouse)
 "eA" = (
 /obj/structure/grille,
 /turf/open/floor/plating,
@@ -617,6 +624,7 @@
 "eO" = (
 /obj/structure/table,
 /obj/machinery/telephone/cargo,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/warehouse)
 "eT" = (
@@ -3000,6 +3008,10 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron/dark,
 /area/station/security)
+"zV" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/slides,
+/area/station/cargo/warehouse)
 "zW" = (
 /obj/item/flashlight/flare,
 /turf/open/misc/asteroid,
@@ -3745,6 +3757,11 @@
 /obj/effect/spawner/random/food_or_drink/booze,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
+"Ji" = (
+/obj/machinery/door/airlock/mining,
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/cargo/warehouse)
 "Jt" = (
 /obj/structure/grille,
 /obj/structure/grille,
@@ -4138,7 +4155,15 @@
 /area/station/maintenance/fore/lesser)
 "Oj" = (
 /obj/structure/table,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
+/area/station/cargo/warehouse)
+"Ok" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "Oo" = (
 /obj/structure/sign/departments/psychology,
@@ -4855,6 +4880,7 @@
 "WZ" = (
 /obj/structure/table,
 /obj/effect/spawner/random/engineering/flashlight,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/warehouse)
 "Xc" = (
@@ -5034,6 +5060,7 @@
 "YW" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced/spawner,
+/obj/item/storage/box/evidence,
 /turf/open/floor/deadspace/mono,
 /area/station/security/brig)
 "YZ" = (
@@ -5122,6 +5149,7 @@
 /obj/effect/turf_decal/loading_area{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "ZM" = (
@@ -42304,9 +42332,9 @@ tR
 tR
 tR
 tR
-tR
-Vs
-tR
+ez
+Ji
+ez
 dF
 Oj
 cl
@@ -42506,7 +42534,7 @@ qf
 qf
 qf
 qf
-qf
+zV
 Ht
 ry
 wY
@@ -42708,7 +42736,7 @@ sw
 sw
 sw
 sw
-sw
+Ok
 Ht
 cl
 cl
@@ -43920,7 +43948,7 @@ Lc
 Lc
 Lc
 Lc
-Lc
+Ee
 Ht
 Mm
 Lc
@@ -44122,7 +44150,7 @@ ov
 ov
 ov
 Lc
-Lc
+Ee
 vs
 Mm
 Lc
