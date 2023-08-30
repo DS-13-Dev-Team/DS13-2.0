@@ -606,6 +606,7 @@
 	spawn_scatter_radius = 1
 	},
 /obj/machinery/light/small/directional/north,
+/obj/structure/curtain,
 /turf/open/floor/deadspace/grille_spare4,
 /area/station/commons/dorms)
 "alp" = (
@@ -615,6 +616,7 @@
 	spawn_scatter_radius = 1
 	},
 /obj/machinery/light/small/directional/north,
+/obj/structure/curtain,
 /turf/open/floor/deadspace/grille_spare4,
 /area/station/commons/dorms)
 "alw" = (
@@ -4224,6 +4226,7 @@
 	spawn_scatter_radius = 1
 	},
 /obj/machinery/light/small/directional/north,
+/obj/structure/curtain,
 /turf/open/floor/deadspace/grille_spare4,
 /area/station/commons/dorms/barracks)
 "bds" = (
@@ -5835,6 +5838,7 @@
 	spawn_scatter_radius = 1
 	},
 /obj/machinery/light/small/directional/south,
+/obj/structure/curtain,
 /turf/open/floor/deadspace/grille_spare4,
 /area/station/commons/dorms/barracks)
 "btV" = (
@@ -6561,6 +6565,7 @@
 	spawn_scatter_radius = 1
 	},
 /obj/machinery/light/small/directional/south,
+/obj/structure/curtain,
 /turf/open/floor/deadspace/grille_spare4,
 /area/station/commons/dorms/barracks)
 "ccH" = (
@@ -6841,6 +6846,7 @@
 	spawn_scatter_radius = 1
 	},
 /obj/machinery/light/small/directional/south,
+/obj/structure/curtain,
 /turf/open/floor/deadspace/grille_spare4,
 /area/station/commons/dorms)
 "crA" = (
@@ -10418,6 +10424,7 @@
 	spawn_scatter_radius = 1
 	},
 /obj/machinery/light/small/directional/north,
+/obj/structure/curtain,
 /turf/open/floor/deadspace/grille_spare4,
 /area/station/commons/dorms/barracks)
 "fJE" = (
@@ -26343,6 +26350,7 @@
 	spawn_scatter_radius = 1
 	},
 /obj/machinery/light/small/directional/south,
+/obj/structure/curtain,
 /turf/open/floor/deadspace/grille_spare4,
 /area/station/commons/dorms)
 "uSC" = (
