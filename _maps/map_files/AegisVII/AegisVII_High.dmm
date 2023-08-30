@@ -17,6 +17,7 @@
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
 "af" = (
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/tech,
 /area/station/hallway/primary/central/aft)
 "ag" = (
@@ -67,6 +68,7 @@
 /obj/item/stamp/denied,
 /obj/item/stamp/hos,
 /obj/machinery/telephone/command,
+/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/hos)
 "az" = (
@@ -443,6 +445,7 @@
 /area/station/maintenance/fore/greater)
 "ey" = (
 /obj/structure/table/reinforced,
+/obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
 /area/station/security/office)
 "ez" = (
@@ -474,12 +477,6 @@
 "eF" = (
 /turf/closed/wall/r_wall,
 /area/station/security/detectives_office)
-"eH" = (
-/obj/structure/chair/office{
-	dir = 4
-	},
-/turf/open/floor/deadspace/random/golf_gray,
-/area/station/command/heads_quarters/hos)
 "eJ" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/tech{
@@ -530,6 +527,7 @@
 /area/station/command/bridge)
 "eY" = (
 /obj/item/radio/intercom/directional/south,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_gray,
 /area/station/command/heads_quarters/hos)
 "fe" = (
@@ -612,10 +610,6 @@
 /area/station/command/heads_quarters/captain/private)
 "gj" = (
 /obj/machinery/light/directional/south,
-/obj/structure/disposalpipe/trunk/multiz/down{
-	dir = 1
-	},
-/obj/structure/cable/multilayer/multiz,
 /turf/open/floor/deadspace/mono,
 /area/station/security/brig/upper)
 "gu" = (
@@ -647,6 +641,7 @@
 /obj/item/stamp/denied,
 /obj/item/stamp/hop,
 /obj/item/paper_bin,
+/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/hop)
 "hO" = (
@@ -662,10 +657,11 @@
 	},
 /area/station/hallway/primary/central/aft)
 "il" = (
-/obj/machinery/light/directional/east,
 /obj/structure/cable,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/iron/dark,
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/turf/open/floor/deadspace/grater,
 /area/station/security/brig/upper)
 "iv" = (
 /turf/closed/wall/r_wall,
@@ -725,8 +721,7 @@
 /turf/open/floor/deadspace/medical,
 /area/station/security/brig/upper)
 "kk" = (
-/obj/structure/closet/secure_closet/hop,
-/obj/item/clothing/suit/armor/pcsi/cec,
+/obj/structure/closet/secure_closet/ds/hop,
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hop)
 "kn" = (
@@ -790,8 +785,15 @@
 "kL" = (
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/security,
+/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/security/brig/upper)
+"kX" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/tech{
+	dir = 8
+	},
+/area/station/hallway/primary/central/aft)
 "kY" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
@@ -917,6 +919,7 @@
 /obj/machinery/button/door/directional/south{
 	id = "FL room"
 	},
+/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/hop)
 "ns" = (
@@ -989,6 +992,7 @@
 /obj/structure/railing/corner{
 	dir = 4
 	},
+/obj/machinery/light/small/maintenance/directional/west,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "pw" = (
@@ -1016,8 +1020,8 @@
 "qv" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
-/obj/structure/closet/secure_closet/detective,
 /obj/effect/turf_decal/box,
+/obj/structure/closet/secure_closet/ds/detective,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "qy" = (
@@ -1098,10 +1102,6 @@
 /obj/item/folder/red,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/hos)
-"td" = (
-/obj/structure/cable,
-/turf/open/floor/deadspace/mono,
-/area/station/security/brig/upper)
 "ti" = (
 /obj/machinery/computer/med_data{
 	dir = 4
@@ -1114,8 +1114,8 @@
 /area/station/command/bridge)
 "tm" = (
 /obj/structure/cable,
-/obj/structure/disposalpipe/junction/flip{
-	dir = 4
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
 	},
 /turf/open/floor/deadspace/grater,
 /area/station/security/brig/upper)
@@ -1195,7 +1195,7 @@
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
 "vd" = (
-/obj/structure/cable,
+/obj/structure/cable/multilayer/multiz,
 /obj/structure/railing{
 	dir = 1
 	},
@@ -1212,6 +1212,7 @@
 "vx" = (
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/security,
+/obj/structure/cable,
 /turf/open/floor/deadspace/medical,
 /area/station/security/detectives_office)
 "vH" = (
@@ -1263,11 +1264,9 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/security/brig/upper)
 "wq" = (
-/obj/structure/disposalpipe/segment{
-	dir = 9
-	},
-/turf/closed/wall/r_wall,
-/area/station/security/brig/upper)
+/obj/structure/cable,
+/turf/open/floor/deadspace/grille_spare1,
+/area/station/hallway/primary/central/aft)
 "wu" = (
 /obj/structure/table,
 /turf/open/floor/deadspace/random/slides{
@@ -1293,6 +1292,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/station/security/office)
 "wO" = (
+/obj/structure/bed/dogbed/ian,
 /mob/living/simple_animal/pet/fox/renault,
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/captain/private)
@@ -1392,6 +1392,7 @@
 "yy" = (
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/security,
+/obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
 /area/station/security/office)
 "yF" = (
@@ -1759,6 +1760,7 @@
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom/directional/west,
 /obj/machinery/telephone/command,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "GP" = (
@@ -1884,10 +1886,12 @@
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/hos)
 "Jt" = (
-/obj/structure/cable,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/iron/dark,
-/area/station/security/brig/upper)
+/obj/effect/turf_decal/trimline/yellow/filled/warning{
+	dir = 1
+	},
+/obj/structure/cable/multilayer/multiz,
+/turf/open/floor/deadspace/random/tech,
+/area/station/hallway/primary/central/aft)
 "Jv" = (
 /obj/machinery/door/airlock/command{
 	name = "Colony Director's Quarters";
@@ -1923,7 +1927,7 @@
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "JL" = (
-/obj/structure/closet/secure_closet/hos,
+/obj/structure/closet/secure_closet/ds/hos,
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hos)
 "JZ" = (
@@ -1950,6 +1954,7 @@
 /area/station/command/bridge)
 "Kw" = (
 /obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hop)
 "Ky" = (
@@ -1993,6 +1998,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)
 "LJ" = (
@@ -2050,10 +2056,10 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/station/command/heads_quarters/hos)
 "Ne" = (
-/obj/structure/disposalpipe/segment{
-	dir = 5
+/obj/structure/disposalpipe/trunk/multiz/down{
+	dir = 4
 	},
-/turf/closed/wall/r_wall,
+/turf/open/floor/iron/dark,
 /area/station/security/brig/upper)
 "Ng" = (
 /obj/machinery/door/firedoor{
@@ -2086,6 +2092,7 @@
 /obj/machinery/modular_computer/console/preset/command{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/hop)
 "NN" = (
@@ -2180,9 +2187,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hop)
 "QP" = (
-/obj/structure/closet/secure_closet/captains/mara,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/suit/armor/pcsi/cec,
+/obj/structure/closet/secure_closet/ds/captains,
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/captain/private)
 "QT" = (
@@ -2200,9 +2205,8 @@
 /area/station/security/detectives_office)
 "RW" = (
 /obj/structure/cable,
-/obj/structure/disposalpipe/junction/yjunction,
-/turf/open/floor/deadspace/grater,
-/area/station/security/brig/upper)
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/hallway/primary/central/aft)
 "Sj" = (
 /turf/closed/wall/r_wall,
 /area/station/command/bridge)
@@ -2284,11 +2288,10 @@
 /area/station/security/detectives_office)
 "Ue" = (
 /obj/structure/cable,
-/obj/structure/disposalpipe/segment{
-	dir = 9
+/turf/open/floor/deadspace/random/slides{
+	dir = 8
 	},
-/turf/open/floor/iron/dark,
-/area/station/security/brig/upper)
+/area/station/hallway/primary/central/aft)
 "Uk" = (
 /obj/item/folder/red,
 /obj/structure/table,
@@ -2440,6 +2443,7 @@
 "Yn" = (
 /obj/structure/table/wood/fancy/green,
 /obj/machinery/telephone/command,
+/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/captain/private)
 "YA" = (
@@ -2506,10 +2510,6 @@
 /area/station/command/heads_quarters/hop)
 "ZS" = (
 /obj/machinery/camera/autoname/directional/south,
-/obj/structure/cable,
-/obj/structure/disposalpipe/segment{
-	dir = 6
-	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig/upper)
 "ZZ" = (
@@ -9360,7 +9360,7 @@ Of
 jg
 eQ
 Gn
-wO
+HK
 MU
 kz
 Uo
@@ -9763,7 +9763,7 @@ Sj
 wC
 dp
 dp
-HK
+dp
 HK
 YY
 HK
@@ -9962,7 +9962,7 @@ NN
 NN
 od
 Sj
-HK
+wO
 yJ
 dp
 HK
@@ -10567,8 +10567,8 @@ sr
 NN
 Pv
 NN
-NN
-NN
+dK
+dK
 LI
 aU
 aU
@@ -12201,7 +12201,7 @@ cK
 eO
 cK
 eO
-eO
+Ib
 Ib
 Uu
 Uz
@@ -12403,7 +12403,7 @@ ac
 be
 cq
 kL
-td
+hB
 hB
 bb
 vY
@@ -12604,12 +12604,12 @@ ep
 ep
 ep
 ep
-ep
 XW
 ep
 ep
 ep
 ep
+Ne
 gb
 Uz
 lq
@@ -12811,7 +12811,7 @@ ya
 ya
 ya
 ya
-ya
+il
 tm
 Uz
 Zq
@@ -13221,7 +13221,7 @@ Pd
 WX
 WX
 gj
-Ne
+Uz
 sE
 sE
 "}
@@ -13374,14 +13374,14 @@ sE
 sE
 sE
 YA
-Sj
-Sj
-Sj
-Sj
-Sj
-Sj
-Sj
-Sj
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
 qd
 Sj
 Sj
@@ -13415,7 +13415,7 @@ dA
 MX
 kE
 ck
-eH
+ck
 eE
 ep
 gb
@@ -13423,7 +13423,7 @@ Uz
 Uz
 vX
 ZS
-wq
+Uz
 sE
 sE
 "}
@@ -13588,7 +13588,7 @@ MV
 YA
 bX
 LJ
-Fc
+iT
 ez
 pp
 jF
@@ -13620,11 +13620,11 @@ Wn
 eY
 eE
 ep
-RW
-il
-Jt
-Jt
-Ue
+gb
+am
+ep
+ep
+ep
 Uz
 sE
 sE
@@ -14593,28 +14593,28 @@ GC
 Ft
 Hi
 bA
-GC
+Jt
 af
-Lb
-Lb
-Lb
-IK
-IK
-IK
-Lb
-Lb
-Lb
-IK
-IK
-IK
-IK
-Lb
-Lb
-Lb
-IK
-IK
-fK
-mn
+wq
+wq
+wq
+RW
+RW
+RW
+wq
+wq
+wq
+RW
+RW
+RW
+RW
+wq
+wq
+wq
+RW
+RW
+Ue
+kX
 dJ
 jD
 vU

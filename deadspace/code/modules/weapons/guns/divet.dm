@@ -26,6 +26,10 @@ Divet pistols
 /obj/item/gun/ballistic/automatic/pistol/divet/no_mag
 	spawnwithmagazine = FALSE
 
+/obj/item/gun/ballistic/automatic/pistol/divet/rb/Initialize(mapload)
+	magazine = new /obj/item/ammo_box/magazine/divet/rb(src)
+	return ..()
+
 /obj/item/gun/ballistic/automatic/pistol/divet/extended/Initialize(mapload)
 	magazine = new /obj/item/ammo_box/magazine/divet/extended(src)
 	return ..()
