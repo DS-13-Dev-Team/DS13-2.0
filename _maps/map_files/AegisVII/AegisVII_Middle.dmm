@@ -7847,7 +7847,6 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron/white,
-/turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "dno" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
@@ -9556,7 +9555,6 @@
 /obj/structure/chair/office/light{
 	dir = 4
 	},
-/turf/open/floor/iron/white,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "eXt" = (
@@ -22192,7 +22190,6 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron/white,
-/turf/open/floor/iron/white,
 /area/station/medical/surgery/theatre)
 "qMZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -28915,7 +28912,6 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 5
 	},
-/turf/open/floor/iron/white,
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "xrd" = (
