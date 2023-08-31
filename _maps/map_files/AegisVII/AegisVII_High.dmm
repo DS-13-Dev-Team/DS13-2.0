@@ -273,7 +273,6 @@
 "cL" = (
 /obj/structure/railing,
 /obj/structure/cable,
-/obj/structure/cable,
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)

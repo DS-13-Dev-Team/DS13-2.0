@@ -3456,7 +3456,6 @@
 /area/station/engineering/break_room)
 "aTD" = (
 /obj/structure/cable,
-/obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/supermatter/room)
 "aTF" = (
@@ -3467,7 +3466,6 @@
 /obj/machinery/power/solar{
 	id = "colonypower"
 	},
-/obj/structure/cable,
 /obj/structure/cable,
 /turf/open/misc/asteroid,
 /area/station/solars/port/fore)
@@ -6956,7 +6954,6 @@
 /area/station/hallway/primary/starboard)
 "cwd" = (
 /obj/structure/cable,
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
 	dir = 1
 	},
@@ -10098,7 +10095,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "fty" = (
-/obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/engine_smes)
@@ -19890,7 +19886,6 @@
 /area/station/medical/medbay/central)
 "oGg" = (
 /obj/structure/cable,
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/supermatter/room)
@@ -22843,7 +22838,6 @@
 /area/station/service/hydroponics)
 "ryh" = (
 /obj/structure/cable,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/drone_bay)
 "ryt" = (
@@ -25726,7 +25720,6 @@
 /area/station/hallway/primary/fore)
 "urv" = (
 /obj/structure/cable,
-/obj/structure/cable,
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/engine_smes)
@@ -27268,7 +27261,6 @@
 /area/station/cargo/sorting)
 "vQY" = (
 /obj/structure/cable,
-/obj/structure/cable,
 /obj/machinery/door/airlock/hatch{
 	id_tag = "smesroom_door";
 	name = "SMES Access";
@@ -27641,7 +27633,6 @@
 /area/station/engineering/break_room)
 "wgc" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/supermatter/room)
