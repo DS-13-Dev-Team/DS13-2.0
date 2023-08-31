@@ -5682,8 +5682,7 @@
 	},
 /area/station/service/hydroponics)
 "bsc" = (
-/obj/effect/spawner/structure/window/reinforced/grille,
-/turf/open/floor/plating,
+/turf/open/floor/deadspace/mono,
 /area/ruin/powered/bathhouse)
 "bsf" = (
 /obj/machinery/door/airlock{
@@ -7740,6 +7739,9 @@
 /obj/effect/spawner/random/clothing/backpack,
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
+"diR" = (
+/turf/open/floor/deadspace/grater,
+/area/ruin/powered/bathhouse)
 "diZ" = (
 /turf/open/floor/iron/dark/side{
 	dir = 1
@@ -10058,7 +10060,8 @@
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "ftC" = (
-/turf/open/floor/deadspace/grater,
+/obj/structure/cable,
+/turf/open/floor/wood,
 /area/ruin/powered/bathhouse)
 "ftW" = (
 /obj/structure/flora/rock{
@@ -11295,9 +11298,6 @@
 /obj/machinery/power/data_terminal,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
-"gyt" = (
-/turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/powered/bathhouse)
 "gyQ" = (
 /obj/machinery/hydroponics/constructable,
 /obj/effect/turf_decal/bot,
@@ -12158,9 +12158,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/random/slides,
 /area/station/security/brig)
-"hlV" = (
-/turf/open/floor/deadspace/mono,
-/area/ruin/powered/bathhouse)
 "hmq" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/effect/landmark/start/medical_doctor,
@@ -18821,6 +18818,10 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/shuttle_arena)
+"nEA" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/ruin/powered/bathhouse)
 "nFP" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
@@ -19053,6 +19054,9 @@
 "nSg" = (
 /turf/open/floor/engine,
 /area/station/command/heads_quarters/rd)
+"nSm" = (
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/powered/bathhouse)
 "nSn" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -19721,11 +19725,6 @@
 /obj/effect/turf_decal/ported/rust,
 /turf/open/floor/plating/rust,
 /area/lavaland/surface/outdoors)
-"oAY" = (
-/turf/open/floor/deadspace/random/slides{
-	dir = 8
-	},
-/area/ruin/powered/bathhouse)
 "oBd" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
@@ -22422,10 +22421,6 @@
 	dir = 8
 	},
 /area/station/security/brig)
-"riL" = (
-/obj/structure/cable,
-/turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
 "riQ" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/iron,
@@ -23411,8 +23406,7 @@
 /turf/open/floor/deadspace/cable,
 /area/station/hallway/secondary/exit/departure_lounge)
 "siW" = (
-/obj/structure/cable,
-/turf/open/floor/wood,
+/turf/closed/wall/r_wall,
 /area/ruin/powered/bathhouse)
 "sjm" = (
 /obj/effect/decal/remains/human,
@@ -26012,7 +26006,9 @@
 /turf/open/floor/iron,
 /area/station/science/robotics/mechbay)
 "uGr" = (
-/turf/closed/wall/r_wall,
+/turf/open/floor/deadspace/random/slides{
+	dir = 4
+	},
 /area/ruin/powered/bathhouse)
 "uGt" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner,
@@ -26766,11 +26762,6 @@
 	},
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
-"vzt" = (
-/turf/open/floor/deadspace/random/slides{
-	dir = 4
-	},
-/area/ruin/powered/bathhouse)
 "vzw" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood,
 /obj/machinery/light/directional/south,
@@ -27674,6 +27665,11 @@
 /obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
+"woo" = (
+/turf/open/floor/deadspace/random/slides{
+	dir = 8
+	},
+/area/ruin/powered/bathhouse)
 "woq" = (
 /obj/structure/sign/warning/securearea{
 	pixel_y = 32
@@ -28630,6 +28626,10 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/station/service/chapel)
+"xes" = (
+/obj/effect/spawner/structure/window/reinforced/grille,
+/turf/open/floor/plating,
+/area/ruin/powered/bathhouse)
 "xey" = (
 /obj/machinery/light/small/maintenance/directional/east,
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -29123,7 +29123,6 @@
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching Prison Wing holding areas.";
 	name = "Prison Monitor";
-	network = sssss;
 	pixel_y = 30
 	},
 /turf/open/floor/carpet/red,
@@ -31726,13 +31725,13 @@ mlO
 mlO
 mlO
 mlO
-uGr
-uGr
-uGr
-uGr
-uGr
-uGr
-uGr
+siW
+siW
+siW
+siW
+siW
+siW
+siW
 mlO
 mlO
 mlO
@@ -31928,13 +31927,13 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 iku
 cTf
-siW
+ftC
 cTf
 pxa
-uGr
+siW
 mlO
 mlO
 mlO
@@ -32130,13 +32129,13 @@ mlO
 mlO
 mlO
 mlO
-uGr
-uGr
+siW
+siW
 jBR
 bIp
 atD
-uGr
-uGr
+siW
+siW
 mlO
 mlO
 mlO
@@ -32332,13 +32331,13 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 pxa
 cTf
 aWg
 cTf
 iku
-uGr
+siW
 mlO
 mlO
 mlO
@@ -32534,13 +32533,13 @@ mlO
 mlO
 mlO
 mlO
-uGr
-uGr
+siW
+siW
 jBR
 mYh
 atD
-uGr
-uGr
+siW
+siW
 mlO
 mlO
 mlO
@@ -32736,13 +32735,13 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 iku
-siW
-siW
+ftC
+ftC
 cTf
 pxa
-uGr
+siW
 mlO
 mlO
 mlO
@@ -32928,23 +32927,23 @@ mlO
 mlO
 mlO
 mlO
-uGr
-uGr
-uGr
-uGr
-uGr
-uGr
-uGr
-uGr
-uGr
+siW
+siW
+siW
+siW
+siW
+siW
+siW
+siW
+siW
 mlO
-uGr
-uGr
+siW
+siW
 aTZ
-uGr
+siW
 aTZ
-uGr
-uGr
+siW
+siW
 mlO
 mlO
 mlO
@@ -33130,23 +33129,23 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 tEw
 tEw
 tEw
 tEw
-ftC
+diR
 uze
 uze
-uGr
+siW
 mlO
-uGr
+siW
 miB
 fKM
 rxt
-gyt
+nSm
 wcM
-uGr
+siW
 mlO
 mlO
 mlO
@@ -33327,28 +33326,28 @@ mlO
 mlO
 mlO
 mlO
-uGr
-uGr
-uGr
-uGr
-uGr
-uGr
+siW
+siW
+siW
+siW
+siW
+siW
 cWH
 cWH
 cWH
-hlV
-ftC
-ftC
+bsc
+diR
+diR
 mPN
-uGr
+siW
 mlO
-uGr
+siW
 cEX
 gQL
 aHx
-gyt
+nSm
 bkK
-uGr
+siW
 mlO
 mlO
 mlO
@@ -33529,28 +33528,28 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 dec
-riL
-riL
-riL
-uGr
+nEA
+nEA
+nEA
+siW
 qBv
 lTR
 kcO
 nhL
-riL
-riL
+nEA
+nEA
 tXn
-uGr
+siW
 mlO
-uGr
+siW
 exB
 aHw
 aHx
-gyt
+nSm
 bkK
-uGr
+siW
 mlO
 mlO
 mlO
@@ -33731,28 +33730,28 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 tww
 jlE
-ftC
-riL
-uGr
+diR
+nEA
+siW
 xYY
 hzi
 pFQ
-hlV
-hlV
-hlV
+bsc
+bsc
+bsc
 nhL
-uGr
+siW
 mlO
-uGr
+siW
 exB
 fKM
 bBG
 wIu
 bkK
-uGr
+siW
 mlO
 mlO
 mlO
@@ -33933,28 +33932,28 @@ mlO
 mlO
 mlO
 mlO
-uGr
-uGr
-uGr
-uGr
+siW
+siW
+siW
+siW
 vgG
-uGr
-uGr
-uGr
-uGr
-bsc
-bsc
-bsc
+siW
+siW
+siW
+siW
+xes
+xes
+xes
 vcU
-uGr
-uGr
-uGr
-uGr
-uGr
-uGr
+siW
+siW
+siW
+siW
+siW
+siW
 ybC
-uGr
-uGr
+siW
+siW
 mlO
 mlO
 mlO
@@ -34135,7 +34134,7 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 mJV
 lVt
 mJV
@@ -34148,7 +34147,7 @@ pNQ
 pNQ
 pNQ
 nhL
-uGr
+siW
 eUz
 tVh
 bBG
@@ -34156,7 +34155,7 @@ wmA
 lnP
 fKM
 bRX
-uGr
+siW
 mlO
 mlO
 mlO
@@ -34337,10 +34336,10 @@ mlO
 mlO
 mlO
 mlO
-uGr
-ftC
-ftC
-ftC
+siW
+diR
+diR
+diR
 bBG
 aHx
 doU
@@ -34350,15 +34349,15 @@ aHx
 aHx
 aHx
 kPz
-bsc
+xes
 lPY
 aHx
 aHx
-uGr
-oAY
+siW
+woo
 fKM
 iQw
-uGr
+siW
 mlO
 mlO
 mlO
@@ -34539,7 +34538,7 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 mJV
 mJV
 mJV
@@ -34552,15 +34551,15 @@ aHx
 aOi
 aHx
 kPz
-bsc
+xes
 aHx
 aHx
 aWw
-bsc
+xes
 qHP
 fKM
 dqn
-uGr
+siW
 mlO
 mlO
 mlO
@@ -34741,10 +34740,10 @@ mlO
 mlO
 mlO
 mlO
-uGr
-ftC
-ftC
-ftC
+siW
+diR
+diR
+diR
 bBG
 aHx
 aHx
@@ -34754,15 +34753,15 @@ aHx
 aOi
 aHx
 kPz
-bsc
+xes
 sli
 aHx
 nSn
-bsc
-oAY
+xes
+woo
 fKM
 dqn
-uGr
+siW
 mlO
 mlO
 mlO
@@ -34943,28 +34942,28 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 mJV
 mJV
 mJV
 bBG
-uGr
+siW
 aGq
 aGq
-uGr
+siW
 aHx
 aOi
 aHx
 kPz
-bsc
+xes
 bGN
 aSL
 nSn
-bsc
-oAY
+xes
+woo
 fKM
-vzt
 uGr
+siW
 mlO
 mlO
 mlO
@@ -35145,28 +35144,28 @@ mlO
 mlO
 mlO
 mlO
-uGr
-ftC
-ftC
-ftC
+siW
+diR
+diR
+diR
 wyg
-uGr
-uGr
-uGr
-uGr
+siW
+siW
+siW
+siW
 dUb
 cWL
 aHx
 fpi
-uGr
-uGr
-uGr
-uGr
-uGr
+siW
+siW
+siW
+siW
+siW
 xnn
 fKM
 bRX
-uGr
+siW
 mlO
 mlO
 mlO
@@ -35347,28 +35346,28 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 oqS
 egP
 enN
 bBG
-uGr
+siW
 sIE
 sIE
-uGr
+siW
 aHx
 cWL
 aHx
 lKM
-uGr
+siW
 aSV
 bgm
 aSV
-uGr
-oAY
+siW
+woo
 aHw
-vzt
 uGr
+siW
 mlO
 mlO
 mlO
@@ -35549,7 +35548,7 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 orL
 bBG
 bBG
@@ -35562,15 +35561,15 @@ bBG
 jPE
 bBG
 kPz
-uGr
-hlV
-hlV
-hlV
-uGr
-oAY
+siW
+bsc
+bsc
+bsc
+siW
+woo
 fKM
 jUZ
-uGr
+siW
 mlO
 mlO
 mlO
@@ -35751,7 +35750,7 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 tDi
 aHx
 aHx
@@ -35772,7 +35771,7 @@ gRF
 tCr
 fKM
 jUZ
-uGr
+siW
 mlO
 mlO
 mlO
@@ -35953,7 +35952,7 @@ mlO
 mlO
 mlO
 mlO
-uGr
+siW
 aap
 aHx
 aHx
@@ -35966,15 +35965,15 @@ aHx
 aHx
 aHx
 sNX
-uGr
-hlV
+siW
+bsc
 nhL
-hlV
-uGr
+bsc
+siW
 tCr
 fKM
 bRX
-uGr
+siW
 mlO
 mlO
 mlO
@@ -36155,7 +36154,7 @@ apG
 apG
 mlO
 mlO
-uGr
+siW
 pnp
 aHx
 aHx
@@ -36168,15 +36167,15 @@ aHx
 aHx
 aHx
 sNX
-uGr
+siW
 xzY
 sHG
 gEZ
-uGr
-oAY
-gyt
+siW
+woo
+nSm
 bRX
-uGr
+siW
 mlO
 mlO
 mlO
@@ -36357,7 +36356,7 @@ apG
 apG
 apG
 apG
-uGr
+siW
 pnp
 qoJ
 dPH
@@ -36369,16 +36368,16 @@ kup
 dPH
 dPH
 dPH
-uGr
-uGr
-uGr
-uGr
-uGr
-uGr
+siW
+siW
+siW
+siW
+siW
+siW
 bgs
 lDW
 jUZ
-uGr
+siW
 mlO
 mlO
 mlO
@@ -36559,28 +36558,28 @@ apG
 apG
 apG
 apG
-uGr
-uGr
-uGr
-uGr
+siW
+siW
+siW
+siW
 cvg
 cvg
 cvg
-uGr
-uGr
-uGr
+siW
+siW
+siW
 eWf
-uGr
-uGr
+siW
+siW
 oHb
 oHb
 oHb
 oHb
-uGr
-uGr
-uGr
-uGr
-uGr
+siW
+siW
+siW
+siW
+siW
 mlO
 mlO
 mlO
