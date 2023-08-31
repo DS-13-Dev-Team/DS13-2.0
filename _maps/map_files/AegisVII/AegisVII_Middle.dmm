@@ -3974,7 +3974,6 @@
 /obj/item/stock_parts/subspace/crystal,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
-/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tcomms)
 "baZ" = (
@@ -3983,7 +3982,6 @@
 	req_access_txt = "1"
 	},
 /obj/machinery/door/firedoor,
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -5237,7 +5235,6 @@
 /turf/open/floor/deadspace/mono,
 /area/station/service/hydroponics)
 "bnS" = (
-/obj/structure/cable,
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Shared Engineering Storage";
 	req_one_access_txt = "32;19"
@@ -8425,7 +8422,6 @@
 /obj/machinery/power/generator{
 	dir = 8
 	},
-/obj/structure/cable,
 /obj/machinery/light/floor/has_bulb,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -8821,7 +8817,6 @@
 /obj/item/circuitboard/machine/exoscanner{
 	pixel_y = -3
 	},
-/obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -10993,7 +10988,6 @@
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/structure/cable,
 /obj/effect/landmark/navigate_destination,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
