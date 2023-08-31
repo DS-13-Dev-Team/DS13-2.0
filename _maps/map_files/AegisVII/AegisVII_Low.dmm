@@ -505,7 +505,6 @@
 "ec" = (
 /obj/machinery/door/airlock/mining,
 /turf/open/floor/deadspace/random/golf_brown,
-/turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/warehouse)
 "ed" = (
 /obj/structure/closet/crate/trashcart,
