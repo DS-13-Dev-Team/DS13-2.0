@@ -6,7 +6,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "aav" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -1342,7 +1342,7 @@
 "atD" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "atI" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/deadspace/grater,
@@ -2261,7 +2261,7 @@
 "aGq" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "aGw" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /turf/open/floor/iron/dark,
@@ -2344,15 +2344,10 @@
 /obj/effect/decal/cleanable/blood,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "aHx" = (
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/chair{
-	pixel_y = -2
-	},
-/obj/structure/cable,
-/turf/open/floor/iron,
-/area/station/cargo/lobby)
+/turf/open/floor/deadspace/random/golf_brown,
+/area/ruin/powered/bathhouse)
 "aHI" = (
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/deadspace/mono,
@@ -3048,7 +3043,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large/ds/green_horizontal,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "aOq" = (
 /obj/structure/table,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -3370,14 +3365,14 @@
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "aSV" = (
 /obj/machinery/shower{
 	dir = 4
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/deadspace/bathroom,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "aSX" = (
 /obj/machinery/vending/medical,
 /obj/item/radio/intercom/directional/north,
@@ -3528,7 +3523,7 @@
 	name = "Dormitories"
 	},
 /turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "aUe" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/bot{
@@ -3694,7 +3689,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "aWo" = (
 /obj/machinery/chem_master,
 /obj/structure/noticeboard/directional/east,
@@ -3713,7 +3708,7 @@
 /obj/item/toner,
 /obj/item/toner,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "aWB" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -4482,7 +4477,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/bathroom,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "bgq" = (
 /mob/living/simple_animal/bot/mulebot/cargobot{
 	dir = 8;
@@ -4497,7 +4492,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "bgG" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -4821,7 +4816,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "bkQ" = (
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron,
@@ -5687,10 +5682,9 @@
 	},
 /area/station/service/hydroponics)
 "bsc" = (
-/obj/structure/cable,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/iron,
-/area/station/cargo/storage)
+/obj/effect/spawner/structure/window/reinforced/grille,
+/turf/open/floor/plating,
+/area/ruin/powered/bathhouse)
 "bsf" = (
 /obj/machinery/door/airlock{
 	name = "Abandoned Shuttle Bay"
@@ -5903,7 +5897,6 @@
 /area/station/hallway/primary/central)
 "bwD" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
 "bxD" = (
@@ -5978,13 +5971,13 @@
 "bBG" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "bBR" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "bCd" = (
 /mob/living/simple_animal/drone/classic/scavbot{
 	dir = 4;
@@ -6085,7 +6078,7 @@
 	id = "miningprep2"
 	},
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "bHg" = (
 /obj/machinery/door/airlock{
 	id_tag = "Toilet1";
@@ -6103,7 +6096,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "bIu" = (
 /turf/open/floor/iron/white,
 /area/station/science/misc_lab)
@@ -6329,7 +6322,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "bSa" = (
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/ported/techfloor_grid,
@@ -6697,7 +6690,6 @@
 "ckl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment,
-/obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
 "clq" = (
@@ -6919,7 +6911,7 @@
 	id = "miningprep2"
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "cvl" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/chair/office{
@@ -7129,14 +7121,13 @@
 /turf/open/floor/deadspace/mono,
 /area/station/maintenance/starboard/fore)
 "cEX" = (
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/effect/turf_decal/box,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "cEZ" = (
 /obj/structure/window/reinforced/spawner/north,
 /obj/structure/table/glass,
@@ -7451,7 +7442,7 @@
 /area/station/engineering/supermatter/room)
 "cTf" = (
 /turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "cTu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -7522,11 +7513,11 @@
 "cWH" = (
 /obj/structure/window/reinforced/spawner/east,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "cWL" = (
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "cWN" = (
 /obj/structure/reagent_dispensers/beerkeg,
 /turf/open/misc/asteroid,
@@ -7660,12 +7651,11 @@
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
 "dec" = (
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/rack,
 /obj/structure/cable,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "dfE" = (
 /turf/closed/wall/r_wall,
 /area/mine/living_quarters)
@@ -7853,7 +7843,7 @@
 "doU" = (
 /mob/living/simple_animal/mouse,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "dpe" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -7870,7 +7860,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "dqG" = (
 /turf/open/floor/iron,
 /area/station/security/range)
@@ -8369,7 +8359,7 @@
 /area/station/engineering/main)
 "dPH" = (
 /turf/open/floor/deadspace/random/slides,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "dPS" = (
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
@@ -8444,7 +8434,7 @@
 "dUb" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "dUy" = (
 /turf/open/floor/iron,
 /area/station/science/robotics/mechbay)
@@ -8775,7 +8765,7 @@
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "egQ" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/table/reinforced,
@@ -8951,7 +8941,7 @@
 /obj/item/storage/toolbox/electrical,
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "eor" = (
 /obj/machinery/vending/tool,
 /obj/effect/turf_decal/bot,
@@ -9040,7 +9030,6 @@
 /turf/open/floor/iron/dark/telecomms,
 /area/station/engineering/storage/tcomms)
 "ety" = (
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/service/hydroponics)
 "etD" = (
@@ -9118,7 +9107,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "eyY" = (
 /obj/structure/chair/pew{
 	dir = 1
@@ -9472,12 +9461,11 @@
 /area/station/medical/medbay/lobby)
 "eUz" = (
 /obj/item/paper_bin,
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/table/reinforced,
 /obj/item/folder/blue,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "eUQ" = (
 /obj/structure/railing{
 	dir = 5
@@ -9496,7 +9484,7 @@
 	name = "Mining Preparations A-2"
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "eWi" = (
 /turf/open/floor/carpet,
 /area/station/medical/psychology)
@@ -10004,7 +9992,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "fpw" = (
 /turf/open/floor/wood,
 /area/station/cargo/qm)
@@ -10070,9 +10058,8 @@
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "ftC" = (
-/obj/structure/cable,
-/turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/turf/open/floor/deadspace/grater,
+/area/ruin/powered/bathhouse)
 "ftW" = (
 /obj/structure/flora/rock{
 	desc = "A volcanic rock.";
@@ -10434,7 +10421,7 @@
 "fKM" = (
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "fLI" = (
 /obj/effect/spawner/random/vending/colavend,
 /obj/effect/turf_decal/box,
@@ -11308,6 +11295,9 @@
 /obj/machinery/power/data_terminal,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
+"gyt" = (
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/powered/bathhouse)
 "gyQ" = (
 /obj/machinery/hydroponics/constructable,
 /obj/effect/turf_decal/bot,
@@ -11480,7 +11470,7 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/deadspace/bathroom,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "gFh" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/grater,
@@ -11686,7 +11676,7 @@
 /obj/effect/mob_spawn/corpse/human/miner,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "gQP" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "mininghallwayshutter";
@@ -11717,7 +11707,7 @@
 /obj/machinery/door/airlock/mining,
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "gRJ" = (
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/deadspace/random/maint_right,
@@ -12168,6 +12158,9 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/random/slides,
 /area/station/security/brig)
+"hlV" = (
+/turf/open/floor/deadspace/mono,
+/area/ruin/powered/bathhouse)
 "hmq" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/effect/landmark/start/medical_doctor,
@@ -12557,13 +12550,12 @@
 /turf/open/floor/catwalk_floor/iron,
 /area/station/engineering/main)
 "hzi" = (
-/obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/engineering/tool,
 /obj/effect/spawner/random/engineering/tool,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "hzC" = (
 /obj/machinery/firealarm/directional/north,
 /obj/structure/cable,
@@ -12791,7 +12783,6 @@
 /turf/open/floor/wood,
 /area/station/cargo/qm)
 "hMU" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
@@ -13238,7 +13229,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet/dorms,
 /turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "ikz" = (
 /obj/machinery/door/poddoor/preopen,
 /turf/open/floor/deadspace/mono,
@@ -13849,7 +13840,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "iQS" = (
 /obj/structure/chair/sofa/bench,
 /turf/open/floor/deadspace/mono,
@@ -14305,7 +14296,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "jlR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -14630,7 +14621,7 @@
 "jBR" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "jCt" = (
 /obj/machinery/computer/cargo{
 	dir = 8
@@ -14860,7 +14851,7 @@
 /obj/structure/closet/crate/large,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "jPV" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/medical/medkit_rare,
@@ -14974,7 +14965,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "jVs" = (
 /obj/machinery/disposal/bin,
 /obj/effect/turf_decal/delivery,
@@ -15138,7 +15129,7 @@
 "kcO" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "kdn" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
 	dir = 4
@@ -15535,7 +15526,7 @@
 "kup" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/random/slides,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "kuG" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/commons/storage/primary)
@@ -15908,7 +15899,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "kQg" = (
 /obj/machinery/disposal/delivery_chute{
 	dir = 4
@@ -16455,7 +16446,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "lnQ" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
 	dir = 8
@@ -16835,7 +16826,7 @@
 /obj/effect/spawner/random/vending/snackvend,
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "lEd" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -16973,7 +16964,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "lLi" = (
 /obj/structure/railing,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -17070,7 +17061,7 @@
 /obj/effect/spawner/random/food_or_drink/booze,
 /obj/effect/spawner/random/food_or_drink/booze,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "lQi" = (
 /obj/machinery/camera/autoname/directional/south,
 /obj/machinery/light/directional/south,
@@ -17122,7 +17113,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "lUe" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/structure/cable,
@@ -17189,7 +17180,7 @@
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "lVB" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 10
@@ -17384,7 +17375,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "miO" = (
 /obj/machinery/washing_machine,
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -17880,7 +17871,7 @@
 /obj/structure/ore_box,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "mKw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -17957,7 +17948,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "mQh" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
@@ -18171,7 +18162,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "mYj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -18398,7 +18389,7 @@
 "nhL" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "njG" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/deadspace/random/slides,
@@ -19065,7 +19056,7 @@
 "nSn" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "nSp" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -19181,7 +19172,6 @@
 /turf/open/floor/deadspace/mono,
 /area/station/service/hydroponics)
 "nVV" = (
-/obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
@@ -19541,7 +19531,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large/ds/green_vertical,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "onE" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/hallway/secondary/exit/departure_lounge)
@@ -19595,18 +19585,18 @@
 "oqS" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "ors" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "orL" = (
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "osl" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -19669,9 +19659,7 @@
 	},
 /area/station/hallway/primary/starboard)
 "owt" = (
-/obj/machinery/power/apc/auto_name/directional/south,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/service/hydroponics)
 "owz" = (
@@ -19733,6 +19721,11 @@
 /obj/effect/turf_decal/ported/rust,
 /turf/open/floor/plating/rust,
 /area/lavaland/surface/outdoors)
+"oAY" = (
+/turf/open/floor/deadspace/random/slides{
+	dir = 8
+	},
+/area/ruin/powered/bathhouse)
 "oBd" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
@@ -20529,7 +20522,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "pnr" = (
 /obj/machinery/light/directional/south,
 /turf/open/misc/asteroid,
@@ -20714,7 +20707,7 @@
 /obj/item/bedsheet/dorms,
 /obj/effect/mob_spawn/corpse/human/miner,
 /turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "pxh" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/deadspace/random/slides{
@@ -20887,7 +20880,7 @@
 /obj/effect/spawner/random/engineering/tool,
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/random/maint_center,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "pFW" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -21059,7 +21052,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "pOc" = (
 /obj/structure/cable,
 /obj/machinery/light/floor/has_bulb,
@@ -21125,6 +21118,7 @@
 "pSy" = (
 /obj/machinery/holopad,
 /mob/living/simple_animal/sloth/citrus,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "pSB" = (
@@ -21591,7 +21585,7 @@
 /obj/machinery/light/directional/east,
 /obj/effect/spawner/random/engineering/tool_advanced,
 /turf/open/floor/deadspace/random/slides,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "qps" = (
 /obj/structure/cable,
 /obj/machinery/conveyor{
@@ -21821,7 +21815,7 @@
 "qBv" = (
 /obj/machinery/modular_computer/console/preset/civilian,
 /turf/open/floor/deadspace/random/maint_center,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "qBC" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/suit/toggle/labcoat,
@@ -21985,7 +21979,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "qHV" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 10
@@ -22428,6 +22422,10 @@
 	dir = 8
 	},
 /area/station/security/brig)
+"riL" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/grater,
+/area/ruin/powered/bathhouse)
 "riQ" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/iron,
@@ -22732,7 +22730,7 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/corpse/human/miner,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "rxO" = (
 /obj/machinery/firealarm/directional/north,
 /obj/structure/chair,
@@ -22802,7 +22800,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "rBU" = (
 /obj/structure/railing{
 	dir = 9
@@ -23413,10 +23411,9 @@
 /turf/open/floor/deadspace/cable,
 /area/station/hallway/secondary/exit/departure_lounge)
 "siW" = (
-/obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "sjm" = (
 /obj/effect/decal/remains/human,
 /obj/effect/spawner/random/deadspace/rig/scaf,
@@ -23458,7 +23455,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "slp" = (
 /obj/machinery/holopad,
 /obj/effect/landmark/start/scientist,
@@ -23809,7 +23806,7 @@
 "sDZ" = (
 /obj/effect/marker_location,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "sEn" = (
 /obj/machinery/door/airlock/glass{
 	name = "Dormitories"
@@ -23942,7 +23939,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/bathroom,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "sHH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/toolbox/mechanical,
@@ -23957,7 +23954,7 @@
 "sIE" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "sIV" = (
 /obj/machinery/light/directional/south,
 /obj/machinery/requests_console/directional/south{
@@ -24004,7 +24001,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "sNZ" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 5
@@ -24452,7 +24449,7 @@
 /obj/structure/rack,
 /obj/item/integrated_circuit/loaded/hello_world,
 /obj/item/integrated_circuit/loaded/speech_relay,
-/obj/machinery/power/apc/auto_name/directional/north,
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/white,
 /area/station/science/misc_lab)
 "tkI" = (
@@ -24721,7 +24718,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "twF" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/machinery/vending/coffee,
@@ -24885,18 +24882,18 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "tDi" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "tEw" = (
 /obj/machinery/computer,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "tEL" = (
 /obj/structure/easel,
 /obj/machinery/light/small/directional/north,
@@ -24942,8 +24939,7 @@
 "tIC" = (
 /obj/effect/turf_decal/loading_area,
 /obj/machinery/flasher/directional/west{
-	id = "secentranceflasher";
-	id_tag = sd
+	id = "secentranceflasher"
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/security/brig)
@@ -25260,7 +25256,7 @@
 /obj/machinery/light/directional/west,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "tWa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/purple{
@@ -25302,7 +25298,7 @@
 /obj/effect/spawner/random/maintenance,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "tXt" = (
 /mob/living/simple_animal/mouse,
 /turf/open/floor/deadspace/random/rectangles,
@@ -25811,7 +25807,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "uzN" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
@@ -26016,11 +26012,8 @@
 /turf/open/floor/iron,
 /area/station/science/robotics/mechbay)
 "uGr" = (
-/obj/machinery/light/directional/north,
-/obj/structure/closet/secure_closet/personal,
-/obj/machinery/power/apc/auto_name/directional/north,
-/turf/open/floor/deadspace/random/rectangles,
-/area/station/cargo/storage)
+/turf/closed/wall/r_wall,
+/area/ruin/powered/bathhouse)
 "uGt" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /obj/structure/disposalpipe/segment{
@@ -26351,7 +26344,6 @@
 /obj/effect/turf_decal/trimline/yellow/filled/end{
 	dir = 4
 	},
-/obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/iron/textured,
 /area/station/medical/medbay/central)
 "uZB" = (
@@ -26398,7 +26390,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "vdC" = (
 /obj/structure/table/reinforced,
 /obj/item/folder/white{
@@ -26474,7 +26466,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "vhn" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/ported/lino,
@@ -26774,6 +26766,11 @@
 	},
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
+"vzt" = (
+/turf/open/floor/deadspace/random/slides{
+	dir = 4
+	},
+/area/ruin/powered/bathhouse)
 "vzw" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood,
 /obj/machinery/light/directional/south,
@@ -27451,7 +27448,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "wdf" = (
 /obj/machinery/door/poddoor/preopen,
 /turf/open/floor/deadspace/mono,
@@ -27628,7 +27625,7 @@
 /obj/machinery/door/airlock/mining,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "wmR" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -27820,7 +27817,7 @@
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "wyv" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/deadspace/grater,
@@ -28074,7 +28071,7 @@
 /obj/effect/mob_spawn/corpse/human/miner,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "wIz" = (
 /obj/machinery/light{
 	dir = 8
@@ -28527,7 +28524,6 @@
 	req_access_txt = "35"
 	},
 /obj/machinery/door/firedoor,
-/obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
 "wZv" = (
@@ -28574,7 +28570,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large/ds/blue_vertical,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "xcc" = (
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/production)
@@ -28765,7 +28761,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "xns" = (
 /obj/effect/spawner/random/structure/crate_abandoned,
 /turf/open/floor/plating,
@@ -29043,10 +29039,9 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/bathroom,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "xAi" = (
 /obj/structure/toilet{
 	pixel_y = 5
@@ -29557,7 +29552,7 @@
 /obj/item/computer_hardware/network_card/advanced,
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/random/maint_center,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "xZe" = (
 /obj/machinery/piratepad/civilian,
 /obj/effect/turf_decal/bot_white,
@@ -29632,7 +29627,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/bathhouse)
 "ybH" = (
 /obj/machinery/computer/atmos_alert{
 	dir = 4
@@ -31731,13 +31726,13 @@ mlO
 mlO
 mlO
 mlO
-huo
-huo
-huo
-huo
-huo
-huo
-huo
+uGr
+uGr
+uGr
+uGr
+uGr
+uGr
+uGr
 mlO
 mlO
 mlO
@@ -31933,13 +31928,13 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 iku
 cTf
 siW
 cTf
 pxa
-huo
+uGr
 mlO
 mlO
 mlO
@@ -32135,13 +32130,13 @@ mlO
 mlO
 mlO
 mlO
-huo
-huo
+uGr
+uGr
 jBR
 bIp
 atD
-huo
-huo
+uGr
+uGr
 mlO
 mlO
 mlO
@@ -32337,13 +32332,13 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 pxa
 cTf
 aWg
 cTf
 iku
-huo
+uGr
 mlO
 mlO
 mlO
@@ -32539,13 +32534,13 @@ mlO
 mlO
 mlO
 mlO
-huo
-huo
+uGr
+uGr
 jBR
 mYh
 atD
-huo
-huo
+uGr
+uGr
 mlO
 mlO
 mlO
@@ -32741,13 +32736,13 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 iku
-ftC
-ftC
+siW
+siW
 cTf
 pxa
-huo
+uGr
 mlO
 mlO
 mlO
@@ -32933,23 +32928,23 @@ mlO
 mlO
 mlO
 mlO
-huo
-huo
-huo
-huo
-huo
-huo
-huo
-huo
-huo
+uGr
+uGr
+uGr
+uGr
+uGr
+uGr
+uGr
+uGr
+uGr
 mlO
-huo
-huo
+uGr
+uGr
 aTZ
-huo
+uGr
 aTZ
-huo
-huo
+uGr
+uGr
 mlO
 mlO
 mlO
@@ -33135,23 +33130,23 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 tEw
 tEw
 tEw
 tEw
-utF
+ftC
 uze
 uze
-huo
+uGr
 mlO
-huo
+uGr
 miB
 fKM
 rxt
-uxr
+gyt
 wcM
-huo
+uGr
 mlO
 mlO
 mlO
@@ -33332,28 +33327,28 @@ mlO
 mlO
 mlO
 mlO
-huo
-huo
-huo
-huo
-huo
-huo
+uGr
+uGr
+uGr
+uGr
+uGr
+uGr
 cWH
 cWH
 cWH
-jzx
-utF
-utF
+hlV
+ftC
+ftC
 mPN
-huo
+uGr
 mlO
-huo
+uGr
 cEX
 gQL
-heF
-uxr
+aHx
+gyt
 bkK
-huo
+uGr
 mlO
 mlO
 mlO
@@ -33534,28 +33529,28 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 dec
-gmn
-gmn
-gmn
-huo
+riL
+riL
+riL
+uGr
 qBv
 lTR
 kcO
 nhL
-gmn
-gmn
+riL
+riL
 tXn
-huo
+uGr
 mlO
-huo
+uGr
 exB
 aHw
-heF
-uxr
+aHx
+gyt
 bkK
-huo
+uGr
 mlO
 mlO
 mlO
@@ -33736,28 +33731,28 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 tww
 jlE
-utF
-gmn
-huo
+ftC
+riL
+uGr
 xYY
 hzi
 pFQ
-jzx
-jzx
-jzx
+hlV
+hlV
+hlV
 nhL
-huo
+uGr
 mlO
-huo
+uGr
 exB
 fKM
 bBG
 wIu
 bkK
-huo
+uGr
 mlO
 mlO
 mlO
@@ -33938,28 +33933,28 @@ mlO
 mlO
 mlO
 mlO
-huo
-huo
-huo
-huo
+uGr
+uGr
+uGr
+uGr
 vgG
-huo
-huo
-huo
-huo
-byk
-byk
-byk
+uGr
+uGr
+uGr
+uGr
+bsc
+bsc
+bsc
 vcU
-huo
-huo
-huo
-huo
-huo
-huo
+uGr
+uGr
+uGr
+uGr
+uGr
+uGr
 ybC
-huo
-huo
+uGr
+uGr
 mlO
 mlO
 mlO
@@ -34051,11 +34046,11 @@ aDx
 aNt
 aNt
 fWu
-hYF
-hYF
+ybM
+ybM
 wZp
-hYF
-hYF
+ybM
+ybM
 ety
 owt
 cJg
@@ -34140,7 +34135,7 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 mJV
 lVt
 mJV
@@ -34153,7 +34148,7 @@ pNQ
 pNQ
 pNQ
 nhL
-huo
+uGr
 eUz
 tVh
 bBG
@@ -34161,7 +34156,7 @@ wmA
 lnP
 fKM
 bRX
-huo
+uGr
 mlO
 mlO
 mlO
@@ -34253,7 +34248,7 @@ wuO
 nTu
 nTu
 rls
-hYF
+ybM
 jkf
 uoi
 ybS
@@ -34342,28 +34337,28 @@ mlO
 mlO
 mlO
 mlO
-huo
-utF
-utF
-utF
+uGr
+ftC
+ftC
+ftC
 bBG
-heF
+aHx
 doU
-heF
-heF
-heF
-heF
-heF
+aHx
+aHx
+aHx
+aHx
+aHx
 kPz
-byk
+bsc
 lPY
-heF
-heF
-huo
-cdf
+aHx
+aHx
+uGr
+oAY
 fKM
 iQw
-huo
+uGr
 mlO
 mlO
 mlO
@@ -34544,28 +34539,28 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 mJV
 mJV
 mJV
 bBG
-heF
-heF
+aHx
+aHx
 sDZ
-heF
-heF
+aHx
+aHx
 aOi
-heF
+aHx
 kPz
-byk
-heF
-heF
+bsc
+aHx
+aHx
 aWw
-byk
+bsc
 qHP
 fKM
 dqn
-huo
+uGr
 mlO
 mlO
 mlO
@@ -34746,28 +34741,28 @@ mlO
 mlO
 mlO
 mlO
-huo
-utF
-utF
-utF
+uGr
+ftC
+ftC
+ftC
 bBG
-heF
-heF
-heF
-heF
-heF
+aHx
+aHx
+aHx
+aHx
+aHx
 aOi
-heF
+aHx
 kPz
-byk
+bsc
 sli
-heF
+aHx
 nSn
-byk
-cdf
+bsc
+oAY
 fKM
 dqn
-huo
+uGr
 mlO
 mlO
 mlO
@@ -34948,28 +34943,28 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 mJV
 mJV
 mJV
 bBG
-huo
+uGr
 aGq
 aGq
-huo
-heF
+uGr
+aHx
 aOi
-heF
+aHx
 kPz
-byk
+bsc
 bGN
 aSL
 nSn
-byk
-cdf
+bsc
+oAY
 fKM
-iXK
-huo
+vzt
+uGr
 mlO
 mlO
 mlO
@@ -35150,28 +35145,28 @@ mlO
 mlO
 mlO
 mlO
-huo
-utF
-utF
-utF
+uGr
+ftC
+ftC
+ftC
 wyg
-huo
-huo
-huo
-huo
+uGr
+uGr
+uGr
+uGr
 dUb
 cWL
-heF
+aHx
 fpi
-huo
-huo
-huo
-huo
-huo
+uGr
+uGr
+uGr
+uGr
+uGr
 xnn
 fKM
 bRX
-huo
+uGr
 mlO
 mlO
 mlO
@@ -35352,28 +35347,28 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 oqS
 egP
 enN
 bBG
-huo
+uGr
 sIE
 sIE
-huo
-heF
+uGr
+aHx
 cWL
-heF
+aHx
 lKM
-huo
+uGr
 aSV
 bgm
 aSV
-huo
-cdf
+uGr
+oAY
 aHw
-iXK
-huo
+vzt
+uGr
 mlO
 mlO
 mlO
@@ -35554,7 +35549,7 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 orL
 bBG
 bBG
@@ -35567,15 +35562,15 @@ bBG
 jPE
 bBG
 kPz
-huo
-jzx
-jzx
-jzx
-huo
-cdf
+uGr
+hlV
+hlV
+hlV
+uGr
+oAY
 fKM
 jUZ
-huo
+uGr
 mlO
 mlO
 mlO
@@ -35756,18 +35751,18 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 tDi
-heF
-heF
-heF
+aHx
+aHx
+aHx
 xbV
 xbV
 onB
 onB
-heF
+aHx
 rBK
-heF
+aHx
 kPz
 gRF
 bBG
@@ -35777,7 +35772,7 @@ gRF
 tCr
 fKM
 jUZ
-huo
+uGr
 mlO
 mlO
 mlO
@@ -35958,28 +35953,28 @@ mlO
 mlO
 mlO
 mlO
-huo
+uGr
 aap
-heF
-heF
-heF
-heF
-heF
-heF
-heF
-heF
-heF
-heF
+aHx
+aHx
+aHx
+aHx
+aHx
+aHx
+aHx
+aHx
+aHx
+aHx
 sNX
-huo
-jzx
+uGr
+hlV
 nhL
-jzx
-huo
-orL
+hlV
+uGr
+tCr
 fKM
 bRX
-huo
+uGr
 mlO
 mlO
 mlO
@@ -36160,28 +36155,28 @@ apG
 apG
 mlO
 mlO
-huo
+uGr
 pnp
-heF
-heF
-heF
-heF
-heF
-heF
-heF
-heF
-heF
-heF
+aHx
+aHx
+aHx
+aHx
+aHx
+aHx
+aHx
+aHx
+aHx
+aHx
 sNX
-huo
+uGr
 xzY
 sHG
 gEZ
-huo
-cdf
-uxr
+uGr
+oAY
+gyt
 bRX
-huo
+uGr
 mlO
 mlO
 mlO
@@ -36362,7 +36357,7 @@ apG
 apG
 apG
 apG
-huo
+uGr
 pnp
 qoJ
 dPH
@@ -36374,16 +36369,16 @@ kup
 dPH
 dPH
 dPH
-huo
-huo
-huo
-huo
-huo
-huo
+uGr
+uGr
+uGr
+uGr
+uGr
+uGr
 bgs
 lDW
 jUZ
-huo
+uGr
 mlO
 mlO
 mlO
@@ -36564,28 +36559,28 @@ apG
 apG
 apG
 apG
-huo
-huo
-huo
-huo
+uGr
+uGr
+uGr
+uGr
 cvg
 cvg
 cvg
-huo
-huo
-huo
+uGr
+uGr
+uGr
 eWf
-huo
-huo
+uGr
+uGr
 oHb
 oHb
 oHb
 oHb
-huo
-huo
-huo
-huo
-huo
+uGr
+uGr
+uGr
+uGr
+uGr
 mlO
 mlO
 mlO
@@ -52834,7 +52829,7 @@ ksL
 btS
 qdu
 ajJ
-uGr
+bbo
 pbO
 wah
 pbO
@@ -53037,12 +53032,12 @@ qTO
 fYV
 ajJ
 wOD
-hIv
+pbO
 nVV
 hMU
 hMU
 hMU
-bsc
+qpG
 tTp
 pbO
 owz
@@ -53240,11 +53235,11 @@ fYV
 fQS
 hIv
 hIv
-pbO
+hIv
 pSy
-pbO
-pbO
-jIO
+hIv
+hIv
+aWB
 pVd
 pbO
 owz
@@ -54038,7 +54033,7 @@ gDF
 kTN
 mne
 kfx
-aHx
+xSZ
 snc
 xyr
 iHR
