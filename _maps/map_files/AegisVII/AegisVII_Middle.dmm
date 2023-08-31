@@ -7251,7 +7251,6 @@
 /area/station/maintenance/starboard/central)
 "cHY" = (
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/station/service/chapel)
 "cIk" = (
 /obj/structure/chair/office{
@@ -9993,7 +9992,6 @@
 /area/station/service/hydroponics)
 "foA" = (
 /turf/closed/wall/r_wall,
-/turf/open/floor/deadspace/mono,
 /area/station/commons/dorms/cryo)
 "foK" = (
 /obj/effect/turf_decal/stripes/line{
@@ -16530,7 +16528,6 @@
 /area/station/engineering/supermatter/room)
 "lod" = (
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "loz" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -16763,7 +16760,6 @@
 /area/station/service/chapel)
 "lym" = (
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/station/science/lab)
 "lyt" = (
 /obj/structure/sign/poster/random/directional/east,
@@ -17371,7 +17367,6 @@
 /area/station/engineering/storage/tech)
 "mcB" = (
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/mine/production)
 "mcF" = (
 /obj/structure/rack,
@@ -18362,7 +18357,6 @@
 /area/lavaland/surface/outdoors)
 "ndd" = (
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/station/science/misc_lab)
 "ndg" = (
 /obj/structure/table/reinforced,
@@ -21411,7 +21405,6 @@
 /area/lavaland/surface/outdoors)
 "qdg" = (
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/station/security/warden)
 "qdi" = (
 /obj/machinery/door/poddoor/preopen{
@@ -29177,7 +29170,6 @@
 /area/station/commons/dorms/barracks)
 "xDA" = (
 /turf/closed/wall/r_wall,
-/turf/open/floor/plating,
 /area/station/medical/break_room)
 "xDM" = (
 /obj/machinery/firealarm/directional/north,

@@ -118,7 +118,6 @@
 /area/station/security)
 "bf" = (
 /turf/closed/wall/r_wall,
-/turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "bg" = (
 /obj/structure/filingcabinet,
@@ -2457,7 +2456,6 @@
 /area/station/cargo/warehouse)
 "tT" = (
 /turf/closed/wall/r_wall,
-/turf/open/floor/wood,
 /area/station/maintenance/port/lesser)
 "tY" = (
 /obj/structure/rack/shelf,
