@@ -761,10 +761,6 @@
 /obj/item/storage/box/masks,
 /turf/open/floor/deadspace/bathroom,
 /area/station/medical/morgue)
-"fI" = (
-/obj/structure/cable,
-/turf/open/floor/catwalk_floor/iron_dark,
-/area/station/maintenance/port/lesser)
 "fK" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/turf_decal/box,
@@ -24531,7 +24527,7 @@ zp
 zp
 zp
 yA
-fI
+CO
 ev
 CO
 CO
@@ -35709,7 +35705,7 @@ yG
 yG
 yG
 yG
-JB
+xK
 xK
 xK
 JB
