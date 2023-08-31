@@ -115,7 +115,6 @@
 "be" = (
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
-/turf/open/floor/iron/dark,
 /area/station/security)
 "bf" = (
 /turf/closed/wall/r_wall,
@@ -356,7 +355,6 @@
 /area/station/maintenance/fore/lesser)
 "dm" = (
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "do" = (
@@ -1033,7 +1031,6 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
-/turf/open/floor/iron/dark,
 /area/station/security)
 "hN" = (
 /obj/machinery/light/small/maintenance/directional/south,
@@ -1301,7 +1298,6 @@
 /obj/machinery/vending/cigarette,
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron/dark,
-/turf/open/floor/iron/dark,
 /area/station/security/brig)
 "jG" = (
 /obj/structure/closet/crate,
@@ -1351,7 +1347,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "ka" = (
-/turf/open/floor/iron/dark,
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "kd" = (
@@ -1485,7 +1480,6 @@
 "le" = (
 /obj/structure/disposalpipe/trunk/multiz,
 /obj/structure/cable/multilayer/multiz,
-/turf/open/floor/iron/dark,
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "lh" = (
@@ -1938,7 +1932,6 @@
 /area/lavaland/surface/outdoors)
 "pm" = (
 /obj/machinery/camera/autoname/directional/east,
-/turf/open/floor/iron/dark,
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "po" = (
@@ -3412,7 +3405,6 @@
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark,
-/turf/open/floor/iron/dark,
 /area/station/security/brig)
 "EW" = (
 /obj/item/storage/medkit/surgery,
@@ -3917,7 +3909,6 @@
 /area/station/cargo)
 "LV" = (
 /turf/open/floor/iron/dark,
-/turf/open/floor/iron/dark,
 /area/station/security)
 "LW" = (
 /obj/machinery/conveyor{
@@ -4023,7 +4014,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
 /turf/open/floor/iron/dark,
 /area/station/security)
 "MU" = (
@@ -5003,7 +4993,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
-/turf/open/floor/iron/dark,
 /turf/open/floor/iron/dark,
 /area/station/security/brig)
 "YM" = (
