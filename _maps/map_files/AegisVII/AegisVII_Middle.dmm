@@ -12453,7 +12453,6 @@
 /area/station/commons/dorms/barracks)
 "huo" = (
 /turf/closed/wall/r_wall,
-/turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
 "hur" = (
 /obj/structure/rack,
@@ -15361,7 +15360,6 @@
 /turf/open/floor/deadspace/grater,
 /area/mine/hydroponics)
 "klE" = (
-/turf/open/floor/plating,
 /turf/closed/wall/r_wall,
 /area/station/hallway/secondary/exit)
 "klR" = (
