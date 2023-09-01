@@ -290,7 +290,7 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/service/chapel/storage)
 "cV" = (
-/obj/machinery/ntnet_relay,
+/obj/machinery/telecomms/relay/preset/station,
 /turf/open/floor/deadspace/hardwood,
 /area/awaymission/secret/powered/fullbright)
 "cX" = (

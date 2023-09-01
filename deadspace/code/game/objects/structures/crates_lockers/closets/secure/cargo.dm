@@ -29,10 +29,10 @@
 	icon_state = "mining"
 	req_access = list(ACCESS_MINING)
 
-/obj/structure/closet/secure_closet/miner/ds/unlocked
+/obj/structure/closet/secure_closet/ds/miner/unlocked
 	locked = FALSE
 
-/obj/structure/closet/secure_closet/miner/ds/PopulateContents()
+/obj/structure/closet/secure_closet/ds/miner/PopulateContents()
 	..()
 	new /obj/item/mod/control/pre_equipped/ds/standard_miner(src)
 	new /obj/item/stack/sheet/mineral/sandbags(src, 5)

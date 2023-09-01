@@ -8522,7 +8522,6 @@
 /turf/open/floor/iron/white,
 /area/station/medical/office)
 "dYI" = (
-/obj/structure/stairs/west,
 /obj/structure/railing,
 /turf/open/floor/deadspace/mono,
 /area/station/security/courtroom)
@@ -16138,11 +16137,8 @@
 /turf/open/floor/carpet/red,
 /area/station/service/chapel)
 "kYy" = (
-/obj/effect/floor_decal/ds/spline/fancy/wood{
-	dir = 5
-	},
 /obj/structure/cable,
-/turf/open/floor/carpet/royalblue,
+/turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/library)
 "kZM" = (
 /obj/machinery/cryopod,
@@ -17907,13 +17903,6 @@
 	dir = 1
 	},
 /area/station/hallway/primary/fore)
-"mKU" = (
-/obj/structure/stairs/west,
-/obj/structure/sign/cec/deck{
-	pixel_y = 34
-	},
-/turf/open/floor/deadspace/mono,
-/area/station/security/courtroom)
 "mLI" = (
 /obj/machinery/computer/emergency_shuttle{
 	dir = 1
@@ -20134,7 +20123,7 @@
 /area/station/engineering/storage/tech)
 "oTd" = (
 /obj/structure/chair/sofa/bench,
-/turf/open/floor/catwalk_floor/iron_dark,
+/turf/open/floor/iron/dark,
 /area/station/hallway/primary/central)
 "oUo" = (
 /obj/structure/bed{
@@ -23498,11 +23487,6 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
-"slU" = (
-/obj/structure/stairs/east,
-/obj/structure/railing,
-/turf/open/floor/deadspace/mono,
-/area/station/security/courtroom)
 "smI" = (
 /obj/machinery/firealarm/directional/west,
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -29804,7 +29788,6 @@
 	},
 /area/awaymission/centcom_away/hangar)
 "yiO" = (
-/obj/structure/stairs/east,
 /obj/structure/sign/cec/deck{
 	pixel_y = 34
 	},
@@ -47375,7 +47358,7 @@ aIt
 omQ
 agp
 yiO
-slU
+dYI
 tLx
 tLx
 tLx
@@ -47993,7 +47976,7 @@ tLx
 tLx
 tLx
 fTJ
-htv
+sjZ
 juP
 aoU
 oxc
@@ -48586,7 +48569,7 @@ iYU
 kCx
 dxN
 agp
-mKU
+yiO
 dYI
 tLx
 tLx
@@ -59917,9 +59900,9 @@ apG
 uoD
 iJn
 lqb
-arK
-lqb
-xZE
+eiL
+ixd
+nSp
 beX
 qMf
 xcc
@@ -60119,9 +60102,9 @@ apG
 uoD
 iJn
 lqb
-eiL
-ixd
-nSp
+gUK
+lqb
+xZE
 sdm
 hra
 xcc
