@@ -57,7 +57,8 @@
 	},
 /obj/structure/cable,
 /obj/machinery/door/airlock/command{
-	name = "Bridge"
+	name = "Bridge";
+	req_access_txt = "19"
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
@@ -578,7 +579,8 @@
 "fP" = (
 /obj/machinery/button/door/directional/north{
 	name = "bridge armory";
-	id = "bridge armory"
+	id = "bridge armory";
+	req_access_txt = "19"
 	},
 /obj/effect/turf_decal/trimline/red/filled/warning{
 	dir = 8
@@ -1481,10 +1483,6 @@
 /obj/structure/table,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/security/brig/upper)
-"zW" = (
-/obj/machinery/light/small/maintenance/directional/west,
-/turf/open/floor/plating,
-/area/station/command/bridge)
 "Aj" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1
@@ -1912,7 +1910,8 @@
 "JC" = (
 /obj/machinery/door/airlock/command{
 	dir = 1;
-	name = "Bridge"
+	name = "Bridge";
+	req_access_txt = "19"
 	},
 /obj/machinery/door/poddoor{
 	dir = 8;
@@ -2003,6 +2002,10 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/rectangles,
+/area/station/command/bridge)
+"LJ" = (
+/obj/machinery/light/small/maintenance/directional/west,
+/turf/open/floor/plating,
 /area/station/command/bridge)
 "LV" = (
 /obj/structure/chair/office{
@@ -13387,7 +13390,7 @@ bX
 Sj
 iT
 iT
-zW
+LJ
 jF
 Sj
 Ar
