@@ -3783,7 +3783,7 @@
 /area/station/maintenance/fore/lesser)
 "Kx" = (
 /obj/structure/barricade/bars,
-/turf/closed/wall/r_wall,
+/turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/lesser)
 "Ky" = (
 /turf/open/floor/deadspace/hardwood,
@@ -4908,8 +4908,9 @@
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
 "Yx" = (
-/obj/machinery/light/small/maintenance/directional/east,
-/turf/open/water,
+/obj/structure/cable,
+/obj/structure/barricade/bars,
+/turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/lesser)
 "YC" = (
 /obj/machinery/conveyor{
@@ -8288,9 +8289,9 @@ yG
 yG
 yG
 bf
-tT
+Kx
 ZH
-tT
+Kx
 bf
 bf
 bf
@@ -10879,7 +10880,7 @@ bf
 dv
 yA
 zp
-tT
+Kx
 zp
 zp
 zp
@@ -11283,7 +11284,7 @@ bf
 zp
 yA
 zp
-tT
+Kx
 zp
 zp
 zp
@@ -11482,7 +11483,7 @@ yG
 yG
 yG
 bf
-tT
+Kx
 ZH
 Kx
 tT
@@ -14740,9 +14741,9 @@ hn
 kq
 bf
 bf
-tT
+Kx
 ZH
-tT
+Kx
 bf
 bf
 pZ
@@ -15736,7 +15737,7 @@ zp
 zp
 zp
 zp
-tT
+Kx
 zp
 yA
 zp
@@ -15745,7 +15746,7 @@ zp
 wQ
 zp
 zp
-tT
+IB
 zp
 yA
 yA
@@ -15756,7 +15757,7 @@ yA
 yA
 yA
 zp
-tT
+IB
 zp
 zp
 zp
@@ -15958,7 +15959,7 @@ yA
 yA
 yA
 yA
-iY
+ZH
 yA
 yA
 yA
@@ -16140,7 +16141,7 @@ zp
 zp
 zp
 zp
-tT
+Kx
 se
 zp
 zp
@@ -16149,7 +16150,7 @@ zp
 se
 wQ
 zp
-tT
+IB
 zp
 yA
 yA
@@ -16160,7 +16161,7 @@ yA
 yA
 yA
 zp
-tT
+IB
 zp
 zp
 se
@@ -23644,7 +23645,7 @@ bf
 Wd
 bf
 bf
-se
+zp
 yA
 CO
 tT
@@ -23846,9 +23847,9 @@ hn
 hn
 hn
 bf
-tT
+Kx
 iY
-og
+Yx
 tT
 tT
 tT
@@ -24048,7 +24049,7 @@ hn
 hn
 hn
 bf
-zp
+dv
 yA
 CO
 CO
@@ -31723,9 +31724,9 @@ jj
 Wf
 ha
 bf
-tT
-iY
-tT
+IB
+ZH
+IB
 tT
 zp
 DI
@@ -35763,7 +35764,7 @@ yA
 zp
 bf
 bf
-zp
+dv
 yA
 zp
 bf
@@ -35960,12 +35961,12 @@ yG
 tT
 tT
 zp
-Yx
 yA
 yA
-hN
-bf
-dv
+yA
+zp
+IB
+zp
 yA
 zp
 bf
@@ -36162,11 +36163,11 @@ yG
 yG
 tT
 tT
-zp
+se
 yA
 yA
 yA
-iY
+ZH
 yA
 yA
 zp
@@ -36367,8 +36368,8 @@ tT
 tT
 zp
 zp
-zp
-tT
+se
+IB
 zp
 yA
 zp
