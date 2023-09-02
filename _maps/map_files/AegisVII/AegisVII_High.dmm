@@ -154,7 +154,7 @@
 /area/station/security/brig/upper)
 "bl" = (
 /obj/item/radio/intercom/directional/west,
-/turf/open/floor/deadspace/mono,
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "bo" = (
 /obj/structure/filingcabinet,
@@ -169,9 +169,10 @@
 /turf/open/openspace,
 /area/station/hallway/primary/central/aft)
 "bD" = (
-/obj/structure/table/reinforced,
-/obj/item/book/manual/wiki/detective,
-/turf/open/floor/deadspace/medical,
+/obj/structure/table/wood,
+/obj/effect/spawner/random/entertainment/cigarette_pack,
+/obj/effect/spawner/random/entertainment/lighter,
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "bF" = (
 /obj/machinery/door/firedoor{
@@ -191,12 +192,12 @@
 /area/station/security/brig/upper)
 "bM" = (
 /obj/structure/cable,
-/turf/open/floor/deadspace/medical,
+/turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "bN" = (
 /obj/effect/landmark/start/detective,
 /obj/structure/chair/office,
-/turf/open/floor/deadspace/medical,
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "bX" = (
 /turf/closed/mineral,
@@ -279,9 +280,11 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)
 "cN" = (
-/obj/item/camera,
-/obj/structure/table/reinforced,
-/turf/open/floor/deadspace/medical,
+/obj/structure/table/wood,
+/obj/item/folder/red,
+/obj/item/hand_labeler,
+/obj/item/camera/detective,
+/turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "cO" = (
 /obj/structure/railing{
@@ -299,10 +302,12 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)
 "cV" = (
-/obj/structure/table/reinforced,
-/obj/effect/spawner/random/entertainment/lighter,
-/obj/effect/spawner/random/entertainment/cigarette_pack,
-/turf/open/floor/deadspace/mono,
+/obj/structure/table/wood,
+/obj/item/taperecorder{
+	pixel_x = 3
+	},
+/obj/item/flashlight/seclite,
+/turf/open/floor/iron/grimy,
 /area/station/security/detectives_office)
 "cX" = (
 /obj/item/kirbyplants/random,
@@ -486,9 +491,9 @@
 	},
 /area/station/hallway/secondary/command)
 "eK" = (
-/obj/structure/table/reinforced,
+/obj/structure/table/wood,
 /obj/machinery/fax_machine,
-/turf/open/floor/deadspace/mono,
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "eM" = (
 /obj/machinery/camera/autoname/directional/west,
@@ -621,6 +626,11 @@
 	dir = 4
 	},
 /area/station/hallway/secondary/command)
+"gz" = (
+/obj/structure/table/wood,
+/obj/item/storage/box/gloves,
+/turf/open/floor/deadspace/mono,
+/area/station/security/detectives_office)
 "gC" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -895,7 +905,7 @@
 /area/station/security/brig/upper)
 "my" = (
 /obj/machinery/camera/autoname/directional/west,
-/turf/open/floor/deadspace/mono,
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "mF" = (
 /obj/machinery/door/airlock/command{
@@ -926,7 +936,7 @@
 /area/station/command/bridge)
 "ne" = (
 /obj/machinery/firealarm/directional/east,
-/turf/open/floor/deadspace/medical,
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "nq" = (
 /obj/structure/table/wood/fancy/royalblue,
@@ -1010,6 +1020,11 @@
 	},
 /turf/open/floor/plating,
 /area/station/command/bridge)
+"pt" = (
+/obj/structure/table/wood,
+/obj/item/book/manual/wiki/detective,
+/turf/open/floor/deadspace/mono,
+/area/station/security/detectives_office)
 "pw" = (
 /obj/machinery/computer/communications,
 /obj/item/storage/secure/safe/caps_spare/directional/east,
@@ -1038,7 +1053,7 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/box,
 /obj/structure/closet/secure_closet/ds/detective,
-/turf/open/floor/deadspace/mono,
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "qy" = (
 /obj/machinery/door/airlock/security{
@@ -1064,7 +1079,7 @@
 "qQ" = (
 /obj/effect/turf_decal/box,
 /obj/machinery/vending/wardrobe/det_wardrobe,
-/turf/open/floor/deadspace/mono,
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "rk" = (
 /obj/item/storage/box/lights/tubes,
@@ -1228,10 +1243,15 @@
 /area/station/command/heads_quarters/hop)
 "vx" = (
 /obj/structure/table/reinforced,
-/obj/machinery/telephone/security,
+/obj/structure/table/wood,
 /obj/structure/cable,
 /obj/machinery/power/data_terminal,
-/turf/open/floor/deadspace/medical,
+/obj/item/flashlight/lamp/green{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/obj/item/restraints/handcuffs,
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "vH" = (
 /obj/machinery/cryopod{
@@ -1242,9 +1262,10 @@
 /area/station/security/brig/upper)
 "vI" = (
 /obj/item/paper_bin,
-/obj/structure/table/reinforced,
+/obj/structure/table/wood,
 /obj/structure/cable,
-/turf/open/floor/deadspace/medical,
+/obj/item/stamp/law,
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "vU" = (
 /obj/structure/cable,
@@ -1376,7 +1397,12 @@
 	id = "forensic_shutters";
 	name = "Privacy Shutters"
 	},
-/turf/open/floor/deadspace/mono,
+/obj/structure/table/wood,
+/obj/machinery/computer/security/wooden_tv{
+	pixel_x = 3;
+	pixel_y = 2
+	},
+/turf/open/floor/wood,
 /area/station/security/detectives_office)
 "xZ" = (
 /obj/item/kirbyplants/random,
@@ -1399,6 +1425,10 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
+"yt" = (
+/obj/structure/cable,
+/turf/open/floor/wood,
+/area/station/security/detectives_office)
 "yx" = (
 /obj/structure/railing,
 /turf/open/floor/iron/stairs{
@@ -1745,6 +1775,9 @@
 	},
 /turf/open/floor/carpet/green,
 /area/station/command/heads_quarters/captain/private)
+"Gq" = (
+/turf/open/floor/wood,
+/area/station/security/detectives_office)
 "Gz" = (
 /obj/machinery/door/airlock/command{
 	dir = 1;
@@ -2213,9 +2246,9 @@
 /obj/item/camera_film,
 /obj/item/camera_film,
 /obj/item/camera_film,
-/obj/structure/table/reinforced,
+/obj/structure/table/wood,
 /obj/structure/cable,
-/turf/open/floor/deadspace/medical,
+/turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "RW" = (
 /obj/structure/cable,
@@ -2279,7 +2312,7 @@
 "To" = (
 /obj/item/storage/box/evidence,
 /obj/item/storage/box/evidence,
-/obj/structure/table/reinforced,
+/obj/structure/table/wood,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "TG" = (
@@ -2295,9 +2328,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "TY" = (
-/obj/structure/chair/office{
-	dir = 4
-	},
+/obj/structure/chair/office,
 /turf/open/floor/deadspace/medical,
 /area/station/security/detectives_office)
 "Ue" = (
@@ -2431,8 +2462,15 @@
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/captain/private)
 "XV" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/gloves,
+/obj/structure/rack,
+/obj/item/storage/briefcase{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/storage/secure/briefcase{
+	pixel_x = 2;
+	pixel_y = -2
+	},
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "XW" = (
@@ -9789,7 +9827,7 @@ sE
 eF
 qQ
 bl
-Sk
+Gq
 my
 XV
 iU
@@ -9990,13 +10028,13 @@ MU
 sE
 eF
 qv
-bM
+yt
 vI
-bM
-SS
+yt
+Sk
 SS
 HI
-Sk
+gz
 eF
 ep
 gb
@@ -10194,11 +10232,11 @@ eF
 xY
 bN
 bD
-bM
-SS
+yt
+Sk
 SS
 TY
-Sk
+pt
 eF
 Cv
 gb
@@ -10396,7 +10434,7 @@ eF
 eK
 ne
 vx
-bM
+yt
 bM
 RI
 cN
