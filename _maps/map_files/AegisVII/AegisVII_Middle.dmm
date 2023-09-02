@@ -3296,7 +3296,7 @@
 	name = "MuleBot Access";
 	req_access_txt = "50"
 	},
-/turf/open/floor/deadspace/random/golf_brown,
+/turf/open/floor/deadspace/mono,
 /area/station/security/brig)
 "aRT" = (
 /obj/machinery/light/directional/west,
@@ -4164,7 +4164,7 @@
 	id = "rdrnd";
 	name = "Research and Development Shutters"
 	},
-/turf/open/floor/iron/white,
+/turf/open/floor/deadspace/mono,
 /area/station/science/lab)
 "bdm" = (
 /obj/effect/turf_decal/box,
@@ -6700,7 +6700,7 @@
 /area/station/hallway/secondary/exit)
 "clE" = (
 /obj/machinery/light/directional/north,
-/obj/structure/closet/gimmick/tacticool,
+/obj/structure/closet/emcloset,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "clO" = (
@@ -8373,8 +8373,7 @@
 	},
 /area/station/security/lockers)
 "dQk" = (
-/obj/structure/stairs,
-/turf/open/floor/deadspace/grater,
+/turf/open/floor/iron/stairs,
 /area/awaymission/centcom_away/hangar)
 "dQw" = (
 /obj/structure/flora/grass/brown,
@@ -8516,7 +8515,9 @@
 /area/station/medical/office)
 "dYI" = (
 /obj/structure/railing,
-/turf/open/floor/deadspace/mono,
+/turf/open/floor/iron/stairs{
+	dir = 8
+	},
 /area/station/security/courtroom)
 "dYT" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11192,6 +11193,14 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/eva)
+"grP" = (
+/obj/structure/sign/cec/deck{
+	pixel_y = 34
+	},
+/turf/open/floor/iron/stairs{
+	dir = 8
+	},
+/area/station/security/courtroom)
 "grW" = (
 /obj/structure/closet/secure_closet/ds/psychology,
 /turf/open/floor/wood/parquet,
@@ -12604,6 +12613,12 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
+"hDS" = (
+/obj/structure/railing,
+/turf/open/floor/iron/stairs{
+	dir = 4
+	},
+/area/station/security/courtroom)
 "hEo" = (
 /obj/machinery/door/airlock{
 	name = "Shuttle Bay"
@@ -14812,7 +14827,7 @@
 	name = "Engineering Deliveries";
 	req_access_txt = "10"
 	},
-/turf/open/floor/iron/norn,
+/turf/open/floor/deadspace/mono,
 /area/station/engineering/break_room)
 "jNz" = (
 /obj/structure/filingcabinet,
@@ -15419,8 +15434,7 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "kqX" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/structure/stairs,
-/turf/open/floor/deadspace/grater,
+/turf/open/floor/iron/stairs,
 /area/awaymission/centcom_away/hangar)
 "krn" = (
 /obj/effect/spawner/random/trash/food_packaging,
@@ -15651,7 +15665,7 @@
 	location = "Medbay"
 	},
 /obj/effect/turf_decal/bot,
-/turf/open/floor/plating,
+/turf/open/floor/deadspace/mono,
 /area/station/medical/office)
 "kCx" = (
 /obj/structure/disposalpipe/segment{
@@ -17898,7 +17912,9 @@
 /obj/structure/sign/cec/deck{
 	pixel_y = 34
 	},
-/turf/open/floor/deadspace/mono,
+/turf/open/floor/iron/stairs{
+	dir = 4
+	},
 /area/station/security/courtroom)
 "mLI" = (
 /obj/machinery/computer/emergency_shuttle{
@@ -29736,7 +29752,7 @@
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/cmo)
 "ygT" = (
-/obj/structure/closet/gimmick/russian,
+/obj/structure/closet/firecloset,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "yhk" = (
@@ -47349,7 +47365,7 @@ qvr
 aIt
 omQ
 agp
-mKU
+grP
 dYI
 tLx
 tLx
@@ -48562,7 +48578,7 @@ kCx
 dxN
 agp
 mKU
-dYI
+hDS
 tLx
 tLx
 tLx

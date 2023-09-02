@@ -854,6 +854,16 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "me" = (
+/obj/structure/railing/corner,
+/obj/structure/railing/corner{
+	dir = 8
+	},
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/obj/structure/railing/corner{
+	dir = 1
+	},
 /turf/open/floor/catwalk_floor,
 /area/station/command/bridge)
 "mf" = (
@@ -1880,6 +1890,10 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/station/security/brig/upper)
+"Jc" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/deadspace/random/rectangles,
+/area/station/hallway/primary/central/aft)
 "Je" = (
 /obj/machinery/computer/security/hos{
 	dir = 4
@@ -13387,7 +13401,7 @@ wu
 Zd
 BT
 YA
-MV
+Jc
 YA
 bX
 Sj
