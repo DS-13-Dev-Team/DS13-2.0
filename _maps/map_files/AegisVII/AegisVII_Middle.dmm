@@ -16825,6 +16825,9 @@
 /obj/item/ammo_box/magazine/pulse/hv,
 /obj/item/ammo_box/magazine/pulse/hv,
 /obj/item/ammo_box/magazine/pulse/hv,
+/obj/item/ammo_box/magazine/pulse/df,
+/obj/item/ammo_box/magazine/pulse/df,
+/obj/item/ammo_box/magazine/pulse/df,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
@@ -26650,6 +26653,9 @@
 /obj/machinery/camera/motion/directional/west{
 	c_tag = "Armory - Internal"
 	},
+/obj/item/ammo_box/magazine/divet/extended,
+/obj/item/ammo_box/magazine/divet/extended,
+/obj/item/ammo_box/magazine/divet/extended,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
@@ -28626,11 +28632,11 @@
 /area/station/engineering/main)
 "xdl" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/ds12g/stunslug,
-/obj/item/ammo_box/magazine/ds12g/stunslug,
-/obj/item/ammo_box/magazine/ds12g/stunslug,
 /obj/structure/window/reinforced/spawner/north,
 /obj/structure/window/reinforced/spawner/east,
+/obj/item/ammo_box/magazine/ds12g/rb,
+/obj/item/ammo_box/magazine/ds12g/rb,
+/obj/item/ammo_box/magazine/ds12g/rb,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "xdu" = (
