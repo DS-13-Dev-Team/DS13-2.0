@@ -5987,7 +5987,10 @@
 /turf/closed/wall/r_wall,
 /area/station/maintenance/starboard/fore)
 "bDd" = (
-/obj/effect/spawner/structure/window/reinforced/grille,
+/obj/machinery/door/window/right/directional/east{
+	name = "Danger: Conveyor Access";
+	req_access_txt = "12"
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "bDf" = (
