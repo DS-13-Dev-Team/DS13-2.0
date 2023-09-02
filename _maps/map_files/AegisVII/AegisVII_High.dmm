@@ -1921,7 +1921,7 @@
 "Jv" = (
 /obj/machinery/door/airlock/command{
 	name = "Colony Director's Quarters";
-	req_access = list(100)
+	req_access_txt = "20"
 	},
 /turf/open/floor/deadspace/bathroom,
 /area/station/command/heads_quarters/captain/private)
