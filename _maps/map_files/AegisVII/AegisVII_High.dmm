@@ -505,7 +505,7 @@
 /obj/structure/chair/office{
 	dir = 4
 	},
-/obj/machinery/light/directional/west,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/carpet/green,
 /area/station/command/heads_quarters/captain/private)
 "eS" = (
@@ -1011,7 +1011,7 @@
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "pw" = (
-/obj/machinery/modular_computer/console/preset/command,
+/obj/machinery/computer/communications,
 /obj/item/storage/secure/safe/caps_spare/directional/east,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)

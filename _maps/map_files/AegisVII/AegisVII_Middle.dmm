@@ -448,7 +448,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "ail" = (
@@ -711,7 +710,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "amA" = (
@@ -869,9 +867,6 @@
 /obj/structure/table/wood,
 /obj/machinery/newscaster/directional/east,
 /obj/effect/spawner/random/maintenance,
-/obj/machinery/telephone,
-/obj/structure/cable,
-/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "aoz" = (
@@ -1267,7 +1262,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/commons/dorms)
 "asP" = (
@@ -1929,7 +1923,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "aCN" = (
@@ -2014,7 +2007,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "aDF" = (
@@ -2656,9 +2648,6 @@
 /obj/structure/table/wood,
 /obj/machinery/newscaster/directional/west,
 /obj/effect/spawner/random/maintenance,
-/obj/machinery/telephone,
-/obj/structure/cable,
-/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "aJP" = (
@@ -3407,7 +3396,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "aTi" = (
@@ -4009,7 +3997,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "bbF" = (
@@ -4276,7 +4263,6 @@
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "beC" = (
@@ -4369,7 +4355,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "bfC" = (
@@ -4869,7 +4854,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "blC" = (
@@ -5371,7 +5355,6 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "bpl" = (
@@ -5756,7 +5739,6 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "btn" = (
@@ -6292,9 +6274,6 @@
 /obj/structure/table/wood,
 /obj/machinery/newscaster/directional/west,
 /obj/effect/spawner/random/maintenance,
-/obj/machinery/telephone,
-/obj/structure/cable,
-/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "bRd" = (
@@ -7744,7 +7723,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "diq" = (
@@ -8202,7 +8180,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "dGK" = (
@@ -8268,6 +8245,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "dLy" = (
@@ -11234,7 +11212,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/commons/dorms)
 "gsP" = (
@@ -11546,6 +11523,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "gGO" = (
@@ -14631,7 +14609,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "jBe" = (
@@ -14822,9 +14799,6 @@
 /obj/structure/table/wood,
 /obj/machinery/newscaster/directional/east,
 /obj/effect/spawner/random/maintenance,
-/obj/machinery/telephone,
-/obj/structure/cable,
-/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "jMz" = (
@@ -14993,7 +14967,9 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "jUT" = (
-/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "jUZ" = (
@@ -15912,7 +15888,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/commons/dorms/barracks)
 "kOG" = (
@@ -18783,7 +18758,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_left,
 /area/station/commons/dorms/barracks)
 "nzw" = (
@@ -20128,6 +20102,7 @@
 /area/station/science/breakroom)
 "oRR" = (
 /obj/structure/chair/stool/directional/west,
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "oRU" = (
@@ -21483,13 +21458,6 @@
 	dir = 1
 	},
 /area/station/hallway/primary/starboard)
-"qjh" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable,
-/turf/open/floor/deadspace/random/maint_center,
-/area/station/commons/dorms/barracks)
 "qjP" = (
 /obj/machinery/chem_master/condimaster{
 	name = "CondiMaster Neo"
@@ -22295,7 +22263,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "qZg" = (
@@ -26030,7 +25997,6 @@
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "uGo" = (
@@ -26579,9 +26545,11 @@
 	},
 /area/shuttle/pod_3)
 "vkE" = (
-/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
 /turf/open/floor/iron/ported/lino,
-/area/station/commons/dorms/barracks)
+/area/station/commons/dorms)
 "vkL" = (
 /obj/effect/spawner/structure/window/reinforced/tinted/prepainted/daedalus,
 /turf/open/floor/plating,
@@ -28001,7 +27969,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "wBY" = (
@@ -28844,7 +28811,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_left,
 /area/station/commons/dorms)
 "xqa" = (
@@ -28870,6 +28836,9 @@
 "xrd" = (
 /obj/item/radio/intercom/directional/east,
 /obj/structure/table/wood,
+/obj/machinery/telephone,
+/obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "xrx" = (
@@ -29130,7 +29099,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "xDA" = (
@@ -29675,7 +29643,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/commons/dorms)
 "ybC" = (
@@ -31423,16 +31390,16 @@ aOS
 xyT
 xSe
 bTc
-jUT
-jUT
+aKi
+aKi
 bpj
 xSe
 aOS
 xyT
 xSe
 bTc
-jUT
-jUT
+aKi
+aKi
 bpj
 xSe
 mlO
@@ -31442,16 +31409,16 @@ xSe
 mlO
 xSe
 bpj
-jUT
-jUT
+aKi
+aKi
 lrZ
 xSe
 xyT
 aOS
 xSe
 bpj
-jUT
-jUT
+aKi
+aKi
 lrZ
 xSe
 xyT
@@ -31625,7 +31592,7 @@ all
 beA
 xSe
 atd
-brN
+jUT
 teX
 aoy
 xSe
@@ -33269,7 +33236,7 @@ cry
 xSe
 aJO
 dgF
-amA
+vkE
 atd
 xSe
 alw
@@ -33443,16 +33410,16 @@ aOS
 xyT
 xSe
 bTc
-jUT
-jUT
+aKi
+aKi
 beB
 xSe
 aOS
 xyT
 xSe
 bTc
-jUT
-jUT
+aKi
+aKi
 beB
 xSe
 kKY
@@ -33462,16 +33429,16 @@ adf
 fap
 xSe
 beB
-jUT
-jUT
+aKi
+aKi
 lrZ
 xSe
 xyT
 aOS
 xSe
 beB
-jUT
-jUT
+aKi
+aKi
 lrZ
 xSe
 xyT
@@ -34655,16 +34622,16 @@ mtB
 aYL
 hud
 ors
-vkE
-vkE
+dAL
+dAL
 btj
 hud
 mtB
 aYL
 hud
 ors
-vkE
-vkE
+dAL
+dAL
 btj
 hud
 clE
@@ -34674,16 +34641,16 @@ adf
 ijy
 hud
 btj
-vkE
-vkE
+dAL
+dAL
 hCj
 hud
 aYL
 mtB
 hud
 btj
-vkE
-vkE
+dAL
+dAL
 hCj
 hud
 aYL
@@ -35867,7 +35834,7 @@ btg
 btg
 btg
 btg
-qjh
+nzm
 btg
 btg
 btg
@@ -35875,7 +35842,7 @@ btg
 btg
 btg
 btg
-qjh
+nzm
 btg
 btg
 btg
@@ -35887,7 +35854,7 @@ btg
 btg
 btg
 btg
-qjh
+nzm
 btg
 btg
 btg
@@ -36069,7 +36036,7 @@ eZZ
 pzo
 eZZ
 eZZ
-bcC
+aZw
 pzo
 eZZ
 eZZ
@@ -36077,7 +36044,7 @@ eZZ
 pzo
 eZZ
 eZZ
-bcC
+aZw
 pzo
 eZZ
 ksi
@@ -36089,7 +36056,7 @@ eZZ
 eZZ
 eZZ
 pzo
-bcC
+aZw
 eZZ
 eZZ
 pzo
@@ -36675,16 +36642,16 @@ mtB
 aYL
 hud
 ors
-vkE
-vkE
+dAL
+dAL
 uGc
 hud
 mtB
 aYL
 hud
 ors
-vkE
-vkE
+dAL
+dAL
 uGc
 hud
 mlO
@@ -36694,8 +36661,8 @@ hud
 mlO
 hud
 uGc
-vkE
-vkE
+dAL
+dAL
 hCj
 hud
 aYL
@@ -36920,9 +36887,9 @@ vwn
 aSZ
 oRR
 dKP
-oOS
+hqE
 gGB
-vwn
+aSZ
 ifx
 huW
 iXI
@@ -37124,7 +37091,7 @@ oOS
 fte
 trK
 vwn
-vwn
+aSZ
 fij
 jvZ
 lfE
