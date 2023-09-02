@@ -3280,10 +3280,6 @@
 	freq = 1400;
 	location = "Security"
 	},
-/obj/machinery/door/window/left/directional/east{
-	name = "MuleBot Access";
-	req_access_txt = "50"
-	},
 /turf/open/floor/deadspace/mono,
 /area/station/security/brig)
 "aRT" = (
