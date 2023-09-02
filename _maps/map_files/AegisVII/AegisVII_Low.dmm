@@ -1959,6 +1959,10 @@
 /obj/structure/ore_box,
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
+"pD" = (
+/obj/structure/ladder,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "pE" = (
 /obj/structure/table/reinforced,
 /obj/machinery/fax_machine,
@@ -27117,8 +27121,8 @@ yG
 yG
 bf
 LZ
-LZ
 eZ
+pD
 hn
 qh
 bf
