@@ -491,7 +491,6 @@
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "eM" = (
-/obj/machinery/porta_turret_cover,
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/deadspace/random/tech{
 	dir = 8
@@ -1017,6 +1016,7 @@
 /area/station/command/bridge)
 "pw" = (
 /obj/machinery/modular_computer/console/preset/command,
+/obj/item/storage/secure/safe/caps_spare/directional/east,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)
 "qc" = (
@@ -2055,10 +2055,6 @@
 	},
 /turf/open/openspace,
 /area/station/hallway/primary/central/aft)
-"MI" = (
-/obj/machinery/turretid,
-/turf/closed/wall/r_wall,
-/area/station/command/bridge)
 "MQ" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -10394,7 +10390,7 @@ YF
 Sj
 BF
 Xd
-MI
+Sj
 fP
 GL
 cR
