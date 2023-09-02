@@ -1692,9 +1692,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningdock/cafeteria)
-"azn" = (
-/turf/closed/indestructible/rock,
-/area/space)
 "azp" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -24524,9 +24521,6 @@
 /obj/structure/window/reinforced/spawner/north,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
-"tmr" = (
-/turf/closed/mineral/random,
-/area/space)
 "tmP" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 9
@@ -50438,7 +50432,7 @@ ioT
 ohs
 aVs
 ifr
-tmr
+apG
 lod
 lod
 lod
@@ -50640,9 +50634,9 @@ ibV
 ibV
 cgs
 ifr
-tmr
-tmr
-tmr
+apG
+apG
+apG
 lod
 tKV
 dxN
@@ -70032,7 +70026,7 @@ mlO
 mlO
 mlO
 mlO
-azn
+mlO
 mlO
 mlO
 mlO
@@ -70234,7 +70228,7 @@ mlO
 mlO
 mlO
 mlO
-azn
+mlO
 mlO
 mlO
 mlO
