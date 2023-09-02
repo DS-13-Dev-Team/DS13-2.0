@@ -307,7 +307,7 @@
 	pixel_x = 3
 	},
 /obj/item/flashlight/seclite,
-/turf/open/floor/iron/grimy,
+/turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "cX" = (
 /obj/item/kirbyplants/random,
@@ -1246,11 +1246,8 @@
 /obj/structure/table/wood,
 /obj/structure/cable,
 /obj/machinery/power/data_terminal,
-/obj/item/flashlight/lamp/green{
-	pixel_x = 1;
-	pixel_y = 5
-	},
 /obj/item/restraints/handcuffs,
+/obj/machinery/telephone/security,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "vH" = (

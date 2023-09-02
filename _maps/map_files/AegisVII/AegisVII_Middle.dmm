@@ -2549,7 +2549,8 @@
 "aJf" = (
 /obj/machinery/door/airlock/security{
 	dir = 1;
-	name = "P-Sec Meeting Room"
+	name = "P-Sec Meeting Room";
+	req_access_txt = "63"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment{
@@ -4472,7 +4473,8 @@
 "bgQ" = (
 /obj/machinery/door/airlock/security{
 	dir = 1;
-	name = "P-Sec Firing Range"
+	name = "P-Sec Firing Range";
+	req_access_txt = "63"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -9246,7 +9248,8 @@
 "eGy" = (
 /obj/machinery/door/airlock/security{
 	dir = 1;
-	name = "P-Sec Training Room"
+	name = "P-Sec Training Room";
+	req_access = "63"
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -9910,10 +9913,6 @@
 /area/station/hallway/primary/port)
 "fmA" = (
 /obj/structure/rack,
-/obj/item/reagent_containers/glass/bottle/basic_buffer{
-	pixel_x = -5;
-	pixel_y = 3
-	},
 /obj/item/reagent_containers/glass/bottle/formaldehyde{
 	pixel_x = 1
 	},
@@ -16626,7 +16625,8 @@
 "lwc" = (
 /obj/machinery/door/airlock/security{
 	dir = 1;
-	name = "P-Sec Firing Range"
+	name = "P-Sec Firing Range";
+	req_access_txt = "63"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment{
