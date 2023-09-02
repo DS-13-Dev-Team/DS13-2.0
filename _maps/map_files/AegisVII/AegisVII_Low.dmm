@@ -202,15 +202,12 @@
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "cm" = (
-/obj/structure/rack,
-/obj/item/mod/control/pre_equipped/ds/zealot,
-/obj/structure/window/reinforced/spawner,
-/obj/structure/window/reinforced/spawner/north,
-/obj/structure/window/reinforced/spawner/west,
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
-	name = "Brig Control Desk";
-	req_access_txt = "3"
+/obj/structure/displaycase{
+	alert = 0;
+	desc = "A display case containing an unitologist engineering rig";
+	pixel_y = -4;
+	req_access_txt = "48";
+	start_showpiece_type = /obj/item/mod/control/pre_equipped/ds/zealot
 	},
 /turf/open/floor/deadspace/grater,
 /area/station/ai_monitored/security/armory)
