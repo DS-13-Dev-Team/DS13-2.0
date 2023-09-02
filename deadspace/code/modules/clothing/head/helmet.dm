@@ -3,6 +3,7 @@
 	desc = "A ceramic helmet with the badge of P.C.S.I emblazoned on the forehead."
 	icon = 'deadspace/icons/obj/clothing/hats.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/head.dmi'
+	icon_state = "helmet"
 
 /obj/item/clothing/head/helmet/pcsi
 	name = "P.C.S.I hood"

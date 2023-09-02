@@ -77,10 +77,6 @@
 	gloves = /obj/item/clothing/gloves/color/captain
 	shoes = /obj/item/clothing/shoes/sneakers/black
 
-	backpack = /obj/item/storage/backpack/captain
-	satchel = /obj/item/storage/backpack/satchel/cap
-	duffelbag = /obj/item/storage/backpack/duffelbag/captain
-
 	accessory = /obj/item/clothing/accessory/medal/gold/captain
 	chameleon_extras = list(
 		/obj/item/gun/energy/e_gun,

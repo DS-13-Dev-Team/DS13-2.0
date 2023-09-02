@@ -323,9 +323,9 @@ GLOBAL_LIST_INIT(job_display_order, list(
 
 	preload = TRUE // These are used by the prefs ui, and also just kinda could use the extra help at roundstart
 
-	var/backpack = /obj/item/storage/backpack
-	var/satchel = /obj/item/storage/backpack/satchel
-	var/duffelbag = /obj/item/storage/backpack/duffelbag
+	var/backpack = /obj/item/storage/backpack/rig
+	var/satchel = /obj/item/storage/backpack/satchel/rig
+	var/duffelbag = /obj/item/storage/backpack/duffelbag/rig
 
 	var/pda_slot = ITEM_SLOT_BELT
 

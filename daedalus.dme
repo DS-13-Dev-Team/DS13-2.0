@@ -4691,6 +4691,7 @@
 #include "deadspace\code\game\turf.dm"
 #include "deadspace\code\game\gamemodes\containment\containment.dm"
 #include "deadspace\code\game\objects\items\shard.dm"
+#include "deadspace\code\game\objects\items\storage\backpacks.dm"
 #include "deadspace\code\game\objects\items\storage\book.dm"
 #include "deadspace\code\game\objects\items\storage\lunchbox.dm"
 #include "deadspace\code\game\objects\random\ammo.dm"
