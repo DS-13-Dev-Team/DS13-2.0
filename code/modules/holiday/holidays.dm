@@ -199,12 +199,11 @@
 /datum/holiday/april_fools/celebrate()
 	. = ..()
 	SSjob.set_overflow_role(/datum/job/clown)
-	var/datum/media/clowntrack = new(
-		name = "Clown.ogg",
-		author = "giizismukwa2",
-		path = "sound/ambience/clown.ogg"
-	)
-	SSticker.set_login_music(clowntrack)
+	SSticker.set_login_music(list(
+		"name" = "Clown.ogg",
+		"author" = "giizismukwa2",
+		"file" = "sound/ambience/clown.ogg"
+	))
 
 /datum/holiday/spess
 	name = "Cosmonautics Day"

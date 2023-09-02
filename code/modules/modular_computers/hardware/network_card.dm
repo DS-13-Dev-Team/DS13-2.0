@@ -4,7 +4,7 @@
 	power_usage = 50
 	icon_state = "radio_mini"
 	var/hardware_id = null // Identification ID. Technically MAC address of this device. Can't be changed by user.
-	var/identification_string = "" // Identification string, technically nickname seen in the network. Used for network logging exclusively. Can't be set by the user, A lump of barely-cared-about lard.
+	var/identification_string = "" // Identification string, technically nickname seen in the network. Can be set by user.
 	var/long_range = 0
 	var/ethernet = 0 // Hard-wired, therefore always on, ignores NTNet wireless checks.
 	malfunction_probability = 1
@@ -12,8 +12,7 @@
 
 /obj/item/computer_hardware/network_card/Initialize(mapload)
 	. = ..()
-	//WHOOPS THE WHOLE TIME THESE NEVER GOT A HARDWARE ID, GIVE THEM A GOON-NET STYLE ONE.
-	hardware_id = SSpackets.generate_net_id(src)
+	init_network_id(NETWORK_CARDS)
 
 /obj/item/computer_hardware/network_card/diagnostics(mob/user)
 	..()

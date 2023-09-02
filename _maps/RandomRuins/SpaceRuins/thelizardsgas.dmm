@@ -241,6 +241,7 @@
 /obj/machinery/power/apc/auto_name/directional/north{
 	coverlocked = 0;
 	locked = 0;
+	network_id = null;
 	start_charge = 60
 	},
 /obj/structure/cable,
@@ -334,6 +335,7 @@
 "Io" = (
 /obj/machinery/power/smes{
 	charge = 2e+006;
+	network_id = null;
 	output_level = 0
 	},
 /obj/structure/cable,

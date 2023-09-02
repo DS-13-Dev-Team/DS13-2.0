@@ -37,16 +37,12 @@ SUBSYSTEM_DEF(overlays)
 	iconbro.icon = icon
 	return iconbro.appearance
 
-/atom/proc/build_appearance_list(list/build_overlays)
+/atom/proc/build_appearance_list(build_overlays)
 	if (!islist(build_overlays))
 		build_overlays = list(build_overlays)
-	/// Tracks the current index into build_overlays so that we can preserve ordering.
-	var/bo_index = 0
 	for (var/overlay in build_overlays)
-		bo_index++
 		if(!overlay)
 			build_overlays -= overlay
-			bo_index--
 			continue
 		if (istext(overlay))
 #ifdef UNIT_TESTS
@@ -57,11 +53,11 @@ SUBSYSTEM_DEF(overlays)
 				stack_trace("Invalid overlay: Icon object '[icon_file]' [REF(icon)] used in '[src]' [type] is missing icon state [overlay].")
 				continue
 #endif
-			// Directly overwrite the list entry, preserving order.
-			build_overlays[bo_index] = iconstate2appearance(icon, overlay)
+			build_overlays -= overlay
+			build_overlays += iconstate2appearance(icon, overlay)
 		else if(isicon(overlay))
-			// Directly overwrite the list entry, preserving order.
-			build_overlays[bo_index] = icon2appearance(overlay)
+			build_overlays -= overlay
+			build_overlays += icon2appearance(overlay)
 	return build_overlays
 
 /atom/proc/cut_overlays()

@@ -99,7 +99,7 @@
 	),src)
 
 /obj/item/storage/belt/holster/chameleon
-	name = "chameleon holster"
+	name = "syndicate holster"
 	desc = "A hip holster that uses chameleon technology to disguise itself, due to the added chameleon tech, it cannot be mounted onto armor."
 	icon_state = "syndicate_holster"
 	inhand_icon_state = "syndicate_holster"

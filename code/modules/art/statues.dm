@@ -10,13 +10,12 @@
 	material_modifier = 0.5
 	material_flags = MATERIAL_EFFECTS | MATERIAL_AFFECT_STATISTICS
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
-	abstract_type = /obj/structure/statue
 	/// Beauty component mood modifier
 	var/impressiveness = 15
 	/// Art component subtype added to this statue
 	var/art_type = /datum/element/art
-	/// Can this statue be created by hand?
-	var/can_be_carved = TRUE
+	/// Abstract root type
+	var/abstract_type = /obj/structure/statue
 
 /obj/structure/statue/Initialize(mapload)
 	. = ..()
@@ -247,7 +246,7 @@
 	custom_materials = list(/datum/material/metalhydrogen = MINERAL_MATERIAL_AMOUNT*10)
 	max_integrity = 1000
 	impressiveness = 100
-	can_be_carved = FALSE //Created by a crafting recipe instead of the standard system.
+	abstract_type = /obj/structure/statue/elder_atmosian //This one is uncarvable
 
 /obj/item/chisel
 	name = "chisel"
@@ -497,11 +496,9 @@ Moving interrupts
 
 /obj/structure/carving_block/proc/build_statue_cost_table()
 	. = list()
-	for(var/obj/structure/statue/statue_type as anything in subtypesof(/obj/structure/statue) - /obj/structure/statue/custom)
-		if(isabstract(statue_type))
-			continue
+	for(var/statue_type in subtypesof(/obj/structure/statue) - /obj/structure/statue/custom)
 		var/obj/structure/statue/S = new statue_type()
-		if(!S.icon_state || !S.can_be_carved || !S.custom_materials)
+		if(!S.icon_state || S.abstract_type == S.type || !S.custom_materials)
 			continue
 		.[S.type] = S.custom_materials
 		qdel(S)

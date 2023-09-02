@@ -119,7 +119,6 @@ There are several things that need to be remembered:
 				handled_by_bodytype = FALSE
 			//END SPECIES HANDLING
 			uniform_overlay = uniform.build_worn_icon(
-				src,
 				default_layer = UNIFORM_LAYER,
 				default_icon_file = icon_file,
 				isinhands = FALSE,
@@ -159,7 +158,7 @@ There are several things that need to be remembered:
 			icon_file = 'icons/mob/mob.dmi'
 			handled_by_bodytype = FALSE
 
-		id_overlay = wear_id.build_worn_icon(src, default_layer = ID_LAYER, default_icon_file = icon_file)
+		id_overlay = wear_id.build_worn_icon(default_layer = ID_LAYER, default_icon_file = icon_file)
 
 		if(!id_overlay)
 			return
@@ -211,7 +210,6 @@ There are several things that need to be remembered:
 			handled_by_bodytype = FALSE
 
 		gloves_overlay = gloves.build_worn_icon(
-			src,
 			default_layer = GLOVES_LAYER,
 			default_icon_file = icon_file,
 			override_file = handled_by_bodytype ? icon_file : null,
@@ -258,7 +256,6 @@ There are several things that need to be remembered:
 				handled_by_bodytype = FALSE
 
 			glasses_overlay = glasses.build_worn_icon(
-				src,
 				default_layer = GLASSES_LAYER,
 				default_icon_file = icon_file,
 				override_file = handled_by_bodytype ? icon_file : null,
@@ -303,7 +300,7 @@ There are several things that need to be remembered:
 			handled_by_bodytype = FALSE
 			icon_file = 'icons/mob/clothing/ears.dmi'
 
-		ears_overlay = ears.build_worn_icon(src, default_layer = EARS_LAYER, default_icon_file = icon_file)
+		ears_overlay = ears.build_worn_icon(default_layer = EARS_LAYER, default_icon_file = icon_file)
 
 		if(!ears_overlay)
 			return
@@ -336,7 +333,6 @@ There are several things that need to be remembered:
 				icon_file = 'icons/mob/clothing/neck.dmi'
 
 			neck_overlay = worn_item.build_worn_icon(
-				src,
 				default_layer = NECK_LAYER,
 				default_icon_file = icon_file,
 				override_file = handled_by_bodytype ? icon_file : null,
@@ -391,7 +387,6 @@ There are several things that need to be remembered:
 			icon_file = DEFAULT_SHOES_FILE
 
 		shoes_overlay = shoes.build_worn_icon(
-			src,
 			default_layer = SHOES_LAYER,
 			default_icon_file = icon_file,
 			override_file = handled_by_bodytype ? icon_file : null,
@@ -420,7 +415,7 @@ There are several things that need to be remembered:
 		var/mutable_appearance/s_store_overlay
 		update_hud_s_store(worn_item)
 
-		s_store_overlay = worn_item.build_worn_icon(src, default_layer = SUIT_STORE_LAYER, default_icon_file = 'icons/mob/clothing/belt_mirror.dmi')
+		s_store_overlay = worn_item.build_worn_icon(default_layer = SUIT_STORE_LAYER, default_icon_file = 'icons/mob/clothing/belt_mirror.dmi')
 
 		if(!s_store_overlay)
 			return
@@ -460,7 +455,6 @@ There are several things that need to be remembered:
 			icon_file = 'icons/mob/clothing/head.dmi'
 
 		head_overlay = head.build_worn_icon(
-			src,
 			default_layer = HEAD_LAYER,
 			default_icon_file = icon_file,
 			override_file = handled_by_bodytype ? icon_file : null
@@ -502,7 +496,6 @@ There are several things that need to be remembered:
 			icon_file = 'icons/mob/clothing/belt.dmi'
 
 		belt_overlay = belt.build_worn_icon(
-			src,
 			default_layer = BELT_LAYER,
 			default_icon_file = icon_file,
 			override_file = handled_by_bodytype ? icon_file : null
@@ -551,7 +544,6 @@ There are several things that need to be remembered:
 			icon_file = DEFAULT_SUIT_FILE
 
 		suit_overlay = wear_suit.build_worn_icon(
-			src,
 			default_layer = SUIT_LAYER,
 			default_icon_file = icon_file,
 			override_file = handled_by_bodytype ? icon_file : null,
@@ -626,7 +618,6 @@ There are several things that need to be remembered:
 				handled_by_bodytype = FALSE
 
 			mask_overlay = wear_mask.build_worn_icon(
-				src,
 				default_layer = FACEMASK_LAYER,
 				default_icon_file = icon_file,
 				override_file = handled_by_bodytype ? icon_file : null
@@ -670,7 +661,6 @@ There are several things that need to be remembered:
 			handled_by_bodytype = FALSE
 
 		back_overlay = back.build_worn_icon(
-			src,
 			default_layer = BACK_LAYER,
 			default_icon_file = icon_file,
 			override_file = handled_by_bodytype ? icon_file : null
@@ -722,9 +712,9 @@ There are several things that need to be remembered:
 		var/mutable_appearance/hand_overlay
 		if(get_held_index_of_item(worn_item) % 2 == 0)
 			icon_file = worn_item.righthand_file
-			hand_overlay = worn_item.build_worn_icon(src, default_layer = HANDS_LAYER, default_icon_file = icon_file, isinhands = TRUE)
+			hand_overlay = worn_item.build_worn_icon(default_layer = HANDS_LAYER, default_icon_file = icon_file, isinhands = TRUE)
 		else
-			hand_overlay = worn_item.build_worn_icon(src, default_layer = HANDS_LAYER, default_icon_file = icon_file, isinhands = TRUE)
+			hand_overlay = worn_item.build_worn_icon(default_layer = HANDS_LAYER, default_icon_file = icon_file, isinhands = TRUE)
 
 		hands += hand_overlay
 	overlays_standing[HANDS_LAYER] = hands
@@ -889,7 +879,7 @@ generate/load female uniform sprites matching all previously decided variables
 
 
 */
-/obj/item/proc/build_worn_icon(mob/living/carbon/wearer, default_layer = 0, default_icon_file = null, isinhands = FALSE, female_uniform = NO_FEMALE_UNIFORM, override_state = null, override_file = null, fallback = null)
+/obj/item/proc/build_worn_icon(default_layer = 0, default_icon_file = null, isinhands = FALSE, female_uniform = NO_FEMALE_UNIFORM, override_state = null, override_file = null, fallback = null)
 
 	//Find a valid icon_state from variables+arguments
 	var/t_state
@@ -917,7 +907,7 @@ generate/load female uniform sprites matching all previously decided variables
 
 	//Get the overlays for this item when it's being worn
 	//eg: ammo counters, primed grenade flashes, etc.
-	var/list/worn_overlays = worn_overlays(wearer, standing, isinhands, file2use)
+	var/list/worn_overlays = worn_overlays(standing, isinhands, file2use)
 	if(worn_overlays?.len)
 		standing.overlays.Add(worn_overlays)
 

@@ -23,9 +23,6 @@
 	var/dos_capacity = 500 // Amount of DoS "packets" in buffer required to crash the relay
 	var/dos_dissipate = 0.5 // Amount of DoS "packets" dissipated over time.
 
-/obj/machinery/ntnet_relay/examine(mob/user)
-	. = ..()
-	. += span_notice("The front panel ID display reads: [uid]")
 
 ///Proc called to change the value of the `relay_enabled` variable and append behavior related to its change.
 /obj/machinery/ntnet_relay/proc/set_relay_enabled(new_value)
@@ -76,12 +73,12 @@
 	if((dos_overload > dos_capacity) && !dos_failure)
 		set_dos_failure(TRUE)
 		update_appearance()
-		SSnetworks.add_log("Relay [uid]: Health check failed, 503 Unavailable. ")
+		SSnetworks.add_log("Quantum relay switched from normal operation mode to overload recovery mode.")
 	// If the DoS buffer reaches 0 again, restart.
 	if((dos_overload == 0) && dos_failure)
 		set_dos_failure(FALSE)
 		update_appearance()
-		SSnetworks.add_log("Relay [uid]: Health check normal, Servicing requests.")
+		SSnetworks.add_log("Quantum relay switched from overload recovery mode to normal operation mode.")
 	..()
 
 /obj/machinery/ntnet_relay/ui_interact(mob/user, datum/tgui/ui)
@@ -107,11 +104,11 @@
 			dos_overload = 0
 			set_dos_failure(FALSE)
 			update_appearance()
-			SSnetworks.add_log("Relay [uid]: Unit restarted, [relay_enabled ? "Relay [uid] added to pool" : "Unit was not added to pool"].")
+			SSnetworks.add_log("Quantum relay manually restarted from overload recovery mode to normal operation mode.")
 			return TRUE
 		if("toggle")
 			set_relay_enabled(!relay_enabled)
-			SSnetworks.add_log("Relay [uid]: [relay_enabled ? "Unit added to pool" : "Unit removed from pool"].")
+			SSnetworks.add_log("Quantum relay manually [relay_enabled ? "enabled" : "disabled"].")
 			update_appearance()
 			return TRUE
 
@@ -121,13 +118,15 @@
 
 	if(SSnetworks.station_network)
 		SSnetworks.relays.Add(src)
-		SSnetworks.add_log("Relay [uid]: Registered, Available nodes:[SSnetworks.relays.len]")
+		NTNet = SSnetworks.station_network
+		SSnetworks.add_log("New quantum relay activated. Current amount of linked relays: [SSnetworks.relays.len]")
 	. = ..()
 
 /obj/machinery/ntnet_relay/Destroy()
 	if(SSnetworks.station_network)
 		SSnetworks.relays.Remove(src)
-		SSnetworks.add_log("Relay [uid]: Device unavailable, Removed from network, Available nodes: [SSnetworks.relays.len]")
+		SSnetworks.add_log("Quantum relay connection severed. Current amount of linked relays: [SSnetworks.relays.len]")
+		NTNet = null
 
 	for(var/datum/computer_file/program/ntnet_dos/D in dos_sources)
 		D.target = null

@@ -74,9 +74,7 @@
 
 	var/list/quirks = list()
 
-	/// A lazylist of active surgeries and their relevant data.
-	var/list/surgeries_in_progress
-
+	var/list/surgeries = list() ///a list of surgery datums. generally empty, they're added when the player wants them.
 	///Mob specific surgery speed modifier
 	var/mob_surgery_speed_mod = 1
 
@@ -197,13 +195,3 @@
 	var/obj/effect/abstract/aim_overlay/gunpoint
 	var/gunpoint_flags = TARGET_CAN_MOVE | TARGET_CAN_INTERACT | TARGET_CAN_RADIO
 	var/use_gunpoint = FALSE
-
-	/// How many ticks of Life() has this mob gone through
-	var/life_ticks = 0
-	/// Chemical effects. Built by the chemical processing stage of Life().
-	var/list/chem_effects = list()
-
-	/// For each life tick, how many do we skip?
-	var/stasis_level = 0
-	/// List of stasis sources to their given value
-	var/list/stasis_sources = list()

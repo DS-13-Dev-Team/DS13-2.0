@@ -36,7 +36,7 @@ export const Mule = (props, context) => {
               icon={on ? 'power-off' : 'times'}
               content={on ? 'On' : 'Off'}
               selected={on}
-              onClick={() => act('on')} />
+              onClick={() => act('power')} />
           )}>
           <ProgressBar
             value={cell ? (cellPercent / 100) : 0}

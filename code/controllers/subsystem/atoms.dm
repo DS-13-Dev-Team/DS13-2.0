@@ -89,7 +89,7 @@ SUBSYSTEM_DEF(atoms)
 		LAZYINITLIST(created_atoms)
 
 	#ifdef TESTING
-	var/count
+	var/count = atoms.len
 	#endif
 	var/list/mapload_arg = list(TRUE)
 

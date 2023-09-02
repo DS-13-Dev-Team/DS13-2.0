@@ -270,6 +270,7 @@
 /obj/item/pipe_dispenser,
 /obj/structure/table/reinforced,
 /obj/item/debug/omnitool,
+/obj/item/door_remote/omni,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "be" = (
@@ -461,6 +462,7 @@
 "bH" = (
 /obj/structure/table/reinforced,
 /obj/item/debug/omnitool,
+/obj/item/door_remote/omni,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "bI" = (

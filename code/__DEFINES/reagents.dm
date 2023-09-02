@@ -71,7 +71,7 @@
 #define REAGENT_STANDARD_PURITY 0.75
 
 //reagent bitflags, used for altering how they works
-///Can process in dead mobs.
+///allows on_mob_dead() if present in a dead body
 #define REAGENT_DEAD_PROCESS (1<<0)
 ///Do not split the chem at all during processing - ignores all purity effects
 #define REAGENT_DONOTSPLIT (1<<1)
@@ -83,10 +83,12 @@
 #define REAGENT_SPLITRETAINVOL (1<<4)
 ///Lets a given reagent be synthesized important for random reagents and things like the odysseus syringe gun(Replaces the old can_synth variable)
 #define REAGENT_CAN_BE_SYNTHESIZED (1<<5)
+///Allows a reagent to work on a mob regardless of stasis
+#define REAGENT_IGNORE_STASIS (1<<6)
 ///This reagent won't be used in most randomized recipes. Meant for reagents that could be synthetized but are normally inaccessible or TOO hard to get.
-#define REAGENT_NO_RANDOM_RECIPE (1<<6)
+#define REAGENT_NO_RANDOM_RECIPE (1<<7)
 ///Does this reagent clean things?
-#define REAGENT_CLEANS (1<<7)
+#define REAGENT_CLEANS (1<<8)
 
 //Chemical reaction flags, for determining reaction specialties
 ///Convert into impure/pure on reaction completion
@@ -118,11 +120,11 @@
 #define MAX_ADDICTION_POINTS 1000
 
 ///Addiction start/ends
-#define WITHDRAWAL_STAGE1_START_CYCLE 600 //10 minutes
-#define WITHDRAWAL_STAGE1_END_CYCLE 1200
-#define WITHDRAWAL_STAGE2_START_CYCLE 1201 // 20 minutes
-#define WITHDRAWAL_STAGE2_END_CYCLE 2400
-#define WITHDRAWAL_STAGE3_START_CYCLE 2400 //40 minutes
+#define WITHDRAWAL_STAGE1_START_CYCLE 60
+#define WITHDRAWAL_STAGE1_END_CYCLE 120
+#define WITHDRAWAL_STAGE2_START_CYCLE 121
+#define WITHDRAWAL_STAGE2_END_CYCLE 180
+#define WITHDRAWAL_STAGE3_START_CYCLE 181
 
 ///reagent tags - used to look up reagents for specific effects. Feel free to add to but comment it
 /// This reagent does brute effects (BOTH damaging and healing)

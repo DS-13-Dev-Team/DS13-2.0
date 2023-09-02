@@ -6,8 +6,10 @@ GLOBAL_LIST_INIT(limb_overlays_cache, list())
 	SHOULD_CALL_PARENT(TRUE)
 
 	if(HAS_TRAIT(owner, TRAIT_HUSK) && IS_ORGANIC_LIMB(src))
+		dmg_overlay_type = "" //no damage overlay shown when husked
 		is_husked = TRUE
 	else
+		dmg_overlay_type = initial(dmg_overlay_type)
 		is_husked = FALSE
 
 	if(variable_color)
@@ -54,9 +56,6 @@ GLOBAL_LIST_INIT(limb_overlays_cache, list())
 	SHOULD_CALL_PARENT(TRUE)
 
 	cut_overlays()
-	if(is_stump)
-		return
-
 	dir = SOUTH
 	var/key = json_encode(generate_icon_key())
 	var/list/standing = GLOB.limb_overlays_cache[key]
@@ -148,11 +147,11 @@ GLOBAL_LIST_INIT(limb_overlays_cache, list())
 
 
 	if(dropped)
-		if(icon_dmg_overlay && !is_husked)
+		if(dmg_overlay_type)
 			if(brutestate)
-				. += image(icon_dmg_overlay, "[body_zone]_[brutestate]0", -DAMAGE_LAYER, image_dir)
+				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_[brutestate]0", -DAMAGE_LAYER, image_dir)
 			if(burnstate)
-				. += image(icon_dmg_overlay, "[body_zone]_0[burnstate]", -DAMAGE_LAYER, image_dir)
+				. += image('icons/mob/dam_mob.dmi', "[dmg_overlay_type]_[body_zone]_0[burnstate]", -DAMAGE_LAYER, image_dir)
 
 
 

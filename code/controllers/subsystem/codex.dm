@@ -26,9 +26,10 @@ SUBSYSTEM_DEF(codex)
 	trailingLinebreakRegexEnd = regex(@"<\s*\/*\s*br\s*\/*\s*>$", "ig")
 
 	// Create general hardcoded entries.
-	for(var/datum/codex_entry/entry as anything in subtypesof(/datum/codex_entry))
-		if(initial(entry.name) && !(isabstract(entry)))
-			entry = new entry()
+	for(var/ctype in subtypesof(/datum/codex_entry))
+		var/datum/codex_entry/centry = ctype
+		if(initial(centry.name) && !(initial(centry.abstract_type) == centry))
+			centry = new centry()
 
 	// Create categorized entries.
 	var/list/deferred_population = list()
