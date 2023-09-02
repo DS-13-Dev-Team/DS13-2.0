@@ -6078,7 +6078,7 @@
 /area/sprawl/civilian/science/surgery)
 "azi" = (
 /obj/structure/table/glass,
-/obj/item/storage/pill_bottle/mannitol,
+/obj/item/storage/pill_bottle/alkysine,
 /obj/item/wrench/medical,
 /turf/open/floor/deadspace/mono,
 /area/sprawl/civilian/medical/exam)
@@ -10263,7 +10263,6 @@
 /turf/open/floor/iron/smooth_large,
 /area/sprawl/civilian/medical/chem)
 "aQt" = (
-/obj/machinery/chem_mass_spec,
 /obj/machinery/light/directional/south,
 /turf/open/floor/deadspace/medical,
 /area/sprawl/civilian/medical/chem)
@@ -10748,7 +10747,6 @@
 /area/sprawl/civilian/medical/surg2)
 "aSa" = (
 /obj/structure/railing,
-/obj/item/reagent_containers/medigel/sterilizine,
 /obj/structure/table,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/medical/surg2)
@@ -10763,7 +10761,6 @@
 /area/sprawl/civilian/medical/surg1)
 "aSd" = (
 /obj/structure/railing,
-/obj/item/reagent_containers/medigel/sterilizine,
 /obj/structure/table,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/medical/surg1)
@@ -22636,7 +22633,7 @@
 /turf/open/floor/iron/white,
 /area/sprawl/civilian/medical/misc_storage3)
 "bPq" = (
-/obj/machinery/chem_heater/withbuffer,
+/obj/machinery/chem_heater,
 /turf/open/floor/deadspace/medical,
 /area/sprawl/civilian/medical/chem)
 "bPr" = (
