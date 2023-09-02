@@ -49,6 +49,7 @@
 
 /obj/structure/closet/secure_closet/ds/hos/PopulateContents()
 	..()
+	new /obj/item/mod/control/pre_equipped/ds/pcsi_commander(src)
 	new /obj/item/computer_hardware/hard_drive/role/hos(src)
 	new /obj/item/radio/headset/heads/hos(src)
 	new /obj/item/storage/bag/garment/hos(src)
