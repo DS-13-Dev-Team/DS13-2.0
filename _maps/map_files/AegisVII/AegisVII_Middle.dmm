@@ -7186,7 +7186,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/obj/structure/cable,
 /obj/machinery/camera/directional/east,
 /turf/open/floor/iron,
 /area/station/engineering/main)
@@ -14966,12 +14965,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
-"jUT" = (
-/obj/structure/disposalpipe/segment{
-	dir = 6
-	},
-/turf/open/floor/iron/ported/lino,
-/area/station/commons/dorms)
 "jUZ" = (
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/deadspace/random/slides{
@@ -18756,10 +18749,10 @@
 /area/station/hallway/primary/fore)
 "nzm" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 9
 	},
-/turf/open/floor/deadspace/random/maint_left,
-/area/station/commons/dorms/barracks)
+/turf/open/floor/iron/ported/lino,
+/area/station/commons/dorms)
 "nzw" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/bot{
@@ -19232,6 +19225,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/ported/techfloor_grid,
 /area/station/engineering/engine_smes)
 "nYh" = (
@@ -21458,6 +21452,12 @@
 	dir = 1
 	},
 /area/station/hallway/primary/starboard)
+"qjh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/deadspace/random/maint_left,
+/area/station/commons/dorms/barracks)
 "qjP" = (
 /obj/machinery/chem_master/condimaster{
 	name = "CondiMaster Neo"
@@ -25613,7 +25613,6 @@
 "urv" = (
 /obj/structure/cable,
 /obj/structure/cable/layer1,
-/obj/machinery/light/small/directional/east,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/engine_smes)
 "urL" = (
@@ -26546,7 +26545,7 @@
 /area/shuttle/pod_3)
 "vkE" = (
 /obj/structure/disposalpipe/segment{
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
@@ -31592,7 +31591,7 @@ all
 beA
 xSe
 atd
-jUT
+vkE
 teX
 aoy
 xSe
@@ -33236,7 +33235,7 @@ cry
 xSe
 aJO
 dgF
-vkE
+nzm
 atd
 xSe
 alw
@@ -35228,7 +35227,7 @@ pSk
 aAT
 pSk
 pSk
-nzm
+qjh
 aAT
 pSk
 pSk
@@ -35236,7 +35235,7 @@ pSk
 aAT
 pSk
 pSk
-nzm
+qjh
 aAT
 pSk
 pSk
@@ -35248,7 +35247,7 @@ pSk
 rRK
 pSk
 aAT
-nzm
+qjh
 pSk
 pSk
 aAT
@@ -35256,7 +35255,7 @@ pSk
 pSk
 pSk
 aAT
-nzm
+qjh
 pSk
 pSk
 aAT
@@ -35834,7 +35833,7 @@ btg
 btg
 btg
 btg
-nzm
+qjh
 btg
 btg
 btg
@@ -35842,7 +35841,7 @@ btg
 btg
 btg
 btg
-nzm
+qjh
 btg
 btg
 btg
@@ -35854,7 +35853,7 @@ btg
 btg
 btg
 btg
-nzm
+qjh
 btg
 btg
 btg
@@ -42887,7 +42886,7 @@ apG
 raZ
 aFQ
 aZM
-oYK
+bjo
 jHn
 raZ
 jIL
