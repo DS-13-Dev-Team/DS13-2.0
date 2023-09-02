@@ -1,6 +1,6 @@
 // {banditofdoom}
 /datum/mod_theme/deadspace/evangelion
-	name = "Evangelion"
+	name = "evangelion"
 	desc = "A project many months in the works, created by an obsessive historical anime fan. Even incorporates a custom voice changer for impersonating TV characters."
 	default_skin = "weeb"
 	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)

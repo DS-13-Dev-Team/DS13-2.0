@@ -1,9 +1,9 @@
 /datum/mod_theme/deadspace/adv_soldier
-	name = "Advanced Soldier"
+	name = "advanced soldier"
 	desc = "A military-grade RIG that was issued to the Earth Defense Force personnel."
 	default_skin = "adv_soldier"
 	armor = list(MELEE = 67.5, BULLET = 70, LASER = 70, ENERGY = 40, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
-	complexity_max = 20
+	complexity_max = 30
 
 	skins = list(
 		"adv_soldier" = list(

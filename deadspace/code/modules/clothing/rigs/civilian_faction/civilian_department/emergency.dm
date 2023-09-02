@@ -36,7 +36,6 @@
 	theme = /datum/mod_theme/deadspace/emergency
 	initial_modules = list(
 		/obj/item/mod/module/storage,
-		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/magboot,
 		/obj/item/mod/module/welding,

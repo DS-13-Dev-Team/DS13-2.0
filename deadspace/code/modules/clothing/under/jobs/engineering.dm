@@ -6,11 +6,10 @@
 	icon_state = "ds_engineer"
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/engineering/ds_rigshirt
-	name = "engineer's bodysuit"
+/obj/item/clothing/under/rank/engineering/ds_rigsuit
+	name = "RIG undersuit"
 	desc = "A tight unarmored bodysuit designed to be worn under a RIG suit."
-	icon_state = "ds_rigundershirt"
 	icon = 'deadspace/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/uniform.dmi'
-	icon_state = "ds_engineer"
+	icon_state = "ds_rigsuit"
 	can_adjust = FALSE

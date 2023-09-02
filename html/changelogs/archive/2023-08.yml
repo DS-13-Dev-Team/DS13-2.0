@@ -153,3 +153,12 @@
   - qol: Signals can hear humans now (only those that are visible for the marker)
   - bugfix: Fixed false sound ability
   - bugfix: Fixed slasher charge
+2023-08-18:
+  DTraitor:
+  - rscadd: Cysts can no longer be placed in sight of survivors
+  - bugfix: Fixed cysts placement, now they require a wall once again
+  blackwolf602:
+  - bugfix: rigs naming
+2023-08-31:
+  Ketrai:
+  - rscadd: New corruption sprites

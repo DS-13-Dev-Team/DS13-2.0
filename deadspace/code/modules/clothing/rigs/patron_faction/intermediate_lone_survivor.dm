@@ -1,15 +1,13 @@
-
-/datum/mod_theme/deadspace/heavy_vintage
-	name = "Antique Heavy-Duty CEC"
-	desc = "A heavy-duty vintage CEC RIG that is used in the most hazardous engineering operations aboard CEC vessels. \
-	Its heavier armor plating can withstand more blunt damage than most CEC suits, and can withstand radiation just as well. \
-	As working conditions on CEC ships have improved, this RIG has been discontinued, but some heavy variants can still be found on old planet crackers."
-	default_skin = "heavy_vintage"
-	armor = list(MELEE = 66.5, BULLET = 70, LASER = 57.5, ENERGY = 25, BOMB = 90, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+// {slipinitinjimmy}
+/datum/mod_theme/deadspace/intermediate_engineer_survivor
+	name = "intermediate lone survivor"
+	desc = "For the lost souls forgotten in the depths of the Ishimura, survival comes at a grim cost"
+	default_skin = "intermediate_engineer_survivor"
+	armor = list(MELEE = 51.25, BULLET = 51.25, LASER = 51.25, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	complexity_max = 20
 
 	skins = list(
-		"heavy_vintage" = list(
+		"intermediate_engineer_survivor" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -36,13 +34,13 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/heavy_vintage
-	theme = /datum/mod_theme/deadspace/heavy_vintage
+/obj/item/mod/control/pre_equipped/ds/intermediate_engineer_survivor
+	theme = /datum/mod_theme/deadspace/intermediate_engineer_survivor
 	initial_modules = list(
-		/obj/item/mod/module/storage/large_capacity,
-		/obj/item/mod/module/jetpack/advanced,
+		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/magboot/advanced,
+		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/magboot,
 		/obj/item/mod/module/welding,
 		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
 		/obj/item/mod/module/t_ray,

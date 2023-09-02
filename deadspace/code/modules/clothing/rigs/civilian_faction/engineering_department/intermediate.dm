@@ -1,11 +1,12 @@
-/datum/mod_theme/deadspace/legacy_standard_engineer
-	name = "DS-08 Legacy"
-	desc = "A classic CEC RIG, designed to handle years of faithful service"
-	default_skin = "legacy_standard_engineer"
-	armor = list(MELEE = 45, BULLET = 50, LASER = 50, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+/datum/mod_theme/deadspace/intermediate_engineer
+	name = "intermediate engineer"
+	desc = "A intermediate engineering suit, issued to class 2 engineers; designed for shipboard engineering"
+	default_skin = "engineer_intermediate"
+	armor = list(MELEE = 51.25, BULLET = 51.25, LASER = 51.25, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	complexity_max = 20
 
 	skins = list(
-		"legacy_standard_engineer" = list(
+		"engineer_intermediate" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -32,12 +33,14 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/legacy_standard_engineer
-	theme = /datum/mod_theme/deadspace/legacy_standard_engineer
+/obj/item/mod/control/pre_equipped/ds/intermediate_engineer
+	theme = /datum/mod_theme/deadspace/intermediate_engineer
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/magboot,
 		/obj/item/mod/module/welding,
+		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
 		/obj/item/mod/module/t_ray,
 	)

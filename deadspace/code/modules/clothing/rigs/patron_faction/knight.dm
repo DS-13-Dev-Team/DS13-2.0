@@ -1,6 +1,6 @@
 // {Bruholic}
 /datum/mod_theme/deadspace/knight
-	name = "Knight"
+	name = "knight"
 	desc = "A rig made from the reforged armor of his family that was passed from generation to generations for decades."
 	default_skin = "knight"
 	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)

@@ -1,14 +1,11 @@
-
-/datum/mod_theme/deadspace/hacker
-	name = "hacker"
-	desc = "A lightweight suit cobbled together from civilian parts, with some high end tech hidden within, suprisngly not illegal."
-	default_skin = "hacker"
-	armor = list(MELEE = 37.5, BULLET = 35, LASER = 40, ENERGY = 40, BOMB = 40, BIO = 80, FIRE = 25, ACID = 25, WOUND = 5)
-	max_heat_protection_temperature = 0
-	min_cold_protection_temperature = 0
+/datum/mod_theme/deadspace/legacy_standard_engineer
+	name = "DS-08 Legacy"
+	desc = "A classic CEC RIG, designed to handle years of faithful service"
+	default_skin = "legacy_standard_engineer"
+	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 80, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 
 	skins = list(
-		"hacker" = list(
+		"legacy_standard_engineer" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -35,10 +32,14 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/hacker
-	theme = /datum/mod_theme/deadspace/hacker
+/obj/item/mod/control/pre_equipped/ds/legacy_standard_engineer
+	theme = /datum/mod_theme/deadspace/legacy_standard_engineer
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
+		/obj/item/mod/module/tether,
 		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
+		/obj/item/mod/module/t_ray,
 	)

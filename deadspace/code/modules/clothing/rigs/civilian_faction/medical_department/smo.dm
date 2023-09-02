@@ -1,14 +1,13 @@
-
-/datum/mod_theme/deadspace/hacker
-	name = "hacker"
-	desc = "A lightweight suit cobbled together from civilian parts, with some high end tech hidden within, suprisngly not illegal."
-	default_skin = "hacker"
-	armor = list(MELEE = 37.5, BULLET = 35, LASER = 40, ENERGY = 40, BOMB = 40, BIO = 80, FIRE = 25, ACID = 25, WOUND = 5)
-	max_heat_protection_temperature = 0
-	min_cold_protection_temperature = 0
+// Doesn't have a speific sprite for it, Using the basic medical one.
+/datum/mod_theme/deadspace/med_smo
+	name = "SMO"
+	desc = "A durable RIG designed for medical rescue in high risk areas, and protecting the wearer against acids. This one was made for the SMO and is well taken care of."
+	default_skin = "med"
+	armor = list(MELEE = 37.5, BULLET = 15, LASER = 70, ENERGY = 70, BOMB = 30, BIO = 100, FIRE = 25, ACID = 100, WOUND = 5)
+	complexity_max = 20
 
 	skins = list(
-		"hacker" = list(
+		"med" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -35,10 +34,15 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/hacker
-	theme = /datum/mod_theme/deadspace/hacker
+/obj/item/mod/control/pre_equipped/ds/med_smo
+	theme = /datum/mod_theme/deadspace/med_smo
 	initial_modules = list(
-		/obj/item/mod/module/storage,
+		/obj/item/mod/module/storage/large_capacity,
+		/obj/item/mod/module/jetpack/advanced,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/magboot/advanced,
+		/obj/item/mod/module/health_analyzer,
+		/obj/item/mod/module/quick_carry,
+		/obj/item/mod/module/injector,
+		/obj/item/mod/module/organ_thrower,
 	)

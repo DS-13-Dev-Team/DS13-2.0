@@ -1,12 +1,11 @@
-/datum/mod_theme/deadspace/vintage
-	name = "vintage CEC"
-	desc = "An extremely bulky, durable vintage suit that has mostly been replaced by sleeker modern designs. Some collectors still value the good old days though."
-	default_skin = "vintage"
-	armor = list(MELEE = 66.5, BULLET = 70, LASER = 57.5, ENERGY = 25, BOMB = 90, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
-	complexity_max = 25
+/datum/mod_theme/deadspace/standard_engineer
+	name = "Standard Engineer"
+	desc = "the most basic form of Resource Integration Gear available for engineers throughout the course of their employment."
+	default_skin = "standard_engineer"
+	armor = list(MELEE = 45, BULLET = 50, LASER = 50, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 
 	skins = list(
-		"vintage" = list(
+		"standard_engineer" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -31,9 +30,9 @@
 				CAN_OVERSLOT = TRUE,
 			),
 		),
-		"heavy_vintage" = list(
+		"legacy_standard_engineer" = list(
 			HELMET_FLAGS = list(
-				UNSEALED_LAYER = WOUND_LAYER,
+				UNSEALED_LAYER = NECK_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
 				SEALED_CLOTHING = THICKMATERIAL|STOPSPRESSUREDAMAGE,
 				UNSEALED_INVISIBILITY = HIDEFACIALHAIR,
@@ -58,18 +57,14 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/vintage
-	theme = /datum/mod_theme/deadspace/vintage
+/obj/item/mod/control/pre_equipped/ds/standard_engineer
+	theme = /datum/mod_theme/deadspace/standard_engineer
 	initial_modules = list(
-		/obj/item/mod/module/storage/large_capacity,
-		/obj/item/mod/module/jetpack/advanced,
+		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/magboot/advanced,
+		/obj/item/mod/module/tether,
+		/obj/item/mod/module/magboot,
 		/obj/item/mod/module/welding,
 		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
 		/obj/item/mod/module/t_ray,
 	)
-
-/obj/item/mod/skin_applier/heavy_vintage
-	skin = "heavy_vintage"
-	compatible_theme = /datum/mod_theme/deadspace/vintage
