@@ -265,7 +265,7 @@
 /obj/structure/railing,
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/deadspace/random/rectangles,
-/area/station/command/heads_quarters/hop)
+/area/station/command/bridge)
 "cK" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -1086,7 +1086,7 @@
 "sc" = (
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/deadspace/random/rectangles,
-/area/station/command/heads_quarters/hop)
+/area/station/command/bridge)
 "sj" = (
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -1477,10 +1477,6 @@
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/carpet/red,
 /area/station/command/heads_quarters/hos)
-"zI" = (
-/obj/structure/cable,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/station/command/heads_quarters/hop)
 "zN" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
@@ -1536,10 +1532,6 @@
 	dir = 1
 	},
 /area/station/hallway/primary/central/aft)
-"Be" = (
-/obj/machinery/light/directional/south,
-/turf/open/floor/deadspace/random/golf_brown,
-/area/station/command/heads_quarters/hop)
 "Bk" = (
 /obj/machinery/light/directional/west,
 /obj/machinery/computer/secure_data{
@@ -12815,9 +12807,9 @@ pw
 NW
 sc
 cI
-zI
-Be
-iv
+aU
+TG
+Sj
 cG
 mK
 oT

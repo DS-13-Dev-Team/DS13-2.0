@@ -832,6 +832,8 @@
 "aog" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/bot,
+/obj/item/clothing/gloves/color/fyellow,
+/obj/item/stack/cable_coil,
 /turf/open/floor/deadspace/mono,
 /area/station/commons/storage/primary)
 "aon" = (
@@ -14965,6 +14967,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
+"jUT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/open/floor/iron/ported/lino,
+/area/station/commons/dorms)
 "jUZ" = (
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/deadspace/random/slides{
@@ -18749,7 +18757,7 @@
 /area/station/hallway/primary/fore)
 "nzm" = (
 /obj/structure/disposalpipe/segment{
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
@@ -26543,12 +26551,6 @@
 	dir = 4
 	},
 /area/shuttle/pod_3)
-"vkE" = (
-/obj/structure/disposalpipe/segment{
-	dir = 6
-	},
-/turf/open/floor/iron/ported/lino,
-/area/station/commons/dorms)
 "vkL" = (
 /obj/effect/spawner/structure/window/reinforced/tinted/prepainted/daedalus,
 /turf/open/floor/plating,
@@ -27981,8 +27983,6 @@
 /area/station/command/heads_quarters/ce)
 "wCN" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/gloves/color/fyellow,
-/obj/item/stack/cable_coil,
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
@@ -31591,7 +31591,7 @@ all
 beA
 xSe
 atd
-vkE
+nzm
 teX
 aoy
 xSe
@@ -33235,7 +33235,7 @@ cry
 xSe
 aJO
 dgF
-nzm
+jUT
 atd
 xSe
 alw
