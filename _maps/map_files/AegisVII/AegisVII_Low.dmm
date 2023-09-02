@@ -2079,6 +2079,10 @@
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
+"qt" = (
+/mob/living/simple_animal/hostile/rat,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "qu" = (
 /obj/machinery/light/small/red,
 /turf/open/misc/asteroid,
@@ -2796,6 +2800,11 @@
 "xK" = (
 /turf/closed/mineral,
 /area/lavaland/surface/outdoors)
+"xN" = (
+/obj/effect/decal/cleanable/blood,
+/mob/living/simple_animal/hostile/cat_butcherer,
+/turf/open/floor/iron/kitchen_coldroom/freezerfloor,
+/area/station/maintenance/fore/lesser)
 "xQ" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
@@ -3303,6 +3312,15 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/service/chapel/monastery)
+"Dv" = (
+/obj/effect/decal/cleanable/blood,
+/mob/living/simple_animal/hostile/rat,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
+"Dx" = (
+/obj/effect/mob_spawn/ghost_role/drone/scavbot,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "Dy" = (
 /turf/closed/wall/mineral/titanium/survival/pod,
 /area/lavaland/surface/outdoors)
@@ -3765,6 +3783,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron/ported/lino,
 /area/station/service/chapel/monastery)
+"Kk" = (
+/mob/living/simple_animal/hostile/rat,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/station/maintenance/port/lesser)
 "Kq" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -4230,6 +4252,10 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/deadspace/mono,
 /area/lavaland/surface/outdoors)
+"PT" = (
+/mob/living/simple_animal/hostile/rat,
+/turf/open/water,
+/area/station/maintenance/port/lesser)
 "PY" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 1
@@ -4255,6 +4281,10 @@
 /obj/structure/rack,
 /obj/item/plate_shard/marker_shard,
 /turf/open/floor/deadspace/mono,
+/area/lavaland/surface/outdoors)
+"Qr" = (
+/mob/living/simple_animal/hostile/rat,
+/turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
 "Qy" = (
 /obj/structure/closet/firecloset,
@@ -4378,10 +4408,20 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
+"Sk" = (
+/obj/effect/spawner/random/structure/closet_maintenance,
+/obj/effect/mob_spawn/ghost_role/drone/scavbot,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "Sl" = (
 /obj/structure/girder/reinforced,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"Sp" = (
+/obj/machinery/light/small/maintenance/directional/south,
+/mob/living/simple_animal/hostile/rat,
+/turf/open/floor/deadspace/grater,
+/area/station/maintenance/port/lesser)
 "Sr" = (
 /obj/machinery/firealarm/directional/south{
 	dir = 1;
@@ -4752,6 +4792,10 @@
 "WB" = (
 /obj/machinery/light/small/maintenance/directional/south,
 /turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
+"WD" = (
+/mob/living/simple_animal/hostile/rat,
+/turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
 "WR" = (
 /obj/structure/rack,
@@ -7708,7 +7752,7 @@ sk
 hn
 sO
 sO
-hn
+Dx
 hn
 hn
 hn
@@ -7890,7 +7934,7 @@ yA
 zp
 bf
 hn
-MR
+WD
 MR
 bf
 od
@@ -9053,7 +9097,7 @@ zp
 zp
 zp
 zp
-zp
+Kk
 zp
 zp
 zp
@@ -9476,7 +9520,7 @@ sU
 dx
 bf
 MR
-MR
+WD
 MR
 MR
 MR
@@ -9685,7 +9729,7 @@ Nf
 bf
 vV
 hn
-hn
+qt
 hn
 QP
 bf
@@ -10322,7 +10366,7 @@ yG
 yG
 bf
 hn
-hn
+qt
 hn
 uU
 zp
@@ -12093,7 +12137,7 @@ zp
 zp
 zp
 zp
-zp
+Kk
 zp
 se
 zp
@@ -12730,7 +12774,7 @@ yG
 yG
 bf
 hn
-hn
+qt
 hn
 wz
 zp
@@ -15537,7 +15581,7 @@ PJ
 tT
 tT
 zp
-yA
+PT
 zp
 bf
 bf
@@ -15754,7 +15798,7 @@ yA
 GA
 yA
 yA
-yA
+PT
 yA
 zp
 IB
@@ -16172,7 +16216,7 @@ zp
 se
 zp
 zp
-yA
+PT
 CO
 Ul
 vU
@@ -18994,7 +19038,7 @@ yG
 bf
 rf
 ri
-hn
+Dx
 ro
 rf
 hn
@@ -19388,7 +19432,7 @@ hn
 hn
 bf
 nR
-UC
+Sp
 bf
 nD
 hn
@@ -22030,7 +22074,7 @@ hn
 rh
 bf
 zp
-yA
+PT
 CO
 tT
 tT
@@ -23051,7 +23095,7 @@ yG
 bf
 hn
 hn
-hn
+qt
 bf
 wy
 hn
@@ -25066,14 +25110,14 @@ tT
 mW
 mW
 zp
-yA
+PT
 yA
 yA
 eF
 yA
 CO
 bf
-fd
+xN
 fd
 fk
 fk
@@ -28878,7 +28922,7 @@ zp
 yA
 yA
 yA
-yA
+PT
 yA
 yA
 yA
@@ -31111,7 +31155,7 @@ zp
 zp
 se
 zp
-yA
+PT
 zp
 bf
 kd
@@ -33956,7 +34000,7 @@ zp
 bf
 bf
 jn
-hn
+qt
 Xs
 fg
 hn
@@ -34766,7 +34810,7 @@ hn
 hn
 hn
 cE
-fg
+Dv
 hn
 bf
 dv
@@ -34777,7 +34821,7 @@ JB
 JB
 JB
 SI
-JB
+Qr
 tQ
 JB
 JB
@@ -35760,7 +35804,7 @@ tT
 zp
 yA
 yA
-yA
+PT
 zp
 bf
 bf
@@ -36598,7 +36642,7 @@ JB
 JB
 JB
 tQ
-JB
+Qr
 JB
 xK
 Cr
@@ -37400,7 +37444,7 @@ yA
 zp
 bf
 cD
-cD
+Sk
 bf
 bf
 xK
@@ -37994,7 +38038,7 @@ hn
 hn
 hn
 hn
-hn
+qt
 hn
 hn
 Mu
@@ -38183,7 +38227,7 @@ bf
 hn
 hn
 hn
-hn
+qt
 hn
 Zk
 bf
@@ -39396,7 +39440,7 @@ hn
 hn
 hn
 hn
-hn
+qt
 hn
 bf
 bf

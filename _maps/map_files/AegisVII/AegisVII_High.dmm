@@ -232,7 +232,8 @@
 "cn" = (
 /obj/machinery/door/airlock/security{
 	dir = 4;
-	name = "P-Sec Forensics"
+	name = "P-Sec Forensics";
+	req_access_txt = "4"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -262,6 +263,7 @@
 "cI" = (
 /obj/machinery/firealarm/directional/east,
 /obj/structure/railing,
+/obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/heads_quarters/hop)
 "cK" = (
@@ -274,7 +276,6 @@
 "cL" = (
 /obj/structure/railing,
 /obj/structure/cable,
-/obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)
 "cN" = (
@@ -633,6 +634,11 @@
 	dir = 8
 	},
 /area/station/hallway/secondary/command)
+"hA" = (
+/obj/machinery/light/directional/east,
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/station/security/brig/upper)
 "hB" = (
 /turf/open/floor/deadspace/mono,
 /area/station/security/brig/upper)
@@ -804,7 +810,8 @@
 /area/station/maintenance/fore/greater)
 "la" = (
 /obj/machinery/door/airlock/security{
-	name = "P-Sec Upper Hallway"
+	name = "P-Sec Upper Hallway";
+	req_access_txt = "63"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -1039,7 +1046,8 @@
 /area/station/security/detectives_office)
 "qy" = (
 /obj/machinery/door/airlock/security{
-	name = "P-Sec Commander Quarters"
+	name = "P-Sec Commander Quarters";
+	req_access_txt = "58"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/hardwood,
@@ -1599,7 +1607,8 @@
 	},
 /obj/machinery/door/airlock/security{
 	dir = 1;
-	name = "P-Sec Upper Hallway"
+	name = "P-Sec Upper Hallway";
+	req_access_txt = "63"
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/brig/upper)
@@ -1610,7 +1619,8 @@
 "Dw" = (
 /obj/machinery/door/airlock/security{
 	dir = 1;
-	name = "P-Sec Commander Office"
+	name = "P-Sec Commander Office";
+	req_access_txt = "58"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -1726,7 +1736,8 @@
 /area/station/security/office)
 "FM" = (
 /obj/machinery/door/airlock/security{
-	name = "P-Sec Upper Hallway"
+	name = "P-Sec Upper Hallway";
+	req_access_txt = "63"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark,
@@ -2082,7 +2093,8 @@
 	},
 /obj/machinery/door/airlock/security{
 	dir = 1;
-	name = "P-Sec Upper Hallway"
+	name = "P-Sec Upper Hallway";
+	req_access_txt = "63"
 	},
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -13640,9 +13652,9 @@ eY
 eE
 ep
 gb
-am
-ep
-ep
+hA
+XW
+XW
 ep
 Uz
 sE
