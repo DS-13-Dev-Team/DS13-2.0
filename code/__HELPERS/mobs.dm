@@ -367,6 +367,10 @@ GLOBAL_LIST_EMPTY(species_list)
 		progbar.end_progress()
 
 	if(interaction_key)
+		var/reduced_interaction_count = (LAZYACCESS(user.do_afters, interaction_key)) - 1
+		if(reduced_interaction_count > 0) // Not done yet!
+			LAZYSET(user.do_afters, interaction_key, reduced_interaction_count)
+			return
 		LAZYREMOVE(user.do_afters, interaction_key)
 
 
@@ -445,7 +449,18 @@ GLOBAL_LIST_EMPTY(species_list)
 		progbar.end_progress()
 
 	if(interaction_key)
+		var/reduced_interaction_count = (LAZYACCESS(user.do_afters, interaction_key)) - 1
+		if(reduced_interaction_count > 0) // Not done yet!
+			LAZYSET(user.do_afters, interaction_key, reduced_interaction_count)
+			return
 		LAZYREMOVE(user.do_afters, interaction_key)
+
+/// Returns the total amount of do_afters this mob is taking part in
+/mob/proc/do_after_count()
+	var/count = 0
+	for(var/key in do_afters)
+		count += do_afters[key]
+	return count
 
 /proc/is_species(A, species_datum)
 	. = FALSE
@@ -704,7 +719,21 @@ GLOBAL_LIST_EMPTY(species_list)
 
 #define ISADVANCEDTOOLUSER(mob) (HAS_TRAIT(mob, TRAIT_ADVANCEDTOOLUSER) && !HAS_TRAIT(mob, TRAIT_DISCOORDINATED_TOOL_USER))
 
-#define IS_IN_STASIS(mob) (mob.has_status_effect(/datum/status_effect/grouped/stasis))
+/// If a mob is in hard or soft stasis
+#define IS_IN_STASIS(mob) ((mob.stasis_level && (mob.life_ticks % mob.stasis_level)) || mob.has_status_effect(/datum/status_effect/grouped/hard_stasis))
+
+/// If a mob is in hard stasis
+#define IS_IN_HARD_STASIS(mob) (mob.has_status_effect(/datum/status_effect/grouped/hard_stasis))
+
+/// Set a stasis level for a specific source.
+#define SET_STASIS_LEVEL(mob, source, level) \
+	mob.stasis_level -= mob.stasis_sources[source]; \
+	mob.stasis_level += level;\
+	mob.stasis_sources[source] = level
+
+#define UNSET_STASIS_LEVEL(mob, source) \
+	mob.stasis_level -= mob.stasis_sources[source];\
+	mob.stasis_sources -= source
 
 /// Gets the client of the mob, allowing for mocking of the client.
 /// You only need to use this if you know you're going to be mocking clients somewhere else.

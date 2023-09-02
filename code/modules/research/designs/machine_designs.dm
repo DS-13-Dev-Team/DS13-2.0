@@ -118,13 +118,6 @@
 	mapload_design_flags = DESIGN_IMPRINTER
 	build_path = /obj/item/circuitboard/machine/chem_heater
 
-/datum/design/board/chem_mass_spec
-	name = "Machine Board (High-Performance Liquid Chromatography)"
-	desc = "The circuit board for a High-Performance Liquid Chromatography (Machine Board)"
-	id = "chem_mass_spec"
-	mapload_design_flags = DESIGN_IMPRINTER
-	build_path = /obj/item/circuitboard/machine/chem_mass_spec
-
 /datum/design/board/smoke_machine
 	name = "Machine Board (Smoke Machine)"
 	desc = "The circuit board for a smoke machine."
@@ -474,13 +467,6 @@
 	id = "spaceship_navigation_beacon"
 	build_type = IMPRINTER
 	build_path = /obj/item/circuitboard/machine/spaceship_navigation_beacon
-	mapload_design_flags = IMPRINTER
-
-/datum/design/board/medical_kiosk
-	name = "Machine Board (Medical Kiosk)"
-	desc = "The circuit board for a Medical Kiosk."
-	id = "medical_kiosk"
-	build_path = /obj/item/circuitboard/machine/medical_kiosk
 	mapload_design_flags = IMPRINTER
 
 /datum/design/board/medipen_refiller

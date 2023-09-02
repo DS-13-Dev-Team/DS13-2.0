@@ -57,7 +57,7 @@
 
 /obj/item/organ/cyberimp/arm/examine(mob/user)
 	. = ..()
-	if(status == ORGAN_ROBOTIC)
+	if(organ_flags & ORGAN_SYNTHETIC)
 		. += span_info("[src] is assembled in the [zone == BODY_ZONE_R_ARM ? "right" : "left"] arm configuration. You can use a screwdriver to reassemble it.")
 
 /obj/item/organ/cyberimp/arm/screwdriver_act(mob/living/user, obj/item/screwtool)
@@ -97,7 +97,7 @@
 
 /obj/item/organ/cyberimp/arm/emp_act(severity)
 	. = ..()
-	if(. & EMP_PROTECT_SELF || status == ORGAN_ROBOTIC)
+	if(. & EMP_PROTECT_SELF || (organ_flags & ORGAN_SYNTHETIC))
 		return
 	if(prob(15/severity) && owner)
 		to_chat(owner, span_warning("The electromagnetic pulse causes [src] to malfunction!"))
@@ -206,8 +206,7 @@
 		owner.adjust_fire_stacks(20)
 		owner.ignite_mob()
 		owner.adjustFireLoss(25)
-		organ_flags |= ORGAN_FAILING
-
+		set_organ_failing(TRUE)
 
 /obj/item/organ/cyberimp/arm/gun/laser
 	name = "arm-mounted laser implant"
@@ -302,4 +301,4 @@
 /obj/item/organ/cyberimp/arm/surgery
 	name = "surgical toolset implant"
 	desc = "A set of surgical tools hidden behind a concealed panel on the user's arm."
-	items_to_create = list(/obj/item/retractor/augment, /obj/item/hemostat/augment, /obj/item/cautery/augment, /obj/item/surgicaldrill/augment, /obj/item/scalpel/augment, /obj/item/circular_saw/augment, /obj/item/surgical_drapes)
+	items_to_create = list(/obj/item/retractor/augment, /obj/item/hemostat/augment, /obj/item/cautery/augment, /obj/item/surgicaldrill/augment, /obj/item/scalpel/augment, /obj/item/circular_saw/augment)

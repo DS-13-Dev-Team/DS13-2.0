@@ -4208,7 +4208,6 @@
 	},
 /area/centcom/abductor_ship)
 "lY" = (
-/obj/item/surgical_drapes,
 /obj/item/paper/guides/antag/abductor,
 /obj/item/scalpel/alien,
 /obj/structure/table/abductor,
@@ -8967,7 +8966,6 @@
 /area/centcom/central_command_areas/control)
 "Aq" = (
 /obj/structure/table/optable,
-/obj/item/surgical_drapes,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -9165,9 +9163,6 @@
 /turf/closed/indestructible/reinforced/centcom,
 /area/centcom/central_command_areas/control)
 "AU" = (
-/obj/machinery/computer/operating{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -9448,14 +9443,14 @@
 /obj/item/reagent_containers/glass/bottle/epinephrine{
 	pixel_x = 6
 	},
-/obj/item/reagent_containers/glass/bottle/multiver{
+/obj/item/reagent_containers/glass/bottle/dylovene{
 	pixel_x = -3
 	},
 /obj/item/reagent_containers/glass/bottle/epinephrine{
 	pixel_x = -3;
 	pixel_y = 8
 	},
-/obj/item/reagent_containers/glass/bottle/multiver{
+/obj/item/reagent_containers/glass/bottle/dylovene{
 	pixel_x = 6;
 	pixel_y = 8
 	},
@@ -10487,10 +10482,6 @@
 	dir = 4
 	},
 /area/centcom/syndicate_mothership/expansion_bombthreat)
-"EG" = (
-/obj/machinery/chem_heater/withbuffer,
-/turf/open/floor/mineral/titanium/tiled/yellow,
-/area/centcom/syndicate_mothership/expansion_chemicalwarfare)
 "EH" = (
 /obj/machinery/igniter/incinerator_ordmix{
 	id = "syn_ordmix_igniter"
@@ -13861,10 +13852,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/control)
-"OI" = (
-/obj/machinery/chem_mass_spec,
-/turf/open/floor/mineral/titanium/tiled/yellow,
-/area/centcom/syndicate_mothership/expansion_chemicalwarfare)
 "OJ" = (
 /obj/machinery/door/airlock/external/ruin{
 	req_access_txt = "150"
@@ -15998,7 +15985,7 @@
 /area/centcom/syndicate_mothership)
 "Uv" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/glass/bottle/multiver{
+/obj/item/reagent_containers/glass/bottle/dylovene{
 	pixel_x = 6
 	},
 /obj/item/reagent_containers/glass/bottle/epinephrine{
@@ -17416,7 +17403,7 @@
 	},
 /obj/structure/table/reinforced/plasmarglass,
 /obj/item/reagent_containers/glass/bottle/epinephrine,
-/obj/item/reagent_containers/glass/bottle/multiver{
+/obj/item/reagent_containers/glass/bottle/dylovene{
 	pixel_x = 6
 	},
 /obj/item/reagent_containers/syringe{
@@ -24917,7 +24904,7 @@ aa
 aa
 kb
 nH
-EG
+EN
 EN
 kh
 EN
@@ -25179,7 +25166,7 @@ pV
 AP
 Py
 Un
-OI
+EN
 we
 br
 Bq
