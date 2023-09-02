@@ -700,10 +700,6 @@
 	dir = 4
 	},
 /area/station/hallway/primary/central/aft)
-"jF" = (
-/obj/structure/lattice,
-/turf/open/openspace,
-/area/station/command/bridge)
 "jJ" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
@@ -13416,7 +13412,7 @@ Sj
 iT
 iT
 LJ
-jF
+iT
 Sj
 Ar
 aU
@@ -13618,7 +13614,7 @@ Sj
 iT
 ez
 pp
-jF
+iT
 Sj
 fE
 aU
