@@ -14969,7 +14969,7 @@
 /area/station/command/heads_quarters/rd)
 "jUT" = (
 /obj/structure/disposalpipe/segment{
-	dir = 9
+	dir = 6
 	},
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
@@ -18756,11 +18756,13 @@
 /turf/open/floor/iron/norn,
 /area/station/hallway/primary/fore)
 "nzm" = (
-/obj/structure/disposalpipe/segment{
-	dir = 6
+/obj/machinery/button/door/directional/south{
+	id = "mechbay";
+	name = "Mech Bay Shutters Control";
+	req_access_txt = "29"
 	},
-/turf/open/floor/iron/ported/lino,
-/area/station/commons/dorms)
+/turf/open/floor/iron/dark/side,
+/area/station/hallway/primary/fore)
 "nzw" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/bot{
@@ -26551,6 +26553,12 @@
 	dir = 4
 	},
 /area/shuttle/pod_3)
+"vkE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/open/floor/iron/ported/lino,
+/area/station/commons/dorms)
 "vkL" = (
 /obj/effect/spawner/structure/window/reinforced/tinted/prepainted/daedalus,
 /turf/open/floor/plating,
@@ -31591,7 +31599,7 @@ all
 beA
 xSe
 atd
-nzm
+jUT
 teX
 aoy
 xSe
@@ -33235,7 +33243,7 @@ cry
 xSe
 aJO
 dgF
-jUT
+vkE
 atd
 xSe
 alw
@@ -48191,7 +48199,7 @@ vie
 oHu
 xLT
 pfK
-aoU
+nzm
 oxc
 qwM
 nIl
