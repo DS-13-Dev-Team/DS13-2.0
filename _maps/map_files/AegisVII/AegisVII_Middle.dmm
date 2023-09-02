@@ -3275,7 +3275,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
 "aRL" = (
-/obj/structure/cable,
+/obj/structure/cable/layer1,
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /turf/open/floor/iron/ported/techfloor_grid,
 /area/station/engineering/supermatter/room)
@@ -4064,6 +4064,11 @@
 /obj/machinery/light/small/maintenance/directional/north,
 /turf/open/openspace,
 /area/station/maintenance/starboard/greater)
+"bcn" = (
+/obj/structure/cable/layer1,
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/station/engineering/engine_smes)
 "bcp" = (
 /obj/structure/toilet{
 	pixel_y = 5
@@ -5592,7 +5597,7 @@
 	},
 /area/station/engineering/main)
 "bqV" = (
-/obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/iron/ported/techfloor_grid,
 /area/station/engineering/supermatter/room)
 "bqY" = (
@@ -5904,6 +5909,11 @@
 /obj/effect/turf_decal/trimline/yellow/filled/corner,
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
+"bxN" = (
+/obj/structure/cable,
+/obj/structure/cable/layer1,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/station/engineering/supermatter/room)
 "byk" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -6930,6 +6940,7 @@
 /area/station/hallway/primary/starboard)
 "cwd" = (
 /obj/structure/cable,
+/obj/structure/cable/layer1,
 /obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
 	dir = 1
 	},
@@ -7020,7 +7031,7 @@
 /obj/machinery/atmospherics/components/binary/circulator{
 	dir = 1
 	},
-/obj/structure/cable,
+/obj/structure/cable/layer1,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -7436,7 +7447,7 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/service/library)
 "cSZ" = (
-/obj/structure/cable,
+/obj/structure/cable/layer1,
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible{
 	dir = 4
 	},
@@ -8398,8 +8409,9 @@
 /obj/machinery/power/generator{
 	dir = 8
 	},
-/obj/machinery/light/floor/has_bulb,
 /obj/structure/cable,
+/obj/machinery/light/floor/has_bulb,
+/obj/structure/cable/layer1,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/supermatter/room)
 "dRx" = (
@@ -10733,7 +10745,7 @@
 /obj/machinery/door/airlock/security{
 	dir = 1;
 	name = "Armory";
-	req_access = list(2)
+	req_access_txt = "3"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -11805,7 +11817,6 @@
 /obj/structure/chair/stool{
 	dir = 1
 	},
-/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/engineering/engine_smes)
 "gWb" = (
@@ -12787,7 +12798,7 @@
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit)
 "hLW" = (
-/obj/structure/cable,
+/obj/structure/cable/layer1,
 /turf/open/floor/plating,
 /area/station/engineering/engine_smes)
 "hMa" = (
@@ -16145,7 +16156,10 @@
 /area/station/service/chapel)
 "kYy" = (
 /obj/structure/cable,
-/turf/open/floor/catwalk_floor/iron_dark,
+/obj/effect/floor_decal/ds/spline/fancy/wood{
+	dir = 5
+	},
+/turf/open/floor/carpet/royalblue,
 /area/station/service/library)
 "kZM" = (
 /obj/machinery/cryopod,
@@ -19445,11 +19459,10 @@
 /turf/open/floor/plating,
 /area/awaymission/centcom_away/hangar)
 "oin" = (
-/obj/machinery/power/smes/magical,
+/obj/structure/cable/layer1,
 /obj/structure/cable,
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating,
-/area/station/engineering/engine_smes)
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/station/engineering/supermatter/room)
 "oiH" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -19821,6 +19834,7 @@
 /area/station/medical/medbay/central)
 "oGg" = (
 /obj/structure/cable,
+/obj/structure/cable/layer1,
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/supermatter/room)
@@ -22030,7 +22044,8 @@
 /area/shuttle/pod_3)
 "qJe" = (
 /obj/machinery/atmospherics/components/binary/valve/digital{
-	name = "Exhaust-Return Tie"
+	name = "Exhaust-Return Tie";
+	dir = 1
 	},
 /obj/effect/turf_decal/trimline/green/line,
 /obj/effect/turf_decal/trimline/green/line{
@@ -25628,7 +25643,8 @@
 /area/station/hallway/primary/fore)
 "urv" = (
 /obj/structure/cable,
-/obj/machinery/light/small/directional/west,
+/obj/structure/cable/layer1,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/engine_smes)
 "urL" = (
@@ -27089,7 +27105,7 @@
 /turf/open/floor/iron,
 /area/station/security/range)
 "vLP" = (
-/obj/structure/cable,
+/obj/structure/cable/layer1,
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible,
 /turf/open/floor/iron/ported/techfloor_grid,
 /area/station/engineering/supermatter/room)
@@ -27170,8 +27186,15 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/sorting)
+"vQr" = (
+/obj/machinery/power/smes/engineering,
+/obj/structure/cable,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating,
+/area/station/engineering/engine_smes)
 "vQY" = (
 /obj/structure/cable,
+/obj/structure/cable/layer1,
 /obj/machinery/door/airlock/hatch{
 	id_tag = "smesroom_door";
 	name = "SMES Access";
@@ -27538,6 +27561,7 @@
 /area/station/engineering/break_room)
 "wgc" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/cable/layer1,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/supermatter/room)
@@ -29389,6 +29413,12 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
 /area/station/service/chapel/office)
+"xRu" = (
+/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
+	dir = 1
+	},
+/turf/open/floor/iron/ported/techfloor_grid,
+/area/station/engineering/supermatter/room)
 "xRN" = (
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/deadspace/random/maint_left,
@@ -39707,7 +39737,7 @@ eFz
 jNK
 tYw
 tYw
-tYw
+cIo
 qmq
 cIo
 uDV
@@ -41478,9 +41508,9 @@ raZ
 raZ
 raZ
 mIc
-aTD
+oin
 wgc
-aTD
+bxN
 rjb
 bug
 abq
@@ -41676,13 +41706,13 @@ apG
 raZ
 fUB
 hLW
-bjo
+bcn
 urv
 vQY
 cwd
 oGg
 qfB
-aTD
+bxN
 xOI
 dyn
 ucm
@@ -42482,7 +42512,7 @@ apG
 apG
 apG
 raZ
-aFQ
+vQr
 aZM
 bjo
 upo
@@ -42491,7 +42521,7 @@ boF
 arC
 arC
 arC
-arC
+xRu
 arC
 aRL
 arC
@@ -42886,9 +42916,9 @@ apG
 apG
 apG
 raZ
-oin
+aFQ
 aZM
-bjo
+oYK
 jHn
 raZ
 jIL
