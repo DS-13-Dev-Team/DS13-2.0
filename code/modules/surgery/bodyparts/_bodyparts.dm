@@ -13,6 +13,9 @@
 	icon_state = "" //Leave this blank! Bodyparts are built using overlays
 	layer = BELOW_MOB_LAYER //so it isn't hidden behind objects when on the floor
 
+	//Default value from 1.0
+	biomass = 2
+
 	VAR_PRIVATE/icon/current_icon = null
 	VAR_PRIVATE/icon/current_aux_icon = null
 

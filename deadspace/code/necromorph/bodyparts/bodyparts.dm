@@ -5,6 +5,7 @@
 	should_draw_greyscale = FALSE
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "chest"
+	icon_dmg_overlay = null
 	max_damage = 200
 	body_zone = BODY_ZONE_CHEST
 	body_part = CHEST
@@ -23,6 +24,7 @@
 	should_draw_greyscale = FALSE
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "head"
+	icon_dmg_overlay = null
 	body_zone = BODY_ZONE_HEAD
 	body_part = HEAD
 	max_damage = 200
@@ -34,11 +36,17 @@
 	show_organs_on_examine = TRUE
 
 /obj/item/bodypart/head/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute_dam >= max_damage)
+	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
+		return dismember(DROPLIMB_EDGE, FALSE, FALSE)
+
+	else if((burn_dam + burn) >= max_damage * DROPLIMB_THRESHOLD_DESTROY)
+		return dismember(DROPLIMB_BURN, FALSE, FALSE)
+
+	else if((brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_DESTROY)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn_dam >= max_damage)
-		return dismember(DROPLIMB_BURN, FALSE, FALSE)
+	else if((brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_TEAROFF)
+		return dismember(DROPLIMB_EDGE, FALSE, FALSE)
 
 /obj/item/bodypart/arm/left/necromorph
 	name = "left arm"
@@ -47,6 +55,7 @@
 	should_draw_greyscale = FALSE
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_arm"
+	icon_dmg_overlay = null
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
 	max_damage = 50
@@ -57,11 +66,17 @@
 	wound_resistance = 0
 
 /obj/item/bodypart/arm/left/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute_dam >= max_damage)
+	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
+		return dismember(DROPLIMB_EDGE, FALSE, FALSE)
+
+	else if((burn_dam + burn) >= max_damage * DROPLIMB_THRESHOLD_DESTROY)
+		return dismember(DROPLIMB_BURN, FALSE, FALSE)
+
+	else if((brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_DESTROY)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn_dam >= max_damage)
-		return dismember(DROPLIMB_BURN, FALSE, FALSE)
+	else if((brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_TEAROFF)
+		return dismember(DROPLIMB_EDGE, FALSE, FALSE)
 
 /obj/item/bodypart/arm/right/necromorph
 	name = "right arm"
@@ -70,6 +85,7 @@
 	should_draw_greyscale = FALSE
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_arm"
+	icon_dmg_overlay = null
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
 	max_damage = 50
@@ -80,11 +96,17 @@
 	wound_resistance = 0
 
 /obj/item/bodypart/arm/right/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute_dam >= max_damage)
+	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
+		return dismember(DROPLIMB_EDGE, FALSE, FALSE)
+
+	else if((burn_dam + burn) >= max_damage * DROPLIMB_THRESHOLD_DESTROY)
+		return dismember(DROPLIMB_BURN, FALSE, FALSE)
+
+	else if((brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_DESTROY)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn_dam >= max_damage)
-		return dismember(DROPLIMB_BURN, FALSE, FALSE)
+	else if((brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_TEAROFF)
+		return dismember(DROPLIMB_EDGE, FALSE, FALSE)
 
 /obj/item/bodypart/leg/left/necromorph
 	name = "left leg"
@@ -93,6 +115,7 @@
 	should_draw_greyscale = FALSE
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_leg"
+	icon_dmg_overlay = null
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
@@ -103,11 +126,17 @@
 	wound_resistance = 0
 
 /obj/item/bodypart/leg/left/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute_dam >= max_damage)
+	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
+		return dismember(DROPLIMB_EDGE, FALSE, FALSE)
+
+	else if((burn_dam + burn) >= max_damage * DROPLIMB_THRESHOLD_DESTROY)
+		return dismember(DROPLIMB_BURN, FALSE, FALSE)
+
+	else if((brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_DESTROY)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn_dam >= max_damage)
-		return dismember(DROPLIMB_BURN, FALSE, FALSE)
+	else if((brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_TEAROFF)
+		return dismember(DROPLIMB_EDGE, FALSE, FALSE)
 
 /obj/item/bodypart/leg/right/necromorph
 	name = "right leg"
@@ -116,6 +145,7 @@
 	should_draw_greyscale = FALSE
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_leg"
+	icon_dmg_overlay = null
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
@@ -128,8 +158,14 @@
 	wound_resistance = 0
 
 /obj/item/bodypart/leg/right/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
-	if(brute_dam >= max_damage)
+	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
+		return dismember(DROPLIMB_EDGE, FALSE, FALSE)
+
+	else if((burn_dam + burn) >= max_damage * DROPLIMB_THRESHOLD_DESTROY)
+		return dismember(DROPLIMB_BURN, FALSE, FALSE)
+
+	else if((brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_DESTROY)
 		return dismember(DROPLIMB_BLUNT, FALSE, FALSE)
 
-	else if(burn_dam >= max_damage)
-		return dismember(DROPLIMB_BURN, FALSE, FALSE)
+	else if((brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_TEAROFF)
+		return dismember(DROPLIMB_EDGE, FALSE, FALSE)

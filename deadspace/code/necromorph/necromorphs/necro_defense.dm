@@ -6,7 +6,7 @@
 /atom/proc/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(!uses_integrity || (!user.melee_damage_upper && !dealt_damage)) //No damage
 		return FALSE
-	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper) * user.obj_damage_multiplier
+	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)
 	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
 
@@ -18,7 +18,7 @@
 	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
 
 /mob/living/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
-	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper) * user.obj_damage_multiplier
+	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)
 	playsound(loc, 'sound/weapons/slash.ogg', 50, TRUE, -1)
 	visible_message(span_danger("[user.name] slashes [src]!"), \
@@ -38,7 +38,7 @@
 	user.do_attack_animation(src, user.attack_effect)
 	if (w_uniform)
 		w_uniform.add_fingerprint(user)
-	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper) * user.obj_damage_multiplier
+	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
 	var/damage = prob(90) ? dealt_damage : 0
 	if(!damage)
 		playsound(loc, 'sound/weapons/slashmiss.ogg', 50, TRUE, -1)
