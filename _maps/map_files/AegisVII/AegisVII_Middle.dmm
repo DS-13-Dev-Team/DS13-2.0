@@ -4978,6 +4978,7 @@
 	id = "rdrnd";
 	name = "Primary Research Shutters Control"
 	},
+/obj/item/book/manual/wiki/research_and_development,
 /turf/open/floor/iron,
 /area/station/science/lab)
 "bmo" = (
@@ -5019,6 +5020,7 @@
 	},
 /obj/structure/table/glass,
 /obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/book/manual/wiki/surgery,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/aft)
 "bmG" = (
@@ -11971,6 +11973,7 @@
 	dir = 5
 	},
 /obj/structure/table/glass,
+/obj/item/book/manual/wiki/infections,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "hdQ" = (
@@ -17884,7 +17887,7 @@
 /area/station/service/library)
 "mJK" = (
 /obj/machinery/atmospherics/components/binary/pump/off{
-	dir = 4;
+	dir = 8;
 	name = "Cold Loop Supply"
 	},
 /turf/open/floor/iron/ported/techfloor,
@@ -25391,6 +25394,7 @@
 	dir = 6
 	},
 /obj/structure/table/glass,
+/obj/item/book/manual/wiki/medicine,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "uef" = (
@@ -26075,7 +26079,7 @@
 /area/station/service/chapel)
 "uJx" = (
 /obj/machinery/atmospherics/components/binary/pump/off{
-	dir = 4;
+	dir = 8;
 	name = "Hot Loop Supply"
 	},
 /turf/open/floor/iron/ported/techfloor,
@@ -28159,6 +28163,7 @@
 	},
 /obj/structure/table/glass,
 /obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/book/manual/wiki/surgery,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/theatre)
 "wMQ" = (
