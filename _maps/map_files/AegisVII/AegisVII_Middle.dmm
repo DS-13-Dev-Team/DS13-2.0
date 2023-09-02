@@ -3943,7 +3943,7 @@
 "baZ" = (
 /obj/machinery/door/airlock/security{
 	name = "Immigration Desk";
-	req_access_txt = "1"
+	req_access_txt = "63"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment{
@@ -11534,7 +11534,9 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
-/obj/machinery/door/window/brigdoor/left/directional/west,
+/obj/machinery/door/window/brigdoor/left/directional/west{
+	req_access_txt = "63"
+	},
 /turf/open/floor/plating,
 /area/station/security/checkpoint/customs)
 "gJl" = (
@@ -15884,7 +15886,7 @@
 "kNI" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Shuttle Bay";
-	req_access_txt = "1"
+	req_access_txt = "63"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -27120,7 +27122,8 @@
 /area/station/engineering/main)
 "vMG" = (
 /obj/machinery/door/airlock/security{
-	name = "Security Checkpoint #2"
+	name = "Security Checkpoint #2";
+	req_access_txt = "63"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "miningsecprivacy";
