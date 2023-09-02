@@ -8,6 +8,8 @@
 	bloodiness = BLOOD_AMOUNT_PER_DECAL
 	beauty = -100
 	clean_type = CLEAN_TYPE_BLOOD
+	//Default value from 1.0
+	biomass = 0.2
 	var/smell_type =  /datum/component/smell/strong
 	var/should_dry = TRUE
 	var/dryname = "dried blood" //when the blood lasts long enough, it becomes dry and gets a new name

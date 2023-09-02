@@ -1,0 +1,8 @@
+author: DTraitor
+delete-after: true
+changes:
+  - rscadd: Bodyparts and blood are absorbable by marker signals now
+  - bugfix: Fixed placing of cysts (you can't place them without a wall now)
+  - bugfix: Fixed absorb ability
+  - bugfix: Fixed hunter swing ability (can't be spammed)
+  - bugfix: Necromorphs don't deal x3 damage anymore
