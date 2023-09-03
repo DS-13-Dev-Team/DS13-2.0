@@ -165,9 +165,11 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "bA" = (
-/obj/structure/railing,
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/open/openspace,
-/area/station/hallway/primary/central/aft)
+/area/station/command/bridge)
 "bD" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/random/entertainment/cigarette_pack,
@@ -288,13 +290,10 @@
 /area/station/security/detectives_office)
 "cO" = (
 /obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
 	dir = 4
 	},
-/turf/open/floor/catwalk_floor,
-/area/station/command/bridge)
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/hallway/primary/central/aft)
 "cR" = (
 /obj/machinery/firealarm/directional/west,
 /obj/machinery/disposal/bin,
@@ -313,6 +312,17 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron/dark,
 /area/station/security/brig/upper)
+"cY" = (
+/obj/effect/turf_decal/trimline/yellow/filled/warning{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/station/hallway/primary/central/aft)
 "db" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -549,7 +559,12 @@
 /area/station/security/brig/upper)
 "fg" = (
 /obj/machinery/light/directional/north,
+/obj/structure/railing,
 /turf/open/floor/deadspace/random/tech,
+/area/station/hallway/primary/central/aft)
+"fp" = (
+/obj/structure/railing/corner,
+/turf/open/floor/deadspace/random/golf_brown,
 /area/station/hallway/primary/central/aft)
 "fq" = (
 /obj/machinery/pdapainter{
@@ -615,6 +630,12 @@
 "gh" = (
 /turf/open/floor/deadspace/bathroom,
 /area/station/command/heads_quarters/captain/private)
+"gi" = (
+/obj/structure/railing,
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/station/hallway/primary/central/aft)
 "gj" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/deadspace/mono,
@@ -757,10 +778,8 @@
 /turf/open/floor/deadspace/medical,
 /area/station/security/brig/upper)
 "ks" = (
-/obj/structure/railing{
-	dir = 9
-	},
-/turf/open/openspace,
+/obj/structure/railing,
+/turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
 "kw" = (
 /obj/machinery/telecomms/relay/preset/station,
@@ -866,16 +885,6 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "me" = (
-/obj/structure/railing/corner,
-/obj/structure/railing/corner{
-	dir = 8
-	},
-/obj/structure/railing/corner{
-	dir = 4
-	},
-/obj/structure/railing/corner{
-	dir = 1
-	},
 /turf/open/floor/catwalk_floor,
 /area/station/command/bridge)
 "mf" = (
@@ -1119,9 +1128,21 @@
 /obj/item/storage/box/ids,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
+"sv" = (
+/obj/structure/railing{
+	dir = 10
+	},
+/turf/open/openspace,
+/area/station/command/bridge)
 "sE" = (
 /turf/closed/indestructible/rock,
 /area/lavaland/surface/outdoors)
+"sM" = (
+/obj/structure/railing,
+/turf/open/floor/deadspace/random/tech{
+	dir = 1
+	},
+/area/station/hallway/primary/central/aft)
 "sU" = (
 /obj/machinery/light_switch/directional/north,
 /turf/open/floor/deadspace/hardwood,
@@ -1142,6 +1163,7 @@
 /area/station/command/bridge)
 "tk" = (
 /obj/machinery/camera/autoname/directional/west,
+/obj/structure/railing,
 /turf/open/openspace,
 /area/station/command/bridge)
 "tm" = (
@@ -1152,10 +1174,10 @@
 /turf/open/floor/deadspace/grater,
 /area/station/security/brig/upper)
 "to" = (
-/obj/structure/railing{
-	dir = 6
+/obj/structure/railing/corner{
+	dir = 1
 	},
-/turf/open/openspace,
+/turf/open/floor/deadspace/random/golf_brown,
 /area/station/hallway/primary/central/aft)
 "tO" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
@@ -1241,6 +1263,12 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hop)
+"vv" = (
+/obj/structure/railing/corner{
+	dir = 8
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/hallway/primary/central/aft)
 "vx" = (
 /obj/structure/table/reinforced,
 /obj/structure/table/wood,
@@ -1264,6 +1292,12 @@
 /obj/item/stamp/law,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
+"vM" = (
+/obj/structure/railing{
+	dir = 9
+	},
+/turf/open/openspace,
+/area/station/command/bridge)
 "vU" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -1343,10 +1377,6 @@
 /turf/open/floor/deadspace/mono,
 /area/station/command/bridge)
 "xl" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 1
-	},
 /obj/machinery/light/directional/west,
 /turf/open/floor/catwalk_floor,
 /area/station/command/bridge)
@@ -1382,7 +1412,7 @@
 	dir = 4
 	},
 /turf/open/openspace,
-/area/station/hallway/primary/central/aft)
+/area/station/command/bridge)
 "xQ" = (
 /obj/machinery/light/directional/west,
 /obj/structure/reagent_dispensers/water_cooler,
@@ -1606,10 +1636,10 @@
 /area/station/maintenance/fore/greater)
 "Do" = (
 /obj/structure/railing{
-	dir = 1
+	dir = 5
 	},
 /turf/open/openspace,
-/area/station/hallway/primary/central/aft)
+/area/station/command/bridge)
 "Dp" = (
 /obj/structure/railing{
 	dir = 8
@@ -1685,6 +1715,12 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/captain/private)
+"EM" = (
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/hallway/primary/central/aft)
 "ER" = (
 /obj/structure/bed,
 /obj/item/bedsheet/captain,
@@ -1723,12 +1759,16 @@
 	},
 /area/station/hallway/primary/central/aft)
 "Fs" = (
-/obj/structure/railing,
+/obj/effect/turf_decal/trimline/yellow/filled/warning{
+	dir = 1
+	},
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/open/floor/catwalk_floor,
-/area/station/command/bridge)
+/turf/open/floor/deadspace/random/tech{
+	dir = 1
+	},
+/area/station/hallway/primary/central/aft)
 "Ft" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/deadspace/random/tech,
@@ -1803,11 +1843,9 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "GP" = (
-/obj/structure/railing{
-	dir = 5
-	},
+/obj/structure/railing,
 /turf/open/openspace,
-/area/station/hallway/primary/central/aft)
+/area/station/command/bridge)
 "GY" = (
 /obj/structure/window/reinforced/tinted/frosted,
 /obj/machinery/shower{
@@ -1934,6 +1972,9 @@
 	dir = 1
 	},
 /obj/structure/cable/multilayer/multiz,
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/open/floor/deadspace/random/tech,
 /area/station/hallway/primary/central/aft)
 "Jv" = (
@@ -2071,7 +2112,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/openspace,
+/turf/open/floor/deadspace/random/golf_brown,
 /area/station/hallway/primary/central/aft)
 "MQ" = (
 /obj/machinery/disposal/bin,
@@ -2196,7 +2237,9 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/security/brig/upper)
 "Qh" = (
-/obj/machinery/camera/autoname/directional/north,
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/open/openspace,
 /area/station/command/bridge)
 "Ql" = (
@@ -2373,15 +2416,14 @@
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hos)
 "Vh" = (
-/obj/machinery/light/directional/north,
-/obj/structure/railing{
-	dir = 8
+/obj/effect/turf_decal/trimline/yellow/filled/warning{
+	dir = 1
 	},
 /obj/structure/railing{
-	dir = 4
+	dir = 1
 	},
-/turf/open/floor/catwalk_floor,
-/area/station/command/bridge)
+/turf/open/floor/deadspace/random/slides,
+/area/station/hallway/primary/central/aft)
 "Vp" = (
 /obj/item/megaphone,
 /obj/structure/table/wood,
@@ -2534,10 +2576,10 @@
 /area/station/hallway/primary/central/aft)
 "Zg" = (
 /obj/structure/railing{
-	dir = 10
+	dir = 6
 	},
 /turf/open/openspace,
-/area/station/hallway/primary/central/aft)
+/area/station/command/bridge)
 "Zl" = (
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
@@ -10201,7 +10243,7 @@ YF
 YF
 tk
 xl
-YF
+bA
 YF
 YF
 YF
@@ -10401,9 +10443,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -10603,9 +10645,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -10805,9 +10847,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -11007,9 +11049,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -11209,9 +11251,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -11405,21 +11447,21 @@ sE
 sE
 sE
 Sj
-YF
-YF
-YF
-YF
-YF
-YF
-YF
-Fs
-YF
-YF
-YF
-YF
-YF
-YF
-YF
+xM
+xM
+xM
+xM
+xM
+xM
+Zg
+me
+Do
+xM
+xM
+xM
+xM
+xM
+xM
 JJ
 oK
 NN
@@ -11607,21 +11649,21 @@ sE
 sE
 sE
 Sj
-Vh
-cO
-cO
-cO
-cO
-cO
-cO
 me
-cO
-cO
-cO
-cO
-cO
-cO
-cO
+me
+me
+me
+me
+me
+me
+me
+me
+me
+me
+me
+me
+me
+me
 at
 OM
 mO
@@ -11810,20 +11852,20 @@ sE
 sE
 Sj
 Qh
-YF
-YF
-YF
-YF
-YF
-YF
-Fs
-YF
-YF
-YF
-YF
-YF
-YF
-YF
+Qh
+Qh
+Qh
+Qh
+Qh
+sv
+me
+vM
+Qh
+Qh
+Qh
+Qh
+Qh
+Qh
 JJ
 zy
 dK
@@ -12017,9 +12059,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -12219,9 +12261,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -12421,9 +12463,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -12623,9 +12665,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -12825,9 +12867,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -13027,9 +13069,9 @@ YF
 YF
 YF
 YF
-YF
-Fs
-YF
+GP
+me
+bA
 YF
 YF
 YF
@@ -14030,14 +14072,14 @@ sE
 sE
 sE
 YA
+fp
+cO
+cO
 IK
 IK
-IK
-IK
-IK
-IK
-IK
-IK
+cO
+cO
+EM
 FQ
 YA
 bX
@@ -14232,14 +14274,14 @@ sE
 sE
 sE
 YA
-Zl
 ks
-MD
+Hi
+Hi
 uZ
 NL
-MD
-Zg
-uZ
+Hi
+Hi
+Vh
 Zl
 YA
 YA
@@ -14434,14 +14476,14 @@ sE
 sE
 sE
 YA
-Wu
-Do
+sM
+Hi
 Hi
 dn
 Tg
 Hi
-bA
-dn
+Hi
+Fs
 Wu
 mf
 AQ
@@ -14637,12 +14679,12 @@ sE
 sE
 YA
 fg
-Do
+Hi
 Hi
 GC
 Ft
 Hi
-bA
+Hi
 Jt
 af
 wq
@@ -14838,14 +14880,14 @@ sE
 sE
 sE
 YA
-mf
-GP
-xM
+gi
+Hi
+Hi
 Aj
 id
-xM
-to
-Aj
+Hi
+Hi
+cY
 mf
 Zl
 Zl
@@ -15040,14 +15082,14 @@ sE
 sE
 sE
 YA
+vv
+MD
+MD
 IK
 IK
-IK
-IK
-IK
-IK
-IK
-IK
+MD
+MD
+to
 IK
 Lb
 Lb
