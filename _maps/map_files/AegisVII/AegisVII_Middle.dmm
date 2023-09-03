@@ -7829,10 +7829,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/science/robotics/lab)
-"doa" = (
-/obj/machinery/atmospherics/pipe/smart/manifold/green,
-/turf/open/floor/iron/ported/techfloor_grid,
-/area/station/engineering/supermatter/room)
 "doA" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/rectangles,
@@ -41493,7 +41489,7 @@ cKs
 wgc
 oin
 rjb
-doa
+aHm
 abq
 eYn
 pjk
