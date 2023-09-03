@@ -925,16 +925,6 @@
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
-"aoT" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/effect/turf_decal/delivery,
-/turf/open/floor/iron,
-/area/station/cargo/miningoffice)
 "aoU" = (
 /turf/open/floor/iron/dark/side,
 /area/station/hallway/primary/fore)
@@ -1368,20 +1358,6 @@
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron/ported/lino,
 /area/station/service/library)
-"auq" = (
-/obj/effect/turf_decal/trimline/purple/filled/line,
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/turf_decal/delivery,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/station/science/lobby)
 "auz" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -6992,20 +6968,6 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/floor/grass,
 /area/station/hallway/primary/port)
-"cAt" = (
-/obj/effect/turf_decal/trimline/blue/filled/line,
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/turf_decal/delivery,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/station/medical/medbay/lobby)
 "cAz" = (
 /obj/machinery/atmospherics/components/binary/circulator{
 	dir = 1
@@ -9070,9 +9032,6 @@
 /area/station/service/hydroponics)
 "evr" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/loading_area{
-	dir = 1
-	},
 /turf/open/floor/iron/norn,
 /area/station/service/hydroponics)
 "evw" = (
@@ -13775,14 +13734,6 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron,
 /area/station/engineering/main)
-"iNh" = (
-/obj/effect/turf_decal/delivery,
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/open/floor/deadspace/random/golf_brown,
-/area/station/hallway/primary/central)
 "iNs" = (
 /obj/structure/disposalpipe/segment{
 	dir = 10
@@ -14347,16 +14298,6 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
-"jnr" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/effect/turf_decal/delivery,
-/turf/open/floor/iron,
-/area/station/cargo/lobby)
 "jnF" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/box,
@@ -17566,13 +17507,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "mqL" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/turf_decal/delivery,
 /turf/open/floor/iron/dark/side,
 /area/station/service/hydroponics)
 "mqN" = (
@@ -33458,7 +33392,7 @@ wYh
 gTF
 xNh
 xNh
-rMS
+jJp
 pBu
 ybM
 ycI
@@ -33862,7 +33796,7 @@ jMz
 uoi
 rxO
 xNh
-jJp
+rMS
 neB
 ybM
 sEu
@@ -38513,7 +38447,7 @@ umg
 auY
 gXS
 sMU
-iNh
+tZl
 tZl
 aGn
 aGn
@@ -44366,7 +44300,7 @@ aoU
 bgS
 jwG
 dvT
-cAt
+bve
 bhY
 aIJ
 trl
@@ -45376,7 +45310,7 @@ aoU
 rDh
 hWi
 qaU
-auq
+cri
 qeA
 adX
 iUD
@@ -53257,7 +53191,7 @@ gOZ
 eLz
 iHR
 aGN
-jnr
+iHR
 wyZ
 baR
 baU
@@ -55070,7 +55004,7 @@ pyi
 weF
 nml
 pyi
-aoT
+pyi
 gDN
 hRh
 lqu
