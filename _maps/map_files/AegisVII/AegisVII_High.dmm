@@ -2352,6 +2352,13 @@
 /obj/structure/table/wood,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
+"TF" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/camera/autoname/directional/east,
+/turf/open/openspace,
+/area/station/command/bridge)
 "TG" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -13068,7 +13075,7 @@ YF
 YF
 GP
 me
-bA
+TF
 YF
 YF
 YF

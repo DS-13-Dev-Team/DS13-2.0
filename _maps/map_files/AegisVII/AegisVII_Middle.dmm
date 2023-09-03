@@ -7342,7 +7342,6 @@
 	dir = 6
 	},
 /obj/structure/rack,
-/obj/effect/spawner/random/contraband/armory,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit)
 "cQK" = (
@@ -26113,6 +26112,7 @@
 /obj/effect/spawner/random/maintenance/three,
 /obj/effect/spawner/random/contraband/armory,
 /obj/machinery/light/directional/north,
+/obj/effect/spawner/random/contraband/armory,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
