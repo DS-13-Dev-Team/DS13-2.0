@@ -1358,7 +1358,10 @@
 /area/station/security/office)
 "wO" = (
 /obj/structure/bed/dogbed/ian,
-/mob/living/simple_animal/pet/fox/renault,
+/mob/living/simple_animal/pet/fox{
+	name = "Sammy";
+	real_name = "Sammy"
+	},
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/captain/private)
 "xk" = (
