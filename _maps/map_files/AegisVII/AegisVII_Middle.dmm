@@ -7,11 +7,6 @@
 	dir = 8
 	},
 /area/ruin/powered/bathhouse)
-"aau" = (
-/obj/structure/cable,
-/obj/effect/spawner/structure/window/reinforced/tinted/grille,
-/turf/open/floor/plating,
-/area/station/engineering/engine_smes)
 "aav" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -1085,7 +1080,6 @@
 	desc = "An old medical bed, just waiting for replacement with something up to date.";
 	name = "medical bed"
 	},
-/obj/machinery/defibrillator_mount/directional/north,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "aqX" = (
@@ -7642,12 +7636,10 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/commons/dorms)
 "dcM" = (
-/obj/effect/turf_decal/stripes/corner{
-	dir = 8
-	},
-/obj/machinery/light_switch/directional/west,
-/turf/open/floor/iron,
-/area/station/engineering/main)
+/obj/structure/cable,
+/obj/effect/spawner/structure/window/reinforced/tinted/grille,
+/turf/open/floor/plating,
+/area/station/engineering/engine_smes)
 "dcU" = (
 /turf/open/floor/iron,
 /area/station/engineering/storage_shared)
@@ -13304,6 +13296,13 @@
 /obj/structure/chair/sofa/corp/right,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
+"inI" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/obj/machinery/light_switch/directional/west,
+/turf/open/floor/iron,
+/area/station/engineering/main)
 "inL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -23092,7 +23091,6 @@
 /area/station/hallway/primary/starboard)
 "rPD" = (
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/obj/machinery/defibrillator_mount/directional/south,
 /obj/structure/bed/pod{
 	desc = "An old medical bed, just waiting for replacement with something up to date.";
 	name = "medical bed"
@@ -43101,7 +43099,7 @@ apG
 apG
 apG
 raZ
-aau
+dcM
 raZ
 raZ
 rFq
@@ -43305,7 +43303,7 @@ apG
 gSl
 hyT
 vxy
-dcM
+inI
 mqw
 mFt
 cfj
