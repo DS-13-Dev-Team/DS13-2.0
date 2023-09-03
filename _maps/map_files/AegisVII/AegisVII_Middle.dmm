@@ -11026,10 +11026,6 @@
 	},
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
-"gjT" = (
-/obj/machinery/firealarm/directional/west,
-/turf/open/floor/deadspace/random/maint_left,
-/area/station/commons/dorms/barracks)
 "gkz" = (
 /turf/closed/wall/r_wall,
 /area/station/service/kitchen/coldroom)
@@ -35252,7 +35248,7 @@ pSk
 pSk
 pSk
 pSk
-gjT
+pSk
 pSk
 pSk
 rRK
