@@ -71,6 +71,9 @@
 		"prisoner": {
 			"total_positions": 0
 		},
+		"lawyer": {
+			"total_positions": 0
+		},
 		"virologist": {
 			"total_positions": 0
 		},
