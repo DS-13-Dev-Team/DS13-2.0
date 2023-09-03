@@ -995,9 +995,6 @@
 /obj/effect/turf_decal/arrows/red{
 	dir = 1
 	},
-/mob/living/simple_animal/bot/mulebot/cargobot{
-	dir = 1
-	},
 /turf/open/floor/deadspace/mono,
 /area/station/cargo)
 "hG" = (
@@ -4920,9 +4917,6 @@
 "XQ" = (
 /obj/effect/turf_decal/bot_white,
 /obj/effect/turf_decal/arrows/red{
-	dir = 1
-	},
-/mob/living/simple_animal/bot/mulebot/cargobot{
 	dir = 1
 	},
 /turf/open/floor/deadspace/mono,
