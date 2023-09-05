@@ -2638,10 +2638,16 @@
 /obj/structure/rack,
 /obj/item/ammo_box/magazine/ds12g,
 /obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
 /obj/item/ammo_box/magazine/ds12g/slug,
 /obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/pulverizer,
-/obj/item/ammo_box/magazine/ds12g/pulverizer,
+/obj/item/ammo_box/magazine/ds12g/slug,
+/obj/item/ammo_box/magazine/ds12g/slug,
+/obj/item/ammo_box/magazine/ds12g/slug,
+/obj/item/ammo_box/magazine/ds12g/slug,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
@@ -15345,7 +15351,7 @@
 "kpW" = (
 /obj/machinery/door/airlock/security{
 	name = "P-Sec Maintenance";
-	dir = 4
+	dir = 1
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -16757,12 +16763,15 @@
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse/hv,
 /obj/item/ammo_box/magazine/pulse/hv,
 /obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/df,
-/obj/item/ammo_box/magazine/pulse/df,
-/obj/item/ammo_box/magazine/pulse/df,
+/obj/item/ammo_box/magazine/pulse/hv,
+/obj/item/ammo_box/magazine/pulse/hv,
+/obj/item/ammo_box/magazine/pulse/hv,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
@@ -19088,6 +19097,9 @@
 /obj/item/ammo_box/magazine/divet/rb,
 /obj/item/ammo_box/magazine/divet/rb,
 /obj/structure/window/reinforced/spawner/north,
+/obj/item/ammo_box/magazine/divet/rb,
+/obj/item/ammo_box/magazine/divet/rb,
+/obj/item/ammo_box/magazine/divet/rb,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "nTO" = (
@@ -26576,15 +26588,18 @@
 /area/station/science/robotics/lab)
 "vqm" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/divet/ap,
-/obj/item/ammo_box/magazine/divet/ap,
-/obj/item/ammo_box/magazine/divet/ap,
-/obj/item/ammo_box/magazine/divet/hp,
-/obj/item/ammo_box/magazine/divet/hp,
-/obj/item/ammo_box/magazine/divet/hp,
 /obj/machinery/camera/motion/directional/west{
 	c_tag = "Armory - Internal"
 	},
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet/ap,
+/obj/item/ammo_box/magazine/divet/ap,
+/obj/item/ammo_box/magazine/divet/ap,
+/obj/item/ammo_box/magazine/divet/hp,
+/obj/item/ammo_box/magazine/divet/hp,
+/obj/item/ammo_box/magazine/divet/hp,
 /obj/item/ammo_box/magazine/divet/extended,
 /obj/item/ammo_box/magazine/divet/extended,
 /obj/item/ammo_box/magazine/divet/extended,
@@ -28564,6 +28579,9 @@
 /obj/structure/rack,
 /obj/structure/window/reinforced/spawner/north,
 /obj/structure/window/reinforced/spawner/east,
+/obj/item/ammo_box/magazine/ds12g/rb,
+/obj/item/ammo_box/magazine/ds12g/rb,
+/obj/item/ammo_box/magazine/ds12g/rb,
 /obj/item/ammo_box/magazine/ds12g/rb,
 /obj/item/ammo_box/magazine/ds12g/rb,
 /obj/item/ammo_box/magazine/ds12g/rb,
@@ -35776,7 +35794,7 @@ btg
 btg
 btg
 btg
-qjh
+aZw
 btg
 btg
 btg
@@ -35784,7 +35802,7 @@ btg
 btg
 btg
 btg
-qjh
+aZw
 btg
 btg
 btg
@@ -35796,7 +35814,7 @@ btg
 btg
 btg
 btg
-qjh
+aZw
 btg
 btg
 btg
@@ -35978,7 +35996,7 @@ eZZ
 pzo
 eZZ
 eZZ
-aZw
+bLz
 pzo
 eZZ
 eZZ
@@ -35986,7 +36004,7 @@ eZZ
 pzo
 eZZ
 eZZ
-aZw
+bLz
 pzo
 eZZ
 ksi
@@ -35998,7 +36016,7 @@ eZZ
 eZZ
 eZZ
 pzo
-aZw
+bLz
 eZZ
 eZZ
 pzo

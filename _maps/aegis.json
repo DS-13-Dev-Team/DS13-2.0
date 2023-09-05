@@ -1,4 +1,5 @@
 {
+	"allow_custom_shuttles": false,
     "version": 1,
     "map_name": "Aegis VII",
     "map_path": "map_files/AegisVII",
