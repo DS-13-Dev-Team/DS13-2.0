@@ -133,10 +133,6 @@
 	dir = 8
 	},
 /area/shuttle/abandoned)
-"acA" = (
-/obj/effect/landmark/start/medical_doctor,
-/turf/open/floor/iron/white,
-/area/station/medical/surgery/theatre)
 "acE" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -1086,9 +1082,9 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/service/library)
 "arf" = (
-/obj/machinery/light/directional/east,
-/turf/open/floor/plating,
-/area/misc/testroom)
+/obj/effect/landmark/start/medical_doctor,
+/turf/open/floor/iron/white,
+/area/station/medical/surgery/theatre)
 "arj" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Medbay Maintenance";
@@ -2203,6 +2199,9 @@
 /area/ruin/powered/bathhouse)
 "aGw" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/break_room)
 "aGA" = (
@@ -3044,12 +3043,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
-/obj/machinery/requests_console/directional/east{
-	announcementConsole = 1;
-	department = "Medical Director's Desk";
-	departmentType = 5;
-	name = "Medical Director's Request Console"
-	},
 /obj/machinery/camera{
 	c_tag = "Medical Director's Office";
 	dir = 6;
@@ -3057,6 +3050,7 @@
 	},
 /obj/machinery/telephone/command,
 /obj/machinery/power/data_terminal,
+/obj/machinery/light/cold/directional/east,
 /turf/open/floor/carpet/blue,
 /area/station/command/heads_quarters/cmo)
 "aPG" = (
@@ -3991,7 +3985,7 @@
 "bcR" = (
 /obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/area/station/medical/treatment_center)
 "bcS" = (
 /obj/machinery/cryopod,
 /obj/effect/landmark/latejoin,
@@ -4871,6 +4865,7 @@
 "bmF" = (
 /obj/machinery/disposal/bin,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/iron/dark,
 /area/station/medical/break_room)
 "bmG" = (
@@ -5252,6 +5247,12 @@
 "bpG" = (
 /obj/machinery/modular_computer/console/preset/command{
 	dir = 8
+	},
+/obj/machinery/requests_console/directional/east{
+	announcementConsole = 1;
+	department = "Medical Director's Desk";
+	departmentType = 5;
+	name = "Medical Director's Request Console"
 	},
 /turf/open/floor/carpet/blue,
 /area/station/command/heads_quarters/cmo)
@@ -10857,6 +10858,13 @@
 /obj/structure/window/reinforced/spawner/north,
 /turf/open/floor/deadspace/random/golf_gray,
 /area/lavaland/surface/outdoors)
+"grh" = (
+/obj/effect/turf_decal/tile/neutral/opposingcorners,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/station/medical/break_room)
 "gro" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -10878,6 +10886,16 @@
 	dir = 8
 	},
 /area/station/security/courtroom)
+"grW" = (
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "gsM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -11480,6 +11498,13 @@
 	},
 /turf/open/floor/plating,
 /area/station/engineering/engine_smes)
+"gWb" = (
+/obj/structure/disposalpipe/junction/flip{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "gWf" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -12096,7 +12121,7 @@
 "huQ" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/misc/testroom)
 "huW" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/food/condiment/peppermill{
@@ -12251,9 +12276,12 @@
 /turf/open/floor/plating,
 /area/station/science/robotics/mechbay)
 "hBA" = (
-/obj/machinery/light/directional/west,
-/turf/open/floor/plating,
-/area/misc/testroom)
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 4
+	},
+/obj/effect/landmark/start/medical_doctor,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "hCj" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/ported/lino,
@@ -13436,10 +13464,6 @@
 /obj/item/reagent_containers/syringe,
 /turf/open/floor/deadspace/mono,
 /area/station/security/medical)
-"iOj" = (
-/obj/effect/landmark/start/medical_doctor,
-/turf/open/floor/iron/white,
-/area/station/medical/treatment_center)
 "iOy" = (
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
@@ -13957,6 +13981,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/trimline/blue/filled/corner,
+/obj/machinery/light,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "jnF" = (
@@ -21388,6 +21413,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
 /area/station/science/misc_lab/range)
+"qGd" = (
+/obj/effect/landmark/start/medical_doctor,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "qGB" = (
 /obj/machinery/telecomms/message_server/preset,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -24292,6 +24321,9 @@
 	req_access_txt = "5"
 	},
 /obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/break_room)
 "tLO" = (
@@ -24772,7 +24804,6 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "uks" = (
-/obj/machinery/light/cold/directional/west,
 /obj/item/kirbyplants{
 	icon_state = "plant-10"
 	},
@@ -25116,13 +25147,6 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/shuttle/pod_3)
-"uAK" = (
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 4
-	},
-/obj/effect/landmark/start/medical_doctor,
-/turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
 "uAT" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -25684,6 +25708,13 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/ruin/powered/bathhouse)
+"vdC" = (
+/obj/effect/turf_decal/tile/neutral/opposingcorners,
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/turf/open/floor/iron/dark,
+/area/station/medical/break_room)
 "vdL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 10
@@ -25964,6 +25995,10 @@
 "vtx" = (
 /obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/deadspace/random/slides,
+/area/misc/testroom)
+"vux" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating,
 /area/misc/testroom)
 "vuE" = (
 /obj/structure/chair/sofa/bench/left{
@@ -26553,6 +26588,10 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
+"vUO" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating,
+/area/lavaland/surface/outdoors)
 "vVo" = (
 /obj/structure/rack,
 /obj/item/grenade/c4,
@@ -26768,6 +26807,11 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/red,
 /area/station/security/brig)
+"wes" = (
+/obj/effect/turf_decal/tile/neutral/opposingcorners,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/iron/dark,
+/area/station/medical/break_room)
 "weD" = (
 /obj/structure/table,
 /obj/item/storage/bag/ore,
@@ -28883,6 +28927,14 @@
 "yfI" = (
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
+"yfW" = (
+/obj/effect/turf_decal/tile/neutral/opposingcorners,
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
+/turf/open/floor/iron/dark,
+/area/station/medical/break_room)
 "ygT" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/deadspace/heavy,
@@ -41270,12 +41322,12 @@ uGt
 uGt
 uGt
 lVB
-bcR
+qGd
 slx
 dvP
 mMz
 dXX
-iOj
+bcR
 lfl
 dAw
 aDf
@@ -42686,7 +42738,7 @@ tPs
 tPs
 cdk
 cdk
-uAK
+hBA
 cdk
 cdk
 cdk
@@ -42912,7 +42964,7 @@ mof
 hph
 aLn
 mEG
-aGw
+grh
 try
 cLH
 czI
@@ -43114,9 +43166,9 @@ vUp
 jmi
 aLn
 dmY
-aGw
-aGw
-qLV
+vdC
+wes
+yfW
 qLV
 qLV
 hAq
@@ -43520,7 +43572,7 @@ bno
 bno
 bno
 bno
-uCu
+grW
 bno
 bno
 omE
@@ -43722,7 +43774,7 @@ jdJ
 jdJ
 jdJ
 jdJ
-jdJ
+gWb
 kVK
 qGE
 gqy
@@ -44523,7 +44575,7 @@ qhb
 nos
 vGD
 bnM
-acA
+arf
 bnM
 fCs
 roB
@@ -48856,23 +48908,23 @@ apG
 lmJ
 aft
 bfE
-hBA
+huQ
 bfE
 bfE
 bfE
 bfE
-hBA
+huQ
 bfE
 bfE
 bfE
 bfE
 bfE
-hBA
+huQ
 bfE
 bfE
 bfE
 bfE
-hBA
+huQ
 bfE
 bfE
 hwE
@@ -51036,26 +51088,26 @@ mlO
 mlO
 mlO
 apG
-huQ
+vUO
 abg
 abg
 abg
 abg
-huQ
+vUO
 abg
 abg
 abg
 abg
-huQ
+vUO
 abg
 abg
 abg
-huQ
+vUO
 abg
 abg
 abg
 abg
-huQ
+vUO
 huo
 apG
 apG
@@ -51684,23 +51736,23 @@ apG
 lmJ
 aft
 bfE
-arf
+vux
 bfE
 bfE
 bfE
 bfE
-arf
+vux
 bfE
 bfE
 bfE
 bfE
 bfE
-arf
+vux
 bfE
 bfE
 bfE
 bfE
-arf
+vux
 bfE
 uue
 wqU
