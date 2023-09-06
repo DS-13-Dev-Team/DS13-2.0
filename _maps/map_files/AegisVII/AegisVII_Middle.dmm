@@ -1042,6 +1042,7 @@
 /area/station/medical/medbay/central)
 "aqG" = (
 /obj/structure/closet/crate/trashcart/laundry,
+/obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/plating,
 /area/station/commons/dorms/cryo)
 "aqH" = (
@@ -6529,7 +6530,9 @@
 /area/station/hallway/secondary/exit)
 "clE" = (
 /obj/machinery/light/directional/north,
-/obj/structure/closet/emcloset,
+/obj/structure/rack,
+/obj/item/clothing/under/costume/lobster,
+/obj/item/clothing/head/lobsterhat,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "clO" = (
@@ -11297,7 +11300,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "gNd" = (
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
@@ -28965,7 +28967,9 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "ygT" = (
-/obj/structure/closet/firecloset,
+/obj/structure/rack,
+/obj/item/clothing/under/costume/pirate,
+/obj/effect/spawner/random/clothing/pirate_or_bandana,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "yhk" = (
@@ -31601,7 +31605,7 @@ apG
 foA
 kZM
 bdE
-foA
+bdE
 aPI
 rVR
 iYq
@@ -34833,7 +34837,7 @@ apG
 foA
 kZM
 bdE
-foA
+bdE
 gNd
 rVR
 fcj
