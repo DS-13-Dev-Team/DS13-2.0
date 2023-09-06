@@ -100,6 +100,7 @@
 	new /obj/item/radio/headset/headset_sec(src)
 	new /obj/item/radio/headset/headset_sec/alt(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
+	new /obj/item/storage/belt/security/full(src)
 	new /obj/item/flashlight/seclite(src)
 
 /obj/structure/closet/secure_closet/ds/detective
@@ -117,6 +118,7 @@
 	new /obj/item/storage/box/evidence(src)
 	new /obj/item/radio/headset/headset_sec(src)
 	new /obj/item/detective_scanner(src)
+	new /obj/item/storage/belt/security(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/holosign_creator/security(src)
 	new /obj/item/reagent_containers/spray/pepper(src)
