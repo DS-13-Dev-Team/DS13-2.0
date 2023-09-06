@@ -8679,7 +8679,9 @@
 "enH" = (
 /obj/structure/bed/dogbed/runtime,
 /obj/item/toy/cattoy,
-/mob/living/simple_animal/pet/cat/runtime,
+/mob/living/simple_animal/pet/cat/space{
+	name = "Kapu"
+	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/cmo)
 "enN" = (
