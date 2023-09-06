@@ -3033,7 +3033,6 @@
 /area/misc/testroom)
 "aPo" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/camera/directional/north,
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark/side{
 	dir = 1
@@ -8186,9 +8185,7 @@
 "dSq" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
-/turf/open/floor/iron/dark/corner{
-	dir = 8
-	},
+/turf/open/floor/iron/dark/side,
 /area/station/hallway/primary/fore)
 "dSy" = (
 /obj/structure/table,
@@ -19106,6 +19103,10 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
 /area/ruin/powered/bathhouse)
+"orm" = (
+/obj/machinery/camera/directional/south,
+/turf/open/floor/iron/dark/side,
+/area/station/hallway/primary/fore)
 "ors" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/ported/lino,
@@ -26996,7 +26997,10 @@
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
 "wnM" = (
-/mob/living/simple_animal/bot/cleanbot/janibot,
+/mob/living/simple_animal/bot/cleanbot/janibot{
+	name = "Doctor Scrubs";
+	real_name = "Doctor Scrubs"
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "woo" = (
@@ -27244,8 +27248,9 @@
 /area/station/service/hydroponics)
 "wBh" = (
 /obj/effect/decal/cleanable/generic,
-/obj/machinery/camera/directional/south,
-/turf/open/floor/iron/dark/side,
+/turf/open/floor/iron/dark/corner{
+	dir = 8
+	},
 /area/station/hallway/primary/fore)
 "wBj" = (
 /obj/structure/disposalpipe/segment{
@@ -41951,7 +41956,7 @@ sjZ
 sjZ
 sjZ
 juP
-aoU
+orm
 uGt
 fkm
 aKJ
@@ -42142,7 +42147,7 @@ alC
 alC
 alC
 hae
-boM
+urP
 juP
 yjV
 lOr
@@ -42355,7 +42360,7 @@ olq
 olq
 boM
 juP
-yjV
+aoU
 uGt
 uGt
 uGt
@@ -42759,7 +42764,7 @@ aAW
 olq
 afY
 dAx
-aoU
+yjV
 pPh
 eUx
 dvT
