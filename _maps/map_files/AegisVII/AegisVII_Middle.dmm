@@ -9965,7 +9965,6 @@
 /obj/structure/table/glass,
 /obj/item/hemostat,
 /obj/effect/turf_decal/tile/blue,
-/obj/machinery/light/cold/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/theatre)
 "fCH" = (
@@ -11267,10 +11266,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/maintenance/department/engine)
-"gKS" = (
-/obj/structure/closet/athletic_mixed,
-/turf/open/floor/deadspace/heavy,
-/area/station/commons/locker)
 "gKV" = (
 /turf/closed/wall/r_wall,
 /area/station/science/misc_lab/range)
@@ -16351,7 +16346,6 @@
 /area/station/service/hydroponics)
 "lBQ" = (
 /obj/structure/table/glass,
-/obj/machinery/light/cold/directional/west,
 /obj/machinery/camera/directional/south{
 	c_tag = "Medbay Surgery Suite A";
 	network = list("ss13","medbay")
@@ -16862,6 +16856,22 @@
 /obj/structure/window/reinforced/spawner/north,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
+"mdc" = (
+/obj/machinery/button/door/directional/east{
+	id = "Cabin11";
+	name = "Cabin Bolt Control";
+	normaldoorcontrol = 1;
+	specialfunctions = 4
+	},
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/obj/machinery/light_switch/directional/east{
+	pixel_y = 9
+	},
+/turf/open/floor/iron/ported/lino,
+/area/station/commons/dorms/barracks)
 "mdw" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 5
@@ -21551,7 +21561,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/obj/machinery/light/cold/directional/east,
+/obj/machinery/light_switch/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery)
 "qMZ" = (
@@ -21875,6 +21885,22 @@
 	},
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
+"rjG" = (
+/obj/machinery/button/door/directional/west{
+	id = "Cabin8";
+	name = "Cabin Bolt Control";
+	normaldoorcontrol = 1;
+	specialfunctions = 4
+	},
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/obj/machinery/light_switch/directional/west{
+	pixel_y = 9
+	},
+/turf/open/floor/iron/ported/lino,
+/area/station/commons/dorms)
 "rko" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /obj/structure/cable,
@@ -23829,21 +23855,9 @@
 	},
 /area/station/science/lab)
 "tlp" = (
-/obj/machinery/button/door/directional/west{
-	id = "Cabin8";
-	name = "Cabin Bolt Control";
-	normaldoorcontrol = 1;
-	specialfunctions = 4
-	},
-/obj/machinery/disposal/bin,
-/obj/structure/disposalpipe/trunk{
-	dir = 2
-	},
-/obj/machinery/light_switch/directional/west{
-	pixel_y = 9
-	},
-/turf/open/floor/iron/ported/lino,
-/area/station/commons/dorms)
+/obj/structure/closet/athletic_mixed,
+/turf/open/floor/deadspace/heavy,
+/area/station/commons/locker)
 "tlI" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark/side{
@@ -25018,22 +25032,6 @@
 /obj/structure/cable,
 /turf/open/floor/stone,
 /area/lavaland/surface/outdoors)
-"utv" = (
-/obj/machinery/button/door/directional/east{
-	id = "Cabin11";
-	name = "Cabin Bolt Control";
-	normaldoorcontrol = 1;
-	specialfunctions = 4
-	},
-/obj/machinery/disposal/bin,
-/obj/structure/disposalpipe/trunk{
-	dir = 2
-	},
-/obj/machinery/light_switch/directional/east{
-	pixel_y = 9
-	},
-/turf/open/floor/iron/ported/lino,
-/area/station/commons/dorms/barracks)
 "utF" = (
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
@@ -26619,8 +26617,8 @@
 /area/mine/storage)
 "vUp" = (
 /obj/structure/table/glass,
-/obj/machinery/light_switch/directional/east,
 /obj/item/cautery,
+/obj/machinery/light/cold/directional/east,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery)
 "vUD" = (
@@ -28452,7 +28450,7 @@
 /obj/machinery/computer/med_data{
 	dir = 4
 	},
-/obj/machinery/airalarm/directional/west,
+/obj/machinery/light/cold/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery)
 "xGA" = (
@@ -32488,7 +32486,7 @@ alw
 cry
 xSe
 aJO
-tlp
+rjG
 vkE
 atd
 xSe
@@ -33079,7 +33077,7 @@ aKi
 oJy
 aKe
 xSe
-gKS
+tlp
 adf
 nkn
 adf
@@ -34096,7 +34094,7 @@ adf
 hoM
 hud
 jLZ
-utv
+mdc
 dic
 mHg
 hud
