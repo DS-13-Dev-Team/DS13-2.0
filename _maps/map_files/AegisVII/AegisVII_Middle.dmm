@@ -6146,10 +6146,9 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/starboard/fore)
 "bRX" = (
-/obj/effect/spawner/random/vending/snackvend,
-/turf/open/floor/deadspace/random/slides{
-	dir = 4
-	},
+/obj/structure/cable,
+/mob/living/simple_animal/mouse,
+/turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/powered/bathhouse)
 "bSa" = (
 /obj/machinery/firealarm/directional/north,
@@ -13480,7 +13479,6 @@
 /turf/open/floor/iron/norn,
 /area/station/hallway/primary/starboard)
 "iQw" = (
-/mob/living/simple_animal/mouse,
 /obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
@@ -33397,7 +33395,7 @@ bBG
 wmA
 lnP
 fKM
-bRX
+iQw
 siW
 mlO
 mlO
@@ -33598,7 +33596,7 @@ aHx
 aHx
 siW
 woo
-fKM
+bRX
 iQw
 siW
 mlO
@@ -34407,7 +34405,7 @@ siW
 siW
 xnn
 fKM
-bRX
+iQw
 siW
 mlO
 mlO
@@ -35215,7 +35213,7 @@ bsc
 siW
 tCr
 fKM
-bRX
+iQw
 siW
 mlO
 mlO
@@ -35417,7 +35415,7 @@ gEZ
 siW
 woo
 nSm
-bRX
+iQw
 siW
 mlO
 mlO

@@ -131,7 +131,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/effect/spawner/random/deadspace/rig/scaf,
+/obj/effect/spawner/random/clothing/mafia_outfit,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
 "ba" = (
@@ -1885,7 +1885,7 @@
 	pixel_y = 2
 	},
 /obj/structure/window/reinforced,
-/obj/effect/spawner/random/deadspace/rig,
+/obj/effect/spawner/random/clothing/syndie,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
 "Ib" = (
