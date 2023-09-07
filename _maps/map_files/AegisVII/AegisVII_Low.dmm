@@ -1486,7 +1486,7 @@
 /area/station/maintenance/fore/lesser)
 "lu" = (
 /obj/structure/grille,
-/turf/closed/mineral/random,
+/turf/closed/mineral/random/aegis,
 /area/lavaland/surface/outdoors)
 "lw" = (
 /obj/structure/rack,
@@ -2828,7 +2828,7 @@
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "yy" = (
-/turf/closed/mineral/random,
+/turf/closed/mineral/random/aegis,
 /area/station/maintenance/port/lesser)
 "yz" = (
 /obj/structure/window/reinforced/spawner,
@@ -2856,7 +2856,7 @@
 /area/station/maintenance/fore/lesser)
 "yE" = (
 /obj/structure/barricade/wooden,
-/turf/closed/mineral/random,
+/turf/closed/mineral/random/aegis,
 /area/lavaland/surface/outdoors)
 "yF" = (
 /obj/structure/chair/office{
@@ -2865,7 +2865,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "yG" = (
-/turf/closed/mineral/random,
+/turf/closed/mineral/random/aegis,
 /area/lavaland/surface/outdoors)
 "yJ" = (
 /obj/structure/table,
@@ -39822,7 +39822,7 @@ bf
 bf
 yG
 yG
-bf
+tT
 zp
 yA
 zp
@@ -40024,7 +40024,7 @@ yG
 yG
 yG
 yG
-bf
+tT
 zp
 yA
 zp
@@ -40226,7 +40226,7 @@ yG
 yG
 yG
 yG
-bf
+tT
 zp
 yA
 zp
@@ -40428,7 +40428,7 @@ yG
 yG
 yG
 yG
-bf
+tT
 xF
 xF
 xF
@@ -40630,7 +40630,7 @@ yG
 yG
 yG
 yG
-bf
+tT
 db
 xF
 db

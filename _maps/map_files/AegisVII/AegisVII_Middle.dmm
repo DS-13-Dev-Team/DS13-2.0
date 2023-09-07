@@ -981,7 +981,7 @@
 /turf/open/floor/wood,
 /area/station/cargo/qm)
 "apG" = (
-/turf/closed/mineral/random,
+/turf/closed/mineral/random/aegis,
 /area/lavaland/surface/outdoors)
 "apT" = (
 /obj/machinery/field/generator,
@@ -1043,6 +1043,7 @@
 "aqG" = (
 /obj/structure/closet/crate/trashcart/laundry,
 /obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/commons/dorms/cryo)
 "aqH" = (
@@ -4920,7 +4921,7 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
-/obj/structure/closet/athletic_mixed,
+/obj/structure/closet/masks,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "bmV" = (
@@ -10102,7 +10103,7 @@
 /area/station/medical/psychology)
 "fKB" = (
 /obj/machinery/button/door/directional/east{
-	id = "Cabin3";
+	id = "Cabin12";
 	name = "Cabin Bolt Control";
 	normaldoorcontrol = 1;
 	specialfunctions = 4
@@ -11266,6 +11267,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/maintenance/department/engine)
+"gKS" = (
+/obj/structure/closet/athletic_mixed,
+/turf/open/floor/deadspace/heavy,
+/area/station/commons/locker)
 "gKV" = (
 /turf/closed/wall/r_wall,
 /area/station/science/misc_lab/range)
@@ -11856,7 +11861,7 @@
 /turf/open/floor/carpet/red,
 /area/station/security/brig)
 "hnp" = (
-/turf/closed/mineral/random,
+/turf/closed/mineral/random/aegis,
 /area/station/engineering/storage/tcomms)
 "hnq" = (
 /turf/open/floor/carpet/red,
@@ -17308,7 +17313,7 @@
 /area/station/engineering/main)
 "mEn" = (
 /obj/machinery/button/door/directional/west{
-	id = "Cabin7";
+	id = "Cabin15";
 	name = "Cabin Bolt Control";
 	normaldoorcontrol = 1;
 	specialfunctions = 4
@@ -23824,9 +23829,21 @@
 	},
 /area/station/science/lab)
 "tlp" = (
-/obj/structure/closet/masks,
-/turf/open/floor/deadspace/heavy,
-/area/station/commons/locker)
+/obj/machinery/button/door/directional/west{
+	id = "Cabin8";
+	name = "Cabin Bolt Control";
+	normaldoorcontrol = 1;
+	specialfunctions = 4
+	},
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/obj/machinery/light_switch/directional/west{
+	pixel_y = 9
+	},
+/turf/open/floor/iron/ported/lino,
+/area/station/commons/dorms)
 "tlI" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark/side{
@@ -25001,6 +25018,22 @@
 /obj/structure/cable,
 /turf/open/floor/stone,
 /area/lavaland/surface/outdoors)
+"utv" = (
+/obj/machinery/button/door/directional/east{
+	id = "Cabin11";
+	name = "Cabin Bolt Control";
+	normaldoorcontrol = 1;
+	specialfunctions = 4
+	},
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/obj/machinery/light_switch/directional/east{
+	pixel_y = 9
+	},
+/turf/open/floor/iron/ported/lino,
+/area/station/commons/dorms/barracks)
 "utF" = (
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
@@ -32455,7 +32488,7 @@ alw
 cry
 xSe
 aJO
-dgF
+tlp
 vkE
 atd
 xSe
@@ -33046,7 +33079,7 @@ aKi
 oJy
 aKe
 xSe
-pXd
+gKS
 adf
 nkn
 adf
@@ -33450,7 +33483,7 @@ dAL
 rgD
 anQ
 hud
-tlp
+edx
 adf
 bKk
 adf
@@ -33652,7 +33685,7 @@ dAL
 dAL
 nvD
 hud
-edx
+pXd
 adf
 jAA
 adf
@@ -34063,7 +34096,7 @@ adf
 hoM
 hud
 jLZ
-fKB
+utv
 dic
 mHg
 hud
