@@ -4920,7 +4920,7 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
-/obj/structure/closet/masks,
+/obj/structure/closet/athletic_mixed,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "bmV" = (
@@ -5989,10 +5989,8 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/awaymission/centcom_away/hangar)
 "bKk" = (
-/obj/structure/cable,
 /obj/structure/rack,
 /obj/effect/spawner/random/clothing/costume,
-/obj/item/clothing/mask/balaclava,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "bKv" = (
@@ -11894,6 +11892,7 @@
 /area/station/service/chapel/funeral)
 "hoM" = (
 /obj/structure/closet/wardrobe/mixed,
+/obj/item/clothing/mask/balaclava,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "hoR" = (
@@ -12869,6 +12868,7 @@
 "ijy" = (
 /obj/machinery/light/directional/south,
 /obj/structure/closet/wardrobe/mixed,
+/obj/item/clothing/mask/balaclava,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "ijE" = (
@@ -23824,7 +23824,7 @@
 	},
 /area/station/science/lab)
 "tlp" = (
-/obj/structure/closet/athletic_mixed,
+/obj/structure/closet/masks,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "tlI" = (
@@ -25812,6 +25812,8 @@
 /obj/item/clothing/under/rank/engineering/ds_rigsuit,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/gloves/color/black,
+/obj/item/clothing/mask/balaclava,
+/obj/effect/spawner/random/entertainment/cigar,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "vir" = (
@@ -32842,9 +32844,9 @@ aKi
 aKi
 vhn
 xSe
-pXd
+fQX
 adf
-atf
+nkn
 adf
 eTg
 xSe
@@ -33044,7 +33046,7 @@ aKi
 oJy
 aKe
 xSe
-fQX
+pXd
 adf
 nkn
 adf
@@ -33248,7 +33250,7 @@ xSe
 xSe
 bmT
 atf
-bKk
+nkn
 adf
 dDx
 xSe
@@ -33450,7 +33452,7 @@ anQ
 hud
 tlp
 adf
-jAA
+bKk
 adf
 gGO
 hud
@@ -33652,7 +33654,7 @@ nvD
 hud
 edx
 adf
-adf
+jAA
 adf
 vin
 hud
