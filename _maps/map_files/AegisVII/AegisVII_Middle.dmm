@@ -8364,6 +8364,12 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/cargo/qm)
+"eaZ" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron/dark/side{
+	dir = 4
+	},
+/area/station/hallway/primary/fore)
 "ebO" = (
 /obj/machinery/power/floodlight,
 /obj/effect/turf_decal/stripes/line{
@@ -9702,6 +9708,12 @@
 	},
 /turf/open/floor/iron/norn,
 /area/station/service/hydroponics)
+"foo" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/iron/dark/side{
+	dir = 8
+	},
+/area/station/hallway/primary/fore)
 "foA" = (
 /turf/closed/wall/r_wall,
 /area/station/commons/dorms/cryo)
@@ -28534,6 +28546,13 @@
 /obj/machinery/light/cold/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery)
+"xGv" = (
+/obj/structure/sign/cec/deck/medical{
+	pixel_y = -32
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/iron/dark/side,
+/area/station/hallway/primary/fore)
 "xGA" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/trimline/purple/filled/line{
@@ -40449,7 +40468,7 @@ yjV
 lOr
 lOr
 lOr
-lOr
+eaZ
 lOr
 lOr
 ecS
@@ -41666,7 +41685,7 @@ hae
 hae
 mxw
 dAx
-rQG
+xGv
 hae
 dYv
 bdg
@@ -41863,7 +41882,7 @@ wpm
 gGx
 gGx
 gGx
-gGx
+foo
 gGx
 gGx
 ang
@@ -44286,7 +44305,7 @@ dAx
 wpm
 gGx
 gGx
-gGx
+foo
 gGx
 gGx
 gGx
