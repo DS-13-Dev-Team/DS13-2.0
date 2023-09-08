@@ -7078,6 +7078,23 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/hallway/secondary/exit/departure_lounge)
+"cKf" = (
+/obj/structure/sign/directions/engineering{
+	dir = 4;
+	pixel_y = 34
+	},
+/obj/structure/sign/directions/medical{
+	pixel_y = 28
+	},
+/obj/structure/sign/directions/security{
+	dir = 8;
+	pixel_y = 22
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark/side{
+	dir = 1
+	},
+/area/station/hallway/primary/fore)
 "cKs" = (
 /obj/structure/cable/layer1,
 /obj/structure/cable,
@@ -16565,6 +16582,23 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
+"lMp" = (
+/obj/structure/sign/directions/evac{
+	dir = 4;
+	pixel_y = 22
+	},
+/obj/structure/sign/directions/supply{
+	dir = 4;
+	pixel_y = 28
+	},
+/obj/structure/sign/directions/science{
+	pixel_y = 34;
+	dir = 8
+	},
+/turf/open/floor/iron/dark/side{
+	dir = 1
+	},
+/area/station/hallway/primary/starboard)
 "lNl" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/effect/spawner/random/vending/snackvend,
@@ -19133,6 +19167,24 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
 /area/ruin/powered/bathhouse)
+"ork" = (
+/obj/structure/sign/directions/supply{
+	dir = 4;
+	pixel_y = 28
+	},
+/obj/structure/sign/directions/science{
+	dir = 4;
+	pixel_y = 34
+	},
+/obj/structure/sign/directions/evac{
+	dir = 4;
+	pixel_y = 22
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/dark/side{
+	dir = 1
+	},
+/area/station/hallway/primary/fore)
 "orm" = (
 /obj/machinery/camera/directional/south,
 /turf/open/floor/iron/dark/side,
@@ -40587,7 +40639,7 @@ hae
 hae
 hae
 hae
-afY
+ork
 juP
 aoU
 qom
@@ -41597,7 +41649,7 @@ hae
 hae
 hae
 hae
-afY
+cKf
 dAx
 rQG
 hae
@@ -51091,7 +51143,7 @@ whq
 xrK
 blo
 qHn
-rPb
+lMp
 iQn
 mQV
 aGB
