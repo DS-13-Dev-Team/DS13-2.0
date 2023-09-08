@@ -3,7 +3,7 @@
 	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
 	icon = 'icons/mob/human_parts.dmi'
 	icon_state = "default_human_head"
-	max_damage = 200
+	max_damage = 75
 	body_zone = BODY_ZONE_HEAD
 	body_part = HEAD
 	plaintext_zone = "head"
@@ -148,12 +148,6 @@
 
 		if(!tongue)
 			. += span_info("[real_name]'s tongue has been removed.")
-
-
-/obj/item/bodypart/head/can_dismember(obj/item/item)
-	if(owner.stat < HARD_CRIT)
-		return FALSE
-	return ..()
 
 /obj/item/bodypart/head/drop_contents(mob/user, violent_removal)
 	var/turf/head_turf = get_turf(src)
