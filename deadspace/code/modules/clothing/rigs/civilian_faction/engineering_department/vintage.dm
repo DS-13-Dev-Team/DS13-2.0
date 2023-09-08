@@ -71,6 +71,7 @@
 		/obj/item/mod/module/welding,
 		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
 		/obj/item/mod/module/t_ray,
+		/obj/item/mod/module/rad_protection,
 	)
 
 /obj/item/mod/skin_applier/heavy_vintage
