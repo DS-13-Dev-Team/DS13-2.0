@@ -6865,9 +6865,11 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/production)
 "cBm" = (
-/obj/structure/sign/cec/deck/security,
-/turf/closed/wall/r_wall,
-/area/station/hallway/primary/central)
+/obj/structure/sign/cec/deck/research{
+	pixel_y = -32
+	},
+/turf/open/floor/iron/dark/side,
+/area/station/hallway/primary/fore)
 "cBp" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/deadspace/random/slides{
@@ -7473,9 +7475,12 @@
 /turf/closed/wall/r_wall,
 /area/mine/living_quarters)
 "dfU" = (
-/obj/structure/sign/cec/deck/research,
-/turf/closed/wall/r_wall,
-/area/station/science/robotics/lab)
+/obj/machinery/light/directional/south,
+/obj/structure/sign/cec/deck/research{
+	pixel_y = -32
+	},
+/turf/open/floor/iron/dark/side,
+/area/station/hallway/primary/fore)
 "dgg" = (
 /obj/structure/stairs/south,
 /turf/open/floor/iron/dark/side,
@@ -8823,10 +8828,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/norn,
 /area/station/service/hydroponics)
-"evw" = (
-/obj/structure/sign/cec/deck/research,
-/turf/closed/wall/r_wall,
-/area/station/science/lobby)
 "evV" = (
 /obj/structure/stairs/north,
 /obj/structure/disposalpipe/trunk/multiz,
@@ -19784,10 +19785,6 @@
 	dir = 1
 	},
 /area/shuttle/abandoned)
-"oXO" = (
-/obj/structure/sign/cec/deck/research,
-/turf/closed/wall/r_wall,
-/area/station/science/robotics/mechbay)
 "oYm" = (
 /obj/effect/landmark/start/roboticist,
 /turf/open/floor/iron,
@@ -21319,6 +21316,9 @@
 /area/station/medical/storage)
 "qCQ" = (
 /obj/machinery/light/directional/south,
+/obj/structure/sign/cec/deck/security{
+	pixel_y = -32
+	},
 /turf/open/floor/iron/dark/side,
 /area/station/hallway/primary/central)
 "qCV" = (
@@ -37553,7 +37553,7 @@ uDV
 inL
 vvE
 qCQ
-xIU
+aGn
 eBu
 bth
 aRO
@@ -38563,7 +38563,7 @@ tYw
 inL
 umg
 auY
-cBm
+gXS
 pZl
 qAD
 cGp
@@ -44212,8 +44212,8 @@ gGx
 gGx
 szk
 juP
-aoU
-evw
+cBm
+sYd
 ena
 fhS
 eeO
@@ -46232,8 +46232,8 @@ uCb
 agp
 boM
 juP
-eWs
 dfU
+xPg
 hyj
 ekV
 hyj
@@ -48454,8 +48454,8 @@ wRB
 agp
 boM
 juP
-aoU
-oXO
+cBm
+oxc
 oxc
 oxc
 oxc
