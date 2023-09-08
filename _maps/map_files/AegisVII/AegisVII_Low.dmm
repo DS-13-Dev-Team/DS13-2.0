@@ -172,6 +172,13 @@
 /obj/structure/rack,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
+"bQ" = (
+/mob/living/simple_animal/hostile/retaliate/hog{
+	name = "Pim Pim";
+	real_name = "Pim Pim"
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "bW" = (
 /obj/structure/ore_box,
 /turf/open/floor/deadspace/grater,
@@ -906,6 +913,10 @@
 /obj/structure/sign/cec/deck,
 /turf/closed/wall/r_wall,
 /area/station/maintenance/port/lesser)
+"hd" = (
+/mob/living/simple_animal/slug,
+/turf/open/floor/deadspace/grater,
+/area/station/maintenance/port/lesser)
 "he" = (
 /obj/structure/stairs/north,
 /turf/open/floor/deadspace/mono,
@@ -1240,10 +1251,6 @@
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
-"jo" = (
-/mob/living/simple_animal/slug,
-/turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
 "jp" = (
 /obj/structure/low_wall,
@@ -1876,9 +1883,8 @@
 /area/lavaland/surface/outdoors)
 "oV" = (
 /obj/structure/safe/floor,
-/obj/item/stack/sheet/mineral/gold,
-/obj/item/stack/sheet/mineral/silver,
-/obj/item/stack/sheet/mineral/diamond,
+/obj/effect/spawner/random/contraband/armory,
+/obj/effect/spawner/random/exotic/antag_gear,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "oW" = (
@@ -2104,6 +2110,11 @@
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
+"qE" = (
+/obj/structure/table/wood/poker,
+/obj/item/stack/sheet/mineral/gold,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "qG" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -2278,6 +2289,10 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/station/medical/medbay/aft)
+"rS" = (
+/mob/living/simple_animal/slug,
+/turf/open/floor/plating,
+/area/station/maintenance/port/lesser)
 "rU" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
@@ -3344,10 +3359,8 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/service/chapel/monastery)
 "Dv" = (
-/mob/living/simple_animal/hostile/retaliate/hog{
-	name = "Pim Pim";
-	real_name = "Pim Pim"
-	},
+/obj/structure/table/wood/poker,
+/obj/item/stack/sheet/mineral/diamond,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "Dx" = (
@@ -3467,6 +3480,10 @@
 "Fg" = (
 /obj/structure/punching_bag,
 /turf/open/floor/iron/dark,
+/area/station/maintenance/fore/lesser)
+"Fh" = (
+/mob/living/simple_animal/slug,
+/turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
 "Fq" = (
 /turf/open/floor/deadspace/random/slides,
@@ -3709,10 +3726,6 @@
 /obj/effect/spawner/random/entertainment/money_large,
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
-"IK" = (
-/mob/living/simple_animal/slug,
-/turf/open/floor/wood,
-/area/station/maintenance/fore/lesser)
 "IL" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -3811,6 +3824,10 @@
 "JV" = (
 /obj/item/paper/fluff/bee_objectives,
 /turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
+"JX" = (
+/mob/living/simple_animal/slug,
+/turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "JZ" = (
 /obj/effect/decal/cleanable/blood,
@@ -4161,10 +4178,6 @@
 /mob/living/simple_animal/pet/dog/corgi/lisa,
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
-"Oc" = (
-/mob/living/simple_animal/slug,
-/turf/open/floor/deadspace/grater,
-/area/station/maintenance/port/lesser)
 "Of" = (
 /obj/structure/ladder,
 /turf/open/floor/deadspace/grater,
@@ -4218,6 +4231,11 @@
 /obj/machinery/autolathe,
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
+"OE" = (
+/obj/structure/table/wood/poker,
+/obj/item/stack/sheet/mineral/silver,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "OL" = (
 /obj/item/pet_carrier,
 /turf/open/floor/plating,
@@ -4778,10 +4796,6 @@
 /obj/structure/chair/stool/bar/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
-"VB" = (
-/mob/living/simple_animal/slug,
-/turf/open/floor/plating,
-/area/station/maintenance/port/lesser)
 "VJ" = (
 /obj/structure/sink{
 	dir = 8;
@@ -7428,7 +7442,7 @@ zp
 bf
 LZ
 vz
-jo
+Fh
 hn
 bf
 Nf
@@ -8986,7 +9000,7 @@ bf
 OX
 OX
 OX
-VB
+rS
 XJ
 OX
 tT
@@ -27805,9 +27819,9 @@ yG
 yG
 bf
 hn
-oW
+qE
 hn
-oW
+OE
 hn
 lr
 bf
@@ -28410,7 +28424,7 @@ JB
 JB
 yG
 bf
-oW
+Dv
 hn
 hy
 hn
@@ -30244,7 +30258,7 @@ hn
 hn
 hn
 Bh
-IK
+JX
 hn
 hn
 ff
@@ -31242,7 +31256,7 @@ yG
 tT
 nR
 Mz
-Oc
+hd
 nR
 nR
 zp
@@ -34706,7 +34720,7 @@ mm
 Bh
 hn
 hn
-Dv
+bQ
 hn
 hn
 bf
