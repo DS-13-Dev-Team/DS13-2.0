@@ -1489,7 +1489,7 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
 /obj/machinery/light/directional/south,
-/obj/effect/spawner/random/exotic/antag_gear_weak,
+/obj/effect/spawner/random/contraband/permabrig_weapon,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/ai_monitored/security/armory)
 "lr" = (
@@ -1885,12 +1885,6 @@
 /obj/structure/rack,
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
-"oV" = (
-/obj/structure/safe/floor,
-/obj/effect/spawner/random/contraband/armory,
-/obj/effect/spawner/random/exotic/antag_gear,
-/turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
 "oW" = (
 /obj/structure/table/wood/poker,
 /turf/open/floor/plating,
@@ -2164,11 +2158,10 @@
 /turf/open/floor/deadspace/mono,
 /area/station/security)
 "qZ" = (
-/obj/effect/spawner/random/contraband/permabrig_weapon,
 /obj/structure/closet/secure_closet/evidence,
 /obj/effect/turf_decal/box,
 /obj/machinery/light/directional/north,
-/obj/effect/spawner/random/exotic/antag_gear_weak,
+/obj/effect/spawner/random/contraband/narcotics,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/ai_monitored/security/armory)
 "re" = (
@@ -2820,7 +2813,6 @@
 /obj/effect/spawner/random/contraband/permabrig_weapon,
 /obj/structure/closet/secure_closet/evidence,
 /obj/effect/turf_decal/box,
-/obj/effect/spawner/random/exotic/antag_gear,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/ai_monitored/security/armory)
 "xH" = (
@@ -4097,7 +4089,7 @@
 /obj/effect/spawner/random/contraband/narcotics,
 /obj/structure/closet/secure_closet/evidence,
 /obj/effect/turf_decal/box,
-/obj/effect/spawner/random/exotic/antag_gear_weak,
+/obj/effect/spawner/random/contraband/permabrig_weapon,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/ai_monitored/security/armory)
 "MP" = (
@@ -27642,7 +27634,7 @@ yG
 yG
 yG
 bf
-oV
+hn
 CT
 hn
 hn

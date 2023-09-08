@@ -4901,6 +4901,7 @@
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 8
 	},
+/obj/item/storage/pill_bottle/ryetalyn,
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "bmR" = (
