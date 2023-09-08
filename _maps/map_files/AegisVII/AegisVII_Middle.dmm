@@ -7162,6 +7162,7 @@
 /area/station/hallway/primary/fore)
 "cNP" = (
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/slug/glubby,
 /turf/open/floor/iron/dark/side{
 	dir = 5
 	},

@@ -1241,6 +1241,10 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"jo" = (
+/mob/living/simple_animal/slug,
+/turf/open/floor/deadspace/grater,
+/area/station/maintenance/fore/lesser)
 "jp" = (
 /obj/structure/low_wall,
 /turf/open/floor/plating,
@@ -3340,8 +3344,10 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/service/chapel/monastery)
 "Dv" = (
-/obj/effect/decal/cleanable/blood,
-/mob/living/simple_animal/hostile/rat,
+/mob/living/simple_animal/hostile/retaliate/hog{
+	name = "Pim Pim";
+	real_name = "Pim Pim"
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "Dx" = (
@@ -3701,6 +3707,10 @@
 "IG" = (
 /obj/structure/table,
 /obj/effect/spawner/random/entertainment/money_large,
+/turf/open/floor/wood,
+/area/station/maintenance/fore/lesser)
+"IK" = (
+/mob/living/simple_animal/slug,
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "IL" = (
@@ -4151,6 +4161,10 @@
 /mob/living/simple_animal/pet/dog/corgi/lisa,
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
+"Oc" = (
+/mob/living/simple_animal/slug,
+/turf/open/floor/deadspace/grater,
+/area/station/maintenance/port/lesser)
 "Of" = (
 /obj/structure/ladder,
 /turf/open/floor/deadspace/grater,
@@ -4764,6 +4778,10 @@
 /obj/structure/chair/stool/bar/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"VB" = (
+/mob/living/simple_animal/slug,
+/turf/open/floor/plating,
+/area/station/maintenance/port/lesser)
 "VJ" = (
 /obj/structure/sink{
 	dir = 8;
@@ -7410,7 +7428,7 @@ zp
 bf
 LZ
 vz
-MR
+jo
 hn
 bf
 Nf
@@ -8968,7 +8986,7 @@ bf
 OX
 OX
 OX
-OX
+VB
 XJ
 OX
 tT
@@ -30226,7 +30244,7 @@ hn
 hn
 hn
 Bh
-iX
+IK
 hn
 hn
 ff
@@ -31224,7 +31242,7 @@ yG
 tT
 nR
 Mz
-nR
+Oc
 nR
 nR
 zp
@@ -34081,7 +34099,7 @@ zp
 bf
 bf
 jn
-qt
+hn
 Xs
 fg
 hn
@@ -34688,7 +34706,7 @@ mm
 Bh
 hn
 hn
-hn
+Dv
 hn
 hn
 bf
@@ -34891,7 +34909,7 @@ hn
 hn
 hn
 cE
-Dv
+fg
 hn
 bf
 dv
