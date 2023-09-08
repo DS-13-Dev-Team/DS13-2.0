@@ -122,7 +122,7 @@
 	jobtype = /datum/job/chaplain
 
 	id_trim = /datum/id_trim/job/chaplain
-	uniform = /obj/item/clothing/under/rank/civilian/chaplain
+	uniform = /obj/item/clothing/under/rank/civilian/ds_clergy
 	backpack_contents = list(
 		/obj/item/camera/spooky = 1,
 		/obj/item/stamp/chap = 1,
@@ -137,7 +137,7 @@
 /datum/outfit/job/chaplain/plasmaman
 	name = "Chaplain (Plasmaman)"
 
-	uniform = /obj/item/clothing/under/rank/civilian/ds_clergy
+	uniform = /obj/item/clothing/under/plasmaman/chaplain
 	gloves = /obj/item/clothing/gloves/color/plasmaman/black
 	head = /obj/item/clothing/head/helmet/space/plasmaman/chaplain
 	mask = /obj/item/clothing/mask/breath
