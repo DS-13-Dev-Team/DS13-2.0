@@ -3125,6 +3125,10 @@
 /obj/machinery/vending/coffee,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/security/interrogation)
+"aRi" = (
+/obj/machinery/jukebox,
+/turf/open/floor/wood,
+/area/station/commons/lounge)
 "aRj" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 1
@@ -35945,7 +35949,7 @@ seM
 eiA
 iKJ
 bWM
-vwn
+aRi
 wDX
 vwn
 ape
