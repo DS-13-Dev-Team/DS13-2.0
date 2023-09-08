@@ -910,8 +910,10 @@
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "hc" = (
-/obj/structure/sign/cec/deck,
-/turf/closed/wall/r_wall,
+/obj/structure/sign/cec/deck/security{
+	pixel_y = -32
+	},
+/turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/lesser)
 "hd" = (
 /mob/living/simple_animal/slug,
@@ -1622,9 +1624,9 @@
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
 "mJ" = (
-/obj/structure/cable,
-/turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/obj/machinery/light/small/maintenance/directional/east,
+/turf/open/floor/deadspace/mono,
+/area/station/maintenance/port/lesser)
 "mL" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -1787,8 +1789,10 @@
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
 "og" = (
-/obj/structure/cable,
-/turf/closed/wall/r_wall,
+/obj/structure/sign/cec/deck/medical{
+	pixel_y = 32
+	},
+/turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/lesser)
 "oh" = (
 /obj/effect/spawner/random/vending/snackvend,
@@ -2334,7 +2338,6 @@
 /area/station/maintenance/fore/lesser)
 "sj" = (
 /obj/machinery/light/small/maintenance/directional/east,
-/obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/lavaland/surface/outdoors)
 "sk" = (
@@ -3410,6 +3413,12 @@
 /obj/item/food/soup/blood,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"DU" = (
+/obj/structure/sign/cec/deck/medical{
+	pixel_y = 32
+	},
+/turf/open/floor/deadspace/grater,
+/area/station/maintenance/port/lesser)
 "Ee" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
@@ -3838,6 +3847,11 @@
 /obj/machinery/chem_master,
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
+"Kd" = (
+/obj/structure/cable,
+/obj/machinery/light/small/maintenance/directional/south,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/station/maintenance/port/lesser)
 "Ke" = (
 /obj/structure/closet/secure_closet/ds/detective,
 /obj/effect/landmark{
@@ -3943,6 +3957,12 @@
 /obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
+"Lo" = (
+/obj/structure/sign/cec/deck{
+	pixel_x = 32
+	},
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/station/maintenance/port/lesser)
 "Lq" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/deadspace/hardwood,
@@ -5041,6 +5061,12 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
+"Yb" = (
+/obj/structure/sign/cec/deck{
+	pixel_y = -32
+	},
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/station/maintenance/port/lesser)
 "Ye" = (
 /obj/structure/table,
 /obj/item/storage/pill_bottle/happy,
@@ -15716,7 +15742,7 @@ IB
 zp
 zp
 se
-zp
+Lo
 zp
 zp
 zp
@@ -15913,11 +15939,11 @@ yA
 yA
 PT
 yA
-zp
+Yb
 tT
-hc
+tT
 Pv
-hc
+tT
 tT
 tT
 tT
@@ -16320,7 +16346,7 @@ yA
 zp
 tT
 Cn
-Cn
+mJ
 nR
 tT
 yG
@@ -16519,7 +16545,7 @@ yA
 yA
 yA
 zp
-zp
+Yb
 tT
 tT
 tT
@@ -17322,7 +17348,7 @@ hn
 YH
 bf
 bf
-nR
+DU
 nR
 bf
 bf
@@ -17725,7 +17751,7 @@ iq
 Ad
 hn
 hn
-bf
+uU
 nR
 nR
 bf
@@ -17927,7 +17953,7 @@ xz
 hn
 bh
 hn
-bf
+uU
 nR
 UC
 bf
@@ -18129,7 +18155,7 @@ eA
 fv
 hG
 hn
-bf
+wz
 nR
 nR
 bf
@@ -18331,7 +18357,7 @@ fC
 fv
 cu
 fv
-wz
+bf
 nR
 nR
 bf
@@ -18534,7 +18560,7 @@ fv
 bf
 bf
 bf
-nR
+DU
 nR
 wz
 hn
@@ -21987,21 +22013,21 @@ bf
 zp
 yA
 CO
-og
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
+zp
+zp
+zp
+zp
+zp
+zp
+zp
+zp
+zp
+zp
+zp
+zp
+zp
+zp
+zp
 bf
 hn
 LZ
@@ -22203,7 +22229,7 @@ yA
 yA
 yA
 yA
-CO
+zp
 wz
 hn
 hn
@@ -22390,22 +22416,22 @@ bf
 bf
 zp
 yA
-Mn
-og
-mJ
-mJ
+CO
+zp
+SI
+SI
 sj
-mJ
-mJ
-mJ
+SI
+SI
+SI
+SI
 sj
-mJ
-mJ
-mJ
+SI
+SI
+SI
 sj
-mJ
-mJ
-mJ
+SI
+SI
 gm
 jh
 yB
@@ -22592,7 +22618,7 @@ yG
 bf
 zp
 yA
-CO
+Kd
 tT
 gm
 gm
@@ -31067,7 +31093,7 @@ yA
 yA
 yA
 yA
-zp
+hc
 bf
 bf
 bf
@@ -31873,7 +31899,7 @@ Oa
 iX
 IG
 bf
-zp
+og
 yA
 zp
 yV
@@ -32481,10 +32507,10 @@ YO
 Oo
 zp
 yA
-zp
-bf
+hc
 bf
 dv
+zp
 zp
 zp
 yA
@@ -32686,7 +32712,7 @@ yA
 zp
 bf
 zp
-zp
+yA
 yA
 yA
 yA
@@ -32883,7 +32909,7 @@ bf
 bf
 bf
 bf
-zp
+og
 yA
 zp
 bf
