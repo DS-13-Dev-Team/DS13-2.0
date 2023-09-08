@@ -65,7 +65,6 @@
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/tether,
 		/obj/item/mod/module/magboot,
 		/obj/item/mod/module/welding,
 		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
