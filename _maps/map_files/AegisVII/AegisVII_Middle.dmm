@@ -15318,6 +15318,7 @@
 /obj/item/storage/lunchbox/unitology,
 /obj/item/storage/lunchbox/unitology,
 /obj/machinery/camera/autoname/directional/east,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/mono,
 /area/station/service/library)
 "kFX" = (
