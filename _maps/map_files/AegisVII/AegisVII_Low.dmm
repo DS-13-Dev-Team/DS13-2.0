@@ -705,7 +705,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "fy" = (
-/mob/living/simple_animal/pet/dog/corgi/ian,
+/mob/living/simple_animal/pet/dog/corgi/exoticcorgi,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "fz" = (
@@ -795,9 +795,15 @@
 /obj/item/wirecutters/abductor,
 /turf/open/floor/stone,
 /area/lavaland/surface/outdoors)
+"gh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/random/trash,
+/turf/open/floor/eighties/red,
+/area/station/maintenance/fore/lesser)
 "gj" = (
 /obj/structure/table,
 /obj/machinery/light/small/maintenance/directional/west,
+/obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "gk" = (
@@ -934,12 +940,7 @@
 /turf/open/water,
 /area/station/maintenance/port/lesser)
 "hr" = (
-/obj/structure/rack,
-/obj/item/clothing/gloves/color/latex/nitrile,
-/obj/item/clothing/suit/apron/chef,
-/obj/item/clothing/accessory/waistcoat,
-/obj/item/clothing/head/fedora,
-/obj/item/clothing/glasses/sunglasses,
+/obj/structure/closet/secure_closet/chemical/heisenberg,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "ht" = (
@@ -1116,8 +1117,6 @@
 /area/station/maintenance/fore/lesser)
 "iE" = (
 /obj/item/toy/figure/detective,
-/obj/structure/table/wood,
-/obj/item/toy/figure/detective,
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "iG" = (
@@ -1164,7 +1163,7 @@
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "iR" = (
-/obj/structure/closet/secure_closet/psychology,
+/obj/structure/closet/secure_closet/ds/psychology,
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "iT" = (
@@ -1245,6 +1244,10 @@
 "jp" = (
 /obj/structure/low_wall,
 /turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
+"js" = (
+/obj/effect/spawner/random/trash,
+/turf/open/floor/eighties/red,
 /area/station/maintenance/fore/lesser)
 "jt" = (
 /obj/effect/spawner/random/vending/colavend,
@@ -1393,6 +1396,9 @@
 /obj/item/bedsheet/random,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"kM" = (
+/turf/open/floor/eighties/red,
+/area/station/maintenance/fore/lesser)
 "kO" = (
 /obj/effect/landmark{
 	name = "ShuttleRepairPart"
@@ -1442,7 +1448,7 @@
 "lb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/foamedmetal,
-/turf/open/floor/plating,
+/turf/open/floor/eighties/red,
 /area/station/maintenance/fore/lesser)
 "lc" = (
 /obj/machinery/cryopod,
@@ -1624,6 +1630,10 @@
 "mT" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/deadspace/grater,
+/area/station/maintenance/fore/lesser)
+"mU" = (
+/obj/structure/foamedmetal,
+/turf/open/floor/eighties/red,
 /area/station/maintenance/fore/lesser)
 "mV" = (
 /obj/structure/table/reinforced,
@@ -2516,6 +2526,11 @@
 /obj/effect/spawner/random/deadspace/rig,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo)
+"uC" = (
+/obj/structure/table,
+/obj/effect/spawner/random/engineering/material,
+/turf/open/floor/plating,
+/area/station/maintenance/port/lesser)
 "uH" = (
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/plating,
@@ -2540,11 +2555,23 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/deadspace/mono,
 /area/station/medical/medbay/aft)
+"vk" = (
+/obj/effect/decal/cleanable/cobweb,
+/obj/structure/table/reinforced,
+/turf/open/floor/deadspace/grater,
+/area/station/maintenance/fore/lesser)
 "vl" = (
 /obj/structure/grille,
 /obj/structure/sign/warning,
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
+"vm" = (
+/obj/effect/decal/cleanable/oil,
+/obj/machinery/computer/arcade{
+	dir = 8
+	},
+/turf/open/floor/eighties/red,
+/area/station/maintenance/fore/lesser)
 "vs" = (
 /obj/machinery/door/airlock/mining,
 /turf/open/floor/deadspace/grater,
@@ -2595,8 +2622,8 @@
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
 "vQ" = (
-/obj/structure/closet/secure_closet/detective,
-/turf/open/floor/wood,
+/obj/effect/spawner/random/contraband/armory,
+/turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "vR" = (
 /obj/effect/landmark,
@@ -2799,6 +2826,10 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/maintenance/fore/lesser)
+"xW" = (
+/mob/living/simple_animal/hostile/rat,
+/turf/open/floor/iron/dark,
+/area/station/maintenance/fore/lesser)
 "xZ" = (
 /obj/effect/landmark{
 	name = "ShuttleRepairPart"
@@ -2977,6 +3008,10 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/lavaland/surface/outdoors)
+"Ad" = (
+/obj/effect/spawner/random/maintenance/two,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "Ag" = (
 /obj/machinery/vending/games,
 /turf/open/floor/iron/ported/lino,
@@ -2985,6 +3020,10 @@
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/clothing/backpack,
 /turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
+"Ak" = (
+/obj/structure/etherealball,
+/turf/open/floor/eighties/red,
 /area/station/maintenance/fore/lesser)
 "Al" = (
 /obj/machinery/icecream_vat,
@@ -3043,6 +3082,10 @@
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo)
+"AZ" = (
+/obj/effect/spawner/random/engineering/flashlight,
+/turf/open/floor/plating,
+/area/station/maintenance/port/lesser)
 "Bb" = (
 /obj/machinery/button/door/directional/east{
 	id = "UndergroundMining";
@@ -3383,9 +3426,13 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "EW" = (
-/obj/item/storage/medkit/surgery,
+/obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/structure/table,
 /turf/open/floor/iron/white,
+/area/station/maintenance/fore/lesser)
+"EX" = (
+/obj/item/clothing/neck/tie/disco,
+/turf/open/floor/eighties/red,
 /area/station/maintenance/fore/lesser)
 "EY" = (
 /obj/structure/table/wood,
@@ -3556,6 +3603,11 @@
 /obj/structure/closet/crate/grave/filled,
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
+"Hr" = (
+/obj/structure/table,
+/obj/effect/spawner/random/engineering/toolbox,
+/turf/open/floor/plating,
+/area/station/maintenance/port/lesser)
 "Ht" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/warehouse)
@@ -3585,6 +3637,12 @@
 "HI" = (
 /turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
+"HQ" = (
+/obj/structure/chair/sofa/left{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/station/maintenance/fore/lesser)
 "HV" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/food_or_drink/snack,
@@ -3659,6 +3717,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/medical)
+"IR" = (
+/obj/machinery/computer/arcade{
+	dir = 4
+	},
+/turf/open/floor/eighties/red,
+/area/station/maintenance/fore/lesser)
 "IT" = (
 /turf/open/floor/deadspace/medical,
 /area/station/medical/exam_room)
@@ -3734,6 +3798,10 @@
 /obj/effect/spawner/random/clothing,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
+"JV" = (
+/obj/item/paper/fluff/bee_objectives,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "JZ" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/bed/roller,
@@ -3744,8 +3812,11 @@
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
 "Ke" = (
-/obj/structure/beebox,
-/turf/open/floor/plating,
+/obj/structure/closet/secure_closet/ds/detective,
+/obj/effect/landmark{
+	name = "ShuttleRepairPart"
+	},
+/turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "Kf" = (
 /obj/structure/chair/office{
@@ -3823,6 +3894,13 @@
 /obj/structure/table,
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
+"Lb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/computer/arcade{
+	dir = 4
+	},
+/turf/open/floor/eighties/red,
+/area/station/maintenance/fore/lesser)
 "Lc" = (
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
@@ -4008,6 +4086,10 @@
 /obj/structure/closet/crate/large/ds,
 /obj/effect/spawner/random/maintenance/two,
 /obj/effect/spawner/random/entertainment/money_large,
+/turf/open/floor/deadspace/grater,
+/area/station/maintenance/fore/lesser)
+"Nj" = (
+/obj/effect/spawner/random/deadspace/rig,
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
 "Nk" = (
@@ -4307,8 +4389,9 @@
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "QX" = (
-/obj/structure/bed/maint,
-/obj/item/bedsheet/random,
+/obj/structure/chair/sofa/right{
+	dir = 8
+	},
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "QZ" = (
@@ -4355,6 +4438,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /turf/open/floor/iron/ported/lino,
 /area/station/service/chapel/storage)
+"RN" = (
+/obj/structure/table/wood,
+/obj/item/toy/figure/detective,
+/turf/open/floor/wood,
+/area/station/maintenance/fore/lesser)
 "RP" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -4400,6 +4488,10 @@
 /mob/living/simple_animal/hostile/rat,
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/port/lesser)
+"Sq" = (
+/obj/item/clothing/shoes/discoshoes,
+/turf/open/floor/eighties/red,
+/area/station/maintenance/fore/lesser)
 "Sr" = (
 /obj/machinery/firealarm/directional/south{
 	dir = 1;
@@ -4590,7 +4682,11 @@
 /area/station/maintenance/port/lesser)
 "UE" = (
 /obj/structure/rack,
+/obj/item/clothing/under/color/yellow,
 /obj/item/clothing/suit/hooded/bee_costume,
+/obj/item/clothing/shoes/sneakers/yellow,
+/obj/item/clothing/gloves/color/yellow,
+/obj/item/clothing/mask/animal/rat/bee,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "UI" = (
@@ -4775,6 +4871,12 @@
 /mob/living/simple_animal/hostile/rat,
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
+"WG" = (
+/obj/machinery/computer/arcade{
+	dir = 8
+	},
+/turf/open/floor/eighties/red,
+/area/station/maintenance/fore/lesser)
 "WR" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -4926,6 +5028,10 @@
 /obj/machinery/hydroponics/constructable,
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
+"Yp" = (
+/obj/machinery/food_cart,
+/turf/open/water,
+/area/station/maintenance/port/lesser)
 "Yx" = (
 /obj/structure/cable,
 /obj/structure/barricade/bars,
@@ -7867,7 +7973,7 @@ hn
 hn
 bf
 zp
-yA
+PT
 zp
 bf
 Dt
@@ -9709,7 +9815,7 @@ hn
 QP
 bf
 oy
-MR
+Nj
 hn
 gc
 Je
@@ -10303,7 +10409,7 @@ fg
 hn
 yJ
 bf
-hn
+qt
 hn
 hn
 hn
@@ -10315,9 +10421,9 @@ hn
 LZ
 bf
 UE
-hn
+JV
 ro
-hn
+vQ
 Yo
 bf
 yG
@@ -10329,7 +10435,7 @@ hn
 hn
 uU
 zp
-yA
+PT
 zp
 ud
 MR
@@ -10511,7 +10617,7 @@ hn
 hn
 bf
 lI
-hn
+qt
 hn
 hn
 iu
@@ -10520,7 +10626,7 @@ UA
 MR
 MR
 hn
-Ke
+gc
 bf
 yG
 yG
@@ -11933,6 +12039,7 @@ yA
 yA
 yA
 yA
+PT
 yA
 yA
 yA
@@ -11946,7 +12053,6 @@ yA
 yA
 yA
 yA
-zp
 yA
 yA
 yA
@@ -12575,7 +12681,7 @@ hn
 sO
 hn
 bf
-mT
+vk
 mL
 GB
 bf
@@ -12777,7 +12883,7 @@ hn
 hn
 hn
 bf
-mT
+Em
 sO
 GB
 bf
@@ -13780,12 +13886,12 @@ LZ
 fO
 LZ
 bf
-sk
-sO
-hn
-sO
-sO
-sk
+mU
+Lb
+IR
+Lb
+Lb
+mU
 bf
 LZ
 hn
@@ -13982,12 +14088,12 @@ hn
 hn
 hn
 bf
-hn
-hn
-hn
-ro
-hn
-sk
+kM
+kM
+kM
+js
+kM
+mU
 bf
 tJ
 sO
@@ -14183,13 +14289,13 @@ sO
 hn
 hn
 hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
+Bh
+kM
+kM
+kM
+Sq
+kM
+kM
 Bh
 hn
 hn
@@ -14385,13 +14491,13 @@ hn
 hn
 hn
 hn
-hn
-sO
-hn
-hn
-hn
-hn
-hn
+Bh
+gh
+kM
+EX
+Ak
+kM
+kM
 Bh
 xv
 mL
@@ -14587,13 +14693,13 @@ BB
 hn
 hn
 hn
-hn
-hn
-hn
-sk
-hn
-hn
-hn
+Bh
+kM
+kM
+mU
+kM
+kM
+kM
 Bh
 sO
 GB
@@ -14791,11 +14897,11 @@ cD
 sO
 bf
 lb
-sk
-hn
-hn
-hn
-BB
+mU
+WG
+WG
+WG
+vm
 bf
 uR
 hn
@@ -15370,8 +15476,8 @@ yA
 yA
 yA
 yA
-zp
-zp
+yA
+yA
 ZH
 yA
 yA
@@ -15791,9 +15897,9 @@ yA
 zp
 tT
 gl
-uA
+Hr
 gj
-uA
+uC
 bC
 sM
 qZ
@@ -15977,7 +16083,7 @@ fT
 yA
 yA
 yA
-yA
+zp
 tT
 zc
 nR
@@ -16397,7 +16503,7 @@ yA
 CO
 kS
 jG
-OX
+AZ
 vU
 dz
 qy
@@ -17584,7 +17690,7 @@ hn
 aH
 dR
 iq
-hn
+Ad
 hn
 hn
 bf
@@ -19403,7 +19509,7 @@ yG
 yG
 bf
 hn
-hn
+qt
 hn
 bf
 nR
@@ -21639,7 +21745,7 @@ bf
 pI
 hn
 rf
-rf
+xW
 hn
 hn
 hn
@@ -24065,7 +24171,7 @@ hn
 bf
 hn
 hn
-hn
+qt
 hn
 bf
 dv
@@ -31539,7 +31645,7 @@ zp
 lY
 iE
 iX
-vQ
+iX
 bf
 zp
 yA
@@ -31741,7 +31847,7 @@ zp
 yV
 jj
 Wf
-ha
+Ke
 bf
 IB
 ZH
@@ -31942,7 +32048,7 @@ yA
 zp
 yV
 iQ
-iX
+RN
 bf
 bf
 zp
@@ -32540,7 +32646,7 @@ yG
 yG
 bf
 QX
-iX
+HQ
 Xz
 bf
 zp
@@ -32956,7 +33062,7 @@ yA
 yA
 yA
 yA
-yA
+Yp
 yA
 yA
 yA
