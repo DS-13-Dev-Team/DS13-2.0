@@ -41,8 +41,6 @@ Seeker Rifles
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 	AddComponent(/datum/component/scope, range_modifier = 2) //Scope component seems bugged, will need checking on
 
-	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]-wielded")
-
 /obj/item/gun/ballistic/deadspace/twohanded/seeker/egov
 	name = "Earthgov Seeker Rifle"
 	desc = "The Earthgov Seeker Rifle is a riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
