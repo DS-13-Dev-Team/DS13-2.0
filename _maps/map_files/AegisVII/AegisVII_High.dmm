@@ -2268,6 +2268,7 @@
 "QT" = (
 /obj/structure/table,
 /obj/item/storage/box/donkpockets,
+/obj/item/crowbar,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "RI" = (

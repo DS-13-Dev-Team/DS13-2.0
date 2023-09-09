@@ -16131,6 +16131,7 @@
 /obj/item/reagent_containers/glass/bucket,
 /obj/item/cultivator,
 /obj/item/wirecutters,
+/obj/item/crowbar,
 /turf/open/floor/deadspace/mono,
 /area/station/service/hydroponics)
 "lpm" = (
