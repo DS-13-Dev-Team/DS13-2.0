@@ -334,6 +334,17 @@
 	. += {"
 				<tr>
 					<td style='padding-left: 5px;padding-right: 5px'>
+						<strong>Blood Type:</strong>
+					</td>
+					<td style='padding-left: 5px;padding-right: 5px'>
+						[scan["blood_type"]]
+					</td>
+				</tr>
+	"}
+
+	. += {"
+				<tr>
+					<td style='padding-left: 5px;padding-right: 5px'>
 						<strong>Body Temperature:</strong>
 					</td>
 					<td style='padding-left: 5px;padding-right: 5px'>

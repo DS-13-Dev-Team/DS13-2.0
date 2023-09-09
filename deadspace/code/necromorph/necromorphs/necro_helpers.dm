@@ -48,7 +48,7 @@
 		var/datum/hud/necromorph/hud = hud_used
 		hud.update_shieldbar(src)
 	ADD_TRAIT(src, TRAIT_DODGEARMOR_FULL, src)
-	addtimer(CALLBACK(src, .proc/remove_shield), 5 SECONDS, TIMER_OVERRIDE|TIMER_UNIQUE)
+	addtimer(CALLBACK(src, PROC_REF(remove_shield)), 5 SECONDS, TIMER_OVERRIDE|TIMER_UNIQUE)
 
 /mob/living/carbon/human/necromorph/proc/remove_shield()
 	dodge_shield = 0

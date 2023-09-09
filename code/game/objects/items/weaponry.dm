@@ -697,7 +697,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		playsound(get_turf(src), 'sound/weapons/homerun.ogg', 100, TRUE)
 		homerun_ready = 0
 		return
-	else if(!target.anchored)
+	else if(!target.anchored && target.mob_size < MOB_SIZE_HUMAN)
 		var/whack_speed = (prob(60) ? 1 : 4)
 		target.throw_at(throw_target, rand(1, 2), whack_speed, user, gentle = TRUE) // sorry friends, 7 speed batting caused wounds to absolutely delete whoever you knocked your target into (and said target)
 

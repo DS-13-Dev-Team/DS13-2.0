@@ -17,16 +17,13 @@
 
 #define ABSORB_DAMAGE 10
 #define DAMAGE_TO_BIO_RATIO 0.5
-/datum/biomass_source/corruption_absorbing
+/datum/biomass_source/maw
 	mass_per_tick = 0
 
-/datum/biomass_source/corruption_absorbing/absorb_biomass(delta_time)
-	var/mob/living/human = source
-	var/zone = pick(BODY_ZONE_L_ARM,BODY_ZONE_R_ARM,BODY_ZONE_HEAD,BODY_ZONE_CHEST,BODY_ZONE_L_LEG,BODY_ZONE_R_LEG)
-	var/old_damage = human.get_damage_amount(BRUTE)
-	human.apply_damage(ABSORB_DAMAGE*delta_time, BRUTE, zone)
-	//Make sure we don't get negative biomass
-	return max((human.get_damage_amount(BRUTE) - old_damage) * DAMAGE_TO_BIO_RATIO, 0)
+/datum/biomass_source/maw/absorb_biomass(delta_time)
+	var/obj/structure/necromorph/maw/maw = source
+	for(var/mob/living/target as anything in maw.buckled_mobs)
+
 
 #undef ABSORB_DAMAGE
 #undef DAMAGE_TO_BIO_RATIO

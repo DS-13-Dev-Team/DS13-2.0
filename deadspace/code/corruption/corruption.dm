@@ -156,9 +156,7 @@
 			CRASH("Corruption was processing with state: [isnull(state) ? "NULL" : state]")
 
 /obj/structure/corruption/proc/on_location_entered(atom/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
-	if(isliving(arrived) && !isnecromorph(arrived))
-		arrived.AddComponent(/datum/component/corruption_absorbing, master.marker)
-	else if(istype(arrived, /obj/structure/stairs))
+	if(istype(arrived, /obj/structure/stairs))
 		has_stairs = TRUE
 		update_spread_state()
 

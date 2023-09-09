@@ -81,7 +81,7 @@
 		return
 	var/turf/T = get_turf(A)
 	visionSources[A] = vision_type
-	RegisterSignal(A, COMSIG_PARENT_QDELETING, .proc/onSourceDestroy)
+	RegisterSignal(A, COMSIG_PARENT_QDELETING, PROC_REF(onSourceDestroy))
 	if(T)
 		var/x1 = max(0, T.x - (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
 		var/y1 = max(0, T.y - (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
@@ -108,7 +108,7 @@
 					chunk = generateChunk(x, y, T.z)
 					chunk.safeAdd(eyes)
 	if(movable)
-		RegisterSignal(A, COMSIG_MOVABLE_MOVED, .proc/onSourceMove)
+		RegisterSignal(A, COMSIG_MOVABLE_MOVED, PROC_REF(onSourceMove))
 
 /// Removes a vision source from the visual net
 /datum/markernet/proc/removeVisionSource(atom/A)

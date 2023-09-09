@@ -16,6 +16,7 @@
 
 	.["blood_volume"] = blood_volume
 	.["blood_volume_max"] = BLOOD_VOLUME_NORMAL
+	.["blood_type"] = dna.blood_type
 	.["temperature"] = round(bodytemperature, 0.1)
 	.["brute"] = getBruteLoss()
 	.["burn"] = getFireLoss()

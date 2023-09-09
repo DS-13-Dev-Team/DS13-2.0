@@ -80,7 +80,7 @@
 	animate(user, transform=turn(matrix(), (25*(x_direction*-1))), pixel_y = cached_pixels_y + 16, time = windup_time)
 
 	//Start a timer
-	slam_timer = addtimer(CALLBACK(src, .proc/finish), windup_time, TIMER_STOPPABLE)
+	slam_timer = addtimer(CALLBACK(src, PROC_REF(finish)), windup_time, TIMER_STOPPABLE)
 
 	//While that's running, lets quickly calculate the affected turfs
 	LAZYADD(affected_turfs, epicentre)
