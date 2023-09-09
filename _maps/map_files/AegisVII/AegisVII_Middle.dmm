@@ -210,8 +210,8 @@
 	dir = 4
 	},
 /obj/structure/lattice,
-/turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/turf/open/space/basic,
+/area/space)
 "aeM" = (
 /turf/open/floor/deadspace/random/golf_gray,
 /area/lavaland/surface/outdoors)
@@ -508,7 +508,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/space)
 "ajJ" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/storage)
@@ -1211,7 +1211,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/space)
 "asE" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -2254,8 +2254,8 @@
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
 	dir = 4
 	},
-/turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/turf/open/space/basic,
+/area/space)
 "aHf" = (
 /obj/machinery/exodrone_launcher,
 /turf/open/floor/plating,
@@ -3315,8 +3315,8 @@
 /area/station/commons/dorms)
 "aTi" = (
 /obj/structure/lattice,
-/turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/turf/open/space/basic,
+/area/space)
 "aTk" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/mono,
@@ -3368,7 +3368,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/space)
 "aTL" = (
 /obj/machinery/door/airlock/engineering/glass/critical{
 	heat_proof = 1;
@@ -5291,7 +5291,7 @@
 /obj/structure/lattice,
 /obj/effect/spawner/random/structure/grille,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/space)
 "bqa" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/machinery/door/poddoor/preopen{
@@ -7011,6 +7011,12 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/hallway/primary/central)
+"cGy" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 4
+	},
+/turf/open/misc/asteroid,
+/area/space)
 "cGD" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -8023,6 +8029,10 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/starboard/aft)
+"dIZ" = (
+/obj/effect/spawner/random/structure/grille,
+/turf/open/misc/asteroid,
+/area/space)
 "dJe" = (
 /obj/machinery/autolathe,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -14805,8 +14815,8 @@
 /area/station/engineering/storage/tech)
 "kdE" = (
 /obj/structure/lattice/catwalk,
-/turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/turf/open/space/basic,
+/area/space)
 "kdZ" = (
 /obj/machinery/holopad,
 /turf/open/floor/deadspace/random/maint_center,
@@ -16177,6 +16187,11 @@
 	dir = 8
 	},
 /area/station/hallway/primary/port)
+"lrL" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/marker_beacon/burgundy,
+/turf/open/misc/asteroid,
+/area/space)
 "lrZ" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/ported/lino,
@@ -16363,7 +16378,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/space)
 "lAT" = (
 /obj/structure/table/wood,
 /obj/machinery/fax_machine,
@@ -18359,6 +18374,10 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/deadspace/mono,
 /area/station/service/hydroponics)
+"nAY" = (
+/obj/structure/lattice,
+/turf/open/misc/asteroid,
+/area/space)
 "nBn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/west,
@@ -20166,6 +20185,9 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
+"pqh" = (
+/turf/open/space/basic,
+/area/space)
 "pqO" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -21144,6 +21166,13 @@
 /obj/structure/flora/grass/brown,
 /turf/open/floor/grass,
 /area/station/hallway/primary/fore)
+"qoI" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 4
+	},
+/obj/structure/lattice,
+/turf/open/misc/asteroid,
+/area/space)
 "qoJ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
@@ -21806,6 +21835,9 @@
 /obj/machinery/power/data_terminal,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/security/checkpoint/customs)
+"qZV" = (
+/turf/open/misc/asteroid,
+/area/space)
 "qZY" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -24852,8 +24884,8 @@
 "uef" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/burgundy,
-/turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/turf/open/space/basic,
+/area/space)
 "uej" = (
 /obj/machinery/power/floodlight,
 /obj/effect/turf_decal/stripes/line{
@@ -26253,6 +26285,10 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/mono,
 /area/awaymission/centcom_away/hangar)
+"vAO" = (
+/obj/structure/lattice/catwalk,
+/turf/open/misc/asteroid,
+/area/space)
 "vAU" = (
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/side{
@@ -27741,6 +27777,11 @@
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/dark/textured_edge,
 /area/station/medical/medbay/central)
+"wSH" = (
+/obj/structure/lattice,
+/obj/effect/spawner/random/structure/grille,
+/turf/open/space/basic,
+/area/space)
 "wSZ" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/iron,
@@ -36991,24 +37032,24 @@ apG
 apG
 mlO
 mlO
-oHb
-oHb
-oHb
-oHb
-oHb
+qZV
+qZV
+qZV
+qZV
+qZV
 mlO
 mlO
 mlO
-apG
-apG
-apG
-apG
-apG
-apG
-apG
-apG
-apG
-apG
+mlO
+mlO
+mlO
+mlO
+mlO
+mlO
+mlO
+mlO
+mlO
+mlO
 apG
 wxL
 rfG
@@ -37192,26 +37233,26 @@ mlO
 mlO
 mlO
 mlO
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-apG
-apG
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+qZV
+mlO
+mlO
 wxL
 cde
 adr
@@ -37390,30 +37431,30 @@ apG
 apG
 apG
 mlO
-oHb
-oHb
+qZV
+qZV
 bpZ
 bpZ
 bpZ
 bpZ
 bpZ
 bpZ
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
+pqh
+pqh
+pqh
+pqh
+pqh
+pqh
+pqh
 bpZ
 bpZ
 bpZ
 bpZ
 bpZ
 bpZ
-oHb
-oHb
-apG
+qZV
+qZV
+mlO
 wxL
 pdr
 vDY
@@ -37592,7 +37633,7 @@ apG
 apG
 apG
 mlO
-oHb
+qZV
 bpZ
 lAq
 aTI
@@ -37600,13 +37641,13 @@ lAq
 aTI
 lAq
 aTI
-oHb
-oHb
-oHb
+pqh
+pqh
+pqh
 uef
-oHb
-oHb
-oHb
+pqh
+pqh
+pqh
 lAq
 aTI
 lAq
@@ -37614,8 +37655,8 @@ aTI
 lAq
 aTI
 bpZ
-oHb
-apG
+qZV
+mlO
 wxL
 sHl
 tUQ
@@ -37794,30 +37835,30 @@ apG
 apG
 apG
 mlO
-oHb
+qZV
 bpZ
+qoI
+cGy
+qoI
 aeL
 aHe
 aeL
-aeL
-aHe
-aeL
-oHb
-oHb
-oHb
+pqh
+pqh
+pqh
 kdE
-oHb
-oHb
-oHb
-aeL
-aHe
-aeL
-aeL
-aHe
-aeL
-bpZ
-oHb
-apG
+pqh
+pqh
+pqh
+qoI
+cGy
+qoI
+qoI
+cGy
+qoI
+wSH
+pqh
+mlO
 wxL
 buw
 sUY
@@ -37996,11 +38037,11 @@ apG
 apG
 apG
 mlO
-oHb
-bpZ
+qZV
+wSH
 aeL
-aHe
-aeL
+cGy
+qoI
 aeL
 aHe
 aeL
@@ -38015,11 +38056,11 @@ aeL
 aHe
 aeL
 aeL
-aHe
-aeL
-bpZ
-oHb
-apG
+cGy
+qoI
+wSH
+pqh
+mlO
 wxL
 wxL
 wxL
@@ -38198,31 +38239,31 @@ apG
 apG
 apG
 mlO
-oHb
-oHb
+qZV
+pqh
+aeL
+cGy
+qoI
 aeL
 aHe
 aeL
-aeL
-aHe
-aeL
-oHb
-oHb
-oHb
+pqh
+pqh
+pqh
 kdE
-oHb
-oHb
-oHb
+pqh
+pqh
+pqh
 aeL
 aHe
 aeL
 aeL
-aHe
-aeL
-oHb
-oHb
-apG
-apG
+cGy
+qoI
+pqh
+pqh
+mlO
+mlO
 wxL
 rrn
 rNS
@@ -38400,31 +38441,31 @@ apG
 apG
 apG
 mlO
-oHb
+qZV
 bpZ
+qoI
+cGy
+qoI
 aeL
 aHe
 aeL
-aeL
-aHe
-aeL
-oHb
-oHb
-oHb
+pqh
+pqh
+pqh
 kdE
-oHb
-oHb
-oHb
+pqh
+pqh
+pqh
 aeL
 aHe
 aeL
 aeL
-aHe
+cGy
 aeL
-bpZ
-oHb
-oHb
-apG
+wSH
+pqh
+qZV
+mlO
 wxL
 kzf
 wZv
@@ -38602,11 +38643,11 @@ apG
 apG
 apG
 mlO
-oHb
-bpZ
+qZV
+wSH
 aeL
 aHe
-aeL
+qoI
 aeL
 aHe
 aeL
@@ -38617,16 +38658,16 @@ uef
 aTi
 aTi
 aTi
+qoI
+cGy
+qoI
+qoI
+cGy
 aeL
-aHe
-aeL
-aeL
-aHe
-aeL
-bpZ
+wSH
 aTi
-oHb
-apG
+qZV
+mlO
 suP
 nQy
 suP
@@ -38804,31 +38845,31 @@ apG
 apG
 apG
 mlO
-oHb
-bpZ
+qZV
+wSH
+aeL
+aHe
+qoI
 aeL
 aHe
 aeL
+qZV
+qZV
+qZV
+vAO
+qZV
+qZV
+qZV
+qoI
+cGy
+qoI
+qoI
+cGy
 aeL
-aHe
-aeL
-oHb
-oHb
-oHb
-kdE
-oHb
-oHb
-oHb
-aeL
-aHe
-aeL
-aeL
-aHe
-aeL
-bpZ
+wSH
 uef
-oHb
-apG
+pqh
+mlO
 suP
 imW
 sAL
@@ -39006,31 +39047,31 @@ apG
 apG
 apG
 mlO
-oHb
-oHb
+pqh
+qZV
+aeL
+aHe
+qoI
 aeL
 aHe
 aeL
+qZV
+qZV
+qZV
+vAO
+qZV
+qZV
+qZV
+qoI
+cGy
+qoI
+qoI
+cGy
 aeL
-aHe
-aeL
-oHb
-oHb
-oHb
-kdE
-oHb
-oHb
-oHb
-aeL
-aHe
-aeL
-aeL
-aHe
-aeL
-oHb
+pqh
 aTi
-oHb
-apG
+pqh
+mlO
 suP
 mRH
 tjN
@@ -39208,31 +39249,31 @@ apG
 apG
 apG
 mlO
-oHb
-qJv
-aeL
+pqh
+dIZ
+qoI
 aHe
-aeL
-aeL
-aHe
-aeL
-aTi
-aTi
-aTi
-uef
-aTi
-aTi
-aTi
-aeL
-aHe
-aeL
-aeL
-aHe
-aeL
-oHb
-aTi
-oHb
-apG
+qoI
+qoI
+cGy
+qoI
+nAY
+nAY
+nAY
+lrL
+nAY
+nAY
+nAY
+qoI
+cGy
+qoI
+qoI
+cGy
+qoI
+qZV
+nAY
+pqh
+mlO
 suP
 suP
 suP
@@ -39410,21 +39451,21 @@ apG
 apG
 apG
 mlO
-oHb
-qJv
+qZV
+dIZ
 ajt
 ajt
 ajt
 ajt
 ajt
 ajt
-oHb
-oHb
-oHb
-kdE
-oHb
-oHb
-oHb
+qZV
+qZV
+qZV
+vAO
+qZV
+qZV
+qZV
 ajt
 ajt
 ajt
@@ -39432,9 +39473,9 @@ ajt
 ajt
 ajt
 asB
-aTi
-oHb
-apG
+nAY
+pqh
+mlO
 suP
 lyl
 hsA
@@ -39612,7 +39653,7 @@ apG
 apG
 apG
 mlO
-oHb
+qZV
 cfj
 aIf
 aIf
@@ -39635,8 +39676,8 @@ aIf
 aIf
 aFN
 cfj
-apG
-apG
+mlO
+mlO
 suP
 aaN
 bgG
