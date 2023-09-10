@@ -194,7 +194,20 @@
 	value = 3.9
 
 /datum/reagent/medicine/dermaline/affect_blood(mob/living/carbon/C, removed)
-	C.adjustFireLoss(-12 * removed, updating_health = FALSE)
+	C.adjustFireLoss(-6 * removed, updating_health = FALSE)
+	return TRUE
+
+/datum/reagent/medicine/dylovene
+	name = "Dylovene"
+	description = "Dylovene is a broad-spectrum antitoxin used to neutralize poisons before they can do significant harm."
+	taste_description = "a roll of gauze"
+	reagent_state = LIQUID
+	color = "#00a000"
+	value = 2.1
+
+/datum/reagent/medicine/dylovene/affect_blood(mob/living/carbon/C, removed)
+	APPLY_CHEM_EFFECT(C, CE_ANTITOX, 1)
+	C.adjustToxLoss(-5 * removed, FALSE)
 	return TRUE
 
 /datum/reagent/medicine/dexalin
