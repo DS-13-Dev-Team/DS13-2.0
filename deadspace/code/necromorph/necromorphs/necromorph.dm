@@ -128,66 +128,6 @@
 
 	marker?.remove_necro(src)
 
-// VENTCRAWLING
-// Handles the entrance and exit on ventcrawling
-// Copy paste of the /mob/living/proc/handle_ventcrawl()
-// I've changed do_after() time and remove var/required_nudity
-/mob/living/carbon/human/necromorph/handle_ventcrawl(obj/machinery/atmospherics/components/ventcrawl_target)
-	// Cache the vent_movement bitflag var from atmos machineries
-	var/vent_movement = ventcrawl_target.vent_movement
-
-	if(!Adjacent(ventcrawl_target))
-		return
-	if(!HAS_TRAIT(src, TRAIT_VENTCRAWLER_NUDE) && !HAS_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS))
-		return
-	if(stat)
-		to_chat(src, span_warning("You must be conscious to do this!"))
-		return
-	if(HAS_TRAIT(src, TRAIT_IMMOBILIZED))
-		to_chat(src, span_warning("You currently can't move into the vent!"))
-		return
-	if(HAS_TRAIT(src, TRAIT_HANDS_BLOCKED))
-		to_chat(src, span_warning("You need to be able to use your hands to ventcrawl!"))
-		return
-	if(has_buckled_mobs())
-		to_chat(src, span_warning("You can't vent crawl with other creatures on you!"))
-		return
-	if(buckled)
-		to_chat(src, span_warning("You can't vent crawl while buckled!"))
-		return
-	if(ventcrawl_target.welded)
-		to_chat(src, span_warning("You can't crawl around a welded vent!"))
-		return
-
-	if(vent_movement & VENTCRAWL_ENTRANCE_ALLOWED)
-		//Handle the exit here
-		if(HAS_TRAIT(src, TRAIT_MOVE_VENTCRAWLING) && istype(loc, /obj/machinery/atmospherics) && movement_type & VENTCRAWLING)
-			visible_message(span_notice("[src] begins climbing out from the ventilation system...") ,span_notice("You begin climbing out from the ventilation system..."))
-			if(!client)
-				return
-			if(!do_after(src, vent_exit_speed, target = ventcrawl_target.loc))
-				return
-			visible_message(span_notice("[src] scrambles out from the ventilation ducts!"),span_notice("You scramble out from the ventilation ducts."))
-			forceMove(ventcrawl_target.loc)
-			REMOVE_TRAIT(src, TRAIT_MOVE_VENTCRAWLING, VENTCRAWLING_TRAIT)
-			update_pipe_vision()
-
-		//Entrance here
-		else
-			var/datum/pipeline/vent_parent = ventcrawl_target.parents[1]
-			if(vent_parent && (vent_parent.members.len || vent_parent.other_atmos_machines))
-				flick_overlay_static(image('icons/effects/vent_indicator.dmi', "arrow", ABOVE_MOB_LAYER, dir = get_dir(src.loc, ventcrawl_target.loc)), ventcrawl_target, 2 SECONDS)
-				visible_message(span_notice("[src] begins climbing into the ventilation system...") ,span_notice("You begin climbing into the ventilation system..."))
-				if(!client)
-					return
-				if(!do_after(src, vent_enter_speed, target = ventcrawl_target))
-					return
-				flick_overlay_static(image('icons/effects/vent_indicator.dmi', "insert", ABOVE_MOB_LAYER), ventcrawl_target, 1 SECONDS)
-				visible_message(span_notice("[src] scrambles into the ventilation ducts!"),span_notice("You climb into the ventilation ducts."))
-				move_into_vent(ventcrawl_target)
-			else
-				to_chat(src, span_warning("This ventilation duct is not connected to anything!"))
-
 /mob/living/carbon/human/necromorph/create_dna()
 	dna = new /datum/dna(src)
 	dna.species = new necro_species

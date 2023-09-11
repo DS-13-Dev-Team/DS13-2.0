@@ -1,29 +1,23 @@
-#define MAW_DAMAGE_PER_SECOND 15
+#define MAW_DAMAGE_PER_SECOND 4
 
 // Human biomass = their limbs
 /obj/structure/necromorph/maw
 	name = "maw"
 	icon = 'deadspace/icons/effects/corruption.dmi'
 	icon_state = "maw"
+	density = TRUE
 	max_integrity = 30
 	can_buckle = TRUE
 	max_buckled_mobs = INFINITY
+	buckle_lying = TRUE
 	// Biomass that will be slowly given to the marker
 	var/processing_biomass = 0
-	var/obj/structure/marker/marker
-	var/datum/biomass_source/our_source
 
 /obj/structure/necromorph/maw/Initialize(mapload, obj/structure/marker/marker)
 	.=..()
 	if(!marker)
 		return INITIALIZE_HINT_QDEL
-	src.marker = marker
-
-/obj/structure/necromorph/maw/Destroy()
-	marker?.remove_biomass_source(our_source)
-	our_source = null
-	marker = null
-	return ..()
+	marker.add_biomass_source(/datum/biomass_source/maw, src)
 
 /// Doesn't do any ANY safety checks. Use with caution
 /obj/structure/necromorph/maw/proc/bite_human(mob/living/carbon/human/target, delta_time)
@@ -31,7 +25,7 @@
 		var/obj/item/bodypart/part = target.bodyparts[1]
 		processing_biomass += part.biomass * 1.2
 		qdel(target)
-		continue
+		return
 
 	var/obj/item/bodypart/part = pick(target.bodyparts)
 	var/iteration = 0
@@ -40,16 +34,22 @@
 
 	if(iteration >= 5)
 		stack_trace("Maw tried to bite a human but couldn't find a non-chest bodypart")
-		continue
+		return
 
 	// If damage is above 80%
-	if(part.get_damage() >= part.max_damage * 0.8)
-		processing_biomass += part.biomass * 1.2
+	if(part.get_damage() >= (part.max_damage * LIMB_DISMEMBERMENT_PERCENT) - 1)
+		processing_biomass += part.biomass * 0.1
 		part.drop_limb(FALSE, TRUE)
 		qdel(part)
 	else
-		processing_biomass += part.biomass * 0.1
-		part.receive_damage(MAW_DAMAGE_PER_SECOND * delta_time, 0, sharpness = SHARP_EDGED|SHARP_POINTY)
+		processing_biomass += part.biomass * 1.2
+		// Damage shouldn't be above or equal to 80%
+		part.receive_damage(
+			min(
+				MAW_DAMAGE_PER_SECOND * delta_time,
+				(part.max_damage * LIMB_DISMEMBERMENT_PERCENT) - part.get_damage() - 1
+			), 0, sharpness = SHARP_EDGED|SHARP_POINTY
+		)
 
 /// Doesn't do any ANY safety checks. Use with caution
 /obj/structure/necromorph/maw/proc/bite_living(mob/living/target, delta_time)
@@ -68,13 +68,12 @@
 		return FALSE
 	return TRUE
 
-
 /obj/structure/necromorph/maw/user_buckle_mob(mob/living/M, mob/user, check_loc)
-	if(!isnecromorph(M))
+	if(isnecromorph(M))
 		to_chat(user, span_warning("[src] refuses to consume [M]!"))
 		return FALSE
 
-	if(!do_after_mob(user, M, 2 SECONDS, IGNORE_HELD_ITEM|DO_PUBLIC, TRUE, CALLBACK(src, PROC_REF(buckle_mob_check), M)))
+	if(!do_after_mob(user, M, 5 SECONDS, IGNORE_HELD_ITEM|DO_PUBLIC, TRUE, CALLBACK(src, PROC_REF(buckle_mob_check), M)))
 		return
 
 	return ..()
@@ -89,8 +88,9 @@
 /obj/structure/necromorph/maw/user_unbuckle_mob(mob/living/buckled_mob, mob/user)
 	if(buckled_mob.buckled != src || !user.CanReach(buckled_mob))
 		return
+	var/time_to_unbuckle = (buckled_mob == user) ? 7 SECONDS : 5 SECONDS
 	if(!do_after_mob(
-		user, buckled_mob, 2 SECONDS, IGNORE_HELD_ITEM|DO_PUBLIC, TRUE,
+		user, buckled_mob, time_to_unbuckle, IGNORE_HELD_ITEM|DO_PUBLIC, TRUE,
 		CALLBACK(src, PROC_REF(still_buckled), buckled_mob)
 		))
 		return
@@ -98,14 +98,6 @@
 
 /obj/structure/necromorph/maw/proc/still_buckled(mob/living/buckled_mob)
 	return buckled_mob.buckled == src
-
-/obj/structure/necromorph/maw/post_buckle_mob(mob/living/M)
-	if(length(buckled_mobs) <= 1)
-		our_source = marker.add_biomass_source(/datum/biomass_source/maw, src)
-
-/obj/structure/necromorph/maw/post_unbuckle_mob(mob/living/M)
-	if(!length(buckled_mobs))
-		marker.remove_biomass_source(our_source)
 
 /obj/structure/necromorph/maw/relaymove(mob/living/user, direction)
 	if(SEND_SIGNAL(src, COMSIG_ATOM_RELAYMOVE, user, direction) & COMSIG_BLOCK_RELAYMOVE)

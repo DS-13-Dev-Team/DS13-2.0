@@ -10,13 +10,6 @@
 	user.do_attack_animation(src, user.attack_effect)
 	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
 
-/obj/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
-	if(!uses_integrity || (!user.melee_damage_upper && !dealt_damage)) //No damage
-		return FALSE
-	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper) * user.obj_damage_multiplier
-	user.do_attack_animation(src, user.attack_effect)
-	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
-
 /mob/living/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)

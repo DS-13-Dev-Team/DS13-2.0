@@ -66,6 +66,7 @@
 
 /datum/action/cooldown/necro/scream/proc/remove_stun()
 	set waitfor = FALSE
+
 	sleep(1)
 	UnregisterSignal(owner, COMSIG_MOVABLE_PRE_MOVE)
 

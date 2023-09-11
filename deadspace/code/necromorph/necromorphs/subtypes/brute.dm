@@ -52,7 +52,6 @@
 	biomass_spent_required = 950
 	melee_damage_lower = 24
 	melee_damage_upper = 28
-	obj_damage_multiplier = 2
 	max_health = 510
 	necro_armor = list(ARMOR_FRONT = 30, ARMOR_FLANK = 20, ARMOR_BACK = 10, CURL_ARMOR_MULT = 1.5, ARMOR_PROTECTION = 300)
 	actions = list(
