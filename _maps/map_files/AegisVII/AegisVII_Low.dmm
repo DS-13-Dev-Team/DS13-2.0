@@ -2840,6 +2840,10 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/maintenance/fore/lesser)
+"xU" = (
+/obj/item/flashlight/lantern,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "xW" = (
 /mob/living/simple_animal/hostile/rat,
 /turf/open/floor/iron/dark,
@@ -34733,7 +34737,7 @@ zp
 bf
 bf
 Gq
-hn
+xU
 mm
 Bh
 hn
@@ -34937,7 +34941,7 @@ Gq
 hn
 hn
 hn
-hn
+Bh
 hn
 hn
 cE
