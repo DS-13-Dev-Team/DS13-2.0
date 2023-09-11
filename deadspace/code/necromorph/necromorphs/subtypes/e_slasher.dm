@@ -48,6 +48,13 @@
 		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_3.ogg'
 	)
 
+/datum/species/necromorph/slasher/enhanced/get_scream_sound(mob/living/carbon/human/necromorph/slasher/enhanced)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_pain_extreme.ogg',
+		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_3.ogg',
+		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_long_5.ogg',
+	)
+
 /datum/action/cooldown/necro/charge/slasher/enhanced
 	cooldown_time = 20 SECONDS
 	charge_delay = 0.75 SECONDS

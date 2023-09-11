@@ -40,6 +40,14 @@
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/slasher,
 	)
 
+/datum/species/necromorph/slasher/get_scream_sound(mob/living/carbon/human/necromorph/slasher)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/slasher/slasher_shout_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/slasher/slasher_shout_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/slasher/slasher_shout_3.ogg',
+		'deadspace/sound/effects/creatures/necromorph/slasher/slasher_shout_4.ogg',
+	)
+
 /datum/action/cooldown/necro/charge/slasher
 	cooldown_time = 12 SECONDS
 	charge_delay = 1 SECONDS

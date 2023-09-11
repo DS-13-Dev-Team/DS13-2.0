@@ -44,6 +44,12 @@
 		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_death_3.ogg'
 	)
 
+/datum/species/necromorph/spitter/get_scream_sound(mob/living/carbon/human/necromorph/spitter)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_pain_extreme.ogg',
+		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_pain_extreme_2.ogg',
+	)
+
 /datum/action/cooldown/necro/shoot/spitter_longshoot
 	name = "Long shot"
 	desc = "A powerful projectile for longrange shooting."

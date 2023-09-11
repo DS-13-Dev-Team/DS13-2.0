@@ -31,3 +31,11 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/twitcher,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/twitcher,
 	)
+
+/datum/species/necromorph/twitcher/get_scream_sound(mob/living/carbon/human/necromorph/twitcher)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/twitcher/twitcher_shout_long_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/twitcher/twitcher_shout_long_5.ogg',
+		'deadspace/sound/effects/creatures/necromorph/twitcher/twitcher_shout_long_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/twitcher/twitcher_shout_1.ogg',
+	)
