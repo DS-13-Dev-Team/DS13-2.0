@@ -208,7 +208,7 @@
 
 /datum/reagent/medicine/dylovene/affect_blood(mob/living/carbon/C, removed)
 	APPLY_CHEM_EFFECT(C, CE_ANTITOX, 1)
-	C.adjustToxLoss(-1.5 * removed, FALSE)
+	C.adjustToxLoss(-5 * removed, FALSE)
 	return TRUE
 
 /datum/reagent/medicine/dexalin

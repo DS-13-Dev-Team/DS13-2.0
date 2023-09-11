@@ -210,8 +210,8 @@
 	dir = 4
 	},
 /obj/structure/lattice,
-/turf/open/space/basic,
-/area/space)
+/turf/open/misc/asteroid,
+/area/lavaland/surface/outdoors)
 "aeM" = (
 /turf/open/floor/deadspace/random/golf_gray,
 /area/lavaland/surface/outdoors)
@@ -508,7 +508,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/space)
+/area/lavaland/surface/outdoors)
 "ajJ" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/storage)
@@ -1211,7 +1211,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/space)
+/area/lavaland/surface/outdoors)
 "asE" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -2255,7 +2255,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/space)
+/area/lavaland/surface/outdoors)
 "aHf" = (
 /obj/machinery/exodrone_launcher,
 /turf/open/floor/plating,
@@ -3315,7 +3315,7 @@
 "aTi" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/space)
+/area/lavaland/surface/outdoors)
 "aTk" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/mono,
@@ -3346,11 +3346,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/grimy,
 /area/station/tcommsat/computer)
-"aTu" = (
-/obj/structure/lattice,
-/obj/effect/spawner/random/structure/grille,
-/turf/open/space/basic,
-/area/space)
 "aTD" = (
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -3372,7 +3367,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/space)
+/area/lavaland/surface/outdoors)
 "aTL" = (
 /obj/machinery/door/airlock/engineering/glass/critical{
 	heat_proof = 1;
@@ -5295,7 +5290,7 @@
 /obj/structure/lattice,
 /obj/effect/spawner/random/structure/grille,
 /turf/open/misc/asteroid,
-/area/space)
+/area/lavaland/surface/outdoors)
 "bqa" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/machinery/door/poddoor/preopen{
@@ -10196,9 +10191,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/deadspace/bathroom,
 /area/station/commons/toilet/restrooms)
-"fNx" = (
-/turf/open/misc/asteroid,
-/area/space)
 "fNL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -11603,9 +11595,6 @@
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/starboard/aft)
-"gYA" = (
-/turf/open/space/basic,
-/area/space)
 "gZa" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -13080,13 +13069,6 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
-"ipP" = (
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 4
-	},
-/obj/structure/lattice,
-/turf/open/misc/asteroid,
-/area/space)
 "ipQ" = (
 /obj/structure/stairs/south,
 /turf/open/floor/iron/dark/side{
@@ -14820,10 +14802,6 @@
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
-"kdE" = (
-/obj/structure/lattice/catwalk,
-/turf/open/misc/asteroid,
-/area/space)
 "kdZ" = (
 /obj/machinery/holopad,
 /turf/open/floor/deadspace/random/maint_center,
@@ -16381,7 +16359,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/space)
+/area/lavaland/surface/outdoors)
 "lAT" = (
 /obj/structure/table/wood,
 /obj/machinery/fax_machine,
@@ -16677,7 +16655,7 @@
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/burgundy,
 /turf/open/misc/asteroid,
-/area/space)
+/area/lavaland/surface/outdoors)
 "lPw" = (
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/commons/dorms/laundry)
@@ -18762,10 +18740,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/cryo)
-"nTJ" = (
-/obj/effect/spawner/random/structure/grille,
-/turf/open/misc/asteroid,
-/area/space)
 "nTL" = (
 /obj/structure/rack,
 /obj/structure/window/reinforced/spawner/north,
@@ -24424,7 +24398,7 @@
 "tIc" = (
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/space)
+/area/lavaland/surface/outdoors)
 "tIC" = (
 /obj/effect/turf_decal/loading_area,
 /obj/machinery/flasher/directional/west{
@@ -24896,7 +24870,7 @@
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/burgundy,
 /turf/open/space/basic,
-/area/space)
+/area/lavaland/surface/outdoors)
 "uej" = (
 /obj/machinery/power/floodlight,
 /obj/effect/turf_decal/stripes/line{
@@ -28786,12 +28760,6 @@
 /obj/machinery/light/small/red/directional/north,
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
-"xPn" = (
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 4
-	},
-/turf/open/space/basic,
-/area/space)
 "xPx" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -28799,8 +28767,8 @@
 /area/station/maintenance/starboard/aft)
 "xPP" = (
 /obj/structure/lattice/catwalk,
-/turf/open/space/basic,
-/area/space)
+/turf/open/misc/asteroid,
+/area/lavaland/surface/outdoors)
 "xPR" = (
 /mob/living/simple_animal/mouse,
 /obj/machinery/light/small/directional/west,
@@ -37058,11 +37026,11 @@ apG
 apG
 mlO
 mlO
-fNx
-fNx
-fNx
-fNx
-fNx
+oHb
+oHb
+oHb
+oHb
+oHb
 mlO
 mlO
 mlO
@@ -37259,24 +37227,24 @@ mlO
 mlO
 mlO
 mlO
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
 mlO
 mlO
 wxL
@@ -37457,29 +37425,29 @@ apG
 apG
 apG
 mlO
-fNx
-fNx
+oHb
+oHb
 bpZ
 bpZ
 bpZ
 bpZ
 bpZ
 bpZ
-gYA
-gYA
-gYA
-gYA
-gYA
-gYA
-gYA
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
 bpZ
 bpZ
 bpZ
 bpZ
 bpZ
 bpZ
-fNx
-fNx
+oHb
+oHb
 mlO
 wxL
 pdr
@@ -37659,7 +37627,7 @@ apG
 apG
 apG
 mlO
-fNx
+oHb
 bpZ
 lAq
 aTI
@@ -37667,13 +37635,13 @@ lAq
 aTI
 lAq
 aTI
-gYA
-gYA
-gYA
-uef
-gYA
-gYA
-gYA
+oHb
+oHb
+oHb
+lPj
+oHb
+oHb
+oHb
 lAq
 aTI
 lAq
@@ -37681,7 +37649,7 @@ aTI
 lAq
 aTI
 bpZ
-fNx
+oHb
 mlO
 wxL
 sHl
@@ -37861,29 +37829,29 @@ apG
 apG
 apG
 mlO
-fNx
+oHb
 bpZ
-ipP
+aeL
 aHe
-ipP
 aeL
-xPn
 aeL
-gYA
-gYA
-gYA
+aHe
+aeL
+oHb
+oHb
+oHb
 xPP
-gYA
-gYA
-gYA
-ipP
+oHb
+oHb
+oHb
+aeL
 aHe
-ipP
-ipP
+aeL
+aeL
 aHe
-ipP
-aTu
-gYA
+aeL
+bpZ
+oHb
 mlO
 wxL
 buw
@@ -38063,29 +38031,29 @@ apG
 apG
 apG
 mlO
-fNx
-aTu
+oHb
+bpZ
 aeL
 aHe
-ipP
-aeL
-xPn
-aeL
-aTi
-aTi
-aTi
-uef
-aTi
-aTi
-aTi
-aeL
-xPn
 aeL
 aeL
 aHe
-ipP
-aTu
-gYA
+aeL
+tIc
+tIc
+tIc
+lPj
+tIc
+tIc
+tIc
+aeL
+aHe
+aeL
+aeL
+aHe
+aeL
+bpZ
+oHb
 mlO
 wxL
 wxL
@@ -38265,29 +38233,29 @@ apG
 apG
 apG
 mlO
-fNx
-gYA
+oHb
+oHb
 aeL
 aHe
-ipP
 aeL
-xPn
 aeL
-gYA
-gYA
-gYA
+aHe
+aeL
+oHb
+oHb
+oHb
 xPP
-gYA
-gYA
-gYA
+oHb
+oHb
+oHb
 aeL
-xPn
+aHe
 aeL
 aeL
 aHe
-ipP
-gYA
-gYA
+aeL
+oHb
+oHb
 mlO
 mlO
 wxL
@@ -38467,30 +38435,30 @@ apG
 apG
 apG
 mlO
-fNx
+oHb
 bpZ
-ipP
+aeL
 aHe
-ipP
 aeL
-xPn
 aeL
-gYA
-gYA
-gYA
+aHe
+aeL
+oHb
+oHb
+oHb
 xPP
-gYA
-gYA
-gYA
+oHb
+oHb
+oHb
 aeL
-xPn
+aHe
 aeL
 aeL
 aHe
 aeL
-aTu
-gYA
-fNx
+bpZ
+oHb
+oHb
 mlO
 wxL
 kzf
@@ -38669,30 +38637,30 @@ apG
 apG
 apG
 mlO
-fNx
-aTu
+oHb
+bpZ
 aeL
-xPn
-ipP
+aHe
 aeL
-xPn
 aeL
-aTi
-aTi
-aTi
+aHe
+aeL
+tIc
+tIc
+tIc
 uef
 aTi
-aTi
-aTi
-ipP
-aHe
-ipP
-ipP
+tIc
+tIc
+aeL
 aHe
 aeL
-aTu
-aTi
-fNx
+aeL
+aHe
+aeL
+bpZ
+tIc
+oHb
 mlO
 suP
 nQy
@@ -38871,30 +38839,30 @@ apG
 apG
 apG
 mlO
-fNx
-aTu
+oHb
+bpZ
 aeL
-xPn
-ipP
-aeL
-xPn
-aeL
-fNx
-fNx
-fNx
-kdE
-fNx
-fNx
-fNx
-ipP
-aHe
-ipP
-ipP
 aHe
 aeL
-aTu
-uef
-gYA
+aeL
+aHe
+aeL
+oHb
+oHb
+oHb
+xPP
+oHb
+oHb
+oHb
+aeL
+aHe
+aeL
+aeL
+aHe
+aeL
+bpZ
+lPj
+oHb
 mlO
 suP
 imW
@@ -39073,30 +39041,30 @@ apG
 apG
 apG
 mlO
-gYA
-fNx
+oHb
+oHb
 aeL
-xPn
-ipP
-aeL
-xPn
-aeL
-fNx
-fNx
-fNx
-kdE
-fNx
-fNx
-fNx
-ipP
-aHe
-ipP
-ipP
 aHe
 aeL
-gYA
-aTi
-gYA
+aeL
+aHe
+aeL
+oHb
+oHb
+oHb
+xPP
+oHb
+oHb
+oHb
+aeL
+aHe
+aeL
+aeL
+aHe
+aeL
+oHb
+tIc
+oHb
 mlO
 suP
 mRH
@@ -39275,14 +39243,14 @@ apG
 apG
 apG
 mlO
-gYA
-nTJ
-ipP
-xPn
-ipP
-ipP
+oHb
+qJv
+aeL
 aHe
-ipP
+aeL
+aeL
+aHe
+aeL
 tIc
 tIc
 tIc
@@ -39290,15 +39258,15 @@ lPj
 tIc
 tIc
 tIc
-ipP
+aeL
 aHe
-ipP
-ipP
+aeL
+aeL
 aHe
-ipP
-fNx
+aeL
+oHb
 tIc
-gYA
+oHb
 mlO
 suP
 suP
@@ -39477,21 +39445,21 @@ apG
 apG
 apG
 mlO
-fNx
-nTJ
+oHb
+qJv
 ajt
 ajt
 ajt
 ajt
 ajt
 ajt
-fNx
-fNx
-fNx
-kdE
-fNx
-fNx
-fNx
+oHb
+oHb
+oHb
+xPP
+oHb
+oHb
+oHb
 ajt
 ajt
 ajt
@@ -39500,7 +39468,7 @@ ajt
 ajt
 asB
 tIc
-gYA
+oHb
 mlO
 suP
 lyl
@@ -39679,7 +39647,7 @@ apG
 apG
 apG
 mlO
-fNx
+oHb
 cfj
 aIf
 aIf
@@ -42978,7 +42946,7 @@ nBu
 cdk
 wes
 cdk
-cdk
+yfr
 cdk
 cdk
 aJu

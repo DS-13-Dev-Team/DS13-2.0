@@ -4752,6 +4752,8 @@
 #include "deadspace\code\modules\clothing\rigs\patron_faction\flesh.dm"
 #include "deadspace\code\modules\clothing\rigs\patron_faction\forged.dm"
 #include "deadspace\code\modules\clothing\rigs\patron_faction\hacker.dm"
+#include "deadspace\code\modules\clothing\rigs\patron_faction\intermediate_cobra.dm"
+#include "deadspace\code\modules\clothing\rigs\patron_faction\intermediate_cowboy.dm"
 #include "deadspace\code\modules\clothing\rigs\patron_faction\intermediate_lone_survivor.dm"
 #include "deadspace\code\modules\clothing\rigs\patron_faction\knight.dm"
 #include "deadspace\code\modules\clothing\rigs\patron_faction\legacy_venture.dm"

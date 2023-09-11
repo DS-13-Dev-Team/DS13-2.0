@@ -35,8 +35,6 @@
   yyzsong:
   - rscadd: Chemistry gets a grinder and plasma by default
   - qol: updates beaker transfer amounts for the multiple-of-sixtyening.
-<<<<<<< HEAD
-=======
 2023-09-04:
   Kapu1178:
   - qol: Updated the changelog to include Daedalus contributors.
@@ -54,4 +52,9 @@
       get too close. Security has a private hog.
   - rscdel: Sgt. Araneus and Paperwork have been sent off to kindly old spaceman's
       farm, where they will happily live out the rest of their natural lives.
->>>>>>> master
+2023-09-11:
+  Kapu1178:
+  - balance: Buffs Dylovene's heal per unit from 1.5 to 5
+  Ketrai:
+  - rscadd: Cobra rig (patreon)
+  - rscadd: Cowboy rig (patreon)
