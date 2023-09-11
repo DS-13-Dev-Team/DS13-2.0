@@ -27,6 +27,7 @@
 /datum/action/cooldown/necro/slam/Activate(turf/target)
 	StartCooldown()
 	SlamTarget(target)
+	return TRUE
 
 /datum/action/cooldown/necro/slam/proc/SlamTarget(turf/target)
 	set waitfor = FALSE
@@ -81,7 +82,14 @@
 			continue
 		for(var/mob/living/living in T)
 			living.Knockdown(3 SECONDS)
-		SSexplosions.medturf += T
+		if(isclosedturf(T))
+			SSexplosions.medturf += T
+		else
+			SSexplosions.lowturf += T
+			for(var/atom/A in T)
+				//We dont want brute to destroy this stuff
+				if(!istype(A, /obj/machinery/atmospherics/pipe) && !istype(A, /obj/structure/cable))
+					SSexplosions.med_mov_atom += A
 
 	sleep(1)
 	playsound(target, 'deadspace/sound/weapons/heavysmash.ogg', 100, 1, 20,20)
@@ -94,7 +102,5 @@
 	REMOVE_TRAIT(owner, TRAIT_INCAPACITATED, src)
 	REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, src)
 	REMOVE_TRAIT(owner, TRAIT_HANDS_BLOCKED, src)
-
-	return TRUE
 
 #undef WINDUP_TIME

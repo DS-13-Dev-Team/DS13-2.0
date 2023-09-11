@@ -9,7 +9,7 @@
 	max_integrity = 30
 	can_buckle = TRUE
 	max_buckled_mobs = INFINITY
-	buckle_lying = TRUE
+	buckle_lying = 270
 	// Biomass that will be slowly given to the marker
 	var/processing_biomass = 0
 
@@ -18,6 +18,10 @@
 	if(!marker)
 		return INITIALIZE_HINT_QDEL
 	marker.add_biomass_source(/datum/biomass_source/maw, src)
+
+/obj/structure/necromorph/maw/update_icon_state()
+	..()
+	icon_state = length(buckled_mobs) ? "maw_active" : "maw"
 
 /// Doesn't do any ANY safety checks. Use with caution
 /obj/structure/necromorph/maw/proc/bite_human(mob/living/carbon/human/target, delta_time)
@@ -106,5 +110,20 @@
 		return
 	unbuckle_mob(user, TRUE)
 
+/obj/structure/necromorph/maw/post_buckle_mob(mob/living/M)
+	if(length(buckled_mobs) >= 1)
+		update_icon(UPDATE_ICON_STATE)
+
+/obj/structure/necromorph/maw/post_unbuckle_mob(mob/living/M)
+	if(!length(buckled_mobs))
+		update_icon(UPDATE_ICON_STATE)
+
+/datum/action/cooldown/necro/corruption/maw
+	name = "maw"
+	desc = "It acts as a corpose disposal location slowly devouring any corpses put inside. Drag-n-drop the body for it to start consuming the body."
+	button_icon_state = "maw"
+	place_structure = /obj/structure/necromorph/maw
+	cost = 40
+	marker_only = TRUE
 
 #undef MAW_DAMAGE_PER_SECOND

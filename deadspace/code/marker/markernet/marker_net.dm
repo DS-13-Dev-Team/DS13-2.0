@@ -83,6 +83,7 @@
 	visionSources[A] = vision_type
 	RegisterSignal(A, COMSIG_PARENT_QDELETING, PROC_REF(onSourceDestroy))
 	if(T)
+		var/list/visible_to_atom = A.can_see_marker()
 		var/x1 = max(0, T.x - (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
 		var/y1 = max(0, T.y - (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
 		var/x2 = min(world.maxx, T.x + (CHUNK_SIZE / 2)) & ~(CHUNK_SIZE - 1)
@@ -91,10 +92,9 @@
 			for(var/y = y1 to y2 step CHUNK_SIZE)
 				var/datum/markerchunk/chunk = chunkGenerated(x, y, T.z)
 				if(chunk)
-					// We don't queue here to spread the load between different ticks
 					var/list/visible = list()
 					chunk.visionSources[A] = visible
-					for(var/turf/vis_turf as anything in (A.can_see_marker() & chunk.turfs))
+					for(var/turf/vis_turf as anything in (visible_to_atom & chunk.turfs))
 						visible += vis_turf
 						chunk.visibleTurfs |= vis_turf
 						chunk.active_masks |= chunk.turfs[vis_turf]
