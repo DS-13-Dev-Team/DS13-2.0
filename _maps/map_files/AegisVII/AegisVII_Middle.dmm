@@ -1066,7 +1066,8 @@
 /area/station/medical/storage)
 "aqX" = (
 /mob/living/simple_animal/hostile/lizard/wags_his_tail{
-	name = "Beth"
+	name = "Francinum";
+	real_name = "Francinum"
 	},
 /turf/open/floor/plating,
 /area/station/service/janitor)
