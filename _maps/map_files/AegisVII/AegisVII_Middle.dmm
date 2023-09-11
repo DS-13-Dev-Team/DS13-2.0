@@ -16182,7 +16182,7 @@
 	id = "Cell 3";
 	pixel_x = -24
 	},
-/turf/open/floor/deadspace/random/maint_center,
+/turf/closed/indestructible/rock,
 /area/lavaland/surface/outdoors)
 "ltw" = (
 /obj/structure/disposalpipe/segment{
