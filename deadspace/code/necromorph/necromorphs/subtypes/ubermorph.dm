@@ -10,6 +10,10 @@
 	desc = "A juvenile hivemind. Constantly regenerating, a nigh-immortal leader of the necromorph army. "
 	ui_icon = 'deadspace/icons/necromorphs/ubermorph.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/ubermorph
+	nest_allowed = FALSE
+	tier = 4
+	biomass_cost = 800
+	biomass_spent_required = 2000
 	melee_damage_lower = 10
 	melee_damage_upper = 25
 	max_health = INFINITY
