@@ -93,7 +93,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "abK" = (
 /obj/item/storage/toolbox/electrical,
 /turf/open/floor/stone,
@@ -1308,11 +1308,11 @@
 /area/mine/living_quarters)
 "atX" = (
 /obj/machinery/door/airlock/research/glass{
-	name = "Robotics Lab";
+	name = "Abandoned Robotics Lab";
 	req_access_txt = "29"
 	},
 /obj/machinery/door/firedoor,
-/obj/structure/cable,
+/obj/structure/barricade/wooden,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/mechbay)
 "aub" = (
@@ -3790,7 +3790,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/computer/mech_bay_power_console{
+/obj/structure/frame/computer{
 	dir = 8
 	},
 /turf/open/floor/iron,
@@ -4774,7 +4774,7 @@
 /area/station/service/kitchen)
 "blK" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron,
+/turf/open/floor/plating,
 /area/station/science/robotics/mechbay)
 "blL" = (
 /obj/machinery/flasher{
@@ -5261,8 +5261,8 @@
 "bpJ" = (
 /obj/structure/closet/crate/large,
 /obj/effect/spawner/random/maintenance/two,
-/obj/effect/spawner/random/clothing/bowler_or_that,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/clothing/bowler_or_that,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
 "bpR" = (
@@ -5521,7 +5521,7 @@
 	id = "scrapperevac"
 	},
 /turf/open/floor/plating,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "bsm" = (
 /turf/open/floor/deadspace/grater,
 /area/mine/hydroponics)
@@ -5530,7 +5530,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "bsr" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood/corner{
 	dir = 4
@@ -6052,13 +6052,13 @@
 /area/station/security/courtroom)
 "bMx" = (
 /obj/machinery/door/airlock/research{
-	name = "Robotics Lab";
+	name = "Abandoned Robotics Lab";
 	req_access_txt = "29"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /obj/structure/disposalpipe/segment,
-/obj/structure/cable,
+/obj/structure/barricade/wooden,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "bNm" = (
@@ -6713,7 +6713,7 @@
 	id = "scrapperevac"
 	},
 /turf/open/floor/plating,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "cum" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/machinery/processor{
@@ -7142,7 +7142,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/machinery/computer/security,
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "cMH" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/railing{
@@ -7902,7 +7902,7 @@
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
 "dCn" = (
-/obj/machinery/computer/department_orders/science{
+/obj/machinery/computer/cargo/request{
 	dir = 4
 	},
 /obj/machinery/light/directional/west,
@@ -8253,6 +8253,7 @@
 	name = "Robotics Shutters"
 	},
 /obj/effect/spawner/structure/window/reinforced,
+/obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "dVW" = (
@@ -8658,6 +8659,7 @@
 	name = "Robotics Shutters"
 	},
 /obj/effect/turf_decal/tile/purple/fourcorners,
+/obj/structure/barricade/wooden,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "elX" = (
@@ -9471,7 +9473,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "fdo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9564,7 +9566,7 @@
 	},
 /obj/structure/window/reinforced/spawner/east,
 /turf/open/floor/plating,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "fhS" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
@@ -9772,6 +9774,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
+/obj/item/storage/toolbox/electrical,
 /turf/open/floor/iron,
 /area/station/science/robotics/mechbay)
 "frJ" = (
@@ -10033,7 +10036,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "fEx" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
@@ -10516,9 +10519,9 @@
 /area/station/ai_monitored/security/armory/upper)
 "gag" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small/broken/directional/west,
 /obj/machinery/rnd/production/circuit_imprinter/robotics,
-/turf/open/floor/iron,
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "gaI" = (
 /obj/structure/rack,
@@ -10789,7 +10792,7 @@
 "glO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
-/turf/open/floor/iron,
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "gmn" = (
 /obj/structure/cable,
@@ -11005,7 +11008,7 @@
 /area/station/engineering/break_room)
 "gys" = (
 /obj/effect/turf_decal/stripes/line{
-	dir = 6
+	dir = 4
 	},
 /obj/machinery/requests_console/directional/west{
 	department = "Robotics";
@@ -11454,7 +11457,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "gRW" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -11506,7 +11509,7 @@
 "gUI" = (
 /obj/machinery/computer/communications,
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "gUK" = (
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -11994,7 +11997,7 @@
 /area/station/commons/lounge)
 "hqX" = (
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "hra" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/disposalpipe/segment{
@@ -12232,6 +12235,7 @@
 	id = "roboticsprivacy";
 	name = "Robotics Shutters"
 	},
+/obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "hyw" = (
@@ -12295,7 +12299,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/directional/east,
-/obj/machinery/light/directional/east,
+/obj/machinery/light/broken/directional/east,
 /turf/open/floor/plating,
 /area/station/science/robotics/mechbay)
 "hBA" = (
@@ -12414,7 +12418,7 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "hIA" = (
-/obj/machinery/computer/department_orders/security,
+/obj/machinery/computer/cargo/request,
 /obj/effect/turf_decal/trimline/red/filled/warning{
 	dir = 10
 	},
@@ -12441,16 +12445,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/light/directional/west,
+/obj/machinery/light/broken/directional/west,
 /obj/item/book/manual/wiki/robotics_cyborgs,
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/storage/toolbox/electrical,
-/obj/item/multitool,
-/obj/item/clothing/head/welding,
-/obj/item/clothing/glasses/welding,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "hKO" = (
@@ -12604,6 +12600,7 @@
 	id = "roboticsprivacy2";
 	name = "Robotics Shutters"
 	},
+/obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "hTO" = (
@@ -12830,7 +12827,7 @@
 "idz" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "idD" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 5
@@ -13641,9 +13638,9 @@
 /area/station/science/research)
 "iWF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/item/radio/intercom/directional/south,
-/turf/open/floor/iron/dark,
+/obj/item/clothing/glasses/welding,
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "iWL" = (
 /obj/machinery/light/small/directional/east,
@@ -14462,10 +14459,7 @@
 	},
 /area/station/hallway/primary/central)
 "jOa" = (
-/obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "jOG" = (
 /obj/machinery/light/directional/east,
@@ -14731,10 +14725,10 @@
 /obj/structure/table,
 /obj/item/circular_saw/bonecutter,
 /obj/item/scalpel{
-	pixel_y = 16
+	pixel_y = 8
 	},
 /obj/effect/turf_decal/tile/purple/half/contrasted,
-/turf/open/floor/iron/white,
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "kbh" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
@@ -15826,9 +15820,6 @@
 	},
 /turf/open/floor/deadspace/bathroom,
 /area/station/commons/dorms/barracks)
-"lbB" = (
-/turf/open/floor/deadspace/grater,
-/area/shuttle/pod_3)
 "lbQ" = (
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
@@ -16370,7 +16361,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/random/maint_center,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "lBO" = (
 /obj/machinery/door/airlock/glass,
 /obj/effect/decal/cleanable/dirt,
@@ -16857,7 +16848,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "map" = (
 /obj/machinery/vending/wardrobe/curator_wardrobe,
 /obj/machinery/computer/security/telescreen/entertainment/directional/east,
@@ -16953,7 +16944,8 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/open/floor/iron/white,
+/obj/structure/barricade/wooden,
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "mgv" = (
 /obj/effect/turf_decal/tile/neutral/half{
@@ -17344,9 +17336,9 @@
 "mCq" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line{
-	dir = 4
+	dir = 5
 	},
-/obj/machinery/rnd/production/fabricator/department/robotics,
+/obj/machinery/recharge_station,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "mCr" = (
@@ -17872,37 +17864,15 @@
 "ndg" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/bot,
-/obj/item/bodypart/arm/right/robot{
-	pixel_x = 3
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/item/bodypart/arm/left/robot{
 	pixel_x = -3
 	},
-/obj/machinery/firealarm/directional/west,
-/obj/item/assembly/flash/handheld{
-	pixel_x = 6;
-	pixel_y = 13
+/obj/item/bodypart/arm/right/robot{
+	pixel_x = 3
 	},
-/obj/item/assembly/flash/handheld{
-	pixel_x = 6;
-	pixel_y = 13
-	},
-/obj/item/assembly/flash/handheld{
-	pixel_x = 6;
-	pixel_y = 13
-	},
-/obj/item/assembly/flash/handheld{
-	pixel_x = 6;
-	pixel_y = 13
-	},
-/obj/item/assembly/flash/handheld{
-	pixel_x = 6;
-	pixel_y = 13
-	},
-/obj/machinery/ecto_sniffer{
-	pixel_x = -6;
-	pixel_y = 6
-	},
+/obj/item/bodypart/leg/right/robot,
+/obj/item/bodypart/leg/left/robot,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "ndp" = (
@@ -17982,8 +17952,8 @@
 /turf/open/floor/deadspace/random/slides,
 /area/awaymission/centcom_away/hangar)
 "njK" = (
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/obj/item/wrench,
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "nka" = (
 /obj/machinery/door/firedoor,
@@ -18049,7 +18019,7 @@
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/commons/dorms)
 "nnp" = (
-/obj/machinery/computer/department_orders/service{
+/obj/machinery/computer/cargo/request{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -18174,7 +18144,7 @@
 /area/station/science/lab)
 "nvr" = (
 /turf/closed/wall/mineral/titanium,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "nvD" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/ported/lino,
@@ -18446,10 +18416,13 @@
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit)
 "nFZ" = (
-/obj/effect/landmark/start/roboticist,
-/obj/effect/spawner/random/engineering/tracking_beacon,
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/recharge_station,
 /turf/open/floor/iron,
-/area/station/science/robotics/mechbay)
+/area/station/science/robotics/lab)
 "nGt" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -18479,7 +18452,7 @@
 /area/station/cargo/sorting)
 "nIl" = (
 /obj/machinery/light/directional/west,
-/obj/machinery/mech_bay_recharge_port,
+/obj/structure/frame/machine,
 /turf/open/floor/plating,
 /area/station/science/robotics/mechbay)
 "nIn" = (
@@ -18966,7 +18939,7 @@
 	id = "scrapperevac"
 	},
 /turf/open/floor/deadspace/random/maint_center,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "ofn" = (
 /obj/structure/table,
 /obj/effect/spawner/random/clothing/bowler_or_that,
@@ -19235,7 +19208,7 @@
 "ouf" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/deadspace/random/maint_center,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "ouK" = (
 /obj/structure/railing{
 	dir = 10
@@ -19353,7 +19326,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "oBV" = (
 /obj/structure/ore_box,
 /obj/structure/ore_box,
@@ -19533,9 +19506,6 @@
 /turf/open/floor/iron,
 /area/station/service/bar)
 "oLv" = (
-/obj/effect/turf_decal/stripes/corner{
-	dir = 4
-	},
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/high,
@@ -19868,9 +19838,8 @@
 	},
 /area/shuttle/abandoned)
 "oYm" = (
-/obj/effect/landmark/start/roboticist,
-/turf/open/floor/iron,
-/area/station/science/robotics/lab)
+/turf/open/floor/plating,
+/area/station/science/robotics/mechbay)
 "oYq" = (
 /obj/machinery/space_heater,
 /obj/machinery/light/small/maintenance/directional/north,
@@ -19899,7 +19868,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "pac" = (
 /obj/machinery/door/poddoor/preopen,
 /obj/structure/disposalpipe/segment{
@@ -20057,8 +20026,6 @@
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/glass/fifty,
-/obj/item/circuitboard/mecha/ripley/main,
-/obj/item/circuitboard/mecha/ripley/peripherals,
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
@@ -20394,7 +20361,7 @@
 /turf/open/floor/plating,
 /area/station/science/server)
 "pCK" = (
-/obj/machinery/computer/department_orders/medical{
+/obj/machinery/computer/cargo/request{
 	dir = 8
 	},
 /turf/open/floor/deadspace/mono,
@@ -20828,7 +20795,7 @@
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "pWT" = (
 /obj/structure/table,
 /obj/machinery/light/directional/south,
@@ -21009,6 +20976,11 @@
 	},
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit)
+"qgR" = (
+/obj/structure/cable,
+/obj/item/multitool,
+/turf/open/floor/iron/white,
+/area/station/science/robotics/lab)
 "qhb" = (
 /obj/structure/chair,
 /turf/open/floor/iron,
@@ -21570,7 +21542,7 @@
 "qIZ" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/random/maint_center,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "qJe" = (
 /obj/machinery/atmospherics/components/binary/valve/digital{
 	name = "Exhaust-Return Tie";
@@ -22131,11 +22103,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/security/range)
-"rrN" = (
-/turf/open/floor/deadspace/random/slides{
-	dir = 4
-	},
-/area/shuttle/pod_3)
 "rrQ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -22395,7 +22362,7 @@
 /obj/machinery/modular_computer/console/preset/civilian{
 	dir = 1
 	},
-/turf/open/floor/iron,
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "rFj" = (
 /obj/structure/table/wood,
@@ -22521,7 +22488,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "rKT" = (
 /obj/structure/stairs/north,
 /obj/structure/disposalpipe/segment,
@@ -22858,9 +22825,6 @@
 	dir = 9
 	},
 /area/station/hallway/primary/central)
-"sbY" = (
-/turf/open/floor/deadspace/random/maint_center,
-/area/shuttle/pod_3)
 "sch" = (
 /obj/structure/table,
 /obj/item/screwdriver{
@@ -23214,7 +23178,7 @@
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "szk" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/iron/dark/corner{
@@ -23235,7 +23199,7 @@
 "szJ" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "szO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -23716,7 +23680,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/random/maint_center,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "sYd" = (
 /turf/closed/wall/r_wall,
 /area/station/science/lobby)
@@ -23799,9 +23763,9 @@
 /turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "tcX" = (
-/obj/item/wrench,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/computer/med_data,
 /turf/open/floor/iron/dark,
 /area/station/science/robotics/lab)
 "tdb" = (
@@ -24577,7 +24541,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "tQf" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/structure/disposalpipe/junction/flip{
@@ -25297,7 +25261,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/random/rectangles,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "uAK" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 1
@@ -25314,9 +25278,12 @@
 /turf/open/floor/carpet/red,
 /area/station/security/brig)
 "uBk" = (
-/obj/effect/landmark/start/roboticist,
-/obj/structure/cable,
-/turf/open/floor/iron/white,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "uBP" = (
 /turf/open/misc/beach/sand/coastline_t,
@@ -25663,7 +25630,7 @@
 "uOt" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/random/maint_center,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "uOB" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Engineering Foyer";
@@ -25965,11 +25932,6 @@
 	},
 /turf/open/misc/beach/sand,
 /area/station/hallway/primary/port)
-"viy" = (
-/turf/open/floor/deadspace/random/slides{
-	dir = 8
-	},
-/area/shuttle/pod_3)
 "viA" = (
 /obj/structure/ladder,
 /obj/structure/lattice,
@@ -26016,7 +25978,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "vkE" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -26041,7 +26003,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "vmt" = (
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/deadspace/random/rectangles,
@@ -26102,6 +26064,7 @@
 	},
 /obj/item/paper_bin,
 /obj/item/pen,
+/obj/structure/barricade/wooden,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "vqm" = (
@@ -26278,10 +26241,9 @@
 /area/station/hallway/primary/starboard)
 "vBh" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "vBM" = (
 /obj/machinery/power/smes/magical,
@@ -26454,11 +26416,9 @@
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/commons/dorms)
 "vIv" = (
-/obj/effect/landmark/start/roboticist,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/turf/open/floor/iron/dark,
+/obj/item/clothing/head/welding,
+/turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "vIy" = (
 /obj/machinery/button/door/directional/east{
@@ -26889,7 +26849,8 @@
 /area/station/command/heads_quarters/rd)
 "waW" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron,
+/obj/structure/barricade/wooden,
+/turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "wbM" = (
 /obj/effect/turf_decal/stripes/line{
@@ -27582,7 +27543,7 @@
 "wJI" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/deadspace/grater,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "wKd" = (
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/table,
@@ -28223,7 +28184,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/random/maint_center,
-/area/shuttle/pod_3)
+/area/lavaland/surface/outdoors)
 "xoW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -29103,6 +29064,13 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark/side,
 /area/station/hallway/primary/central)
+"ydk" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/station/science/robotics/mechbay)
 "yfb" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "Mining_Receiving"
@@ -32570,9 +32538,9 @@ huo
 abg
 nvr
 hqX
-rrN
+iXK
 qIZ
-viy
+cdf
 hqX
 nvr
 abg
@@ -32772,9 +32740,9 @@ abg
 abg
 nvr
 szJ
-rrN
-sbY
-viy
+iXK
+gzk
+cdf
 oZI
 nvr
 abg
@@ -32974,9 +32942,9 @@ abg
 abg
 nvr
 nvr
-rrN
-sbY
-viy
+iXK
+gzk
+cdf
 nvr
 nvr
 abg
@@ -33176,9 +33144,9 @@ jzx
 abg
 bsj
 wJI
-rrN
-sbY
-viy
+iXK
+gzk
+cdf
 wJI
 bsj
 abg
@@ -33377,11 +33345,11 @@ utF
 jzx
 abg
 bsj
-lbB
-rrN
+utF
+iXK
 ouf
 lZB
-lbB
+utF
 bsj
 abg
 utF
@@ -33580,9 +33548,9 @@ jzx
 abg
 nvr
 syG
-rrN
+iXK
 xoQ
-viy
+cdf
 uAF
 nvr
 abg
@@ -33784,7 +33752,7 @@ nvr
 tQa
 fcG
 uOt
-viy
+cdf
 rKM
 nvr
 abg
@@ -33984,9 +33952,9 @@ jzx
 abg
 nvr
 szJ
-rrN
+iXK
 sXX
-viy
+cdf
 oZI
 nvr
 abg
@@ -34388,9 +34356,9 @@ jzx
 abg
 nvr
 gUI
-rrN
+iXK
 qIZ
-viy
+cdf
 oBe
 nvr
 abg
@@ -46577,7 +46545,7 @@ gag
 ndg
 mCq
 hKx
-mCq
+nFZ
 gys
 dVv
 vuX
@@ -46773,12 +46741,12 @@ juP
 aoU
 xPg
 oHs
-waW
+uBk
 waW
 mIE
 njK
 dmw
-njK
+jOa
 djG
 hsu
 vqg
@@ -46975,12 +46943,12 @@ juP
 aoU
 xPg
 bqD
-oYm
+oHs
 glO
 jcI
 vBh
 tIP
-vIv
+viT
 kLK
 viT
 bMx
@@ -47181,7 +47149,7 @@ pHU
 phH
 jVs
 tcX
-njK
+jOa
 dnE
 fuj
 iWF
@@ -47385,7 +47353,7 @@ oxc
 oxc
 vYM
 ngQ
-eQv
+vIv
 eQv
 hTm
 vuX
@@ -47782,13 +47750,13 @@ boM
 juP
 aoU
 lWK
-gXj
+ydk
 dUy
 blK
 isK
 atX
+qgR
 wlp
-uBk
 xyL
 kaZ
 hTm
@@ -47985,7 +47953,7 @@ juP
 aoU
 lWK
 gXj
-nFZ
+dUy
 mOa
 isK
 oxc
@@ -48187,7 +48155,7 @@ dAx
 aoU
 lWK
 hWW
-dUy
+oYm
 wIZ
 frF
 oxc
