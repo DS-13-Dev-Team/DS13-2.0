@@ -19143,6 +19143,10 @@
 /obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit)
+"ooV" = (
+/obj/structure/fireaxecabinet/directional/west,
+/turf/open/floor/iron,
+/area/station/engineering/main)
 "opD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -43458,7 +43462,7 @@ rFC
 dlh
 rUV
 dlh
-dlh
+ooV
 dOD
 htl
 mXx

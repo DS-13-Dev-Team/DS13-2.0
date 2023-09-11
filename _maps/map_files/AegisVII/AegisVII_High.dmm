@@ -744,6 +744,7 @@
 "ka" = (
 /obj/structure/table/reinforced,
 /obj/machinery/fax_machine,
+/obj/structure/fireaxecabinet/directional/north,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "kh" = (
