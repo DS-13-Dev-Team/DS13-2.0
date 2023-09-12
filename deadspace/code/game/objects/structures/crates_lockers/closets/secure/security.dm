@@ -71,6 +71,7 @@
 
 /obj/structure/closet/secure_closet/ds/warden/PopulateContents()
 	..()
+	new /obj/item/mod/control/pre_equipped/ds/riot(src)
 	new /obj/item/radio/headset/headset_sec(src)
 	new /obj/item/clothing/suit/armor/vest/warden(src)
 	new /obj/item/clothing/head/warden(src)

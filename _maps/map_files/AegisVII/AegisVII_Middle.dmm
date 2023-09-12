@@ -10521,9 +10521,9 @@
 /area/station/science/robotics/lab)
 "gaI" = (
 /obj/structure/rack,
-/obj/item/mod/control/pre_equipped/ds/riot,
 /obj/structure/window/reinforced/spawner,
 /obj/structure/cable,
+/obj/item/mod/control/pre_equipped/ds/patrol,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "gaK" = (
