@@ -3313,10 +3313,6 @@
 	},
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
-"aTi" = (
-/obj/structure/lattice,
-/turf/open/space/basic,
-/area/lavaland/surface/outdoors)
 "aTk" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/mono,
@@ -24839,11 +24835,6 @@
 /obj/item/storage/medkit/brute,
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
-"uef" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/marker_beacon/burgundy,
-/turf/open/space/basic,
-/area/lavaland/surface/outdoors)
 "uej" = (
 /obj/machinery/power/floodlight,
 /obj/effect/turf_decal/stripes/line{
@@ -38625,8 +38616,8 @@ aeL
 tIc
 tIc
 tIc
-uef
-aTi
+lPj
+tIc
 tIc
 tIc
 aeL
