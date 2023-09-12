@@ -4733,7 +4733,7 @@
 #include "deadspace\code\modules\clothing\rigs\civilian_faction\civilian_department\clown.dm"
 #include "deadspace\code\modules\clothing\rigs\civilian_faction\civilian_department\emergency.dm"
 #include "deadspace\code\modules\clothing\rigs\civilian_faction\engineering_department\advanced.dm"
-#include "deadspace\code\modules\clothing\rigs\civilian_faction\engineering_department\DS-08 Legacy.dm"
+#include "deadspace\code\modules\clothing\rigs\civilian_faction\engineering_department\ds08.dm"
 #include "deadspace\code\modules\clothing\rigs\civilian_faction\engineering_department\intermediate.dm"
 #include "deadspace\code\modules\clothing\rigs\civilian_faction\engineering_department\standard.dm"
 #include "deadspace\code\modules\clothing\rigs\civilian_faction\engineering_department\vintage.dm"
