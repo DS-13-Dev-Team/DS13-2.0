@@ -7140,7 +7140,6 @@
 /area/station/commons/storage/tools)
 "cMG" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/machinery/computer/security,
 /turf/open/floor/deadspace/random/rectangles,
 /area/lavaland/surface/outdoors)
@@ -13032,6 +13031,11 @@
 /obj/structure/cable,
 /turf/open/floor/iron/norn,
 /area/station/hallway/primary/fore)
+"ioL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table,
+/turf/open/floor/deadspace/mono,
+/area/station/hallway/secondary/service)
 "ioR" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/ported/techfloor_grid,
@@ -34636,7 +34640,7 @@ gAq
 upc
 opD
 jTp
-sMs
+ioL
 nnp
 kvd
 apG
