@@ -89,3 +89,43 @@
 /datum/loadout_item/backpack/fountainpen
 	path = /obj/item/pen/fountain
 	cost = 2
+
+//survival and combat items
+/datum/loadout_item/backpack/rock_saw
+	path = /obj/item/pickaxe/rock
+	subcategory = LOADOUT_SUBCATEGORY_DANGEROUS
+	cost = 3
+
+/datum/loadout_item/backpack/knife_combat
+	path = /obj/item/knife/combat
+	subcategory = LOADOUT_SUBCATEGORY_DANGEROUS
+	cost = 4
+/datum/loadout_item/backpack/glowstick
+	path = /obj/item/flashlight/glowstick
+	subcategory = LOADOUT_SUBCATEGORY_SURVIVAL
+	customization_flags = CUSTOMIZE_DESC //no naming your green glowstick "Pink Glowstick"
+
+/datum/loadout_item/backpack/glowstick_red
+	path = /obj/item/flashlight/glowstick/red
+	subcategory = LOADOUT_SUBCATEGORY_SURVIVAL
+	customization_flags = CUSTOMIZE_DESC
+
+/datum/loadout_item/backpack/glowstick_blue
+	path = /obj/item/flashlight/glowstick/blue
+	subcategory = LOADOUT_SUBCATEGORY_SURVIVAL
+	customization_flags = CUSTOMIZE_DESC
+
+/datum/loadout_item/backpack/glowstick_orange
+	path = /obj/item/flashlight/glowstick/orange
+	subcategory = LOADOUT_SUBCATEGORY_SURVIVAL
+	customization_flags = CUSTOMIZE_DESC
+
+/datum/loadout_item/backpack/glowstick_yellow
+	path = /obj/item/flashlight/glowstick/yellow
+	subcategory = LOADOUT_SUBCATEGORY_SURVIVAL
+	customization_flags = CUSTOMIZE_DESC
+
+/datum/loadout_item/backpack/glowstick_pink
+	path = /obj/item/flashlight/glowstick/pink
+	subcategory = LOADOUT_SUBCATEGORY_SURVIVAL
+	customization_flags = CUSTOMIZE_DESC
