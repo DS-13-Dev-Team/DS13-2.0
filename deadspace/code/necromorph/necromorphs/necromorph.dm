@@ -17,6 +17,7 @@
 	marker?.remove_necro(src)
 	return ..()
 
+//Necromorphs cant hold things
 /mob/living/carbon/human/necromorph/has_hand_for_held_index(i)
 	return FALSE
 
@@ -30,44 +31,17 @@
 	.=..()
 	marker?.add_necro(src)
 
-/mob/living/carbon/human/necromorph/update_stat()
-	. = ..()
-	if(.)
-		return
-
-	if(status_flags & GODMODE)
-		return
-
-	if(stat == DEAD)
-		return
-
-	if(health <= 0)
-		death()
-		return
-
-	if(HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
-		if(stat == UNCONSCIOUS)
-			return
-		set_stat(UNCONSCIOUS)
-	else if(stat == UNCONSCIOUS)
-		set_stat(CONSCIOUS)
-
-/mob/living/carbon/human/necromorph/proc/handle_death_check()
-	return TRUE
-
 /mob/living/carbon/human/necromorph/set_stat(new_stat)
 	.=..()
-	if(stat < UNCONSCIOUS)
-		see_in_dark = conscious_see_in_dark
-	else
-		see_in_dark = unconscious_see_in_dark
+	update_sight()
 
 /mob/living/carbon/human/necromorph/update_sight()
 	. = ..()
-	if(stat < UNCONSCIOUS)
-		see_in_dark = conscious_see_in_dark
-	else if (stat < HARD_CRIT)
-		see_in_dark = unconscious_see_in_dark
+	switch(stat)
+		if(CONSCIOUS)
+			see_in_dark = conscious_see_in_dark
+		if(UNCONSCIOUS)
+			see_in_dark = unconscious_see_in_dark
 	//Otherwise we are dead and see_in_dark was handled in parent call
 
 /mob/living/carbon/human/necromorph/death(gibbed)
@@ -136,7 +110,7 @@
 	if(status_flags & GODMODE)
 		return
 	if(stat != DEAD)
-		if(health <= 0 && !HAS_TRAIT(src, TRAIT_NODEATH))
+		if(handle_death_check())
 			death()
 			return
 		else
@@ -146,7 +120,6 @@
 	update_stamina_hud()
 	med_hud_set_status()
 
-//Controversial, might bring back combat modes later
-//Change ability keybinds if ever planned to bring back combat modes
-/mob/living/carbon/human/necromorph/set_combat_mode(new_mode, silent)
-	return
+/// Check if the necromorph should die
+/mob/living/carbon/human/necromorph/proc/handle_death_check()
+	return (health <= 0 && !HAS_TRAIT(src, TRAIT_NODEATH))
