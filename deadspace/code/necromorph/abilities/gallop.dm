@@ -15,11 +15,11 @@
 	crash_count = 0
 	holder.play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, TRUE, 3)
 	RegisterSignal(holder, COMSIG_STARTED_CHARGE, /datum/action/cooldown/necro/proc/CooldownEnd)
-	RegisterSignal(holder, COMSIG_MOB_STATCHANGE, .proc/OnStatChange)
-	RegisterSignal(holder, COMSIG_LIVING_UPDATED_RESTING, .proc/OnUpdateResting)
-	RegisterSignal(holder, COMSIG_MOB_APPLY_DAMAGE, .proc/OnHit)
-	RegisterSignal(holder, COMSIG_MOVABLE_BUMP, .proc/OnBump)
-	RegisterSignal(holder, COMSIG_MOVABLE_MOVED, .proc/OnMoved)
+	RegisterSignal(holder, COMSIG_MOB_STATCHANGE, PROC_REF(OnStatChange))
+	RegisterSignal(holder, COMSIG_LIVING_UPDATED_RESTING, PROC_REF(OnUpdateResting))
+	RegisterSignal(holder, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(OnHit))
+	RegisterSignal(holder, COMSIG_MOVABLE_BUMP, PROC_REF(OnBump))
+	RegisterSignal(holder, COMSIG_MOVABLE_MOVED, PROC_REF(OnMoved))
 	holder.add_movespeed_modifier(/datum/movespeed_modifier/gallop)
 
 /datum/action/cooldown/necro/active/gallop/proc/OnStatChange(mob/living/carbon/human/necromorph/leaper/source, new_stat, old_stat)

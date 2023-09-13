@@ -1,10 +1,14 @@
-/obj/item/clothing/head/helmet/sec/pcsi
+/obj/item/clothing/head/helmet/pcsi
 	name = "P.C.S.I helmet"
 	desc = "A ceramic helmet with the badge of P.C.S.I emblazoned on the forehead."
 	icon = 'deadspace/icons/obj/clothing/hats.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/head.dmi'
 
-/obj/item/clothing/head/helmet/pcsi
+/obj/item/clothing/head/helmet/pcsi/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/seclite_attachable, light_icon_state = "flight")
+
+/obj/item/clothing/head/helmet/pcsi_hood
 	name = "P.C.S.I hood"
 	desc = "A ceramic hood with the badge of P.C.S.I emblazoned on the forehead. Sturdy, but a bullet to the face will still probably kill the wearer."
 	icon = 'deadspace/icons/obj/clothing/hats.dmi'

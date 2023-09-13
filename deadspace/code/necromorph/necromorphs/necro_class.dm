@@ -21,9 +21,6 @@
 	var/melee_damage_lower = 10
 	var/melee_damage_upper = 10
 
-	///Damage multiplier when attacking objects
-	var/obj_damage_multiplier = 3
-
 	var/armour_penetration = 0
 
 	var/list/necro_armor
@@ -67,20 +64,12 @@
 		TRAIT_RESISTLOWPRESSURE,
 		TRAIT_RESISTCOLD,
 		TRAIT_DISCOORDINATED_TOOL_USER,
-		//TRAIT_VENTCRAWLER_ALWAYS,
 		TRAIT_PIERCEIMMUNE,
 		TRAIT_IGNOREDAMAGESLOWDOWN,
 	)
 
 	///The iconstate for the necromorph on the minimap
 	var/minimap_icon = "xenominion"
-
-	///How quickly the necromorph enters vents
-	var/vent_enter_speed = NECRO_DEFAULT_VENT_ENTER_TIME
-	///How quickly the necromorph enters vents
-	var/vent_exit_speed = NECRO_DEFAULT_VENT_EXIT_TIME
-	///Whether the necromorph enters and crawls through vents silently
-	var/silent_vent_crawl = FALSE
 
 	//TODO: Get rid of this
 	var/implemented = FALSE
@@ -118,11 +107,3 @@
 	necro.necro_flags = necro_flags
 
 	necro.fire_resist =  fire_resist
-
-	necro.vent_enter_speed = vent_enter_speed
-
-	necro.vent_exit_speed = vent_exit_speed
-
-	necro.silent_vent_crawl = silent_vent_crawl
-
-	necro.obj_damage_multiplier = obj_damage_multiplier

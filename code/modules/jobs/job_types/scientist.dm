@@ -61,10 +61,6 @@
 	ears = /obj/item/radio/headset/headset_sci
 	shoes = /obj/item/clothing/shoes/sneakers/white
 
-	backpack = /obj/item/storage/backpack/science
-	satchel = /obj/item/storage/backpack/satchel/science
-	duffelbag = /obj/item/storage/backpack/duffelbag/science
-
 /datum/outfit/job/scientist/plasmaman
 	name = "Scientist (Plasmaman)"
 

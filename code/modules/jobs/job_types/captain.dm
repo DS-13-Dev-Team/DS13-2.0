@@ -77,10 +77,6 @@
 	gloves = /obj/item/clothing/gloves/color/captain
 	shoes = /obj/item/clothing/shoes/sneakers/black
 
-	backpack = /obj/item/storage/backpack/captain
-	satchel = /obj/item/storage/backpack/satchel/cap
-	duffelbag = /obj/item/storage/backpack/duffelbag/captain
-
 	accessory = /obj/item/clothing/accessory/medal/gold/captain
 	chameleon_extras = list(
 		/obj/item/gun/energy/e_gun,
@@ -103,7 +99,6 @@
 	if(!special_charter)
 		return
 	backpack_contents.Remove(/obj/item/station_charter)
-	l_hand = /obj/item/station_charter/banner
 
 /datum/outfit/job/captain/post_equip(mob/living/carbon/human/equipped, visualsOnly)
 	. = ..()

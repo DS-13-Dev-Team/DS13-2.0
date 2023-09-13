@@ -31,7 +31,7 @@
 	PLAY_SHAKING_ANIMATION(user, 22, 12, shake_dir, initial_x, initial_y, initial_transform)
 	PLAY_SHAKING_ANIMATION(user, 25, 14, shake_dir, initial_x, initial_y, initial_transform)
 
-	addtimer(CALLBACK(src, .proc/explode, user), 3 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(explode), user), 3 SECONDS)
 
 /datum/action/cooldown/necro/explode/proc/explode(mob/living/carbon/human/necromorph/exploder/user)
 	if(owner == user)

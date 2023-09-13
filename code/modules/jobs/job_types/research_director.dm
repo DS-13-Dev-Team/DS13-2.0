@@ -75,10 +75,6 @@
 	l_pocket = /obj/item/laser_pointer
 	l_hand = /obj/item/clipboard
 
-	backpack = /obj/item/storage/backpack/science
-	satchel = /obj/item/storage/backpack/satchel/science
-	duffelbag = /obj/item/storage/backpack/duffelbag/science
-
 	chameleon_extras = /obj/item/stamp/rd
 	skillchips = list(/obj/item/skillchip/job/research_director)
 

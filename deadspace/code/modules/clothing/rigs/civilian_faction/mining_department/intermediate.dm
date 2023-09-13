@@ -3,6 +3,9 @@
 	desc = "Exclusive only to class 2 miners and is a standard equipment when working in hostile environments or during a hazardous mining operation."
 	default_skin = "intermediate_miner"
 	armor = list(MELEE = 51.25, BULLET = 51.25, LASER = 51.25, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	resistance_flags = FIRE_PROOF|LAVA_PROOF
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	complexity_max = 20
 
 	skins = list(
@@ -35,6 +38,7 @@
 
 /obj/item/mod/control/pre_equipped/ds/intermediate_miner
 	theme = /datum/mod_theme/deadspace/intermediate_miner
+	applied_core = /obj/item/mod/core/plasma
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,

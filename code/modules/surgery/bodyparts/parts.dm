@@ -21,6 +21,7 @@
 
 	bodypart_flags = STOCK_BP_FLAGS_CHEST
 
+	biomass = 16
 	///The bodytype(s) allowed to attach to this chest.
 	var/acceptable_bodytype = BODYTYPE_HUMANOID
 
@@ -86,6 +87,7 @@
 	tendon_name = "palmaris longus tendon"
 
 	minimum_break_damage = 30
+	biomass = 6
 
 /obj/item/bodypart/arm/left
 	name = "left arm"
@@ -277,6 +279,7 @@
 	tendon_name = "cruciate ligament"
 
 	minimum_break_damage = 30
+	biomass = 6
 
 /obj/item/bodypart/leg/left
 	name = "left leg"
