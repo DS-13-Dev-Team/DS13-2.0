@@ -91,6 +91,14 @@
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/brute,
 	)
 
+/datum/species/necromorph/brute/get_scream_sound(mob/living/carbon/human/necromorph/brute)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/brute/brute_pain_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/brute/brute_pain_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/brute/brute_pain_3.ogg',
+		'deadspace/sound/effects/creatures/necromorph/brute/brute_pain_extreme.ogg',
+	)
+
 #define WINDUP_TIME 1.25 SECONDS
 
 /datum/action/cooldown/necro/shoot/brute

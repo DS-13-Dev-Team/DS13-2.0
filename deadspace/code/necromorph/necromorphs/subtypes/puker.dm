@@ -58,6 +58,14 @@
 		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_3.ogg'
 	)
 
+/datum/species/necromorph/puker/get_scream_sound(mob/living/carbon/human/necromorph/puker)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_pain_4.ogg',
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_shout_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_shout_4.ogg',
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_shout_long_4.ogg',
+	)
+
 /datum/action/cooldown/necro/shoot/puker_longshot
 	name = "Long shot"
 	desc = "A powerful projectile for longrange shooting."

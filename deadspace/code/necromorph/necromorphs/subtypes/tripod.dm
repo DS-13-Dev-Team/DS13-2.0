@@ -31,3 +31,11 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/tripod,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/tripod,
 	)
+
+/datum/species/necromorph/tripod/get_scream_sound(mob/living/carbon/human/necromorph/tripod)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/tripod/tripod_shout_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/tripod/tripod_shout_4.ogg',
+		'deadspace/sound/effects/creatures/necromorph/tripod/tripod_shout_long_3.ogg',
+		'deadspace/sound/effects/creatures/necromorph/tripod/tripod_shout_long_5.ogg',
+	)

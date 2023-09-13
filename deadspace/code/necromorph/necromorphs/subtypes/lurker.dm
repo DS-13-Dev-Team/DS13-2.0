@@ -31,3 +31,10 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/lurker,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/lurker,
 	)
+
+/datum/species/necromorph/lurker/get_scream_sound(mob/living/carbon/human/necromorph/lurker)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/lurker/lurker_shout_long_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/lurker/lurker_shout_long_3.ogg',
+		'deadspace/sound/effects/creatures/necromorph/lurker/lurker_shout_4.ogg',
+	)

@@ -48,3 +48,10 @@
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/necromorph/leaper,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/leaper,
 	)
+
+/datum/species/necromorph/leaper/get_scream_sound(mob/living/carbon/human/necromorph/leaper)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/leaper/leaper_pain_5.ogg',
+		'deadspace/sound/effects/creatures/necromorph/leaper/leaper_pain_6.ogg',
+		'deadspace/sound/effects/creatures/necromorph/leaper/leaper_pain_7.ogg',
+	)

@@ -80,6 +80,13 @@
 		'deadspace/sound/effects/footstep/ubermorph_footstep_4.ogg'
 	)
 
+/datum/species/necromorph/hunter/get_scream_sound(mob/living/carbon/human/necromorph/hunter)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_pain_5.ogg',
+		'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_pain_6.ogg',
+		'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_shout_long_3.ogg',
+	)
+
 /datum/species/necromorph/hunter/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/H, forced, spread_damage, sharpness, attack_direction)
 	if(H.health - damage <= 0)
 		return H.handle_death_check()
