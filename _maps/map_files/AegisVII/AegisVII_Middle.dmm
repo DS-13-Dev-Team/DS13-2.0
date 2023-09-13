@@ -10730,7 +10730,6 @@
 	dir = 1
 	},
 /obj/structure/cable,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/maintenance/department/engine)
 "gda" = (
