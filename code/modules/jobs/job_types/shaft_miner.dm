@@ -4,8 +4,8 @@
 		Meet strange creatures. Kill them for their gold."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
 	faction = FACTION_STATION
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 100
+	spawn_positions = 25
 	supervisors = "the quartermaster and the head of personnel"
 	selection_color = "#15381b"
 	exp_granted_type = EXP_TYPE_CREW
