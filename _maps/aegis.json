@@ -51,6 +51,9 @@
 		"assistant": {
 			"total_positions": 0
 		},
+		"shaft_miner": {
+			"total_positions": 100
+		},
 		"atmospheric_technician": {
 			"total_positions": 0
 		},
