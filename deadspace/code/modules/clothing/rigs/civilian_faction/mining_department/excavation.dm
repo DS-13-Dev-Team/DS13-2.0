@@ -3,6 +3,9 @@
 	desc = "A modified, lightweight version of the engineering suit. Perfect for quick operations."
 	default_skin = "excavation"
 	armor = list(MELEE = 44, BULLET = 44, LASER = 40, ENERGY = 15, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	resistance_flags = FIRE_PROOF|LAVA_PROOF
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 
 	skins = list(
 		"excavation" = list(
@@ -34,6 +37,7 @@
 
 /obj/item/mod/control/pre_equipped/ds/excavation
 	theme = /datum/mod_theme/deadspace/excavation
+	applied_core = /obj/item/mod/core/plasma
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,

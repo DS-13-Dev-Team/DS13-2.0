@@ -63,3 +63,7 @@ endmap
 map mara
 	#votable
 endmap
+
+map aegis
+	#votable
+endmap

@@ -54,10 +54,6 @@
 	ears = /obj/item/radio/headset/headset_srv
 	gloves = /obj/item/clothing/gloves/botanic_leather
 
-	backpack = /obj/item/storage/backpack/botany
-	satchel = /obj/item/storage/backpack/satchel/hyd
-	duffelbag = /obj/item/storage/backpack/duffelbag/hydroponics
-
 /datum/outfit/job/botanist/plasmaman
 	name = "Botanist (Plasmaman)"
 

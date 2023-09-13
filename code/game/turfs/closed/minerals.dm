@@ -273,6 +273,10 @@
 			Change_Ore(path, 1)
 			Spread_Vein(path)
 
+/turf/closed/mineral/random/aegis
+	initial_gas = MARASTATION_DEFAULT_ATMOS
+	defer_change = TRUE
+
 /turf/closed/mineral/random/high_chance
 	icon_state = "rock_highchance"
 	mineralChance = 25

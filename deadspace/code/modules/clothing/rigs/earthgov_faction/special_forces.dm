@@ -4,6 +4,7 @@
 	default_skin = "special_forces"
 	armor = list(MELEE = 72.5, BULLET = 75, LASER = 72.5, ENERGY = 40, BOMB = 75, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
 	complexity_max = 30
+
 	skins = list(
 		"special_forces" = list(
 			HELMET_FLAGS = list(

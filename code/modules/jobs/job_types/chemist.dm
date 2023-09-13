@@ -57,10 +57,6 @@
 	shoes = /obj/item/clothing/shoes/sneakers/white
 	r_pocket = /obj/item/reagent_containers/syringe
 
-	backpack = /obj/item/storage/backpack/chemistry
-	satchel = /obj/item/storage/backpack/satchel/chem
-	duffelbag = /obj/item/storage/backpack/duffelbag/chemistry
-
 	box = /obj/item/storage/box/survival/medical
 	chameleon_extras = /obj/item/gun/syringe
 

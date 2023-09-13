@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/ghost_role/alien_infestation
 	weight = 5
 
-	min_players = 10
+	min_players = 1000
 
 	dynamic_should_hijack = TRUE
 

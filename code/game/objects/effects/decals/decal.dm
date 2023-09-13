@@ -36,6 +36,7 @@
 	icon = 'icons/turf/decals.dmi'
 	icon_state = "warningline"
 	layer = TURF_DECAL_LAYER
+	anchored = TRUE
 	/// The layer to generate the decal. Should be some kind of float layer
 	var/decal_layer = DECAL_NORMAL_LAYER
 
@@ -47,7 +48,7 @@
 
 	var/turf/T = loc
 	if(!istype(T)) //you know this will happen somehow
-		CRASH("Turf decal initialized in an object/nullspace")
+		CRASH("Turf decal initialized in an object/nullspace, [AREACOORD(src)]")
 	T.AddElement(/datum/element/decal, icon, icon_state, dir, null, decal_layer, alpha, color, null, FALSE, null)
 	return INITIALIZE_HINT_QDEL
 

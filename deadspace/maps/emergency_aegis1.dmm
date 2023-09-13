@@ -1,0 +1,325 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"d" = (
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/deadspace/random/maint_center,
+/area/shuttle/escape)
+"e" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/preopen{
+	id = "evac_1"
+	},
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"f" = (
+/turf/open/floor/deadspace/random/slides,
+/area/shuttle/escape)
+"h" = (
+/obj/structure/table,
+/obj/item/storage/medkit/regular{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/item/storage/medkit/fire,
+/turf/open/floor/deadspace/random/maint_right,
+/area/shuttle/escape)
+"j" = (
+/obj/machinery/light/directional/west,
+/obj/machinery/computer/atmos_alert{
+	dir = 4
+	},
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/shuttle/escape)
+"k" = (
+/obj/machinery/computer/emergency_shuttle{
+	dir = 1
+	},
+/turf/open/floor/deadspace/random/maint_center,
+/area/shuttle/escape)
+"l" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/deadspace/random/maint_left,
+/area/shuttle/escape)
+"n" = (
+/obj/structure/table,
+/turf/open/floor/deadspace/random/maint_left,
+/area/shuttle/escape)
+"o" = (
+/obj/structure/extinguisher_cabinet/directional/east,
+/turf/open/floor/deadspace/random/slides,
+/area/shuttle/escape)
+"p" = (
+/obj/machinery/light/directional/west,
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/shuttle/escape)
+"q" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"r" = (
+/obj/structure/chair/comfy/shuttle,
+/obj/machinery/button/door/directional/west{
+	pixel_x = -30;
+	pixel_y = 3;
+	name = "Shuttle Lock Down";
+	id = "evac_1"
+	},
+/turf/open/floor/deadspace/random/maint_center,
+/area/shuttle/escape)
+"u" = (
+/turf/closed/wall/mineral/titanium,
+/turf/open/space/basic,
+/area/shuttle/escape)
+"v" = (
+/obj/docking_port/mobile/emergency{
+	name = "Aegis7 emergency shuttle 1"
+	},
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/escape)
+"w" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/deadspace/random/maint_right,
+/area/shuttle/escape)
+"x" = (
+/turf/open/space/openspace,
+/area/template_noop)
+"y" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/deadspace/random/slides,
+/area/shuttle/escape)
+"z" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/deadspace/random/slides,
+/area/shuttle/escape)
+"A" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/shuttle/escape)
+"D" = (
+/obj/machinery/computer/crew{
+	dir = 4
+	},
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/shuttle/escape)
+"F" = (
+/turf/open/floor/deadspace/random/maint_center,
+/area/shuttle/escape)
+"I" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Emergency Shuttle Cockpit"
+	},
+/turf/open/floor/deadspace/random/maint_center,
+/area/shuttle/escape)
+"J" = (
+/obj/machinery/computer/communications{
+	dir = 8
+	},
+/turf/open/floor/deadspace/random/slides,
+/area/shuttle/escape)
+"O" = (
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/shuttle/escape)
+"Q" = (
+/obj/machinery/light/directional/east,
+/obj/machinery/computer/security{
+	dir = 8
+	},
+/turf/open/floor/deadspace/random/slides,
+/area/shuttle/escape)
+"R" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/deadspace/random/maint_center,
+/area/shuttle/escape)
+"S" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/obj/machinery/light/directional/west,
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/shuttle/escape)
+"V" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/escape)
+"X" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/deadspace/random/maint_center,
+/area/shuttle/escape)
+"Y" = (
+/obj/machinery/light/directional/east,
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/deadspace/random/slides,
+/area/shuttle/escape)
+"Z" = (
+/obj/machinery/door/airlock/shuttle,
+/obj/machinery/door/poddoor/preopen{
+	id = "evac_1"
+	},
+/turf/open/floor/deadspace/mono,
+/area/shuttle/escape)
+
+(1,1,1) = {"
+V
+V
+V
+Z
+Z
+V
+v
+V
+V
+V
+V
+V
+x
+"}
+(2,1,1) = {"
+q
+a
+p
+O
+O
+O
+S
+A
+V
+D
+j
+V
+V
+"}
+(3,1,1) = {"
+q
+a
+F
+F
+F
+F
+F
+F
+V
+l
+l
+n
+e
+"}
+(4,1,1) = {"
+q
+a
+F
+R
+R
+R
+R
+F
+I
+F
+F
+r
+e
+"}
+(5,1,1) = {"
+q
+a
+F
+X
+X
+X
+X
+d
+u
+F
+F
+k
+e
+"}
+(6,1,1) = {"
+q
+a
+F
+F
+F
+F
+F
+F
+V
+w
+w
+h
+e
+"}
+(7,1,1) = {"
+q
+a
+Y
+f
+f
+o
+z
+y
+V
+J
+Q
+V
+V
+"}
+(8,1,1) = {"
+V
+V
+V
+Z
+Z
+V
+V
+V
+V
+V
+V
+V
+x
+"}

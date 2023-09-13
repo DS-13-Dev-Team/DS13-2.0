@@ -7,7 +7,7 @@
 	layer = BELOW_MOB_LAYER
 	density = FALSE
 	move_resist = 1000
-	mob_name = "scavanger bot"
+	mob_name = "Scavanger bot"
 	///Type of drone that will be spawned
 	mob_type = /mob/living/simple_animal/drone/classic/scavbot
 	role_ban = ROLE_DRONE

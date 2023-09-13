@@ -76,7 +76,7 @@
 	..()
 	new /obj/item/clothing/suit/armor/pcsi(src)
 	new /obj/item/clothing/suit/toggle/cseco(src)
-	new /obj/item/clothing/head/helmet/sec/pcsi(src)
+	new /obj/item/clothing/head/helmet/pcsi(src)
 	new /obj/item/radio/headset/headset_sec(src)
 	new /obj/item/radio/headset/headset_sec/alt(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)

@@ -3,6 +3,9 @@
 	desc = "A standard issued mining suit, issued to class 1 miners; Commonly used during planet cracking operations."
 	default_skin = "standard_miner"
 	armor = list(MELEE = 42.5, BULLET = 42.5, LASER = 42.5, ENERGY = 15, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	resistance_flags = FIRE_PROOF|LAVA_PROOF
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 
 	skins = list(
 		"standard_miner" = list(
@@ -34,6 +37,7 @@
 
 /obj/item/mod/control/pre_equipped/ds/standard_miner
 	theme = /datum/mod_theme/deadspace/standard_miner
+	applied_core = /obj/item/mod/core/plasma
 	initial_modules = list(
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
