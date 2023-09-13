@@ -115,6 +115,7 @@
 	var/mask_type = /obj/item/clothing/mask/breath
 	var/internal_type = /obj/item/tank/internals/emergency_oxygen
 	var/medipen_type = /obj/item/reagent_containers/hypospray/medipen
+	new /obj/item/food/donkpocket
 
 /obj/item/storage/box/survival/PopulateContents()
 	if(isplasmaman(loc))
