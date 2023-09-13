@@ -135,6 +135,7 @@
 		new /obj/item/radio/off(src)
 	new /obj/item/food/donkpocket(src)
 	new /obj/item/flashlight/glowstick(src)
+	new /obj/item/crowbar(src)
 
 
 /obj/item/storage/box/survival/radio/PopulateContents()
