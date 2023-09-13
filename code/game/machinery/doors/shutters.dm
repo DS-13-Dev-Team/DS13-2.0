@@ -5,9 +5,9 @@
 	icon = 'icons/obj/doors/shutters.dmi'
 	layer = SHUTTER_LAYER
 	closingLayer = SHUTTER_LAYER_CLOSED
-	damage_deflection = 20
-	armor = list(MELEE = 20, BULLET = 20, LASER = 20, ENERGY = 75, BOMB = 25, BIO = 100, FIRE = 100, ACID = 70)
-	max_integrity = 100
+	damage_deflection = 35 // enough to occasionally stop a basic slasher with its 30 - 48 structure damage
+	armor = list(MELEE = 35, BULLET = 20, LASER = 20, ENERGY = 75, BOMB = 25, BIO = 100, FIRE = 100, ACID = 70)
+	max_integrity = 300
 	recipe_type = /datum/crafting_recipe/shutters
 
 /obj/machinery/door/poddoor/shutters/preopen

@@ -44,6 +44,12 @@
 		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_death_3.ogg'
 	)
 
+/datum/species/necromorph/spitter/get_scream_sound(mob/living/carbon/human/necromorph/spitter)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_pain_extreme.ogg',
+		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_pain_extreme_2.ogg',
+	)
+
 /datum/action/cooldown/necro/shoot/spitter_longshoot
 	name = "Long shot"
 	desc = "A powerful projectile for longrange shooting."
@@ -62,8 +68,8 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
-	speed = 1
-	pixel_speed_multiplier = 0.3
+	speed = 0.8
+	pixel_speed_multiplier = 0.5
 
 	acid_type = /datum/reagent/toxin/acid/fluacid
 	acid_amount = 3
@@ -99,8 +105,8 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
-	speed = 1
-	pixel_speed_multiplier = 0.3
+	speed = 0.8
+	pixel_speed_multiplier = 0.5
 
 	acid_type = /datum/reagent/toxin/acid/fluacid
 	acid_amount = 2

@@ -58,6 +58,14 @@
 		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_3.ogg'
 	)
 
+/datum/species/necromorph/puker/get_scream_sound(mob/living/carbon/human/necromorph/puker)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_pain_4.ogg',
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_shout_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_shout_4.ogg',
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_shout_long_4.ogg',
+	)
+
 /datum/action/cooldown/necro/shoot/puker_longshot
 	name = "Long shot"
 	desc = "A powerful projectile for longrange shooting."
@@ -76,8 +84,8 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
-	speed = 1
-	pixel_speed_multiplier = 0.3
+	speed = 0.8
+	pixel_speed_multiplier = 0.5
 
 	acid_type = /datum/reagent/toxin/acid/fluacid
 	acid_amount = 5
@@ -113,8 +121,8 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
-	speed = 1
-	pixel_speed_multiplier = 0.3
+	speed = 0.8
+	pixel_speed_multiplier = 0.5
 
 	acid_type = /datum/reagent/toxin/acid/fluacid
 	acid_amount = 3.2

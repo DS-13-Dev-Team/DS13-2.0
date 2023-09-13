@@ -10,6 +10,10 @@
 	desc = "A juvenile hivemind. Constantly regenerating, a nigh-immortal leader of the necromorph army. "
 	ui_icon = 'deadspace/icons/necromorphs/ubermorph.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/ubermorph
+	nest_allowed = FALSE
+	tier = 4
+	biomass_cost = 800
+	biomass_spent_required = 2000
 	melee_damage_lower = 10
 	melee_damage_upper = 25
 	max_health = INFINITY
@@ -40,6 +44,13 @@
 		'deadspace/sound/effects/footstep/ubermorph_footstep_2.ogg',
 		'deadspace/sound/effects/footstep/ubermorph_footstep_3.ogg',
 		'deadspace/sound/effects/footstep/ubermorph_footstep_4.ogg'
+	)
+
+/datum/species/necromorph/ubermorph/get_scream_sound(mob/living/carbon/human/necromorph/ubermorph)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_pain_5.ogg',
+		'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_pain_6.ogg',
+		'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_shout_long_3.ogg',
 	)
 
 /datum/action/cooldown/necro/regenerate/ubermorph

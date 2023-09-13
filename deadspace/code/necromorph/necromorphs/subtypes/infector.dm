@@ -29,3 +29,10 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/infector,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/infector,
 	)
+
+/datum/species/necromorph/infector/get_scream_sound(mob/living/carbon/human/necromorph/infector)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/infector/infector_shout_long_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/infector/infector_shout_long_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/infector/infector_shout_long_3.ogg',
+	)

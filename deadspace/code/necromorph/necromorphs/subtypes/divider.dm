@@ -32,3 +32,11 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/divider,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/divider,
 	)
+
+/datum/species/necromorph/divider/get_scream_sound(mob/living/carbon/human/necromorph/divider)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/divider/divider_shout_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/divider/divider_shout_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/divider/divider_shout_3.ogg',
+		'deadspace/sound/effects/creatures/necromorph/divider/divider_shout_4.ogg',
+	)

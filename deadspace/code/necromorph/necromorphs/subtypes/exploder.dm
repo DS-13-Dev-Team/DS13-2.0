@@ -54,3 +54,12 @@
 		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_death_2.ogg',
 		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_death_3.ogg'
 	)
+
+/datum/species/necromorph/exploder/get_scream_sound(mob/living/carbon/human/necromorph/exploder)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_pain_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_pain_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_pain_3.ogg',
+		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_pain_4.ogg',
+		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_pain_5.ogg',
+	)
