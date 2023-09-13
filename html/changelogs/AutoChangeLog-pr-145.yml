@@ -1,0 +1,15 @@
+author: DTraitor
+delete-after: true
+changes:
+  - rscadd: Body scanner displays blood type
+  - rscadd: Added corruption maw. You need to drag-n-drop a human in order to put
+      them inside
+  - rscdel: Removed corruption absorbing humans
+  - rscdel: Removed everything related to necromorphs ventcrawling
+  - bugfix: Marker eye is no longer invisible to signals
+  - qol: Necromorphs won't attack themselves when possessing them using double click
+  - balance: Baseball bats will only launch things smaller than humans
+  - balance: Bodyparts worth more biomass
+  - balance: Removed object damage modifier for necromorphs
+  - code_imp: Various tweaks and fixes in markernet code
+  - code_imp: Replaced all pre 515 proc references with PROC_REF
