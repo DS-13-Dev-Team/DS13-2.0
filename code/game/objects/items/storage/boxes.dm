@@ -116,7 +116,9 @@
 	var/internal_type = /obj/item/tank/internals/emergency_oxygen
 	var/medipen_type = /obj/item/reagent_containers/hypospray/medipen
 
+
 /obj/item/storage/box/survival/PopulateContents()
+
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 	else if(isvox(loc))
@@ -131,6 +133,10 @@
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_PREMIUM_INTERNALS))
 		new /obj/item/flashlight/flare(src)
 		new /obj/item/radio/off(src)
+	new /obj/item/food/donkpocket(src)
+	new /obj/item/flashlight/glowstick(src)
+	new /obj/item/crowbar(src)
+
 
 /obj/item/storage/box/survival/radio/PopulateContents()
 	..() // we want the survival stuff too.
