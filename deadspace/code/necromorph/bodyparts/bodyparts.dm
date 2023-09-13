@@ -59,7 +59,6 @@
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
 	max_damage = 50
-	body_damage_coeff = 0.75
 	px_x = -6
 	px_y = 0
 	can_be_disabled = FALSE
@@ -89,7 +88,6 @@
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
 	max_damage = 50
-	body_damage_coeff = 0.75
 	px_x = 6
 	px_y = 0
 	can_be_disabled = FALSE
@@ -119,7 +117,6 @@
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
-	body_damage_coeff = 0.75
 	px_x = -2
 	px_y = 12
 	can_be_disabled = FALSE
@@ -151,7 +148,6 @@
 	max_damage = 50
 	body_zone = BODY_ZONE_R_LEG
 	body_part = LEG_RIGHT
-	body_damage_coeff = 0.75
 	px_x = 2
 	px_y = 12
 	can_be_disabled = FALSE
