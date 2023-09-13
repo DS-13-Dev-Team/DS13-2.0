@@ -7836,6 +7836,7 @@
 /obj/machinery/computer/pod/old/mass_driver_controller/trash{
 	pixel_x = -24
 	},
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "dvP" = (
@@ -10155,7 +10156,6 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "fFw" = (
-/mob/living/simple_animal/mouse,
 /obj/machinery/light/directional/east,
 /turf/open/misc/asteroid,
 /area/station/maintenance/disposal)
@@ -17233,6 +17233,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/surgery)
 "mok" = (
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "mpG" = (
@@ -20394,6 +20395,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "pvt" = (
@@ -21350,6 +21352,7 @@
 	dir = 9;
 	id = "garbage"
 	},
+/mob/living/simple_animal/mouse,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "qqE" = (
@@ -49618,7 +49621,7 @@ hpS
 ktm
 lUK
 omj
-rSS
+oHb
 hsR
 hpS
 mlO
@@ -50822,7 +50825,7 @@ ePZ
 fga
 cjU
 bzn
-rSS
+oHb
 oVI
 jZE
 gQo
