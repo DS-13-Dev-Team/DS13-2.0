@@ -27,7 +27,7 @@
 	//If we have corruption beneath - we are growing
 	var/turf/our_loc = loc
 	if(istype(our_loc) && our_loc.necro_corrupted)
-		addtimer(CALLBACK(src, .proc/activate), 1 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
+		addtimer(CALLBACK(src, PROC_REF(activate)), 1 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /obj/structure/necromorph/harvester/Destroy()
 	marker?.remove_biomass_source(our_source)
@@ -62,11 +62,11 @@
 		. += our_overlays[6]
 
 /obj/structure/necromorph/harvester/on_turf_corrupted()
-	.=..()
-	addtimer(CALLBACK(src, .proc/activate), 1 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
+	..()
+	addtimer(CALLBACK(src, PROC_REF(activate)), 1 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /obj/structure/necromorph/harvester/on_turf_uncorrupted()
-	.=..()
+	..()
 	active = FALSE
 	marker.remove_biomass_source(our_source)
 	our_source = null

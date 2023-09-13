@@ -73,10 +73,10 @@
 
 	target_necro.shake_animation(30)
 	start_stun()
-	addtimer(CALLBACK(src, .proc/finish_stun), CEILING(duration, 10), TIMER_STOPPABLE)
+	addtimer(CALLBACK(src, PROC_REF(finish_stun)), CEILING(duration, 10), TIMER_STOPPABLE)
 
 	//And lets start our timer
-	tick_timer = addtimer(CALLBACK(src, .proc/tick), tick_interval, TIMER_STOPPABLE)
+	tick_timer = addtimer(CALLBACK(src, PROC_REF(tick)), tick_interval, TIMER_STOPPABLE)
 
 	return TRUE
 
@@ -100,7 +100,7 @@
 		target_necro.shake_animation(30)
 
 	if (world.time < next_use_time) //Queue next tick
-		tick_timer = addtimer(CALLBACK(src, .proc/tick), tick_interval, TIMER_STOPPABLE)
+		tick_timer = addtimer(CALLBACK(src, PROC_REF(tick)), tick_interval, TIMER_STOPPABLE)
 	else
 		finish()
 

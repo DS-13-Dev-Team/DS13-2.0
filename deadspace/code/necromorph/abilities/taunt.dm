@@ -78,7 +78,7 @@
 
 /datum/action/cooldown/necro/taunt/proc/tick()
 
-	tick_timer = addtimer(CALLBACK(src, .proc/tick), tick_interval, TIMER_STOPPABLE)
+	tick_timer = addtimer(CALLBACK(src, PROC_REF(tick)), tick_interval, TIMER_STOPPABLE)
 
 	if (!owner.enemy_in_view(require_standing = TRUE))
 
@@ -115,7 +115,7 @@
 /datum/component/statmod/taunt_companion/Initialize(mob/shield)
 	.=..()
 	src.shield = shield
-	tick_timer = addtimer(CALLBACK(src, .proc/tick), tick_interval, TIMER_STOPPABLE)
+	tick_timer = addtimer(CALLBACK(src, PROC_REF(tick)), tick_interval, TIMER_STOPPABLE)
 
 /datum/component/statmod/taunt_companion/proc/tick()
 	if(QDELETED(src))
@@ -126,7 +126,7 @@
 		end()
 		return
 
-	tick_timer = addtimer(CALLBACK(src, .proc/tick), tick_interval, TIMER_STOPPABLE)
+	tick_timer = addtimer(CALLBACK(src, PROC_REF(tick)), tick_interval, TIMER_STOPPABLE)
 
 /datum/component/statmod/taunt_companion/proc/end()
 	deltimer(tick_timer)

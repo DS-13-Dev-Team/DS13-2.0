@@ -22,8 +22,9 @@
 	addtimer(CALLBACK(src, PROC_REF(activate_marker)), rand(25 MINUTES, 40 MINUTES))
 
 //Add a win message here perhaps?
-/datum/game_mode/containment/proc/marker_destroyed()
-	main_marker = null
+/datum/game_mode/containment/proc/marker_destroyed(obj/structure/marker/destroyed)
+	if(destroyed == main_marker)
+		main_marker = null
 
 /datum/game_mode/containment/proc/get_antag_candidates()
 	var/list/egov_candidates = list()

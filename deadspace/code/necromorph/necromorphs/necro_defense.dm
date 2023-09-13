@@ -10,13 +10,6 @@
 	user.do_attack_animation(src, user.attack_effect)
 	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
 
-/obj/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
-	if(!uses_integrity || (!user.melee_damage_upper && !dealt_damage)) //No damage
-		return FALSE
-	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper) * user.obj_damage_multiplier
-	user.do_attack_animation(src, user.attack_effect)
-	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
-
 /mob/living/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)
@@ -38,9 +31,8 @@
 	user.do_attack_animation(src, user.attack_effect)
 	if (w_uniform)
 		w_uniform.add_fingerprint(user)
-	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
-	var/damage = prob(90) ? dealt_damage : 0
-	if(!damage)
+	dealt_damage = prob(90) ? (dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)) : 0
+	if(!dealt_damage)
 		playsound(loc, 'sound/weapons/slashmiss.ogg', 50, TRUE, -1)
 		visible_message(span_danger("[user] lunges at [src]!"), \
 						span_userdanger("[user] lunges at you!"), span_hear("You hear a swoosh!"), null, user)
@@ -58,7 +50,7 @@
 	log_combat(user, src, "attacked")
 	if(!dismembering_strike(user, user.zone_selected)) //Dismemberment successful
 		return TRUE
-	apply_damage(damage, BRUTE, affecting, armor_block)
+	apply_damage(dealt_damage, BRUTE, affecting, armor_block)
 
 /mob/living/carbon/human/necromorph/get_eye_protection()
 	return ..() + 2

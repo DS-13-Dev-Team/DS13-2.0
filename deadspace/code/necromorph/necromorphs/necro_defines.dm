@@ -64,21 +64,11 @@
 	/// How effective fire is against this necromorph. From 0 to 1 as it is a multiplier.
 	var/fire_resist = 1
 
-	/// How quickly the necromorph enters vents
-	var/vent_enter_speed = NECRO_DEFAULT_VENT_ENTER_TIME
-	/// How quickly the necromorph enters vents
-	var/vent_exit_speed = NECRO_DEFAULT_VENT_EXIT_TIME
-	/// Whether the necromorph enters and crawls through vents silently
-	var/silent_vent_crawl = FALSE
-
 	/// Wether this necromorph is charging at the moment
 	var/charging = FALSE
 
 	/// How good are we at penetrating armour
 	var/armour_penetration = 0
-
-	/// Damage multiplier when attacking objects
-	var/obj_damage_multiplier = 3
 
 	var/datum/necro_armor/necro_armors
 

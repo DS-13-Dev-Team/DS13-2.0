@@ -235,6 +235,8 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		to_chat(src, span_notice("This vessel is already possessed!"))
 		return
 	necro.controlling = src
+	//To prevent self attack when possesing through a double click
+	client.click_intercept_time = world.time + 1
 	mind.transfer_to(necro, TRUE)
 	abstract_move(null)
 
@@ -305,8 +307,6 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	name = "Marker"
 	icon_state = "mastersignal"
 	icon = 'deadspace/icons/signals/mastersignal.dmi'
-	invisibility = INVISIBILITY_OBSERVER
-	see_invisible = SEE_INVISIBLE_OBSERVER
 	hud_type = /datum/hud/marker_signal/marker
 	interaction_range = null
 	pixel_x = -7
