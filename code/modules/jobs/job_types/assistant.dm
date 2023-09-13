@@ -7,7 +7,7 @@ Assistant
 	title = JOB_ASSISTANT
 	description = "Get your space legs, assist people, ask the HoP to give you a job."
 	faction = FACTION_STATION
-	total_positions = 5 //dont need them in ds13
+	total_positions = 5
 	spawn_positions = 5
 	supervisors = "absolutely everyone"
 	exp_granted_type = EXP_TYPE_CREW
