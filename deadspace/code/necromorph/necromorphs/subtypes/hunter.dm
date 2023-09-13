@@ -44,9 +44,13 @@
 	Avoid fire though."
 	ui_icon = 'deadspace/icons/necromorphs/hunter.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/hunter
+	nest_allowed = FALSE
+	tier = 3
+	biomass_cost = 400
+	biomass_spent_required = 950
 	max_health = 275
-	melee_damage_lower = 10
-	melee_damage_upper = 16
+	melee_damage_lower = 18
+	melee_damage_upper = 22
 	actions = list(
 		/datum/action/cooldown/necro/swing/hunter = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
 		/datum/action/cooldown/necro/taunt/hunter = COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN,

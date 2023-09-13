@@ -68,8 +68,8 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
-	speed = 1
-	pixel_speed_multiplier = 0.3
+	speed = 0.8
+	pixel_speed_multiplier = 0.5
 
 	acid_type = /datum/reagent/toxin/acid/fluacid
 	acid_amount = 3
@@ -105,8 +105,8 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
-	speed = 1
-	pixel_speed_multiplier = 0.3
+	speed = 0.8
+	pixel_speed_multiplier = 0.5
 
 	acid_type = /datum/reagent/toxin/acid/fluacid
 	acid_amount = 2
