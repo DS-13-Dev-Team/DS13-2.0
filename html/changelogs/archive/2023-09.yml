@@ -63,3 +63,29 @@
   - rscadd: Added redbot support on the server
   githubuser4141:
   - balance: Shutter doors are more powerful now
+2023-09-14:
+  DTraitor:
+  - rscadd: Body scanner displays blood type
+  - rscadd: Added corruption maw. You need to drag-n-drop a human in order to put
+      them inside
+  - rscdel: Removed corruption absorbing humans
+  - rscdel: Removed everything related to necromorphs ventcrawling
+  - bugfix: Marker eye is no longer invisible to signals
+  - qol: Necromorphs won't attack themselves when possessing them using double click
+  - balance: Baseball bats will only launch things smaller than humans
+  - balance: Bodyparts worth more biomass
+  - balance: Removed object damage modifier for necromorphs
+  - code_imp: Various tweaks and fixes in markernet code
+  - code_imp: Replaced all pre 515 proc references with PROC_REF
+  MisterGrimm:
+  - bugfix: Necromorphs don't scream like humans anymore
+  bestmudad:
+  - balance: Necromorph limbs have slightly more health
+  - balance: Made Hunters damage higher
+  - balance: Buffed Necromorph Projectiles
+  - bugfix: Added the Hunter and Uber back in
+  chesse20:
+  - rscadd: Weapons to the loadout menu
+  - rscadd: Glowsticks to the loadout menu
+  - balance: Infinite miner slots instead of assistants
+  - rscadd: Food ,glowstick, and crowbar to emergency storage box
