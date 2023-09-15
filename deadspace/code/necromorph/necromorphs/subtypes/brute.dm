@@ -8,38 +8,8 @@
 	var/next_attack_delay = 0
 	var/spec_attack_delay = 25
 
-/mob/living/carbon/human/necromorph/brute/Initialize(mapload, obj/structure/marker/marker_master)
-	. = ..()
-	RegisterSignal(src, COMSIG_LIVING_UNARMED_ATTACK, PROC_REF(spec_unarmedattack))
-
-/mob/living/carbon/human/necromorph/brute/Destroy()
-	. = ..()
-	UnregisterSignal(src, COMSIG_LIVING_UNARMED_ATTACK)
-
 /mob/living/carbon/human/necromorph/brute/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.brute_sounds[audio_type]), volume, vary, extra_range)
-
-/mob/living/carbon/human/necromorph/brute/proc/spec_unarmedattack(datum/source, atom/target, proximity, modifiers)
-	if(world.time >= next_attack_delay)
-		if (istype(target, /mob/living/carbon/human))
-			var/mob/living/carbon/human/mob_target = target
-			var/fling_dir = pick((dir & (NORTH|SOUTH)) ? list(WEST, EAST, dir|WEST, dir|EAST) : list(NORTH, SOUTH, dir|NORTH, dir|SOUTH)) //Fling them somewhere not behind nor ahead of the charger.
-			var/fling_dist = rand(2,5)
-			var/turf/destination = mob_target.loc
-			var/turf/temp
-
-			for(var/i in 1 to fling_dist)
-				temp = get_step(destination, fling_dir)
-				if(!temp)
-					break
-				destination = temp
-			if(destination != mob_target.loc)
-				mob_target.throw_at(destination, fling_dist, 1, src, TRUE)
-			next_attack_delay = spec_attack_delay + world.time
-			return COMPONENT_CANCEL_ATTACK_CHAIN
-
-	//Return parent as a fallback if something went wrong
-	return
 
 /datum/necro_class/brute
 	display_name = "Brute"
@@ -97,6 +67,33 @@
 		'deadspace/sound/effects/creatures/necromorph/brute/brute_pain_3.ogg',
 		'deadspace/sound/effects/creatures/necromorph/brute/brute_pain_extreme.ogg',
 	)
+
+//TODO: REWRITE THIS COMPLETELY
+/datum/species/necromorph/brute/spec_unarmedattack(mob/living/carbon/human/necromorph/brute/user, atom/target, modifiers)
+	if(!user.combat_mode)
+		return
+	if(world.time < user.next_attack_delay)
+		return
+	user.next_attack_delay = user.spec_attack_delay + world.time
+	if (istype(target, /mob/living/carbon/human))
+		var/mob/living/carbon/human/mob_target = target
+		var/fling_dir = pick((user.dir & (NORTH|SOUTH)) ? list(WEST, EAST, user.dir|WEST, user.dir|EAST) : list(NORTH, SOUTH, user.dir|NORTH, user.dir|SOUTH)) //Fling them somewhere not behind nor ahead of the charger.
+		var/fling_dist = rand(2,5)
+		var/turf/destination = mob_target.loc
+		var/turf/temp
+
+		for(var/i in 1 to fling_dist)
+			temp = get_step(destination, fling_dir)
+			if(!temp)
+				break
+			destination = temp
+		if(destination != mob_target.loc)
+			mob_target.throw_at(destination, fling_dist, 1, src, TRUE)
+	return ..()
+
+/datum/species/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/H, forced, spread_damage, sharpness, attack_direction)
+	//TODO: Handle front armour here
+	return ..()
 
 #define WINDUP_TIME 1.25 SECONDS
 

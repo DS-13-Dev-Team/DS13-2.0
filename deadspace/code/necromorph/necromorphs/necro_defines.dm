@@ -32,6 +32,10 @@
 	/// "Shield" that appears after dodging. Absorbs incom
 	var/dodge_shield = 0
 
+	/// How much of the damage is absorbed by the shield
+	/// Value between 0 and 1
+	var/shield_absorb_percent = 1
+
 	/// Necromorph class type we are using, shouldn't be a ref
 	/// Use marker?.necro_classes[class].your_var||initial(class.your_var) if you need to get a var
 	var/datum/necro_class/class = /datum/necro_class

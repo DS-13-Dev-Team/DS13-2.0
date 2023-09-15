@@ -71,6 +71,10 @@
 	///The iconstate for the necromorph on the minimap
 	var/minimap_icon = "xenominion"
 
+	/// How much of the damage is absorbed by the shield
+	/// Value between 0 and 1
+	var/shield_absorb_percent = 1
+
 	//TODO: Get rid of this
 	var/implemented = FALSE
 
@@ -106,4 +110,6 @@
 
 	necro.necro_flags = necro_flags
 
-	necro.fire_resist =  fire_resist
+	necro.fire_resist = fire_resist
+
+	necro.shield_absorb_percent = shield_absorb_percent

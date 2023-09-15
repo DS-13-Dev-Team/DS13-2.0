@@ -18,8 +18,8 @@
 	return ..()
 
 //Necromorphs cant hold things
-/mob/living/carbon/human/necromorph/has_hand_for_held_index(i)
-	return FALSE
+/mob/living/carbon/human/necromorph/has_active_hand()
+	return TRUE
 
 /mob/living/carbon/human/necromorph/updatehealth()
 	. = ..()

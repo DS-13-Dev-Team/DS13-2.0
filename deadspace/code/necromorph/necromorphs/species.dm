@@ -78,20 +78,17 @@
 /datum/species/necromorph/random_name(gender,unique,lastname)
 	return "[name] [rand(1, 999)]"
 
+/datum/species/necromorph/spec_unarmedattack(mob/living/carbon/human/user, atom/target, modifiers)
+	if(user.combat_mode)
+		target.attack_necromorph(user, modifiers)
+		return TRUE
+
 /datum/species/necromorph/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/necromorph/H, forced = FALSE, spread_damage = FALSE, sharpness = NONE, attack_direction = null)
 	if(H.dodge_shield > 0)
-		var/percent_no_defend = 100-blocked
-		if(HAS_TRAIT(H, TRAIT_DODGEARMOR_FULL))
-			percent_no_defend -= 100
-		else
-			percent_no_defend -=  H.necro_armors.get_dir_armor(attack_direction, H.dir)
-		percent_no_defend /= 100
-		if(percent_no_defend <= 0)
-			blocked = 100
-			return ..()
-		var/absorbed_damage = min(H.dodge_shield, round(damage * percent_no_defend))
-		H.reduce_shield(absorbed_damage)
-		blocked += (absorbed_damage / damage) * 100
+		// Calculate amount of the damage that was blocked by the shield
+		var/dodged_damage = min(H.dodge_shield, damage * H.shield_absorb_percent, damage * (100 - blocked) / 100)
+		H.reduce_shield(dodged_damage)
+		blocked += (dodged_damage / damage) * 100
 	return ..()
 
 //Does animations for regenerating a limb
