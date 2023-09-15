@@ -17,7 +17,7 @@
 	marker?.remove_necro(src)
 	return ..()
 
-//Necromorphs cant hold things
+//We should be always able to attack our opponents
 /mob/living/carbon/human/necromorph/has_active_hand()
 	return TRUE
 

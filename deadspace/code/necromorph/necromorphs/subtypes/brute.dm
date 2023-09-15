@@ -93,6 +93,13 @@
 
 /datum/species/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/H, forced, spread_damage, sharpness, attack_direction)
 	//TODO: Handle front armour here
+	switch(turn(attack_direction, dir2angle(H.dir)))
+		if(NORTH, NORTHEAST, NORTHWEST)
+			return armor_front
+		if(EAST, WEST)
+			return armor_flank
+		else
+			return armor_back
 	return ..()
 
 #define WINDUP_TIME 1.25 SECONDS

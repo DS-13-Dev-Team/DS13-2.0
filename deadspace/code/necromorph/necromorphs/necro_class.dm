@@ -90,12 +90,6 @@
 
 	necro.armor = getArmor(arglist(armor))
 
-	necro.necro_armors = getNecroArmor(arglist(necro_armor))
-	necro.dodge_shield = necro.necro_armors.getRating(ARMOR_PROTECTION)
-	if(necro.hud_used)
-		var/datum/hud/necromorph/hud = necro.hud_used
-		hud.update_shieldbar()
-
 	necro.melee_damage_upper = melee_damage_upper
 
 	necro.melee_damage_lower = melee_damage_lower
