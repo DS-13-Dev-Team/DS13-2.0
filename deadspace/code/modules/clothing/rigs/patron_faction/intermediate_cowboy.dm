@@ -3,7 +3,7 @@
 	name = "intermediate cowboy"
 	desc = "Covered in a thin layer of space dust, this comfy rig lets the user win any duel at high noon."
 	default_skin = "intermediate_cowboy"
-	armor = list(MELEE = 49, BULLET = 55, LASER = 50, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 10, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 49, BULLET = 55, LASER = 50, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 10, ACID = 25)
 	complexity_max = 20
 
 	skins = list(

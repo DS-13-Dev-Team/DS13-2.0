@@ -3,7 +3,7 @@
 	name = "intermediate cobra"
 	desc = "A modified engineering RIG in a ghastly corroded hue. Features a special hooded helmet to help better protect against chemical spills."
 	default_skin = "intermediate_cobra"
-	armor = list(MELEE = 50, BULLET = 50, LASER = 52, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 50, ACID = 75, WOUND = 5)
+	armor = list(MELEE = 50, BULLET = 50, LASER = 52, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 50, ACID = 75)
 	complexity_max = 20
 
 	skins = list(

@@ -4,7 +4,7 @@
 	name = "CEC Civilian"
 	desc = "Resource Integrated Gear. Standard issue for all CEC employees."
 	default_skin = "civlian"
-	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25)
 
 	skins = list(
 		"slim" = list(

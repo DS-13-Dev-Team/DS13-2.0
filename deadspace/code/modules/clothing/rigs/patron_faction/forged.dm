@@ -3,7 +3,7 @@
 	name = "forged engineering"
 	desc = "An standard CEC Engineering rig that has been forged in the fire of time."
 	default_skin = "forged"
-	armor = list(MELEE = 45, BULLET = 50, LASER = 50, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 45, BULLET = 50, LASER = 50, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25)
 
 	skins = list(
 		"forged" = list(
