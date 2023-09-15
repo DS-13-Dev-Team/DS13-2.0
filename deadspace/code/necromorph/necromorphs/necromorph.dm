@@ -64,10 +64,11 @@
 
 /mob/living/carbon/human/necromorph/update_sight()
 	. = ..()
-	if(stat < UNCONSCIOUS)
-		see_in_dark = conscious_see_in_dark
-	else if (stat < HARD_CRIT)
-		see_in_dark = unconscious_see_in_dark
+	switch(stat)
+		if(CONSCIOUS)
+			see_in_dark = conscious_see_in_dark
+		if(UNCONSCIOUS)
+			see_in_dark = unconscious_see_in_dark
 	//Otherwise we are dead and see_in_dark was handled in parent call
 
 /mob/living/carbon/human/necromorph/death(gibbed)
