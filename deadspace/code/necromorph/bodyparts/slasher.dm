@@ -26,7 +26,6 @@
 	attack_verb_continuous = list("slashes", "stabs")
 	attack_verb_simple = list("slash", "stab")
 	max_damage = 50
-	body_damage_coeff = 0.75
 	px_x = -6
 	px_y = 0
 	wound_resistance = 0
@@ -39,7 +38,6 @@
 	attack_verb_continuous = list("slashes", "stabs")
 	attack_verb_simple = list("slash", "stab")
 	max_damage = 50
-	body_damage_coeff = 0.75
 	px_x = 6
 	px_y = 0
 	wound_resistance = 0
@@ -52,7 +50,6 @@
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
-	body_damage_coeff = 0.75
 	px_x = -2
 	px_y = 12
 	wound_resistance = 0
@@ -65,7 +62,6 @@
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
-	body_damage_coeff = 0.75
 	px_x = 2
 	px_y = 12
 	wound_resistance = 0

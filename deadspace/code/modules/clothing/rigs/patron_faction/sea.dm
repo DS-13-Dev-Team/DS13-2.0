@@ -4,7 +4,7 @@
 	desc = "The heavy-duty diving RIG is the standard among CEC deep sea mining operations. \
 	It's plating has been reinforced to withstand extreme undersea pressures and concussive forces."
 	default_skin = "heavy_diving"
-	armor = list(MELEE = 66.5, BULLET = 70, LASER = 57.5, ENERGY = 25, BOMB = 90, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 66.5, BULLET = 70, LASER = 57.5, ENERGY = 25, BOMB = 90, BIO = 100, FIRE = 25, ACID = 25)
 	complexity_max = 20
 
 	skins = list(
@@ -51,7 +51,7 @@
 	desc = "The elite diving RIG is the next generation of diving RIGs used among CEC deep sea mining operations. \
 It's flexible reinforcements allow it to withstand extreme undersea pressures while retaining mobility."
 	default_skin = "elite_diving"
-	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25)
 	complexity_max = 20
 
 
@@ -100,7 +100,7 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 	desc = "a modified diving RIG with a cage on the shoulder and symbols drawn upon the suit. \
 	It's flexible reinforcements allow it to withstand extreme undersea pressures while retaining mobility."
 	default_skin = "strange"
-	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25)
 	complexity_max = 20
 
 	skins = list(

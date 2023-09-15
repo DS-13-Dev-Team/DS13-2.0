@@ -3,7 +3,7 @@
 	name = "witness"
 	desc = "A Sovereign Colonies all-purpose survival RIG painted in a mesmerizing fashion as a tribute to the Church of Unitology and the general faith they hold."
 	default_skin = "witness"
-	armor = list(MELEE = 44, BULLET = 44, LASER = 40, ENERGY = 15, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 44, BULLET = 44, LASER = 40, ENERGY = 15, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25)
 
 	skins = list(
 		"witness" = list(
