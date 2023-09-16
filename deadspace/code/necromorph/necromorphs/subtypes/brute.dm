@@ -32,6 +32,8 @@
 	)
 	minimap_icon = "brute"
 	implemented = TRUE
+	var/armor_front = 20
+	var/armor_flank = 20
 
 /datum/species/necromorph/brute
 	name = "Brute"
@@ -94,12 +96,14 @@
 /datum/species/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/H, forced, spread_damage, sharpness, attack_direction)
 	//TODO: Handle front armour here
 	switch(turn(attack_direction, dir2angle(H.dir)))
-		if(NORTH, NORTHEAST, NORTHWEST)
-			return armor_front
+		if(NORTH)
+			blocked += H.armor_front
+		if(NORTHEAST, NORTHWEST)
+			blocked += (H.armor_front + H.armor_flank) / 2
 		if(EAST, WEST)
-			return armor_flank
-		else
-			return armor_back
+			blocked += H.armor_flank
+		if(SOUTHEAST, SOUTHWEST)
+			blocked += H.armor_flank / 2
 	return ..()
 
 #define WINDUP_TIME 1.25 SECONDS
