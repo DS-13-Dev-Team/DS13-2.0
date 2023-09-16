@@ -19,8 +19,8 @@
 	var/total_burn = 0
 	var/total_brute = 0
 	for(var/obj/item/bodypart/BP as anything in bodyparts) //hardcoded to streamline things a bit
-		total_brute += (BP.brute_dam * BP.body_damage_coeff)
-		total_burn += (BP.burn_dam * BP.body_damage_coeff)
+		total_brute += BP.brute_dam
+		total_burn += BP.burn_dam
 	var/damage = getOxyLoss() + getToxLoss() - getCloneLoss() - total_burn - total_brute
 	if(damage >= maxHealth)
 

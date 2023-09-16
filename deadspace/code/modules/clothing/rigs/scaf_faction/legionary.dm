@@ -2,7 +2,7 @@
 	name = "legionary"
 	desc = "an armored exosuit that was last fielded by S.C.A.F. forces in the 24th Century."
 	default_skin = "scaf_legionnaire"
-	armor = list(MELEE = 65, BULLET = 55, LASER = 55, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 65, BULLET = 55, LASER = 55, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25)
 
 	skins = list(
 		"scaf_legionnaire" = list(

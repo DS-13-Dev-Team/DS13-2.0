@@ -2,7 +2,7 @@
 	name = "advanced"
 	desc = "The latest in cutting-edge RIG technology. Lightweight, tough, and packed with utilities"
 	default_skin = "adv"
-	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 60, BULLET = 60, LASER = 60, ENERGY = 30, BOMB = 65, BIO = 100, FIRE = 25, ACID = 25)
 	complexity_max = 25
 
 	skins = list(

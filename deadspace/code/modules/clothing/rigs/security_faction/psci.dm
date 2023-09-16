@@ -2,7 +2,7 @@
 	name = "PSCI"
 	desc = "A lightweight and flexible armoured rig suit used by CEC shipboard security during crackdowns and for use in hazardous environments."
 	default_skin = "pcsi"
-	armor = list(MELEE = 60, BULLET = 64, LASER = 60, ENERGY = 5, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 60, BULLET = 64, LASER = 60, ENERGY = 5, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25)
 
 	skins = list(
 		"pcsi" = list(

@@ -3,7 +3,7 @@
 	name = "elite"
 	desc = "A frontline assault RIG suit used by the 401st Division of the S.C.A.F., designed with advanced survival and biophysical support technologies."
 	default_skin = "scaf_elite"
-	armor = list(MELEE = 60, BULLET = 64, LASER = 60, ENERGY = 5, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 60, BULLET = 64, LASER = 60, ENERGY = 5, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25)
 
 	skins = list(
 		"scaf_elite" = list(

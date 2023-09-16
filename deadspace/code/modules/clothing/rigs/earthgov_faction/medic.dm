@@ -2,7 +2,7 @@
 	name = "advanced soldier medic"
 	desc = "A military-grade RIG that was issued to the Earth Defense Force personnel."
 	default_skin = "adv_soldier"
-	armor = list(MELEE = 67.5, BULLET = 70, LASER = 70, ENERGY = 40, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 67.5, BULLET = 70, LASER = 70, ENERGY = 40, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25)
 	complexity_max = 30
 
 	skins = list(

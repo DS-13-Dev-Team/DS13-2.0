@@ -3,7 +3,7 @@
 	name = "bloated"
 	desc = "A horrifying amalgamation of flesh and a sparse amount of mechanical components, loosely resembling a rig."
 	default_skin = "flesh"
-	armor = list(MELEE = 56, BULLET = 60, LASER = 30, ENERGY = 20, BOMB = 30, BIO = 100, FIRE = 25, ACID = 25, WOUND = 5)
+	armor = list(MELEE = 56, BULLET = 60, LASER = 30, ENERGY = 20, BOMB = 30, BIO = 100, FIRE = 25, ACID = 25)
 
 	skins = list(
 		"flesh" = list(
