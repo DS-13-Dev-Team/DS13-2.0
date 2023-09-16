@@ -73,7 +73,6 @@ Magazines
 	caliber = CALIBER_PULSE
 	ammo_type = /obj/item/ammo_casing/caseless/pulse
 	max_ammo = 50 //To low? 65 normal on 1.0
-	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
 /obj/item/ammo_box/magazine/pulse/hv
 	name = "pulse magazine (high velocity)"
