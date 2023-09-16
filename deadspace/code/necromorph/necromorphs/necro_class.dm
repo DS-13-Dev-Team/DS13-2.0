@@ -66,6 +66,7 @@
 		TRAIT_DISCOORDINATED_TOOL_USER,
 		TRAIT_PIERCEIMMUNE,
 		TRAIT_IGNOREDAMAGESLOWDOWN,
+		TRAIT_NOSOFTCRIT,
 	)
 
 	///The iconstate for the necromorph on the minimap

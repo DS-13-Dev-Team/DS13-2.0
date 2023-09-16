@@ -3,6 +3,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_CHEST & ~(BP_HAS_BONES|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "chest"
 	icon_dmg_overlay = null
@@ -22,6 +23,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_HEAD & ~(BP_HAS_BONES|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "head"
 	icon_dmg_overlay = null
@@ -53,6 +55,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_arm"
 	icon_dmg_overlay = null
@@ -82,6 +85,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_arm"
 	icon_dmg_overlay = null
@@ -111,6 +115,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_LEGS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_leg"
 	icon_dmg_overlay = null
@@ -140,6 +145,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_LEGS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_leg"
 	icon_dmg_overlay = null
