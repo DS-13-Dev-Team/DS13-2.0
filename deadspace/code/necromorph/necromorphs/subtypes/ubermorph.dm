@@ -25,6 +25,7 @@
 		/datum/action/cooldown/necro/frenzy_shout/ubermorph = COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN,
 	)
 	minimap_icon = "ubermorph"
+	spawn_limit = 1
 
 /datum/species/necromorph/ubermorph
 	name = "Ubermorph"
