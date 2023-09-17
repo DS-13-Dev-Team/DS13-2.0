@@ -2640,10 +2640,7 @@
 	dir = 1;
 	id = "garbage"
 	},
-/obj/machinery/door/poddoor/preopen{
-	id = "Disposal Exit";
-	name = "disposal exit vent"
-	},
+/obj/structure/plasticflaps/opaque,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "aJW" = (
@@ -8079,11 +8076,6 @@
 /area/station/engineering/main)
 "dHr" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/button/door/directional/west{
-	id = "Disposal Exit";
-	name = "Disposal Vent Control";
-	req_access_txt = "12"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
@@ -9645,6 +9637,12 @@
 	dir = 4
 	},
 /area/station/service/hydroponics)
+"fgp" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/obj/structure/plasticflaps/opaque,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "fgw" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -42975,7 +42973,7 @@ nOf
 fBj
 jdJ
 jdJ
-jdJ
+fgp
 mQl
 srF
 aFM
