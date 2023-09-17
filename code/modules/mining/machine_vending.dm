@@ -47,7 +47,7 @@
 		new /datum/data/mining_equipment("Jump Boots", /obj/item/clothing/shoes/bhop, 2500),
 		new /datum/data/mining_equipment("Ice Hiking Boots", /obj/item/clothing/shoes/winterboots/ice_boots, 2500),
 		new /datum/data/mining_equipment("Standard Mining RIG", /obj/item/mod/control/pre_equipped/ds/standard_miner, 1000), //you'd only need one of these if theres already 30 other miners who took the free ones from the locker
-		new /datum/data/mining_equipment("Intermediate Mining RIG", /obj/item/mod/control/pre_equipped/ds/intermediate_miner, 5000),
+		new /datum/data/mining_equipment("Intermediate Mining RIG", /obj/item/mod/control/pre_equipped/ds/intermediate_miner, 5500),
 		new /datum/data/mining_equipment("Advanced Mining RIG", /obj/item/mod/control/pre_equipped/ds/advanced_miner, 8000), //only possible to get if theres not a lot of other miners
 		new /datum/data/mining_equipment("Luxury Shelter Capsule", /obj/item/survivalcapsule/luxury, 3000),
 		new /datum/data/mining_equipment("Luxury Bar Capsule", /obj/item/survivalcapsule/luxuryelite, 10000),
