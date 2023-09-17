@@ -16,6 +16,8 @@
 	wound_resistance = 10
 	acceptable_bodytype = BODYTYPE_NECROMORPH
 	can_be_disabled = FALSE
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/head/necromorph
 	name = BODY_ZONE_HEAD
@@ -34,6 +36,8 @@
 	is_dimorphic = FALSE
 	can_be_disabled = FALSE
 	show_organs_on_examine = TRUE
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/head/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
 	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
@@ -63,6 +67,8 @@
 	px_y = 0
 	can_be_disabled = FALSE
 	wound_resistance = 0
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/arm/left/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
 	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
@@ -92,6 +98,8 @@
 	px_y = 0
 	can_be_disabled = FALSE
 	wound_resistance = 0
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/arm/right/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
 	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
@@ -121,6 +129,8 @@
 	px_y = 12
 	can_be_disabled = FALSE
 	wound_resistance = 0
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/leg/left/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
 	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
@@ -152,6 +162,8 @@
 	px_y = 12
 	can_be_disabled = FALSE
 	wound_resistance = 0
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/leg/right/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
 	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
