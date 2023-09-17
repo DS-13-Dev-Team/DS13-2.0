@@ -3209,8 +3209,8 @@
 /area/station/engineering/supermatter/room)
 "aRO" = (
 /obj/machinery/door/window/left/directional/west{
-	req_access_txt = "3";
-	name = "Brig Receiving"
+	name = "Brig Receiving";
+	req_one_access_txt = "1;4"
 	},
 /obj/structure/plasticflaps/opaque,
 /obj/effect/turf_decal/bot,
@@ -5615,8 +5615,8 @@
 "bth" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/left/directional/west{
-	req_access_txt = "3";
-	name = "Brig Receptionist Desk"
+	name = "Brig Receptionist Desk";
+	req_one_access_txt = "1;4"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -27156,7 +27156,7 @@
 "weg" = (
 /obj/machinery/door/airlock/security{
 	name = "P-Sec Receptionist";
-	req_one_access = list()
+	req_one_access_txt = "1;4"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -39724,7 +39724,7 @@ cBw
 fam
 cBw
 cBw
-lwp
+cBw
 oOe
 pqO
 eqk
@@ -39928,7 +39928,7 @@ dpe
 dpe
 pdJ
 eBj
-lwp
+dWU
 sIo
 aGn
 aGn
