@@ -3760,6 +3760,10 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
+"IE" = (
+/obj/effect/mob_spawn/ghost_role/drone/scavbot,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "IG" = (
 /obj/structure/table,
 /obj/effect/spawner/random/entertainment/money_large,
@@ -4266,10 +4270,8 @@
 /turf/open/floor/iron/dark,
 /area/station/maintenance/fore/lesser)
 "Ox" = (
-/obj/structure/rack,
-/obj/structure/rack,
 /obj/effect/turf_decal/box,
-/obj/effect/spawner/random/maintenance/two,
+/obj/effect/mob_spawn/ghost_role/drone/scavbot,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
 "OB" = (
@@ -5083,6 +5085,7 @@
 /obj/effect/turf_decal/arrows/red{
 	dir = 1
 	},
+/obj/effect/mob_spawn/ghost_role/drone/scavbot,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo)
 "Ya" = (
@@ -8067,7 +8070,7 @@ zp
 bf
 Dt
 hn
-hn
+IE
 bf
 yG
 yG
