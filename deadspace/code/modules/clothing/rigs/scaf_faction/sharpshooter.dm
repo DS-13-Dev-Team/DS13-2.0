@@ -2,7 +2,8 @@
 	name = "sharpshooter"
 	desc = "Designed for S.C.A.F.'s UN14 Special Ops Division; features high-impact armor for maximum protection and the 'No Retreat' motto of the UN14 troops."
 	default_skin = "scaf_sharpshooter"
-	armor = list(MELEE = 62, BULLET = 66, LASER = 60, ENERGY = 25, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25)
+	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 15, BOMB = 45, BIO = 100, FIRE = 100, ACID = 75)
+	siemens_coefficient = 0
 
 	skins = list(
 		"scaf_sharpshooter" = list(

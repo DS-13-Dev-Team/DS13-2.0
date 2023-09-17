@@ -3,7 +3,7 @@
 	name = "hacker"
 	desc = "A lightweight suit cobbled together from civilian parts, with some high end tech hidden within, suprisngly not illegal."
 	default_skin = "hacker"
-	armor = list(MELEE = 37.5, BULLET = 35, LASER = 40, ENERGY = 40, BOMB = 40, BIO = 80, FIRE = 25, ACID = 25)
+	armor = list(MELEE = 5, BULLET = 5, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, FIRE = 60, ACID = 30)
 	max_heat_protection_temperature = 0
 	min_cold_protection_temperature = 0
 
@@ -41,4 +41,6 @@
 		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/magboot,
+		/obj/item/mod/module/welding,
+		/obj/item/mod/module/tether,
 	)

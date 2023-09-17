@@ -1271,7 +1271,6 @@
 /area/mine/storage)
 "atd" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/crowbar,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "atf" = (
@@ -4695,6 +4694,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage/gas)
 "bkp" = (
@@ -6518,6 +6518,10 @@
 	dir = 4
 	},
 /area/station/ai_monitored/security/armory/upper)
+"chp" = (
+/obj/item/bot_assembly/scavbot,
+/turf/open/floor/plating,
+/area/station/science/robotics/lab)
 "chz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/autoname/directional/west,
@@ -8314,6 +8318,13 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
+"dVr" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/station/engineering/atmos/storage/gas)
 "dVv" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/machinery/light/small/directional/east,
@@ -9826,6 +9837,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/item/bot_assembly/janibot,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "fpf" = (
@@ -13210,7 +13222,6 @@
 	name = "ShuttleRepairPart"
 	},
 /obj/structure/table,
-/obj/item/mod/module/anomaly_locked/kinesis/prebuilt/prototype,
 /turf/open/floor/deadspace/mono,
 /area/lavaland/surface/outdoors)
 "irE" = (
@@ -16497,6 +16508,11 @@
 	},
 /turf/open/floor/stone,
 /area/lavaland/surface/outdoors)
+"lCC" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
+/obj/machinery/meter,
+/turf/open/floor/iron/white,
+/area/station/medical/cryo)
 "lCD" = (
 /obj/structure/window/reinforced/spawner/north,
 /obj/item/stack/ore/iron,
@@ -17548,7 +17564,6 @@
 /area/station/engineering/storage/tech)
 "mHg" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/crowbar,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "mHG" = (
@@ -17586,6 +17601,7 @@
 /area/station/engineering/break_room)
 "mIE" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/item/bot_assembly/cargobot,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "mJa" = (
@@ -41544,7 +41560,7 @@ kpI
 dAw
 uTw
 nTw
-sRI
+lCC
 uKc
 aGn
 arH
@@ -46346,7 +46362,7 @@ oYq
 sxE
 cNp
 bkl
-oYq
+dVr
 oYq
 aLl
 kCW
@@ -46986,7 +47002,7 @@ waW
 mIE
 njK
 dmw
-jOa
+chp
 djG
 hsu
 vqg

@@ -4688,6 +4688,7 @@
 #include "deadspace\code\game\objects\random\ammo.dm"
 #include "deadspace\code\game\objects\random\rig.dm"
 #include "deadspace\code\game\objects\structures\doors.dm"
+#include "deadspace\code\game\objects\structures\mod_machine.dm"
 #include "deadspace\code\game\objects\structures\obstacles.dm"
 #include "deadspace\code\game\objects\structures\showcase.dm"
 #include "deadspace\code\game\objects\structures\crates_lockers\closets\crates\large.dm"

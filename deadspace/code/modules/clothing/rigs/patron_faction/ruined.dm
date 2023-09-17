@@ -3,7 +3,8 @@
 	name = "PCSI survivor"
 	desc = "The RIG remains battered and beaten, dented and missing pieces. The blood remains permanently rusted to the frame. The will of the survivor remains unbroken."
 	default_skin = "pcsi_ruined"
-	armor = list(MELEE = 60, BULLET = 64, LASER = 60, ENERGY = 5, BOMB = 60, BIO = 100, FIRE = 25, ACID = 25)
+	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 15, BOMB = 45, BIO = 100, FIRE = 100, ACID = 75)
+	siemens_coefficient = 0
 
 	skins = list(
 		"pcsi_ruined" = list(

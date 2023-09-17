@@ -395,10 +395,7 @@
 /turf/open/floor/iron/dark,
 /area/station/security)
 "dx" = (
-/obj/effect/spawner/random/trash,
-/mob/living/simple_animal/hostile/asteroid/polarbear{
-	name = "Snowflake"
-	},
+/mob/living/simple_animal/hostile/bear/snow,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "dy" = (
@@ -3396,10 +3393,6 @@
 /obj/item/stack/sheet/mineral/diamond,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
-"Dx" = (
-/obj/effect/mob_spawn/ghost_role/drone/scavbot,
-/turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
 "Dy" = (
 /turf/closed/wall/mineral/titanium/survival/pod,
 /area/lavaland/surface/outdoors)
@@ -4569,11 +4562,6 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
-"Sk" = (
-/obj/effect/spawner/random/structure/closet_maintenance,
-/obj/effect/mob_spawn/ghost_role/drone/scavbot,
-/turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
 "Sl" = (
 /obj/structure/girder/reinforced,
 /turf/open/floor/plating,
@@ -7934,7 +7922,7 @@ sk
 hn
 sO
 sO
-Dx
+hn
 hn
 hn
 hn
@@ -19018,7 +19006,7 @@ yG
 bf
 hn
 ri
-dx
+ro
 hn
 rf
 hn
@@ -19220,7 +19208,7 @@ yG
 bf
 rf
 ri
-hn
+dx
 ro
 rf
 hn
@@ -22476,7 +22464,7 @@ se
 zp
 zp
 bf
-Dx
+hn
 LZ
 LZ
 LZ
@@ -37626,7 +37614,7 @@ yA
 zp
 bf
 cD
-Sk
+cD
 bf
 bf
 xK

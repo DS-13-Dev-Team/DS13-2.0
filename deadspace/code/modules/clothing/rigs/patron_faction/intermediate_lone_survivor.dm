@@ -3,7 +3,7 @@
 	name = "intermediate lone survivor"
 	desc = "For the lost souls forgotten in the depths of the Ishimura, survival comes at a grim cost"
 	default_skin = "intermediate_engineer_survivor"
-	armor = list(MELEE = 51.25, BULLET = 51.25, LASER = 51.25, ENERGY = 22.5, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25)
+	armor = list(MELEE = 37.5, BULLET = 30, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 75)
 	resistance_flags = FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
@@ -47,4 +47,5 @@
 		/obj/item/mod/module/welding,
 		/obj/item/mod/module/anomaly_locked/kinesis/prebuilt,
 		/obj/item/mod/module/t_ray,
+		/obj/item/mod/module/rad_protection,
 	)

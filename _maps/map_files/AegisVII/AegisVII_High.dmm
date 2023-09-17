@@ -473,7 +473,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/mono,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "eA" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/structure/cable,
@@ -588,9 +588,10 @@
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hop)
 "fE" = (
-/obj/machinery/light/small/maintenance/directional/north,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "fK" = (
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
@@ -712,7 +713,7 @@
 /area/station/security/brig/upper)
 "iT" = (
 /turf/open/floor/plating,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "iU" = (
 /obj/machinery/computer/med_data{
 	dir = 4
@@ -724,6 +725,9 @@
 /obj/machinery/keycard_auth/directional/west,
 /turf/open/floor/carpet/green,
 /area/station/command/heads_quarters/captain/private)
+"jo" = (
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/maintenance/starboard/upper)
 "jD" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -734,7 +738,7 @@
 "jJ" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "jZ" = (
 /obj/item/radio/intercom/directional/north,
 /obj/structure/bed/dogbed/ian,
@@ -815,6 +819,10 @@
 /obj/machinery/light_switch/directional/west,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos)
+"kK" = (
+/obj/structure/table,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/upper)
 "kL" = (
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/security,
@@ -884,7 +892,7 @@
 /obj/machinery/microwave,
 /obj/structure/table,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "me" = (
 /turf/open/floor/catwalk_floor,
 /area/station/command/bridge)
@@ -1023,7 +1031,7 @@
 /area/station/hallway/secondary/command)
 "oU" = (
 /turf/open/floor/deadspace/mono,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "pt" = (
 /obj/structure/table/wood,
 /obj/item/book/manual/wiki/detective,
@@ -1067,6 +1075,9 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hos)
+"qG" = (
+/turf/open/openspace,
+/area/station/maintenance/starboard/upper)
 "qJ" = (
 /obj/machinery/firealarm/directional/west,
 /obj/machinery/camera/autoname/directional/west,
@@ -1220,7 +1231,7 @@
 	dir = 1
 	},
 /turf/open/openspace,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "uV" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/deadspace/random/slides,
@@ -1246,7 +1257,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/mono,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "vi" = (
 /obj/structure/sign/cec/deck/command,
 /turf/closed/wall/r_wall,
@@ -1555,8 +1566,9 @@
 /area/station/hallway/primary/central/aft)
 "Ar" = (
 /obj/machinery/pdapainter,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "Ay" = (
 /obj/machinery/computer/secure_data{
 	dir = 8
@@ -1728,7 +1740,7 @@
 "Fc" = (
 /obj/machinery/light/small/maintenance/directional/north,
 /turf/open/floor/plating,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "Fd" = (
 /obj/machinery/door/airlock/command{
 	dir = 1;
@@ -2026,7 +2038,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "Kw" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -2077,9 +2089,9 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)
 "LJ" = (
-/obj/machinery/light/small/maintenance/directional/west,
-/turf/open/floor/plating,
-/area/station/command/bridge)
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/maintenance/starboard/upper)
 "LV" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -2097,6 +2109,10 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
+"Mu" = (
+/obj/machinery/light/small/maintenance/directional/south,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/maintenance/starboard/upper)
 "MD" = (
 /obj/structure/railing{
 	dir = 8
@@ -2213,6 +2229,10 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)
+"PH" = (
+/obj/machinery/light/small/maintenance/directional/west,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/upper)
 "PM" = (
 /obj/machinery/light/directional/east,
 /obj/structure/chair/office{
@@ -2269,9 +2289,8 @@
 "QT" = (
 /obj/structure/table,
 /obj/item/storage/box/donkpockets,
-/obj/item/crowbar,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "RI" = (
 /obj/item/camera_film,
 /obj/item/camera_film,
@@ -2280,6 +2299,9 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
+"RN" = (
+/turf/closed/wall/r_wall,
+/area/station/maintenance/starboard/upper)
 "RW" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -2333,6 +2355,10 @@
 /obj/effect/spawner/random/engineering/tool_alien,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
+"Te" = (
+/obj/structure/filingcabinet/employment,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/upper)
 "Tg" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/deadspace/random/tech{
@@ -2345,6 +2371,10 @@
 /obj/structure/table/wood,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
+"Ts" = (
+/obj/structure/filingcabinet,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/upper)
 "TF" = (
 /obj/structure/railing{
 	dir = 1
@@ -2520,7 +2550,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/station/command/bridge)
+/area/station/maintenance/starboard/upper)
 "Ym" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -13474,14 +13504,14 @@ YA
 Jc
 YA
 bX
-Sj
-Sj
-Sj
-Sj
-Sj
-Sj
+RN
+Te
+kK
+PH
+Ts
+RN
 Ar
-aU
+LJ
 Sj
 iv
 iv
@@ -13676,14 +13706,14 @@ YA
 MV
 YA
 bX
-Sj
+RN
 iT
 iT
-LJ
 iT
-Sj
+iT
+RN
 fE
-aU
+Mu
 Sj
 Vp
 Hz
@@ -13878,14 +13908,14 @@ YA
 nC
 YA
 bX
-Sj
+RN
 iT
 ez
 vd
 jJ
 Ye
-aU
-aU
+LJ
+jo
 Sj
 KE
 Hz
@@ -14080,12 +14110,12 @@ EM
 FQ
 YA
 bX
-Sj
+RN
 Fc
-YF
+qG
 uO
 oU
-Sj
+RN
 QT
 lW
 Sj
