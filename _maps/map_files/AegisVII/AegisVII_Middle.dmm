@@ -14176,6 +14176,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/structure/cable/multilayer/multiz,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/sorting)
 "jqx" = (

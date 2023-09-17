@@ -183,6 +183,10 @@
 /obj/structure/ore_box,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
+"ca" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/cargo)
 "cb" = (
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/iron/dark,
@@ -3477,6 +3481,10 @@
 /obj/effect/spawner/random/food_or_drink/snack,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"ES" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/station/cargo)
 "EW" = (
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/structure/table,
@@ -4627,6 +4635,10 @@
 /obj/structure/stairs/north,
 /turf/open/floor/deadspace/mono,
 /area/station/medical/medbay/aft)
+"SO" = (
+/obj/structure/cable/multilayer/multiz,
+/turf/open/floor/deadspace/mono,
+/area/station/cargo)
 "ST" = (
 /turf/open/floor/deadspace/mono,
 /area/station/cargo)
@@ -4985,6 +4997,7 @@
 /area/station/cargo/warehouse)
 "WV" = (
 /obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo)
 "WX" = (
@@ -31349,8 +31362,8 @@ uk
 RS
 lh
 WV
-uP
-uP
+ca
+ca
 uP
 ST
 lh
@@ -31552,7 +31565,7 @@ uk
 lh
 ST
 ST
-ST
+ES
 uP
 ST
 lh
@@ -31754,7 +31767,7 @@ RS
 lh
 Of
 lh
-ST
+SO
 ST
 ST
 lh
