@@ -26,7 +26,7 @@
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "exploder"
-	implemented = TRUE
+	implemented = FALSE //Explode doesn't work so they're worthless
 
 /datum/species/necromorph/exploder
 	name = "Exploder"
