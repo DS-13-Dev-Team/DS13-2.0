@@ -427,13 +427,6 @@
 /obj/structure/grille,
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
-"aid" = (
-/obj/effect/turf_decal/trimline/purple/filled/line,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/station/science/research)
 "aif" = (
 /obj/machinery/door/airlock{
 	id_tag = "Cabin13";
@@ -5140,7 +5133,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "boc" = (
@@ -14812,6 +14804,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "kaO" = (
@@ -26366,13 +26359,6 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
-"vuX" = (
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/iron/white,
-/area/station/science/research)
 "vvb" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/mono,
@@ -28793,14 +28779,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark/side,
 /area/station/hallway/primary/fore)
-"xGA" = (
-/obj/machinery/door/firedoor,
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/iron/white,
-/area/station/science/research)
 "xGR" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -46600,7 +46578,7 @@ xPg
 xPg
 xPg
 xPg
-xGA
+aoc
 eMa
 ttJ
 ttJ
@@ -46802,8 +46780,8 @@ hKx
 nFZ
 gys
 hTm
-vuX
-aid
+qzL
+vSD
 tqO
 tdt
 aeY
@@ -47408,8 +47386,8 @@ dnE
 fuj
 iWF
 xPg
-vuX
-aid
+qzL
+vSD
 tqO
 jXA
 vCl
@@ -47610,7 +47588,7 @@ ngQ
 vIv
 eQv
 hTm
-vuX
+qzL
 vSD
 ttJ
 sTX

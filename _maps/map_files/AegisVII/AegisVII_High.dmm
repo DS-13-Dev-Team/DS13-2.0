@@ -241,10 +241,6 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 4;
-	id = "forensic_shutters"
-	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/security/detectives_office)
