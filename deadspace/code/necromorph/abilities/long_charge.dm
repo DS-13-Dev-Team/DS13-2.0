@@ -79,10 +79,6 @@
 		spec_check(source, oldloc, direction, Forced, old_locs)
 		return
 
-	//if(!check_momentum(direction))
-	//	do_stop_momentum()
-	//	return
-
 	handle_momentum()
 	spec_check(source, oldloc, direction, Forced, old_locs)
 

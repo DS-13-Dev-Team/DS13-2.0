@@ -21,20 +21,20 @@
 
 /mob/living/carbon/human/necromorph/brute/proc/spec_unarmedattack(datum/source, atom/target, proximity, modifiers)
 	if(world.time >= next_attack_delay)
+		playsound(mob_target.loc, "punch", 25, 1)
 		if (istype(target, /mob/living/carbon/human))
 			var/mob/living/carbon/human/mob_target = target
 			var/fling_dir = pick((dir & (NORTH|SOUTH)) ? list(WEST, EAST, dir|WEST, dir|EAST) : list(NORTH, SOUTH, dir|NORTH, dir|SOUTH)) //Fling them somewhere not behind nor ahead of the charger.
 			var/fling_dist = rand(2,5)
 			var/turf/destination = mob_target.loc
 			var/turf/temp
-
+		
 			for(var/i in 1 to fling_dist)
 				temp = get_step(destination, fling_dir)
 				if(!temp)
 					break
 				destination = temp
 			if(destination != mob_target.loc)
-				playsound(mob_target.loc, "punch", 25, 1)
 				mob_target.apply_damage(24, BRUTE)
 				mob_target.throw_at(destination, fling_dist, 1, src, TRUE)
 			next_attack_delay = spec_attack_delay + world.time
