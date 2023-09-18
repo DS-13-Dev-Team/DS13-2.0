@@ -34,6 +34,8 @@
 					break
 				destination = temp
 			if(destination != mob_target.loc)
+				playsound(mob_target.loc, "punch", 25, 1)
+				mob_target.apply_damage(24, BRUTE)
 				mob_target.throw_at(destination, fling_dist, 1, src, TRUE)
 			next_attack_delay = spec_attack_delay + world.time
 			return COMPONENT_CANCEL_ATTACK_CHAIN

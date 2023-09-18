@@ -71,7 +71,7 @@
 		if(charger.dir != direction) //It needs to move twice in the same direction, at least, to begin charging.
 			return
 		charge_dir = direction
-		if(!check_momentum(direction))
+		if(!check_momentum(direction))	
 			charge_dir = null
 			return
 		charger.charging = CHARGE_BUILDINGUP
@@ -79,9 +79,9 @@
 		spec_check(source, oldloc, direction, Forced, old_locs)
 		return
 
-	if(!check_momentum(direction))
-		do_stop_momentum()
-		return
+	//if(!check_momentum(direction))
+	//	do_stop_momentum()
+	//	return
 
 	handle_momentum()
 	spec_check(source, oldloc, direction, Forced, old_locs)
