@@ -21,7 +21,7 @@
 
 /mob/living/carbon/human/necromorph/brute/proc/spec_unarmedattack(datum/source, atom/target, proximity, modifiers)
 	if(world.time >= next_attack_delay)
-		playsound(mob_target.loc, "punch", 25, 1)
+		play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, 1, 3)
 		if (istype(target, /mob/living/carbon/human))
 			var/mob/living/carbon/human/mob_target = target
 			var/fling_dir = pick((dir & (NORTH|SOUTH)) ? list(WEST, EAST, dir|WEST, dir|EAST) : list(NORTH, SOUTH, dir|NORTH, dir|SOUTH)) //Fling them somewhere not behind nor ahead of the charger.
