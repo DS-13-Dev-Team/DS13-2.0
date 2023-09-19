@@ -52,7 +52,7 @@
 	var/center_y = y + (CHUNK_SIZE / 2)
 
 	for(var/atom/source as anything in netVisionSources)
-		if(source.z != z || source.x < (center_x - CHUNK_SIZE) || source.y < (center_y - CHUNK_SIZE) || source.x > (center_x + CHUNK_SIZE) || source.y > (center_y + CHUNK_SIZE))
+		if(source.z != z || source.x < (center_x - CHUNK_SIZE) || source.y < (center_y - CHUNK_SIZE) || source.x >= (center_x + CHUNK_SIZE) || source.y >= (center_y + CHUNK_SIZE))
 			continue
 
 		var/list/visible = list()
@@ -130,7 +130,7 @@
 	var/center_x = x + (CHUNK_SIZE / 2)
 	var/center_y = y + (CHUNK_SIZE / 2)
 	for(var/atom/source as anything in queued_for_update)
-		if(source.z != z || source.x < (center_x - CHUNK_SIZE) || source.y < (center_y - CHUNK_SIZE) || source.x > (center_x + CHUNK_SIZE) || source.y > (center_y + CHUNK_SIZE))
+		if(source.z != z || source.x < (center_x - CHUNK_SIZE) || source.y < (center_y - CHUNK_SIZE) || source.x >= (center_x + CHUNK_SIZE) || source.y >= (center_y + CHUNK_SIZE))
 			visionSources -= source
 			rangeVisionSources -= source
 			viewVisionSources -= source
