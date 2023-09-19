@@ -25,8 +25,7 @@
 		/obj/item/stock_parts/cell/potato = 3
 	)
 	premium = list(
-		/obj/item/storage/belt/utility = 3,
-		/obj/item/construction/rcd/loaded = 2,
+		/obj/item/storage/belt/utility = 3
 	)
 	refill_canister = /obj/item/vending_refill/engivend
 	default_price = PAYCHECK_EASY

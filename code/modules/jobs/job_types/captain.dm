@@ -75,7 +75,8 @@
 	ears = /obj/item/radio/headset/heads/captain/alt
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/captain
-	shoes = /obj/item/clothing/shoes/sneakers/black
+	head = /obj/item/clothing/head/caphat/cec
+	shoes = /obj/item/clothing/shoes/laceup
 
 	accessory = /obj/item/clothing/accessory/medal/gold/captain
 	chameleon_extras = list(

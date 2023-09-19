@@ -2,8 +2,12 @@
 	name = "venture"
 	desc = "The colors of the EDF Corps of Engineers, adopted after their victory at Europa's Conamara Chaos Iceworks during the Resource Wars."
 	default_skin = "venture"
-	armor = list(MELEE = 67.5, BULLET = 70, LASER = 70, ENERGY = 40, BOMB = 70, BIO = 100, FIRE = 25, ACID = 25)
-	complexity_max = 30
+	armor = list(MELEE = 50, BULLET = 40, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 100)
+	resistance_flags = FIRE_PROOF|ACID_PROOF
+	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	siemens_coefficient = 0
+	complexity_max = 25
 
 	skins = list(
 		"venture" = list(

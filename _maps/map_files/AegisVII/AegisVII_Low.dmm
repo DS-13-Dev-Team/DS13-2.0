@@ -183,6 +183,10 @@
 /obj/structure/ore_box,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
+"ca" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/cargo)
 "cb" = (
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/iron/dark,
@@ -395,10 +399,7 @@
 /turf/open/floor/iron/dark,
 /area/station/security)
 "dx" = (
-/obj/effect/spawner/random/trash,
-/mob/living/simple_animal/hostile/asteroid/polarbear{
-	name = "Snowflake"
-	},
+/mob/living/simple_animal/hostile/bear/snow,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "dy" = (
@@ -3396,10 +3397,6 @@
 /obj/item/stack/sheet/mineral/diamond,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
-"Dx" = (
-/obj/effect/mob_spawn/ghost_role/drone/scavbot,
-/turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
 "Dy" = (
 /turf/closed/wall/mineral/titanium/survival/pod,
 /area/lavaland/surface/outdoors)
@@ -3484,6 +3481,10 @@
 /obj/effect/spawner/random/food_or_drink/snack,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"ES" = (
+/obj/structure/cable,
+/turf/open/floor/deadspace/mono,
+/area/station/cargo)
 "EW" = (
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/structure/table,
@@ -3766,6 +3767,10 @@
 "IC" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/deadspace/grater,
+/area/station/maintenance/fore/lesser)
+"IE" = (
+/obj/effect/mob_spawn/ghost_role/drone/scavbot,
+/turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "IG" = (
 /obj/structure/table,
@@ -4273,10 +4278,8 @@
 /turf/open/floor/iron/dark,
 /area/station/maintenance/fore/lesser)
 "Ox" = (
-/obj/structure/rack,
-/obj/structure/rack,
 /obj/effect/turf_decal/box,
-/obj/effect/spawner/random/maintenance/two,
+/obj/effect/mob_spawn/ghost_role/drone/scavbot,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
 "OB" = (
@@ -4569,11 +4572,6 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
-"Sk" = (
-/obj/effect/spawner/random/structure/closet_maintenance,
-/obj/effect/mob_spawn/ghost_role/drone/scavbot,
-/turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
 "Sl" = (
 /obj/structure/girder/reinforced,
 /turf/open/floor/plating,
@@ -4637,6 +4635,10 @@
 /obj/structure/stairs/north,
 /turf/open/floor/deadspace/mono,
 /area/station/medical/medbay/aft)
+"SO" = (
+/obj/structure/cable/multilayer/multiz,
+/turf/open/floor/deadspace/mono,
+/area/station/cargo)
 "ST" = (
 /turf/open/floor/deadspace/mono,
 /area/station/cargo)
@@ -4995,6 +4997,7 @@
 /area/station/cargo/warehouse)
 "WV" = (
 /obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo)
 "WX" = (
@@ -5095,6 +5098,7 @@
 /obj/effect/turf_decal/arrows/red{
 	dir = 1
 	},
+/obj/effect/mob_spawn/ghost_role/drone/scavbot,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo)
 "Ya" = (
@@ -7934,7 +7938,7 @@ sk
 hn
 sO
 sO
-Dx
+hn
 hn
 hn
 hn
@@ -8079,7 +8083,7 @@ zp
 bf
 Dt
 hn
-hn
+IE
 bf
 yG
 yG
@@ -19018,7 +19022,7 @@ yG
 bf
 hn
 ri
-dx
+ro
 hn
 rf
 hn
@@ -19220,7 +19224,7 @@ yG
 bf
 rf
 ri
-hn
+dx
 ro
 rf
 hn
@@ -22476,7 +22480,7 @@ se
 zp
 zp
 bf
-Dx
+hn
 LZ
 LZ
 LZ
@@ -31358,8 +31362,8 @@ uk
 RS
 lh
 WV
-uP
-uP
+ca
+ca
 uP
 ST
 lh
@@ -31561,7 +31565,7 @@ uk
 lh
 ST
 ST
-ST
+ES
 uP
 ST
 lh
@@ -31763,7 +31767,7 @@ RS
 lh
 Of
 lh
-ST
+SO
 ST
 ST
 lh
@@ -37626,7 +37630,7 @@ yA
 zp
 bf
 cD
-Sk
+cD
 bf
 bf
 xK

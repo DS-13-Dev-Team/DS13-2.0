@@ -427,13 +427,6 @@
 /obj/structure/grille,
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
-"aid" = (
-/obj/effect/turf_decal/trimline/purple/filled/line,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/station/science/research)
 "aif" = (
 /obj/machinery/door/airlock{
 	id_tag = "Cabin13";
@@ -1271,7 +1264,6 @@
 /area/mine/storage)
 "atd" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/crowbar,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "atf" = (
@@ -2641,10 +2633,7 @@
 	dir = 1;
 	id = "garbage"
 	},
-/obj/machinery/door/poddoor/preopen{
-	id = "Disposal Exit";
-	name = "disposal exit vent"
-	},
+/obj/structure/plasticflaps/opaque,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "aJW" = (
@@ -3220,8 +3209,8 @@
 /area/station/engineering/supermatter/room)
 "aRO" = (
 /obj/machinery/door/window/left/directional/west{
-	req_access_txt = "3";
-	name = "Brig Receiving"
+	name = "Brig Receiving";
+	req_one_access_txt = "1;4"
 	},
 /obj/structure/plasticflaps/opaque,
 /obj/effect/turf_decal/bot,
@@ -4695,6 +4684,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage/gas)
 "bkp" = (
@@ -5143,7 +5133,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "boc" = (
@@ -5626,8 +5615,8 @@
 "bth" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/left/directional/west{
-	req_access_txt = "3";
-	name = "Brig Receptionist Desk"
+	name = "Brig Receptionist Desk";
+	req_one_access_txt = "1;4"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -6518,6 +6507,10 @@
 	dir = 4
 	},
 /area/station/ai_monitored/security/armory/upper)
+"chp" = (
+/obj/item/bot_assembly/scavbot,
+/turf/open/floor/plating,
+/area/station/science/robotics/lab)
 "chz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/autoname/directional/west,
@@ -8075,11 +8068,6 @@
 /area/station/engineering/main)
 "dHr" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/button/door/directional/west{
-	id = "Disposal Exit";
-	name = "Disposal Vent Control";
-	req_access_txt = "12"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
@@ -8314,6 +8302,13 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
+"dVr" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/station/engineering/atmos/storage/gas)
 "dVv" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/machinery/light/small/directional/east,
@@ -9634,6 +9629,12 @@
 	dir = 4
 	},
 /area/station/service/hydroponics)
+"fgp" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/obj/structure/plasticflaps/opaque,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "fgw" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -9826,6 +9827,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/item/bot_assembly/janibot,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "fpf" = (
@@ -13210,7 +13212,6 @@
 	name = "ShuttleRepairPart"
 	},
 /obj/structure/table,
-/obj/item/mod/module/anomaly_locked/kinesis/prebuilt/prototype,
 /turf/open/floor/deadspace/mono,
 /area/lavaland/surface/outdoors)
 "irE" = (
@@ -14175,6 +14176,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/structure/cable/multilayer/multiz,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/sorting)
 "jqx" = (
@@ -14803,6 +14805,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "kaO" = (
@@ -16497,6 +16500,11 @@
 	},
 /turf/open/floor/stone,
 /area/lavaland/surface/outdoors)
+"lCC" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
+/obj/machinery/meter,
+/turf/open/floor/iron/white,
+/area/station/medical/cryo)
 "lCD" = (
 /obj/structure/window/reinforced/spawner/north,
 /obj/item/stack/ore/iron,
@@ -17548,7 +17556,6 @@
 /area/station/engineering/storage/tech)
 "mHg" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/crowbar,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks)
 "mHG" = (
@@ -17586,6 +17593,7 @@
 /area/station/engineering/break_room)
 "mIE" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/item/bot_assembly/cargobot,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "mJa" = (
@@ -24070,8 +24078,11 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/break_room)
 "tkt" = (
-/obj/structure/closet/crate/freezer/blood,
 /obj/effect/turf_decal/siding/white,
+/obj/machinery/iv_drip,
+/obj/machinery/iv_drip,
+/obj/machinery/iv_drip,
+/obj/machinery/iv_drip,
 /turf/open/floor/iron/kitchen_coldroom,
 /area/station/medical/coldroom)
 "tkD" = (
@@ -26352,13 +26363,6 @@
 	},
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
-"vuX" = (
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/iron/white,
-/area/station/science/research)
 "vvb" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/mono,
@@ -27156,7 +27160,7 @@
 "weg" = (
 /obj/machinery/door/airlock/security{
 	name = "P-Sec Receptionist";
-	req_one_access = list()
+	req_one_access_txt = "1;4"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -28779,14 +28783,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark/side,
 /area/station/hallway/primary/fore)
-"xGA" = (
-/obj/machinery/door/firedoor,
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/iron/white,
-/area/station/science/research)
 "xGR" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -39732,7 +39728,7 @@ cBw
 fam
 cBw
 cBw
-lwp
+cBw
 oOe
 pqO
 eqk
@@ -39936,7 +39932,7 @@ dpe
 dpe
 pdJ
 eBj
-lwp
+dWU
 sIo
 aGn
 aGn
@@ -41544,7 +41540,7 @@ kpI
 dAw
 uTw
 nTw
-sRI
+lCC
 uKc
 aGn
 arH
@@ -42959,7 +42955,7 @@ nOf
 fBj
 jdJ
 jdJ
-jdJ
+fgp
 mQl
 srF
 aFM
@@ -46346,7 +46342,7 @@ oYq
 sxE
 cNp
 bkl
-oYq
+dVr
 oYq
 aLl
 kCW
@@ -46586,7 +46582,7 @@ xPg
 xPg
 xPg
 xPg
-xGA
+aoc
 eMa
 ttJ
 ttJ
@@ -46788,8 +46784,8 @@ hKx
 nFZ
 gys
 hTm
-vuX
-aid
+qzL
+vSD
 tqO
 tdt
 aeY
@@ -46986,7 +46982,7 @@ waW
 mIE
 njK
 dmw
-jOa
+chp
 djG
 hsu
 vqg
@@ -47394,8 +47390,8 @@ dnE
 fuj
 iWF
 xPg
-vuX
-aid
+qzL
+vSD
 tqO
 jXA
 vCl
@@ -47596,7 +47592,7 @@ ngQ
 vIv
 eQv
 hTm
-vuX
+qzL
 vSD
 ttJ
 sTX

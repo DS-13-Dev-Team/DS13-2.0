@@ -116,6 +116,7 @@
 
 /obj/structure/closet/secure_closet/ds/detective/PopulateContents()
 	..()
+	new /obj/item/mod/control/pre_equipped/ds/marksman(src)
 	new /obj/item/storage/box/evidence(src)
 	new /obj/item/radio/headset/headset_sec(src)
 	new /obj/item/detective_scanner(src)

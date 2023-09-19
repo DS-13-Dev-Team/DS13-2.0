@@ -2,7 +2,7 @@
 	name = "astronaut"
 	desc = "A very light, emergency rig for use by non-qualified personnel in the case of emergency decompression. Soft materials barely impede movement."
 	default_skin = "astro"
-	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 100, FIRE = 25, ACID = 25, )
+	armor = list(MELEE = 5, BULLET = 5, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, FIRE = 60, ACID = 30)
 
 	skins = list(
 		"astro" = list(

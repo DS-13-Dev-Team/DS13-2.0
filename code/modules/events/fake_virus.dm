@@ -1,6 +1,7 @@
 /datum/round_event_control/fake_virus
 	name = "Fake Virus"
 	typepath = /datum/round_event/fake_virus
+	max_occurrences = 0
 	weight = 20
 	alert_observers = FALSE
 
