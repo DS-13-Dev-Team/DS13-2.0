@@ -5,7 +5,6 @@
 	armor = list(MELEE = 25, BULLET = 20, LASER = 25, ENERGY = 25, BOMB =25, BIO = 100, FIRE = 100, ACID = 50)
 	resistance_flags = FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
-	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	siemens_coefficient = 0
 
 	skins = list(
