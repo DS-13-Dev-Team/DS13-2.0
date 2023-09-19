@@ -51,7 +51,7 @@
 	jobtype = /datum/job/atmospheric_technician
 
 	id_trim = /datum/id_trim/job/atmospheric_technician
-	uniform = /obj/item/clothing/under/rank/engineering/atmospheric_technician
+	uniform = /obj/item/clothing/under/rank/engineering/ds_rigsuit
 	belt = /obj/item/storage/belt/utility/atmostech
 	ears = /obj/item/radio/headset/headset_eng
 	l_pocket = /obj/item/modular_computer/tablet/pda/atmos
