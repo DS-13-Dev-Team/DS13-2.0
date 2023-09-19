@@ -1,0 +1,6 @@
+author: DTraitor
+delete-after: true
+changes:
+  - bugfix: Necrovision doesn't break randomly anymore
+  - bugfix: necromorphs don't feel pain anymore
+  - balance: Marker cannot spawn more than one ubermorph anymore
