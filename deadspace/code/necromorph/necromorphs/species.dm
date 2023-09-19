@@ -13,6 +13,7 @@
 	bodytype = BODYTYPE_HUMANOID|BODYTYPE_ORGANIC|BODYTYPE_NECROMORPH
 
 	max_bodypart_count = 6
+	burnmod = 1.2
 
 	examine_limb_id = SPECIES_NECROMORPH
 	exotic_bloodtype = "X"

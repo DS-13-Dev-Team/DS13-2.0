@@ -68,6 +68,7 @@
 
 	id = SPECIES_NECROMORPH_HUNTER
 	speedmod = 1.6
+	burnmod = 1.3
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/hunter,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/hunter,
