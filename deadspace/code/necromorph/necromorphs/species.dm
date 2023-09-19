@@ -48,7 +48,6 @@
 	inherent_traits = list(
 		TRAIT_CAN_STRIP,
 		TRAIT_NOHUNGER,
-		NOEYESPRITES,
 	)
 
 	say_mod = "roars"
@@ -65,7 +64,8 @@
 		AGENDER,
 		HAS_FLESH,
 		HAS_BONE,
-		NOAUGMENTS
+		NOAUGMENTS,
+		NOEYESPRITES,
 	)
 
 	inherent_traits = list()
