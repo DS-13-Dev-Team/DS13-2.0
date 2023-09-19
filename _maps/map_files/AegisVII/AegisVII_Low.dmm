@@ -232,7 +232,9 @@
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
 "ct" = (
-/obj/machinery/door/airlock/security,
+/obj/machinery/door/airlock/security{
+	req_one_access_txt = "1;4"
+	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark,
 /area/station/security)
@@ -381,8 +383,8 @@
 /area/station/security/checkpoint/medical)
 "du" = (
 /obj/machinery/door/airlock/security{
-	dir = 1;
-	name = "Evidence Room #2"
+	name = "Evidence Room";
+	req_one_access_txt = "1;4"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -484,7 +486,7 @@
 /obj/machinery/door/airlock/medical{
 	name = "Bioprosthetics Lab";
 	req_access = list();
-	req_one_access = list(2,3)
+	req_access_txt = "5"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -1451,8 +1453,8 @@
 /area/station/maintenance/fore/lesser)
 "kR" = (
 /obj/machinery/door/airlock/security{
-	dir = 1;
-	name = "Morgue"
+	name = "Morgue";
+	req_one_access_txt = "1;4"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -2306,7 +2308,6 @@
 /area/station/maintenance/fore/lesser)
 "rP" = (
 /obj/machinery/door/airlock/medical{
-	dir = 1;
 	name = "Medical Storage"
 	},
 /obj/machinery/door/firedoor{
@@ -3206,9 +3207,9 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "BR" = (
-/obj/machinery/door/poddoor{
-	name = "Underground Mining door";
-	id = "UndergroundMining"
+/obj/machinery/door/poddoor/preopen{
+	id = "UndergroundMining";
+	name = "Underground Mining door"
 	},
 /turf/open/floor/deadspace/mono,
 /area/station/maintenance/port/lesser)
@@ -3737,13 +3738,6 @@
 /obj/structure/etherealball,
 /turf/open/floor/eighties/red,
 /area/lavaland/surface/outdoors)
-"Io" = (
-/obj/machinery/light/directional/south,
-/obj/structure/chair/office{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/port/lesser)
 "Ip" = (
 /obj/structure/rack/shelf,
 /obj/effect/spawner/random/clothing/lizardboots,
@@ -3767,10 +3761,6 @@
 "IC" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/deadspace/grater,
-/area/station/maintenance/fore/lesser)
-"IE" = (
-/obj/effect/mob_spawn/ghost_role/drone/scavbot,
-/turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "IG" = (
 /obj/structure/table,
@@ -3952,7 +3942,9 @@
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
 "KN" = (
-/obj/machinery/door/airlock/security,
+/obj/machinery/door/airlock/security{
+	req_one_access_txt = "1;4"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -4692,7 +4684,8 @@
 /area/station/cargo)
 "Tv" = (
 /obj/machinery/door/airlock/medical{
-	name = "Morgue"
+	name = "Morgue";
+	req_access_txt = "6"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -5149,7 +5142,6 @@
 /area/station/cargo/warehouse)
 "YD" = (
 /obj/machinery/door/airlock/medical{
-	dir = 1;
 	name = "Autopsy Room"
 	},
 /obj/machinery/door/firedoor{
@@ -8083,7 +8075,7 @@ zp
 bf
 Dt
 hn
-IE
+hn
 bf
 yG
 yG
@@ -29130,7 +29122,7 @@ yA
 yA
 zp
 tT
-OX
+NO
 uA
 bf
 bf
@@ -29333,7 +29325,7 @@ yA
 zp
 tT
 OX
-Io
+yF
 tT
 yG
 yG
