@@ -66,10 +66,18 @@
 		TRAIT_DISCOORDINATED_TOOL_USER,
 		TRAIT_PIERCEIMMUNE,
 		TRAIT_IGNOREDAMAGESLOWDOWN,
+		TRAIT_NOSOFTCRIT,
 	)
 
 	///The iconstate for the necromorph on the minimap
 	var/minimap_icon = "xenominion"
+
+	///If there is necromorph cant be spawned by a marker
+	///-1 = unlimited
+	var/spawn_limit = -1
+
+	///Number of spawned necromorphs by the marker
+	var/spawned_number = 0
 
 	//TODO: Get rid of this
 	var/implemented = FALSE
