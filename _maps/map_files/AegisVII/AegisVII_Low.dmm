@@ -2483,12 +2483,6 @@
 /obj/effect/spawner/random/contraband/narcotics,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
-"tM" = (
-/obj/structure/chair/office{
-	dir = 1
-	},
-/turf/open/floor/deadspace/medical,
-/area/station/medical/medbay/aft)
 "tQ" = (
 /turf/open/misc/ironsand,
 /area/lavaland/surface/outdoors)
@@ -4632,10 +4626,6 @@
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/iron/white,
 /area/station/maintenance/fore/lesser)
-"SX" = (
-/obj/effect/spawner/random/entertainment/arcade,
-/turf/open/floor/deadspace/medical,
-/area/station/medical/medbay/aft)
 "Ta" = (
 /obj/structure/table/reinforced,
 /obj/machinery/reagentgrinder{
@@ -18213,7 +18203,7 @@ yG
 yG
 yG
 yG
-Ly
+yG
 Ly
 Ly
 Ly
@@ -18414,10 +18404,10 @@ yG
 yG
 yG
 yG
+yG
 Ly
 Ly
-SX
-tM
+OY
 jt
 oh
 nG
@@ -18616,9 +18606,9 @@ yG
 yG
 yG
 yG
+yG
 qc
 SN
-vf
 vf
 zB
 Sf
@@ -18818,9 +18808,9 @@ yG
 yG
 yG
 yG
+yG
 Ly
 SN
-ph
 ph
 FY
 Sf
@@ -19020,9 +19010,9 @@ yG
 yG
 yG
 yG
+yG
 Ly
 SN
-ph
 ph
 FY
 Sf
@@ -19225,7 +19215,7 @@ XF
 XF
 XF
 XF
-OY
+Sf
 FY
 ar
 Tv
