@@ -91,6 +91,8 @@
 	. = ..()
 	if(.)
 		return
+	if(isnecromorph(user.mob))
+		return
 	var/mob/living/user_mob = user.mob
 	user_mob.set_combat_mode(TRUE, silent = FALSE)
 
@@ -104,6 +106,8 @@
 /datum/keybinding/living/disable_combat_mode/down(client/user)
 	. = ..()
 	if(.)
+		return
+	if(isnecromorph(user.mob))
 		return
 	var/mob/living/user_mob = user.mob
 	user_mob.set_combat_mode(FALSE, silent = FALSE)
