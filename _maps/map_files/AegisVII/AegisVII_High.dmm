@@ -142,10 +142,6 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/deadspace/mono,
 /area/station/security/brig/upper)
-"bd" = (
-/obj/machinery/power/apc/auto_name/directional/north,
-/turf/open/floor/deadspace/hardwood,
-/area/awaymission/secret/powered)
 "be" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
@@ -782,10 +778,6 @@
 /obj/structure/railing,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
-"kw" = (
-/obj/machinery/telecomms/relay/preset/station,
-/turf/open/floor/deadspace/hardwood,
-/area/awaymission/secret/powered)
 "kz" = (
 /obj/item/folder/blue,
 /obj/structure/table/wood,
@@ -2318,9 +2310,6 @@
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/deadspace/hardwood,
 /area/station/security/office)
-"SF" = (
-/turf/open/floor/deadspace/hardwood,
-/area/awaymission/secret/powered)
 "SP" = (
 /obj/machinery/door/window/brigdoor/security/cell{
 	id = "Isolation Cell 1";
@@ -2636,9 +2625,9 @@
 
 (1,1,1) = {"
 dZ
-dZ
-dZ
-dZ
+sE
+sE
+sE
 sE
 sE
 sE
@@ -2838,9 +2827,9 @@ sE
 "}
 (2,1,1) = {"
 dZ
-kw
-SF
-dZ
+sE
+sE
+sE
 sE
 sE
 sE
@@ -3040,9 +3029,9 @@ sE
 "}
 (3,1,1) = {"
 dZ
-bd
-SF
-dZ
+sE
+sE
+sE
 sE
 sE
 sE
@@ -3242,9 +3231,9 @@ sE
 "}
 (4,1,1) = {"
 dZ
-dZ
-dZ
-dZ
+sE
+sE
+sE
 sE
 sE
 sE
@@ -8665,14 +8654,14 @@ sE
 sE
 sE
 sE
-sE
-sE
-sE
-sE
 MU
 MU
 MU
 MU
+sE
+sE
+sE
+sE
 sE
 sE
 sE
@@ -8695,10 +8684,6 @@ sE
 sE
 "}
 (31,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -8895,12 +8880,12 @@ sE
 sE
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (32,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -9097,12 +9082,12 @@ sE
 sE
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (33,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -9299,12 +9284,12 @@ sE
 sE
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (34,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -9501,12 +9486,12 @@ sE
 sE
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (35,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -9703,12 +9688,12 @@ ns
 ns
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (36,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -9905,12 +9890,12 @@ DQ
 ns
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (37,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -10107,12 +10092,12 @@ oD
 ns
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (38,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -10309,12 +10294,12 @@ KA
 ns
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (39,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -10511,12 +10496,12 @@ yy
 ns
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (40,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -10713,12 +10698,12 @@ SB
 ns
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (41,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -10915,12 +10900,12 @@ FG
 ns
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (42,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -11117,12 +11102,12 @@ wE
 ns
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (43,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -11319,12 +11304,12 @@ ns
 ns
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (44,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -11521,12 +11506,12 @@ kh
 eA
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (45,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -11723,12 +11708,12 @@ kr
 eA
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (46,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -11925,12 +11910,12 @@ Uz
 Uz
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (47,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -12127,12 +12112,12 @@ aJ
 tO
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (48,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -12329,12 +12314,12 @@ kr
 tO
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (49,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -12531,12 +12516,12 @@ Uz
 Uz
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (50,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -12733,12 +12718,12 @@ ep
 Uz
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (51,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -12935,12 +12920,12 @@ ep
 Uz
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (52,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -13137,12 +13122,12 @@ hB
 Uz
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (53,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -13339,12 +13324,12 @@ gj
 Uz
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (54,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -13541,12 +13526,12 @@ ZS
 Uz
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (55,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -13743,12 +13728,12 @@ ep
 Uz
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (56,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -13945,12 +13930,12 @@ iA
 iA
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (57,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -14147,12 +14132,12 @@ rk
 iA
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (58,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -14349,12 +14334,12 @@ Dx
 iA
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (59,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -14551,12 +14536,12 @@ kY
 iA
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (60,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -14753,12 +14738,12 @@ kY
 iA
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (61,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -14955,12 +14940,12 @@ iA
 iA
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (62,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -15157,12 +15142,12 @@ sE
 sE
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (63,1,1) = {"
-sE
-sE
-sE
-sE
 sE
 sE
 sE
@@ -15359,6 +15344,10 @@ sE
 sE
 sE
 sE
+sE
+sE
+sE
+sE
 "}
 (64,1,1) = {"
 sE
@@ -15504,36 +15493,36 @@ sE
 sE
 sE
 sE
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
+YA
 sE
 sE
 sE
 sE
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
-YA
 sE
 sE
 sE
