@@ -1,5 +1,0 @@
-author: bestmudad
-delete-after: true
-changes:
-  - bugfix: Empty Pulse Rifle Clip now appears properly for all ammo types
-  - imageadd: Working icons for the pulse rifle
