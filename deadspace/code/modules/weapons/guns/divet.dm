@@ -12,16 +12,16 @@ Divet pistols
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/divet
 	can_suppress = TRUE
-	actions_types = list(/datum/action/item_action/toggle_firemode)
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
-	burst_size = 3
-	fire_delay = 4
-	dual_wield_spread = 6
-	firing_burst = TRUE
+	burst_size = 1
 	fire_sound= 'deadspace/sound/weapons/guns/divet_fire.ogg'
 	load_sound = 'deadspace/sound/weapons/guns/divet_magin.ogg'  //Old noises from 1.0, but weren't actually working and used before.
 	eject_sound = 'deadspace/sound/weapons/guns/divet_magout.ogg' //They just sound like clockwork cult sounds.
 	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
+
+/obj/item/gun/ballistic/automatic/pistol/divet/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
 
 /obj/item/gun/ballistic/automatic/pistol/divet/no_mag
 	spawnwithmagazine = FALSE

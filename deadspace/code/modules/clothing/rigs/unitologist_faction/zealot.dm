@@ -3,8 +3,11 @@
 	desc = "An old combat RIG used by SCAF over two hundred years ago.\
 	The armour has seen some wear but still functions as it should, it has been repainted in black and crimson colours. There are unitologist markings across the suit."
 	default_skin = "zealot"
-	armor = list(MELEE = 56, BULLET = 60, LASER = 30, ENERGY = 20, BOMB = 30, BIO = 100, FIRE = 25, ACID = 25)
-	complexity_max = 20
+	armor = list(MELEE = 40, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 100)
+	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	siemens_coefficient = 0
+	complexity_max = 30
 
 	skins = list(
 		"zealot" = list(

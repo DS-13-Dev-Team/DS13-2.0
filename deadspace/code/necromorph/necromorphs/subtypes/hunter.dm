@@ -52,10 +52,10 @@
 	melee_damage_lower = 18
 	melee_damage_upper = 22
 	actions = list(
-		/datum/action/cooldown/necro/swing/hunter = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
-		/datum/action/cooldown/necro/taunt/hunter = COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN,
-		/datum/action/cooldown/necro/regenerate/hunter = COMSIG_KB_NECROMORPH_ABILITY_THREE_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN,
+		/datum/action/cooldown/necro/swing/hunter = COMSIG_KB_NECROMORPH_ABILITY_HUNTERSWING_DOWN,
+		/datum/action/cooldown/necro/taunt/hunter = COMSIG_KB_NECROMORPH_ABILITY_TAUNT_DOWN,
+		/datum/action/cooldown/necro/regenerate/hunter = COMSIG_KB_NECROMORPH_ABILITY_REGENERATE_DOWN,
+		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
 	)
 	minimap_icon = "hunter"
 	implemented = TRUE
@@ -68,6 +68,7 @@
 
 	id = SPECIES_NECROMORPH_HUNTER
 	speedmod = 1.6
+	burnmod = 1.3
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/hunter,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/hunter,

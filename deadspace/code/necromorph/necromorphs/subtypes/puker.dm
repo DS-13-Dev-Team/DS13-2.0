@@ -10,6 +10,7 @@
 	desc = "A tough and flexible elite who fights by dousing enemies in acid, and is effective at all ranges. Good for crowd control and direct firefights"
 	ui_icon = 'deadspace/icons/necromorphs/puker/puker.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/puker
+	nest_allowed = TRUE
 	tier = 2
 	biomass_cost = 125
 	biomass_spent_required = 680
@@ -17,10 +18,10 @@
 	melee_damage_upper = 10
 	max_health = 100
 	actions = list(
-		/datum/action/cooldown/necro/shoot/puker_snapshot = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
-		/datum/action/cooldown/necro/shoot/puker_longshot = COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_THREE_DOWN,
-		/datum/action/cooldown/necro/shout/long = COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN,
+		/datum/action/cooldown/necro/shoot/puker_snapshot = COMSIG_KB_NECROMORPH_ABILITY_SNAPSHOT_DOWN,
+		/datum/action/cooldown/necro/shoot/puker_longshot = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN,
+		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
+		/datum/action/cooldown/necro/shout/long = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_LONG_DOWN,
 		// /datum/action/cooldown/necro/spray,
 	)
 	minimap_icon = "puker"

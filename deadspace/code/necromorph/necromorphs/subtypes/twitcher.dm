@@ -23,6 +23,7 @@
 	name = "Twitcher"
 	id = SPECIES_NECROMORPH_TWITCHER
 	speedmod = 0.8
+	burnmod = 1.1
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/twitcher,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/twitcher,

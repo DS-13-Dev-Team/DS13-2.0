@@ -99,6 +99,9 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define isalienqueen(A) (istype(A, /mob/living/carbon/alien/humanoid/royal/queen))
 
+//Necros have to go here to prevent undefined errors, don't put it in deadspace folder
+#define isnecromorph(A) (istype(A, /mob/living/carbon/human/necromorph))
+
 //Silicon mobs
 #define issilicon(A) (istype(A, /mob/living/silicon))
 

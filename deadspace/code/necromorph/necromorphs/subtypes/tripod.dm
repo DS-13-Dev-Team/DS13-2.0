@@ -23,6 +23,7 @@
 	name = "Tripod"
 	id = SPECIES_NECROMORPH_TRIPOD
 	speedmod = 1.5
+	burnmod = 1
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/tripod,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/tripod,

@@ -68,14 +68,14 @@
   - rscdel: Removed Thief antagonist.
   - rscdel: Removed Valentine's Day event and antagonist.
 2023-09-11:
-  Ketrai:
-  - rscadd: Cobra rig (patreon)
-  - rscadd: Cowboy rig (patreon)
   Kapu1178:
   - balance: Buffs Dylovene's heal per unit from 1.5 to 5
   - bugfix: Facial Hair Gradients can now be color picked again
   - bugfix: Wearing a non-mask object in your mask slot won't break your radio.
   - bugfix: You will properly receive your Loadout Uniform as an Assistant
+  Ketrai:
+  - rscadd: Cobra rig (patreon)
+  - rscadd: Cowboy rig (patreon)
   githubuser4141:
   - balance: you can print mecha designs that were printable pre-update now. Namely
       the mech laser, heavy mech laser and mech armours. You can now print the Gygax
@@ -83,14 +83,14 @@
   yyzsong:
   - qol: chemmaster can now make twice the amount of things at once
 2023-09-12:
-  RegJoe:
-  - rscadd: Added redbot support on the server
-  githubuser4141:
-  - balance: Shutter doors are more powerful now
   Kapu1178:
   - bugfix: Fixed an issue where rarely fires could burn forever.
+  RegJoe:
+  - rscadd: Added redbot support on the server
   francinum:
   - rscadd: Ghosts will now be told what the crew has collectively hallucinated.
+  githubuser4141:
+  - balance: Shutter doors are more powerful now
 2023-09-13:
   Kapu1178:
   - refactor: Credits should now consistently reach the bottom of the screen. Even
@@ -104,6 +104,10 @@
       entire logic chain is generally much simpler.
   - bugfix: Turf Decals are now anchored.
 2023-09-14:
+  Cenrus:
+  - rscadd: Flavor text reintroduced
+  - bugfix: Fixed aliens being able to hold all items.
+  - rscadd: Crates loaded on a trolley are now visible
   DTraitor:
   - rscadd: Body scanner displays blood type
   - rscadd: Added corruption maw. You need to drag-n-drop a human in order to put
@@ -129,10 +133,6 @@
   - rscadd: Glowsticks to the loadout menu
   - balance: Infinite miner slots instead of assistants
   - rscadd: Food ,glowstick, and crowbar to emergency storage box
-  Cenrus:
-  - rscadd: Flavor text reintroduced
-  - bugfix: Fixed aliens being able to hold all items.
-  - rscadd: Crates loaded on a trolley are now visible
   francinum:
   - bugfix: maint loot spawners should work again.
   - bugfix: Wiki Books now render (more) properly
@@ -143,3 +143,16 @@
       objective randomly.
   - balance: Increased fall damage by alot, damage now varies by bodypart, accounting
       for all armor values.
+2023-09-20:
+  DTraitor:
+  - bugfix: Necrovision doesn't break randomly anymore
+  - bugfix: necromorphs don't feel pain anymore
+  - balance: Marker cannot spawn more than one ubermorph anymore
+  MisterGrimm:
+  - balance: Necros get hurt by fire more, depending on subtype.
+  bestmudad:
+  - bugfix: Empty Pulse Rifle Clip now appears properly for all ammo types
+  - imageadd: Working icons for the pulse rifle
+  blackwolf602:
+  - rscadd: new computer icons
+  - rscadd: captain hat

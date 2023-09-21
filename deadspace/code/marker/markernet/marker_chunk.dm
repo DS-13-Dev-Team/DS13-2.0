@@ -48,10 +48,11 @@
 	for(var/turf/t as anything in block(locate(max(x, 1), max(y, 1), z), locate(min(x + CHUNK_SIZE - 1, world.maxx), min(y + CHUNK_SIZE - 1, world.maxy), z)))
 		turfs[t] = image(example, t)
 
-	var/x2 = x + CHUNK_SIZE - 1
-	var/y2 = y + CHUNK_SIZE - 1
+	var/center_x = x + (CHUNK_SIZE / 2)
+	var/center_y = y + (CHUNK_SIZE / 2)
+
 	for(var/atom/source as anything in netVisionSources)
-		if(source.z != z || source.x < x - CHUNK_SIZE || source.y < y - CHUNK_SIZE || source.x > x2 + CHUNK_SIZE || source.y > y2 + CHUNK_SIZE)
+		if(source.z != z || source.x < (center_x - CHUNK_SIZE) || source.y < (center_y - CHUNK_SIZE) || source.x >= (center_x + CHUNK_SIZE) || source.y >= (center_y + CHUNK_SIZE))
 			continue
 
 		var/list/visible = list()
@@ -126,10 +127,10 @@
 	for(var/mob/camera/marker_signal/client_eye as anything in seenby)
 		client_eye.client?.images -= active_masks
 
-	var/x2 = x + CHUNK_SIZE - 1
-	var/y2 = y + CHUNK_SIZE - 1
+	var/center_x = x + (CHUNK_SIZE / 2)
+	var/center_y = y + (CHUNK_SIZE / 2)
 	for(var/atom/source as anything in queued_for_update)
-		if(source.z != z || source.x < x - CHUNK_SIZE || source.y < y - CHUNK_SIZE || source.x > x2 + CHUNK_SIZE || source.y > y2 + CHUNK_SIZE)
+		if(source.z != z || source.x < (center_x - CHUNK_SIZE) || source.y < (center_y - CHUNK_SIZE) || source.x >= (center_x + CHUNK_SIZE) || source.y >= (center_y + CHUNK_SIZE))
 			visionSources -= source
 			rangeVisionSources -= source
 			viewVisionSources -= source

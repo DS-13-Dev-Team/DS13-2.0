@@ -73,6 +73,7 @@ Magazines
 	caliber = CALIBER_PULSE
 	ammo_type = /obj/item/ammo_casing/caseless/pulse
 	max_ammo = 50 //To low? 65 normal on 1.0
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
 /obj/item/ammo_box/magazine/pulse/hv
 	name = "pulse magazine (high velocity)"
@@ -151,7 +152,7 @@ Projectiles for the casings
 	name = "pulse"
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "pulse"
-	damage = 8
+	damage = 14
 	//It sonic fast
 	speed = 1
 	armour_penetration = 4 //Should be quite low I'd think, especially for standard rounds. Bullet made to shred and liquify flesh but not affect materialistic objects much.
@@ -161,13 +162,13 @@ Projectiles for the casings
 
 /obj/projectile/bullet/pulse/hv
 	icon_state = "pulse_hv"
-	damage = 9.5
+	damage = 15.5
 	armour_penetration = 12
 	//muzzle_type = /obj/effect/projectile/ds_muzzle/pulse/hv
 
 /obj/projectile/bullet/pulse/df //Will change properly later
 	icon_state = "pulse_df"
-	damage = 5
+	damage = 12
 	stamina = 8
 	ricochets_max = 2
 	ricochet_incidence_leeway = 0

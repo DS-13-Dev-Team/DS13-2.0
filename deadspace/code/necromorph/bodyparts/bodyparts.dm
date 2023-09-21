@@ -3,6 +3,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_CHEST & ~(BP_HAS_BONES|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "chest"
 	icon_dmg_overlay = null
@@ -16,12 +17,15 @@
 	wound_resistance = 10
 	acceptable_bodytype = BODYTYPE_NECROMORPH
 	can_be_disabled = FALSE
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/head/necromorph
 	name = BODY_ZONE_HEAD
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_HEAD & ~(BP_HAS_BONES|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "head"
 	icon_dmg_overlay = null
@@ -34,6 +38,8 @@
 	is_dimorphic = FALSE
 	can_be_disabled = FALSE
 	show_organs_on_examine = TRUE
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/head/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
 	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
@@ -53,6 +59,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_arm"
 	icon_dmg_overlay = null
@@ -63,6 +70,8 @@
 	px_y = 0
 	can_be_disabled = FALSE
 	wound_resistance = 0
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/arm/left/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
 	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
@@ -82,6 +91,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_arm"
 	icon_dmg_overlay = null
@@ -92,6 +102,8 @@
 	px_y = 0
 	can_be_disabled = FALSE
 	wound_resistance = 0
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/arm/right/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
 	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
@@ -111,6 +123,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_LEGS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_leg"
 	icon_dmg_overlay = null
@@ -121,6 +134,8 @@
 	px_y = 12
 	can_be_disabled = FALSE
 	wound_resistance = 0
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/leg/left/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
 	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
@@ -140,6 +155,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_LEGS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_leg"
 	icon_dmg_overlay = null
@@ -152,6 +168,8 @@
 	px_y = 12
 	can_be_disabled = FALSE
 	wound_resistance = 0
+	icon_bloodycover = null
+	icon_dmg_overlay = null
 
 /obj/item/bodypart/leg/right/necromorph/attempt_dismemberment(brute as num, burn as num, sharpness)
 	if((sharpness & SHARP_EDGED) && (brute_dam + brute) >= max_damage * DROPLIMB_THRESHOLD_EDGE)

@@ -400,6 +400,10 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	if(marker.marker_biomass < marker.necro_classes[spawning_necromorph].biomass_cost)
 		to_chat(src, span_warning("Not enough biomass!"))
 		return
+	var/datum/necro_class/class = marker.necro_classes[spawning_necromorph]
+	if(class.spawn_limit >= 0 && class.spawned_number >= class.spawn_limit)
+		to_chat(src, span_warning("You cannot spawn more necromorphs of this type!"))
+		return
 	A = get_turf(A)
 	if(!A)
 		return
@@ -422,6 +426,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		marker.change_marker_biomass(-marker.necro_classes[spawning_necromorph].biomass_cost)
 		marker.biomass_invested += marker.necro_classes[spawning_necromorph].biomass_cost
 		var/path = marker.necro_classes[spawning_necromorph].necromorph_type_path
+		++class.spawned_number
 		var/mob/living/carbon/human/necromorph/mob = new path(A, marker)
 		if(marker.use_necroqueue && length(marker.necroqueue))
 			var/list/necroqueue_copy = marker.necroqueue.Copy()

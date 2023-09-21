@@ -2,7 +2,7 @@
 	name = "medical"
 	desc = "A durable RIG designed for medical rescue in high risk areas, and protecting the wearer against acids."
 	default_skin = "med"
-	armor = list(MELEE = 37.5, BULLET = 15, LASER = 70, ENERGY = 70, BOMB = 30, BIO = 100, FIRE = 25, ACID = 100)
+	armor = list(MELEE = 15, BULLET = 10, LASER = 25, ENERGY = 10, BOMB = 30, BIO = 100, FIRE = 100, ACID = 70)
 
 	skins = list(
 		"med" = list(
