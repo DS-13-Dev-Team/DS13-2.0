@@ -16424,9 +16424,6 @@
 "iVZ" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
-	dir = 1
-	},
 /obj/machinery/telephone/service{
 	friendly_name = "Pharmacy";
 	placard_name = "Medical PBX"
