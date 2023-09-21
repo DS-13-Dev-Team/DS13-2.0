@@ -19,10 +19,10 @@
 	melee_damage_upper = 22
 	max_health = 215
 	actions = list(
-		/datum/action/cooldown/necro/charge/slasher/enhanced = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
-		/datum/action/cooldown/necro/dodge/enhanced = COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_THREE_DOWN,
-		/datum/action/cooldown/necro/scream = COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN,
+		/datum/action/cooldown/necro/charge/slasher/enhanced = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN,
+		/datum/action/cooldown/necro/dodge/enhanced = COMSIG_KB_NECROMORPH_ABILITY_DODGE_DOWN,
+		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
+		/datum/action/cooldown/necro/scream = COMSIG_KB_NECROMORPH_ABILITY_SCREAM_DOWN,
 	)
 	minimap_icon = "e_slasher"
 	implemented = TRUE

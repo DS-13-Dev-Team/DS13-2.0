@@ -17,10 +17,10 @@
 	melee_damage_upper = 10
 	max_health = 100
 	actions = list(
-		/datum/action/cooldown/necro/shoot/puker_snapshot = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
-		/datum/action/cooldown/necro/shoot/puker_longshot = COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_THREE_DOWN,
-		/datum/action/cooldown/necro/shout/long = COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN,
+		/datum/action/cooldown/necro/shoot/puker_snapshot = COMSIG_KB_NECROMORPH_ABILITY_SNAPSHOT_DOWN,
+		/datum/action/cooldown/necro/shoot/puker_longshot = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN,
+		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
+		/datum/action/cooldown/necro/shout/long = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_LONG_DOWN,
 		// /datum/action/cooldown/necro/spray,
 	)
 	minimap_icon = "puker"

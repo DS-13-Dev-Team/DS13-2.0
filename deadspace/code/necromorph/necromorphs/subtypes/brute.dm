@@ -55,10 +55,10 @@
 	max_health = 510
 	necro_armor = list(ARMOR_FRONT = 30, ARMOR_FLANK = 20, ARMOR_BACK = 10, CURL_ARMOR_MULT = 1.5, ARMOR_PROTECTION = 300)
 	actions = list(
-		/datum/action/cooldown/necro/slam = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
-		/datum/action/cooldown/necro/long_charge = COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN,
-		/datum/action/cooldown/necro/shoot/brute = COMSIG_KB_NECROMORPH_ABILITY_THREE_DOWN,
-		/datum/action/cooldown/necro/curl = COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN,
+		/datum/action/cooldown/necro/slam = COMSIG_KB_NECROMORPH_ABILITY_SLAM_DOWN,
+		/datum/action/cooldown/necro/long_charge = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN,
+		/datum/action/cooldown/necro/shoot/brute = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN,
+		/datum/action/cooldown/necro/curl = COMSIG_KB_NECROMORPH_ABILITY_CURL_DOWN,
 	)
 	minimap_icon = "brute"
 	implemented = TRUE
