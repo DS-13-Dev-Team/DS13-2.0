@@ -21,6 +21,8 @@
 /datum/biomass_source/maw/absorb_biomass(delta_time)
 	var/obj/structure/necromorph/maw/maw = source
 	for(var/mob/living/target as anything in maw.buckled_mobs)
+		if(isnecromorph(target))
+			maw.bite_necro(target, delta_time)
 		if(ishuman(target))
 			maw.bite_human(target, delta_time)
 		else
