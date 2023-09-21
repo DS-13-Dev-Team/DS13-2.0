@@ -65,13 +65,15 @@
 		AGENDER,
 		HAS_FLESH,
 		HAS_BONE,
-		NOAUGMENTS
+		NOAUGMENTS,
+		NOEYESPRITES,
 	)
 
 	inherent_traits = list()
 	inherent_biotypes = MOB_ORGANIC|MOB_UNDEAD|MOB_HUMANOID
 	inherent_factions = list(FACTION_NECROMORPH)
 	species_mob_size = MOB_SIZE_HUMAN
+	fire_overlay = "generic_burning"
 
 /datum/species/necromorph/check_roundstart_eligible()
 	return FALSE
