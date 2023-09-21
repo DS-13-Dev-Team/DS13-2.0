@@ -7,6 +7,7 @@
 	px_x = 0
 	px_y = 0
 	wound_resistance = 10
+	biomass = 15
 
 /obj/item/bodypart/head/necromorph/exploder
 	name = BODY_ZONE_HEAD
@@ -17,6 +18,7 @@
 	px_x = 0
 	px_y = -8
 	wound_resistance = 5
+	biomass = 7.5
 
 //This is an arm actually. It's just used for walking
 /obj/item/bodypart/leg/left/necromorph/exploder
@@ -30,6 +32,7 @@
 	px_x = -2
 	px_y = 12
 	wound_resistance = 0
+	biomass = 10 //Assuming it doesn't explode, it's packed with biomass
 	integrity_failure = 0.25
 	var/list/datum/action/cooldown/necro/exploding_actions
 
@@ -74,3 +77,4 @@
 	px_x = 2
 	px_y = 12
 	wound_resistance = 0
+	biomass = 5
