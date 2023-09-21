@@ -1335,6 +1335,7 @@
 			to_chat(user, span_warning("Despite your efforts, [src] managed to resist your attempts to open it!"))
 		else
 			atom_break()
+			playsound(src, 'sound/machines/airlock_tear_open.ogg', 50, TRUE)
 
 /obj/machinery/door/airlock/hostile_lockdown(mob/origin)
 	// Must be powered and have working AI wire.
