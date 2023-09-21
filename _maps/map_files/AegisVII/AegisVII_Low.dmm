@@ -2073,7 +2073,7 @@
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
 "pD" = (
-/obj/structure/ladder,
+/obj/structure/ladder/invincible,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "pE" = (
@@ -2261,8 +2261,8 @@
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/maintenance/fore/lesser)
 "qX" = (
-/obj/structure/ladder,
-/obj/structure/ladder,
+/obj/structure/ladder/invincible,
+/obj/structure/ladder/invincible,
 /turf/open/floor/deadspace/mono,
 /area/station/security)
 "qZ" = (
@@ -2339,7 +2339,7 @@
 /turf/open/floor/deadspace/grater,
 /area/station/cargo)
 "rv" = (
-/obj/structure/ladder,
+/obj/structure/ladder/invincible,
 /turf/open/floor/deadspace/mono,
 /area/lavaland/surface/outdoors)
 "rw" = (
@@ -2611,7 +2611,7 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/warehouse)
 "ui" = (
-/obj/structure/ladder,
+/obj/structure/ladder/invincible,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/warehouse)
 "uk" = (
@@ -3089,7 +3089,7 @@
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/service/chapel/monastery)
 "zc" = (
-/obj/structure/ladder,
+/obj/structure/ladder/invincible,
 /turf/open/floor/deadspace/mono,
 /area/station/maintenance/port/lesser)
 "zi" = (
@@ -3733,7 +3733,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "Gu" = (
-/obj/structure/ladder,
+/obj/structure/ladder/invincible,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "Gw" = (
@@ -4378,7 +4378,7 @@
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "Of" = (
-/obj/structure/ladder,
+/obj/structure/ladder/invincible,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo)
 "Oi" = (
@@ -5238,7 +5238,7 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/service/chapel/monastery)
 "Xi" = (
-/obj/structure/ladder,
+/obj/structure/ladder/invincible,
 /turf/open/floor/deadspace/mono,
 /area/station/maintenance/fore/lesser)
 "Xm" = (
@@ -5454,7 +5454,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo)
 "ZB" = (
-/obj/structure/ladder,
+/obj/structure/ladder/invincible,
 /obj/structure/cable/multilayer/multiz,
 /obj/structure/disposalpipe/trunk/multiz{
 	dir = 1
