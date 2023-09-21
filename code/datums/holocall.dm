@@ -367,6 +367,9 @@
 /datum/preset_holoimage/researcher
 	outfit_type = /datum/outfit/job/scientist
 
+/datum/preset_holoimage/head_of_personnel
+	outfit_type = /datum/outfit/job/hop
+
 /datum/preset_holoimage/captain
 	outfit_type = /datum/outfit/job/captain
 
