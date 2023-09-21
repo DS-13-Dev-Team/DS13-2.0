@@ -1,0 +1,5 @@
+author: Polyzonial
+delete-after: true
+changes:
+  - rscadd: Damage and noise on brute spec_unarmedattack
+  - bugfix: brute's charge (I hope)
