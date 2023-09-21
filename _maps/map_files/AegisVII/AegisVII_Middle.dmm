@@ -6560,7 +6560,7 @@
 	dir = 4
 	},
 /turf/open/space/basic,
-/area/station/engineering/main)
+/area/station/maintenance/department/engine)
 "bKa" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/table,
@@ -8035,7 +8035,7 @@
 	dir = 5
 	},
 /turf/open/floor/iron,
-/area/station/engineering/main)
+/area/station/maintenance/department/engine)
 "cLH" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/table,
@@ -14199,7 +14199,7 @@
 	},
 /obj/machinery/light/small/maintenance/directional/south,
 /turf/open/floor/iron,
-/area/station/engineering/main)
+/area/station/maintenance/department/engine)
 "hlK" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark/side,
@@ -19966,6 +19966,9 @@
 	},
 /turf/open/floor/stone,
 /area/lavaland/surface/outdoors)
+"lCh" = (
+/turf/open/floor/plating,
+/area/station/maintenance/department/engine)
 "lCC" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
 /obj/machinery/meter,
@@ -22809,7 +22812,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/engineering/main)
+/area/station/maintenance/department/engine)
 "nQL" = (
 /obj/structure/railing{
 	dir = 4
@@ -23856,6 +23859,12 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server)
+"oIb" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/turf/open/floor/iron,
+/area/station/maintenance/department/engine)
 "oIg" = (
 /obj/structure/table/wood,
 /obj/structure/railing,
@@ -24626,7 +24635,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron,
-/area/station/engineering/main)
+/area/station/maintenance/department/engine)
 "pnm" = (
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible,
 /turf/open/floor/iron/ported/techfloor_grid,
@@ -26108,7 +26117,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
-/area/station/engineering/main)
+/area/station/maintenance/department/engine)
 "quv" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/slides{
@@ -26198,6 +26207,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
+"qxQ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/iron,
+/area/station/maintenance/department/engine)
 "qyr" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/effect/spawner/random/vending/colavend,
@@ -26723,6 +26738,9 @@
 	},
 /turf/open/floor/iron,
 /area/station/cargo/storage)
+"qRq" = (
+/turf/closed/wall/r_wall,
+/area/station/maintenance/department/engine)
 "qTg" = (
 /turf/open/floor/iron/dark/side{
 	dir = 1
@@ -27829,7 +27847,7 @@
 	dir = 8
 	},
 /turf/open/space/basic,
-/area/station/engineering/main)
+/area/station/maintenance/department/engine)
 "rQv" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -29612,9 +29630,6 @@
 	},
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/high,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
-	dir = 4
-	},
 /turf/open/floor/iron/white,
 /area/station/medical/storage)
 "tkS" = (
@@ -32681,7 +32696,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/iron,
-/area/station/engineering/main)
+/area/station/maintenance/department/engine)
 "vDE" = (
 /obj/machinery/mass_driver/trash{
 	dir = 8
@@ -34434,7 +34449,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
-/area/station/engineering/main)
+/area/station/maintenance/department/engine)
 "wRj" = (
 /turf/open/floor/engine,
 /area/station/science/misc_lab/range)
@@ -34684,7 +34699,7 @@
 "wYe" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/station/maintenance/department/engine)
 "wYh" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -49586,10 +49601,10 @@ apG
 apG
 apG
 apG
-gSl
-gSl
-gSl
-gSl
+qRq
+qRq
+qRq
+qRq
 raZ
 dcM
 raZ
@@ -49788,8 +49803,8 @@ apG
 apG
 apG
 apG
-gSl
-cVD
+qRq
+oIb
 nQI
 hlE
 gSl
@@ -49990,7 +50005,7 @@ apG
 apG
 apG
 apG
-gSl
+qRq
 pmV
 wQU
 qsU
@@ -50192,10 +50207,10 @@ apG
 apG
 apG
 apG
-gSl
+qRq
 cLG
 vDB
-cfu
+qxQ
 gSl
 uJl
 dlh
@@ -50394,10 +50409,10 @@ oHb
 apG
 apG
 apG
-gSl
-gSl
+qRq
+qRq
 bJW
-gSl
+qRq
 gSl
 aHX
 bOu
@@ -50596,10 +50611,10 @@ apG
 apG
 apG
 apG
-gSl
-kSm
+qRq
+lCh
 wYe
-kSm
+lCh
 gSl
 gSl
 gSl
@@ -50798,10 +50813,10 @@ oHb
 oHb
 apG
 apG
-gSl
-kSm
+qRq
+lCh
 wYe
-kSm
+lCh
 gSl
 apG
 gSl
@@ -51000,10 +51015,10 @@ oHb
 oHb
 oHb
 oHb
-gSl
-gSl
+qRq
+qRq
 rQo
-gSl
+qRq
 gSl
 apG
 gSl
