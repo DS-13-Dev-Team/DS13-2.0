@@ -801,7 +801,7 @@
 /turf/open/floor/iron,
 /area/station/service/janitor)
 "ang" = (
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /turf/open/floor/iron/dark/corner{
 	dir = 1
 	},
@@ -3724,7 +3724,7 @@
 /turf/open/floor/iron/dark,
 /area/station/tcommsat/server)
 "aTX" = (
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -4688,8 +4688,8 @@
 	},
 /area/station/security/courtroom)
 "bfT" = (
-/mob/living/simple_animal/mouse,
 /obj/machinery/light/small/directional/east,
+/obj/effect/landmark/pestspawn,
 /turf/open/water,
 /area/station/hallway/primary/aft)
 "bga" = (
@@ -6785,7 +6785,7 @@
 /area/station/maintenance/starboard/fore)
 "bRX" = (
 /obj/structure/cable,
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/powered/bathhouse)
 "bSa" = (
@@ -8732,7 +8732,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "doU" = (
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/ruin/powered/bathhouse)
 "dpe" = (
@@ -8890,7 +8890,7 @@
 /obj/machinery/computer/pod/old/mass_driver_controller/trash{
 	pixel_x = -24
 	},
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "dvP" = (
@@ -14505,10 +14505,10 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/security/brig)
 "huE" = (
-/mob/living/simple_animal/mouse,
 /obj/machinery/camera/directional/east{
 	c_tag = "Starboard Primary Hallway - Engineering"
 	},
+/obj/effect/landmark/pestspawn,
 /turf/open/water,
 /area/station/hallway/primary/aft)
 "huI" = (
@@ -20170,7 +20170,7 @@
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
 "lKM" = (
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
@@ -20864,8 +20864,8 @@
 /turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "mok" = (
-/mob/living/simple_animal/mouse,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/effect/landmark/pestspawn,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "moy" = (
@@ -21336,7 +21336,6 @@
 /area/station/science/robotics/lab)
 "mJa" = (
 /obj/machinery/door/poddoor/massdriver_trash,
-/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "mJd" = (
@@ -24831,7 +24830,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "pvt" = (
@@ -26054,7 +26053,7 @@
 	dir = 9;
 	id = "garbage"
 	},
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "qqE" = (
@@ -27916,7 +27915,7 @@
 	},
 /area/station/cargo/warehouse/upper)
 "rSS" = (
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
 "rSV" = (
@@ -30665,7 +30664,7 @@
 /turf/open/floor/deadspace/grater,
 /area/ruin/powered/bathhouse)
 "tXt" = (
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/maintenance/starboard/fore)
 "tXw" = (
@@ -30915,7 +30914,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/station/service/library)
 "ujw" = (
-/mob/living/simple_animal/mouse,
+/obj/effect/landmark/pestspawn,
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
@@ -31463,10 +31462,10 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "uEh" = (
-/mob/living/simple_animal/mouse,
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/landmark/pestspawn,
 /turf/open/water,
 /area/station/hallway/primary/aft)
 "uEP" = (
@@ -35725,8 +35724,8 @@
 /turf/open/misc/asteroid,
 /area/lavaland/surface/outdoors)
 "xPR" = (
-/mob/living/simple_animal/mouse,
 /obj/machinery/light/small/directional/west,
+/obj/effect/landmark/pestspawn,
 /turf/open/water,
 /area/station/hallway/primary/aft)
 "xQs" = (
@@ -56528,7 +56527,7 @@ hpS
 ktm
 lUK
 omj
-oHb
+rSS
 hsR
 hpS
 mlO
