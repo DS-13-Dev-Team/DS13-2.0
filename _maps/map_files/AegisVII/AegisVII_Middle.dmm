@@ -8783,6 +8783,7 @@
 /obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
+/obj/effect/marker_location,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
 "dsk" = (
@@ -31422,10 +31423,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grille_spare4,
 /area/station/cargo/miningdock/oresilo)
-"uCn" = (
-/obj/effect/marker_location,
-/turf/open/floor/deadspace/grater,
-/area/mine/hydroponics)
 "uCu" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
@@ -63529,7 +63526,7 @@ knF
 bsm
 bsm
 bsm
-uCn
+bsm
 bsm
 bsm
 bsm
