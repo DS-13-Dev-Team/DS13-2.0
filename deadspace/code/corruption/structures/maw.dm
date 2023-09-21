@@ -46,7 +46,7 @@
 		part.drop_limb(FALSE, TRUE)
 		qdel(part)
 	else
-		processing_biomass += part.biomass * 1.2
+		processing_biomass += 0.1
 		// Damage shouldn't be above or equal to 80%
 		part.receive_damage(
 			min(
@@ -87,7 +87,6 @@
 		part.drop_limb(FALSE, TRUE)
 		qdel(part)
 	else
-		processing_biomass += part.biomass
 		// Damage shouldn't be above or equal to 80%
 		part.receive_damage(
 			min(
@@ -98,9 +97,14 @@
 /obj/structure/necromorph/maw/is_buckle_possible(mob/living/target, force, check_loc)
 	if(!..())
 		return FALSE
+	if(issilicon(target))
+		return FALSE
 	return TRUE
 
 /obj/structure/necromorph/maw/user_buckle_mob(mob/living/M, mob/user, check_loc)
+	if(issilicon(M))
+		to_chat(user, span_warning("[src] refuses to consume [M]!"))
+		return FALSE
 	if(!do_after_mob(user, M, 5 SECONDS, IGNORE_HELD_ITEM|DO_PUBLIC, TRUE, CALLBACK(src, PROC_REF(buckle_mob_check), M)))
 		return
 	return ..()

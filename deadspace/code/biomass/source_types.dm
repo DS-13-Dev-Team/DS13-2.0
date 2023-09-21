@@ -23,7 +23,7 @@
 	for(var/mob/living/target as anything in maw.buckled_mobs)
 		if(isnecromorph(target))
 			maw.bite_necro(target, delta_time)
-		if(ishuman(target))
+		else if(ishuman(target))
 			maw.bite_human(target, delta_time)
 		else
 			maw.bite_living(target, delta_time)
