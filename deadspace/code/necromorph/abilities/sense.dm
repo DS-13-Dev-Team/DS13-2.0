@@ -2,6 +2,7 @@
 	name = "Sense"
 	desc = "Reveals nearby living creatures around you, to yourself and allies."
 	cooldown_time = 3 SECONDS
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_SENSE_DOWN
 	var/duration = 9 SECONDS
 	var/range_sense = 9
 	var/range_buff = 9

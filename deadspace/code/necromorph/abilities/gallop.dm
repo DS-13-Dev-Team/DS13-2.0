@@ -5,6 +5,7 @@
 	desc = "Gives a huge burst of speed, but makes you vulnerable."
 	cooldown_time = 10 SECONDS
 	duration_time = 6 SECONDS
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_GALLOP_DOWN
 	var/crash_count = 0
 
 /datum/action/cooldown/necro/active/gallop/Activate(atom/target)

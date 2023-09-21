@@ -1,3 +1,15 @@
+#define CHARGE_SPEED(charger) (min(charger.valid_steps_taken, charger.max_steps_buildup) * charger.speed_per_step)
+#define CHARGE_MAX_SPEED (speed_per_step * max_steps_buildup)
+
+#define CHARGE_BRUTE (1<<0)
+
+#define STOP_CHARGE_ON_DEL (1<<0)
+
+#define CHARGE_OFF 0
+#define CHARGE_BUILDINGUP 1
+#define CHARGE_ON 2
+#define CHARGE_MAX 3
+
 /datum/action/cooldown/necro/long_charge
 	name = "Toggle Charging"
 	desc = "Toggles the movement-based charge on and off."
@@ -71,7 +83,7 @@
 		if(charger.dir != direction) //It needs to move twice in the same direction, at least, to begin charging.
 			return
 		charge_dir = direction
-		if(!check_momentum(direction))	
+		if(!check_momentum(direction))
 			charge_dir = null
 			return
 		charger.charging = CHARGE_BUILDINGUP
@@ -438,3 +450,12 @@
 #undef PRECRUSH_STOPPED
 #undef PRECRUSH_PLOWED
 #undef PRECRUSH_ENTANGLED
+
+#undef CHARGE_SPEED
+#undef CHARGE_MAX_SPEED
+#undef CHARGE_BRUTE
+#undef STOP_CHARGE_ON_DEL
+#undef CHARGE_OFF
+#undef CHARGE_BUILDINGUP
+#undef CHARGE_ON
+#undef CHARGE_MAX

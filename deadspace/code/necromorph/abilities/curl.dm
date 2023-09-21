@@ -18,8 +18,8 @@
 */
 /datum/action/cooldown/necro/curl
 	name = "Curl"
-
 	cooldown_time = 1.5 MINUTE		//After an automatic curl, how long before we can be forced to do it again?
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_CURL_DOWN
 	var/status = 0
 	var/force_time	=	0				//How long are we forced to stay curled up? There should always be a minimum on this to prevent spam. It shouldn't be
 	var/automatic = FALSE				//Did we curl up manually or automatically

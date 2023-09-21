@@ -23,8 +23,6 @@
 
 	var/armour_penetration = 0
 
-	var/list/necro_armor
-
 	///Maximum health a necromorph has.
 	var/max_health = 100
 
@@ -43,7 +41,6 @@
 	var/fire_resist = 1
 
 	///the 'abilities' available to a necromorph.
-	///if list is associative than the key is a keybind signal to trigger an action
 	var/list/datum/action/cooldown/necro/actions = list()
 
 	///List of traits we add in Initialize()
@@ -93,8 +90,6 @@
 	for(var/datum/action/cooldown/necro/action_datum as anything in actions)
 		action_datum = new action_datum(necro)
 		action_datum.Grant(necro)
-		if(actions[action_datum.type])
-			action_datum.RegisterSignal(necro, actions[action_datum.type], TYPE_PROC_REF(/datum/action/cooldown/necro, TriggerOnKeybindSignal))
 
 	necro.armor = getArmor(arglist(armor))
 

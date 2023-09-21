@@ -132,11 +132,11 @@
 
 	var/ongoing_timer
 
-	statmods = list(
-					STATMOD_ATTACK_SPEED = 1,
-					STATMOD_MOVESPEED_MULTIPLICATIVE = 1.4,
-					STATMOD_INCOMING_DAMAGE_MULTIPLICATIVE = 0.6
-	)
+	//statmods = list(
+	//				STATMOD_ATTACK_SPEED = 1,
+	//				STATMOD_MOVESPEED_MULTIPLICATIVE = 1.4,
+	//				STATMOD_INCOMING_DAMAGE_MULTIPLICATIVE = 0.6
+	//)
 
 /datum/component/statmod/regenerate_afterbuff/Initialize(duration)
 	. = ..()

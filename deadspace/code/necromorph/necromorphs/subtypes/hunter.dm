@@ -52,13 +52,14 @@
 	melee_damage_lower = 18
 	melee_damage_upper = 22
 	actions = list(
-		/datum/action/cooldown/necro/swing/hunter = COMSIG_KB_NECROMORPH_ABILITY_HUNTERSWING_DOWN,
-		/datum/action/cooldown/necro/taunt/hunter = COMSIG_KB_NECROMORPH_ABILITY_TAUNT_DOWN,
-		/datum/action/cooldown/necro/regenerate/hunter = COMSIG_KB_NECROMORPH_ABILITY_REGENERATE_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
+		/datum/action/cooldown/necro/swing/hunter,
+		/datum/action/cooldown/necro/taunt/hunter,
+		/datum/action/cooldown/necro/regenerate/hunter,
+		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "hunter"
-	implemented = TRUE
+	//Disabled until I rewrite hunter abilities
+	implemented = FALSE
 
 /datum/species/necromorph/hunter
 	name = "Hunter"
@@ -169,6 +170,6 @@
 
 /datum/component/statmod/taunt_buff
 	//These stats apply to self
-	statmods = list(STATMOD_MOVESPEED_ADDITIVE = 0.15,
-					STATMOD_INCOMING_DAMAGE_MULTIPLICATIVE = 0.85
-	)
+	//statmods = list(STATMOD_MOVESPEED_ADDITIVE = 0.15,
+	//				STATMOD_INCOMING_DAMAGE_MULTIPLICATIVE = 0.85
+	//)

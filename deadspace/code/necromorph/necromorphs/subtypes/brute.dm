@@ -4,7 +4,8 @@
 	pixel_x = -16
 	base_pixel_x = -16
 	status_flags = CANSTUN|CANUNCONSCIOUS
-
+	var/armor_front = 30
+	var/armor_flank = 20
 	var/next_attack_delay = 0
 	var/spec_attack_delay = 25
 
@@ -23,17 +24,21 @@
 	melee_damage_lower = 24
 	melee_damage_upper = 28
 	max_health = 510
-	necro_armor = list(ARMOR_FRONT = 30, ARMOR_FLANK = 20, ARMOR_BACK = 10, CURL_ARMOR_MULT = 1.5, ARMOR_PROTECTION = 300)
 	actions = list(
-		/datum/action/cooldown/necro/slam = COMSIG_KB_NECROMORPH_ABILITY_SLAM_DOWN,
-		/datum/action/cooldown/necro/long_charge = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN,
-		/datum/action/cooldown/necro/shoot/brute = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN,
-		/datum/action/cooldown/necro/curl = COMSIG_KB_NECROMORPH_ABILITY_CURL_DOWN,
+		/datum/action/cooldown/necro/slam,
+		/datum/action/cooldown/necro/long_charge,
+		/datum/action/cooldown/necro/shoot/brute,
+		/datum/action/cooldown/necro/curl,
 	)
 	minimap_icon = "brute"
 	implemented = TRUE
-	var/armor_front = 20
+	var/armor_front = 30
 	var/armor_flank = 20
+
+/datum/necro_class/brute/load_data(mob/living/carbon/human/necromorph/brute/necro)
+	..()
+	necro.armor_front = armor_front
+	necro.armor_flank = armor_flank
 
 /datum/species/necromorph/brute
 	name = "Brute"
@@ -77,7 +82,8 @@
 	if(world.time < user.next_attack_delay)
 		return
 	user.next_attack_delay = user.spec_attack_delay + world.time
-	if (istype(target, /mob/living/carbon/human))
+	user.play_necro_sound(SOUND_ATTACK, VOLUME_HIGH, 1, 3)
+	if(istype(target, /mob/living/carbon/human))
 		var/mob/living/carbon/human/mob_target = target
 		var/fling_dir = pick((user.dir & (NORTH|SOUTH)) ? list(WEST, EAST, user.dir|WEST, user.dir|EAST) : list(NORTH, SOUTH, user.dir|NORTH, user.dir|SOUTH)) //Fling them somewhere not behind nor ahead of the charger.
 		var/fling_dist = rand(2,5)
@@ -93,17 +99,16 @@
 			mob_target.throw_at(destination, fling_dist, 1, src, TRUE)
 	return ..()
 
-/datum/species/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/H, forced, spread_damage, sharpness, attack_direction)
-	//TODO: Handle front armour here
+/datum/species/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/brute/H, forced, spread_damage, sharpness, attack_direction)
 	switch(turn(attack_direction, dir2angle(H.dir)))
 		if(NORTH)
-			blocked += H.armor_front
+			blocked += damage * ((100-H.armor_front)/100)
 		if(NORTHEAST, NORTHWEST)
-			blocked += (H.armor_front + H.armor_flank) / 2
+			blocked += damage * ((100-((H.armor_front+H.armor_flank)/2))/100)
 		if(EAST, WEST)
-			blocked += H.armor_flank
+			blocked += damage * ((100-H.armor_flank)/100)
 		if(SOUTHEAST, SOUTHWEST)
-			blocked += H.armor_flank / 2
+			blocked += damage * ((100-(H.armor_flank/2))/100)
 	return ..()
 
 #define WINDUP_TIME 1.25 SECONDS

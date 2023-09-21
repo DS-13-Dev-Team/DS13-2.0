@@ -19,10 +19,10 @@
 	max_health = INFINITY
 	implemented = TRUE
 	actions = list(
-		/datum/action/cooldown/necro/charge/lunge/ubermorph = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN,
-		/datum/action/cooldown/necro/sense = COMSIG_KB_NECROMORPH_ABILITY_SENSE_DOWN,
-		/datum/action/cooldown/necro/regenerate/ubermorph = COMSIG_KB_NECROMORPH_ABILITY_REGENERATE_DOWN,
-		/datum/action/cooldown/necro/frenzy_shout/ubermorph = COMSIG_KB_NECROMORPH_ABILITY_FRENZY_DOWN,
+		/datum/action/cooldown/necro/charge/lunge/ubermorph,
+		/datum/action/cooldown/necro/sense,
+		/datum/action/cooldown/necro/regenerate/ubermorph,
+		/datum/action/cooldown/necro/frenzy_shout/ubermorph,
 	)
 	minimap_icon = "ubermorph"
 	spawn_limit = 1

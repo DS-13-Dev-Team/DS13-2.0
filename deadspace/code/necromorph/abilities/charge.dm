@@ -1,8 +1,11 @@
+#define CHARGE_SPEED(charger) (min(charger.valid_steps_taken, charger.max_steps_buildup) * charger.speed_per_step)
+
 /datum/action/cooldown/necro/charge
 	name = "Charge"
 	desc = "Allows you to charge at a chosen position."
 	cooldown_time = 1.5 SECONDS
 	click_to_activate = TRUE
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN
 	/// Delay before the charge actually occurs
 	var/charge_delay = 0.3 SECONDS
 	/// The maximum amount of time we can charge
@@ -140,7 +143,10 @@
 				return
 		shake_camera(target, 4, 3)
 		shake_camera(source, 2, 3)
-		target.visible_message("<span class='danger'>[source] slams into [target]!</span>", "<span class='userdanger'>[source] tramples you into the ground!</span>")
+		target.visible_message(
+			span_danger("[source] slams into [target]!"),
+			span_userdanger("[source] tramples you into the ground!")
+			)
 		target.Knockdown(6)
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))
@@ -151,3 +157,5 @@
 	SIGNAL_HANDLER
 	if(resting)
 		SSmove_manager.stop_looping(source)
+
+#undef CHARGE_SPEED

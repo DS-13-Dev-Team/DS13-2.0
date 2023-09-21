@@ -2,6 +2,7 @@
 /datum/action/cooldown/necro/regenerate
 	name = "Regenerate"
 	cooldown_time = 0 SECONDS
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_REGENERATE_DOWN
 	var/duration = 5 SECONDS
 
 	var/mob/living/carbon/human/necromorph/target_necro
