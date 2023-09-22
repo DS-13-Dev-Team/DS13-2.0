@@ -25,6 +25,10 @@
 	AddComponent(/datum/component/bloodysoles/feet)
 	AddElement(/datum/element/ridable, /datum/component/riding/creature/human)
 	AddElement(/datum/element/strippable, GLOB.strippable_human_items, TYPE_PROC_REF(/mob/living/carbon/human, should_strip))
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
 	become_area_sensitive()
 	GLOB.human_list += src
 	become_atmos_sensitive()
@@ -52,25 +56,6 @@
 		Knockdown(levels * 40)
 		return
 	return ..()
-
-/mob/living/carbon/human/TakeFallDamage(levels)
-	var/damage = rand(3, 7) * levels
-	apply_damage(damage, BRUTE, BODY_ZONE_HEAD, run_armor_check(BODY_ZONE_HEAD, MELEE, armour_penetration = damage * 0.5))
-
-	damage = rand(3, 7) * levels
-	apply_damage(damage, BRUTE, BODY_ZONE_CHEST, run_armor_check(BODY_ZONE_CHEST, MELEE, armour_penetration = damage * 0.65))
-
-	damage = rand(3, 7) * levels
-	apply_damage(damage, BRUTE, BODY_ZONE_R_ARM, run_armor_check(BODY_ZONE_R_ARM, MELEE, armour_penetration = damage * 0.75))
-
-	damage = rand(3, 7) * levels
-	apply_damage(damage, BRUTE, BODY_ZONE_L_ARM, run_armor_check(BODY_ZONE_L_ARM, MELEE, armour_penetration = damage * 0.75))
-
-	damage = rand(3, 7) * levels
-	apply_damage(damage, BRUTE, BODY_ZONE_L_LEG)
-
-	damage = rand(3, 7) * levels
-	apply_damage(damage, BRUTE, BODY_ZONE_R_LEG)
 
 /mob/living/carbon/human/prepare_data_huds()
 	//Update med hud images...
@@ -121,10 +106,6 @@
 		if(check_obscured_slots(TRUE) & slot)
 			to_chat(usr, span_warning("You can't reach that! Something is covering it."))
 			return
-	if(href_list["open_examine_panel"])
-		var/datum/browser/popup = new(usr, "examine-[REF(src)]", name, 500, 200)
-		popup.set_content(examine_text)
-		popup.open(usr)
 
 ///////HUDs///////
 	if(href_list["hud"])
@@ -381,8 +362,11 @@
 	..() //end of this massive fucking chain. TODO: make the hud chain not spooky. - Yeah, great job doing that.
 
 //called when something steps onto a human
-/mob/living/carbon/human/Crossed(atom/movable/crossed_by, oldloc)
-	spreadFire(crossed_by)
+/mob/living/carbon/human/proc/on_entered(datum/source, atom/movable/AM)
+	SIGNAL_HANDLER
+	if(AM == src)
+		return
+	spreadFire(AM)
 
 /mob/living/carbon/human/proc/canUseHUD()
 	return (mobility_flags & MOBILITY_USE)
@@ -397,9 +381,7 @@
 			. = FALSE
 	else if(HAS_TRAIT(src, TRAIT_PIERCEIMMUNE))
 		. = FALSE
-	var/obj/item/bodypart/the_part = get_bodypart(target_zone)
-	if(!the_part)
-		return FALSE
+	var/obj/item/bodypart/the_part = get_bodypart(target_zone) || get_bodypart(BODY_ZONE_CHEST)
 	// Loop through the clothing covering this bodypart and see if there's any thiccmaterials
 	if(!(injection_flags & INJECT_CHECK_PENETRATE_THICK))
 		for(var/obj/item/clothing/iter_clothing in clothingonpart(the_part))
@@ -411,9 +393,6 @@
 	. = ..()
 	if(!. && (injection_flags & INJECT_TRY_SHOW_ERROR_MESSAGE) && user)
 		var/obj/item/bodypart/the_part = get_bodypart(target_zone || deprecise_zone(user.zone_selected))
-		if(!the_part)
-			to_chat(user, span_alert("There is no bodypart there."))
-			return
 		to_chat(user, span_alert("There is no exposed flesh or thin material on [p_their()] [the_part.name]."))
 
 /mob/living/carbon/human/assess_threat(judgement_criteria, lasercolor = "", datum/callback/weaponcheck=null)
@@ -549,18 +528,6 @@
 			to_chat(target, span_unconscious("You feel a breath of fresh air enter your lungs. It feels good."))
 			target.adjustOxyLoss(-min(target.getOxyLoss(), 8))
 
-		if(target.undergoing_cardiac_arrest())
-			if(prob(10))
-				var/obj/item/bodypart/BP = target.get_bodypart(BODY_ZONE_CHEST)
-				BP.break_bones()
-
-			var/obj/item/organ/heart/heart = target.getorganslot(ORGAN_SLOT_HEART)
-			if(heart)
-				heart.external_pump = list(world.time, 0.7 + rand(-0.1,0.1))
-
-			if(target.stat != DEAD && prob(6))
-				target.resuscitate()
-
 		if (target.health <= target.crit_threshold)
 			if (!panicking)
 				to_chat(src, span_warning("[target] still isn't up! You try harder!"))
@@ -579,8 +546,27 @@
 		if(!silent)
 			to_chat(src, span_warning("[target.name] is dead!"))
 		return FALSE
-	if(!target.undergoing_cardiac_arrest() && !target.getOxyLoss())
+
+	if (is_mouth_covered())
+		if(!silent)
+			to_chat(src, span_warning("Remove your mask first!"))
 		return FALSE
+
+	if (target.is_mouth_covered())
+		if(!silent)
+			to_chat(src, span_warning("Remove [p_their()] mask first!"))
+		return FALSE
+
+	if (!getorganslot(ORGAN_SLOT_LUNGS))
+		if(!silent)
+			to_chat(src, span_warning("You have no lungs to breathe with, so you cannot perform CPR!"))
+		return FALSE
+
+	if (HAS_TRAIT(src, TRAIT_NOBREATH))
+		if(!silent)
+			to_chat(src, span_warning("You do not breathe, so you cannot perform CPR!"))
+		return FALSE
+
 	return TRUE
 
 /mob/living/carbon/human/cuff_resist(obj/item/I)
@@ -790,11 +776,6 @@
 	if(admin_revive)
 		regenerate_limbs()
 		regenerate_organs()
-
-	for(var/obj/item/bodypart/BP as anything in bodyparts)
-		BP.adjustPain(-INFINITY)
-
-	shock_stage = 0
 
 	for(var/obj/item/bodypart/BP as anything in bodyparts)
 		BP.set_sever_artery(FALSE)
@@ -1035,86 +1016,8 @@
 /mob/living/carbon/human/species/android
 	race = /datum/species/android
 
-/mob/living/carbon/human/species/dullahan
-	race = /datum/species/dullahan
-
 /mob/living/carbon/human/species/fly
 	race = /datum/species/fly
-
-/mob/living/carbon/human/species/golem
-	race = /datum/species/golem
-
-/mob/living/carbon/human/species/golem/adamantine
-	race = /datum/species/golem/adamantine
-
-/mob/living/carbon/human/species/golem/plasma
-	race = /datum/species/golem/plasma
-
-/mob/living/carbon/human/species/golem/diamond
-	race = /datum/species/golem/diamond
-
-/mob/living/carbon/human/species/golem/gold
-	race = /datum/species/golem/gold
-
-/mob/living/carbon/human/species/golem/silver
-	race = /datum/species/golem/silver
-
-/mob/living/carbon/human/species/golem/plasteel
-	race = /datum/species/golem/plasteel
-
-/mob/living/carbon/human/species/golem/titanium
-	race = /datum/species/golem/titanium
-
-/mob/living/carbon/human/species/golem/plastitanium
-	race = /datum/species/golem/plastitanium
-
-/mob/living/carbon/human/species/golem/alien_alloy
-	race = /datum/species/golem/alloy
-
-/mob/living/carbon/human/species/golem/wood
-	race = /datum/species/golem/wood
-
-/mob/living/carbon/human/species/golem/uranium
-	race = /datum/species/golem/uranium
-
-/mob/living/carbon/human/species/golem/sand
-	race = /datum/species/golem/sand
-
-/mob/living/carbon/human/species/golem/glass
-	race = /datum/species/golem/glass
-
-/mob/living/carbon/human/species/golem/bluespace
-	race = /datum/species/golem/bluespace
-
-/mob/living/carbon/human/species/golem/bananium
-	race = /datum/species/golem/bananium
-
-/mob/living/carbon/human/species/golem/blood_cult
-	race = /datum/species/golem/runic
-
-/mob/living/carbon/human/species/golem/cloth
-	race = /datum/species/golem/cloth
-
-/mob/living/carbon/human/species/golem/plastic
-	race = /datum/species/golem/plastic
-
-/mob/living/carbon/human/species/golem/bronze
-	race = /datum/species/golem/bronze
-
-/mob/living/carbon/human/species/golem/cardboard
-	race = /datum/species/golem/cardboard
-
-/mob/living/carbon/human/species/golem/leather
-	race = /datum/species/golem/leather
-
-/mob/living/carbon/human/species/golem/bone
-	race = /datum/species/golem/bone
-
-/mob/living/carbon/human/species/golem/durathread
-	race = /datum/species/golem/durathread
-
-/mob/living/carbon/human/species/golem/snow
-	race = /datum/species/golem/snow
 
 /mob/living/carbon/human/species/jelly
 	race = /datum/species/jelly
@@ -1143,9 +1046,6 @@
 /mob/living/carbon/human/species/moth
 	race = /datum/species/moth
 
-/mob/living/carbon/human/species/mush
-	race = /datum/species/mush
-
 /mob/living/carbon/human/species/plasma
 	race = /datum/species/plasmaman
 
@@ -1163,9 +1063,6 @@
 
 /mob/living/carbon/human/species/skeleton
 	race = /datum/species/skeleton
-
-/mob/living/carbon/human/species/snail
-	race = /datum/species/snail
 
 /mob/living/carbon/human/species/vampire
 	race = /datum/species/vampire
@@ -1214,3 +1111,18 @@
 
 	if(do_after(usr, src, 6 SECONDS, DO_PUBLIC))
 		to_chat(usr, span_notice("[self ? "Your" : "[src]'s"] pulse is [src.get_pulse(GETPULSE_HAND)]."))
+
+///Accepts an organ slot, returns whether or not the mob needs one to survive (or just should have one for non-vital organs).
+/mob/living/carbon/human/needs_organ(slot)
+	if(!dna || !dna.species)
+		return FALSE
+
+	switch(slot)
+		if(ORGAN_SLOT_STOMACH)
+			if(HAS_TRAIT(src, TRAIT_NOHUNGER))
+				return FALSE
+		if(ORGAN_SLOT_LUNGS)
+			if(HAS_TRAIT(src, TRAIT_NOBREATH))
+				return FALSE
+
+	return dna.species.organs[slot]
