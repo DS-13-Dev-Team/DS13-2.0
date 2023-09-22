@@ -21,7 +21,6 @@
 	var/armor_block = run_armor_check(zone_attacked, MELEE)
 	apply_damage(dealt_damage, BRUTE, zone_attacked, armor_block)
 	log_combat(user, src, "attacked")
-	updatehealth()
 
 /mob/living/carbon/human/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(check_shields(user, 0, "the [user.name]"))
