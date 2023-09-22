@@ -15,7 +15,8 @@
 		RegisterSignal(granted_to, activate_keybind, TYPE_PROC_REF(/datum/action/cooldown/necro, TriggerOnKeybindSignal))
 
 /datum/action/cooldown/necro/Remove(mob/removed_from)
-	UnregisterSignal(removed_from, activate_keybind)
+	if(!isnull(activate_keybind))
+		UnregisterSignal(removed_from, activate_keybind)
 	return ..()
 
 /datum/action/cooldown/necro/proc/CooldownEnd()

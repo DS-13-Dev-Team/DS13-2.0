@@ -1,5 +1,6 @@
 #define CHARGE_SPEED min((tiles_moved - tiles_before_charge) * speed_per_tile, maximum_speed)
 #define CHARGE_STOP -1
+#define LIVING_CRUSH_DAMAGE 20
 
 /datum/action/cooldown/necro/advanced_charge
 	name = "Toggle Charging"
@@ -61,7 +62,7 @@
 		charge_dir = direction
 	++tiles_moved
 	relalculate_speed()
-	on_move_action()
+	on_moved_action()
 
 /datum/action/cooldown/necro/advanced_charge/proc/on_dir_change(datum/source, old_dir, new_dir)
 	SIGNAL_HANDLER
@@ -72,14 +73,14 @@
 	SIGNAL_HANDLER
 	if(tiles_moved <= tiles_before_charge)
 		return
-	var/crush_result = bumped.crush_act(owner, CHARGE_SPEED)
-	if(!crush_result)
-		return
+	bumped.crush_act(owner, src, CHARGE_SPEED)
+
+/datum/action/cooldown/necro/advanced_charge/proc/slowdown_charge(tiles)
 	//Might need to add some to_chat/visible_message calls below
-	if(crush_result == CHARGE_STOP)
+	if(tiles == CHARGE_STOP)
 		tiles_moved = 0
 	else
-		tiles_moved -= tiles_moved * (100 - crush_result)
+		tiles_moved -= tiles
 	relalculate_speed()
 
 /datum/action/cooldown/necro/advanced_charge/proc/relalculate_speed()
@@ -87,11 +88,31 @@
 		owner.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/necro_charge, TRUE, CHARGE_SPEED)
 
 /// To be overridden by child types
-/datum/action/cooldown/necro/advanced_charge/proc/on_move_action()
+/datum/action/cooldown/necro/advanced_charge/proc/on_moved_action()
 	return
 
-/atom/proc/crush_act(atom/movable/crushing, speed)
+/atom/proc/crush_act(mob/living/crushing, datum/action/cooldown/necro/advanced_charge/action, speed)
 	return CHARGE_STOP
+
+/turf/crush_act(mob/living/crushing, datum/action/cooldown/necro/advanced_charge/action, speed)
+	if(speed >= action.maximum_speed)
+		SSexplosions.medturf += src
+	else
+		SSexplosions.lowturf += src
+
+	if(QDELETED(crushed_turf))
+		crushing.visible_message(
+			span_danger("[charger] plows straight through [preserved_name]!"),
+			span_warning("We plow straight through [preserved_name]!")
+			)
+		return
+
+	charger.visible_message(
+		span_danger("[charger] rams into [crushed_turf] and skids to a halt!"),
+		span_warning("We ram into [crushed_turf] and skid to a halt!")
+		)
+	action.slowdown_charge(CHARGE_STOP)
 
 #undef CHARGE_STOP
 #undef CHARGE_SPEED
+#undef LIVING_CRUSH_DAMAGE
