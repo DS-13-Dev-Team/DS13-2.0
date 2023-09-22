@@ -1,6 +1,0 @@
-author: MisterGrimm
-delete-after: true
-changes:
-  - rscadd: Necromorphs can now be recycled by maws, with a 50% efficiency
-  - balance: Maws cannot eat silicons anymore
-  - bugfix: Maws now give the correct biomass when eating a human

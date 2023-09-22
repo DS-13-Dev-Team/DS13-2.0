@@ -1,8 +1,0 @@
-author: MisterGrimm
-delete-after: true
-changes:
-  - bugfix: Necromorphs on fire now default to the generic fire overlay, rather then
-      the humanoid one.
-  - bugfix: Necromorphs no longer have two sets of peepers to stare at you with.
-  - bugfix: Necromorphs no longer use humanoid damage overlays and humanoid blood
-      covers.
