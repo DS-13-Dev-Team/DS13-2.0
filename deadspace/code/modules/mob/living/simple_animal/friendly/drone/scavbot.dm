@@ -21,6 +21,6 @@
 	"1. You may not harm any being, excluding simple mobs, regardless of intent or circumstance.\n"+\
 	"2. Collect out of the way item and resources.\n"+\
 	"3. Deliver the found items to the appropriate department or personal.\n"+\
-	"4. Do not directly interfer with the round outside your given laws.\n"
+	"4. Do not directly interfere with the round outside your given laws.\n"
 	default_storage = /obj/item/storage/backpack/duffelbag
 	flavortext = "You are a corporate owned scavenger bot, you've been tasked with the scavanging of the station or ship."

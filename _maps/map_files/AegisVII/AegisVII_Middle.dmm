@@ -12563,7 +12563,7 @@
 /area/station/tcommsat/server)
 "fYn" = (
 /obj/machinery/door/airlock/security{
-	dir = 1;
+	dir = 4;
 	name = "Armory";
 	req_access_txt = "3"
 	},
