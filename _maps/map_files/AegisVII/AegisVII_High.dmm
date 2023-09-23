@@ -3175,7 +3175,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/effect/spawner/random/engineering/tool_alien,
+/obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
 "Te" = (

@@ -907,11 +907,6 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/warehouse)
-"gN" = (
-/obj/structure/table/reinforced,
-/obj/effect/spawner/random/engineering/tool_advanced,
-/turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
 "gP" = (
 /obj/machinery/light/small/maintenance/directional/east,
 /obj/structure/table/wood,
@@ -1739,7 +1734,7 @@
 /area/lavaland/surface/outdoors)
 "mV" = (
 /obj/structure/table/reinforced,
-/obj/effect/spawner/random/engineering/tool_advanced,
+/obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/maintenance/port/lesser)
 "mW" = (
@@ -2571,7 +2566,7 @@
 "tD" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/medical/minor_healing,
-/obj/effect/spawner/random/engineering/tool_advanced,
+/obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "tJ" = (
@@ -3295,11 +3290,6 @@
 /obj/machinery/door/poddoor,
 /turf/open/floor/deadspace/grille_spare2,
 /area/lavaland/surface/outdoors)
-"BM" = (
-/obj/structure/rack,
-/obj/effect/spawner/random/engineering/tool_advanced,
-/turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
 "BP" = (
 /obj/effect/spawner/random/maintenance/two,
 /obj/structure/rack,
@@ -4471,11 +4461,6 @@
 "Pa" = (
 /turf/open/floor/deadspace/mono,
 /area/station/medical/exam_room)
-"Pc" = (
-/obj/structure/rack,
-/obj/effect/spawner/random/engineering/tool_alien,
-/turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
 "Pd" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/toolbox/emergency/old/ancientbundle,
@@ -23890,7 +23875,7 @@ hn
 eA
 hn
 hn
-BM
+ig
 bf
 yG
 yG
@@ -28110,7 +28095,7 @@ hn
 hn
 bf
 hn
-gN
+bm
 hn
 bm
 hn
@@ -37613,7 +37598,7 @@ zp
 yA
 zp
 bf
-BM
+ig
 Bh
 hn
 Bh
@@ -37622,7 +37607,7 @@ hn
 Bh
 hn
 Bh
-Pc
+ig
 bf
 zp
 yA

@@ -1030,6 +1030,7 @@
 	dir = 5
 	},
 /obj/machinery/light/small/directional/north,
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
 "apk" = (
@@ -4206,6 +4207,9 @@
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
 "baU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
 "baW" = (
@@ -10243,6 +10247,14 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/science/lab)
+"esB" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/open/floor/deadspace/random/rectangles,
+/area/station/cargo/storage)
 "esQ" = (
 /obj/structure/table/wood/fancy,
 /obj/item/candle/infinite,
@@ -12349,6 +12361,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
 "fQX" = (
@@ -14896,6 +14909,7 @@
 /area/station/engineering/atmos)
 "hIv" = (
 /obj/structure/cable,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "hIA" = (
@@ -23036,9 +23050,7 @@
 /turf/open/floor/deadspace/mono,
 /area/station/service/hydroponics)
 "nVV" = (
-/obj/structure/disposalpipe/segment{
-	dir = 10
-	},
+/obj/structure/disposalpipe/junction,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "nWc" = (
@@ -26062,7 +26074,7 @@
 "qoJ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
-/obj/effect/spawner/random/engineering/tool_advanced,
+/obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/random/slides,
 /area/ruin/powered/bathhouse)
 "qps" = (
@@ -26662,6 +26674,12 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/eva)
+"qKC" = (
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
+/turf/open/floor/deadspace/random/rectangles,
+/area/station/cargo/storage)
 "qKF" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -29870,6 +29888,12 @@
 /obj/item/kirbyplants,
 /turf/open/floor/iron/dark/side,
 /area/station/hallway/primary/central)
+"tsm" = (
+/obj/effect/floor_decal/ds/spline/fancy/wood,
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/carpet/royalblack,
+/area/station/cargo/lobby)
 "tso" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "P-Sec Control";
@@ -30329,6 +30353,9 @@
 "tJO" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 9
 	},
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
@@ -32415,6 +32442,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/theatre)
+"voU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
+/turf/open/floor/carpet/royalblack,
+/area/station/cargo/lobby)
 "vpf" = (
 /obj/effect/turf_decal/box,
 /obj/machinery/deepfryer,
@@ -59660,7 +59693,7 @@ qTO
 fYV
 ajJ
 wOD
-pbO
+qKC
 nVV
 hMU
 hMU
@@ -59858,11 +59891,11 @@ aGN
 iHR
 wyZ
 baR
-baU
-fYV
+voU
+tsm
 fQS
 hIv
-cGQ
+esB
 cGQ
 pSy
 cGQ
