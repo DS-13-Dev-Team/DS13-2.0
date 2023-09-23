@@ -2539,7 +2539,8 @@
 	},
 /area/station/hallway/primary/central/aft)
 "HU" = (
-/obj/structure/chair/stool/directional/north,
+/obj/structure/table/wood/poker,
+/obj/machinery/roulette,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "HW" = (
@@ -2771,6 +2772,7 @@
 "KY" = (
 /obj/machinery/light/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/chair/stool/directional/west,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "Lb" = (
@@ -9135,7 +9137,7 @@ UA
 Nr
 Nr
 dZ
-Dd
+dZ
 DX
 sE
 sE

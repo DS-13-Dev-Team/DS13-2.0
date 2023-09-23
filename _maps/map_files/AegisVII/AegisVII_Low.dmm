@@ -1699,6 +1699,11 @@
 /obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
+"mD" = (
+/obj/structure/table/reinforced,
+/obj/item/plasma_modified,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "mG" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Abandoned Break Room"
@@ -2617,6 +2622,11 @@
 /obj/effect/spawner/random/food_or_drink/refreshing_beverage,
 /obj/effect/spawner/random/food_or_drink/refreshing_beverage,
 /obj/effect/spawner/random/food_or_drink/refreshing_beverage,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
+"um" = (
+/obj/structure/rack,
+/obj/item/plasma_modified,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "un" = (
@@ -8110,7 +8120,7 @@ bf
 LZ
 MR
 hn
-LZ
+um
 bf
 yG
 yG
@@ -28299,7 +28309,7 @@ bf
 hn
 bm
 hn
-bm
+mD
 hn
 bf
 zp
@@ -30711,7 +30721,7 @@ hn
 hy
 Gk
 bf
-ig
+um
 hn
 Bh
 hn
