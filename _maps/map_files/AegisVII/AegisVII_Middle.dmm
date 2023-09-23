@@ -10075,15 +10075,6 @@
 	dir = 8
 	},
 /area/station/security/checkpoint/science)
-"emS" = (
-/obj/effect/turf_decal/loading_area{
-	pixel_y = 10
-	},
-/obj/structure/railing{
-	dir = 6
-	},
-/turf/open/floor/deadspace/grater,
-/area/station/hallway/secondary/exit)
 "ena" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 9
@@ -11717,13 +11708,8 @@
 /turf/open/floor/plating,
 /area/mine/lobby)
 "fuN" = (
-/obj/structure/stairs/north{
-	dir = 8
-	},
-/obj/structure/railing,
-/obj/machinery/camera/directional/north{
-	c_tag = "Bar - Fore"
-	},
+/obj/machinery/atmospherics/pipe/multiz/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/multiz/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "fuR" = (
@@ -16220,6 +16206,10 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/secondary/exit)
+"iKJ" = (
+/obj/structure/chair/stool/directional/west,
+/turf/open/floor/wood,
+/area/station/commons/lounge)
 "iKQ" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
 	dir = 10
@@ -18725,7 +18715,13 @@
 	},
 /area/station/hallway/primary/central)
 "kJE" = (
-/obj/structure/chair/stool/directional/west,
+/obj/structure/stairs/north{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/machinery/camera/directional/north{
+	c_tag = "Bar - Fore"
+	},
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "kJI" = (
@@ -24189,11 +24185,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
-"oRR" = (
-/obj/machinery/power/tracker,
-/obj/structure/cable,
-/turf/open/misc/asteroid,
-/area/station/solars/port/fore)
 "oRU" = (
 /obj/structure/disposalpipe/junction/flip{
 	dir = 8
@@ -28284,6 +28275,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
 /area/station/cargo/qm)
+"seM" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood,
+/area/station/commons/lounge)
 "seN" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/chair/sofa/corp/right{
@@ -28353,11 +28350,10 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos)
 "siR" = (
+/obj/machinery/power/tracker,
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/wood,
-/area/station/commons/lounge)
+/turf/open/misc/asteroid,
+/area/station/solars/port/fore)
 "siW" = (
 /turf/closed/wall/r_wall,
 /area/ruin/powered/bathhouse)
@@ -31921,11 +31917,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
-"uSG" = (
-/obj/machinery/atmospherics/pipe/multiz/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/multiz/scrubbers/hidden/layer2,
-/turf/open/floor/wood,
-/area/station/commons/lounge)
 "uSN" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -42645,7 +42636,7 @@ xfc
 cLp
 jMz
 lwK
-fuN
+kJE
 kQy
 aOM
 mdM
@@ -43050,8 +43041,8 @@ cLp
 jMz
 lwK
 tPT
-uSG
-siR
+fuN
+seM
 vwn
 vwn
 iUH
@@ -43256,7 +43247,7 @@ pXN
 eiA
 aRi
 vwn
-kJE
+iKJ
 wDX
 vwn
 ape
@@ -57156,7 +57147,7 @@ xSy
 pEj
 iOy
 iOy
-emS
+xSy
 pEj
 uTm
 age
@@ -58754,7 +58745,7 @@ oHb
 oHb
 oHb
 nWv
-oRR
+siR
 txn
 aiL
 gUG
