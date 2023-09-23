@@ -42,7 +42,7 @@
 
 	// If damage is above 80%
 	if(part.get_damage() >= (part.max_damage * LIMB_DISMEMBERMENT_PERCENT) - 1)
-		processing_biomass += part.biomass * 0.1
+		processing_biomass += part.biomass * 1.2
 		part.drop_limb(FALSE, TRUE)
 		qdel(part)
 	else
