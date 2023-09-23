@@ -1117,6 +1117,13 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
+"aqC" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/lavaland/surface/outdoors)
 "aqF" = (
 /turf/open/openspace,
 /area/station/medical/medbay/central)
@@ -12961,7 +12968,7 @@
 "gmn" = (
 /obj/machinery/power/smes/magical,
 /obj/structure/cable,
-/turf/open/floor/deadspace/hardwood,
+/turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
 "gmA" = (
 /obj/effect/turf_decal/box,
@@ -36674,7 +36681,7 @@ mlO
 (2,1,1) = {"
 huo
 gmn
-yft
+aqC
 huo
 mlO
 mlO
@@ -37077,8 +37084,8 @@ mlO
 "}
 (4,1,1) = {"
 huo
-huo
-huo
+gmn
+aqC
 huo
 mlO
 mlO
@@ -37278,10 +37285,10 @@ mlO
 mlO
 "}
 (5,1,1) = {"
-mlO
-mlO
-mlO
-mlO
+huo
+huo
+huo
+huo
 mlO
 mlO
 mlO
