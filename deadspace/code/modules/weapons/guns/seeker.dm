@@ -10,12 +10,13 @@ Seeker Rifles
 	base_icon_state = "seeker"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
+	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
+	worn_icon_state = "seeker"
 	inhand_icon_state = null
-	worn_icon_state = null
 	mag_display = FALSE
 	show_bolt_icon = FALSE
 	weapon_weight = WEAPON_HEAVY
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/seeker
 	fire_delay = 12
 	can_suppress = FALSE
@@ -40,6 +41,8 @@ Seeker Rifles
 	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 	AddComponent(/datum/component/scope, range_modifier = 2) //Scope component seems bugged, will need checking on
+
+	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]-wielded")
 
 /obj/item/gun/ballistic/deadspace/twohanded/seeker/egov
 	name = "Earthgov Seeker Rifle"

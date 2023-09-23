@@ -4804,6 +4804,7 @@
 #include "deadspace\code\modules\mob\living\simple_animal\friendly\drone\scavbot.dm"
 #include "deadspace\code\modules\tools\medical.dm"
 #include "deadspace\code\modules\tools\mining.dm"
+#include "deadspace\code\modules\vending\armory.dm"
 #include "deadspace\code\modules\weapons\guns\bullpup.dm"
 #include "deadspace\code\modules\weapons\guns\contactbeam.dm"
 #include "deadspace\code\modules\weapons\guns\deadspace.dm"

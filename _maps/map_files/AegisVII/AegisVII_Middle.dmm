@@ -4783,12 +4783,8 @@
 "bhc" = (
 /obj/effect/turf_decal/box,
 /obj/structure/rack,
-/obj/item/target,
-/obj/item/target,
-/obj/item/target,
-/obj/item/target,
-/obj/item/target,
-/obj/item/target,
+/obj/item/gun/ballistic/shotgun/scl_shotgun/no_mag,
+/obj/item/gun/ballistic/shotgun/scl_shotgun/no_mag,
 /turf/open/floor/deadspace/mono,
 /area/station/security/range)
 "bhg" = (
@@ -9473,6 +9469,10 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/ruin/powered/bathhouse)
+"dUn" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron/showroomfloor,
+/area/station/commons/dorms/cryo)
 "dUt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -9518,11 +9518,11 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage/gas)
 "dVv" = (
-/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/effect/turf_decal/bot,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden{
 	dir = 8
 	},
+/obj/structure/window/reinforced/spawner/north,
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage/gas)
 "dVH" = (
@@ -13958,6 +13958,7 @@
 /area/station/engineering/atmos)
 "gZE" = (
 /obj/machinery/light/small/maintenance/directional/west,
+/obj/structure/training_machine,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "gZO" = (
@@ -16653,6 +16654,10 @@
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/lavaland/surface/outdoors)
+"jaF" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/iron/showroomfloor,
+/area/station/commons/dorms/cryo)
 "jaN" = (
 /obj/structure/barricade/security,
 /turf/open/floor/deadspace/random/slides{
@@ -17546,10 +17551,13 @@
 /turf/open/floor/iron,
 /area/station/service/hydroponics/upper)
 "jJr" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/effect/turf_decal/bot,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden{
 	dir = 8
+	},
+/obj/machinery/door/window/left/directional/north{
+	req_access_txt = "24";
+	name = "Tank Storage"
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage/gas)
@@ -18778,10 +18786,10 @@
 /turf/open/floor/iron/kitchen_coldroom,
 /area/station/medical/coldroom)
 "kKy" = (
-/obj/structure/table,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
+/obj/structure/rack,
 /turf/open/floor/deadspace/mono,
 /area/station/security/range)
 "kKT" = (
@@ -20832,7 +20840,13 @@
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
 "mlB" = (
-/obj/structure/training_machine,
+/obj/effect/turf_decal/box,
+/obj/item/target,
+/obj/item/target,
+/obj/item/target,
+/obj/item/target,
+/obj/item/target,
+/obj/item/target,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "mlK" = (
@@ -21667,11 +21681,14 @@
 /turf/open/floor/iron/norn,
 /area/station/hallway/primary/starboard)
 "mVr" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/turf_decal/bot,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden{
 	dir = 8
+	},
+/obj/machinery/door/window/left/directional/north{
+	req_access_txt = "24";
+	name = "Tank Storage"
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage/gas)
@@ -24953,6 +24970,10 @@
 "pyi" = (
 /turf/open/floor/iron,
 /area/mine/lobby)
+"pyk" = (
+/obj/machinery/vending/armory,
+/turf/open/floor/deadspace/mono,
+/area/station/security/lockers)
 "pyM" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/structure/cable,
@@ -26293,7 +26314,7 @@
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/hallway/primary/central)
+/area/station/security/warden)
 "qAK" = (
 /obj/structure/disposalpipe/junction/flip{
 	dir = 8
@@ -29682,12 +29703,12 @@
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
 "tlE" = (
-/obj/machinery/portable_atmospherics/canister/air,
 /obj/effect/turf_decal/bot,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/bridge_pipe/supply/visible,
+/obj/structure/window/reinforced/spawner/north,
 /turf/open/floor/iron,
 /area/station/engineering/atmos/storage/gas)
 "tlI" = (
@@ -30276,7 +30297,7 @@
 	req_access_txt = "3"
 	},
 /turf/open/floor/carpet/red,
-/area/station/security/brig)
+/area/station/security/warden)
 "tIP" = (
 /obj/machinery/door/airlock/research{
 	name = "Abandoned Robotics Lab";
@@ -31827,14 +31848,8 @@
 /turf/open/floor/iron/white,
 /area/station/science/misc_lab)
 "uNX" = (
-/obj/structure/closet/secure_closet{
-	name = "contraband locker";
-	req_access_txt = "3"
-	},
-/obj/effect/spawner/random/maintenance/three,
-/obj/effect/spawner/random/contraband/armory,
 /obj/machinery/light/directional/north,
-/obj/effect/spawner/random/contraband/armory,
+/obj/machinery/vending/armory,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -35820,7 +35835,7 @@
 /area/station/tcommsat/server)
 "xQQ" = (
 /mob/living/simple_animal/hostile/lizard/space{
-	name = "Francinum"
+	name = "Carla"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
@@ -35872,7 +35887,7 @@
 /obj/item/pen,
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/station/hallway/primary/central)
+/area/station/security/warden)
 "xSV" = (
 /obj/structure/sink{
 	pixel_y = -12;
@@ -39795,7 +39810,7 @@ apG
 apG
 foA
 hUR
-aSj
+dUn
 uFG
 aSj
 vUH
@@ -41411,7 +41426,7 @@ apG
 apG
 foA
 lpm
-aSj
+jaF
 uFG
 aSj
 kSt
@@ -43501,7 +43516,7 @@ aDv
 gkz
 apG
 xjs
-xjs
+pyk
 wMy
 sGJ
 gUq
@@ -43702,7 +43717,7 @@ ttr
 aDh
 gkz
 apG
-apG
+xjs
 xjs
 kkx
 sGJ
@@ -46109,13 +46124,13 @@ tYw
 inL
 umg
 qCQ
-gXS
+qme
 qAD
 xSK
-gXS
-aGn
+qme
+qme
 tIC
-aGn
+qme
 aMd
 wwz
 dWU
@@ -46311,7 +46326,7 @@ sbS
 jkz
 umg
 auY
-gXS
+qme
 cGp
 hZw
 lJm
@@ -46513,7 +46528,7 @@ yfC
 lZS
 vvE
 lDI
-gXS
+qme
 xFk
 ksY
 neI
@@ -46715,7 +46730,7 @@ tRW
 gig
 szO
 umg
-gXS
+qme
 vvi
 wvB
 wvB
@@ -46917,7 +46932,7 @@ fOl
 oES
 hWp
 qhS
-gXS
+qme
 uBZ
 sFB
 fij
@@ -47118,8 +47133,8 @@ hae
 ogl
 ogl
 cHq
-gXS
-gXS
+ogl
+qme
 qme
 qme
 qme
@@ -47320,7 +47335,7 @@ jBe
 ogl
 eFP
 fLJ
-fKw
+ogl
 nMg
 suv
 gZg
@@ -47522,7 +47537,7 @@ rcp
 ogl
 eRP
 fLJ
-fKw
+ogl
 fMW
 suv
 gZg
@@ -47724,7 +47739,7 @@ aDM
 ogl
 vwF
 qOE
-fKw
+ogl
 lEY
 suv
 gZg
@@ -47926,7 +47941,7 @@ vGs
 ogl
 arO
 vzL
-fKw
+ogl
 nmQ
 nTl
 jsO
@@ -48128,7 +48143,7 @@ hae
 ogl
 ogl
 ogl
-fKw
+ogl
 fKw
 fKw
 qBt
