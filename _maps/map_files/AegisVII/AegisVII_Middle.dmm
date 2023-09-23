@@ -2151,7 +2151,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/storage_shared)
 "aDS" = (
-/obj/structure/table/wood/fancy,
+/obj/structure/table/wood/fancy/red,
 /obj/item/candle/infinite,
 /obj/effect/floor_decal/ds/spline/fancy/wood/cee,
 /obj/machinery/camera/directional/east{
@@ -4469,7 +4469,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "bdy" = (
-/obj/structure/table/wood/fancy,
+/obj/structure/table/wood/fancy/red,
 /obj/item/candle/infinite,
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 4
@@ -6047,6 +6047,12 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
+"btb" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/plating,
+/area/station/science/robotics/lab)
 "btg" = (
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/commons/dorms/barracks)
@@ -10255,7 +10261,7 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "esQ" = (
-/obj/structure/table/wood/fancy,
+/obj/structure/table/wood/fancy/red,
 /obj/item/candle/infinite,
 /obj/effect/floor_decal/ds/spline/fancy/wood/cee{
 	dir = 1
@@ -19434,7 +19440,7 @@
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/warehouse/upper)
 "lhE" = (
-/obj/structure/table/wood/fancy,
+/obj/structure/table/wood/fancy/red,
 /obj/item/candle/infinite,
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 8
@@ -28812,7 +28818,7 @@
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "sAL" = (
-/obj/structure/table/wood/fancy,
+/obj/structure/table/wood/fancy/red,
 /obj/effect/floor_decal/ds/spline/fancy/wood/cee,
 /turf/open/floor/carpet/red,
 /area/station/service/chapel)
@@ -29358,7 +29364,7 @@
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
 "sVv" = (
-/obj/structure/table/wood/fancy,
+/obj/structure/table/wood/fancy/red,
 /obj/item/candle/infinite,
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 4
@@ -31230,7 +31236,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "urL" = (
-/obj/structure/table/wood/fancy,
+/obj/structure/table/wood/fancy/red,
 /obj/item/candle/infinite,
 /obj/effect/floor_decal/ds/spline/fancy/wood/cee,
 /turf/open/floor/carpet/red,
@@ -31548,12 +31554,6 @@
 	dir = 4
 	},
 /area/station/science/lab)
-"uDn" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/plating,
-/area/station/science/robotics/lab)
 "uDV" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
@@ -34863,7 +34863,7 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
 "wZv" = (
-/obj/structure/table/wood/fancy,
+/obj/structure/table/wood/fancy/red,
 /obj/effect/floor_decal/ds/spline/fancy/wood/cee,
 /turf/open/floor/carpet/red,
 /area/station/service/chapel/office)
@@ -54241,7 +54241,7 @@ ehX
 qpP
 poZ
 dUP
-uDn
+btb
 jcI
 vBh
 tIP
