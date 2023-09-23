@@ -6574,7 +6574,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/station/maintenance/department/engine)
 "bKa" = (
 /obj/machinery/light/small/directional/west,
@@ -8748,6 +8748,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "doA" = (
@@ -11724,10 +11725,6 @@
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
 /area/mine/lobby)
-"fuN" = (
-/obj/structure/cable,
-/turf/open/floor/deadspace/random/rectangles,
-/area/station/cargo/miningoffice)
 "fuR" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/spawner/random/maintenance,
@@ -15641,7 +15638,7 @@
 "inh" = (
 /obj/machinery/door/airlock/medical{
 	name = "Pharmacy";
-	req_access_txt = "69";
+	req_access_txt = "69;5";
 	stripe_paint = "#ff9900"
 	},
 /obj/structure/cable,
@@ -18734,13 +18731,6 @@
 	dir = 8
 	},
 /area/station/hallway/primary/central)
-"kJE" = (
-/obj/structure/cable,
-/obj/machinery/power/solar{
-	id = "colonypower"
-	},
-/turf/open/misc/asteroid,
-/area/station/solars/port/fore)
 "kJI" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/office)
@@ -27892,7 +27882,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/station/maintenance/department/engine)
 "rQv" = (
 /obj/structure/cable,
@@ -28374,6 +28364,7 @@
 /area/station/engineering/atmos)
 "siR" = (
 /obj/machinery/power/tracker,
+/obj/structure/cable,
 /turf/open/misc/asteroid,
 /area/station/solars/port/fore)
 "siW" = (
@@ -32417,6 +32408,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/miningoffice)
 "vqg" = (
@@ -55742,8 +55734,8 @@ beg
 aZO
 nWv
 nWv
-nWv
-siR
+oHb
+oHb
 oHb
 sdt
 sdt
@@ -56347,7 +56339,7 @@ oHb
 oHb
 oHb
 oHb
-nWv
+oHb
 oHb
 oHb
 oHb
@@ -56544,12 +56536,12 @@ rXv
 bfE
 iFO
 wqU
-aTG
-aTG
-aTG
-aTG
-kJE
-nWv
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
 oHb
 oHb
 oHb
@@ -56746,18 +56738,18 @@ azp
 bfE
 iFO
 wqU
-oHb
-oHb
-nWv
-oHb
-oHb
-nWv
-oHb
 aTG
+aTG
+oHb
 aTG
 aTG
 oHb
 oHb
+aTG
+aTG
+oHb
+aTG
+aTG
 sdt
 apG
 apG
@@ -56950,16 +56942,16 @@ iFO
 wqU
 aTG
 aTG
-aTG
-aTG
-aTG
-nWv
-nWv
-aTG
+oHb
 aTG
 aTG
 oHb
 oHb
+aTG
+aTG
+oHb
+aTG
+aTG
 sdt
 sdt
 sdt
@@ -57150,18 +57142,18 @@ azp
 bfE
 gVn
 lmJ
-aTG
-aTG
-aTG
-aTG
-aTG
-oHb
-oHb
-oHb
-oHb
 nWv
-oHb
-oHb
+nWv
+nWv
+nWv
+nWv
+afH
+afH
+afH
+afH
+nWv
+afH
+afH
 txn
 aiL
 iOy
@@ -57352,16 +57344,16 @@ azp
 gSr
 iFO
 wqU
+aTG
+aTG
 oHb
-oHb
-nWv
-oHb
-oHb
+aTG
+aTG
 oHb
 oHb
 aTG
 aTG
-aTG
+oHb
 aTG
 aTG
 txn
@@ -57556,14 +57548,14 @@ iFO
 wqU
 aTG
 aTG
-aTG
+oHb
 aTG
 aTG
 oHb
 oHb
 aTG
 aTG
-aTG
+oHb
 aTG
 aTG
 txn
@@ -57756,16 +57748,16 @@ azp
 xao
 iFO
 wqU
-aTG
-aTG
-aTG
-aTG
-aTG
 oHb
 oHb
 oHb
 oHb
-nWv
+oHb
+oHb
+oHb
+oHb
+oHb
+oHb
 oHb
 oHb
 txn
@@ -57965,11 +57957,11 @@ oHb
 oHb
 oHb
 oHb
-aTG
-aTG
-aTG
-aTG
-aTG
+oHb
+oHb
+oHb
+oHb
+oHb
 txn
 aiL
 gUG
@@ -58167,11 +58159,11 @@ wqU
 lmJ
 uwT
 oHb
-aTG
-aTG
-aTG
-aTG
-aTG
+oHb
+oHb
+oHb
+oHb
+oHb
 txn
 tfH
 gUG
@@ -58371,7 +58363,7 @@ oHb
 oHb
 oHb
 oHb
-nWv
+oHb
 oHb
 oHb
 txn
@@ -58571,11 +58563,11 @@ ufV
 aKw
 oHb
 oHb
-aTG
-aTG
-aTG
-aTG
-aTG
+oHb
+oHb
+oHb
+oHb
+oHb
 txn
 aiL
 gUG
@@ -58773,11 +58765,11 @@ kPy
 lmJ
 oHb
 oHb
-aTG
-aTG
-aTG
-aTG
-aTG
+oHb
+oHb
+oHb
+nWv
+siR
 txn
 aiL
 gUG
@@ -58977,7 +58969,7 @@ oHb
 oHb
 oHb
 oHb
-nWv
+oHb
 oHb
 oHb
 txn
@@ -59177,11 +59169,11 @@ lwF
 wqU
 oHb
 oHb
-aTG
-aTG
-aTG
-aTG
-aTG
+oHb
+oHb
+oHb
+oHb
+oHb
 txn
 aiL
 gUG
@@ -59379,11 +59371,11 @@ lmJ
 lmJ
 uwT
 oHb
-aTG
-aTG
-aTG
-aTG
-aTG
+oHb
+oHb
+oHb
+oHb
+oHb
 txn
 aiL
 gUG
@@ -59583,7 +59575,7 @@ oHb
 oHb
 oHb
 oHb
-nWv
+oHb
 oHb
 oHb
 txn
@@ -59778,14 +59770,14 @@ oHb
 ahZ
 aTG
 aTG
-aTG
+oHb
 aTG
 aTG
 oHb
 oHb
 aTG
 aTG
-aTG
+oHb
 aTG
 aTG
 txn
@@ -59980,14 +59972,14 @@ oHb
 ahZ
 aTG
 aTG
+oHb
 aTG
 aTG
-aTG
-nWv
-nWv
-aTG
+oHb
+oHb
 aTG
 aTG
+oHb
 aTG
 aTG
 txn
@@ -60180,18 +60172,18 @@ oHb
 oHb
 oHb
 ahZ
-oHb
-oHb
 nWv
-oHb
-oHb
-oHb
-oHb
-oHb
-oHb
 nWv
-oHb
-oHb
+nWv
+nWv
+nWv
+nWv
+nWv
+nWv
+nWv
+nWv
+nWv
+nWv
 txn
 aiL
 beX
@@ -60384,14 +60376,14 @@ oHb
 ahZ
 aTG
 aTG
-aTG
+oHb
 aTG
 aTG
 oHb
 oHb
 aTG
 aTG
-aTG
+oHb
 aTG
 aTG
 txn
@@ -60586,14 +60578,14 @@ oHb
 ahZ
 aTG
 aTG
-aTG
+oHb
 aTG
 aTG
 oHb
 oHb
 aTG
 aTG
-aTG
+oHb
 aTG
 aTG
 txn
@@ -62465,7 +62457,7 @@ qsp
 qdO
 iUR
 aha
-fuN
+sUx
 cZM
 isK
 wNK
