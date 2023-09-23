@@ -143,6 +143,48 @@
       objective randomly.
   - balance: Increased fall damage by alot, damage now varies by bodypart, accounting
       for all armor values.
+2023-09-16:
+  Cenrus:
+  - bugfix: Fixed fancy tables having no sprites.
+  Kapu1178:
+  - qol: You can no longer attack mobs without being in Combat Mode.
+  - code_imp: Added a high pass filter to bloom to cull useless overlays, should help
+      performance alot.
+  - refactor: Improved code around species organs to make way for IPCs
+  - rscdel: Golems, Adamantine, and related goodies.
+  - code_imp: Fixed some harddels
+  bluezorua:
+  - rscdel: a floating air alarm in security shooting gallery
+  francinum:
+  - bugfix: Classic input should be a little more functional
+  - rscadd: Some books will now open codex entries.
+  - bugfix: The r4407 changelog link works again.
+2023-09-17:
+  Kapu1178:
+  - bugfix: Having non-living mobs (such as the AI camera) will no longer break the
+      EOR credits roll.
+  MrMelbert:
+  - qol: Haunted 8-ball no longer requires the ghost orbit the petitioner to submit
+      votes
+  - qol: Haunted 8-ball ghosts can now change their vote after submitting it
+  - bugfix: Haunted 8-ball no longer always reports "yes"
+  - bugfix: Haunted 8-ball no longer always reports default "yes", "no", or "maybe"
+      and now gives a proper eight ball response
+  - bugfix: Haunted 8-ball can be picked up via the stat panel
+  francinum:
+  - rscadd: Data Terminals are buildable, you can get them from the Engineering Fabricator.
+  - bugfix: phone connection feedback messages no longer error on trying to connect
+      to a terminal it's already connected to.
+  - bugfix: Saline Drip icon now works again.
+  - bugfix: Security Helmets can now ACTUALLY have flashlights attached again.
+  - bugfix: diphenhydramine, antihol, lipolicide, and anacea are craftable again.
+  - bugfix: Antihol shows up in the codex.
+2023-09-18:
+  Kapu1178:
+  - balance: Non-advanced health analyzers get chem scan mode back
+  - balance: Health analyzers now output blood oxygenation, and heartrate.
+  - balance: Husking is no longer caused by burn damage.
+  - bugfix: Unstable Mutagen has a recipe
 2023-09-20:
   DTraitor:
   - bugfix: Necrovision doesn't break randomly anymore
@@ -156,3 +198,25 @@
   blackwolf602:
   - rscadd: new computer icons
   - rscadd: captain hat
+2023-09-22:
+  MisterGrimm:
+  - soundadd: Added sound effect for airlocks being forced open by necros
+  - rscadd: Necromorphs can now be recycled by maws, with a 50% efficiency
+  - balance: Maws cannot eat silicons anymore
+  - bugfix: Maws now give the correct biomass when eating a human
+  - bugfix: Necromorphs on fire now default to the generic fire overlay, rather then
+      the humanoid one.
+  - bugfix: Necromorphs no longer have two sets of peepers to stare at you with.
+  - bugfix: Necromorphs no longer use humanoid damage overlays and humanoid blood
+      covers.
+  - rscadd: Combat Mode readded for necromorphs
+  - qol: Necro ability hotkeys overhauled so each ability is either put in a general
+      hotkey, or it's own unique hotkey. Unbound by default
+  - qol: Necro hotkeys have been given their own category
+  - bugfix: Necros can now attack welded/stuck airlocks while on combat mode
+  - code_imp: isnecromorph define moved to default ishelpers due to compile issues
+  Polyzonial:
+  - rscadd: Damage and noise on brute spec_unarmedattack
+  - bugfix: brute's charge (I hope)
+  bestmudad:
+  - bugfix: 'Added : Slashers, Pukers, Spitters and E-Slashers to the nest spawn option'

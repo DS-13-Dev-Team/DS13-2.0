@@ -9,7 +9,7 @@
 
 /datum/necro_class/lurker
 	display_name = "Lurker"
-	desc = "An elite soldier displaced in time, blinks around randomly and is difficult to hit. Charges extremely quickly"
+	desc = "Long range fire-support. The lurker is tough and hard to hit as long as its retractible armor is closed. When open it is slow and vulnerable, but fires sharp spines in waves of three."
 	ui_icon = 'deadspace/icons/necromorphs/lurker/lurker.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/lurker
 	melee_damage_lower = 10

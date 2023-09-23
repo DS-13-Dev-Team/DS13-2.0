@@ -147,7 +147,3 @@
 	update_stamina_hud()
 	med_hud_set_status()
 
-//Controversial, might bring back combat modes later
-//Change ability keybinds if ever planned to bring back combat modes
-/mob/living/carbon/human/necromorph/set_combat_mode(new_mode, silent)
-	return

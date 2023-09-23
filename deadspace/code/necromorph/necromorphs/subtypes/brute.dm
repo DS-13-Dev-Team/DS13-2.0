@@ -21,19 +21,21 @@
 
 /mob/living/carbon/human/necromorph/brute/proc/spec_unarmedattack(datum/source, atom/target, proximity, modifiers)
 	if(world.time >= next_attack_delay)
+		play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, 1, 3)
 		if (istype(target, /mob/living/carbon/human))
 			var/mob/living/carbon/human/mob_target = target
 			var/fling_dir = pick((dir & (NORTH|SOUTH)) ? list(WEST, EAST, dir|WEST, dir|EAST) : list(NORTH, SOUTH, dir|NORTH, dir|SOUTH)) //Fling them somewhere not behind nor ahead of the charger.
 			var/fling_dist = rand(2,5)
 			var/turf/destination = mob_target.loc
 			var/turf/temp
-
+		
 			for(var/i in 1 to fling_dist)
 				temp = get_step(destination, fling_dir)
 				if(!temp)
 					break
 				destination = temp
 			if(destination != mob_target.loc)
+				mob_target.apply_damage(24, BRUTE)
 				mob_target.throw_at(destination, fling_dist, 1, src, TRUE)
 			next_attack_delay = spec_attack_delay + world.time
 			return COMPONENT_CANCEL_ATTACK_CHAIN
@@ -55,10 +57,10 @@
 	max_health = 510
 	necro_armor = list(ARMOR_FRONT = 30, ARMOR_FLANK = 20, ARMOR_BACK = 10, CURL_ARMOR_MULT = 1.5, ARMOR_PROTECTION = 300)
 	actions = list(
-		/datum/action/cooldown/necro/slam = COMSIG_KB_NECROMORPH_ABILITY_ONE_DOWN,
-		/datum/action/cooldown/necro/long_charge = COMSIG_KB_NECROMORPH_ABILITY_TWO_DOWN,
-		/datum/action/cooldown/necro/shoot/brute = COMSIG_KB_NECROMORPH_ABILITY_THREE_DOWN,
-		/datum/action/cooldown/necro/curl = COMSIG_KB_NECROMORPH_ABILITY_FOUR_DOWN,
+		/datum/action/cooldown/necro/slam = COMSIG_KB_NECROMORPH_ABILITY_SLAM_DOWN,
+		/datum/action/cooldown/necro/long_charge = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN,
+		/datum/action/cooldown/necro/shoot/brute = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN,
+		/datum/action/cooldown/necro/curl = COMSIG_KB_NECROMORPH_ABILITY_CURL_DOWN,
 	)
 	minimap_icon = "brute"
 	implemented = TRUE

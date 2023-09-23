@@ -7,6 +7,7 @@
 	px_x = 0
 	px_y = 0
 	wound_resistance = 10
+	biomass = 81
 
 /obj/item/bodypart/head/necromorph/brute
 	name = BODY_ZONE_HEAD
@@ -17,6 +18,7 @@
 	px_x = 0
 	px_y = -8
 	wound_resistance = 5
+	biomass = 15 //pea brain, not much biomass
 
 /obj/item/bodypart/arm/left/necromorph/brute
 	name = "left arm"
@@ -29,6 +31,7 @@
 	px_x = -6
 	px_y = 0
 	wound_resistance = 0
+	biomass = 21
 
 /obj/item/bodypart/arm/right/necromorph/brute
 	name = "right arm"
@@ -41,6 +44,7 @@
 	px_x = 6
 	px_y = 0
 	wound_resistance = 0
+	biomass = 21
 
 /obj/item/bodypart/leg/left/necromorph/brute
 	name = "left leg"
@@ -53,6 +57,7 @@
 	px_x = -2
 	px_y = 12
 	wound_resistance = 0
+	biomass = 21
 
 /obj/item/bodypart/leg/right/necromorph/brute
 	name = "right leg"
@@ -65,3 +70,4 @@
 	px_x = 2
 	px_y = 12
 	wound_resistance = 0
+	biomass = 21
