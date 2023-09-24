@@ -18,7 +18,7 @@
 		/obj/item/ammo_box/magazine/seeker = 12,
 	)
 	premium = list(
-		/obj/item/gun/ballistic/deadspace/twohanded/seeker = 2,
+		/obj/item/gun/ballistic/deadspace/twohanded/seeker = 1,
 		)
 	contraband = list(
 		/obj/item/clothing/under/misc/patriotsuit = 3,
@@ -26,6 +26,6 @@
 		/obj/item/food/burger/superbite = 3
 	) //U S A
 	default_price = PAYCHECK_HARD * 2
-	extra_price = PAYCHECK_COMMAND * 2.5
+	extra_price = PAYCHECK_COMMAND * 3
 	payment_department = ACCOUNT_SEC
 	light_mask = "liberation-light-mask"

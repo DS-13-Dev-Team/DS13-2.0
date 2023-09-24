@@ -18,7 +18,7 @@ Seeker Rifles
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/seeker
-	fire_delay = 12
+	fire_delay = 3 SECONDS
 	can_suppress = FALSE
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	one_handed_penalty = 50

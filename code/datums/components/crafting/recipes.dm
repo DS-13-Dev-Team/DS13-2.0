@@ -692,21 +692,21 @@
 	category = CAT_MISC
 
 
-/*/datum/crafting_recipe/skateboard
+/datum/crafting_recipe/skateboard
 	name = "Skateboard"
 	result = /obj/vehicle/ridden/scooter/skateboard/improvised
 	time = 60
 	reqs = list(/obj/item/stack/sheet/iron = 5,
 				/obj/item/stack/rods = 10)
-	category = CAT_MISC */
+	category = CAT_MISC
 
-/datum/crafting_recipe/scooter
+/*/datum/crafting_recipe/scooter
 	name = "Scooter"
 	result = /obj/vehicle/ridden/scooter
 	time = 65
 	reqs = list(/obj/item/stack/sheet/iron = 5,
 				/obj/item/stack/rods = 12)
-	category = CAT_MISC
+	category = CAT_MISC */
 
 /datum/crafting_recipe/wheelchair
 	name = "Wheelchair"
