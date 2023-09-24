@@ -783,10 +783,10 @@
 "amO" = (
 /obj/machinery/light/directional/north,
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/seeker/egov,
-/obj/item/ammo_box/magazine/seeker/egov,
-/obj/item/ammo_box/magazine/seeker/egov,
-/obj/item/ammo_box/magazine/seeker/egov,
+/obj/item/ammo_box/magazine/seeker,
+/obj/item/ammo_box/magazine/seeker,
+/obj/item/ammo_box/magazine/seeker,
+/obj/item/ammo_box/magazine/seeker,
 /obj/item/gun/ballistic/deadspace/twohanded/seeker,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
