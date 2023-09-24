@@ -2,7 +2,7 @@
 /datum/action/cooldown/necro/dodge
 	name = "Dodge"
 	desc = "Allows you to dodge bullets."
-	cooldown_time = 10 SECONDS
+	cooldown_time = 20 SECONDS
 	click_to_activate = TRUE
 
 /datum/action/cooldown/necro/dodge/Activate(atom/target)
