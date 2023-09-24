@@ -1461,6 +1461,7 @@
 "aub" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "aup" = (
@@ -1527,7 +1528,7 @@
 /area/station/cargo/warehouse/upper)
 "avs" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/recharger,
+/obj/machinery/cell_charger,
 /obj/structure/table,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
@@ -3352,6 +3353,7 @@
 /obj/item/bot_assembly/janibot,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "aQh" = (
@@ -4619,14 +4621,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
-"bfl" = (
-/obj/structure/rack,
-/obj/effect/turf_decal/box,
-/obj/item/stock_parts/cell/plasmacutter,
-/obj/item/stock_parts/cell/plasmacutter,
-/obj/item/stock_parts/cell/plasmacutter,
-/turf/open/floor/deadspace/random/maint_center,
-/area/mine/storage)
 "bfn" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -5225,7 +5219,6 @@
 /turf/open/floor/iron/white,
 /area/station/service/kitchen)
 "blK" = (
-/obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
@@ -5878,7 +5871,7 @@
 /turf/open/floor/stone,
 /area/lavaland/surface/outdoors)
 "bqH" = (
-/obj/machinery/recharger,
+/obj/machinery/cell_charger,
 /obj/structure/table,
 /obj/machinery/light/directional/north,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -8762,7 +8755,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/holopad,
 /obj/effect/turf_decal/box/white,
-/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/science/robotics/lab)
 "dnQ" = (
@@ -11700,6 +11692,7 @@
 /obj/machinery/light_switch/directional/north{
 	pixel_x = 9
 	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "fsj" = (
@@ -14410,7 +14403,7 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/service/chapel/funeral)
 "hqA" = (
-/obj/machinery/recharger,
+/obj/machinery/cell_charger,
 /obj/structure/table,
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/deadspace/random/slides{
@@ -17981,7 +17974,7 @@
 /obj/item/stock_parts/cell/plasmacutter,
 /obj/item/stock_parts/cell/plasmacutter,
 /obj/item/stock_parts/cell/plasmacutter,
-/obj/machinery/camera/autoname/directional/north,
+/obj/item/stock_parts/cell/plasmacutter,
 /turf/open/floor/deadspace/random/maint_center,
 /area/mine/storage)
 "kcz" = (
@@ -20750,7 +20743,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/structure/cable,
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/station/science/robotics/lab)
@@ -22062,7 +22054,6 @@
 /area/station/cargo/warehouse/upper)
 "ngQ" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "nhf" = (
@@ -28035,7 +28026,7 @@
 /area/lavaland/surface/outdoors)
 "rTe" = (
 /obj/structure/table,
-/obj/machinery/recharger,
+/obj/machinery/cell_charger,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -64131,7 +64122,7 @@ mlO
 mlO
 mlO
 pfR
-bfl
+kck
 epk
 vUc
 jlz

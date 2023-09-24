@@ -86,7 +86,7 @@
 	name = "Stray Syndicate Cargo Pod"
 	typepath = /datum/round_event/stray_cargo/syndicate
 	weight = 6
-	max_occurrences = 1
+	max_occurrences = 0
 	earliest_start = 30 MINUTES
 
 /datum/round_event/stray_cargo/syndicate
