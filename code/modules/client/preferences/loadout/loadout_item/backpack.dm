@@ -16,10 +16,10 @@
 	path = /obj/item/ttsdevice
 	cost = 5
 
-/datum/loadout_item/backpack/paicard
+/*/datum/loadout_item/backpack/paicard
 	description = "A device, that let you browse and download various AIs."
 	path = /obj/item/paicard
-	cost = 2
+	cost = 2 */
 
 /datum/loadout_item/backpack/cigar
 	path = /obj/item/clothing/mask/cigarette/cigar

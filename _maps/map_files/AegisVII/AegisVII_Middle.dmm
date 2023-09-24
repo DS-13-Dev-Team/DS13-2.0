@@ -23787,7 +23787,6 @@
 	dir = 1
 	},
 /obj/item/aicard,
-/obj/item/paicard,
 /obj/item/circuitboard/aicore,
 /obj/machinery/keycard_auth/directional/north{
 	pixel_x = -5

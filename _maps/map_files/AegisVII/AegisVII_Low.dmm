@@ -1536,7 +1536,6 @@
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
 "lx" = (
-/obj/item/paicard,
 /obj/structure/rack,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/warehouse)
