@@ -109,8 +109,8 @@ Projectiles for the casings
 /obj/projectile/bullet/seeker
 	name ="seeker shell"
 	speed = 0.4
-	damage = 50
-	paralyze = 100
+	damage = 100
+	paralyze = 10
 	dismemberment = 30
 	armour_penetration = 50
 	embedding = list(embed_chance=50, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=7, rip_time=8)

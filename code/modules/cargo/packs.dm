@@ -308,7 +308,7 @@
 					/obj/item/clothing/suit/armor/vest)
 	crate_name = "armor crate"
 
-/datum/supply_pack/security/disabler
+/*/datum/supply_pack/security/disabler
 	name = "Disabler Crate"
 	desc = "Three stamina-draining disabler weapons. Requires Security access to open."
 	cost = CARGO_CRATE_VALUE * 3
@@ -316,7 +316,7 @@
 	contains = list(/obj/item/gun/energy/disabler,
 					/obj/item/gun/energy/disabler,
 					/obj/item/gun/energy/disabler)
-	crate_name = "disabler crate"
+	crate_name = "disabler crate" */
 
 /datum/supply_pack/security/forensics
 	name = "Forensics Crate"
@@ -340,7 +340,7 @@
 					/obj/item/clothing/head/helmet/sec)
 	crate_name = "helmet crate"
 
-/datum/supply_pack/security/laser
+/*/datum/supply_pack/security/laser
 	name = "Lasers Crate"
 	desc = "Contains three lethal, high-energy laser guns. Requires Security access to open."
 	cost = CARGO_CRATE_VALUE * 4
@@ -348,7 +348,7 @@
 	contains = list(/obj/item/gun/energy/laser,
 					/obj/item/gun/energy/laser,
 					/obj/item/gun/energy/laser)
-	crate_name = "laser crate"
+	crate_name = "laser crate" */
 
 /datum/supply_pack/security/securitybarriers
 	name = "Security Barrier Grenades"
@@ -495,7 +495,7 @@
 	contains = list(/obj/item/storage/box/chemimp)
 	crate_name = "chemical implant crate"
 
-/datum/supply_pack/security/armory/ballistic
+/*/datum/supply_pack/security/armory/ballistic
 	name = "Combat Shotguns Crate"
 	desc = "For when the enemy absolutely needs to be replaced with lead. Contains three Aussec-designed Combat Shotguns, and three Shotgun Bandoliers. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 17.5
@@ -505,25 +505,25 @@
 					/obj/item/storage/belt/bandolier,
 					/obj/item/storage/belt/bandolier,
 					/obj/item/storage/belt/bandolier)
-	crate_name = "combat shotguns crate"
+	crate_name = "combat shotguns crate" */
 
-/datum/supply_pack/security/armory/dragnet
+/*/datum/supply_pack/security/armory/dragnet
 	name = "DRAGnet Crate"
 	desc = "Contains three \"Dynamic Rapid-Apprehension of the Guilty\" netting devices, a recent breakthrough in law enforcement prisoner management technology. Requires armory access to open."
 	cost = CARGO_CRATE_VALUE * 5
 	contains = list(/obj/item/gun/energy/e_gun/dragnet,
 					/obj/item/gun/energy/e_gun/dragnet,
 					/obj/item/gun/energy/e_gun/dragnet)
-	crate_name = "\improper DRAGnet crate"
+	crate_name = "\improper DRAGnet crate" */
 
-/datum/supply_pack/security/armory/energy
+/*/datum/supply_pack/security/armory/energy
 	name = "Energy Guns Crate"
 	desc = "Contains two Energy Guns, capable of firing both nonlethal and lethal blasts of light. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 18
 	contains = list(/obj/item/gun/energy/e_gun,
 					/obj/item/gun/energy/e_gun)
 	crate_name = "energy gun crate"
-	crate_type = /obj/structure/closet/crate/secure/plasma
+	crate_type = /obj/structure/closet/crate/secure/plasma */
 
 /datum/supply_pack/security/armory/exileimp
 	name = "Exile Implants Crate"
@@ -532,7 +532,7 @@
 	contains = list(/obj/item/storage/box/exileimp)
 	crate_name = "exile implant crate"
 
-/datum/supply_pack/security/armory/fire
+/*/datum/supply_pack/security/armory/fire
 	name = "Incendiary Weapons Crate"
 	desc = "Burn, baby burn. Contains three incendiary grenades, three plasma canisters, and a flamethrower. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 7
@@ -546,14 +546,14 @@
 					/obj/item/grenade/chem_grenade/incendiary)
 	crate_name = "incendiary weapons crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
-	dangerous = TRUE
+	dangerous = TRUE */
 
-/datum/supply_pack/security/armory/ion_carbine
+/*/datum/supply_pack/security/armory/ion_carbine
 	name = "Ion Carbine Parts Kit"
 	desc = "A suitcase containing the necessary gun parts to transform a standard laser gun into a ion carbine. Perfect against lockers you don't have access to."
 	cost = CARGO_CRATE_VALUE * 9
 	contains = list(/obj/item/weaponcrafting/gunkit/ion)
-	crate_name = "gun parts crate"
+	crate_name = "gun parts crate" */
 
 /datum/supply_pack/security/armory/mindshield
 	name = "Mindshield Implants Crate"
@@ -651,13 +651,13 @@
 					/obj/item/clothing/gloves/tackler/combat)
 	crate_name = "swat crate"
 
-/datum/supply_pack/security/armory/thermal
+/*/datum/supply_pack/security/armory/thermal
 	name = "Thermal Pistol Crate"
 	desc = "Contains a pair of holsters each with two experimental thermal pistols, using nanites as the basis for their ammo. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 7
 	contains = list(/obj/item/storage/belt/holster/thermal,
 					/obj/item/storage/belt/holster/thermal)
-	crate_name = "thermal pistol crate"
+	crate_name = "thermal pistol crate" */
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Engineering /////////////////////////////////////
