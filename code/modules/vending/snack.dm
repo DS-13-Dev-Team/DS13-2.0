@@ -40,6 +40,7 @@
 	extra_price = PAYCHECK_EASY
 	payment_department = ACCOUNT_STATION_MASTER
 	input_display_header = "Chef's Food Selection"
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 /obj/item/vending_refill/snack
 	machine_name = "Getmore Chocolate Corp"
