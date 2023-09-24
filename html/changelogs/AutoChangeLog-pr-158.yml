@@ -1,0 +1,5 @@
+author: chesse20
+delete-after: true
+changes:
+  - balance: increased points obtained by depositing ores
+  - balance: decreased rig cost, especially the standard rig
