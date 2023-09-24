@@ -316,9 +316,10 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/service/chapel/storage)
 "cV" = (
-/obj/machinery/telecomms/relay/preset/station,
-/turf/open/floor/deadspace/hardwood,
-/area/lavaland/surface/outdoors)
+/obj/machinery/power/smes/magical,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/ruin/powered/snow_biodome)
 "cX" = (
 /obj/effect/decal/cleanable/blood,
 /obj/item/shield/riot/buckler,
@@ -1864,6 +1865,9 @@
 	},
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
+"nX" = (
+/turf/closed/wall/r_wall,
+/area/ruin/powered/snow_biodome)
 "nY" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating,
@@ -3818,6 +3822,10 @@
 "HI" = (
 /turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
+"HO" = (
+/obj/machinery/telecomms/relay/preset/station,
+/turf/open/floor/deadspace/hardwood,
+/area/ruin/powered/snow_biodome)
 "HQ" = (
 /obj/structure/chair/sofa/left{
 	dir = 8
@@ -4136,7 +4144,7 @@
 /area/station/maintenance/port/lesser)
 "Lq" = (
 /turf/open/floor/deadspace/hardwood,
-/area/lavaland/surface/outdoors)
+/area/ruin/powered/snow_biodome)
 "Lw" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/plating,
@@ -4577,6 +4585,11 @@
 /obj/item/plate_shard/marker_shard,
 /turf/open/floor/deadspace/mono,
 /area/lavaland/surface/outdoors)
+"Qp" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/ruin/powered/snow_biodome)
 "Qr" = (
 /mob/living/simple_animal/hostile/rat,
 /turf/open/misc/asteroid,
@@ -5039,6 +5052,13 @@
 /obj/structure/chair/stool/bar/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"VG" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/ruin/powered/snow_biodome)
 "VJ" = (
 /obj/structure/sink{
 	dir = 8;
@@ -5523,11 +5543,11 @@
 /area/station/maintenance/fore/lesser)
 
 (1,1,1) = {"
-gm
-gm
-gm
-gm
-Cr
+nX
+nX
+nX
+nX
+nX
 Cr
 Cr
 Cr
@@ -5725,11 +5745,11 @@ Cr
 Cr
 "}
 (2,1,1) = {"
-gm
+nX
 cV
+VG
 Lq
-gm
-Cr
+nX
 Cr
 Cr
 Cr
@@ -5927,13 +5947,13 @@ Cr
 Cr
 "}
 (3,1,1) = {"
-gm
+nX
+Qp
 Lq
-Lq
-gm
-yG
-yG
-yG
+HO
+nX
+Cr
+Cr
 yG
 yG
 yG
@@ -6129,13 +6149,13 @@ Cr
 Cr
 "}
 (4,1,1) = {"
-gm
-gm
-gm
-gm
-yG
-yG
-yG
+nX
+cV
+VG
+Lq
+nX
+Cr
+Cr
 yG
 yG
 yG
@@ -6331,13 +6351,13 @@ Cr
 Cr
 "}
 (5,1,1) = {"
+nX
+nX
+nX
+nX
+nX
 Cr
 Cr
-yG
-yG
-yG
-yG
-yG
 yG
 yG
 yG
@@ -6535,11 +6555,11 @@ Cr
 (6,1,1) = {"
 Cr
 Cr
-yG
-yG
-yG
-yG
-yG
+Cr
+Cr
+Cr
+Cr
+Cr
 yG
 yG
 yG
@@ -6737,11 +6757,11 @@ Cr
 (7,1,1) = {"
 Cr
 Cr
-yG
-yG
-yG
-yG
-yG
+Cr
+Cr
+Cr
+Cr
+Cr
 yG
 yG
 yG
@@ -6937,8 +6957,8 @@ Cr
 Cr
 "}
 (8,1,1) = {"
-Cr
-Cr
+yG
+yG
 yG
 yG
 yG
@@ -7139,8 +7159,8 @@ Cr
 Cr
 "}
 (9,1,1) = {"
-Cr
-Cr
+yG
+yG
 yG
 yG
 yG
@@ -7341,8 +7361,8 @@ Cr
 Cr
 "}
 (10,1,1) = {"
-Cr
-Cr
+yG
+yG
 yG
 yG
 yG

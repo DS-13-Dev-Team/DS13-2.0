@@ -701,10 +701,10 @@
 /area/station/ai_monitored/security/armory/upper)
 "alZ" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/pistol/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/gun/ballistic/deadspace/twohanded/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -783,10 +783,11 @@
 "amO" = (
 /obj/machinery/light/directional/north,
 /obj/structure/rack,
-/obj/item/gun/ballistic/deadspace/twohanded/pulse,
-/obj/item/ammo_box/magazine/pulse,
-/obj/item/ammo_box/magazine/pulse,
-/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/seeker/egov,
+/obj/item/ammo_box/magazine/seeker/egov,
+/obj/item/ammo_box/magazine/seeker/egov,
+/obj/item/ammo_box/magazine/seeker/egov,
+/obj/item/gun/ballistic/deadspace/twohanded/seeker,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -3047,6 +3048,7 @@
 /obj/machinery/power/data_terminal,
 /obj/structure/cable,
 /obj/machinery/fax_machine,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/carpet/blue,
 /area/station/command/heads_quarters/cmo)
 "aLL" = (
@@ -5256,11 +5258,13 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 4
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/status_display/supply{
+	pixel_y = -32
 	},
-/turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/turf/open/floor/iron,
+/area/station/cargo/lobby)
 "blT" = (
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
@@ -7374,9 +7378,11 @@
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
 "cmD" = (
-/obj/effect/spawner/random/trash/cigbutt,
-/turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/obj/machinery/status_display/supply{
+	pixel_y = 32
+	},
+/turf/open/floor/iron,
+/area/station/cargo/storage)
 "cmJ" = (
 /obj/structure/sign/directions/engineering{
 	dir = 4;
@@ -9274,10 +9280,13 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "dMz" = (
-/obj/effect/turf_decal/trimline/blue/filled/line{
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 4
+	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
@@ -10177,11 +10186,11 @@
 /area/station/science/lab)
 "eoA" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/shotgun/scl_shotgun,
 /obj/machinery/light/directional/south,
 /obj/item/ammo_box/magazine/ds12g,
 /obj/item/ammo_box/magazine/ds12g,
 /obj/item/ammo_box/magazine/ds12g,
+/obj/item/gun/ballistic/shotgun/scl_shotgun,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
@@ -10217,6 +10226,15 @@
 "eqF" = (
 /turf/open/floor/deadspace/mono,
 /area/station/security/courtroom)
+"eqH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/status_display/supply{
+	pixel_y = -32
+	},
+/turf/open/floor/iron,
+/area/station/cargo/lobby)
 "eqR" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/security/brig)
@@ -17947,6 +17965,7 @@
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/machinery/fax_machine,
 /obj/structure/table,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/rd)
 "kbM" = (
@@ -18008,6 +18027,16 @@
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
+"kdH" = (
+/obj/effect/landmark/start/cargo_technician,
+/obj/structure/chair/office{
+	dir = 4
+	},
+/obj/machinery/status_display/supply{
+	pixel_y = -32
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/cargo/sorting)
 "kdZ" = (
 /obj/machinery/holopad,
 /turf/open/floor/deadspace/random/maint_center,
@@ -18746,10 +18775,10 @@
 /area/station/hallway/primary/central)
 "kJE" = (
 /obj/structure/rack,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
 /obj/item/gun/ballistic/shotgun/scl_shotgun,
-/obj/item/ammo_box/magazine/ds12g,
-/obj/item/ammo_box/magazine/ds12g,
-/obj/item/ammo_box/magazine/ds12g,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
@@ -19982,6 +20011,7 @@
 "lAT" = (
 /obj/structure/table/wood,
 /obj/machinery/fax_machine,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/wood,
 /area/station/cargo/qm)
 "lBx" = (
@@ -20350,6 +20380,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "lQV" = (
@@ -24331,7 +24362,7 @@
 	spawn_loot_count = 3
 	},
 /obj/machinery/light/directional/south,
-/turf/open/misc/asteroid,
+/turf/open/openspace,
 /area/station/maintenance/disposal)
 "oVK" = (
 /obj/effect/landmark/navigate_destination/court,
@@ -24527,6 +24558,9 @@
 	},
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 5
+	},
+/obj/machinery/status_display/supply{
+	pixel_x = 32
 	},
 /turf/open/floor/carpet/red,
 /area/station/cargo/qm)
@@ -28832,6 +28866,7 @@
 /obj/machinery/light,
 /obj/structure/table/reinforced,
 /obj/machinery/fax_machine,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
@@ -29969,6 +30004,7 @@
 	},
 /obj/machinery/fax_machine,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
 "tww" = (
@@ -31856,7 +31892,7 @@
 /area/station/science/misc_lab)
 "uNX" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/vending/armory,
+/obj/machinery/vending/liberationstation,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -33349,9 +33385,6 @@
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/command/nuke_storage)
 "vXX" = (
-/obj/machinery/status_display/supply{
-	pixel_x = 32
-	},
 /obj/structure/closet/secure_closet/ds/quartermaster,
 /turf/open/floor/wood,
 /area/station/cargo/qm)
@@ -34445,11 +34478,11 @@
 /area/station/cargo/storage)
 "wOF" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/deadspace/twohanded/pulse,
 /obj/machinery/airalarm/directional/north,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
+/obj/item/gun/ballistic/deadspace/twohanded/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -36369,10 +36402,10 @@
 /area/station/tcommsat/server)
 "yhN" = (
 /obj/structure/rack,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
 /obj/item/gun/ballistic/automatic/pistol/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
@@ -49976,7 +50009,7 @@ jdJ
 jdJ
 jdJ
 nOf
-jdJ
+edU
 jdJ
 jdJ
 vUk
@@ -50171,7 +50204,7 @@ vdC
 nbo
 vno
 crR
-blS
+cdk
 lQr
 cdk
 nBu
@@ -56638,10 +56671,10 @@ fga
 wDw
 rLH
 rSS
-cmD
+omj
 eXt
-irq
-sfR
+rLH
+hpS
 ktm
 lUK
 omj
@@ -56843,8 +56876,8 @@ hpS
 izC
 lUK
 dWs
-rLH
-oHb
+irq
+fQO
 dxR
 rLH
 hpS
@@ -58052,7 +58085,7 @@ fga
 oHb
 omj
 rLH
-hpS
+sfR
 jZE
 tEL
 cDR
@@ -59261,7 +59294,7 @@ xOb
 kfx
 aCo
 iHR
-cHC
+blS
 aCj
 aCj
 frx
@@ -59273,7 +59306,7 @@ aBy
 aEY
 qwY
 ajJ
-jIO
+cmD
 fBJ
 pbO
 jly
@@ -60473,7 +60506,7 @@ qJY
 kfx
 aCo
 snc
-mYj
+eqH
 aCj
 aCj
 jCt
@@ -60485,7 +60518,7 @@ aBz
 aBH
 aQB
 ajJ
-jIO
+cmD
 fBJ
 pbO
 lup
@@ -62312,7 +62345,7 @@ rqb
 mXD
 hYp
 gNx
-gNx
+kdH
 rqb
 mlO
 mlO

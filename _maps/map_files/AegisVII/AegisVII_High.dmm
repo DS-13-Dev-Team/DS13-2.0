@@ -569,11 +569,17 @@
 /obj/structure/table/wood,
 /obj/machinery/fax_machine,
 /obj/machinery/airalarm/directional/north,
+/obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "eL" = (
-/turf/open/floor/deadspace/hardwood,
-/area/lavaland/surface/outdoors)
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/ruin/powered/seedvault)
 "eM" = (
 /obj/machinery/camera/autoname/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -928,6 +934,8 @@
 /obj/structure/table/reinforced,
 /obj/machinery/fax_machine,
 /obj/structure/fireaxecabinet/directional/north,
+/obj/structure/cable,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "kh" = (
@@ -1402,6 +1410,11 @@
 	dir = 1
 	},
 /area/station/hallway/primary/central/aft)
+"sm" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/turf/open/floor/deadspace/hardwood,
+/area/ruin/powered/seedvault)
 "sr" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/box/ids,
@@ -1716,6 +1729,7 @@
 "wp" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos)
 "wq" = (
@@ -1736,6 +1750,7 @@
 /area/station/security/brig/upper)
 "wC" = (
 /obj/machinery/light/directional/north,
+/obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/captain)
 "wD" = (
@@ -1850,6 +1865,7 @@
 	pixel_x = 3;
 	pixel_y = 2
 	},
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "xZ" = (
@@ -2231,6 +2247,10 @@
 	},
 /turf/open/floor/deadspace/hardwood,
 /area/station/security/office)
+"DU" = (
+/obj/machinery/telecomms/relay/preset/station,
+/turf/open/floor/deadspace/hardwood,
+/area/ruin/powered/seedvault)
 "DX" = (
 /turf/closed/wall/r_wall,
 /area/station/commons/lounge)
@@ -2362,11 +2382,15 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
+/obj/machinery/power/data_terminal,
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos)
 "FE" = (
 /obj/structure/table/wood/fancy/green,
 /obj/machinery/fax_machine,
+/obj/machinery/power/data_terminal,
+/obj/structure/cable,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/captain)
 "FG" = (
@@ -2505,18 +2529,17 @@
 /turf/open/openspace,
 /area/station/hallway/primary/central/aft)
 "Hy" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/deadspace/hardwood,
-/area/station/command/heads_quarters/captain)
+/turf/closed/wall/r_wall,
+/area/ruin/powered/seedvault)
 "Hz" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hop)
 "HA" = (
-/obj/machinery/telecomms/relay/preset/station,
-/turf/open/floor/deadspace/hardwood,
-/area/lavaland/surface/outdoors)
+/obj/machinery/power/smes/magical,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/ruin/powered/seedvault)
 "HG" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/food_or_drink/booze,
@@ -3180,6 +3203,9 @@
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
+"SY" = (
+/turf/open/floor/deadspace/hardwood,
+/area/ruin/powered/seedvault)
 "Te" = (
 /obj/structure/filingcabinet/employment,
 /turf/open/floor/plating,
@@ -3524,11 +3550,11 @@
 /area/station/security/brig/upper)
 
 (1,1,1) = {"
-Py
-Py
-Py
-Py
-sE
+Hy
+Hy
+Hy
+Hy
+Hy
 sE
 sE
 sE
@@ -3726,11 +3752,11 @@ sE
 sE
 "}
 (2,1,1) = {"
-Py
+Hy
 HA
 eL
-Py
-sE
+SY
+Hy
 sE
 sE
 sE
@@ -3928,11 +3954,11 @@ sE
 sE
 "}
 (3,1,1) = {"
-Py
-eL
-eL
-Py
-sE
+Hy
+sm
+SY
+DU
+Hy
 sE
 sE
 sE
@@ -4130,11 +4156,11 @@ sE
 sE
 "}
 (4,1,1) = {"
-Py
-Py
-Py
-Py
-sE
+Hy
+HA
+eL
+SY
+Hy
 sE
 sE
 sE
@@ -4332,11 +4358,11 @@ sE
 sE
 "}
 (5,1,1) = {"
-sE
-sE
-sE
-sE
-sE
+Hy
+Hy
+Hy
+Hy
+Hy
 sE
 sE
 sE
@@ -10761,8 +10787,8 @@ NN
 eW
 Re
 wC
-rS
-Hy
+dp
+PY
 sD
 PY
 YY
