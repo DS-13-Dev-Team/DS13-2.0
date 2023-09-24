@@ -180,7 +180,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
 
-/datum/crafting_recipe/advancedegun
+/*/datum/crafting_recipe/advancedegun
 	name = "Advanced Energy Gun"
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	result = /obj/item/gun/energy/e_gun/nuclear
@@ -193,9 +193,9 @@
 
 /datum/crafting_recipe/advancedegun/New()
 	..()
-	blacklist += subtypesof(/obj/item/gun/energy/e_gun)
+	blacklist += subtypesof(/obj/item/gun/energy/e_gun) */
 
-/datum/crafting_recipe/tempgun
+/*/datum/crafting_recipe/tempgun
 	name = "Temperature Gun"
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	result = /obj/item/gun/energy/temperature
@@ -208,9 +208,9 @@
 
 /datum/crafting_recipe/tempgun/New()
 	..()
-	blacklist += subtypesof(/obj/item/gun/energy/e_gun)
+	blacklist += subtypesof(/obj/item/gun/energy/e_gun) */
 
-/datum/crafting_recipe/beam_rifle
+/*/datum/crafting_recipe/beam_rifle
 	name = "Particle Acceleration Rifle"
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	result = /obj/item/gun/energy/beam_rifle
@@ -225,9 +225,9 @@
 
 /datum/crafting_recipe/beam_rifle/New()
 	..()
-	blacklist += subtypesof(/obj/item/gun/energy/e_gun)
+	blacklist += subtypesof(/obj/item/gun/energy/e_gun) */
 
-/datum/crafting_recipe/ebow
+/*/datum/crafting_recipe/ebow
 	name = "Energy Crossbow"
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	result = /obj/item/gun/energy/recharge/ebow/large
@@ -237,9 +237,9 @@
 				/datum/reagent/uranium/radium = 15)
 	time = 200
 	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
+	subcategory = CAT_WEAPON */
 
-/datum/crafting_recipe/xraylaser
+/*/datum/crafting_recipe/xraylaser
 	name = "X-ray Laser Gun"
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	result = /obj/item/gun/energy/xray
@@ -252,9 +252,9 @@
 
 /datum/crafting_recipe/xraylaser/New()
 	..()
-	blacklist += subtypesof(/obj/item/gun/energy/laser)
+	blacklist += subtypesof(/obj/item/gun/energy/laser) */
 
-/datum/crafting_recipe/hellgun
+/*/datum/crafting_recipe/hellgun
 	name = "Hellfire Laser Gun"
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	result = /obj/item/gun/energy/laser/hellgun
@@ -267,9 +267,9 @@
 
 /datum/crafting_recipe/hellgun/New()
 	..()
-	blacklist += subtypesof(/obj/item/gun/energy/laser)
+	blacklist += subtypesof(/obj/item/gun/energy/laser) */
 
-/datum/crafting_recipe/ioncarbine
+/*/datum/crafting_recipe/ioncarbine
 	name = "Ion Carbine"
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	result = /obj/item/gun/energy/ionrifle/carbine
@@ -282,9 +282,9 @@
 
 /datum/crafting_recipe/ioncarbine/New()
 	..()
-	blacklist += subtypesof(/obj/item/gun/energy/laser)
+	blacklist += subtypesof(/obj/item/gun/energy/laser) */
 
-/datum/crafting_recipe/decloner
+/*/datum/crafting_recipe/decloner
 	name = "Biological Demolecularisor"
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	result = /obj/item/gun/energy/decloner
@@ -298,9 +298,9 @@
 
 /datum/crafting_recipe/decloner/New()
 	..()
-	blacklist += subtypesof(/obj/item/gun/energy/laser)
+	blacklist += subtypesof(/obj/item/gun/energy/laser) */
 
-/datum/crafting_recipe/teslacannon
+/*/datum/crafting_recipe/teslacannon
 	name = "Tesla Cannon"
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	result = /obj/item/gun/energy/tesla_cannon
@@ -309,9 +309,9 @@
 				/obj/item/weaponcrafting/gunkit/tesla = 1)
 	time = 200
 	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
+	subcategory = CAT_WEAPON */
 
-/datum/crafting_recipe/ed209
+/*/datum/crafting_recipe/ed209
 	name = "ED209"
 	result = /mob/living/simple_animal/bot/secbot/ed209
 	reqs = list(/obj/item/robot_suit = 1,
@@ -325,9 +325,9 @@
 				/obj/item/assembly/prox_sensor = 1)
 	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER)
 	time = 60
-	category = CAT_ROBOT
+	category = CAT_ROBOT */
 
-/datum/crafting_recipe/secbot
+/*/datum/crafting_recipe/secbot
 	name = "Secbot"
 	result = /mob/living/simple_animal/bot/secbot
 	reqs = list(/obj/item/assembly/signaler = 1,
@@ -337,7 +337,7 @@
 				/obj/item/bodypart/arm/right/robot = 1)
 	tool_behaviors = list(TOOL_WELDER)
 	time = 60
-	category = CAT_ROBOT
+	category = CAT_ROBOT */
 
 /datum/crafting_recipe/cleanbot
 	name = "Cleanbot"
@@ -692,13 +692,13 @@
 	category = CAT_MISC
 
 
-/datum/crafting_recipe/skateboard
+/*/datum/crafting_recipe/skateboard
 	name = "Skateboard"
 	result = /obj/vehicle/ridden/scooter/skateboard/improvised
 	time = 60
 	reqs = list(/obj/item/stack/sheet/iron = 5,
 				/obj/item/stack/rods = 10)
-	category = CAT_MISC
+	category = CAT_MISC */
 
 /datum/crafting_recipe/scooter
 	name = "Scooter"

@@ -1,5 +1,5 @@
 /obj/machinery/vending/armory
-	name = "\improper Ammotech!"
+	name = "\improper Ammotech"
 	desc = "An overwhelming amount of <b>ancient patriotism</b> washes over you just by looking at the machine."
 	icon_state = "liberationstation"
 	product_slogans = "Liberation Station: Your one-stop shop for all things second amendment!;Be a patriot today, pick up a gun!;Quality weapons for cheap prices!;Better dead than red!"

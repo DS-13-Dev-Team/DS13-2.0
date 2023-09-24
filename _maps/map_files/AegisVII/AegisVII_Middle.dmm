@@ -31882,7 +31882,7 @@
 /area/station/science/misc_lab)
 "uNX" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/vending/liberationstation,
+/obj/machinery/vending/armory,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
