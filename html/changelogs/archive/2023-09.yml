@@ -220,3 +220,9 @@
   - bugfix: brute's charge (I hope)
   bestmudad:
   - bugfix: 'Added : Slashers, Pukers, Spitters and E-Slashers to the nest spawn option'
+2023-09-25:
+  MisterGrimm:
+  - rscdel: PAI can no longer be easily acquired by mortal means.
+  chesse20:
+  - balance: increased points obtained by depositing ores
+  - balance: decreased rig cost, especially the standard rig
