@@ -3384,18 +3384,6 @@
 /obj/item/clipboard,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
-"aQD" = (
-/obj/effect/floor_decal/ds/spline/fancy/wood,
-/obj/structure/displaycase{
-	alert = 0;
-	desc = "A display case containing an ritual knife";
-	pixel_y = -4;
-	req_access_txt = "48";
-	start_showpiece_type = /obj/item/knife/unitology
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/carpet/royalblue,
-/area/station/service/library)
 "aQI" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/deadspace/random/maint_center,
@@ -21614,8 +21602,8 @@
 "mSu" = (
 /obj/structure/table/wood,
 /obj/structure/railing,
-/obj/item/gavelhammer,
 /obj/item/gavelblock,
+/obj/item/gavelhammer,
 /turf/open/floor/deadspace/mono,
 /area/station/security/courtroom)
 "mSB" = (
@@ -29208,11 +29196,8 @@
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 6
 	},
-/obj/structure/displaycase{
-	alert = 0;
+/obj/structure/displaycase/trophy{
 	desc = "A display case containing an unitologist engineering rig";
-	pixel_y = -4;
-	req_access_txt = "48";
 	start_showpiece_type = /obj/item/mod/control/pre_equipped/ds/engineer_advanced_unitologist
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -31018,11 +31003,8 @@
 /area/station/engineering/atmos)
 "ujs" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood,
-/obj/structure/displaycase{
-	alert = 0;
-	desc = "A display case containing an unitologist engineering rig";
-	pixel_y = -4;
-	req_access_txt = "48";
+/obj/structure/displaycase/trophy{
+	desc = "A display case containing an unitologist zealot rig";
 	start_showpiece_type = /obj/item/mod/control/pre_equipped/ds/zealot
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -47750,7 +47732,7 @@ idD
 bzA
 bzA
 twS
-aQD
+ujs
 hae
 sbM
 aXd

@@ -227,9 +227,9 @@
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "cm" = (
-/obj/structure/displaycase{
+/obj/structure/displaycase/trophy{
 	alert = 0;
-	desc = "A display case containing an unitologist engineering rig";
+	desc = "A display case containing an unitologist zealot rig";
 	pixel_y = -4;
 	req_access_txt = "48";
 	start_showpiece_type = /obj/item/mod/control/pre_equipped/ds/zealot
