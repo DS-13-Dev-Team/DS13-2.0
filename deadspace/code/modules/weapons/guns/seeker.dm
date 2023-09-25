@@ -18,7 +18,7 @@ Seeker Rifles
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/seeker
-	fire_delay = 3 SECONDS
+	fire_delay = 1.5 SECONDS
 	can_suppress = FALSE
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	one_handed_penalty = 50
@@ -109,7 +109,7 @@ Projectiles for the casings
 /obj/projectile/bullet/seeker
 	name ="seeker shell"
 	speed = 0.4
-	damage = 100
+	damage = 60
 	paralyze = 10
 	dismemberment = 30
 	armour_penetration = 50
