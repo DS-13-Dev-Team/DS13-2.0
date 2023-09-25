@@ -17,9 +17,10 @@
 	visible_message(span_danger("[user.name] slashes [src]!"), \
 					span_userdanger("[user.name] slashes you!"), span_hear("You hear a cutting of the flesh!"), COMBAT_MESSAGE_RANGE, user)
 	to_chat(user, span_danger("You slash [src]!"))
-	adjustBruteLoss(dealt_damage)
+	var/zone_attacked = ran_zone(user.zone_selected)
+	var/armor_block = run_armor_check(zone_attacked, MELEE)
+	apply_damage(dealt_damage, BRUTE, zone_attacked, armor_block)
 	log_combat(user, src, "attacked")
-	updatehealth()
 
 /mob/living/carbon/human/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(check_shields(user, 0, "the [user.name]"))
@@ -41,7 +42,7 @@
 	var/obj/item/bodypart/affecting = get_bodypart(ran_zone(user.zone_selected))
 	if(!affecting)
 		affecting = get_bodypart(BODY_ZONE_CHEST)
-	var/armor_block = run_armor_check(affecting, MELEE,"","",10)
+	var/armor_block = run_armor_check(affecting, MELEE)
 
 	playsound(loc, 'sound/weapons/slice.ogg', 25, TRUE, -1)
 	visible_message(span_danger("[user] slashes at [src]!"), \
