@@ -140,6 +140,7 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
+	damage = 10
 	speed = 0.8
 	pixel_speed_multiplier = 0.5
 
