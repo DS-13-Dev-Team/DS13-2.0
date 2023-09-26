@@ -802,6 +802,7 @@
 /obj/item/stamp/hop,
 /obj/item/paper_bin,
 /obj/structure/cable,
+/obj/item/folder/blue,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/hop)
 "hF" = (
@@ -1675,6 +1676,7 @@
 /obj/structure/table/wood,
 /obj/structure/cable,
 /obj/item/stamp/law,
+/obj/item/folder/red,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "vM" = (
@@ -2982,6 +2984,7 @@
 /obj/item/stamp/captain,
 /obj/item/stamp/denied,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/item/folder/blue,
 /turf/open/floor/deadspace/mono,
 /area/station/command/heads_quarters/captain)
 "Ox" = (

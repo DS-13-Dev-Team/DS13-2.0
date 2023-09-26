@@ -2633,6 +2633,7 @@
 	name = "desk shutter";
 	req_access_txt = "5"
 	},
+/obj/item/paper_bin,
 /turf/open/floor/iron/dark,
 /area/station/medical/office)
 "aIN" = (
@@ -12410,6 +12411,7 @@
 /obj/item/pen/blue,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
+/obj/item/folder/white,
 /turf/open/floor/wood,
 /area/station/medical/psychology)
 "fRZ" = (
@@ -13659,6 +13661,7 @@
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
 /obj/machinery/power/data_terminal,
+/obj/item/folder,
 /turf/open/floor/iron,
 /area/station/science/lab)
 "gOf" = (
@@ -25833,6 +25836,7 @@
 	id = "rdrnd";
 	name = "Research and Development Shutters"
 	},
+/obj/item/paper_bin,
 /turf/open/floor/iron/white,
 /area/station/science/lab)
 "qeH" = (
@@ -26677,6 +26681,7 @@
 /area/station/security/warden)
 "qLy" = (
 /obj/structure/cable,
+/obj/structure/filingcabinet/security,
 /turf/open/floor/carpet/red,
 /area/station/security/warden)
 "qLT" = (
@@ -28949,6 +28954,7 @@
 /obj/structure/table,
 /obj/structure/cable,
 /obj/machinery/camera/autoname/directional/east,
+/obj/item/folder/red,
 /turf/open/floor/deadspace/mono,
 /area/station/security/warden)
 "sFI" = (
@@ -34042,6 +34048,7 @@
 	pixel_x = 7
 	},
 /obj/machinery/door/firedoor,
+/obj/item/folder/yellow,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
 "wzg" = (
@@ -35896,7 +35903,6 @@
 	name = "Reception Window"
 	},
 /obj/item/paper_bin,
-/obj/item/pen,
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/security/warden)
@@ -36173,6 +36179,7 @@
 /obj/machinery/power/data_terminal,
 /obj/structure/cable,
 /obj/structure/window/reinforced/spawner/north,
+/obj/item/folder/white,
 /turf/open/floor/iron/dark,
 /area/station/medical/office)
 "ybd" = (
