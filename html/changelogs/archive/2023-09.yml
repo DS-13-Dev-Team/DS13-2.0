@@ -226,3 +226,6 @@
   chesse20:
   - balance: increased points obtained by depositing ores
   - balance: decreased rig cost, especially the standard rig
+2023-09-26:
+  DTraitor:
+  - balance: Removed 10% armour penetration from necromorphs
