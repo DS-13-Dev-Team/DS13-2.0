@@ -22,6 +22,8 @@
 	/// All the categories of organs we can print.
 	var/list/categories = list(SPECIES_HUMAN, SPECIES_LIZARD, SPECIES_MOTH, SPECIES_PLASMAMAN, SPECIES_ETHEREAL, "other")
 
+	biomass_produce = BIOMASS_HARVEST_MEDIUM
+
 /obj/machinery/limbgrower/Initialize(mapload)
 	create_reagents(100, OPENCONTAINER)
 	. = ..()

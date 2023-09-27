@@ -454,6 +454,7 @@
 	nopower_state = null
 	pass_flags = PASSTABLE
 	show_ph = FALSE
+	biomass_produce = BIOMASS_HARVEST_SMALL
 	dispensable_reagents = list(
 		/datum/reagent/water,
 		/datum/reagent/consumable/ice,

@@ -24,6 +24,7 @@
 		/datum/reagent/consumable/vanilla = 6,
 		/datum/reagent/consumable/berryjuice = 6,
 		/datum/reagent/consumable/ethanol/singulo = 6)
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 /obj/machinery/icecream_vat/Initialize(mapload)
 	. = ..()

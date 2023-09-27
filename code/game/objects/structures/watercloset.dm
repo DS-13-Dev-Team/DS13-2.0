@@ -11,6 +11,7 @@
 	var/mob/living/swirlie = null //the mob being given a swirlie
 	var/buildstacktype = /obj/item/stack/sheet/iron //they're iron now, shut up
 	var/buildstackamount = 1
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 /obj/structure/toilet/Initialize(mapload)
 	. = ..()
