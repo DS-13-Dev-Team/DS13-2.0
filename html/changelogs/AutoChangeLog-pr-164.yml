@@ -1,0 +1,10 @@
+author: blackwolf602
+delete-after: true
+changes:
+  - rscadd: Atmospherics department
+  - rscadd: map vents and piping
+  - rscadd: holodisk for cryo and the ce
+  - rscadd: second floor to church for holodisk
+  - bugfix: added missing sprites for patreon rigs
+  - bugfix: scav bot laws
+  - rscadd: telerods GONE
