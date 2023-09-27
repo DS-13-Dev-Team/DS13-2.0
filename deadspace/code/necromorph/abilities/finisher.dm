@@ -11,13 +11,27 @@
 	var/finisher_time = 4 SECONDS
 	/// The initial damage the finisher does to the head limb trying to rip it off
 	var/finisher_damage = 50
-	// If the finisher fails to keep the victim in their clutches
-	var/finisher_stagger = 2 SECONDS
+	/// If the victim breaks out of the finisher clutches
+	var/finisher_stagger = 4 SECONDS
 	/// If the current move is being triggered by us or not
 	var/actively_moving = FALSE
 	var/valid_steps_taken = 0
-
+	var/max_steps_buildup = 2
 	var/atom/target_atom
+
+
+	var/force_time	=	0				//How long are we forced to stay curled up? There should always be a minimum on this to prevent spam. It shouldn't be
+	var/automatic = FALSE				//Did we curl up manually or automatically
+	var/animtime = 1 SECOND //How long the animation to curl/uncurl actually takes
+
+	//Extra runtime vars
+	var/started_at	=	0				//When did we curl up
+	var/stopped_at	=	0				//When did we uncurl
+	var/cached_pixels_x
+	var/cached_pixels_y
+	var/matrix/cached_transform
+	var/force_cooldown_timer
+	var/force_notify_timer
 
 /datum/action/cooldown/necro/finisher/PreActivate(atom/target)
 var/turf/T = get_turf(target)
@@ -138,6 +152,19 @@ var/turf/T = get_turf(target)
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)
 		source.Stun(6)
+
+
+
+
+/datum/action/cooldown/necro/finish/proc/finishing()
+
+	.=..()
+	if (.)
+		//We must face sideways to perform this move.
+		if (source.x > source.x)
+			source.facedir(EAST)
+		else
+			source.facedir(WEST)
 
 /datum/action/cooldown/necro/finish/proc/update_resting(atom/movable/source, resting)
 	SIGNAL_HANDLER
