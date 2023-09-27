@@ -54,9 +54,6 @@
 		"shaft_miner": {
 			"total_positions": 100
 		},
-		"atmospheric_technician": {
-			"total_positions": 0
-		},
 		"ai": {
 			"total_positions": 0
 		},
@@ -83,6 +80,9 @@
 		},
 		"virologist": {
 			"total_positions": 0
+		},
+		"atmospheric_technician": {
+			"total_positions": 2
 		},
 		"cook":{
 			"additional_cqc_areas": ["/area/station/service/bar", "/area/station/service/kitchen/coldroom", "/area/station/commons/lounge"]

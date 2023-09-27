@@ -276,7 +276,6 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 		/obj/item/assembly/flash/memorizer = 1,
 		/obj/item/flashlight/flashdark = 1,
 		/obj/item/knife/kitchen = 1,
-		/obj/item/melee/baton/security/cattleprod/teleprod = 1,
 		/obj/item/pen/survival = 1,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/shield/riot/buckler = 1,

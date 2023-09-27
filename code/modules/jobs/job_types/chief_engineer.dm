@@ -68,7 +68,7 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/chief_engineer
-	uniform = /obj/item/clothing/under/rank/engineering/ds_engineer
+	uniform = /obj/item/clothing/under/rank/engineering/ds_rigsuit
 	backpack_contents = list(
 		/obj/item/assembly/flash/handheld
 	)
