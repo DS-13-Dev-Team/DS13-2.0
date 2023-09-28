@@ -229,3 +229,14 @@
 2023-09-26:
   DTraitor:
   - balance: Removed 10% armour penetration from necromorphs
+2023-09-28:
+  MisterGrimm:
+  - balance: Greatly expands harvester biomass sources closer to 1.0 equivalent.
+  blackwolf602:
+  - rscadd: Atmospherics department
+  - rscadd: map vents and piping
+  - rscadd: holodisk for cryo and the ce
+  - rscadd: second floor to church for holodisk
+  - bugfix: added missing sprites for patreon rigs
+  - bugfix: scav bot laws
+  - rscadd: telerods GONE
