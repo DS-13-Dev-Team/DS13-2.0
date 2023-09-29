@@ -1,7 +1,7 @@
 
 
-/datum/action/cooldown/necro/finish
-	name = "Finish"
+/datum/action/cooldown/necro/finisher
+	name = "finisher"
 	desc = "Allows you to deal extraordinary amounts of damage to weakened humans, guarantees death of its victims upon completion."
 	cooldown_time = 2 SECONDS
 	click_to_activate = TRUE
@@ -51,11 +51,11 @@ var/turf/T = get_turf(target)
 
 /datum/action/cooldown/necro/finisher/Activate(atom/target)
 	. = TRUE
-	// Start pre-cooldown so that the ability can't come up while the finish is happening
+	// Start pre-cooldown so that the ability can't come up while the finisher is happening
 	StartCooldown(finisher_time+finisher_delay+1)
 	addtimer(CALLBACK(src, PROC_REF(do_finisher)), finisher_delay)
 
-/datum/action/cooldown/necro/finish/proc/do_finisher()
+/datum/action/cooldown/necro/finisher/proc/do_finisher()
 	var/mob/living/carbon/human/necromorph/finisher = owner
 
 	actively_moving = FALSE
@@ -72,70 +72,70 @@ var/turf/T = get_turf(target)
 		return
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, PROC_REF(pre_move))
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_POSTPROCESS, PROC_REF(post_move))
-	RegisterSignal(new_loop, COMSIG_MOVELOOP_STOP, PROC_REF(finish_end))
+	RegisterSignal(new_loop, COMSIG_MOVELOOP_STOP, PROC_REF(finisher_end))
 	RegisterSignal(finisher, COMSIG_MOB_STATCHANGE, PROC_REF(stat_changed))
 	RegisterSignal(finisher, COMSIG_LIVING_UPDATED_RESTING, PROC_REF(update_resting))
 
 	SEND_SIGNAL(finisher, COMSIG_STARTED_FINISH)
 
-/datum/action/cooldown/necro/finish/proc/on_target_loc_entered(atom/loc, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
+/datum/action/cooldown/necro/finisher/proc/on_target_loc_entered(atom/loc, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	SIGNAL_HANDLER
 	if(arrived != owner)
 		return
 	on_bump(owner, target_atom)
 
-/datum/action/cooldown/necro/finish/proc/pre_move(datum)
+/datum/action/cooldown/necro/finisher/proc/pre_move(datum)
 	SIGNAL_HANDLER
 	actively_moving = TRUE
 
-/datum/action/cooldown/necro/finish/proc/post_move(datum)
+/datum/action/cooldown/necro/finisher/proc/post_move(datum)
 	SIGNAL_HANDLER
 	actively_moving = FALSE
 
-/datum/action/cooldown/necro/finish/proc/finish_end(datum/move_loop/source)
+/datum/action/cooldown/necro/finisher/proc/finisher_end(datum/move_loop/source)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/finisher = source.moving
 	UnregisterSignal(finisher, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING))
 	finisher.charging = FALSE
-	finisher.remove_movespeed_modifier(/datum/movespeed_modifier/necro_finish)
+	finisher.remove_movespeed_modifier(/datum/movespeed_modifier/necro_finisher)
 	StartCooldown()
 	SEND_SIGNAL(owner, COMSIG_FINISHED_FINISH)
 
 	qdel(GetComponent(/datum/component/connect_loc_behalf))
 	target_atom = null
 
-/datum/action/cooldown/necro/finish/proc/stat_changed(mob/source, new_stat, old_stat)
+/datum/action/cooldown/necro/finisher/proc/stat_changed(mob/source, new_stat, old_stat)
 	SIGNAL_HANDLER
 	if(new_stat > CONSCIOUS)
 		SSmove_manager.stop_looping(owner)
 
-/datum/action/cooldown/necro/finish/proc/do_finish_indicator(atom/finish_target)
+/datum/action/cooldown/necro/finisher/proc/do_finish_indicator(atom/finisher_target)
 	return
 
-/datum/action/cooldown/necro/finish/proc/on_move(atom/source, atom/new_loc)
+/datum/action/cooldown/necro/finisher/proc/on_move(atom/source, atom/new_loc)
 	SIGNAL_HANDLER
 	if(!actively_moving)
 		return COMPONENT_MOVABLE_BLOCK_PRE_MOVE
 
-/datum/action/cooldown/necro/finish/proc/on_moved(atom/source)
+/datum/action/cooldown/necro/finisher/proc/on_moved(atom/source)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/finisher = source
 	if(++valid_steps_taken <= max_steps_buildup)
-		finisher.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/necro_finish, TRUE, -FINISH_SPEED(src))
+		finisher.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/necro_finisher, TRUE, -FINISH_SPEED(src))
 
 	//Light shake with each step
 	shake_camera(source, 1.5, 0.5)
 
 	return
 
-/datum/action/cooldown/necro/finish/proc/on_bump(atom/movable/source, atom/target)
+/datum/action/cooldown/necro/finisher/proc/on_bump(atom/movable/source, atom/target)
 	SIGNAL_HANDLER
 	if(ismob(target) || target.uses_integrity)
 		hit_target(source, target)
 	SSmove_manager.stop_looping(owner)
 
-/datum/action/cooldown/necro/finish/proc/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
-	target.attack_necromorph(source, dealt_damage = finish_damage)
+/datum/action/cooldown/necro/finisher/proc/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
+	target.attack_necromorph(source, dealt_damage = finisher_damage)
 	if(isliving(target))
 		if(ishuman(target))
 			var/mob/living/carbon/human/human_target = target
@@ -156,7 +156,7 @@ var/turf/T = get_turf(target)
 
 
 
-/datum/action/cooldown/necro/finish/proc/finishing()
+/datum/action/cooldown/necro/finisher/proc/finishing()
 
 	.=..()
 	if (.)
@@ -166,7 +166,7 @@ var/turf/T = get_turf(target)
 		else
 			source.facedir(WEST)
 
-/datum/action/cooldown/necro/finish/proc/update_resting(atom/movable/source, resting)
+/datum/action/cooldown/necro/finisher/proc/update_resting(atom/movable/source, resting)
 	SIGNAL_HANDLER
 	if(resting)
 		SSmove_manager.stop_looping(source)
