@@ -28,7 +28,7 @@
 			var/fling_dist = rand(2,5)
 			var/turf/destination = mob_target.loc
 			var/turf/temp
-		
+
 			for(var/i in 1 to fling_dist)
 				temp = get_step(destination, fling_dir)
 				if(!temp)
@@ -51,7 +51,7 @@
 	necromorph_type_path = /mob/living/carbon/human/necromorph/brute
 	tier = 3
 	biomass_cost = 360
-	biomass_spent_required = 950
+	biomass_spent_required = 2000
 	melee_damage_lower = 24
 	melee_damage_upper = 28
 	max_health = 510
