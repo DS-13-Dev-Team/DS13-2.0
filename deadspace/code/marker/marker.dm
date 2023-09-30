@@ -93,7 +93,7 @@
 	if(active)
 		return
 	active = TRUE
-	change_marker_biomass(300)
+	change_marker_biomass(150)
 	for(var/mob/camera/marker_signal/eye as anything in marker_signals)
 		for(var/datum/action/cooldown/necro/psy/ability as anything in eye.abilities)
 			if((ability.marker_flags & SIGNAL_ABILITY_PRE_ACTIVATION))
