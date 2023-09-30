@@ -30,7 +30,7 @@
 	real_name = name
 	update_name()
 
-/mob/living/carbon/human/necromorph/proc/play_necro_sound(audio_type, volume, extra_range)
+/mob/living/carbon/human/necromorph/proc/play_necro_sound(audio_type, volume, vary, extra_range)
 	CRASH("play_necro_sound() wasn't overriden")
 
 /mob/living/carbon/human/necromorph/verb/evacuate()
