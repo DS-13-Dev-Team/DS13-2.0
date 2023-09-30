@@ -43,29 +43,6 @@
 	///the 'abilities' available to a necromorph.
 	var/list/datum/action/cooldown/necro/actions = list()
 
-	///List of traits we add in Initialize()
-	var/list/traits = list(
-		TRAIT_DEFIB_BLACKLISTED,
-		TRAIT_BADDNA,
-		TRAIT_GENELESS,
-		TRAIT_VIRUSIMMUNE,
-		TRAIT_NOMETABOLISM,
-		TRAIT_TOXIMMUNE,
-		TRAIT_EASYDISMEMBER,
-		TRAIT_NOBREATH,
-		TRAIT_NOCRITDAMAGE,
-		TRAIT_FEARLESS,
-		TRAIT_NO_SOUL,
-		TRAIT_CANT_RIDE,
-		TRAIT_CAN_STRIP,
-		TRAIT_RESISTLOWPRESSURE,
-		TRAIT_RESISTCOLD,
-		TRAIT_DISCOORDINATED_TOOL_USER,
-		TRAIT_PIERCEIMMUNE,
-		TRAIT_IGNOREDAMAGESLOWDOWN,
-		TRAIT_NOSOFTCRIT,
-	)
-
 	///The iconstate for the necromorph on the minimap
 	var/minimap_icon = "xenominion"
 
@@ -84,9 +61,6 @@
 	var/implemented = FALSE
 
 /datum/necro_class/proc/load_data(mob/living/carbon/human/necromorph/necro)
-	for(var/trait in traits)
-		ADD_TRAIT(necro, trait, NECROMORPH_TRAIT)
-
 	for(var/datum/action/cooldown/necro/action_datum as anything in actions)
 		action_datum = new action_datum(necro)
 		action_datum.Grant(necro)

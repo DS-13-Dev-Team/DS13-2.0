@@ -1,3 +1,7 @@
+#define CURL_ANIMATION_TIME (0.8 SECONDS)
+#define CURL_FORCED_DURATION (5 SECONDS)
+#define CURL_FORCED_COOLDOWN (1.5 MINUTES)
+
 /mob/living/carbon/human/necromorph/brute
 	class = /datum/necro_class/brute
 	necro_species = /datum/species/necromorph/brute
@@ -6,11 +10,54 @@
 	status_flags = CANSTUN|CANUNCONSCIOUS
 	var/armor_front = 30
 	var/armor_flank = 20
+	/// Multiplier for armor when curling
+	var/curl_armor_mult = 1.5
+	/// If brute is currently curling
+	var/curling = FALSE
+	/// If brute is currently forced to curl
+	var/forced_curl = FALSE
+	/// Time when we can be forced to curl again
+	var/forced_curl_next = 0
+
+	//Replace these with something better if possible
 	var/next_attack_delay = 0
 	var/spec_attack_delay = 25
 
 /mob/living/carbon/human/necromorph/brute/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.brute_sounds[audio_type]), volume, vary, extra_range)
+
+/mob/living/carbon/human/necromorph/brute/proc/start_curl(forced)
+	if(curling)
+		return
+	if(forced)
+		if((forced_curl_next + CURL_FORCED_COOLDOWN) < world.time)
+			return
+		forced_curl = TRUE
+		forced_curl_next = world.time + CURL_FORCED_DURATION
+		addtimer(CALLBACK(src, PROC_REF(end_forced_curl)), CURL_FORCED_DURATION)
+	curling = TRUE
+	ADD_TRAIT(src, TRAIT_RESTRAINED, src)
+
+	var/matrix/new_tranform = matrix()
+	new_tranform.Scale(0.9)
+	animate(src, transform = new_tranform, time = CURL_ANIMATION_TIME)
+	play_necro_sound(SOUND_PAIN, 60, TRUE)
+	sleep(CURL_ANIMATION_TIME)
+	play_necro_sound(SOUND_FOOTSTEP, 40, TRUE)
+	sleep(6)
+	play_necro_sound(SOUND_FOOTSTEP, 40, TRUE)
+
+/mob/living/carbon/human/necromorph/brute/proc/stop_curl()
+	if(forced_curl)
+		return
+	curling = FALSE
+	animate(src, transform = matrix(), time = CURL_ANIMATION_TIME)
+	sleep(CURL_ANIMATION_TIME)
+	REMOVE_TRAIT(src, TRAIT_RESTRAINED, src)
+
+/mob/living/carbon/human/necromorph/brute/proc/end_forced_curl()
+	forced_curl = FALSE
+	stop_curl()
 
 /datum/necro_class/brute
 	display_name = "Brute"
@@ -26,7 +73,7 @@
 	max_health = 510
 	actions = list(
 		/datum/action/cooldown/necro/slam,
-		/datum/action/cooldown/necro/long_charge,
+		/datum/action/cooldown/necro/long_charge/brute,
 		/datum/action/cooldown/necro/shoot/brute,
 		/datum/action/cooldown/necro/curl,
 	)
@@ -75,7 +122,6 @@
 		'deadspace/sound/effects/creatures/necromorph/brute/brute_pain_extreme.ogg',
 	)
 
-//TODO: REWRITE THIS COMPLETELY
 /datum/species/necromorph/brute/spec_unarmedattack(mob/living/carbon/human/necromorph/brute/user, atom/target, modifiers)
 	if(!user.combat_mode)
 		return
@@ -83,32 +129,52 @@
 		return
 	user.next_attack_delay = user.spec_attack_delay + world.time
 	user.play_necro_sound(SOUND_ATTACK, VOLUME_HIGH, 1, 3)
-	if(istype(target, /mob/living/carbon/human))
-		var/mob/living/carbon/human/mob_target = target
-		var/fling_dir = pick((user.dir & (NORTH|SOUTH)) ? list(WEST, EAST, user.dir|WEST, user.dir|EAST) : list(NORTH, SOUTH, user.dir|NORTH, user.dir|SOUTH)) //Fling them somewhere not behind nor ahead of the charger.
-		var/fling_dist = rand(2,5)
-		var/turf/destination = mob_target.loc
-		var/turf/temp
+	if(isliving(target) && get_turf(target) != get_turf(user))
+		var/mob/living/our_target = target
+		var/throw_dir = pick(
+			user.dir,
+			turn(user.dir, 45),
+			turn(user.dir, -45),
+			) //Throwing them somewhere ahead of us
+		var/throw_dist = rand(2,5)
 
-		for(var/i in 1 to fling_dist)
-			temp = get_step(destination, fling_dir)
-			if(!temp)
-				break
-			destination = temp
-		if(destination != mob_target.loc)
-			mob_target.throw_at(destination, fling_dist, 1, src, TRUE)
+		var/throw_x = our_target.x
+		if(throw_dir & WEST)
+			throw_x += throw_dist
+		else if(throw_dir & EAST)
+			throw_x -= throw_dist
+
+		var/throw_y = our_target.y
+		if(throw_dir & NORTH)
+			throw_y += throw_dist
+		else if(throw_dir & SOUTH)
+			throw_y -= throw_dist
+
+		throw_x = clamp(throw_x, 1, world.maxx)
+		throw_y = clamp(throw_y, 1, world.maxy)
+
+		our_target.safe_throw_at(locate(throw_x, throw_y, our_target.z), throw_dist, 1, user, TRUE)
+
 	return ..()
 
 /datum/species/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/brute/H, forced, spread_damage, sharpness, attack_direction)
+	var/reduced = 0
 	switch(turn(attack_direction, dir2angle(H.dir)))
 		if(NORTH)
-			blocked += damage * ((100-H.armor_front)/100)
+			reduced = damage * ((100-H.armor_front)/100)
 		if(NORTHEAST, NORTHWEST)
-			blocked += damage * ((100-((H.armor_front+H.armor_flank)/2))/100)
+			reduced = damage * ((100-((H.armor_front+H.armor_flank)/2))/100)
 		if(EAST, WEST)
-			blocked += damage * ((100-H.armor_flank)/100)
+			reduced = damage * ((100-H.armor_flank)/100)
 		if(SOUTHEAST, SOUTHWEST)
-			blocked += damage * ((100-(H.armor_flank/2))/100)
+			reduced = damage * ((100-(H.armor_flank/2))/100)
+		if(SOUTH)
+			INVOKE_ASYNC(H, TYPE_PROC_REF(/mob/living/carbon/human/necromorph/brute, start_curl), TRUE)
+			to_chat(H, span_danger("You reflexively curl up in panic"))
+			return ..()
+	if(H.curling)
+		reduced *= H.curl_armor_mult
+	blocked += reduced
 	return ..()
 
 #define WINDUP_TIME 1.25 SECONDS
@@ -156,3 +222,7 @@
 
 	acid_type = /datum/reagent/toxin/acid/fluacid
 	acid_amount = 3
+
+#undef CURL_ANIMATION_TIME
+#undef CURL_FORCED_DURATION
+#undef CURL_FORCED_COOLDOWN

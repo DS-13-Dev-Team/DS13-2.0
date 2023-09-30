@@ -4831,7 +4831,6 @@
 #include "deadspace\code\necromorph\abilities\gallop.dm"
 #include "deadspace\code\necromorph\abilities\leap.dm"
 #include "deadspace\code\necromorph\abilities\long_charge.dm"
-#include "deadspace\code\necromorph\abilities\long_charge_new.dm"
 #include "deadspace\code\necromorph\abilities\lunge.dm"
 #include "deadspace\code\necromorph\abilities\sense.dm"
 #include "deadspace\code\necromorph\abilities\shoot.dm"
