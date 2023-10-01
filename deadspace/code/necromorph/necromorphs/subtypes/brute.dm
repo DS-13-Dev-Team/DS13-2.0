@@ -51,7 +51,7 @@
 	necromorph_type_path = /mob/living/carbon/human/necromorph/brute
 	tier = 3
 	biomass_cost = 360
-	biomass_spent_required = 2000
+	biomass_spent_required = 1000
 	melee_damage_lower = 24
 	melee_damage_upper = 28
 	max_health = 510
