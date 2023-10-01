@@ -1,4 +1,4 @@
-
+/* This is a finisher, it's supposed to be used against vulnurable survivors that are incapable of resisting the onslaught of necromorphs*/
 
 /datum/action/cooldown/necro/finisher
 	name = "finisher"
@@ -6,32 +6,32 @@
 	cooldown_time = 2 SECONDS
 	click_to_activate = TRUE
 	/// Delay before the finisher actually occurs
-	var/finisher_delay = 2 SECONDS
-	/// The maximum amount of time we can finisher
-	var/finisher_time = 4 SECONDS
-	/// The initial damage the finisher does to the head limb trying to rip it off
-	var/finisher_damage = 50
+	var/finisher_delay = 1 SECOND
+	/// The time when we started finishing the target for a finisher
+	var/finisher_start
+	/// The maximum amount of time we're finishing the target for a finisher
+	var/finisher_end
+	/// Every second the target hasn't broken out of the finisher grapple, this amount of damage is dealt to the cranium
+	var/finisher_damage = 30
 	/// If the victim breaks out of the finisher clutches
-	var/finisher_stagger = 4 SECONDS
+	var/finisher_stagger = 3 SECONDS
 	/// If the current move is being triggered by us or not
 	var/actively_moving = FALSE
 	var/valid_steps_taken = 0
+	var/speed_per_step = 0.50
 	var/max_steps_buildup = 2
 	var/atom/target_atom
 
-
-	var/force_time	=	0				//How long are we forced to stay curled up? There should always be a minimum on this to prevent spam. It shouldn't be
-	var/automatic = FALSE				//Did we curl up manually or automatically
-	var/animtime = 1 SECOND //How long the animation to curl/uncurl actually takes
-
-	//Extra runtime vars
-	var/started_at	=	0				//When did we curl up
-	var/stopped_at	=	0				//When did we uncurl
+	var/exegrab_anim = 0.5 SECOND 		//How long the animation to initiate an execution grapple
+	var/started_at	=	0				//When did we start the execution grapple
+	var/stopped_at	=	0				//When did we stop execution grapple
 	var/cached_pixels_x
 	var/cached_pixels_y
 	var/matrix/cached_transform
 	var/force_cooldown_timer
 	var/force_notify_timer
+
+	var/exe_animtime = 1 SECOND //How long the animation to execute actually takes
 
 /datum/action/cooldown/necro/finisher/PreActivate(atom/target)
 var/turf/T = get_turf(target)
@@ -47,6 +47,16 @@ var/turf/T = get_turf(target)
 		to_chat(owner, span_notice("You can't peform an execution on a necromorph!"))
 		return FALSE
 
+	target_atom = target
+
+	if(isturf(target))
+		RegisterSignal(target, COMSIG_ATOM_ENTERED, PROC_REF(on_target_loc_entered))
+		else
+			var/static/list/loc_connections = list(
+				COMSIG_ATOM_ENTERED = PROC_REF(on_target_loc_entered),
+		)
+		AddComponent(/datum/component/connect_loc_behalf, target, loc_connections)
+
 	return ..()
 
 /datum/action/cooldown/necro/finisher/Activate(atom/target)
@@ -59,20 +69,20 @@ var/turf/T = get_turf(target)
 	var/mob/living/carbon/human/necromorph/finisher = owner
 
 	actively_moving = FALSE
-	finisher.finishing = TRUE
+	finisher.moving = TRUE
 	RegisterSignal(finisher, COMSIG_MOVABLE_BUMP, PROC_REF(on_bump))
 	RegisterSignal(finisher, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_move))
 	RegisterSignal(finisher, COMSIG_MOVABLE_MOVED, PROC_REF(on_moved))
 	finisher.setDir(get_dir(finisher, target_atom))
 	do_finisher_indicator(target_atom)
 
-	var/datum/move_loop/new_loop = SSmove_manager.move_towards(finisher, target_atom, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
+	var/datum/finisher/finishing = SSmove_manager.move_towards(finisher, target_atom, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
 	if(!new_loop)
 		UnregisterSignal(finisher, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED))
 		return
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_PREPROCESS_CHECK, PROC_REF(pre_move))
 	RegisterSignal(new_loop, COMSIG_MOVELOOP_POSTPROCESS, PROC_REF(post_move))
-	RegisterSignal(new_loop, COMSIG_MOVELOOP_STOP, PROC_REF(finisher_end))
+	RegisterSignal(new_loop, COMSIG_MOVELOOP_STOP, PROC_REF(move_end))
 	RegisterSignal(finisher, COMSIG_MOB_STATCHANGE, PROC_REF(stat_changed))
 	RegisterSignal(finisher, COMSIG_LIVING_UPDATED_RESTING, PROC_REF(update_resting))
 
@@ -92,11 +102,11 @@ var/turf/T = get_turf(target)
 	SIGNAL_HANDLER
 	actively_moving = FALSE
 
-/datum/action/cooldown/necro/finisher/proc/finisher_end(datum/move_loop/source)
+/datum/action/cooldown/necro/finisher/proc/move_end(datum/move_loop/source)
 	SIGNAL_HANDLER
 	var/mob/living/carbon/human/necromorph/finisher = source.moving
 	UnregisterSignal(finisher, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE, COMSIG_LIVING_UPDATED_RESTING))
-	finisher.charging = FALSE
+	finisher.moving = FALSE
 	finisher.remove_movespeed_modifier(/datum/movespeed_modifier/necro_finisher)
 	StartCooldown()
 	SEND_SIGNAL(owner, COMSIG_FINISHED_FINISH)
@@ -146,8 +156,15 @@ var/turf/T = get_turf(target)
 				return
 		shake_camera(target, 4, 3)
 		shake_camera(source, 2, 3)
-		target.visible_message("<span class='danger'>[source] slams into [target]!</span>", "<span class='userdanger'>[source] tramples you into the ground!</span>")
-		target.Knockdown(6)
+		target.visible_message("<span class='danger'>[source] clasps [target] in its grasp! Teeth digging into the neck!</span>", "<span class='userdanger'>[source] clasps you in its arms!</br>You feel a sharp pain coming from your neck!</span>")
+
+		finister_start = world.time
+		finisher_end = world.time + 4
+
+		if(finisher_start >= finisher_end)
+
+
+
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)
