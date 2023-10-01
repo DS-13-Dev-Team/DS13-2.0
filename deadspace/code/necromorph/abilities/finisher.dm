@@ -1,17 +1,18 @@
 /* This is a finisher, it's supposed to be used against vulnurable survivors that are incapable of resisting the onslaught of necromorphs*/
 
+
+	/// Every second the target hasn't broken out of the finisher grapple, this amount of damage is dealt to the cranium
+#define FINISHER_DAMAGE_PER_SECOND 50
 /datum/action/cooldown/necro/finisher
 	name = "finisher"
 	desc = "Allows you to deal extraordinary amounts of damage to weakened humans, guarantees death of its victims upon completion."
 	cooldown_time = 2 SECONDS
 	click_to_activate = TRUE
-	/// Delay before the finisher actually occurs
-	var/finisher_delay = 1 SECOND
-	/// The time when we started finishing the target for a finisher
-	var/finisher_start
-	/// The maximum amount of time we're finishing the target for a finisher
+	/// Delay before the finisher does a rush towards its target to force a grapple
+	var/rush_delay = 2 SECONDS
+	/// The maximum amount of time we're rushing the target for a finisher
 	var/finisher_end
-	/// Every second the target hasn't broken out of the finisher grapple, this amount of damage is dealt to the cranium
+	/// Initial damage dealt to the target's head when starting the finisher
 	var/finisher_damage = 30
 	/// If the victim breaks out of the finisher clutches
 	var/finisher_stagger = 3 SECONDS
@@ -22,21 +23,15 @@
 	var/max_steps_buildup = 2
 	var/atom/target_atom
 
-	var/exegrab_anim = 0.5 SECOND 		//How long the animation to initiate an execution grapple
-	var/started_at	=	0				//When did we start the execution grapple
-	var/stopped_at	=	0				//When did we stop execution grapple
-	var/cached_pixels_x
-	var/cached_pixels_y
-	var/matrix/cached_transform
-	var/force_cooldown_timer
-	var/force_notify_timer
-
-	var/exe_animtime = 1 SECOND //How long the animation to execute actually takes
+	//How long the animation to initiate a finisher grapple
+	var/exegrab_anim = 0.5 SECONDS
+	//How long the animation to finish actually takes
+	var/exe_animtime = 1 SECONDS
 
 /datum/action/cooldown/necro/finisher/PreActivate(atom/target)
 var/turf/T = get_turf(target)
 	if(!T)
-		to_chat(owner, span_notice("You must target a human to execute them!"))
+		to_chat(owner, span_notice("You must target a human to finish them!"))
 		return FALSE
 	if(!ishuman(target))
 		for(var/mob/living/carbon/human/hummie in view(1, T))
@@ -44,7 +39,7 @@ var/turf/T = get_turf(target)
 				target = hummie
 				break
 	if(target == owner || isnecromorph(target))
-		to_chat(owner, span_notice("You can't peform an execution on a necromorph!"))
+		to_chat(owner, span_notice("You can't peform a finisher on a necromorph!"))
 		return FALSE
 
 	target_atom = target
@@ -62,10 +57,10 @@ var/turf/T = get_turf(target)
 /datum/action/cooldown/necro/finisher/Activate(atom/target)
 	. = TRUE
 	// Start pre-cooldown so that the ability can't come up while the finisher is happening
-	StartCooldown(finisher_time+finisher_delay+1)
-	addtimer(CALLBACK(src, PROC_REF(do_finisher)), finisher_delay)
+	StartCooldown(finisher_time+rush_delay+1)
+	addtimer(CALLBACK(src, PROC_REF(do_rush)), rush_delay)
 
-/datum/action/cooldown/necro/finisher/proc/do_finisher()
+/datum/action/cooldown/necro/finisher/proc/do_rush()
 	var/mob/living/carbon/human/necromorph/finisher = owner
 
 	actively_moving = FALSE
@@ -74,9 +69,9 @@ var/turf/T = get_turf(target)
 	RegisterSignal(finisher, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_move))
 	RegisterSignal(finisher, COMSIG_MOVABLE_MOVED, PROC_REF(on_moved))
 	finisher.setDir(get_dir(finisher, target_atom))
-	do_finisher_indicator(target_atom)
+	do_rush_indicator(target_atom)
 
-	var/datum/finisher/finishing = SSmove_manager.move_towards(finisher, target_atom, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
+	var/datum/finisher/rushing = SSmove_manager.move_towards(finisher, target_atom, priority = MOVEMENT_ABOVE_SPACE_PRIORITY)
 	if(!new_loop)
 		UnregisterSignal(finisher, list(COMSIG_MOVABLE_BUMP, COMSIG_MOVABLE_PRE_MOVE, COMSIG_MOVABLE_MOVED))
 		return
@@ -154,34 +149,28 @@ var/turf/T = get_turf(target)
 				shake_camera(source, 4, 3)
 				shake_camera(target, 2, 1)
 				return
+		///? Do a grab
+		RegisterSignal(finisher, COMSIG_LIVING_START_PULL, PROC_REF(do_finisher))
+		RegisterSignal(target, COMSIG_LIVING_GET_PULLED, PROC_REF(get_finished))
+
 		shake_camera(target, 4, 3)
 		shake_camera(source, 2, 3)
-		target.visible_message("<span class='danger'>[source] clasps [target] in its grasp! Teeth digging into the neck!</span>", "<span class='userdanger'>[source] clasps you in its arms!</br>You feel a sharp pain coming from your neck!</span>")
-
-		finister_start = world.time
-		finisher_end = world.time + 4
-
-		if(finisher_start >= finisher_end)
-
-
+		target.visible_message("<span class='danger'>[source] clasps [target] in its grasp! Teeth ripping into the base of [target]'s neck!</span>", "<span class='userdanger'>[source] clasps you in its arms! You feel a sharp pain coming from your neck as [source] digs in!</span>")
 
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)
 		source.Stun(6)
+	///? Finisher deals progressive damage
+/datum/action/cooldown/necro/finisher/proc/do_finisher(mob/living/carbon/human/target, delta_time)
+	if(target.stat != DEAD || target.health > target.maxHealth * 0.1)
+		target.adjustBruteLoss(FINISHER_DAMAGE_PER_SECOND * delta_time, TRUE)
+		return
+	else
 
+/datum/action/cooldown/necro/finisher/proc/get_finished(mob/living/carbon/human/target, mob/living/carbon/human/necromorph/source)
+	if(target)
 
-
-
-/datum/action/cooldown/necro/finisher/proc/finishing()
-
-	.=..()
-	if (.)
-		//We must face sideways to perform this move.
-		if (source.x > source.x)
-			source.facedir(EAST)
-		else
-			source.facedir(WEST)
 
 /datum/action/cooldown/necro/finisher/proc/update_resting(atom/movable/source, resting)
 	SIGNAL_HANDLER
