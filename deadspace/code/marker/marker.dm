@@ -14,9 +14,6 @@
 
 	necro_spawn_atoms += src
 
-	//Add the baseline income
-	add_biomass_source(/datum/biomass_source/baseline, src)
-
 	START_PROCESSING(SSobj, src)
 
 /obj/structure/marker/Destroy()
@@ -93,7 +90,9 @@
 	if(active)
 		return
 	active = TRUE
-	change_marker_biomass(150)
+	change_marker_biomass(250) //Marker given a biomass injection, enough for a small team and some growing
+	change_signal_biomass(50) //Signals given biomass injection for general spreading
+	add_biomass_source(/datum/biomass_source/baseline, src) //Base income for marker
 	for(var/mob/camera/marker_signal/eye as anything in marker_signals)
 		for(var/datum/action/cooldown/necro/psy/ability as anything in eye.abilities)
 			if((ability.marker_flags & SIGNAL_ABILITY_PRE_ACTIVATION))
