@@ -7,12 +7,11 @@
 	name = "finisher"
 	desc = "Allows you to deal extraordinary amounts of damage to weakened humans, guarantees death of its victims upon completion."
 	cooldown_time = 2 SECONDS
-	rush_time = 4 SECONDS
 	click_to_activate = TRUE
 	/// Delay before the finisher does a rush towards its target to force a grapple
 	var/rush_delay = 2 SECONDS
 	/// The maximum amount of time we're rushing the target for a finisher
-	var/finisher_end
+	var/rush_time = 3 SECONDS
 	/// Initial damage dealt to the target's head when starting the finisher
 	var/finisher_damage = 30
 	/// If the victim breaks out of the finisher clutches
@@ -23,7 +22,8 @@
 	var/speed_per_step = 0.50
 	var/max_steps_buildup = 2
 	var/atom/target_atom
-
+	/// How long the execution is going to take compared to world.time
+	var/finisher_end
 	//How long the animation to initiate a finisher grapple
 	var/exegrab_anim = 0.5 SECONDS
 	//How long the animation to finish actually takes
