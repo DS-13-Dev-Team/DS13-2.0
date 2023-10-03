@@ -115,7 +115,7 @@ var/turf/T = get_turf(target)
 	if(new_stat > CONSCIOUS)
 		SSmove_manager.stop_looping(owner)
 
-/datum/action/cooldown/necro/finisher/proc/do_finish_indicator(atom/rush_target)
+/datum/action/cooldown/necro/finisher/proc/do_rush_indicator(atom/rush_target)
 	return
 
 /datum/action/cooldown/necro/finisher/proc/on_move(atom/source, atom/new_loc)
@@ -167,16 +167,16 @@ var/turf/T = get_turf(target)
 	///? do exegrab_anim to grab
 		finisher_end = world.time + 3 SECONDS
 		while(world.time <= finisher_end)
+			do_finisher_indicator(source, target)
 			target.adjustBruteLoss(FINISHER_DAMAGE_PER_SECOND * delta_time, TRUE)++
-			shake_camera(target, 4, 3)
-			shake_camera(source, 2, 3)
 		return
 		if(world.time >= finisher_end)
 	///? do exe_anim to kill off the target
 	else
+		UnregisterSignal(finisher, COMSIG_LIVING_START_PULL)
 		shake_camera(source, 4, 3)
+		target.visible_message("<span class='danger'>[target] writhes out of the grasp by [source]! [source] has lost its footing!</span>", "<span class='userdanger'>You wriggle out of [source]'s restraint! Your neck relaxes as teeth of [source] are no longer in.</span>")
 		source.Stun(6)
-		UnregisterSignal(finisher, list(COMSIG_LIVING_START_PULL))
 /datum/action/cooldown/necro/finisher/proc/update_resting(atom/movable/source, resting)
 	SIGNAL_HANDLER
 	if(resting)

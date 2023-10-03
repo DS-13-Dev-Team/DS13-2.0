@@ -23,6 +23,7 @@
 		/datum/action/cooldown/necro/charge/slasher = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN,
 		/datum/action/cooldown/necro/dodge = COMSIG_KB_NECROMORPH_ABILITY_DODGE_DOWN,
 		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
+		/datum/action/cooldown/necro/finisher = COMSIG_KB_NECROMORPH_ABILITY_FINISHER_DOWN,
 	)
 	minimap_icon = "slasher"
 	implemented = TRUE
@@ -77,8 +78,9 @@
 	source.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_HIGH, TRUE, 3)
 
 //bwuh, how
-/datum/action/cooldown/necro/finisher/slasher/do_finisher_indicator(atom/finish_target)
+/datum/action/cooldown/necro/finisher/slasher/do_finisher_indicator(atom/finish_target, atom/finish_source)
 	var/mob/living/carbon/human/necromorph/source = owner
+	var/mob/living/carbon/human/target = target
 	var/matrix/new_matrix = matrix(source.transform)
 	var/shake_dir = pick(-1, 1)
 	new_matrix.Turn(16*shake_dir)
