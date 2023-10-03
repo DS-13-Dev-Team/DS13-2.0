@@ -7,6 +7,7 @@
 	name = "finisher"
 	desc = "Allows you to deal extraordinary amounts of damage to weakened humans, guarantees death of its victims upon completion."
 	cooldown_time = 2 SECONDS
+	rush_time = 4 SECONDS
 	click_to_activate = TRUE
 	/// Delay before the finisher does a rush towards its target to force a grapple
 	var/rush_delay = 2 SECONDS
@@ -26,7 +27,7 @@
 	//How long the animation to initiate a finisher grapple
 	var/exegrab_anim = 0.5 SECONDS
 	//How long the animation to finish actually takes
-	var/exe_animtime = 1 SECONDS
+	var/exe_anim = 1 SECONDS
 
 /datum/action/cooldown/necro/finisher/PreActivate(atom/target)
 var/turf/T = get_turf(target)
@@ -57,7 +58,7 @@ var/turf/T = get_turf(target)
 /datum/action/cooldown/necro/finisher/Activate(atom/target)
 	. = TRUE
 	// Start pre-cooldown so that the ability can't come up while the finisher is happening
-	StartCooldown(finisher_time+rush_delay+1)
+	StartCooldown(rush_time+rush_delay+1)
 	addtimer(CALLBACK(src, PROC_REF(do_rush)), rush_delay)
 
 /datum/action/cooldown/necro/finisher/proc/do_rush()
@@ -114,7 +115,7 @@ var/turf/T = get_turf(target)
 	if(new_stat > CONSCIOUS)
 		SSmove_manager.stop_looping(owner)
 
-/datum/action/cooldown/necro/finisher/proc/do_finish_indicator(atom/finisher_target)
+/datum/action/cooldown/necro/finisher/proc/do_finish_indicator(atom/rush_target)
 	return
 
 /datum/action/cooldown/necro/finisher/proc/on_move(atom/source, atom/new_loc)
@@ -150,28 +151,32 @@ var/turf/T = get_turf(target)
 				shake_camera(target, 2, 1)
 				return
 		///? Do a grab
-		RegisterSignal(finisher, COMSIG_LIVING_START_PULL, PROC_REF(do_finisher))
-		RegisterSignal(target, COMSIG_LIVING_GET_PULLED, PROC_REF(get_finished))
-
+		target.set_pulledby(source)
+		target.setGrabState(GRAB_AGGRESSIVE)
 		shake_camera(target, 4, 3)
 		shake_camera(source, 2, 3)
 		target.visible_message("<span class='danger'>[source] clasps [target] in its grasp! Teeth ripping into the base of [target]'s neck!</span>", "<span class='userdanger'>[source] clasps you in its arms! You feel a sharp pain coming from your neck as [source] digs in!</span>")
-
+		RegisterSignal(finisher, COMSIG_LIVING_START_PULL, PROC_REF(do_finisher))
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)
 		source.Stun(6)
 	///? Finisher deals progressive damage
-/datum/action/cooldown/necro/finisher/proc/do_finisher(mob/living/carbon/human/target, delta_time)
-	if(target.stat != DEAD || target.health > target.maxHealth * 0.1)
-		target.adjustBruteLoss(FINISHER_DAMAGE_PER_SECOND * delta_time, TRUE)
+/datum/action/cooldown/necro/finisher/proc/do_finisher(mob/living/carbon/human/target, mob/living/carbon/human/necromorph/source, delta_time)
+	if(target.pulledby.grab_state == GRAB_AGGRESSIVE && target.stat != DEAD)
+	///? do exegrab_anim to grab
+		finisher_end = world.time + 3 SECONDS
+		while(world.time <= finisher_end)
+			target.adjustBruteLoss(FINISHER_DAMAGE_PER_SECOND * delta_time, TRUE)++
+			shake_camera(target, 4, 3)
+			shake_camera(source, 2, 3)
 		return
+		if(world.time >= finisher_end)
+	///? do exe_anim to kill off the target
 	else
-
-/datum/action/cooldown/necro/finisher/proc/get_finished(mob/living/carbon/human/target, mob/living/carbon/human/necromorph/source)
-	if(target)
-
-
+		shake_camera(source, 4, 3)
+		source.Stun(6)
+		UnregisterSignal(finisher, list(COMSIG_LIVING_START_PULL))
 /datum/action/cooldown/necro/finisher/proc/update_resting(atom/movable/source, resting)
 	SIGNAL_HANDLER
 	if(resting)
