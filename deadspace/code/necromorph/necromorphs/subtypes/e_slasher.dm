@@ -24,6 +24,7 @@
 		/datum/action/cooldown/necro/dodge/enhanced = COMSIG_KB_NECROMORPH_ABILITY_DODGE_DOWN,
 		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
 		/datum/action/cooldown/necro/scream = COMSIG_KB_NECROMORPH_ABILITY_SCREAM_DOWN,
+		/datum/action/cooldown/necro/finisher = COMSIG_KB_NECROMORPH_ABILITY_FINISHER_DOWN,
 	)
 	minimap_icon = "e_slasher"
 	implemented = TRUE

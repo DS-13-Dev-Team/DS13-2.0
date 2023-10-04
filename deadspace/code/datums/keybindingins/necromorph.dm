@@ -25,6 +25,13 @@
 	description = "Shout to disorientate the enemy."
 	keybind_signal = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN
 
+/datum/keybinding/necromorph/finisher
+	hotkey_keys = list("Unbound")
+	name = "use_finisher"
+	full_name = "Necromorph Finisher"
+	description = "Attempt a lethal takedown on the enemy."
+	keybind_signal = COMSIG_KB_NECROMORPH_ABILITY_FINISHER_DOWN
+
 /datum/keybinding/necromorph/longshout
 	hotkey_keys = list("Unbound")
 	name = "use_long_shout"
