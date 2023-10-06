@@ -1,0 +1,8 @@
+author: MisterGrimm
+delete-after: true
+changes:
+  - balance: Marker income does not start until marker activation
+  - balance: Necromorph free biomass on activation divvied. 250 goes to marker, 50
+      goes to signals.
+  - balance: Eslasher removed from nest list
+  - bugfix: Corruption can pass through tables, rails, and grilles now
