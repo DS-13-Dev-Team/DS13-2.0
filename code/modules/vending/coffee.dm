@@ -19,6 +19,7 @@
 	payment_department = ACCOUNT_STATION_MASTER
 	light_mask = "coffee-light-mask"
 	light_color = COLOR_DARK_MODERATE_ORANGE
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 /obj/item/vending_refill/coffee
 	machine_name = "Solar's Best Hot Drinks"

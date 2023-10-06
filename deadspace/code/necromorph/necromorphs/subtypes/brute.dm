@@ -28,7 +28,7 @@
 			var/fling_dist = rand(2,5)
 			var/turf/destination = mob_target.loc
 			var/turf/temp
-		
+
 			for(var/i in 1 to fling_dist)
 				temp = get_step(destination, fling_dir)
 				if(!temp)

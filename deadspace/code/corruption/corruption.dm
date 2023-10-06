@@ -23,6 +23,7 @@
 	alpha = 20
 	resistance_flags = UNACIDABLE
 	obj_flags = CAN_BE_HIT
+	pass_flags = PASSTABLE | PASSGRILLE
 	interaction_flags_atom = NONE
 	/// Node that keeps us alive
 	var/datum/corruption_node/master

@@ -12,7 +12,7 @@
 	desc = "The frontline soldier of the necromorph horde. Slow when not charging, but its blade arms make for powerful melee attacks"
 	ui_icon = 'deadspace/icons/necromorphs/slasher_enhanced.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/slasher/enhanced
-	nest_allowed = TRUE
+	nest_allowed = FALSE
 	tier = 2
 	biomass_cost = 125
 	biomass_spent_required = 680
