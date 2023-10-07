@@ -1,6 +1,0 @@
-author: MisterGrimm
-delete-after: true
-changes:
-  - balance: Necromorph spit now has immediate damage on-hit
-  - balance: Necro spit armor piercing reduced from 50% to 25%
-  - balance: Snapshot projectile speed increased from 50% to 70%
