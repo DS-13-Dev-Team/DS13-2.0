@@ -5292,9 +5292,11 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/break_room)
 "bmp" = (
-/obj/machinery/portable_atmospherics/canister/hydrogen,
-/obj/effect/turf_decal/box,
-/obj/structure/window/reinforced/spawner,
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/box/red,
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
 "bmq" = (
@@ -9977,6 +9979,10 @@
 	dir = 1
 	},
 /area/shuttle/abandoned)
+"eio" = (
+/obj/effect/spawner/structure/window/reinforced/grille,
+/turf/open/floor/plating,
+/area/station/engineering/supermatter/room)
 "eip" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical{
@@ -12653,7 +12659,6 @@
 /area/station/science/robotics/lab)
 "gaI" = (
 /obj/structure/rack,
-/obj/structure/window/reinforced/spawner,
 /obj/structure/cable,
 /obj/item/mod/control/pre_equipped/ds/patrol,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -13912,6 +13917,7 @@
 	pixel_x = 8;
 	pixel_y = -6
 	},
+/obj/item/disk/holodisk/ds13/sm,
 /turf/open/floor/iron,
 /area/station/engineering/monitoring)
 "gYd" = (
@@ -13950,7 +13956,9 @@
 /area/station/maintenance/starboard/aft)
 "gZa" = (
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
 /turf/open/floor/iron,
 /area/station/engineering/monitoring)
 "gZg" = (
@@ -15576,9 +15584,7 @@
 "ijE" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/structure/window/reinforced/spawner/north,
-/obj/effect/turf_decal/box/white{
-	color = "#52B4E9"
-	},
+/obj/effect/turf_decal/box,
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
 "ikc" = (
@@ -20660,7 +20666,6 @@
 /area/station/engineering/storage/tech)
 "mcF" = (
 /obj/structure/rack,
-/obj/structure/window/reinforced/spawner/north,
 /obj/item/ammo_box/magazine/divet,
 /obj/item/ammo_box/magazine/divet,
 /obj/item/ammo_box/magazine/divet,
@@ -20796,7 +20801,6 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "mji" = (
-/obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/east,
 /obj/structure/cable,
 /obj/item/storage/box/firingpins,
@@ -22764,7 +22768,6 @@
 /obj/structure/rack,
 /obj/item/storage/box/teargas,
 /obj/item/storage/box/teargas,
-/obj/structure/window/reinforced/spawner,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/maint_center,
@@ -22993,7 +22996,6 @@
 /area/station/medical/cryo)
 "nTL" = (
 /obj/structure/rack,
-/obj/structure/window/reinforced/spawner/north,
 /obj/item/shield/riot{
 	pixel_x = 3;
 	pixel_y = -3
@@ -27091,7 +27093,6 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/structure/window/reinforced/spawner,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -27356,7 +27357,7 @@
 /area/station/maintenance/starboard/aft)
 "rrZ" = (
 /obj/machinery/camera/emp_proof/directional/east,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/holopad,
 /turf/open/floor/iron,
 /area/station/engineering/monitoring)
 "rsi" = (
@@ -30766,7 +30767,6 @@
 "tWW" = (
 /obj/structure/rack,
 /obj/item/gun/grenadelauncher,
-/obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -32947,8 +32947,8 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms)
 "vIE" = (
-/obj/machinery/portable_atmospherics/canister/hydrogen,
-/obj/effect/turf_decal/box,
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+/obj/effect/turf_decal/box/red,
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
 "vIQ" = (
@@ -33402,7 +33402,6 @@
 	pixel_x = 6;
 	pixel_y = -2
 	},
-/obj/structure/window/reinforced/spawner/north,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/ai_monitored/security/armory/upper)
 "vYM" = (
@@ -34733,7 +34732,6 @@
 "wWy" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/medical/medkit_rare,
-/obj/structure/window/reinforced/spawner/north,
 /obj/structure/window/reinforced/spawner/west,
 /obj/effect/spawner/random/medical/medkit,
 /turf/open/floor/deadspace/random/maint_center,
@@ -34857,6 +34855,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
+"wZZ" = (
+/turf/open/floor/iron/ported/techfloor,
+/area/station/engineering/supermatter/room)
 "xae" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/railing{
@@ -34949,7 +34950,6 @@
 /area/station/engineering/main)
 "xdl" = (
 /obj/structure/rack,
-/obj/structure/window/reinforced/spawner/north,
 /obj/structure/window/reinforced/spawner/east,
 /obj/item/ammo_box/magazine/ds12g/rb,
 /obj/item/ammo_box/magazine/ds12g/rb,
@@ -48134,9 +48134,9 @@ wKf
 nrl
 wLk
 xMX
-cfj
-cfj
-cfj
+aSa
+stU
+wZZ
 cfj
 apG
 apG
@@ -48333,13 +48333,13 @@ hyz
 aSa
 aGp
 bjM
+eio
+eio
 cfj
 cfj
 cfj
 cfj
-apG
-apG
-apG
+cfj
 apG
 apG
 apG
@@ -48535,9 +48535,9 @@ hyz
 aSa
 aGp
 bjM
+bmp
+vIE
 cfj
-apG
-apG
 apG
 apG
 apG
@@ -48737,9 +48737,9 @@ aFI
 hPi
 pyg
 rGO
+bmp
+vIE
 cfj
-apG
-apG
 apG
 apG
 apG
@@ -48939,9 +48939,9 @@ nQv
 bjM
 ljG
 bjM
+bmp
+vIE
 cfj
-apG
-apG
 apG
 apG
 apG
@@ -49142,8 +49142,8 @@ aBq
 aHS
 dRx
 cfj
-apG
-apG
+cfj
+cfj
 apG
 apG
 apG
@@ -49541,8 +49541,8 @@ bSa
 ovz
 jOG
 ijE
-vIE
-bmp
+aKn
+viG
 iDg
 fbf
 cfj
@@ -50940,7 +50940,7 @@ qRq
 lCh
 wYe
 lCh
-gSl
+qRq
 apG
 gSl
 umB
@@ -51142,7 +51142,7 @@ qRq
 qRq
 rQo
 qRq
-gSl
+qRq
 apG
 gSl
 cfz
