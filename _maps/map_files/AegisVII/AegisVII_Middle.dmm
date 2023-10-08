@@ -265,6 +265,7 @@
 /obj/item/storage/lunchbox/cec,
 /obj/effect/turf_decal/box,
 /obj/machinery/light/directional/south,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "afG" = (
@@ -428,6 +429,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/cec,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "ahN" = (
@@ -783,11 +785,10 @@
 "amO" = (
 /obj/machinery/light/directional/north,
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/seeker,
-/obj/item/ammo_box/magazine/seeker,
-/obj/item/ammo_box/magazine/seeker,
-/obj/item/ammo_box/magazine/seeker,
-/obj/item/gun/ballistic/deadspace/twohanded/seeker,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/gun/ballistic/deadspace/twohanded/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -1393,6 +1394,7 @@
 "atc" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/maint_center,
 /area/mine/storage)
 "atd" = (
@@ -1573,6 +1575,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/egov,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "avW" = (
@@ -1637,6 +1640,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/unitology,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "awy" = (
@@ -1866,9 +1870,10 @@
 /area/station/commons/storage/tools)
 "aAK" = (
 /obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/pistol/divet,
-/obj/item/ammo_box/magazine/divet/hp,
-/obj/item/ammo_box/magazine/divet/hp,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/gun/ballistic/shotgun/scl_shotgun,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -2769,6 +2774,7 @@
 /obj/item/storage/lunchbox/egov,
 /obj/effect/turf_decal/box,
 /obj/machinery/light/directional/south,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "aJH" = (
@@ -2820,19 +2826,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "aJU" = (
-/obj/structure/rack,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
-/obj/item/ammo_box/magazine/ds12g/slug,
+/obj/machinery/airalarm/directional/west,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
@@ -4567,6 +4561,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/unitology,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "beU" = (
@@ -5314,13 +5309,6 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/iron/dark,
 /area/station/medical/break_room)
-"bmG" = (
-/obj/machinery/sleeper{
-	icon_state = "sleeper";
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/station/medical/treatment_center)
 "bmH" = (
 /obj/machinery/door/window/left/directional/west{
 	name = "P-Sec Infirmary Station"
@@ -5762,6 +5750,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/egov,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "bqf" = (
@@ -6096,6 +6085,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/unitology,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "btS" = (
@@ -6918,6 +6908,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/cec,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "bWD" = (
@@ -7254,6 +7245,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/unitology,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "chM" = (
@@ -9063,11 +9055,10 @@
 /turf/open/misc/asteroid,
 /area/station/hallway/primary/fore)
 "dBh" = (
-/obj/machinery/bodyscanner_console{
-	dir = 8
-	},
+/obj/structure/table/optable,
+/obj/item/clothing/mask/breath/medical,
 /turf/open/floor/iron/white,
-/area/station/medical/treatment_center)
+/area/station/medical/surgery/theatre)
 "dBI" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -10235,6 +10226,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/unitology,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "erT" = (
@@ -10604,6 +10596,7 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
 /obj/machinery/airalarm/directional/north,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/maint_center,
 /area/mine/storage)
 "eGy" = (
@@ -11862,6 +11855,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/unitology,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "fzC" = (
@@ -12310,14 +12304,10 @@
 /turf/open/floor/iron/norn,
 /area/station/hallway/primary/fore)
 "fPI" = (
-/obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/pistol/divet,
-/obj/item/ammo_box/magazine/divet/ap,
-/obj/item/ammo_box/magazine/divet/ap,
-/turf/open/floor/deadspace/random/slides{
-	dir = 8
-	},
-/area/station/security/checkpoint/customs)
+/obj/structure/table/optable,
+/obj/item/clothing/mask/breath/medical,
+/turf/open/floor/iron/white,
+/area/station/medical/surgery)
 "fPL" = (
 /obj/machinery/air_sensor/nitrous_tank,
 /obj/machinery/camera/directional/east{
@@ -12660,8 +12650,19 @@
 "gaI" = (
 /obj/structure/rack,
 /obj/structure/cable,
-/obj/item/mod/control/pre_equipped/ds/patrol,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/shield/riot{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/shield/riot{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/shield/riot{
+	pixel_x = 3;
+	pixel_y = -3
+	},
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "gaK" = (
@@ -12705,14 +12706,11 @@
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "gbl" = (
-/obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/pistol/divet,
-/obj/item/ammo_box/magazine/divet/ap,
-/obj/item/ammo_box/magazine/divet/ap,
-/turf/open/floor/deadspace/random/slides{
-	dir = 8
-	},
-/area/station/security/checkpoint/science)
+/obj/structure/table,
+/obj/effect/spawner/random/maintenance,
+/obj/effect/spawner/random/deadspace/ammo,
+/turf/open/floor/plating,
+/area/station/commons/dorms/cryo)
 "gbp" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -15608,6 +15606,7 @@
 /obj/item/storage/lunchbox/egov,
 /obj/effect/turf_decal/box,
 /obj/machinery/camera/autoname/directional/south,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "ikC" = (
@@ -16403,10 +16402,6 @@
 "iSU" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/miningoffice)
-"iTt" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/turf/open/floor/catwalk_floor/iron_dark,
-/area/station/ai_monitored/security/armory/upper)
 "iTx" = (
 /obj/machinery/door/airlock/research{
 	name = "Research Division Access";
@@ -16523,11 +16518,10 @@
 /turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "iWH" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/table/optable,
-/obj/item/clothing/mask/breath/medical,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/bodyscanner,
 /turf/open/floor/iron/white,
-/area/station/medical/surgery/theatre)
+/area/station/medical/treatment_center)
 "iWL" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/chair{
@@ -18822,6 +18816,12 @@
 	dir = 8
 	},
 /obj/structure/rack,
+/obj/item/ammo_box/magazine/ds12g/rb,
+/obj/item/ammo_box/magazine/ds12g/rb,
+/obj/item/ammo_box/magazine/ds12g/rb,
+/obj/item/ammo_box/magazine/ds12g/beanbag,
+/obj/item/ammo_box/magazine/ds12g/beanbag,
+/obj/item/ammo_box/magazine/ds12g/beanbag,
 /turf/open/floor/deadspace/mono,
 /area/station/security/range)
 "kKT" = (
@@ -18880,7 +18880,11 @@
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
 "kNb" = (
-/obj/machinery/bodyscanner_console,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/sleeper{
+	icon_state = "sleeper";
+	dir = 8
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "kNc" = (
@@ -19828,6 +19832,7 @@
 /area/station/cargo/storage)
 "luw" = (
 /obj/structure/table,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/maint_left,
 /area/mine/storage)
 "luG" = (
@@ -20054,19 +20059,9 @@
 /turf/open/misc/ironsand,
 /area/station/science/lab)
 "lCQ" = (
-/obj/structure/rack,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
-/obj/item/ammo_box/magazine/pulse/hv,
+/obj/machinery/camera/motion/directional/west{
+	c_tag = "Armory - Internal"
+	},
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
@@ -20113,6 +20108,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/effect/turf_decal/box,
 /obj/machinery/light/directional/east,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "lEJ" = (
@@ -20666,18 +20662,12 @@
 /area/station/engineering/storage/tech)
 "mcF" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet/hp,
+/obj/item/ammo_box/magazine/divet/hp,
+/obj/item/ammo_box/magazine/divet/hp,
+/obj/item/ammo_box/magazine/divet/ap,
+/obj/item/ammo_box/magazine/divet/ap,
+/obj/item/ammo_box/magazine/divet/ap,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "mdc" = (
@@ -20803,10 +20793,9 @@
 "mji" = (
 /obj/structure/window/reinforced/spawner/east,
 /obj/structure/cable,
-/obj/item/storage/box/firingpins,
-/obj/item/storage/box/firingpins,
 /obj/structure/rack,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/mod/control/pre_equipped/ds/patrol,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "mjr" = (
@@ -22767,9 +22756,14 @@
 "nLy" = (
 /obj/structure/rack,
 /obj/item/storage/box/teargas,
-/obj/item/storage/box/teargas,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/storage/box/teargas,
+/obj/item/storage/box/flashbangs{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/storage/box/stingbangs,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "nMg" = (
@@ -22996,18 +22990,10 @@
 /area/station/medical/cryo)
 "nTL" = (
 /obj/structure/rack,
-/obj/item/shield/riot{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/shield/riot{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/shield/riot{
-	pixel_x = 3;
-	pixel_y = -3
-	},
+/obj/item/grenade/c4,
+/obj/item/grenade/c4,
+/obj/item/grenade/c4,
+/obj/item/grenade/c4,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "nTO" = (
@@ -25015,6 +25001,7 @@
 /obj/item/storage/lunchbox/unitology,
 /obj/effect/turf_decal/box,
 /obj/machinery/light/directional/west,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "pyP" = (
@@ -27085,16 +27072,9 @@
 /area/station/science/lobby)
 "rir" = (
 /obj/structure/rack,
-/obj/item/storage/box/flashbangs{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/storage/box/flashbangs{
-	pixel_x = -2;
-	pixel_y = -2
-	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/spawner/random/medical/medkit,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/ai_monitored/security/armory/upper)
 "rix" = (
@@ -27184,6 +27164,9 @@
 "rlo" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/bodyscanner_console{
+	dir = 8
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
 "rls" = (
@@ -27520,6 +27503,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/cec,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "ryA" = (
@@ -28484,6 +28468,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/egov,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "smj" = (
@@ -29859,6 +29844,11 @@
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /turf/open/floor/iron/white,
 /area/station/science/research)
+"trk" = (
+/obj/structure/table,
+/obj/effect/spawner/random/deadspace/ammo/mining,
+/turf/open/floor/deadspace/random/maint_right,
+/area/mine/storage)
 "trl" = (
 /obj/structure/chair/office/light{
 	dir = 1
@@ -29937,14 +29927,12 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/cec,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "ttC" = (
-/obj/structure/rack,
-/obj/item/grenade/c4,
-/obj/item/grenade/c4,
-/obj/item/grenade/c4,
-/obj/item/grenade/c4,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
@@ -30274,6 +30262,7 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
 /obj/structure/cable,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/maint_center,
 /area/mine/storage)
 "tFU" = (
@@ -30767,9 +30756,9 @@
 "tWW" = (
 /obj/structure/rack,
 /obj/item/gun/grenadelauncher,
-/obj/structure/window/reinforced/spawner/west,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/window/reinforced/spawner/west,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "tXn" = (
@@ -32022,6 +32011,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/egov,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "uTA" = (
@@ -32482,22 +32472,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "vqm" = (
-/obj/item/ammo_box/magazine/divet/ap,
-/obj/item/ammo_box/magazine/divet/ap,
-/obj/item/ammo_box/magazine/divet/ap,
-/obj/item/ammo_box/magazine/divet/ap,
-/obj/item/ammo_box/magazine/divet/hp,
-/obj/item/ammo_box/magazine/divet/hp,
-/obj/item/ammo_box/magazine/divet/hp,
-/obj/item/ammo_box/magazine/divet/hp,
-/obj/item/ammo_box/magazine/divet/extended,
-/obj/item/ammo_box/magazine/divet/extended,
-/obj/item/ammo_box/magazine/divet/extended,
-/obj/item/ammo_box/magazine/divet/extended,
-/obj/machinery/camera/motion/directional/west{
-	c_tag = "Armory - Internal"
-	},
-/obj/structure/rack,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
@@ -32757,9 +32732,10 @@
 /area/station/command/heads_quarters/rd)
 "vCp" = (
 /obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/pistol/divet,
-/obj/item/ammo_box/magazine/divet/hp,
-/obj/item/ammo_box/magazine/divet/hp,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_box/magazine/pulse,
+/obj/item/gun/ballistic/deadspace/twohanded/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -32906,6 +32882,7 @@
 /obj/structure/closet/secure_closet/ds/miner,
 /obj/item/storage/lunchbox/cec,
 /obj/effect/turf_decal/box,
+/obj/effect/spawner/random/deadspace/ammo/mining,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
 "vHK" = (
@@ -33034,12 +33011,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/science/lab)
-"vLr" = (
-/obj/machinery/bodyscanner{
-	dir = 8
-	},
-/turf/open/floor/iron/white,
-/area/station/medical/treatment_center)
 "vLC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -33386,22 +33357,7 @@
 /area/station/engineering/supermatter/room)
 "vYq" = (
 /obj/structure/rack,
-/obj/item/grenade/barrier{
-	pixel_x = 6;
-	pixel_y = -2
-	},
-/obj/item/grenade/barrier{
-	pixel_x = 6;
-	pixel_y = -2
-	},
-/obj/item/grenade/barrier{
-	pixel_x = 6;
-	pixel_y = -2
-	},
-/obj/item/grenade/barrier{
-	pixel_x = 6;
-	pixel_y = -2
-	},
+/obj/effect/spawner/random/medical/medkit_rare,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/ai_monitored/security/armory/upper)
 "vYM" = (
@@ -34466,17 +34422,6 @@
 /obj/structure/closet/secure_closet/personal,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
-"wOF" = (
-/obj/structure/rack,
-/obj/machinery/airalarm/directional/north,
-/obj/item/ammo_box/magazine/pulse,
-/obj/item/ammo_box/magazine/pulse,
-/obj/item/ammo_box/magazine/pulse,
-/obj/item/gun/ballistic/deadspace/twohanded/pulse,
-/turf/open/floor/deadspace/random/slides{
-	dir = 8
-	},
-/area/station/ai_monitored/security/armory/upper)
 "wOK" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -34503,10 +34448,11 @@
 /area/station/engineering/atmos)
 "wPw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/table/optable,
-/obj/item/clothing/mask/breath/medical,
+/obj/machinery/bodyscanner_console{
+	dir = 8
+	},
 /turf/open/floor/iron/white,
-/area/station/medical/surgery)
+/area/station/medical/treatment_center)
 "wPD" = (
 /obj/structure/railing{
 	dir = 9
@@ -34731,9 +34677,13 @@
 /area/station/hallway/primary/fore)
 "wWy" = (
 /obj/structure/rack,
-/obj/effect/spawner/random/medical/medkit_rare,
 /obj/structure/window/reinforced/spawner/west,
-/obj/effect/spawner/random/medical/medkit,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
+/obj/item/ammo_box/magazine/divet,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "wWC" = (
@@ -34951,12 +34901,22 @@
 "xdl" = (
 /obj/structure/rack,
 /obj/structure/window/reinforced/spawner/east,
-/obj/item/ammo_box/magazine/ds12g/rb,
-/obj/item/ammo_box/magazine/ds12g/rb,
-/obj/item/ammo_box/magazine/ds12g/rb,
-/obj/item/ammo_box/magazine/ds12g/rb,
-/obj/item/ammo_box/magazine/ds12g/rb,
-/obj/item/ammo_box/magazine/ds12g/rb,
+/obj/item/grenade/barrier{
+	pixel_x = 6;
+	pixel_y = -2
+	},
+/obj/item/grenade/barrier{
+	pixel_x = 6;
+	pixel_y = -2
+	},
+/obj/item/grenade/barrier{
+	pixel_x = 6;
+	pixel_y = -2
+	},
+/obj/item/grenade/barrier{
+	pixel_x = 6;
+	pixel_y = -2
+	},
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/ai_monitored/security/armory/upper)
 "xdu" = (
@@ -36008,6 +35968,8 @@
 /obj/item/ammo_box/magazine/divet/blank,
 /obj/item/ammo_box/magazine/divet/blank,
 /obj/item/ammo_box/magazine/divet/blank,
+/obj/item/ammo_box/magazine/divet/blank,
+/obj/item/ammo_box/magazine/divet/blank,
 /turf/open/floor/deadspace/mono,
 /area/station/security/range)
 "xVJ" = (
@@ -36393,10 +36355,10 @@
 /area/station/tcommsat/server)
 "yhN" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/ammo_box/magazine/divet,
-/obj/item/gun/ballistic/automatic/pistol/divet,
+/obj/item/gun/ballistic/shotgun/scl_shotgun,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
@@ -40248,7 +40210,7 @@ akW
 akW
 fXM
 bjW
-jLw
+gbl
 foA
 ali
 xyT
@@ -41053,7 +41015,7 @@ apG
 apG
 foA
 baF
-jLw
+gbl
 aTX
 akY
 aXu
@@ -44349,7 +44311,7 @@ aGn
 aGn
 hif
 amO
-iTt
+bzR
 icK
 bzR
 bzR
@@ -44752,7 +44714,7 @@ jYs
 ekm
 dWU
 hif
-wOF
+alZ
 hQL
 nLy
 mcF
@@ -48584,7 +48546,7 @@ qyC
 uxp
 aFM
 slx
-kNb
+mMz
 nFP
 mMz
 mMz
@@ -48786,8 +48748,8 @@ uGt
 skp
 yfW
 slx
-dvP
-nFP
+mMz
+kNb
 dXX
 xLF
 lfl
@@ -48988,9 +48950,9 @@ bhl
 skp
 aFM
 slx
-vLr
-nFP
-bmG
+mMz
+iWH
+dvP
 mMz
 mHG
 dAw
@@ -49190,9 +49152,9 @@ kHU
 fdo
 aFM
 slx
-dBh
+mMz
 rlo
-ivV
+wPw
 ivV
 bds
 dAw
@@ -50218,7 +50180,7 @@ aqF
 aqF
 aLn
 pZG
-mof
+fPI
 mof
 loL
 aLn
@@ -50420,7 +50382,7 @@ qUC
 qUC
 aLn
 wpf
-wPw
+rBk
 rBk
 hph
 aLn
@@ -52240,7 +52202,7 @@ grl
 oNI
 vGD
 wMA
-bnM
+dBh
 bnM
 bpY
 typ
@@ -52442,7 +52404,7 @@ qhb
 nos
 vGD
 wMA
-iWH
+wMA
 wMA
 ggJ
 hfB
@@ -56628,7 +56590,7 @@ bKU
 sdt
 apG
 ifr
-fPI
+vCp
 gJL
 gJL
 suj
@@ -56856,7 +56818,7 @@ boM
 nbT
 aoU
 fga
-gbl
+aAK
 hjU
 hjU
 jaN
@@ -65335,7 +65297,7 @@ apG
 apG
 apG
 pfR
-dXj
+trk
 pJH
 kfm
 dXj
@@ -67365,7 +67327,7 @@ okO
 lHS
 bcR
 lHS
-gKm
+lHS
 gKm
 brb
 gKm
