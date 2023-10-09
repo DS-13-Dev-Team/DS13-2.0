@@ -23,7 +23,7 @@
 	selfcharge = 1
 	charge_delay = 1
 	recoil = 0.8
-	fire_sound = 'deadspace/sound/weapons/guns/pulse_shot.ogg' //Test sound
+	fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_shot.ogg' //Test sound
 	// empty_sound = 'sound/weapons/guns/misc/overheat.ogg'
 	// empty_alarm_sound  = ^^above
 
@@ -54,6 +54,6 @@ Ammo casing
 	// caliber = CALIBER_PULSE
 	slot_flags = null
 	e_cost = 50 //The amount of energy a cell needs to expend to create this shot.
-	fire_sound = 'deadspace/sound/weapons/guns/pulse_shot.ogg'
+	fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_shot.ogg'
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/energy
 	randomspread = 25

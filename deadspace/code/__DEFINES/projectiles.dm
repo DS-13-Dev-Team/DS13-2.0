@@ -4,3 +4,5 @@
 #define CALIBER_DIVET "divet_pistol"
 /// The caliber used by the seeker rifle
 #define CALIBER_SEEKER "seeker_rifle"
+/// The caliber used by the seeker rifle
+#define CALIBER_JAVELIN "javelin_gun"

@@ -4,7 +4,7 @@ Seeker Rifles
 
 /obj/item/gun/ballistic/deadspace/twohanded/seeker //Based a bit on /obj/item/gun/ballistic/automatic/sniper_rifle
 	name = "Seeker Rifle"
-	desc = "The Seeker Rifle is a riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
+	desc = "The Seeker Rifle is a suppressed riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "seeker"
 	base_icon_state = "seeker"
@@ -19,7 +19,8 @@ Seeker Rifles
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/seeker
 	fire_delay = 1.5 SECONDS
-	can_suppress = FALSE
+	suppressed = TRUE
+	can_unsuppress = FALSE
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	one_handed_penalty = 50
 	recoil = 2
@@ -27,10 +28,11 @@ Seeker Rifles
 	bolt_type = BOLT_TYPE_OPEN
 	actions_types = list()
 	//tier_1_bonus = 1 //Cut slashers some slack
-	fire_sound = 'deadspace/sound/weapons/guns/seeker_fire.ogg'
+	fire_sound = 'sound/weapons/gun/sniper/shot.ogg'
 	fire_sound_volume = 90
-	load_sound = 'deadspace/sound/weapons/guns/seeker_load.ogg'
-	eject_sound = 'deadspace/sound/weapons/guns/pulse_magout.ogg'
+	load_sound = 'sound/weapons/gun/sniper/mag_insert.ogg'
+	eject_sound = 'sound/machines/eject.ogg'
+	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
 
 /obj/item/gun/ballistic/deadspace/twohanded/seeker/no_mag
 	spawnwithmagazine = FALSE
@@ -95,7 +97,7 @@ Ammo casings for the mags
 /obj/item/ammo_casing/caseless/seeker
 	name = "seeker shell"
 	desc = "A high caliber round designed for the Seeker Rifle."
-	icon_state = "ionshell-live"
+	icon_state = ".50"
 	caliber = CALIBER_SEEKER
 	projectile_type = /obj/projectile/bullet/seeker
 

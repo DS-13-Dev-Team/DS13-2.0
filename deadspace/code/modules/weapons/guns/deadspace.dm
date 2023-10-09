@@ -3,7 +3,7 @@
 	var/default_fire = "shoot"
 	var/default_ammo = /obj/item/ammo_casing
 	var/default_delay = 0
-	var/default_fire_sound ='deadspace/sound/weapons/guns/pulse_shot.ogg'
+	var/default_fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_shot.ogg'
 	var/alt_fire = null
 	var/alt_fire_ammo = null
 	var/alt_fire_cost = 1

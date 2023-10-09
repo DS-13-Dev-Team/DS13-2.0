@@ -19,22 +19,23 @@ Pulse Rifles
 	mag_type = /obj/item/ammo_box/magazine/pulse
 	default_ammo = /obj/item/ammo_casing/caseless/pulse
 	weapon_weight = WEAPON_HEAVY
+	empty_alarm = TRUE
 	show_bolt_icon = FALSE
 	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN
 	can_suppress = FALSE
 	one_handed_penalty = 20
 	spread = 5
-	fire_sound = 'deadspace/sound/weapons/guns/pulse_shot.ogg'
-	load_sound = 'deadspace/sound/weapons/guns/pulse_magin.ogg'
-	eject_sound = 'deadspace/sound/weapons/guns/pulse_magout.ogg'
-	default_fire_sound ='deadspace/sound/weapons/guns/pulse_shot.ogg'
+	fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_shot.ogg'
+	load_sound = 'deadspace/sound/weapons/guns/interaction/pulse_magin.ogg'
+	eject_sound = 'deadspace/sound/weapons/guns/interaction/pulse_magout.ogg'
+	default_fire_sound ='deadspace/sound/weapons/guns/fire/pulse_shot.ogg'
 	//alt fire stuff
 	alt_fire_ammo = /obj/item/ammo_casing/caseless/rocket/pulse
 	alt_fire_cost = 25
 	alt_fire = "grenade launcher"
 	alt_fire_delay = 20
-	alt_fire_sound = 'deadspace/sound/weapons/guns/pulse_grenade.ogg'
+	alt_fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_grenade.ogg'
 
 /obj/item/gun/ballistic/automatic/pulse/no_mag
 	spawnwithmagazine = FALSE
@@ -101,7 +102,7 @@ Ammo casings for the mags
 /obj/item/ammo_casing/caseless/pulse
 	name = "pulse round"
 	desc = "A ultra-small caliber round designed for the SWS Motorized Pulse Rifle."
-	icon_state = "ionshell-live"
+	icon_state = "sleeper-live"
 	caliber = CALIBER_PULSE
 	projectile_type = /obj/projectile/bullet/pulse
 

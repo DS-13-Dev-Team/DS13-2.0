@@ -14,14 +14,14 @@ Divet pistols
 	can_suppress = TRUE
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
 	burst_size = 1
-	fire_sound= 'deadspace/sound/weapons/guns/divet_fire.ogg'
-	load_sound = 'deadspace/sound/weapons/guns/divet_magin.ogg'  //Old noises from 1.0, but weren't actually working and used before.
-	eject_sound = 'deadspace/sound/weapons/guns/divet_magout.ogg' //They just sound like clockwork cult sounds.
-	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
+	fire_sound= 'deadspace/sound/weapons/guns/fire/divet_fire.ogg'
+	load_sound = 'sound/weapons/gun/pistol/mag_insert.ogg'  //Old noises from 1.0, but weren't actually working and used before.
+	eject_sound = 'sound/weapons/gun/pistol/mag_release.ogg' //They just sound like clockwork cult sounds.
+	suppressed_sound = 'sound/weapons/gun/pistol/shot_suppressed.ogg'
 
 /obj/item/gun/ballistic/automatic/pistol/divet/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
 
 /obj/item/gun/ballistic/automatic/pistol/divet/no_mag
 	spawnwithmagazine = FALSE
@@ -29,18 +29,6 @@ Divet pistols
 /obj/item/gun/ballistic/automatic/pistol/divet/rb/Initialize(mapload)
 	magazine = new /obj/item/ammo_box/magazine/divet/rb(src)
 	return ..()
-
-/obj/item/gun/ballistic/automatic/pistol/divet/extended/Initialize(mapload)
-	magazine = new /obj/item/ammo_box/magazine/divet/extended(src)
-	return ..()
-
-/obj/item/gun/ballistic/automatic/pistol/divet/extended/expanded/Initialize(mapload)
-	magazine = new /obj/item/ammo_box/magazine/divet/extended/expanded(src)
-	return ..()
-
-/obj/item/gun/ballistic/automatic/pistol/divet/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
 
 /obj/item/gun/ballistic/automatic/pistol/divet/suppressed/Initialize(mapload)//Off chance you want a normal suppressed divet. Might not work.
 	. = ..()
@@ -185,16 +173,12 @@ Projectiles for the casings
 	name = "divet rubber bullet"
 	icon_state = "divet" //Maybe get rubber bullet sprite in future
 	damage = 6
-	stamina = 60
-	armour_penetration = 10
-	ricochets_max = 5
-	ricochet_incidence_leeway = 0
-	ricochet_chance = 120
-	ricochet_auto_aim_angle = 40
-	ricochet_auto_aim_range = 5
-	ricochet_decay_damage = 0.8
-	dismemberment = 0
+	stamina = 30
 	weak_against_armour = TRUE
+	ricochets_max = 6
+	ricochet_incidence_leeway = 0
+	ricochet_chance = 130
+	ricochet_decay_damage = 0.8
 	shrapnel_type = null
 	sharpness = NONE
 	embedding = null
