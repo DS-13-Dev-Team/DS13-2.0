@@ -3,7 +3,7 @@ Divet pistols
 */
 //This is most handguns and bolt action rifles.  The bolt will lock back when it's empty.  You need yourgun_bolt and yourgun_bolt_locked icon states.
 /obj/item/gun/ballistic/automatic/pistol/divet
-	name = "divet pistol"
+	name = "Divet"
 	desc = "A Winchester Arms NK-series pistol capable of fully automatic fire."
 	icon = 'deadspace/icons/obj/weapons/ds13guns.dmi'
 	icon_state = "divet"
@@ -15,8 +15,8 @@ Divet pistols
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
 	burst_size = 1
 	fire_sound= 'deadspace/sound/weapons/guns/fire/divet_fire.ogg'
-	load_sound = 'sound/weapons/gun/pistol/mag_insert.ogg'  //Old noises from 1.0, but weren't actually working and used before.
-	eject_sound = 'sound/weapons/gun/pistol/mag_release.ogg' //They just sound like clockwork cult sounds.
+	load_sound = 'sound/weapons/gun/pistol/mag_insert.ogg'
+	eject_sound = 'sound/weapons/gun/pistol/mag_release.ogg'
 	suppressed_sound = 'sound/weapons/gun/pistol/shot_suppressed.ogg'
 
 /obj/item/gun/ballistic/automatic/pistol/divet/Initialize(mapload)
@@ -78,7 +78,6 @@ Magazines
 	name = "divet magazine (rubber)"
 	icon_state = "divet_rb"
 	ammo_type = /obj/item/ammo_casing/divet/rb
-	max_ammo = 15
 
 /obj/item/ammo_box/magazine/divet/fire
 	name = "divet magazine (incendiary)"
@@ -100,7 +99,6 @@ Magazines
 	name = "divet magazine (blank/practice)"
 	icon_state = "divet_rb"
 	ammo_type = /obj/item/ammo_casing/divet/blank
-	max_ammo = 15
 
 /**
 Ammo casings for the mags

@@ -46,19 +46,18 @@ Seeker Rifles
 
 	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]-wielded")
 
+/obj/item/gun/ballistic/deadspace/twohanded/seeker/reset_semicd()
+	. = ..()
+	if(suppressed)
+		playsound(src, 'sound/machines/eject.ogg', 25, TRUE, ignore_walls = FALSE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
+	else
+		playsound(src, 'sound/machines/eject.ogg', 50, TRUE)
+
 /obj/item/gun/ballistic/deadspace/twohanded/seeker/egov
 	name = "Earthgov Seeker Rifle"
 	desc = "The Earthgov Seeker Rifle is a riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
 	icon_state = "seeker" //Maybe get a new sprite for it in the future
-	fire_delay = 4
-	recoil = 0.4
-	burst_size = 3
-	actions_types = list(/datum/action/item_action/toggle_firemode)
 	projectile_damage_multiplier = 1.15
-
-/obj/item/gun/ballistic/deadspace/twohanded/seeker/egov/Initialize(mapload)
-	magazine = new /obj/item/ammo_box/magazine/seeker/egov(src)
-	return ..()
 
 /**
 Magazines
@@ -70,23 +69,10 @@ Magazines
 	icon = 'deadspace/icons/obj/ammo.dmi'
 	icon_state = "seeker"
 	base_icon_state = "seeker-6"
+	ammo_type = /obj/item/ammo_casing/seeker
 	caliber = CALIBER_SEEKER
-	ammo_type = /obj/item/ammo_casing/caseless/seeker
 	max_ammo = 6
 	multiple_sprites = AMMO_BOX_PER_BULLET
-
-/obj/item/ammo_box/magazine/seeker/egov
-	name = "assault seeker shells"
-	desc = "Medium caliber armor piercing shells designed for use in the Seeker Rifle, designed for use with Earthgov models, to be used more akin to an assault rifle."
-	icon_state = "seeker-6"
-	base_icon_state = "seeker"
-	ammo_type = /obj/item/ammo_casing/caseless/seeker/egov
-	max_ammo = 24
-	multiple_sprites = AMMO_BOX_FULL_EMPTY
-
-/obj/item/ammo_box/magazine/seeker/egov/update_icon_state()
-	. = ..()
-	icon_state = "[base_icon_state]-[round(ammo_count(), 4) / 4]"
 
 //Can potentially add alternative ammo, like the .50 cal. Soporific, penetrator, marksman, etc
 
@@ -94,15 +80,12 @@ Magazines
 Ammo casings for the mags
 */
 
-/obj/item/ammo_casing/caseless/seeker
+/obj/item/ammo_casing/seeker
 	name = "seeker shell"
 	desc = "A high caliber round designed for the Seeker Rifle."
 	icon_state = ".50"
 	caliber = CALIBER_SEEKER
 	projectile_type = /obj/projectile/bullet/seeker
-
-/obj/item/ammo_casing/caseless/seeker/egov
-	projectile_type = /obj/projectile/bullet/seeker/egov
 
 /**
 Projectiles for the casings
@@ -117,14 +100,6 @@ Projectiles for the casings
 	armour_penetration = 50
 	embedding = list(embed_chance=50, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=7, rip_time=8)
 	// var/breakthings = TRUE
-
-/obj/projectile/bullet/seeker/egov
-	name ="seeker shell"
-	damage = 20
-	paralyze = 30
-	dismemberment = 10
-	armour_penetration = 20
-	embedding = list(embed_chance=40, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=7, rip_time=8)
 
 //Taken from .50 sniper. Keeping here for now, as something to check on later
 // /obj/projectile/bullet/seeker/on_hit(atom/target, blocked = 0)
