@@ -80,9 +80,6 @@
 		'deadspace/sound/effects/footstep/brute_step_5.ogg',
 		'deadspace/sound/effects/footstep/brute_step_6.ogg'
 	)
-	deathsound = list(
-		'deadspace/sound/effects/creatures/necromorph/brute/brute_death.ogg'
-	)
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/brute,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/brute,
@@ -99,6 +96,9 @@
 		'deadspace/sound/effects/creatures/necromorph/brute/brute_pain_3.ogg',
 		'deadspace/sound/effects/creatures/necromorph/brute/brute_pain_extreme.ogg',
 	)
+
+/datum/species/necromorph/brute/get_deathgasp_sound(mob/living/carbon/human/H)
+	return 'deadspace/sound/effects/creatures/necromorph/brute/brute_death.ogg'
 
 #define WINDUP_TIME 1.25 SECONDS
 

@@ -53,18 +53,19 @@
 		'deadspace/sound/effects/creatures/necromorph/puker/puker_footstep_9.ogg'
 	)
 
-	deathsound = list(
-		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_1.ogg',
-		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_2.ogg',
-		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_3.ogg'
-	)
-
 /datum/species/necromorph/puker/get_scream_sound(mob/living/carbon/human/necromorph/puker)
 	return pick(
 		'deadspace/sound/effects/creatures/necromorph/puker/puker_pain_4.ogg',
 		'deadspace/sound/effects/creatures/necromorph/puker/puker_shout_1.ogg',
 		'deadspace/sound/effects/creatures/necromorph/puker/puker_shout_4.ogg',
 		'deadspace/sound/effects/creatures/necromorph/puker/puker_shout_long_4.ogg',
+	)
+
+/datum/species/necromorph/puker/get_deathgasp_sound(mob/living/carbon/human/H)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_3.ogg',
 	)
 
 /datum/action/cooldown/necro/shoot/puker_longshot

@@ -1,3 +1,12 @@
+2023-10-01:
+  Kapu1178:
+  - qol: De-bolded radio channels in chat. Italicized and granted a slightly different
+      color to speaking verbs, to increase readability.
+2023-10-03:
+  Kapu1178:
+  - bugfix: Fixed a bug that caused specific projectiles to collide with objects they
+      shouldn't.
+  - bugfix: Mutagen's recipe now works. For real this time.
 2023-10-07:
   MisterGrimm:
   - balance: Necromorph spit now has immediate damage on-hit
@@ -10,3 +19,19 @@
   - bugfix: Corruption can pass through tables, rails, and grilles now
   blackwolf602:
   - bugfix: blue to pink for piping
+2023-10-09:
+  Kapu1178:
+  - qol: Adjusted the time it takes for blood to try.
+  - bugfix: Vox now die when debrained.
+  - bugfix: the die of fate no longer has a 5% chance to break the game
+  - bugfix: IPCs can Read.
+  - bugfix: Stumps can be sawed off.
+  - rscdel: An interaction with a heretic path and wounds.
+  Zandario:
+  - refactor: Ambient Occlusion looks better and is faster.
+  - bugfix: Reduced roundstart lag
+  francinum:
+  - balance: Ballistics now have recoil by default
+  - balance: Bullet embedding logic has been changed
+  itsmeow:
+  - code_imp: 'Optimized z-level transition mirages, saving ~0.32s init. /:cl:'
