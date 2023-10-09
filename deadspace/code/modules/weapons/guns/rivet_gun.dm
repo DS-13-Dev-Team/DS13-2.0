@@ -3,6 +3,7 @@
 	desc = "The latest refinement from Timson Tools' long line of friendly tools."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "rivetgun"
+	inhand_icon_state = "rivetgun"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
@@ -10,6 +11,7 @@
 	can_suppress = TRUE
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
 	burst_size = 1
+	bolt_type = BOLT_TYPE_OPEN
 	fire_sound= 'deadspace/sound/weapons/guns/fire/rivet_fire.ogg'
 	load_sound = 'deadspace/sound/weapons/guns/interaction/rivet_magin.ogg'
 	eject_sound = 'deadspace/sound/weapons/guns/interaction/rivet_magout.ogg'

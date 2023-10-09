@@ -7,6 +7,7 @@ Divet pistols
 	desc = "A Winchester Arms NK-series pistol capable of fully automatic fire."
 	icon = 'deadspace/icons/obj/weapons/ds13guns.dmi'
 	icon_state = "divet"
+	inhand_icon_state = "divet"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
@@ -39,6 +40,7 @@ Divet pistols
 	name = "special ops divet pistol"
 	desc = "A modified version of the Winchester Arms NK-series pistol. An integrated suppressor lowers the audio profile fairly well."
 	icon_state = "divet_spec"
+	inhand_icon_state = "divet_spec"
 	suppressed_volume = 40
 	suppressed = TRUE
 	can_unsuppress = FALSE
