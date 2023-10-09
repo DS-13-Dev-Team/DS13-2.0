@@ -8,7 +8,6 @@
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/rivet
-	can_suppress = TRUE
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
 	burst_size = 1
 	bolt_type = BOLT_TYPE_OPEN

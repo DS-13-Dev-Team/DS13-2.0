@@ -3,7 +3,7 @@
 	desc = "a telemetric survey tool manufactured by Timson Tools, designed to fire titanium spikes or 'javelins' at high speeds with extreme accuracy and piercing power."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "javelin"
-	inhand_icon_state = "javelinmag"
+	inhand_icon_state = "javelinwieldmag"
 	base_icon_state = "javelin"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
@@ -35,11 +35,11 @@
 	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 	AddElement(/datum/element/update_icon_updates_onmob)
-	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]-wielded")
+	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]wield")
 
 /obj/item/gun/ballistic/deadspace/twohanded/javelin/update_icon_state()
 	. = ..()
-	inhand_icon_state = "[base_icon_state][magazine ? "mag":"nomag"]"
+	inhand_icon_state = "[base_icon_state][wielded ? "wield" : "unwield"][magazine ? "mag":"nomag"]"
 
 /**
 Magazines

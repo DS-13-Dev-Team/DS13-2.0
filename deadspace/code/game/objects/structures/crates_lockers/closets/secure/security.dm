@@ -16,7 +16,11 @@
 	new /obj/item/radio/headset/heads/captain(src)
 	new /obj/item/clothing/suit/armor/pcsi/cec(src)
 	new /obj/item/storage/belt/sabre(src)
-	new /obj/item/gun/ballistic/automatic/pistol/divet(src)
+	new	/obj/item/storage/belt/holster/ds
+	new /obj/item/gun/ballistic/revolver/antique(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
 	new /obj/item/clothing/under/rank/captain/ds_director(src)
 	new /obj/item/clothing/under/rank/captain/ds_captain(src)
 	new /obj/item/storage/photo_album/captain(src)
