@@ -16,6 +16,10 @@
 /obj/structure/window/reinforced,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
+"ae" = (
+/obj/machinery/light/directional/north,
+/turf/open/openspace,
+/area/station/commons/lounge)
 "af" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2058,8 +2062,7 @@
 /area/station/commons/lounge)
 "zT" = (
 /obj/machinery/light/directional/south,
-/obj/machinery/computer/slot_machine,
-/turf/open/floor/wood,
+/turf/open/floor/carpet/green,
 /area/station/commons/lounge)
 "zU" = (
 /obj/machinery/microwave,
@@ -2178,6 +2181,9 @@
 /area/station/hallway/primary/central/aft)
 "Cf" = (
 /obj/machinery/light/directional/east,
+/obj/machinery/camera/directional/east{
+	c_tag = "Bar - Top"
+	},
 /turf/open/openspace,
 /area/station/commons/lounge)
 "Cv" = (
@@ -3261,6 +3267,10 @@
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/deadspace/hardwood,
 /area/station/security/office)
+"SC" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood,
+/area/station/commons/lounge)
 "SP" = (
 /obj/machinery/door/window/brigdoor/security/cell{
 	id = "Isolation Cell 1";
@@ -3448,6 +3458,7 @@
 /obj/structure/table/wood/poker,
 /obj/item/storage/wallet,
 /obj/item/bikehorn/rubberducky,
+/obj/machinery/light/directional/west,
 /turf/open/floor/carpet/green,
 /area/station/commons/lounge)
 "Wn" = (
@@ -3479,7 +3490,9 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "WN" = (
-/obj/machinery/light/directional/west,
+/obj/machinery/camera/directional/west{
+	c_tag = "Bar - Top"
+	},
 /turf/open/floor/carpet/green,
 /area/station/commons/lounge)
 "WX" = (
@@ -8667,7 +8680,7 @@ sE
 sE
 sE
 DX
-Py
+IW
 LA
 jX
 jW
@@ -9071,7 +9084,7 @@ sE
 sE
 sE
 DX
-IW
+Py
 Sc
 jX
 jX
@@ -9079,7 +9092,7 @@ VR
 VR
 VR
 jX
-jX
+zT
 DX
 sE
 sE
@@ -9475,7 +9488,7 @@ sE
 sE
 sE
 DX
-Py
+IW
 Lu
 jX
 ET
@@ -9483,7 +9496,7 @@ Dd
 Nr
 Dd
 KY
-zT
+Kq
 DX
 sE
 sE
@@ -9882,12 +9895,12 @@ sE
 sE
 sE
 DX
-ub
+ae
 PQ
 jK
 jK
 jK
-Dd
+SC
 DX
 sE
 sE

@@ -1331,6 +1331,11 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"jv" = (
+/obj/effect/turf_decal/box/white,
+/obj/effect/mapping_helpers/dead_body_placer,
+/turf/open/floor/deadspace/grater,
+/area/station/medical/morgue)
 "jy" = (
 /obj/item/storage/lunchbox/egov,
 /turf/open/misc/asteroid,
@@ -18854,7 +18859,7 @@ nG
 QM
 Pn
 HI
-zF
+jv
 do
 zF
 sb
