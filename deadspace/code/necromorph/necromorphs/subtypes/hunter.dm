@@ -10,32 +10,34 @@
 /mob/living/carbon/human/necromorph/hunter/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.hunter_sounds[audio_type]), volume, vary, extra_range)
 
-/mob/living/carbon/human/necromorph/hunter/proc/can_false_death()
-	if(GetComponent(/datum/component/regenerate/hunter_passive))
-		return TRUE
-	return FALSE
-
 /mob/living/carbon/human/necromorph/hunter/handle_death_check()
 	var/total_burn = 0
 	var/total_brute = 0
 	for(var/obj/item/bodypart/BP as anything in bodyparts) //hardcoded to streamline things a bit
 		total_brute += BP.brute_dam
 		total_burn += BP.burn_dam
+
 	var/damage = getOxyLoss() + getToxLoss() - getCloneLoss() - total_burn - total_brute
 	if(damage >= maxHealth)
-
 		if(total_burn >= (maxHealth * 0.5))
 			return TRUE
 
-		if (getLastingDamage() >= maxHealth)
+		if(getLastingDamage() >= maxHealth)
 			return TRUE
 
-		if (can_false_death())
-			AddComponent(/datum/component/regenerate/hunter_passive)
+		if(!HAS_TRAIT(src, TRAIT_FAKEDEATH))
+			ADD_TRAIT(src, TRAIT_FAKEDEATH, src)
+			AddComponent(
+				/datum/component/regenerate,
+				duration = 8.6 SECONDS,
+				heal_amount = 100,
+				max_limbs = 5,
+				lasting_damage_heal = 35,
+				burn_heal_mult = 0.01
+				)
+			addtimer(TRAIT_CALLBACK_REMOVE(src, TRAIT_FAKEDEATH, src), 8.6 SECONDS)
 			play_necro_sound(SOUND_DEATH, VOLUME_HIGH)
-
 		return FALSE
-
 	return FALSE
 
 /datum/necro_class/hunter
@@ -63,10 +65,6 @@
 
 /datum/species/necromorph/hunter
 	name = "Hunter"
-
-	icobase = 'deadspace/icons/necromorphs/hunter.dmi'
-	deform = 'deadspace/icons/necromorphs/hunter.dmi'
-
 	id = SPECIES_NECROMORPH_HUNTER
 	speedmod = 1.6
 	burnmod = 1.3
@@ -99,16 +97,16 @@
 	. = ..()
 
 /datum/action/cooldown/necro/regenerate/hunter
-	desc = "Regrows a missing limb and restores some of your health."
 	cooldown_time = 30 SECONDS
-	duration = 8 SECONDS
+	duration = 8.6 SECONDS
 	lasting_damage_heal = 20
 	heal_amount = 30
 	burn_heal_mult = 0.33
 
 /datum/action/cooldown/necro/regenerate/hunter/PreActivate(atom/target)
-	. = ..()
-	target_necro.play_necro_sound(SOUND_PAIN, VOLUME_HIGH, 1, 3)
+	var/mob/living/carbon/human/necromorph/necromorph = owner
+	necromorph.play_necro_sound(SOUND_PAIN, VOLUME_HIGH, 1, 3)
+	return ..()
 
 /datum/action/cooldown/necro/swing/hunter
 	name = "Hookblade"
@@ -121,20 +119,29 @@
 	return ..()
 
 /datum/action/cooldown/necro/swing/hunter/hit_mob(mob/living/L)
-	. = ..()
-	if (.)
-		var/fling_dir = pick(GLOB.cardinals - ((owner.dir & (NORTH|SOUTH)) ? list(NORTH, SOUTH) : list(EAST, WEST)))
-		var/fling_dist = 2
-		var/turf/destination = L.loc
-		var/turf/temp
+	if(..())
+		var/throw_dir = pick(
+			turn(owner.dir, 90),
+			turn(owner.dir, -90),
+			)
+		var/throw_dist = 2
 
-		for(var/i in 1 to fling_dist)
-			temp = get_step(destination, fling_dir)
-			if(!temp)
-				break
-			destination = temp
-		if(destination != L.loc)
-			L.throw_at(destination, fling_dist, 1, owner, TRUE)
+		var/throw_x = L.x
+		if(throw_dir & WEST)
+			throw_x += throw_dist
+		else if(throw_dir & EAST)
+			throw_x -= throw_dist
+
+		var/throw_y = L.y
+		if(throw_dir & NORTH)
+			throw_y += throw_dist
+		else if(throw_dir & SOUTH)
+			throw_y -= throw_dist
+
+		throw_x = clamp(throw_x, 1, world.maxx)
+		throw_y = clamp(throw_y, 1, world.maxy)
+
+		L.safe_throw_at(locate(throw_x, throw_y, L.z), throw_dist, 1, owner, TRUE)
 
 /obj/effect/temp_visual/swing/hunter
 	base_icon_state = "hunter"
@@ -157,16 +164,6 @@
 /datum/action/cooldown/necro/taunt/hunter/proc/effects()
 	EC = new /obj/effect/temp_visual/expanding_circle(owner.loc, 1.5 SECONDS, 1.5,"#ff0000")
 	EC.pixel_y += 40	//Offset it so it appears to be at our mob's head
-
-/*
-	Passive regen is triggered during false death
-*/
-/datum/component/regenerate/hunter_passive
-	duration = 8 SECONDS
-	max_limbs = 5
-	lasting_damage_heal = 35
-	burn_heal_mult = 0.01
-	heal_amount = 100
 
 /datum/component/statmod/taunt_buff
 	//These stats apply to self

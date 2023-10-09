@@ -47,10 +47,10 @@
 	return ..()
 
 /datum/action/cooldown/necro/charge/Activate(atom/target)
-	. = TRUE
 	// Start pre-cooldown so that the ability can't come up while the charge is happening
 	StartCooldown(charge_time+charge_delay+1)
 	addtimer(CALLBACK(src, PROC_REF(do_charge)), charge_delay)
+	return TRUE
 
 /datum/action/cooldown/necro/charge/proc/do_charge()
 	var/mob/living/carbon/human/necromorph/charger = owner

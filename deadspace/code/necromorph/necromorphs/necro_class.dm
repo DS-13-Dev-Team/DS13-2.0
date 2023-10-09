@@ -37,9 +37,6 @@
 	// *** Defense *** //
 	var/list/armor = list()
 
-	///How effective fire is against this necromorph. From 0 to 1 as it is a multiplier.
-	var/fire_resist = 1
-
 	///the 'abilities' available to a necromorph.
 	var/list/datum/action/cooldown/necro/actions = list()
 
@@ -52,10 +49,6 @@
 
 	///Number of spawned necromorphs by the marker
 	var/spawned_number = 0
-
-	/// How much of the damage is absorbed by the shield
-	/// Value between 0 and 1
-	var/shield_absorb_percent = 1
 
 	//TODO: Get rid of this
 	var/implemented = FALSE
@@ -80,7 +73,3 @@
 	necro.unconscious_see_in_dark = unconscious_see_in_dark
 
 	necro.necro_flags = necro_flags
-
-	necro.fire_resist = fire_resist
-
-	necro.shield_absorb_percent = shield_absorb_percent

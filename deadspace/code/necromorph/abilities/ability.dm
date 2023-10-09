@@ -19,14 +19,6 @@
 		UnregisterSignal(removed_from, activate_keybind)
 	return ..()
 
-/datum/action/cooldown/necro/proc/CooldownEnd()
-	return
-
-/datum/action/cooldown/necro/process(delta_time)
-	.=..()
-	if((next_use_time - world.time) <= 0)
-		CooldownEnd()
-
 /datum/action/cooldown/necro/proc/TriggerOnKeybindSignal(mob/source)
 	SIGNAL_HANDLER
 	Trigger()
@@ -54,7 +46,12 @@
 	active = TRUE
 	StartCooldown(duration_time)
 
-/datum/action/cooldown/necro/active/CooldownEnd()
+/datum/action/cooldown/necro/active/process(delta_time)
+	.=..()
+	if((next_use_time - world.time) <= 0)
+		CooldownEnd()
+
+/datum/action/cooldown/necro/active/proc/CooldownEnd()
 	if(active)
 		active = FALSE
 		StartCooldown()

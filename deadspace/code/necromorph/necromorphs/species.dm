@@ -2,10 +2,6 @@
 /datum/species/necromorph
 	name = "Necromorph"
 	id = SPECIES_NECROMORPH
-
-	var/icon/icobase
-	var/icon/deform
-
 	//There is no way to become it. Period.
 	changesource_flags = NONE
 	exotic_bloodtype = "X"
@@ -106,18 +102,14 @@
 /datum/species/necromorph/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/necromorph/H, forced = FALSE, spread_damage = FALSE, sharpness = NONE, attack_direction = null)
 	if(H.dodge_shield > 0)
 		// Calculate amount of the damage that was blocked by the shield
-		var/dodged_damage = min(H.dodge_shield, damage * H.shield_absorb_percent, damage * (100 - blocked) / 100)
+		var/dodged_damage = min(H.dodge_shield, damage, damage * (100 - blocked) / 100)
 		H.reduce_shield(dodged_damage)
 		blocked += (dodged_damage / damage) * 100
 	return ..()
 
 //Does animations for regenerating a limb
-/datum/species/necromorph/proc/regenerate_limb(mob/living/carbon/human/H, limb, duration)
-	var/regen_icon = get_icobase()
-	var/image/LR = image(regen_icon, H, "[limb]_regen")
+/datum/species/necromorph/proc/regenerate_limb(mob/living/carbon/human/necromorph/H, limb, duration)
+	var/image/LR = image(initial(H.class.ui_icon), H, "[limb]_regen")
 	LR.plane = H.plane
-	LR.layer = H.layer -0.1 //Slightly below the layer of the mob, so that the healthy limb will draw over it
-	flick_overlay(LR, GLOB.clients, duration + 2)
-
-/datum/species/necromorph/proc/get_icobase(mob/living/carbon/human/H, get_deform)
-	return (get_deform ? deform : icobase)
+	LR.layer = H.layer - 0.1 //Slightly below the layer of the mob, so that the healthy limb will draw over it
+	flick_overlay(LR, GLOB.clients, duration)
