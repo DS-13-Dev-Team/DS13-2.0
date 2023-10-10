@@ -4377,7 +4377,9 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "Oa" = (
-/mob/living/simple_animal/pet/dog/corgi/lisa,
+/mob/living/simple_animal/pet/dog/corgi/lisa{
+	name = "Lisa Brennan"
+	},
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "Of" = (
@@ -32157,7 +32159,7 @@ yG
 yG
 yG
 bf
-Oa
+iX
 iX
 IG
 bf
@@ -32763,7 +32765,7 @@ yG
 yG
 yG
 bf
-iX
+Oa
 ha
 YO
 Oo
