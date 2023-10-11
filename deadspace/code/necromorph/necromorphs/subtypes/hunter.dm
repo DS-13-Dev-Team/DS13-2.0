@@ -27,14 +27,7 @@
 
 		if(!HAS_TRAIT(src, TRAIT_FAKEDEATH))
 			ADD_TRAIT(src, TRAIT_FAKEDEATH, src)
-			AddComponent(
-				/datum/component/regenerate,
-				duration = 8.6 SECONDS,
-				heal_amount = 100,
-				max_limbs = 5,
-				lasting_damage_heal = 35,
-				burn_heal_mult = 0.01
-				)
+			AddComponent(/datum/component/regenerate, duration = 8.6 SECONDS, heal_amount = 100, max_limbs = 5, lasting_damage_heal = 35, burn_heal_mult = 0.01)
 			addtimer(TRAIT_CALLBACK_REMOVE(src, TRAIT_FAKEDEATH, src), 8.6 SECONDS)
 			play_necro_sound(SOUND_DEATH, VOLUME_HIGH)
 		return FALSE

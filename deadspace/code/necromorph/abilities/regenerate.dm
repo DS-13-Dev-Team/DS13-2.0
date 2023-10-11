@@ -21,15 +21,5 @@
 	var/shake_interval = 0.5 SECONDS
 
 /datum/action/cooldown/necro/regenerate/Activate(atom/target)
-	owner.AddComponent(
-		/datum/component/regenerate,
-		duration,
-		max_limbs,
-		heal_amount,
-		lasting_damage_heal,
-		limb_lasting_damage,
-		biomass_lasting_damage_cost,
-		burn_heal_mult,
-		shake_interval
-		)
+	owner.AddComponent(/datum/component/regenerate, duration, max_limbs, heal_amount, lasting_damage_heal, limb_lasting_damage, biomass_lasting_damage_cost, burn_heal_mult, shake_interval)
 	StartCooldown(cooldown_time + duration)
