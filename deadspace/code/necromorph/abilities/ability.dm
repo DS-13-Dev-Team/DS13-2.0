@@ -35,12 +35,12 @@
 /datum/action/cooldown/necro/active/New(Target, cooldown, duration)
 	if(!isnull(duration))
 		duration_time = duration
-	.=..()
+	return ..()
 
 /datum/action/cooldown/necro/active/Destroy()
 	CooldownEnd()
 	STOP_PROCESSING(SSfastprocess, src)
-	.=..()
+	return ..()
 
 /datum/action/cooldown/necro/active/Activate(atom/target)
 	active = TRUE

@@ -55,13 +55,11 @@
 	melee_damage_upper = 22
 	actions = list(
 		/datum/action/cooldown/necro/swing/hunter,
-		/datum/action/cooldown/necro/taunt/hunter,
+		// /datum/action/cooldown/necro/taunt/hunter,
 		/datum/action/cooldown/necro/regenerate/hunter,
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "hunter"
-	//Disabled until I rewrite hunter abilities
-	implemented = FALSE
 
 /datum/species/necromorph/hunter
 	name = "Hunter"

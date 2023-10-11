@@ -22,7 +22,7 @@
 		/datum/action/cooldown/necro/charge/ubermorph,
 		/datum/action/cooldown/necro/sense,
 		/datum/action/cooldown/necro/regenerate/ubermorph,
-		/datum/action/cooldown/necro/frenzy_shout/ubermorph,
+		// /datum/action/cooldown/necro/frenzy_shout/ubermorph,
 	)
 	minimap_icon = "ubermorph"
 	spawn_limit = 1

@@ -172,12 +172,12 @@
 		action.slowdown_charge(CHARGE_STOP)
 		return
 
-	var/throw_dir = pick(list(
+	var/throw_dir = pick(
 		turn(action.charge_dir, 45),
 		turn(action.charge_dir, -45),
 		turn(action.charge_dir, 90),
-		turn(action.charge_dir, -90)
-		)) //Throwing them somewhere not behind nor ahead of the charger.
+		turn(action.charge_dir, -90),
+		) //Throwing them somewhere not behind nor ahead of the charger.
 	var/throw_dist = min(round(speed) + 1, 3)
 
 	var/throw_x = src.x
@@ -240,12 +240,12 @@
 	if(crushed.anchored)
 		return
 
-	var/throw_dir = pick(list(
+	var/throw_dir = pick(
 		turn(charge_dir, 45),
 		turn(charge_dir, -45),
 		turn(charge_dir, 90),
-		turn(charge_dir, -90)
-		)) //Throwing them somewhere not behind nor ahead of the charger.
+		turn(charge_dir, -90),
+		) //Throwing them somewhere not behind nor ahead of the charger.
 	var/throw_dist = min(round(CHARGE_SPEED) + 1, 3)
 
 	var/throw_x = crushed.x
