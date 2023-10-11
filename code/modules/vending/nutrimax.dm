@@ -29,6 +29,7 @@
 	payment_department = ACCOUNT_SRV
 
 	discount_access = ACCESS_HYDROPONICS
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 /obj/item/vending_refill/hydronutrients
 	machine_name = "NutriMax"

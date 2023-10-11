@@ -15,6 +15,7 @@
 	var/obj/structure/table/reinforced/cart_table
 	var/obj/effect/food_cart_stand/cart_tent
 	var/list/packed_things
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 /obj/machinery/food_cart/Initialize(mapload)
 	. = ..()

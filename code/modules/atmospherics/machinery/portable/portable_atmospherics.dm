@@ -16,6 +16,7 @@
 	var/volume = 0
 	///Used to track if anything of note has happen while running process_atmos()
 	var/excited = TRUE
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 /obj/machinery/portable_atmospherics/Initialize(mapload)
 	. = ..()
@@ -108,7 +109,7 @@
 
 /obj/machinery/portable_atmospherics/AltClick(mob/living/user)
 	. = ..()
-	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, !iscyborg(user)) || !can_interact(user))
+	if(!istype(user) || !user.canUseTopic(src, USE_CLOSE|USE_DEXTERITY) || !can_interact(user))
 		return
 	if(!holding)
 		return

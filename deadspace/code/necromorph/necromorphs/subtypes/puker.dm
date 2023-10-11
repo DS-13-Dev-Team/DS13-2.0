@@ -86,6 +86,7 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
+	damage = 25
 	speed = 0.8
 	pixel_speed_multiplier = 0.5
 
@@ -124,8 +125,9 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
+	damage = 13.5 //does 25% more damage then a spitter's snapshot
 	speed = 0.8
-	pixel_speed_multiplier = 0.5
+	pixel_speed_multiplier = 0.7
 
 	acid_type = /datum/reagent/toxin/acid/fluacid
 	acid_amount = 3.2

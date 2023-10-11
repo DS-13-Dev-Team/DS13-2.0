@@ -37,3 +37,23 @@
 	new /obj/item/paint_sprayer(src)
 	new /obj/item/storage/box/emptysandbags(src)
 	new /obj/item/storage/bag/construction(src)
+
+/obj/structure/closet/secure_closet/ds/atmospherics
+	name = "\proper atmospheric technician's locker"
+	req_access = list(ACCESS_ATMOSPHERICS)
+	icon_state = "atmos"
+
+/obj/structure/closet/secure_closet/ds/atmospherics/PopulateContents()
+	..()
+	new /obj/item/mod/control/pre_equipped/ds/standard_engineer
+	new /obj/item/radio/headset/headset_eng(src)
+	new /obj/item/pipe_dispenser(src)
+	new /obj/item/storage/toolbox/mechanical(src)
+	new /obj/item/tank/internals/emergency_oxygen/engi(src)
+	new /obj/item/storage/briefcase/inflatable(src)
+	new /obj/item/watertank/atmos(src)
+	new /obj/item/clothing/suit/fire/atmos(src)
+	new /obj/item/clothing/mask/gas/atmos(src)
+	new /obj/item/clothing/head/hardhat/atmos(src)
+	new /obj/item/clothing/glasses/meson/engine/tray(src)
+	new /obj/item/extinguisher/advanced(src)

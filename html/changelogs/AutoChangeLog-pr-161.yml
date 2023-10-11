@@ -1,9 +1,0 @@
-author: MisterGrimm
-delete-after: true
-changes:
-  - rscadd: Combat Mode readded for necromorphs
-  - qol: Necro ability hotkeys overhauled so each ability is either put in a general
-      hotkey, or it's own unique hotkey. Unbound by default
-  - qol: Necro hotkeys have been given their own category
-  - bugfix: Necros can now attack welded/stuck airlocks while on combat mode
-  - code_imp: isnecromorph define moved to default ishelpers due to compile issues

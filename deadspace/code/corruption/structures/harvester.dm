@@ -105,7 +105,7 @@
 
 /obj/structure/necromorph/harvester/proc/on_controlled_moved(atom/movable/controlled)
 	SIGNAL_HANDLER
-	if(IN_GIVEN_RANGE(src, controlled, HARVESTER_CONTROL_RANGE))
+	if(!IN_GIVEN_RANGE(src, controlled, HARVESTER_CONTROL_RANGE))
 		biomass_per_tick -= controlled.biomass_produce
 		controlled_atoms -= controlled
 		UnregisterSignal(controlled, list(COMSIG_PARENT_QDELETING, COMSIG_MOVABLE_MOVED))

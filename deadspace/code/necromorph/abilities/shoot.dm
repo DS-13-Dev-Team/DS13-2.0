@@ -49,15 +49,13 @@
 	pixel_speed_multiplier = 0.3
 
 	impact_effect_type = /obj/effect/temp_visual/biombomb_impact
-
-	damage = 0
+	//The immediate damage from a direct hit, acid gives more damage over time.
+	damage = 10
 	damage_type = BURN
-	// We deal damage by exposing reagent at victims
-	nodamage = TRUE
 
 	armor_flag = ACID
 	//We deal real damage by exposing reagent at victims, though we need run armour checks
-	armour_penetration = 50
+	armour_penetration = 25
 	eyeblur = 5
 
 	var/acid_type = /datum/reagent/toxin/acid

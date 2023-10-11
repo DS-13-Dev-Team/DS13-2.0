@@ -205,3 +205,6 @@
 
 /obj/structure/ladder/crafted
 	crafted = TRUE
+
+/obj/structure/ladder/invincible
+	resistance_flags = 64

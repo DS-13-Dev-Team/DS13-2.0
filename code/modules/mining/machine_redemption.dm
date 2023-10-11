@@ -17,7 +17,7 @@
 
 	var/points = 0
 	var/ore_multiplier = 1
-	var/point_upgrade = 1
+	var/point_upgrade = 1.2 //you don't get that long to mine in ds13 before the "monsters" show up
 	var/list/ore_values = list(/datum/material/iron = 1, /datum/material/glass = 1,  /datum/material/plasma = 15,  /datum/material/silver = 16, /datum/material/gold = 18, /datum/material/titanium = 30, /datum/material/uranium = 30, /datum/material/diamond = 50, /datum/material/bluespace = 50, /datum/material/bananium = 60)
 	/// Variable that holds a timer which is used for callbacks to `send_console_message()`. Used for preventing multiple calls to this proc while the ORM is eating a stack of ores.
 	var/console_notify_timer
@@ -193,7 +193,7 @@
 
 /obj/machinery/mineral/ore_redemption/AltClick(mob/living/user)
 	. = ..()
-	if(!user.canUseTopic(src, BE_CLOSE))
+	if(!user.canUseTopic(src, USE_CLOSE))
 		return
 	if(panel_open)
 		input_dir = turn(input_dir, -90)
@@ -289,7 +289,7 @@
 					desired = text2num(params["sheets"])
 				else
 					desired = tgui_input_number(usr, "How many sheets would you like to smelt?", "Smelt",  max_value = stored_amount)
-					if(!desired || QDELETED(usr) || QDELETED(src) || !usr.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+					if(!desired || QDELETED(usr) || QDELETED(src) || !usr.canUseTopic(src, USE_CLOSE|USE_IGNORE_TK))
 						return
 				var/sheets_to_remove = round(min(desired,50,stored_amount))
 
@@ -342,7 +342,7 @@
 					desired = text2num(params["sheets"])
 				else
 					desired = tgui_input_number(usr, "How many sheets would you like to smelt?", "Smelt", max_value = smelt_amount)
-					if(!desired || QDELETED(usr) || QDELETED(src) || !usr.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+					if(!desired || QDELETED(usr) || QDELETED(src) || !usr.canUseTopic(src, USE_CLOSE|USE_IGNORE_TK))
 						return
 				var/amount = round(min(desired,50,smelt_amount))
 				mat_container.use_materials(alloy.materials, amount)

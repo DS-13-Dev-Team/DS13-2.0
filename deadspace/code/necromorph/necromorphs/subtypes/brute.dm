@@ -26,17 +26,26 @@
 /mob/living/carbon/human/necromorph/brute/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.brute_sounds[audio_type]), volume, vary, extra_range)
 
-/mob/living/carbon/human/necromorph/brute/proc/start_curl(forced)
-	if(curling)
-		return
-	if(forced)
-		if((forced_curl_next + CURL_FORCED_COOLDOWN) < world.time)
-			return
-		forced_curl = TRUE
-		forced_curl_next = world.time + CURL_FORCED_DURATION
-		addtimer(CALLBACK(src, PROC_REF(end_forced_curl)), CURL_FORCED_DURATION)
-	curling = TRUE
-	ADD_TRAIT(src, TRAIT_RESTRAINED, src)
+/mob/living/carbon/human/necromorph/brute/proc/spec_unarmedattack(datum/source, atom/target, proximity, modifiers)
+	if(world.time >= next_attack_delay)
+		play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, 1, 3)
+		if (istype(target, /mob/living/carbon/human))
+			var/mob/living/carbon/human/mob_target = target
+			var/fling_dir = pick((dir & (NORTH|SOUTH)) ? list(WEST, EAST, dir|WEST, dir|EAST) : list(NORTH, SOUTH, dir|NORTH, dir|SOUTH)) //Fling them somewhere not behind nor ahead of the charger.
+			var/fling_dist = rand(2,5)
+			var/turf/destination = mob_target.loc
+			var/turf/temp
+
+			for(var/i in 1 to fling_dist)
+				temp = get_step(destination, fling_dir)
+				if(!temp)
+					break
+				destination = temp
+			if(destination != mob_target.loc)
+				mob_target.apply_damage(24, BRUTE)
+				mob_target.throw_at(destination, fling_dist, 1, src, TRUE)
+			next_attack_delay = spec_attack_delay + world.time
+			return COMPONENT_CANCEL_ATTACK_CHAIN
 
 	var/matrix/new_tranform = matrix()
 	new_tranform.Scale(0.9)
@@ -217,6 +226,7 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
+	damage = 10
 	speed = 0.8
 	pixel_speed_multiplier = 0.5
 

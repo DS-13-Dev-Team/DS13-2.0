@@ -24,6 +24,7 @@
 		/datum/reagent/consumable/vanilla = 6,
 		/datum/reagent/consumable/berryjuice = 6,
 		/datum/reagent/consumable/ethanol/singulo = 6)
+	biomass_produce = BIOMASS_HARVEST_SMALL
 
 /obj/machinery/icecream_vat/Initialize(mapload)
 	. = ..()
@@ -182,7 +183,7 @@
 
 /obj/machinery/icecream_vat/AltClick(mob/living/user)
 	. = ..()
-	if(!can_interact(user) || !user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+	if(!can_interact(user) || !user.canUseTopic(src, USE_CLOSE|USE_IGNORE_TK))
 		return
 	replace_beaker(user)
 

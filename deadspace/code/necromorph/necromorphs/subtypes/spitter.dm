@@ -70,6 +70,7 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
+	damage = 15
 	speed = 0.8
 	pixel_speed_multiplier = 0.5
 
@@ -108,8 +109,9 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
+	damage = 9
 	speed = 0.8
-	pixel_speed_multiplier = 0.5
+	pixel_speed_multiplier = 0.7 //meant to be a close range attack, easier to hit but does less damage
 
 	acid_type = /datum/reagent/toxin/acid/fluacid
 	acid_amount = 2

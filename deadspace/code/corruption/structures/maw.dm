@@ -42,11 +42,11 @@
 
 	// If damage is above 80%
 	if(part.get_damage() >= (part.max_damage * LIMB_DISMEMBERMENT_PERCENT) - 1)
-		processing_biomass += part.biomass * 0.1
+		processing_biomass += part.biomass * 1.2
 		part.drop_limb(FALSE, TRUE)
 		qdel(part)
 	else
-		processing_biomass += part.biomass * 1.2
+		processing_biomass += 0.1
 		// Damage shouldn't be above or equal to 80%
 		part.receive_damage(
 			min(
@@ -65,21 +65,48 @@
 	processing_biomass += target.mob_size * 5
 	qdel(target)
 
+/obj/structure/necromorph/maw/proc/bite_necro(mob/living/carbon/human/necromorph/target, delta_time) //Basically copied bite_human with less efficiency
+	if(length(target.bodyparts) <= 1)
+		var/obj/item/bodypart/part = target.bodyparts[1]
+		processing_biomass += part.biomass
+		qdel(target)
+		return
+
+	var/obj/item/bodypart/part = pick(target.bodyparts)
+	var/iteration = 0
+	while(istype(part, /obj/item/bodypart/chest) && iteration++ < 5)
+		part = pick(target.bodyparts - part)
+
+	if(iteration >= 5)
+		stack_trace("Maw tried to bite a necro but couldn't find a non-chest bodypart")
+		return
+
+	// If damage is above 80%
+	if(part.get_damage() >= (part.max_damage * LIMB_DISMEMBERMENT_PERCENT) - 1)
+		processing_biomass += part.biomass
+		part.drop_limb(FALSE, TRUE)
+		qdel(part)
+	else
+		// Damage shouldn't be above or equal to 80%
+		part.receive_damage(
+			min(
+				MAW_DAMAGE_PER_SECOND * delta_time,
+				(part.max_damage * LIMB_DISMEMBERMENT_PERCENT) - part.get_damage() - 1
+			), 0, sharpness = SHARP_EDGED|SHARP_POINTY
+		)
 /obj/structure/necromorph/maw/is_buckle_possible(mob/living/target, force, check_loc)
 	if(!..())
 		return FALSE
-	if(isnecromorph(target))
+	if(issilicon(target))
 		return FALSE
 	return TRUE
 
 /obj/structure/necromorph/maw/user_buckle_mob(mob/living/M, mob/user, check_loc)
-	if(isnecromorph(M))
+	if(issilicon(M))
 		to_chat(user, span_warning("[src] refuses to consume [M]!"))
 		return FALSE
-
 	if(!do_after_mob(user, M, 5 SECONDS, IGNORE_HELD_ITEM|DO_PUBLIC, TRUE, CALLBACK(src, PROC_REF(buckle_mob_check), M)))
 		return
-
 	return ..()
 
 /obj/structure/necromorph/maw/proc/buckle_mob_check(mob/living/buckling)

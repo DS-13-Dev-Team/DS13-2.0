@@ -8,7 +8,7 @@
 	icon = 'deadspace/icons/turf/floors.dmi'
 	base_icon_state = "dank_tile"
 	icon_state = "dank_tile"
-	baseturfs = /turf/open/floor/plating/deadspace
+	baseturfs = /turf/open/floor/plating
 
 /turf/open/floor/deadspace/roller
 	base_icon_state = "dank_roller"

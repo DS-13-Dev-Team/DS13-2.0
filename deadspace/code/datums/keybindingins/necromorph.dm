@@ -1,6 +1,5 @@
 /datum/keybinding/necromorph
 	category = CATEGORY_NECRO
-	weight = WEIGHT_MOB
 
 /datum/keybinding/necromorph/can_use(client/user)
 	return isnecromorph(user.mob)
