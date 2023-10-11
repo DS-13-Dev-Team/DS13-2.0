@@ -47,15 +47,6 @@
 	sleep(6)
 	play_necro_sound(SOUND_FOOTSTEP, 40, TRUE)
 
-	var/matrix/new_tranform = matrix()
-	new_tranform.Scale(0.9)
-	animate(src, transform = new_tranform, time = CURL_ANIMATION_TIME)
-	play_necro_sound(SOUND_PAIN, 60, TRUE)
-	sleep(CURL_ANIMATION_TIME)
-	play_necro_sound(SOUND_FOOTSTEP, 40, TRUE)
-	sleep(6)
-	play_necro_sound(SOUND_FOOTSTEP, 40, TRUE)
-
 /mob/living/carbon/human/necromorph/brute/proc/stop_curl()
 	if(forced_curl)
 		return

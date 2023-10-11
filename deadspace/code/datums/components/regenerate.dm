@@ -44,8 +44,6 @@
 
 	var/mob/living/carbon/human/necromorph/owner = parent
 
-	var/count_limbs = 0
-
 	regenerating_limbs = owner.get_missing_limbs().Cut(max_limbs)
 
 	//Special effect:
