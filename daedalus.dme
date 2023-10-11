@@ -4812,7 +4812,7 @@
 #include "deadspace\code\modules\weapons\guns\detonator.dm"
 #include "deadspace\code\modules\weapons\guns\divet.dm"
 #include "deadspace\code\modules\weapons\guns\flamethrower.dm"
-#include "deadspace\code\modules\weapons\guns\forcegun.dm"
+#include "deadspace\code\modules\weapons\guns\force_gun.dm"
 #include "deadspace\code\modules\weapons\guns\heavy_pulse.dm"
 #include "deadspace\code\modules\weapons\guns\javelin_gun.dm"
 #include "deadspace\code\modules\weapons\guns\pulse_rifle.dm"

@@ -107,6 +107,7 @@
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
 	new /obj/item/storage/belt/security/full(src)
 	new /obj/item/flashlight/seclite(src)
+	new /obj/item/ammo_box/magazine/divet(src)
 
 /obj/structure/closet/secure_closet/ds/detective
 	name = "\improper detective's cabinet"
@@ -129,7 +130,10 @@
 	new /obj/item/holosign_creator/security(src)
 	new /obj/item/reagent_containers/spray/pepper(src)
 	new /obj/item/clothing/suit/armor/vest/det_suit(src)
-	new /obj/item/storage/belt/holster/detective/full(src)
+	new /obj/item/gun/ballistic/deadspace/twohanded/seeker(src)
+	new /obj/item/ammo_box/magazine/seeker(src)
+	new /obj/item/ammo_box/magazine/seeker(src)
+	new /obj/item/ammo_box/magazine/seeker(src)
 	new /obj/item/pinpointer/crew(src)
 	new /obj/item/binoculars(src)
 	new /obj/item/storage/box/rxglasses/spyglasskit(src)
