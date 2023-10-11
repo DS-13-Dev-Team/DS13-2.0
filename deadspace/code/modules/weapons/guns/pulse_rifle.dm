@@ -81,14 +81,12 @@ Magazines
 	desc = "With a distinctive \"bell and stock\" design, pulse magazines can be inserted and removed from the Pulse Rifle with minimal effort and risk. This one contains hypersonic rounds, unsafe for naval usage."
 	icon_state = "pulse_rounds_hv"
 	ammo_type = /obj/item/ammo_casing/caseless/pulse/hv
-	max_ammo = 80
 
 /obj/item/ammo_box/magazine/pulse/df
 	name = "pulse magazine (deflection)"
 	desc = "With a distinctive \"bell and stock\" design, pulse magazines can be inserted and removed from the Pulse Rifle with minimal effort and risk. This one contains EXPERIMENTAL deflection rounds. Extremely dangerous, these rounds are with a deflective tip, letting them bounce of surfaces."
 	icon_state = "pulse_rounds_df"
 	ammo_type = /obj/item/ammo_casing/caseless/pulse/df
-	max_ammo = 100 //Slightly more total damage than a regular pulse mag. Double normal mag capacity, but nearly half damage
 
 /obj/item/ammo_box/magazine/pulse/blank
 	name = "pulse magazine (blank/practice)"
@@ -109,12 +107,12 @@ Ammo casings for the mags
 /obj/item/ammo_casing/caseless/pulse/hv
 	name = "high velocity pulse round"
 	desc = "A ultra-small caliber hypersonic round designed for the SWS Motorized Pulse Rifle."
-	projectile_type  = /obj/projectile/bullet/pulse/hv
+	projectile_type = /obj/projectile/bullet/pulse/hv
 
 /obj/item/ammo_casing/caseless/pulse/df
 	name = "deflection pulse round"
 	desc = "A ultra-small caliber deflection round designed for the SWS Motorized Pulse Rifle."
-	projectile_type  = /obj/projectile/bullet/pulse/df
+	projectile_type = /obj/projectile/bullet/pulse/df
 
 /obj/item/ammo_casing/caseless/pulse/blank
 	name = "blank pulse round"
@@ -154,20 +152,19 @@ Projectiles for the casings
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "pulse"
 	damage = 14
-	//It sonic fast
 	speed = 1
 	armour_penetration = 4 //Should be quite low I'd think, especially for standard rounds. Bullet made to shred and liquify flesh but not affect materialistic objects much.
 	shrapnel_type = null
 	embedding = null
-	//muzzle_type = /obj/effect/projectile/ds_muzzle/pulse
+	//muzzle_type = /obj/effect/projectile/pulse/light
 
 /obj/projectile/bullet/pulse/hv
 	icon_state = "pulse_hv"
 	damage = 15.5
 	armour_penetration = 12
-	//muzzle_type = /obj/effect/projectile/ds_muzzle/pulse/hv
+	//muzzle_type = /obj/effect/projectile/pulse/hv
 
-/obj/projectile/bullet/pulse/df //Will change properly later
+/obj/projectile/bullet/pulse/df
 	icon_state = "pulse_df"
 	damage = 12
 	stamina = 8
@@ -177,20 +174,20 @@ Projectiles for the casings
 	ricochet_auto_aim_angle = 40
 	ricochet_auto_aim_range = 5
 	ricochet_decay_damage = 0.9
-	//muzzle_type = /obj/effect/projectile/ds_muzzle/pulse/df
-
+	//muzzle_type = /obj/effect/projectile/pulse/df
 /obj/projectile/bullet/pulse/blank //Use Divet blank when it changes
 	damage = 1 //Can maybe do burn damage, reduced range
 	armour_penetration = 0
 	weak_against_armour = TRUE
 	sharpness = NONE
+	//muzzle_type = /obj/effect/projectile/pulse/df
 
 /**
 Projectiles effects
 */
 
 /obj/effect/projectile/pulse
-	icon = 'deadspace/icons/obj/weapons/projectiles_effects.dmi'
+	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "muzzle_pulse"
 	light_power = 0.7
 	light_color = COLOR_DEEP_SKY_BLUE
@@ -210,7 +207,7 @@ Projectiles effects
 	light_power = 0.6
 	light_color = COLOR_YELLOW
 
-/obj/effect/projectile/pulse
+/obj/effect/projectile/pulse_impact
 	name = "impact"
 	icon = 'deadspace/icons/obj/weapons/projectiles_effects.dmi'
 	icon_state = "pulse_hit"

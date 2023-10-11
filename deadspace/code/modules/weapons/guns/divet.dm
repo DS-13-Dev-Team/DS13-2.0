@@ -31,11 +31,6 @@ Divet pistols
 	magazine = new /obj/item/ammo_box/magazine/divet/rb(src)
 	return ..()
 
-/obj/item/gun/ballistic/automatic/pistol/divet/suppressed/Initialize(mapload)//Off chance you want a normal suppressed divet. Might not work.
-	. = ..()
-	var/obj/item/suppressor/S = new(src)
-	install_suppressor(S)
-
 /obj/item/gun/ballistic/automatic/pistol/divet/spec_ops
 	name = "special ops divet pistol"
 	desc = "A modified version of the Winchester Arms NK-series pistol. An integrated suppressor lowers the audio profile fairly well."
@@ -150,8 +145,6 @@ Projectiles for the casings
 	wound_falloff_tile = -10
 	dismemberment = 5
 	embedding = list(embed_chance=25, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=1 SECONDS)
-	//muzzle_type = /obj/effect/projectile/pulse //+/light   dunno where the 'light' part is from. Maybe a calculation on normal pulse muzzle?
-	impact_type = /obj/effect/projectile/divet
 
 //More damage and shrapnel, less AP, structure damage and penetration
 /obj/projectile/bullet/divet/hp

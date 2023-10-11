@@ -39,3 +39,14 @@
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/holosign_creator/security,
 		))
+
+/obj/item/storage/belt/holster/ds/security
+	name = "security holster belt"
+	icon_state = "securitybelt"
+
+/obj/item/storage/belt/holster/ds/security/full/PopulateContents()
+	new /obj/item/reagent_containers/spray/pepper(src)
+	new /obj/item/restraints/handcuffs(src)
+	new /obj/item/grenade/flashbang(src)
+	new /obj/item/assembly/flash/handheld(src)
+	new /obj/item/melee/baton/security/loaded(src)
