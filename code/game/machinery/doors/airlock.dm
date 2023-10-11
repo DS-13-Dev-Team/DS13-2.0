@@ -1302,7 +1302,6 @@
 		if(density && !open(2)) //The airlock is still closed, but something prevented it opening. (Another player noticed and bolted/welded the airlock in time!)
 			to_chat(user, span_warning("Despite your efforts, [src] managed to resist your attempts to open it!"))
 
-//TODO: Replace it with something that is not just a copypaste of alien code
 /obj/machinery/door/airlock/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(isElectrified() && shock(user, 100))
 		add_fingerprint(user)
@@ -1313,7 +1312,7 @@
 	//Already open
 	if(!density)
 		return ..()
-	//Extremely generic, as aliens only understand the basics of how airlocks work.
+	//Extremely generic, as necros only understand the basics of how airlocks work.
 	if(locked || welded || seal)
 		if(user.combat_mode)
 			return ..()
