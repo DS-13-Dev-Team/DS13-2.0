@@ -18,10 +18,10 @@
 	melee_damage_upper = 10
 	max_health = 100
 	actions = list(
-		/datum/action/cooldown/necro/shoot/puker_snapshot = COMSIG_KB_NECROMORPH_ABILITY_SNAPSHOT_DOWN,
-		/datum/action/cooldown/necro/shoot/puker_longshot = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
-		/datum/action/cooldown/necro/shout/long = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_LONG_DOWN,
+		/datum/action/cooldown/necro/shoot/puker_snapshot,
+		/datum/action/cooldown/necro/shoot/puker_longshot,
+		/datum/action/cooldown/necro/shout,
+		/datum/action/cooldown/necro/scream,
 		// /datum/action/cooldown/necro/spray,
 	)
 	minimap_icon = "puker"
@@ -73,6 +73,7 @@
 	cooldown_time = 3.5 SECONDS
 	windup_time = 0.5 SECONDS
 	projectiletype = /obj/projectile/bullet/biobomb/puker_longshot
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN
 
 /datum/action/cooldown/necro/shoot/puker_longshot/pre_fire(atom/target)
 	ADD_TRAIT(owner, TRAIT_IMMOBILIZED, src)
@@ -100,6 +101,7 @@
 	cooldown_time = 2.5 SECONDS
 	windup_time = 0 SECONDS
 	projectiletype = /obj/projectile/bullet/biobomb/puker_snapshot
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_SNAPSHOT_DOWN
 
 /datum/action/cooldown/necro/shoot/puker_snapshot/New(Target, original, cooldown)
 	desc = "A moderate-strength projectile that auto-aims at targets within [PUKER_SNAPSHOT_AUTOTARGET_RANGE] range."

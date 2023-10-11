@@ -19,10 +19,10 @@
 	max_health = INFINITY
 	implemented = TRUE
 	actions = list(
-		/datum/action/cooldown/necro/charge/lunge/ubermorph = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN,
-		/datum/action/cooldown/necro/sense = COMSIG_KB_NECROMORPH_ABILITY_SENSE_DOWN,
-		/datum/action/cooldown/necro/regenerate/ubermorph = COMSIG_KB_NECROMORPH_ABILITY_REGENERATE_DOWN,
-		/datum/action/cooldown/necro/frenzy_shout/ubermorph = COMSIG_KB_NECROMORPH_ABILITY_FRENZY_DOWN,
+		/datum/action/cooldown/necro/charge/ubermorph,
+		/datum/action/cooldown/necro/sense,
+		/datum/action/cooldown/necro/regenerate/ubermorph,
+		// /datum/action/cooldown/necro/frenzy_shout/ubermorph,
 	)
 	minimap_icon = "ubermorph"
 	spawn_limit = 1
@@ -55,14 +55,7 @@
 	)
 
 /datum/action/cooldown/necro/regenerate/ubermorph
-	name = "Regenerate"
-	desc = "Regrows a missing limb and restores some of your health."
 	max_limbs = 2
-
-/datum/action/cooldown/necro/regenerate/ubermorph/finish()
-	if(!owner.GetComponent(/datum/component/statmod/regenerate_afterbuff))
-		owner.AddComponent(/datum/component/statmod/regenerate_afterbuff)
-	. = ..()
 
 /datum/action/cooldown/necro/frenzy_shout/ubermorph
 	var/obj/effect/temp_visual/expanding_circle/EC
@@ -87,14 +80,22 @@
 	EC = new /obj/effect/temp_visual/expanding_circle(owner.loc, 1.5 SECONDS, 1.5,"#ff0000")
 	EC.pixel_y += 40	//Offset it so it appears to be at our mob's head
 
-/datum/action/cooldown/necro/charge/lunge/ubermorph
+/datum/action/cooldown/necro/charge/ubermorph
 	name = "Lunge"
 	desc = "A shortrange charge which causes heavy internal damage to one victim. Often fatal."
 
-/datum/action/cooldown/necro/charge/lunge/ubermorph/PreActivate(atom/target)
-	. = ..()
+/datum/action/cooldown/necro/charge/ubermorph/Activate(atom/target)
+	..()
+	owner.face_atom(get_turf(target))
+	animate(
+		owner,
+		pixel_x = owner.pixel_x + (target_atom.x - owner.x) * 24,
+		pixel_y = owner.pixel_y + (target_atom.y - owner.y) * 24,
+		time = charge_delay,
+		easing = BACK_EASING
+	)
+	return TRUE
 
-/datum/action/cooldown/necro/charge/lunge/ubermorph/Activate(atom/target)
-	if(!isliving(target_atom))
-		target_atom =  autotarget_enemy_mob(target, 2, owner, 999)
-	. = ..()
+/datum/action/cooldown/necro/charge/ubermorph/do_charge()
+	animate(owner, pixel_x = owner.base_pixel_x, pixel_y = owner.base_pixel_y, time = 0.5 SECONDS, easing = BACK_EASING)
+	return ..()

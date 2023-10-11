@@ -20,9 +20,9 @@
 	melee_damage_upper = 16
 	max_health = 100
 	actions = list(
-		/datum/action/cooldown/necro/charge/slasher = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN,
-		/datum/action/cooldown/necro/dodge = COMSIG_KB_NECROMORPH_ABILITY_DODGE_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
+		/datum/action/cooldown/necro/charge/slasher,
+		/datum/action/cooldown/necro/dodge,
+		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "slasher"
 	implemented = TRUE

@@ -2,10 +2,6 @@
 /datum/species/necromorph
 	name = "Necromorph"
 	id = SPECIES_NECROMORPH
-
-	var/icon/icobase
-	var/icon/deform
-
 	//There is no way to become it. Period.
 	changesource_flags = NONE
 	exotic_bloodtype = "X"
@@ -47,7 +43,24 @@
 	)
 
 	inherent_traits = list(
-		TRAIT_CAN_STRIP,
+		TRAIT_DEFIB_BLACKLISTED,
+		TRAIT_BADDNA,
+		TRAIT_GENELESS,
+		TRAIT_VIRUSIMMUNE,
+		TRAIT_NOMETABOLISM,
+		TRAIT_TOXIMMUNE,
+		TRAIT_EASYDISMEMBER,
+		TRAIT_NOBREATH,
+		TRAIT_NOCRITDAMAGE,
+		TRAIT_FEARLESS,
+		TRAIT_NO_SOUL,
+		TRAIT_CANT_RIDE,
+		TRAIT_RESISTLOWPRESSURE,
+		TRAIT_RESISTCOLD,
+		TRAIT_DISCOORDINATED_TOOL_USER,
+		TRAIT_PIERCEIMMUNE,
+		TRAIT_IGNOREDAMAGESLOWDOWN,
+		TRAIT_NOSOFTCRIT,
 		TRAIT_NOHUNGER,
 	)
 
@@ -78,29 +91,22 @@
 /datum/species/necromorph/random_name(gender,unique,lastname)
 	return "[name] [rand(1, 999)]"
 
+/datum/species/necromorph/spec_unarmedattack(mob/living/carbon/human/user, atom/target, modifiers)
+	if(user.combat_mode)
+		target.attack_necromorph(user, modifiers)
+		return TRUE
+
 /datum/species/necromorph/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/necromorph/H, forced = FALSE, spread_damage = FALSE, sharpness = NONE, attack_direction = null)
 	if(H.dodge_shield > 0)
-		var/percent_no_defend = 100-blocked
-		if(HAS_TRAIT(H, TRAIT_DODGEARMOR_FULL))
-			percent_no_defend -= 100
-		else
-			percent_no_defend -=  H.necro_armors.get_dir_armor(attack_direction, H.dir)
-		percent_no_defend /= 100
-		if(percent_no_defend <= 0)
-			blocked = 100
-			return ..()
-		var/absorbed_damage = min(H.dodge_shield, round(damage * percent_no_defend))
-		H.reduce_shield(absorbed_damage)
-		blocked += (absorbed_damage / damage) * 100
+		// Calculate amount of the damage that was blocked by the shield
+		var/dodged_damage = min(H.dodge_shield, damage, damage * (100 - blocked) / 100)
+		H.reduce_shield(dodged_damage)
+		blocked += (dodged_damage / damage) * 100
 	return ..()
 
 //Does animations for regenerating a limb
-/datum/species/necromorph/proc/regenerate_limb(mob/living/carbon/human/H, limb, duration)
-	var/regen_icon = get_icobase()
-	var/image/LR = image(regen_icon, H, "[limb]_regen")
+/datum/species/necromorph/proc/regenerate_limb(mob/living/carbon/human/necromorph/H, limb, duration)
+	var/image/LR = image(initial(H.class.ui_icon), H, "[limb]_regen")
 	LR.plane = H.plane
-	LR.layer = H.layer -0.1 //Slightly below the layer of the mob, so that the healthy limb will draw over it
-	flick_overlay(LR, GLOB.clients, duration + 2)
-
-/datum/species/necromorph/proc/get_icobase(mob/living/carbon/human/H, get_deform)
-	return (get_deform ? deform : icobase)
+	LR.layer = H.layer - 0.1 //Slightly below the layer of the mob, so that the healthy limb will draw over it
+	flick_overlay(LR, GLOB.clients, duration)
