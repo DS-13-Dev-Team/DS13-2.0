@@ -4825,6 +4825,7 @@
 #include "deadspace\code\necromorph\living.dm"
 #include "deadspace\code\necromorph\abilities\ability.dm"
 #include "deadspace\code\necromorph\abilities\charge.dm"
+#include "deadspace\code\necromorph\abilities\finisher.dm"
 #include "deadspace\code\necromorph\abilities\charge_exploder.dm"
 #include "deadspace\code\necromorph\abilities\curl.dm"
 #include "deadspace\code\necromorph\abilities\dodge.dm"

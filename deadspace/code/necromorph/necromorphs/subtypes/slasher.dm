@@ -65,22 +65,21 @@
 
 /datum/action/cooldown/necro/finisher/slasher
 	cooldown_time = 12 SECONDS
-	rush_delay = 2 SECONDS
-	rush_time = 4 SECONDS
+	charge_delay = 2 SECONDS
+	charge_time = 4 SECONDS
 
-/datum/action/cooldown/necro/finisher/slasher/do_rush_indicator(atom/rush_target)
+/datum/action/cooldown/necro/finisher/slasher/do_rush_indicator(atom/charge_target)
 	var/mob/living/carbon/human/necromorph/source = owner
 	var/matrix/new_matrix = matrix(source.transform)
-	var/shake_dir = pick(-1, 1)
+	var/shake_dir = pick(-3, 2)
 	new_matrix.Turn(16*shake_dir)
 	animate(source, transform = new_matrix, pixel_x = source.pixel_x + 5*shake_dir, time = 1)
 	animate(transform = matrix(), pixel_x = source.pixel_x-5*shake_dir, time = 9, easing = ELASTIC_EASING)
 	source.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_HIGH, TRUE, 3)
 
 //bwuh, how
-/datum/action/cooldown/necro/finisher/slasher/do_finisher_indicator(atom/finish_target, atom/finish_source)
+/datum/action/cooldown/necro/finisher/slasher/do_finisher_indicator(atom/finish_target)
 	var/mob/living/carbon/human/necromorph/source = owner
-	var/mob/living/carbon/human/target = target
 	var/matrix/new_matrix = matrix(source.transform)
 	var/shake_dir = pick(-1, 1)
 	new_matrix.Turn(16*shake_dir)
