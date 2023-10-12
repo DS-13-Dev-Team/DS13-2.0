@@ -12,10 +12,9 @@
 		#include "map_files\Mara17\Mara17_Low.dmm"
 		#include "map_files\Mara17\Mara17_Middle.dmm"
 		#include "map_files\Mara17\Mara17_High.dmm"
-		#include "map_files\Sprawl\Sprawl_Low.dmm"
+		#include "map_files\Sprawl\Sprawl_Lower.dmm"
 		#include "map_files\Sprawl\Sprawl_Middle.dmm"
-		#include "map_files\Sprawl\Sprawl_High.dmm"
-		#include sprawl
+		#include "map_files\Sprawl\Sprawl_Upper.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"
