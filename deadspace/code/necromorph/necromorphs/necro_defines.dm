@@ -61,22 +61,15 @@
 	/// bitwise flags denoting things a necromorph can and cannot do, or things a necromorph is or is not. uses defines.
 	var/necro_flags = NONE
 
-	/// How effective fire is against this necromorph. From 0 to 1 as it is a multiplier.
-	var/fire_resist = 1
-
 	/// Wether this necromorph is charging at the moment
 	var/charging = FALSE
 
 	/// How good are we at penetrating armour
 	var/armour_penetration = 0
 
-	var/datum/necro_armor/necro_armors
-
 	var/attack_effect = ATTACK_EFFECT_SLASH
 	/// Signal controlling this necromorph at the moment
 	var/mob/camera/marker_signal/controlling
-
-	COOLDOWN_DECLARE(necro_health_alert_cooldown)
 
 /obj/item/food/meat/slab/human/mutant/necro
 //	icon_state = "necromeat"

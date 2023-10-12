@@ -1,6 +1,6 @@
 /datum/component/statmod/frenzy_buff
-	statmods = list(STATMOD_MOVESPEED_MULTIPLICATIVE = 1,
-					STATMOD_ATTACK_SPEED = 1)
+	//statmods = list(STATMOD_MOVESPEED_MULTIPLICATIVE = 1,
+	//				STATMOD_ATTACK_SPEED = 1)
 	var/duration
 	var/lifetimer
 

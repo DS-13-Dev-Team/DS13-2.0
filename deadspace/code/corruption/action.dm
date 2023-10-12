@@ -34,8 +34,22 @@
 		if(unset_after_click)
 			unset_click_ability(caller, refund_cooldown = TRUE)
 		caller.next_click = world.time + click_cd_override
-		return
-	return ..()
+		return FALSE
+
+	if(!IsAvailable(feedback = TRUE))
+		return FALSE
+	if(!target)
+		return FALSE
+	// The actual action begins here
+	if(!PreActivate(target))
+		return FALSE
+
+	// And if we reach here, the action was complete successfully
+	if(!LAZYACCESS(modifiers, SHIFT_CLICK) && unset_after_click)
+		unset_click_ability(caller, refund_cooldown = FALSE)
+	caller.next_click = world.time + click_cd_override
+
+	return TRUE
 
 /datum/action/cooldown/necro/corruption/Activate(atom/target)
 	var/mob/camera/marker_signal/signal = owner

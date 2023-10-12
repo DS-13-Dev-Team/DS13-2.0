@@ -23,8 +23,6 @@
 
 	var/armour_penetration = 0
 
-	var/list/necro_armor
-
 	///Maximum health a necromorph has.
 	var/max_health = 100
 
@@ -39,35 +37,8 @@
 	// *** Defense *** //
 	var/list/armor = list()
 
-	///How effective fire is against this necromorph. From 0 to 1 as it is a multiplier.
-	var/fire_resist = 1
-
 	///the 'abilities' available to a necromorph.
-	///if list is associative than the key is a keybind signal to trigger an action
 	var/list/datum/action/cooldown/necro/actions = list()
-
-	///List of traits we add in Initialize()
-	var/list/traits = list(
-		TRAIT_DEFIB_BLACKLISTED,
-		TRAIT_BADDNA,
-		TRAIT_GENELESS,
-		TRAIT_VIRUSIMMUNE,
-		TRAIT_NOMETABOLISM,
-		TRAIT_TOXIMMUNE,
-		TRAIT_EASYDISMEMBER,
-		TRAIT_NOBREATH,
-		TRAIT_NOCRITDAMAGE,
-		TRAIT_FEARLESS,
-		TRAIT_NO_SOUL,
-		TRAIT_CANT_RIDE,
-		TRAIT_CAN_STRIP,
-		TRAIT_RESISTLOWPRESSURE,
-		TRAIT_RESISTCOLD,
-		TRAIT_DISCOORDINATED_TOOL_USER,
-		TRAIT_PIERCEIMMUNE,
-		TRAIT_IGNOREDAMAGESLOWDOWN,
-		TRAIT_NOSOFTCRIT,
-	)
 
 	///The iconstate for the necromorph on the minimap
 	var/minimap_icon = "xenominion"
@@ -83,22 +54,11 @@
 	var/implemented = FALSE
 
 /datum/necro_class/proc/load_data(mob/living/carbon/human/necromorph/necro)
-	for(var/trait in traits)
-		ADD_TRAIT(necro, trait, NECROMORPH_TRAIT)
-
 	for(var/datum/action/cooldown/necro/action_datum as anything in actions)
 		action_datum = new action_datum(necro)
 		action_datum.Grant(necro)
-		if(actions[action_datum.type])
-			action_datum.RegisterSignal(necro, actions[action_datum.type], TYPE_PROC_REF(/datum/action/cooldown/necro, TriggerOnKeybindSignal))
 
 	necro.armor = getArmor(arglist(armor))
-
-	necro.necro_armors = getNecroArmor(arglist(necro_armor))
-	necro.dodge_shield = necro.necro_armors.getRating(ARMOR_PROTECTION)
-	if(necro.hud_used)
-		var/datum/hud/necromorph/hud = necro.hud_used
-		hud.update_shieldbar()
 
 	necro.melee_damage_upper = melee_damage_upper
 
@@ -113,5 +73,3 @@
 	necro.unconscious_see_in_dark = unconscious_see_in_dark
 
 	necro.necro_flags = necro_flags
-
-	necro.fire_resist =  fire_resist

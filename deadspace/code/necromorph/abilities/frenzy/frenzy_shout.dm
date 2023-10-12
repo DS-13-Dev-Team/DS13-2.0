@@ -3,6 +3,7 @@
 	name = "Battle Cry"
 	desc = "Grants a 30% move and attackspeed buff to other nearby necromorphs, damages non necromorphs."
 	cooldown_time = 30 SECONDS
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_FRENZY_DOWN
 	var/distance = 7
 	var/duration = 60 SECONDS
 	var/type_buff = /datum/component/statmod/frenzy_buff

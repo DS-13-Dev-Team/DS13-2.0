@@ -8,17 +8,12 @@
 	desc = "Shout to disorientate your enemies."
 	cooldown_time = 8 SECONDS
 	click_to_activate = FALSE
-	var/sound_type = SOUND_SHOUT
-
-/datum/action/cooldown/necro/shout/PreActivate(atom/target)
-	if(owner.incapacitated())
-		return
-	. = ..()
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN
 
 /datum/action/cooldown/necro/shout/Activate(atom/target)
 	StartCooldown()
 	var/mob/living/carbon/human/necromorph/holder = owner
-	holder.play_necro_sound(sound_type, VOLUME_HIGH, TRUE, 2)
+	holder.play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, TRUE, 2)
 	var/matrix/new_matrix = matrix(holder.transform)
 	var/shake_dir = pick(-1, 1)
 	new_matrix.Turn(17*shake_dir)
@@ -31,11 +26,6 @@
 		var/duration = (7 - (distance * 0.5)) SECONDS
 		shake_camera(M, duration, intensity)
 
-/datum/action/cooldown/necro/shout/long
-	name = "Long Shout"
-	desc = "Long Shout to disorientate your enemies."
-	sound_type = SOUND_SHOUT_LONG
-
 /*
 	Scream
 */
@@ -45,12 +35,13 @@
 	desc = "Scream to disorientate your enemies."
 	cooldown_time = 8 SECONDS
 	click_to_activate = FALSE
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_SCREAM_DOWN
 
 /datum/action/cooldown/necro/scream/Activate(atom/target)
 	StartCooldown()
 	var/mob/living/carbon/human/necromorph/holder = owner
 	holder.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_HIGH, TRUE, 2)
-	RegisterSignal(holder, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(on_move))
+	ADD_TRAIT(owner, TRAIT_IMMOBILIZED, src)
 	var/matrix/new_matrix = matrix(holder.transform)
 	var/shake_dir = pick(-1, 1)
 	new_matrix.Turn(17*shake_dir)
@@ -68,7 +59,4 @@
 	set waitfor = FALSE
 
 	sleep(1)
-	UnregisterSignal(owner, COMSIG_MOVABLE_PRE_MOVE)
-
-/datum/action/cooldown/necro/scream/proc/on_move(mob/living/carbon/human/necromorph/holder)
-	return COMPONENT_MOVABLE_BLOCK_PRE_MOVE
+	REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, src)

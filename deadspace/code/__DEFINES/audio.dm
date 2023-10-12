@@ -6,12 +6,6 @@
 #define VOLUME_QUIET	5
 #define VOLUME_NEAR_SILENT	2.5
 
-//Alternate defines
-#define VOLUME_LOUD	VOLUME_HIGH
-#define VOLUME_MEDIUM	VOLUME_MID
-#define VOLUME_NORMAL	VOLUME_MID
-
-
 //Species soundtype defines
 #define SOUND_FOOTSTEP		"footstep"
 #define SOUND_SHOUT			"shout"
@@ -22,11 +16,3 @@
 #define SOUND_SPEECH		"speech"
 #define SOUND_REGEN			"regenerate"
 #define SOUND_CLIMB			"climb"
-//Human specific soundtype defines
-#define SOUND_PAIN_MALE			"pain_male"
-#define SOUND_PAIN_FEMALE		"pain_female"
-
-
-
-//How much time of complete silence is left between ending one song and starting the next. Time is in deciseconds, can't use the SECONDS define here
-#define MUSIC_INTERVAL_DURATION	100

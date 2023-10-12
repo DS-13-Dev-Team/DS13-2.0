@@ -885,11 +885,6 @@
 /obj/machinery/telephone/service,
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/service/chapel/monastery)
-"gE" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/box/white,
-/turf/open/floor/deadspace/grater,
-/area/station/medical/morgue)
 "gF" = (
 /obj/machinery/roulette,
 /obj/machinery/roulette,
@@ -1052,6 +1047,7 @@
 "hF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
 "hG" = (
@@ -1335,6 +1331,11 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"jv" = (
+/obj/effect/turf_decal/box/white,
+/obj/effect/mapping_helpers/dead_body_placer,
+/turf/open/floor/deadspace/grater,
+/area/station/medical/morgue)
 "jy" = (
 /obj/item/storage/lunchbox/egov,
 /turf/open/misc/asteroid,
@@ -2420,8 +2421,10 @@
 /turf/open/floor/deadspace/mono,
 /area/station/medical/exam_room)
 "sb" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
-/turf/open/floor/deadspace/grater,
+/turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
 "sd" = (
 /obj/structure/rack,
@@ -2460,10 +2463,6 @@
 	dir = 8
 	},
 /area/lavaland/surface/outdoors)
-"sr" = (
-/obj/structure/cable,
-/turf/open/floor/deadspace/medical,
-/area/station/medical/morgue)
 "su" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
@@ -4378,7 +4377,9 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "Oa" = (
-/mob/living/simple_animal/pet/dog/corgi/lisa,
+/mob/living/simple_animal/pet/dog/corgi/lisa{
+	name = "Lisa Brennan"
+	},
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
 "Of" = (
@@ -18257,7 +18258,7 @@ xn
 xn
 Ih
 fX
-ZQ
+sb
 Gw
 nG
 nG
@@ -18458,8 +18459,8 @@ sf
 HI
 zF
 do
-gE
-ZQ
+zF
+sb
 sf
 cc
 nG
@@ -18660,8 +18661,8 @@ zF
 HI
 ZF
 do
-gE
-ZQ
+zF
+sb
 zF
 cc
 nG
@@ -18860,10 +18861,10 @@ nG
 QM
 Pn
 HI
-zF
+jv
 do
-gE
-ZQ
+zF
+sb
 sf
 cc
 nG
@@ -19064,8 +19065,8 @@ zF
 HI
 FR
 nG
+JK
 sb
-ZQ
 zF
 Fe
 nG
@@ -19261,13 +19262,13 @@ ph
 FY
 Sf
 nG
-sr
-sr
-sr
-sr
-sr
-sr
-fX
+HI
+HI
+HI
+HI
+HI
+HI
+sb
 JZ
 nG
 nG
@@ -32158,7 +32159,7 @@ yG
 yG
 yG
 bf
-Oa
+iX
 iX
 IG
 bf
@@ -32764,7 +32765,7 @@ yG
 yG
 yG
 bf
-iX
+Oa
 ha
 YO
 Oo

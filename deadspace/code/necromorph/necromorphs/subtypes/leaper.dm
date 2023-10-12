@@ -31,9 +31,9 @@
 	melee_damage_upper = 16
 	max_health = 100
 	actions = list(
-		/datum/action/cooldown/necro/charge/leaper = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN,
-		/datum/action/cooldown/necro/active/gallop = COMSIG_KB_NECROMORPH_ABILITY_GALLOP_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
+		/datum/action/cooldown/necro/charge/leaper,
+		/datum/action/cooldown/necro/active/gallop,
+		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "leaper"
 	implemented = FALSE
