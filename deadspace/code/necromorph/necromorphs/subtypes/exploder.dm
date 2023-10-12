@@ -23,7 +23,7 @@
 	melee_damage_upper = 8
 	max_health = 100
 	actions = list(
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
+		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "exploder"
 	implemented = FALSE //Explode doesn't work so they're worthless

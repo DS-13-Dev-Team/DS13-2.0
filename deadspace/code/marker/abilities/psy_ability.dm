@@ -43,7 +43,7 @@
 		return FALSE
 
 	// And if we reach here, the action was complete successfully
-	if(unset_after_click)
+	if(!LAZYACCESS(modifiers, SHIFT_CLICK) && unset_after_click)
 		unset_click_ability(caller, refund_cooldown = FALSE)
 	caller.next_click = world.time + click_cd_override
 

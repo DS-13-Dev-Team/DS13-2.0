@@ -1,17 +1,12 @@
 // Subsystems Fire
-#define FIRE_PRIORITY_CORRUPTION	34
+#define FIRE_PRIORITY_CORRUPTION 34
 
-#define NECROMORPH_ACID_POWER	0.7	//Damage per unit of necromorph organic acid, used by many things
-#define NECROMORPH_FRIENDLY_FIRE_FACTOR	0.5	//All damage dealt by necromorphs TO necromorphs, is multiplied by this
-#define NECROMORPH_ACID_COLOR	"#946b36"
-
-//Minimum power levels for bioblasts to trigger the appropriate ex_act tier
-#define BIOBLAST_TIER_1	120
-#define BIOBLAST_TIER_2	60
-#define BIOBLAST_TIER_3	30
+#define NECROMORPH_ACID_POWER 0.7	//Damage per unit of necromorph organic acid, used by many things
+#define NECROMORPH_FRIENDLY_FIRE_FACTOR 0.5	//All damage dealt by necromorphs TO necromorphs, is multiplied by this
+#define NECROMORPH_ACID_COLOR "#946b36"
 
 //Faction strings
-#define FACTION_NECROMORPH	"necromorph"
+#define FACTION_NECROMORPH "necromorph"
 #define ROLE_NECROMORPH "necromorph"
 
 //Necromorph species
@@ -52,22 +47,3 @@
 #define SPECIES_NECROMORPH_EXPLODER_ENHANCED_LEFT "enhanced_left_exploder"
 #define SPECIES_NECROMORPH_EXPLODER_RIGHT "right_exploder"
 #define SPECIES_NECROMORPH_EXPLODER_LEFT "left_exploder"
-
-#define NECRO_DEFAULT_VENT_ENTER_TIME 4.5 SECONDS //Standard time for a necromorph to enter a vent.
-#define NECRO_DEFAULT_VENT_EXIT_TIME 2 SECONDS //Standard time for a necromorph to exit a vent.
-
-#define NECROMORPH_CAN_VENT_CRAWL (1<<0)
-#define NECROMORPH_CAN_HAVE_ID (1<<1)
-
-
-#define CHARGE_SPEED(charger) (min(charger.valid_steps_taken, charger.max_steps_buildup) * charger.speed_per_step)
-#define CHARGE_MAX_SPEED (speed_per_step * max_steps_buildup)
-
-#define CHARGE_BRUTE (1<<0)
-
-#define STOP_CHARGE_ON_DEL (1<<0)
-
-#define CHARGE_OFF 0
-#define CHARGE_BUILDINGUP 1
-#define CHARGE_ON 2
-#define CHARGE_MAX 3
