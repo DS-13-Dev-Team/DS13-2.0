@@ -1761,13 +1761,6 @@
 /obj/item/aquarium_kit,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/store/concourse/store8)
-"hx" = (
-/turf/open/floor/wood/parquet,
-/area/sprawl/civilian/concourse/club_interior)
-"hy" = (
-/obj/structure/cable,
-/turf/open/floor/wood/parquet,
-/area/sprawl/civilian/concourse/club_interior)
 "hz" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -1807,7 +1800,7 @@
 /area/sprawl/civilian/concourse/club_storage1)
 "hF" = (
 /obj/structure/curtain/bounty,
-/turf/open/floor/wood/parquet,
+/turf/open/floor/wood,
 /area/sprawl/civilian/concourse/club_interior)
 "hG" = (
 /obj/effect/turf_decal/siding/wood{
@@ -1826,7 +1819,7 @@
 /area/sprawl/civilian/concourse/club_interior)
 "hJ" = (
 /obj/structure/musician/piano/unanchored,
-/turf/open/floor/wood/parquet,
+/turf/open/floor/wood,
 /area/sprawl/civilian/concourse/club_interior)
 "hK" = (
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -1851,7 +1844,7 @@
 "hO" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/cable,
-/turf/open/floor/wood/parquet,
+/turf/open/floor/wood,
 /area/sprawl/civilian/concourse/club_interior)
 "hP" = (
 /turf/open/floor/wood,
@@ -1965,7 +1958,7 @@
 "il" = (
 /obj/structure/curtain/bounty,
 /obj/structure/cable,
-/turf/open/floor/wood/parquet,
+/turf/open/floor/wood,
 /area/sprawl/civilian/concourse/club_interior)
 "im" = (
 /turf/open/floor/iron/smooth_large,
@@ -2887,11 +2880,11 @@
 	dir = 8
 	},
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/wood/parquet,
+/turf/open/floor/wood,
 /area/sprawl/civilian/concourse/club_interior)
 "lO" = (
 /obj/structure/table,
-/turf/open/floor/wood/parquet,
+/turf/open/floor/wood,
 /area/sprawl/civilian/concourse/club_interior)
 "lP" = (
 /obj/machinery/airalarm/directional/west,
@@ -44252,10 +44245,10 @@ fW
 iO
 gP
 iO
-hx
-hx
+hH
+hH
 hO
-hy
+iL
 lU
 lW
 lW
@@ -44554,10 +44547,10 @@ fX
 gM
 dE
 dl
-hy
-hy
-hy
-hx
+iL
+iL
+iL
+hH
 iO
 lX
 lW
@@ -44857,9 +44850,9 @@ dD
 dE
 iO
 iO
-hx
-hy
-hx
+hH
+iL
+hH
 iO
 lX
 lW
@@ -47575,9 +47568,9 @@ gN
 dD
 iO
 iO
-hx
-hy
-hx
+hH
+iL
+hH
 iO
 lX
 lW
@@ -47877,8 +47870,8 @@ iO
 iO
 iO
 iO
-hx
-hy
+hH
+iL
 lN
 iO
 lX
@@ -48180,7 +48173,7 @@ iO
 iO
 iO
 hJ
-hy
+iL
 lO
 iO
 lX
