@@ -10,3 +10,17 @@
   - bugfix: Corruption can pass through tables, rails, and grilles now
   blackwolf602:
   - bugfix: blue to pink for piping
+2023-10-12:
+  DTraitor:
+  - rscadd: Necromorphs have human HUD now
+  - rscadd: Humans can interact with a world around outside of combat mode
+  - qol: Shift+click using signal ability doesn't unset the ability anymore
+  - refactor: Refactored long charge (used by brute). Shouldn't any problems now
+  - refactor: Ubermorphs sense shows a red dot at a human location now
+  - rscdel: Temporarily removed frenzy shout and taunt abilities from the game
+  - code_imp: Reworked regenerate ability a bit
+  - code_imp: Removed a lot of redundant necromorph related code
+  blackwolf602:
+  - bugfix: Power fixed in morgue and tanks added to atmos
+  - rscadd: some map changes
+  - rscadd: ian clarke and lisa Brennan
