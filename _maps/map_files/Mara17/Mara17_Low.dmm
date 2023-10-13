@@ -1540,7 +1540,7 @@
 /area/mara17/interior/lower/sec_checkpoint)
 "fT" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
+/obj/item/reagent_containers/food/drinks/soda_cans/cola,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/sec_checkpoint)
