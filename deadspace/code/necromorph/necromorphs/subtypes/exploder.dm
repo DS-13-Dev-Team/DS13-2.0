@@ -23,7 +23,7 @@
 	melee_damage_upper = 8
 	max_health = 100
 	actions = list(
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
+		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "exploder"
 	implemented = FALSE //Explode doesn't work so they're worthless
@@ -49,12 +49,6 @@
 		'deadspace/sound/effects/footstep/exploder_footstep_7.ogg',
 	)
 
-	deathsound = list(
-		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_death_1.ogg',
-		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_death_2.ogg',
-		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_death_3.ogg'
-	)
-
 /datum/species/necromorph/exploder/get_scream_sound(mob/living/carbon/human/necromorph/exploder)
 	return pick(
 		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_pain_1.ogg',
@@ -62,4 +56,11 @@
 		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_pain_3.ogg',
 		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_pain_4.ogg',
 		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_pain_5.ogg',
+	)
+
+/datum/species/necromorph/exploder/get_deathgasp_sound(mob/living/carbon/human/H)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_death_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_death_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/exploder/exploder_death_3.ogg',
 	)

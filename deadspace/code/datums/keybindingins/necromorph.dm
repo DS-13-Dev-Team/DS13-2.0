@@ -25,13 +25,6 @@
 	description = "Shout to disorientate the enemy."
 	keybind_signal = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN
 
-/datum/keybinding/necromorph/longshout
-	hotkey_keys = list("Unbound")
-	name = "use_long_shout"
-	full_name = "Necromorph Long Shout"
-	description = "Shout to disorientate the enemy."
-	keybind_signal = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_LONG_DOWN
-
 /datum/keybinding/necromorph/scream
 	hotkey_keys = list("Unbound")
 	name = "use_scream"

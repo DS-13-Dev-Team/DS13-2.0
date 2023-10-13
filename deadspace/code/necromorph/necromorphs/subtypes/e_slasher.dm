@@ -20,10 +20,10 @@
 	melee_damage_upper = 22
 	max_health = 215
 	actions = list(
-		/datum/action/cooldown/necro/charge/slasher/enhanced = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN,
-		/datum/action/cooldown/necro/dodge/enhanced = COMSIG_KB_NECROMORPH_ABILITY_DODGE_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
-		/datum/action/cooldown/necro/scream = COMSIG_KB_NECROMORPH_ABILITY_SCREAM_DOWN,
+		/datum/action/cooldown/necro/charge/slasher/enhanced,
+		/datum/action/cooldown/necro/dodge/enhanced,
+		/datum/action/cooldown/necro/shout,
+		/datum/action/cooldown/necro/scream,
 	)
 	minimap_icon = "e_slasher"
 	implemented = TRUE
@@ -43,17 +43,18 @@
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/slasher/enhanced,
 	)
 
-	deathsound = list(
-		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_1.ogg',
-		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_2.ogg',
-		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_3.ogg'
-	)
-
 /datum/species/necromorph/slasher/enhanced/get_scream_sound(mob/living/carbon/human/necromorph/slasher/enhanced)
 	return pick(
 		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_pain_extreme.ogg',
 		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_3.ogg',
 		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_shout_long_5.ogg',
+	)
+
+/datum/species/necromorph/slasher/enhanced/get_deathgasp_sound(mob/living/carbon/human/H)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/slasher_enhanced/eslasher_death_3.ogg',
 	)
 
 /datum/action/cooldown/necro/charge/slasher/enhanced

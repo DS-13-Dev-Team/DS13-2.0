@@ -17,8 +17,9 @@
 	marker?.remove_necro(src)
 	return ..()
 
-/mob/living/carbon/human/necromorph/has_hand_for_held_index(i)
-	return FALSE
+//We should be always able to attack our opponents
+/mob/living/carbon/human/necromorph/has_active_hand()
+	return TRUE
 
 /mob/living/carbon/human/necromorph/updatehealth()
 	. = ..()
@@ -30,37 +31,9 @@
 	.=..()
 	marker?.add_necro(src)
 
-/mob/living/carbon/human/necromorph/update_stat()
-	. = ..()
-	if(.)
-		return
-
-	if(status_flags & GODMODE)
-		return
-
-	if(stat == DEAD)
-		return
-
-	if(health <= 0)
-		death()
-		return
-
-	if(HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
-		if(stat == UNCONSCIOUS)
-			return
-		set_stat(UNCONSCIOUS)
-	else if(stat == UNCONSCIOUS)
-		set_stat(CONSCIOUS)
-
-/mob/living/carbon/human/necromorph/proc/handle_death_check()
-	return TRUE
-
 /mob/living/carbon/human/necromorph/set_stat(new_stat)
 	.=..()
-	if(stat < UNCONSCIOUS)
-		see_in_dark = conscious_see_in_dark
-	else
-		see_in_dark = unconscious_see_in_dark
+	update_sight()
 
 /mob/living/carbon/human/necromorph/update_sight()
 	. = ..()
@@ -102,7 +75,7 @@
 	update_health_hud()
 	med_hud_set_health()
 	med_hud_set_status()
-	stop_pulling()
+	release_all_grabs()
 
 	set_ssd_indicator(FALSE)
 	set_typing_indicator(FALSE)
@@ -137,7 +110,7 @@
 	if(status_flags & GODMODE)
 		return
 	if(stat != DEAD)
-		if(health <= 0 && !HAS_TRAIT(src, TRAIT_NODEATH))
+		if(handle_death_check())
 			death()
 			return
 		else
@@ -147,3 +120,6 @@
 	update_stamina_hud()
 	med_hud_set_status()
 
+/// Check if the necromorph should die
+/mob/living/carbon/human/necromorph/proc/handle_death_check()
+	return (health <= 0 && !HAS_TRAIT(src, TRAIT_NODEATH))

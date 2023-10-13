@@ -18,10 +18,10 @@
 	melee_damage_upper = 10
 	max_health = 100
 	actions = list(
-		/datum/action/cooldown/necro/shoot/puker_snapshot = COMSIG_KB_NECROMORPH_ABILITY_SNAPSHOT_DOWN,
-		/datum/action/cooldown/necro/shoot/puker_longshot = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
-		/datum/action/cooldown/necro/shout/long = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_LONG_DOWN,
+		/datum/action/cooldown/necro/shoot/puker_snapshot,
+		/datum/action/cooldown/necro/shoot/puker_longshot,
+		/datum/action/cooldown/necro/shout,
+		/datum/action/cooldown/necro/scream,
 		// /datum/action/cooldown/necro/spray,
 	)
 	minimap_icon = "puker"
@@ -53,12 +53,6 @@
 		'deadspace/sound/effects/creatures/necromorph/puker/puker_footstep_9.ogg'
 	)
 
-	deathsound = list(
-		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_1.ogg',
-		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_2.ogg',
-		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_3.ogg'
-	)
-
 /datum/species/necromorph/puker/get_scream_sound(mob/living/carbon/human/necromorph/puker)
 	return pick(
 		'deadspace/sound/effects/creatures/necromorph/puker/puker_pain_4.ogg',
@@ -67,12 +61,20 @@
 		'deadspace/sound/effects/creatures/necromorph/puker/puker_shout_long_4.ogg',
 	)
 
+/datum/species/necromorph/puker/get_deathgasp_sound(mob/living/carbon/human/H)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/puker/puker_death_3.ogg',
+	)
+
 /datum/action/cooldown/necro/shoot/puker_longshot
 	name = "Long shot"
 	desc = "A powerful projectile for longrange shooting."
 	cooldown_time = 3.5 SECONDS
 	windup_time = 0.5 SECONDS
 	projectiletype = /obj/projectile/bullet/biobomb/puker_longshot
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN
 
 /datum/action/cooldown/necro/shoot/puker_longshot/pre_fire(atom/target)
 	ADD_TRAIT(owner, TRAIT_IMMOBILIZED, src)
@@ -100,6 +102,7 @@
 	cooldown_time = 2.5 SECONDS
 	windup_time = 0 SECONDS
 	projectiletype = /obj/projectile/bullet/biobomb/puker_snapshot
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_SNAPSHOT_DOWN
 
 /datum/action/cooldown/necro/shoot/puker_snapshot/New(Target, original, cooldown)
 	desc = "A moderate-strength projectile that auto-aims at targets within [PUKER_SNAPSHOT_AUTOTARGET_RANGE] range."

@@ -1,16 +1,13 @@
-/mob/living/carbon/human/necromorph/UnarmedAttack(atom/attack_target, proximity_flag, list/modifiers)
-	if(SEND_SIGNAL(src, COMSIG_LIVING_UNARMED_ATTACK, attack_target, proximity_flag, modifiers) & COMPONENT_CANCEL_ATTACK_CHAIN)
-		return
-	attack_target.attack_necromorph(src, modifiers)
+spec_unarmedattack
 
-/atom/proc/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
+/atom/proc/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage = null)
 	if(!uses_integrity || (!user.melee_damage_upper && !dealt_damage)) //No damage
 		return FALSE
 	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)
 	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
 
-/mob/living/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
+/mob/living/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage  = null)
 	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)
 	playsound(loc, 'sound/weapons/slash.ogg', 50, TRUE, -1)
@@ -22,7 +19,7 @@
 	apply_damage(dealt_damage, BRUTE, zone_attacked, armor_block)
 	log_combat(user, src, "attacked")
 
-/mob/living/carbon/human/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
+/mob/living/carbon/human/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage = null)
 	if(check_shields(user, 0, "the [user.name]"))
 		visible_message(span_danger("[user] attempts to touch [src]!"), \
 						span_danger("[user] attempts to touch you!"), span_hear("You hear a swoosh!"), null, user)

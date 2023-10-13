@@ -18,10 +18,10 @@
 	melee_damage_upper = 13
 	max_health = 100
 	actions = list(
-		/datum/action/cooldown/necro/shoot/spitter_snapshoot = COMSIG_KB_NECROMORPH_ABILITY_SNAPSHOT_DOWN,
-		/datum/action/cooldown/necro/shoot/spitter_longshoot = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN,
-		/datum/action/cooldown/necro/shout = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_DOWN,
-		/datum/action/cooldown/necro/shout/long = COMSIG_KB_NECROMORPH_ABILITY_SHOUT_LONG_DOWN,
+		/datum/action/cooldown/necro/shoot/spitter_snapshoot,
+		/datum/action/cooldown/necro/shoot/spitter_longshoot,
+		/datum/action/cooldown/necro/shout,
+		/datum/action/cooldown/necro/scream,
 	)
 	minimap_icon = "spitter"
 	implemented = TRUE
@@ -39,16 +39,17 @@
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/spitter,
 	)
 
-	deathsound = list(
-		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_death_1.ogg',
-		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_death_2.ogg',
-		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_death_3.ogg'
-	)
-
 /datum/species/necromorph/spitter/get_scream_sound(mob/living/carbon/human/necromorph/spitter)
 	return pick(
 		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_pain_extreme.ogg',
 		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_pain_extreme_2.ogg',
+	)
+
+/datum/species/necromorph/spitter/get_deathgasp_sound(mob/living/carbon/human/H)
+	return pick(
+		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_death_1.ogg',
+		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_death_2.ogg',
+		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_death_3.ogg',
 	)
 
 /datum/action/cooldown/necro/shoot/spitter_longshoot
@@ -57,6 +58,7 @@
 	cooldown_time = 3.5 SECONDS
 	windup_time = 0.5 SECONDS
 	projectiletype = /obj/projectile/bullet/biobomb/spitter_longshoot
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN
 
 /datum/action/cooldown/necro/shoot/spitter_longshoot/pre_fire(atom/target)
 	ADD_TRAIT(owner, TRAIT_IMMOBILIZED, src)
@@ -84,6 +86,7 @@
 	cooldown_time = 3 SECONDS
 	windup_time = 0 SECONDS
 	projectiletype = /obj/projectile/bullet/biobomb/spitter_snapshoot
+	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_SNAPSHOT_DOWN
 
 /datum/action/cooldown/necro/shoot/spitter_snapshoot/New(Target, original, cooldown)
 	desc = "A moderate-strength projectile. Auto-aims at targets within [SPITTER_SNAPSHOT_AUTOTARGET_RANGE] range."
