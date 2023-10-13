@@ -759,7 +759,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage1)
 "db" = (
-/obj/machinery/vending/cola/monkey_energy,
+/obj/machinery/vending/cola/pwr_game,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage1)
 "dc" = (
