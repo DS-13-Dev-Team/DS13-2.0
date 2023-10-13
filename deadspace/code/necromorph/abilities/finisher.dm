@@ -137,10 +137,10 @@
 /datum/action/cooldown/necro/finisher/proc/on_bump(atom/movable/source, atom/target)
 	SIGNAL_HANDLER
 	if(ismob(target) || target.uses_integrity)
-		hit_target(source, target)
+		start_finish(source, target)
 	SSmove_manager.stop_looping(owner)
 
-/datum/action/cooldown/necro/finisher/proc/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
+/datum/action/cooldown/necro/finisher/proc/start_finish(mob/living/carbon/human/necromorph/source, mob/living/target)
 	target.attack_necromorph(source, dealt_damage = charge_damage)
 	if(isliving(target))
 		if(ishuman(target))
@@ -150,25 +150,25 @@
 				shake_camera(source, 4, 3)
 				shake_camera(target, 2, 1)
 				return
-		///? Do a grab
-		target.set_pulledby(source)
-		target.setGrabState(GRAB_AGGRESSIVE)
+		///? Do an aggro grab
+		target.grabbedby(source)
+		target.grippedby(source, instant = TRUE)
+		target.visible_message("<span class='danger'>[source] clasps [target] in its grasp! Teeth ripping into the base of [target]'s neck!</span>", "<span class='userdanger'>[source] clasps you in its arms! You feel a sharp pain coming from your neck as [source] digs in!</span>")
 		shake_camera(target, 4, 3)
 		shake_camera(source, 2, 3)
-		target.visible_message("<span class='danger'>[source] clasps [target] in its grasp! Teeth ripping into the base of [target]'s neck!</span>", "<span class='userdanger'>[source] clasps you in its arms! You feel a sharp pain coming from your neck as [source] digs in!</span>")
-		RegisterSignal(target, COMSIG_LIVING_START_PULL, PROC_REF(do_finisher))
+		do_finisher(source, target, 5)
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)
 		source.Stun(6)
 	///? Finisher deals progressive damage
 /datum/action/cooldown/necro/finisher/proc/do_finisher(mob/living/carbon/human/target, mob/living/carbon/human/necromorph/source, delta_time)
-	if(target.pulledby.grab_state == GRAB_AGGRESSIVE)
+	if(target.grab_state == GRAB_AGGRESSIVE)
 		var/finisher_end = world.time + finisher_time
 		var/obj/item/bodypart/target_head = target.get_bodypart(BODY_ZONE_HEAD)
 		if(world.time < finisher_end && target.stat != DEAD)
 			target.apply_damage(FINISHER_DAMAGE_PER_SECOND * delta_time, BRUTE, target_head)
-			///? do exegrab_anim to grab
+			///? do slasher finisher animation
 			do_finisher_indicator(source, target)
 			return
 		///? do exe_anim to kill off the target
@@ -178,7 +178,6 @@
 		shake_camera(source, 4, 3)
 		target.visible_message("<span class='danger'>[target] writhes out of the grasp by [source]! [source] has lost its footing!</span>", "<span class='userdanger'>You wriggle out of [source]'s restraint! Your neck relaxes as teeth of [source] are no longer in.</span>")
 		source.Stun(6)
-		UnregisterSignal(source, COMSIG_LIVING_START_PULL)
 
 /datum/action/cooldown/necro/finisher/proc/do_finisher_indicator(atom/finisher_source, atom/finish_target)
 	return
@@ -187,3 +186,7 @@
 	SIGNAL_HANDLER
 	if(resting)
 		SSmove_manager.stop_looping(source)
+
+
+/// RegisterSignal(target, COMSIG_LIVING_START_PULL, PROC_REF(do_finisher))????????????
+/// target.attack_necromorph(source, dealt_damage = charge_damage)
