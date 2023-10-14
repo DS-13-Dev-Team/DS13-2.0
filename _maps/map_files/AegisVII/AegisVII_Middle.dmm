@@ -1496,9 +1496,6 @@
 /turf/closed/wall/r_wall,
 /area/lavaland/surface/outdoors)
 "auP" = (
-/obj/effect/turf_decal/siding/blue{
-	dir = 4
-	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 4;
 	id = "med_diagnostic_privacy";
@@ -1537,12 +1534,6 @@
 	dir = 8
 	},
 /area/mine/production)
-"avA" = (
-/obj/structure/window{
-	dir = 4
-	},
-/turf/open/floor/grass,
-/area/station/service/hydroponics)
 "avD" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -5499,13 +5490,6 @@
 	dir = 4
 	},
 /area/station/hallway/primary/aft)
-"bnQ" = (
-/obj/machinery/disposal/bin,
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
-/turf/open/floor/deadspace/mono,
-/area/station/service/hydroponics)
 "bnS" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Shared Engineering Storage";
@@ -6015,9 +5999,6 @@
 /turf/open/floor/iron/dark,
 /area/station/science/server)
 "bsF" = (
-/obj/effect/turf_decal/siding/blue{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/machinery/door/airlock/medical{
 	name = "Diagnostics";
@@ -6188,7 +6169,9 @@
 /turf/open/floor/iron/norn,
 /area/station/hallway/primary/central)
 "bwD" = (
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -6783,9 +6766,9 @@
 	},
 /area/station/hallway/primary/fore)
 "bRz" = (
+/obj/structure/rack,
+/obj/item/plant_analyzer,
 /obj/machinery/light/small/directional/north,
-/obj/machinery/hydroponics/constructable,
-/obj/effect/turf_decal/bot,
 /turf/open/floor/deadspace/mono,
 /area/station/maintenance/starboard/fore)
 "bRX" = (
@@ -7306,7 +7289,6 @@
 /area/lavaland/surface/outdoors)
 "ckl" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -8696,13 +8678,6 @@
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/deadspace/grater,
 /area/lavaland/surface/outdoors)
-"dmg" = (
-/obj/structure/closet/secure_closet/hydroponics,
-/obj/effect/turf_decal/stripes/line{
-	dir = 5
-	},
-/turf/open/floor/deadspace/mono,
-/area/station/service/hydroponics)
 "dmm" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -10877,8 +10852,6 @@
 	},
 /area/station/hallway/primary/starboard)
 "eVR" = (
-/obj/structure/reagent_dispensers/watertank/high,
-/obj/item/reagent_containers/glass/bucket,
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
@@ -10887,6 +10860,10 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
+	},
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
@@ -11068,9 +11045,9 @@
 /area/station/commons/dorms/barracks)
 "fab" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
-	dir = 1
+	dir = 4
 	},
-/turf/open/floor/deadspace/mono,
+/turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
 "fae" = (
 /obj/machinery/chem_dispenser,
@@ -12310,7 +12287,6 @@
 /area/station/medical/chemistry)
 "fQm" = (
 /obj/item/reagent_containers/glass/bucket,
-/obj/machinery/light/small/directional/north,
 /obj/structure/rack,
 /obj/item/cultivator,
 /obj/item/shovel/spade,
@@ -13263,8 +13239,6 @@
 "gAn" = (
 /obj/structure/table/glass,
 /obj/item/secateurs,
-/obj/structure/noticeboard/directional/east,
-/obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/mono,
 /area/station/service/hydroponics)
 "gAo" = (
@@ -14619,14 +14593,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/main)
-"hxa" = (
-/obj/structure/extinguisher_cabinet/directional/south,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/camera/directional/south{
-	c_tag = "Hydroponics - Aft"
-	},
-/turf/open/floor/deadspace/mono,
-/area/station/service/hydroponics)
 "hxe" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
@@ -15522,6 +15488,7 @@
 "ihG" = (
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/maintenance/starboard/fore)
 "ihO" = (
@@ -17720,7 +17687,6 @@
 /area/station/hallway/secondary/service)
 "jTw" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/disposalpipe/segment,
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -25200,8 +25166,10 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "pHT" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating,
+/obj/machinery/hydroponics/constructable,
+/obj/effect/turf_decal/bot,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/deadspace/mono,
 /area/station/maintenance/starboard/fore)
 "pHU" = (
 /obj/structure/table/reinforced,
@@ -30847,10 +30815,9 @@
 /turf/open/floor/deadspace/bathroom,
 /area/station/cargo/miningoffice)
 "udK" = (
-/obj/machinery/newscaster/directional/south,
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/deadspace/mono,
-/area/station/service/hydroponics)
+/obj/effect/spawner/structure/window/reinforced/grille,
+/turf/open/floor/plating,
+/area/station/service/bar)
 "udR" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 9
@@ -32121,6 +32088,7 @@
 /area/station/commons/dorms/barracks)
 "vcb" = (
 /obj/machinery/camera/autoname/directional/north,
+/obj/structure/noticeboard/directional/north,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
 "vcD" = (
@@ -33843,6 +33811,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/blue,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
 "wuX" = (
@@ -34007,21 +33978,11 @@
 /turf/open/floor/engine/plasma,
 /area/station/engineering/atmos)
 "wAO" = (
-/obj/item/reagent_containers/spray/plantbgone{
-	pixel_y = 3
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
 	},
-/obj/item/reagent_containers/spray/plantbgone{
-	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/spray/plantbgone{
-	pixel_x = 13;
-	pixel_y = 5
-	},
-/obj/item/watertank,
-/obj/item/grenade/chem_grenade/antiweed,
-/obj/structure/table/glass,
-/turf/open/floor/catwalk_floor/iron_dark,
+/obj/structure/closet/secure_closet/hydroponics,
+/turf/open/floor/deadspace/mono,
 /area/station/service/hydroponics)
 "wBh" = (
 /obj/structure/disposalpipe/segment,
@@ -35058,10 +35019,22 @@
 	},
 /area/lavaland/surface/outdoors)
 "xmD" = (
-/obj/structure/rack,
-/obj/item/plant_analyzer,
-/turf/open/floor/deadspace/mono,
-/area/station/maintenance/starboard/fore)
+/obj/item/reagent_containers/spray/plantbgone{
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/spray/plantbgone{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/spray/plantbgone{
+	pixel_x = 13;
+	pixel_y = 5
+	},
+/obj/item/watertank,
+/obj/item/grenade/chem_grenade/antiweed,
+/obj/structure/table/glass,
+/turf/open/floor/deadspace/random/rectangles,
+/area/station/service/hydroponics)
 "xnl" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -39210,7 +39183,7 @@ uoi
 uoi
 uoi
 uoi
-uoi
+mlO
 mlO
 mlO
 mlO
@@ -39410,9 +39383,9 @@ nAC
 uoi
 bcI
 ojt
-bcI
 tHi
 uoi
+mlO
 mlO
 mlO
 mlO
@@ -39613,8 +39586,8 @@ uoi
 xMs
 rbs
 xMs
-avA
 uoi
+mlO
 mlO
 mlO
 mlO
@@ -39814,9 +39787,9 @@ ybM
 ybM
 ybM
 xwz
-aKW
 fab
 uoi
+mlO
 mlO
 mlO
 mlO
@@ -40017,8 +39990,8 @@ aVN
 aVN
 pga
 aKW
-hxa
 uoi
+mlO
 mlO
 mlO
 mlO
@@ -40219,7 +40192,7 @@ oeW
 kSZ
 teO
 aKW
-udK
+uoi
 uoi
 uoi
 uoi
@@ -40421,9 +40394,9 @@ uoi
 uoi
 tzE
 aKW
-jkf
 uoi
-dmg
+wAO
+uyv
 jaV
 uyv
 dcf
@@ -40623,9 +40596,9 @@ aNt
 aNt
 fWu
 bYl
-sOu
 wZp
 sOu
+aKW
 aKW
 aKW
 cQZ
@@ -40825,10 +40798,10 @@ nTu
 fjh
 rls
 bYl
-jkf
 uoi
 ybS
 owt
+ety
 ety
 aIb
 cJg
@@ -41026,13 +40999,13 @@ bwD
 jTw
 ckl
 ckl
-bwD
-bnQ
+bYl
 uoi
 lpl
 ety
-wAO
 ety
+ety
+xmD
 cJg
 aGA
 dqG
@@ -41230,11 +41203,11 @@ nAC
 ybM
 nAC
 uoi
-uoi
 xZt
 eve
 eqB
 dbj
+uoi
 cJg
 aGA
 hGf
@@ -41622,9 +41595,9 @@ gAq
 prj
 gAq
 gAq
-gAq
-gAq
-gAq
+udK
+udK
+udK
 gAq
 uoi
 fQM
@@ -41634,11 +41607,11 @@ uoi
 uoi
 uoi
 uoi
-gyQ
+fQm
 lEo
 lEo
 lEo
-pHT
+gFk
 cJg
 jPp
 bKO
@@ -41834,9 +41807,9 @@ jTp
 ioL
 nnp
 kvd
-apG
-bDa
 gyQ
+gFk
+lEo
 pBB
 biK
 xOL
@@ -42036,9 +42009,9 @@ tBF
 sMs
 soK
 kvd
-apG
-bDa
-xmD
+pHT
+gFk
+lEo
 xOL
 gFk
 tXt
@@ -42238,9 +42211,9 @@ taK
 awz
 rXW
 kvd
-apG
-bDa
-fQm
+gyQ
+lEo
+lEo
 biK
 aCI
 bgf
