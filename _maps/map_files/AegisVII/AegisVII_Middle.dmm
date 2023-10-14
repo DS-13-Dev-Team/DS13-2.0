@@ -6127,14 +6127,14 @@
 	pixel_x = -3;
 	pixel_y = 10
 	},
+/obj/effect/floor_decal/ds/spline/fancy/wood{
+	dir = 1
+	},
 /obj/item/ammo_casing/caseless/rocket{
 	desc = "Your grandpappy brought this home after the war. You're pretty sure it's a dud.";
 	name = "Dud Rocket";
 	pixel_x = -4;
 	pixel_y = -7
-	},
-/obj/effect/floor_decal/ds/spline/fancy/wood{
-	dir = 1
 	},
 /turf/open/floor/carpet/red,
 /area/station/cargo/qm)
@@ -9671,6 +9671,10 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/broken_floor,
+/obj/structure/table/wood,
+/obj/item/ammo_box/magazine/javelin,
+/obj/item/ammo_box/magazine/javelin,
+/obj/item/gun/ballistic/deadspace/twohanded/javelin,
 /turf/open/floor/wood,
 /area/station/cargo/qm)
 "eaZ" = (
