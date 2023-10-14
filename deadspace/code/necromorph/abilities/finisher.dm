@@ -23,19 +23,19 @@
 	var/max_steps_buildup = 2
 	var/atom/target_atom
 	/// How long the execution is going to take compared to world.time
-	var/finisher_time = 3 SECONDS
+	var/finisher_time = 5 SECONDS
 	//How long the animation to initiate a finisher grapple
 	var/exegrab_anim = 0.5 SECONDS
 	//How long the animation to finish actually takes
 	var/exe_anim = 1 SECONDS
 
 /datum/action/cooldown/necro/finisher/PreActivate(atom/target)
-	var/turf/Tr = get_turf(target)
-	if(!Tr)
+	var/turf/T = get_turf(target)
+	if(!T)
 		to_chat(owner, span_notice("You must target a human to finish them!"))
 		return FALSE
 	if(!ishuman(target))
-		for(var/mob/living/carbon/human/hummie in view(1, Tr))
+		for(var/mob/living/carbon/human/hummie in view(1, T))
 			if(!isnecromorph(hummie))
 				target = hummie
 				break
@@ -140,7 +140,7 @@
 		start_finish(source, target)
 	SSmove_manager.stop_looping(owner)
 
-/datum/action/cooldown/necro/finisher/proc/start_finish(mob/living/carbon/human/necromorph/source, mob/living/target)
+/datum/action/cooldown/necro/finisher/proc/start_finish(mob/living/carbon/human/necromorph/source, mob/living/target, delta_time)
 	target.attack_necromorph(source, dealt_damage = charge_damage)
 	if(isliving(target))
 		if(ishuman(target))
@@ -150,34 +150,34 @@
 				shake_camera(source, 4, 3)
 				shake_camera(target, 2, 1)
 				return
-		///? Do an aggro grab
+		/// Do an aggro grab
 		target.grabbedby(source)
 		target.grippedby(source, instant = TRUE)
 		target.visible_message("<span class='danger'>[source] clasps [target] in its grasp! Teeth ripping into the base of [target]'s neck!</span>", "<span class='userdanger'>[source] clasps you in its arms! You feel a sharp pain coming from your neck as [source] digs in!</span>")
 		shake_camera(target, 4, 3)
 		shake_camera(source, 2, 3)
-		do_finisher(source, target, 5)
+		///
+		if(target.grab_state == GRAB_AGGRESSIVE)
+			var/finisher_end = world.time + finisher_time
+			var/obj/item/bodypart/target_head = target.get_bodypart(BODY_ZONE_HEAD)
+			if(finisher_end > world.time && target.stat != DEAD)
+				target.adjustBruteLoss(FINISHER_DAMAGE_PER_SECOND * delta_time, BRUTE, target_head)
+				/// do slasher finisher animation
+				do_finisher_indicator(source, target)
+		/// do exe_anim to kill off the target
+				if(finisher_end <= world.time && target.stat != DEAD)
+					target.apply_damage(400, BRUTE, target_head)
+					return
+		else
+			shake_camera(source, 4, 3)
+			target.visible_message("<span class='danger'>[target] writhes out of the grasp by [source]! [source] has lost its footing!</span>", "<span class='userdanger'>You wriggle out of [source]'s restraint! Your neck relaxes as teeth of [source] are no longer in.</span>")
+			source.Stun(6)
+
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)
 		source.Stun(6)
-	///? Finisher deals progressive damage
-/datum/action/cooldown/necro/finisher/proc/do_finisher(mob/living/carbon/human/target, mob/living/carbon/human/necromorph/source, delta_time)
-	if(target.grab_state == GRAB_AGGRESSIVE)
-		var/finisher_end = world.time + finisher_time
-		var/obj/item/bodypart/target_head = target.get_bodypart(BODY_ZONE_HEAD)
-		if(world.time < finisher_end && target.stat != DEAD)
-			target.apply_damage(FINISHER_DAMAGE_PER_SECOND * delta_time, BRUTE, target_head)
-			///? do slasher finisher animation
-			do_finisher_indicator(source, target)
-			return
-		///? do exe_anim to kill off the target
-		if(world.time >= finisher_end && target.stat != DEAD)
-			target.apply_damage(400, BRUTE, target_head)
-	else
-		shake_camera(source, 4, 3)
-		target.visible_message("<span class='danger'>[target] writhes out of the grasp by [source]! [source] has lost its footing!</span>", "<span class='userdanger'>You wriggle out of [source]'s restraint! Your neck relaxes as teeth of [source] are no longer in.</span>")
-		source.Stun(6)
+	/// Finisher deals progressive damage
 
 /datum/action/cooldown/necro/finisher/proc/do_finisher_indicator(atom/finisher_source, atom/finish_target)
 	return
@@ -190,3 +190,4 @@
 
 /// RegisterSignal(target, COMSIG_LIVING_START_PULL, PROC_REF(do_finisher))????????????
 /// target.attack_necromorph(source, dealt_damage = charge_damage)
+/// /datum/action/cooldown/necro/finisher/proc/do_finisher(mob/living/carbon/human/target, mob/living/carbon/human/necromorph/source, delta_time)
