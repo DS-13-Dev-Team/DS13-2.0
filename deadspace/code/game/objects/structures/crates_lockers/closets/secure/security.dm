@@ -58,6 +58,7 @@
 /obj/structure/closet/secure_closet/ds/hos/PopulateContents()
 	..()
 	new /obj/item/mod/control/pre_equipped/ds/pcsi_commander(src)
+	new /obj/item/gun/ballistic/automatic/pistol/divet/spec_ops(src)
 	new /obj/item/computer_hardware/hard_drive/role/hos(src)
 	new /obj/item/clothing/head/cseco(src)
 	new /obj/item/clothing/head/soft/retro_command(src)
