@@ -40,6 +40,15 @@
 		/obj/item/holosign_creator/security,
 		))
 
+/obj/item/storage/belt/holster/ds/command/full/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pistol/divet(src)
+
+/obj/item/storage/belt/holster/ds/captain/full/PopulateContents()
+	new /obj/item/gun/ballistic/revolver/antique(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
+	new /obj/item/ammo_box/a357(src)
+
 /obj/item/storage/belt/holster/ds/security
 	name = "security holster belt"
 	icon_state = "securitybelt"

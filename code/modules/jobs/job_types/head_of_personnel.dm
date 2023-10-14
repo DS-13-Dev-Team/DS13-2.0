@@ -69,10 +69,11 @@
 		/obj/item/storage/box/ids = 1,
 		/obj/item/assembly/flash/handheld
 	)
-	belt = /obj/item/modular_computer/tablet/pda/heads/hop
+	belt = /obj/item/storage/belt/holster/ds/command/full
 	ears = /obj/item/radio/headset/heads/hop
 	head = /obj/item/clothing/head/hopcap/cec
 	shoes = /obj/item/clothing/shoes/laceup
+	l_pocket = /obj/item/modular_computer/tablet/pda/heads/hop
 
 	chameleon_extras = list(
 		/obj/item/gun/energy/e_gun,

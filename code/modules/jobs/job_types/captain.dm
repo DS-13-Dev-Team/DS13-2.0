@@ -71,12 +71,13 @@
 		/obj/item/station_charter = 1,
 		/obj/item/assembly/flash/handheld
 		)
-	belt = /obj/item/modular_computer/tablet/pda/captain
+	belt = /obj/item/storage/belt/holster/ds/captain/full
 	ears = /obj/item/radio/headset/heads/captain/alt
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/captain
 	head = /obj/item/clothing/head/caphat/cec
 	shoes = /obj/item/clothing/shoes/laceup
+	l_pocket = /obj/item/modular_computer/tablet/pda/captain
 
 	accessory = /obj/item/clothing/accessory/medal/gold/captain
 	chameleon_extras = list(
