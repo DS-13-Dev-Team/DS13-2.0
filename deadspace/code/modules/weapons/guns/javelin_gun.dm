@@ -3,7 +3,7 @@
 	desc = "a telemetric survey tool manufactured by Timson Tools, designed to fire titanium spikes or 'javelins' at high speeds with extreme accuracy and piercing power."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "javelin"
-	inhand_icon_state = "javelinwieldmag"
+	inhand_icon_state = "javelinunwieldmag"
 	base_icon_state = "javelin"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
