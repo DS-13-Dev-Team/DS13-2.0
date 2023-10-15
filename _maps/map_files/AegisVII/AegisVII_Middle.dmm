@@ -2676,6 +2676,11 @@
 	},
 /turf/open/floor/wood,
 /area/station/service/bar)
+"aIV" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/station/service/hydroponics)
 "aJd" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -23011,6 +23016,7 @@
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 9
 	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/deadspace/mono,
 /area/station/service/chapel)
 "nXd" = (
@@ -34858,6 +34864,7 @@
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 5
 	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/deadspace/mono,
 /area/station/service/chapel)
 "xdP" = (
@@ -40397,7 +40404,7 @@ xcI
 uoi
 uoi
 tzE
-aKW
+aIV
 uoi
 wAO
 uyv

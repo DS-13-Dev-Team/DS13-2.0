@@ -10,10 +10,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
 "ae" = (
@@ -496,11 +492,9 @@
 /turf/open/floor/plating,
 /area/station/commons/lounge)
 "dZ" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/obj/structure/chair/stool/directional/south,
-/turf/open/floor/wood,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/extinguisher_cabinet/directional/east,
+/turf/open/floor/carpet/green,
 /area/station/commons/lounge)
 "ej" = (
 /obj/effect/spawner/random/vending/colavend,
@@ -1803,10 +1797,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos)
-"wK" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/carpet/green,
-/area/station/commons/lounge)
 "wN" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -2193,7 +2183,7 @@
 /turf/open/floor/iron/dark,
 /area/station/security/brig/upper)
 "Cw" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/effect/spawner/structure/window/reinforced/grille,
 /obj/machinery/door/poddoor/preopen{
 	id = "window command hallway"
 	},
@@ -2290,11 +2280,8 @@
 /turf/open/floor/deadspace/hardwood,
 /area/station/security/office)
 "DG" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/wood,
+/obj/machinery/computer/slot_machine,
+/turf/open/floor/carpet/green,
 /area/station/commons/lounge)
 "DJ" = (
 /obj/machinery/door/firedoor,
@@ -2372,8 +2359,9 @@
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/captain/private)
 "ET" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/siding/wood{
-	dir = 1
+	dir = 9
 	},
 /turf/open/floor/wood,
 /area/station/commons/lounge)
@@ -2645,11 +2633,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 2
-	},
-/obj/structure/window/reinforced,
 /obj/effect/spawner/random/clothing/syndie,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
@@ -2682,10 +2665,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
 "Iz" = (
@@ -2775,7 +2754,7 @@
 	id = "window command blast"
 	},
 /obj/structure/cable,
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "JL" = (
@@ -2817,10 +2796,6 @@
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/maintenance/starboard/upper)
-"Kq" = (
-/obj/machinery/computer/slot_machine,
-/turf/open/floor/wood,
-/area/station/commons/lounge)
 "Kw" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -2889,10 +2864,6 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/random/rivets,
 /area/station/security/brig/upper)
-"Lu" = (
-/obj/structure/chair/stool/directional/north,
-/turf/open/floor/carpet/green,
-/area/station/commons/lounge)
 "LA" = (
 /obj/structure/chair/stool/directional/north,
 /obj/item/radio/intercom/directional/west,
@@ -3006,8 +2977,10 @@
 /turf/open/floor/deadspace/grater,
 /area/station/security/brig/upper)
 "Nr" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/wood,
+/obj/structure/table/wood/poker,
+/obj/item/storage/wallet,
+/obj/item/bikehorn/rubberducky,
+/turf/open/floor/carpet/green,
 /area/station/commons/lounge)
 "Nu" = (
 /obj/structure/cable,
@@ -3108,7 +3081,7 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/bridge)
 "Py" = (
-/obj/effect/spawner/random/entertainment/arcade,
+/obj/machinery/computer/slot_machine,
 /obj/machinery/light/directional/north,
 /turf/open/floor/carpet/green,
 /area/station/commons/lounge)
@@ -3174,6 +3147,9 @@
 /area/station/security/brig/upper)
 "Qv" = (
 /obj/machinery/light/small/directional/north,
+/obj/machinery/computer/cryopod{
+	pixel_y = 28
+	},
 /turf/open/floor/deadspace/random/rivets,
 /area/station/security/brig/upper)
 "QH" = (
@@ -3296,10 +3272,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
@@ -3316,11 +3288,6 @@
 	dir = 1
 	},
 /area/station/hallway/primary/central/aft)
-"Ti" = (
-/obj/structure/chair/stool/bar/directional/north,
-/obj/structure/extinguisher_cabinet/directional/west,
-/turf/open/floor/carpet/green,
-/area/station/commons/lounge)
 "To" = (
 /obj/item/storage/box/evidence,
 /obj/item/storage/box/evidence,
@@ -3389,13 +3356,6 @@
 "Uz" = (
 /turf/closed/wall/r_wall,
 /area/station/security/brig/upper)
-"UA" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/wood,
-/area/station/commons/lounge)
 "UG" = (
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/deadspace/random/slides{
@@ -3457,9 +3417,6 @@
 /turf/open/floor/carpet/green,
 /area/station/commons/lounge)
 "We" = (
-/obj/structure/table/wood/poker,
-/obj/item/storage/wallet,
-/obj/item/bikehorn/rubberducky,
 /obj/machinery/light/directional/west,
 /turf/open/floor/carpet/green,
 /area/station/commons/lounge)
@@ -3599,13 +3556,6 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/catwalk_floor,
 /area/station/command/bridge)
-"YN" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/obj/machinery/computer/slot_machine,
-/turf/open/floor/wood,
-/area/station/commons/lounge)
 "YY" = (
 /obj/machinery/door/airlock/command{
 	name = "Colony Director's Quarters";
@@ -3632,7 +3582,6 @@
 /area/station/hallway/primary/central/aft)
 "Ze" = (
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -8682,14 +8631,14 @@ sE
 sE
 sE
 DX
-IW
+DG
 LA
 jX
-jW
+jX
 We
 WN
-zR
-Ti
+jX
+jX
 jX
 DX
 sE
@@ -8888,9 +8837,9 @@ IW
 Sc
 jX
 jW
-BJ
-di
-BJ
+Nr
+jX
+zR
 xI
 jX
 DX
@@ -9089,11 +9038,11 @@ DX
 Py
 Sc
 jX
-jX
-VR
-VR
-VR
-jX
+jW
+BJ
+di
+BJ
+xI
 zT
 DX
 sE
@@ -9290,13 +9239,13 @@ sE
 DX
 IW
 Sc
-wK
-UA
-DG
-At
-pY
-dZ
-YN
+jX
+jX
+VR
+VR
+VR
+jX
+jX
 DX
 sE
 sE
@@ -9490,15 +9439,15 @@ sE
 sE
 sE
 DX
-IW
-Lu
-jX
+DG
+Sc
+dZ
 ET
-Dd
-Nr
-Dd
-KY
-Kq
+At
+At
+pY
+pY
+pY
 DX
 sE
 sE
@@ -9699,8 +9648,8 @@ PC
 RE
 NQ
 Dd
-KY
-Kq
+Dd
+Dd
 DX
 sE
 sE
@@ -10508,7 +10457,7 @@ hF
 hF
 hF
 hF
-Sj
+hF
 Sj
 Sj
 Sj
@@ -10710,9 +10659,9 @@ ub
 ub
 ub
 ub
+ub
 Sj
 kD
-NN
 NN
 eW
 Re
@@ -10912,9 +10861,9 @@ ub
 Cf
 ub
 ub
+ub
 Sj
 UM
-NN
 NN
 eW
 Re
@@ -11114,9 +11063,9 @@ dO
 DX
 dO
 dO
+DX
 Sj
 wf
-NN
 NN
 od
 Re
