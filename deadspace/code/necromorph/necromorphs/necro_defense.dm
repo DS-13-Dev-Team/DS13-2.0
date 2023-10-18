@@ -1,13 +1,14 @@
-spec_unarmedattack
+//spec_unarmedattack
 
-/atom/proc/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage = null)
+//The proc and backup rolled up in one.
+/atom/proc/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(!uses_integrity || (!user.melee_damage_upper && !dealt_damage)) //No damage
 		return FALSE
 	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)
-	attack_generic(user, dealt_damage, BRUTE, MELEE,TRUE, user.armour_penetration)
+	attack_generic(user, dealt_damage, BRUTE, MELEE, TRUE, user.armour_penetration)
 
-/mob/living/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage  = null)
+/mob/living/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)
 	playsound(loc, 'sound/weapons/slash.ogg', 50, TRUE, -1)
@@ -16,10 +17,11 @@ spec_unarmedattack
 	to_chat(user, span_danger("You slash [src]!"))
 	var/zone_attacked = ran_zone(user.zone_selected)
 	var/armor_block = run_armor_check(zone_attacked, MELEE)
+	user.changeNext_move(CLICK_CD_MELEE)
 	apply_damage(dealt_damage, BRUTE, zone_attacked, armor_block)
 	log_combat(user, src, "attacked")
 
-/mob/living/carbon/human/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage = null)
+/mob/living/carbon/human/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(check_shields(user, 0, "the [user.name]"))
 		visible_message(span_danger("[user] attempts to touch [src]!"), \
 						span_danger("[user] attempts to touch you!"), span_hear("You hear a swoosh!"), null, user)
@@ -46,6 +48,7 @@ spec_unarmedattack
 					span_userdanger("[user] slashes at you!"), span_hear("You hear a sickening sound of a slice!"), null, user)
 	to_chat(user, span_danger("You slash at [src]!"))
 	log_combat(user, src, "attacked")
+	user.changeNext_move(CLICK_CD_MELEE)
 	if(!dismembering_strike(user, user.zone_selected)) //Dismemberment successful
 		return TRUE
 	apply_damage(dealt_damage, BRUTE, affecting, armor_block)
