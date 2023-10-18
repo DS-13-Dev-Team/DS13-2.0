@@ -1,5 +1,10 @@
 //Special necro interactions for objects should go here
 
+//Marker
+/obj/structure/marker/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+	to_chat(user, span_narsiesmall("MAKE US WHOLE")) //Might as well scare the bajeebus out of them
+	return
+
 //Ladders
 /obj/structure/ladder/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
 	return use(user)
@@ -13,10 +18,47 @@
 
 //Basic items
 /obj/item/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+	if(!user.combat_mode) //Just so it doesn't spam this while fighting
+		to_chat(user, span_notice("This has no use for Convergence."))
 	return //Necros aren't be allowed to interact with items, with some exceptions
 
+//Power based
+/obj/structure/cable/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+	if(!user.combat_mode) //Just so it doesn't spam this while fighting
+		to_chat(user, span_notice("This has no use for Convergence."))
+	return
+
+/obj/machinery/power/apc/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+	to_chat(user, span_notice("This has no use for Convergence."))
+	return
+
+/obj/machinery/power/generator/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+	to_chat(user, span_notice("This has no use for Convergence."))
+	log_combat(user, src, "tried to attack") //Lets us know when necros are trying to be naughty
+	return
+
+/obj/machinery/telecomms/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+	to_chat(user, span_notice("This has no use for Convergence."))
+	log_combat(user, src, "tried to attack") //Lets us know when necros are trying to be naughty
+	return
+
+/obj/machinery/power/smes/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+	to_chat(user, span_notice("This has no use for Convergence."))
+	log_combat(user, src, "tried to attack") //Lets us know when necros are trying to be naughty
+	return
+
+/obj/machinery/power/supermatter/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+	dust_mob() //What did you think was going to happen?
+	return
+
+//Atmos based
+/obj/machinery/atmospherics/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+	if(!user.combat_mode) //Just so it doesn't spam this while fighting
+		to_chat(user, span_notice("This has no use for Convergence."))
+	return
+
 //Airlocks
-/obj/machinery/door/airlock/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+/obj/machinery/door/airlock/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(isElectrified() && shock(user, 100))
 		add_fingerprint(user)
 		return
@@ -27,7 +69,11 @@
 			return try_to_activate_door(user) //Try to open the door
 	if(locked || welded || seal)
 		if(user.combat_mode)
-			return ..() //Angry necro smash locked door
+			dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper) + 8 //extra damage to overwhelm airlock damage deflection
+			user.do_attack_animation(src, "smash")
+			user.play_necro_sound(SOUND_ATTACK, VOLUME_HIGH, 1, 3)
+			attack_generic(user, dealt_damage, BRUTE, MELEE, TRUE)
+			return //Angry necro smash locked door
 		to_chat(user, span_warning("[src] refuses to budge!"))
 		return
 	add_fingerprint(user)
