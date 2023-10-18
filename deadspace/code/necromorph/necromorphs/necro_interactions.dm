@@ -1,58 +1,58 @@
 //Special necro interactions for objects should go here
 
 //Marker
-/obj/structure/marker/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+/obj/structure/marker/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	to_chat(user, span_narsiesmall("MAKE US WHOLE")) //Might as well scare the bajeebus out of them
 	return
 
 //Ladders
-/obj/structure/ladder/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
-	return use(user)
+/obj/structure/ladder/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
+	return use(user, is_ghost = FALSE)
 
 //Closets
-/obj/structure/closet/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+/obj/structure/closet/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	if(!user.combat_mode)
 		return attack_hand(user, modifiers) //Try to open a locker
 	else
 		return ..() //If we're in combat mode, just start attacking the locker
 
 //Basic items
-/obj/item/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+/obj/item/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	if(!user.combat_mode) //Just so it doesn't spam this while fighting
 		to_chat(user, span_notice("This has no use for Convergence."))
 	return //Necros aren't be allowed to interact with items, with some exceptions
 
 //Power based
-/obj/structure/cable/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+/obj/structure/cable/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	if(!user.combat_mode) //Just so it doesn't spam this while fighting
 		to_chat(user, span_notice("This has no use for Convergence."))
 	return
 
-/obj/machinery/power/apc/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+/obj/machinery/power/apc/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	to_chat(user, span_notice("This has no use for Convergence."))
 	return
 
-/obj/machinery/power/generator/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
-	to_chat(user, span_notice("This has no use for Convergence."))
-	log_combat(user, src, "tried to attack") //Lets us know when necros are trying to be naughty
-	return
-
-/obj/machinery/telecomms/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+/obj/machinery/power/generator/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	to_chat(user, span_notice("This has no use for Convergence."))
 	log_combat(user, src, "tried to attack") //Lets us know when necros are trying to be naughty
 	return
 
-/obj/machinery/power/smes/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+/obj/machinery/telecomms/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	to_chat(user, span_notice("This has no use for Convergence."))
 	log_combat(user, src, "tried to attack") //Lets us know when necros are trying to be naughty
 	return
 
-/obj/machinery/power/supermatter/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+/obj/machinery/power/smes/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
+	to_chat(user, span_notice("This has no use for Convergence."))
+	log_combat(user, src, "tried to attack") //Lets us know when necros are trying to be naughty
+	return
+
+/obj/machinery/power/supermatter/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	dust_mob() //What did you think was going to happen?
 	return
 
 //Atmos based
-/obj/machinery/atmospherics/attack_necromorph(mob/living/carbon/alien/humanoid/user, list/modifiers)
+/obj/machinery/atmospherics/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	if(!user.combat_mode) //Just so it doesn't spam this while fighting
 		to_chat(user, span_notice("This has no use for Convergence."))
 	return
