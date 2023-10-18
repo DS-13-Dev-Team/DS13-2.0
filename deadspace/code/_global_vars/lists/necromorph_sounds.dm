@@ -437,6 +437,13 @@ GLOBAL_LIST_INIT(ubermorph_sounds, list(
 	)
 ))
 
+GLOBAL_LIST_INIT(ubermorph_spawn, list(
+	'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_spawn_1.ogg',
+	'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_spawn_2.ogg',
+	'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_spawn_3.ogg',
+	'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_spawn_4.ogg',
+))
+
 GLOBAL_LIST_INIT(divider_sounds, list(
 	SOUND_ATTACK = list(
 		'deadspace/sound/effects/creatures/necromorph/divider/divider_attack_1.ogg',
