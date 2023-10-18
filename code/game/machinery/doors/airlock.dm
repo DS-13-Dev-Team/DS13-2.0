@@ -1302,41 +1302,6 @@
 		if(density && !open(2)) //The airlock is still closed, but something prevented it opening. (Another player noticed and bolted/welded the airlock in time!)
 			to_chat(user, span_warning("Despite your efforts, [src] managed to resist your attempts to open it!"))
 
-//TODO: Replace it with something that is not just a copypaste of alien code
-/obj/machinery/door/airlock/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
-	if(isElectrified() && shock(user, 100))
-		add_fingerprint(user)
-		return
-	//We were charging
-	if(dealt_damage)
-		return ..()
-	//Already open
-	if(!density)
-		return ..()
-	//Extremely generic, as aliens only understand the basics of how airlocks work.
-	if(locked || welded || seal)
-		if(user.combat_mode)
-			return ..()
-		to_chat(user, span_warning("[src] refuses to budge!"))
-		return
-	add_fingerprint(user)
-	user.visible_message(span_warning("[user] begins prying open [src]."),\
-						span_warning("You begin prying open [src] with all your might!"),\
-						span_warning("You hear groaning metal..."))
-	var/time_to_open = 0.5 SECONDS
-	if(hasPower())
-		//Powered airlocks take longer to open, and are loud.
-		time_to_open = 5 SECONDS
-		playsound(src, 'sound/machines/airlock_alien_prying.ogg', 100, TRUE)
-
-	if(do_after(user, src, time_to_open))
-		//The airlock is still closed, but something prevented it opening. (Another player noticed and bolted/welded the airlock in time!)
-		if(density && !open(2))
-			to_chat(user, span_warning("Despite your efforts, [src] managed to resist your attempts to open it!"))
-		else
-			atom_break()
-			playsound(src, 'sound/machines/airlock_tear_open.ogg', 50, TRUE)
-
 /obj/machinery/door/airlock/hostile_lockdown(mob/origin)
 	// Must be powered and have working AI wire.
 	if(canAIControl(src) && !machine_stat)
