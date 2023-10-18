@@ -4892,6 +4892,7 @@
 #include "deadspace\code\necromorph\necromorphs\necro_defense.dm"
 #include "deadspace\code\necromorph\necromorphs\necro_defines.dm"
 #include "deadspace\code\necromorph\necromorphs\necro_helpers.dm"
+#include "deadspace\code\necromorph\necromorphs\necro_interactions.dm"
 #include "deadspace\code\necromorph\necromorphs\necromorph.dm"
 #include "deadspace\code\necromorph\necromorphs\species.dm"
 #include "deadspace\code\necromorph\necromorphs\subtypes\brute.dm"
