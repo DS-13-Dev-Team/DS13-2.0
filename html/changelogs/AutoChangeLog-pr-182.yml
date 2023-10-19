@@ -1,0 +1,10 @@
+author: MisterGrimm
+delete-after: true
+changes:
+  - qol: Necromorphs now interact with and attack things as a undead monstrosity should
+  - qol: Survivors are made aware when a ubermorph is spawned. The end is nigh, convergence
+      is upon ye
+  - bugfix: Necromorphs now dust themselves on the supermatter, instead of using it
+      as a punching bag
+  - bugfix: Necromorphs can no longer attack vitally important objects or items
+  - soundadd: added sounds for the ubermorph spawning
