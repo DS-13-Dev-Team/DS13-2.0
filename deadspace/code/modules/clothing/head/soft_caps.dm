@@ -17,3 +17,9 @@
 	worn_icon = 'deadspace/icons/mob/onmob/head.dmi'
 	icon_state = "capcap"
 
+/obj/item/clothing/head/soft/retro_command
+	name = "command beret"
+	desc = "an older looking command beret."
+	icon = 'deadspace/icons/obj/clothing/hats.dmi'
+	worn_icon = 'deadspace/icons/mob/onmob/head.dmi'
+	icon_state = "retro_command_beret"

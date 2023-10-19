@@ -23,7 +23,7 @@ DS SCL Shotgun
 	//OLD	list(mode_name = "shotgun", fire_delay = 1 SECONDS),
 	//OLD	list(mode_name = "bolas", projectile_type = /obj/item/projectile/bullet/shotgun/bola, fire_sound = 'sound/weapons/bolathrow.ogg', fire_delay = 1 SECONDS))
 	fire_sound = 'sound/weapons/gun/shotgun/shot_alt.ogg'
-	slot_flags = ITEM_SLOT_BELT
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	empty_alarm = TRUE
 	mag_display = TRUE
 	semi_auto = TRUE

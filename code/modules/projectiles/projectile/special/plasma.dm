@@ -9,7 +9,6 @@
 	range = 5 //mining tools are not exactly known for their ability to replace firearms, they're good against necros, not so much against anything else.
 	pass_flags = PASSTABLE
 	var/mine_range = 5
-	muzzle_type = /obj/effect/projectile/plasmacutter/muzzle
 	tracer_type = null
 	impact_type = /obj/effect/projectile/plasmacutter/impact
 

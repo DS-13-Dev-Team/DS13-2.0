@@ -3,10 +3,11 @@ Divet pistols
 */
 //This is most handguns and bolt action rifles.  The bolt will lock back when it's empty.  You need yourgun_bolt and yourgun_bolt_locked icon states.
 /obj/item/gun/ballistic/automatic/pistol/divet
-	name = "divet pistol"
+	name = "Divet"
 	desc = "A Winchester Arms NK-series pistol capable of fully automatic fire."
 	icon = 'deadspace/icons/obj/weapons/ds13guns.dmi'
 	icon_state = "divet"
+	inhand_icon_state = "divet"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
@@ -14,14 +15,14 @@ Divet pistols
 	can_suppress = TRUE
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
 	burst_size = 1
-	fire_sound= 'deadspace/sound/weapons/guns/divet_fire.ogg'
-	load_sound = 'deadspace/sound/weapons/guns/divet_magin.ogg'  //Old noises from 1.0, but weren't actually working and used before.
-	eject_sound = 'deadspace/sound/weapons/guns/divet_magout.ogg' //They just sound like clockwork cult sounds.
-	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
+	fire_sound= 'deadspace/sound/weapons/guns/fire/divet_fire.ogg'
+	load_sound = 'sound/weapons/gun/pistol/mag_insert.ogg'
+	eject_sound = 'sound/weapons/gun/pistol/mag_release.ogg'
+	suppressed_sound = 'sound/weapons/gun/pistol/shot_suppressed.ogg'
 
 /obj/item/gun/ballistic/automatic/pistol/divet/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
 
 /obj/item/gun/ballistic/automatic/pistol/divet/no_mag
 	spawnwithmagazine = FALSE
@@ -30,27 +31,11 @@ Divet pistols
 	magazine = new /obj/item/ammo_box/magazine/divet/rb(src)
 	return ..()
 
-/obj/item/gun/ballistic/automatic/pistol/divet/extended/Initialize(mapload)
-	magazine = new /obj/item/ammo_box/magazine/divet/extended(src)
-	return ..()
-
-/obj/item/gun/ballistic/automatic/pistol/divet/extended/expanded/Initialize(mapload)
-	magazine = new /obj/item/ammo_box/magazine/divet/extended/expanded(src)
-	return ..()
-
-/obj/item/gun/ballistic/automatic/pistol/divet/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
-
-/obj/item/gun/ballistic/automatic/pistol/divet/suppressed/Initialize(mapload)//Off chance you want a normal suppressed divet. Might not work.
-	. = ..()
-	var/obj/item/suppressor/S = new(src)
-	install_suppressor(S)
-
 /obj/item/gun/ballistic/automatic/pistol/divet/spec_ops
 	name = "special ops divet pistol"
 	desc = "A modified version of the Winchester Arms NK-series pistol. An integrated suppressor lowers the audio profile fairly well."
 	icon_state = "divet_spec"
+	inhand_icon_state = "divet_spec"
 	suppressed_volume = 40
 	suppressed = TRUE
 	can_unsuppress = FALSE
@@ -90,7 +75,6 @@ Magazines
 	name = "divet magazine (rubber)"
 	icon_state = "divet_rb"
 	ammo_type = /obj/item/ammo_casing/divet/rb
-	max_ammo = 15
 
 /obj/item/ammo_box/magazine/divet/fire
 	name = "divet magazine (incendiary)"
@@ -112,7 +96,6 @@ Magazines
 	name = "divet magazine (blank/practice)"
 	icon_state = "divet_rb"
 	ammo_type = /obj/item/ammo_casing/divet/blank
-	max_ammo = 15
 
 /**
 Ammo casings for the mags
@@ -162,8 +145,6 @@ Projectiles for the casings
 	wound_falloff_tile = -10
 	dismemberment = 5
 	embedding = list(embed_chance=25, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=1 SECONDS)
-	//muzzle_type = /obj/effect/projectile/pulse //+/light   dunno where the 'light' part is from. Maybe a calculation on normal pulse muzzle?
-	impact_type = /obj/effect/projectile/divet
 
 //More damage and shrapnel, less AP, structure damage and penetration
 /obj/projectile/bullet/divet/hp
@@ -185,16 +166,12 @@ Projectiles for the casings
 	name = "divet rubber bullet"
 	icon_state = "divet" //Maybe get rubber bullet sprite in future
 	damage = 6
-	stamina = 60
-	armour_penetration = 10
-	ricochets_max = 5
-	ricochet_incidence_leeway = 0
-	ricochet_chance = 120
-	ricochet_auto_aim_angle = 40
-	ricochet_auto_aim_range = 5
-	ricochet_decay_damage = 0.8
-	dismemberment = 0
+	stamina = 30
 	weak_against_armour = TRUE
+	ricochets_max = 6
+	ricochet_incidence_leeway = 0
+	ricochet_chance = 130
+	ricochet_decay_damage = 0.8
 	shrapnel_type = null
 	sharpness = NONE
 	embedding = null
