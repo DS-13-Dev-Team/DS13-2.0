@@ -1,4 +1,4 @@
-#define MAW_DAMAGE_PER_SECOND 4
+#define MAW_DAMAGE_PER_SECOND 3
 
 // Human biomass = their limbs
 /obj/structure/necromorph/maw
@@ -23,12 +23,31 @@
 	..()
 	icon_state = length(buckled_mobs) ? "maw_active" : "maw"
 
+/obj/structure/necromorph/maw/proc/maw_push()
+	var/turf/T = get_turf(src)
+	var/dirs = GLOB.alldirs.Copy()
+	var/valid_dir
+	while(!valid_dir && length(dirs))
+		var/direction = pick_n_take(dirs)
+		var/turf/dest = get_step(src, direction)
+		if(isnull(dest))
+			continue
+		if(!T.density && T.Adjacent(dest)) //This checks for border stuff
+			valid_dir = direction
+			break
+
+	if(valid_dir)
+		for(var/obj/item/I in T) //Grabs any items on it's turf, and pushes it off of the maw
+			step(I, valid_dir, 0.2)
+
 /// Doesn't do any ANY safety checks. Use with caution
+//TODO : rewrite bite_human to respect stumps
 /obj/structure/necromorph/maw/proc/bite_human(mob/living/carbon/human/target, delta_time)
-	if(length(target.bodyparts) <= 1)
+	if(length(target.bodyparts) <= 1) //Won't let you continue unless target has only a torso. Problematic due to stumps counting as body parts
 		var/obj/item/bodypart/part = target.bodyparts[1]
-		processing_biomass += part.biomass * 1.2
-		qdel(target)
+		processing_biomass += part.biomass * 1.1
+		target.gib(TRUE, TRUE, TRUE, TRUE)
+		maw_push() //This pushes items away from the maw after it is done
 		return
 
 	var/obj/item/bodypart/part = pick(target.bodyparts)
@@ -40,11 +59,13 @@
 		stack_trace("Maw tried to bite a human but couldn't find a non-chest bodypart")
 		return
 
+	if(part.is_stump) //A absolutely terrible sanity check due to a stump being considered a body part
+		qdel(part)
+
 	// If damage is above 80%
 	if(part.get_damage() >= (part.max_damage * LIMB_DISMEMBERMENT_PERCENT) - 1)
-		processing_biomass += part.biomass * 1.2
-		part.drop_limb(FALSE, TRUE)
-		qdel(part)
+		processing_biomass += part.biomass * 1.1
+		part.dismember(dismember_type = DROPLIMB_BLUNT, silent = TRUE)
 	else
 		processing_biomass += 0.1
 		// Damage shouldn't be above or equal to 80%
@@ -65,6 +86,7 @@
 	processing_biomass += target.mob_size * 5
 	qdel(target)
 
+///Necros don't need anything too fancy, just qdeling is good enough
 /obj/structure/necromorph/maw/proc/bite_necro(mob/living/carbon/human/necromorph/target, delta_time) //Basically copied bite_human with less efficiency
 	if(length(target.bodyparts) <= 1)
 		var/obj/item/bodypart/part = target.bodyparts[1]
