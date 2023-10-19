@@ -1,0 +1,8 @@
+author: blackwolf602
+delete-after: true
+changes:
+  - rscadd: missing ubermorph sprites
+  - rscadd: missing gun sounds
+  - rscadd: small map changes
+  - rscadd: rivet gun
+  - rscadd: jav gun
