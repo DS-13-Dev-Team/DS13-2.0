@@ -1,0 +1,9 @@
+author: MisterGrimm
+delete-after: true
+changes:
+  - bugfix: Maws no longer delete items when eating bodies
+  - qol: Maws now push items off of itself when it is done eating a human body
+  - qol: Maws are now significantly more bloody and messy when they eat humans
+  - balance: Maw efficiency for humans slightly reduced, to account for a bloodier
+      maw
+  - balance: Maw damage slightly reduced to increase time for maw to eat
