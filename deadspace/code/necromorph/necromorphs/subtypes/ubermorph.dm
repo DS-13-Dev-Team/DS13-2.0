@@ -4,7 +4,7 @@
 
 /mob/living/carbon/human/necromorph/ubermorph/Initialize(mapload, obj/structure/marker/marker_master)
 	. = ..()
-	send_to_playing_players(span_narsiesmall("WE ARE WHOLE!")) //If you aren't dead, you'll know you will be soon
+	send_to_playing_players(span_colossus("A deep chill slithers into your mind.. You feel like you are running out of time.")) //If you aren't dead, you'll know you will be soon
 	sound_to_playing_players(pick(GLOB.ubermorph_spawn), 40)
 
 /mob/living/carbon/human/necromorph/ubermorph/play_necro_sound(audio_type, volume, vary, extra_range)
