@@ -55,3 +55,24 @@
 2023-10-14:
   ChromeFoxxity:
   - rscadd: Added retro beret, and retro uniforms to the sprites.
+2023-10-20:
+  MisterGrimm:
+  - qol: Necromorphs now interact with and attack things as a undead monstrosity should
+  - qol: Survivors are made aware when a ubermorph is spawned. The end is nigh, convergence
+      is upon ye
+  - bugfix: Necromorphs now dust themselves on the supermatter, instead of using it
+      as a punching bag
+  - bugfix: Necromorphs can no longer attack vitally important objects or items
+  - soundadd: added sounds for the ubermorph spawning
+  - bugfix: Maws no longer delete items when eating bodies
+  - qol: Maws now push items off of itself when it is done eating a human body
+  - qol: Maws are now significantly more bloody and messy when they eat humans
+  - balance: Maw efficiency for humans slightly reduced, to account for a bloodier
+      maw
+  - balance: Maw damage slightly reduced to increase time for maw to eat
+  blackwolf602:
+  - rscadd: missing ubermorph sprites
+  - rscadd: missing gun sounds
+  - rscadd: small map changes
+  - rscadd: rivet gun
+  - rscadd: jav gun
