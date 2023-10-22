@@ -8,6 +8,8 @@
 	force = 10
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
+	var/wielded = FALSE
+	block_chance = 20 //Doesn't get as much block as other twohanded due to makeshift creation
 	throwforce = 20
 	throw_speed = 4
 	embedding = list("impact_pain_mult" = 2, "remove_pain_mult" = 4, "jostle_chance" = 2.5)
@@ -29,6 +31,17 @@
 	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=18, icon_wielded="[icon_prefix]1")
 	update_appearance()
 
+/obj/item/spear/proc/on_wield(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+
+	wielded = TRUE
+
+/// triggered on unwield of two handed item
+/obj/item/spear/proc/on_unwield(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+
+	wielded = FALSE
+
 /obj/item/spear/update_icon_state()
 	icon_state = "[icon_prefix]0"
 	return ..()
@@ -37,12 +50,18 @@
 	user.visible_message(span_suicide("[user] begins to sword-swallow \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return BRUTELOSS
 
+/obj/item/spear/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(wielded) //Can only block if being wielded
+		return ..()
+	return 0
+
 /obj/item/spear/CheckParts(list/parts_list)
 	var/obj/item/shard/tip = locate() in parts_list
 	if(tip)
 		if (istype(tip, /obj/item/shard/plasma))
 			force = 11
 			throwforce = 21
+			block_chance = 22
 			icon_prefix = "spearplasma"
 			AddComponent(/datum/component/two_handed, force_unwielded=11, force_wielded=19, icon_wielded="[icon_prefix]1")
 		else if (istype(tip, /obj/item/shard/titanium))
@@ -50,6 +69,7 @@
 			throwforce = 21
 			throw_range = 8
 			throw_speed = 5
+			block_chance = 25
 			icon_prefix = "speartitanium"
 			AddComponent(/datum/component/two_handed, force_unwielded=13, force_wielded=18, icon_wielded="[icon_prefix]1")
 		else if (istype(tip, /obj/item/shard/plastitanium))
@@ -57,6 +77,7 @@
 			throwforce = 22
 			throw_range = 9
 			throw_speed = 5
+			block_chance = 26 //Ever so slightly more nimble then titanium
 			icon_prefix = "spearplastitanium"
 			AddComponent(/datum/component/two_handed, force_unwielded=13, force_wielded=20, icon_wielded="[icon_prefix]1")
 		update_appearance()
@@ -69,8 +90,9 @@
 	icon_state = "spearbomb0"
 	base_icon_state = "spearbomb"
 	icon_prefix = "spearbomb"
+	block_chance = 0 //You probably don't want to block with a explosive
 	var/obj/item/grenade/explosive = null
-	var/wielded = FALSE // track wielded status on item
+	wielded = FALSE // track wielded status on item
 
 /obj/item/spear/explosive/Initialize(mapload)
 	. = ..()
@@ -78,18 +100,6 @@
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 	set_explosive(new /obj/item/grenade/iedcasing/spawned()) //For admin-spawned explosive lances
 	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=18, icon_wielded="[icon_prefix]1")
-
-/// triggered on wield of two handed item
-/obj/item/spear/explosive/proc/on_wield(obj/item/source, mob/user)
-	SIGNAL_HANDLER
-
-	wielded = TRUE
-
-/// triggered on unwield of two handed item
-/obj/item/spear/explosive/proc/on_unwield(obj/item/source, mob/user)
-	SIGNAL_HANDLER
-
-	wielded = FALSE
 
 /obj/item/spear/explosive/proc/set_explosive(obj/item/grenade/G)
 	if(explosive)
@@ -191,6 +201,7 @@
 	desc = "A haphazardly-constructed yet still deadly weapon. The pinnacle of modern technology."
 	force = 12
 	throwforce = 22
+	block_chance = 23 //Slightly better then makeshift glass spear
 	armour_penetration = 15 //Enhanced armor piercing
 
 /obj/item/spear/bonespear/Initialize(mapload)
@@ -207,6 +218,7 @@
 	name = "bamboo spear"
 	desc = "A haphazardly-constructed bamboo stick with a sharpened tip, ready to poke holes into unsuspecting people."
 	throwforce = 22	//Better to throw
+	block_chance = 10 //And you thought glass and rods were flimsy
 
 /obj/item/spear/bamboospear/Initialize(mapload)
 	. = ..()

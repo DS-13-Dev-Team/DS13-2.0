@@ -9,7 +9,7 @@
 	hitsound = 'sound/weapons/blade1.ogg'
 	slot_flags = ITEM_SLOT_POCKETS | ITEM_SLOT_BELT
 	force = 2
-
+	block_chance = 0 //handled in on_transform
 	tool_behaviour = null
 	toolspeed = null
 
@@ -29,12 +29,14 @@
 	if(active)
 		tool_behaviour = TOOL_SAW
 		sharpness = SHARP_EDGED
+		block_chance = 15
 		toolspeed = 1
 		icon_state = "bonecutter_on"
 	else
 		icon_state = "bonecutter_off"
 		tool_behaviour = initial(tool_behaviour)
 		toolspeed = initial(toolspeed)
+		block_chance = initial(block_chance)
 
 	playsound(user ? user : src, active ? 'sound/weapons/saberon.ogg' : 'sound/weapons/saberoff.ogg', 5, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE

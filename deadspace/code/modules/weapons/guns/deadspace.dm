@@ -18,6 +18,7 @@
 	var/wielded = FALSE
 	var/can_fire_one_handed = TRUE
 	var/one_handed_penalty = 20
+	block_chance = 15 //Twohanded guns can only block while wielding, and not as well as twohanded melee
 
 /obj/item/gun/ballistic/deadspace/ui_action_click(mob/user, actiontype)
 	if(istype(actiontype, /datum/action/item_action/toggle_firemode))
@@ -77,6 +78,11 @@
 /obj/item/gun/ballistic/deadspace/twohanded/update_icon_state()
 	icon_state = base_icon_state
 	return ..()
+
+/obj/item/gun/ballistic/deadspace/twohanded/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(wielded) //Can only block if being wielded
+		return ..()
+	return 0
 
 /obj/item/gun/ballistic/deadspace/insert_magazine(mob/user, obj/item/ammo_box/magazine/AM, display_message = TRUE)
 	if(!istype(AM, mag_type))

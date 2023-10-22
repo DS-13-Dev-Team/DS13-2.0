@@ -9,6 +9,7 @@
 	hitsound = 'sound/weapons/blade1.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
+	block_chance = 10
 	force = 2
 
 	tool_behaviour = null
@@ -48,6 +49,7 @@
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand.dmi'
 	flags_1 = CONDUCT_1
+	block_chance = 35 //Will only block while wielded
 	force = 1
 	var/force_on = 24
 	w_class = WEIGHT_CLASS_HUGE
@@ -96,6 +98,11 @@
 		playsound(src, 'sound/weapons/genhit1.ogg', 100, TRUE)
 	return(BRUTELOSS)
 
+/obj/item/plasma_modified/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(wielded) //Can only block if being wielded
+		return ..()
+	return 0
+
 /obj/item/plasma_modified/attack_self(mob/user)
 	on = !on
 	to_chat(user, "As you press the power button from [src], [on ? "it begins to whirr." : "the energy retracts."]")
@@ -129,6 +136,7 @@
 	slot_flags = ITEM_SLOT_POCKETS | ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 2
+	block_chance = 0 //handled in the on_transform
 	custom_materials = list(/datum/material/iron=1000)
 	attack_verb_continuous = list("hits", "pierces", "slices", "attacks")
 	attack_verb_simple = list("hit", "pierce", "slice", "attack")
@@ -152,12 +160,14 @@
 	if(active)
 		tool_behaviour = TOOL_MINING
 		sharpness = SHARP_EDGED
+		block_chance = 15
 		toolspeed = 0.5
 		icon_state = "rocksaw_on"
 	else
 		icon_state = "rocksaw_off"
 		tool_behaviour = initial(tool_behaviour)
 		toolspeed = initial(toolspeed)
+		block_chance = initial(block_chance)
 
 	playsound(user ? user : src, active ? 'sound/weapons/saberon.ogg' : 'sound/weapons/saberoff.ogg', 5, TRUE)
 	return COMPONENT_NO_DEFAULT_MESSAGE
