@@ -13,9 +13,14 @@
 	return //Same as corruption, necros should not damage it except in specific instances
 
 //Placeholder for necromorph wall growths, uncomment when in
-/*/obj/structure/necromorph/wall/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
+/*/obj/structure/necromorph/wall/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(user.combat_mode)
-		return ..() //Necro walls can be attacked by necros
+		dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper)
+		user.do_attack_animation(src, "smash")
+		user.play_necro_sound(SOUND_ATTACK, VOLUME_HIGH, 1, 3)
+		user.changeNext_move(CLICK_CD_MELEE) //So necros don't JoJo
+		attack_generic(user, dealt_damage, BRUTE, MELEE, TRUE)
+		return //Necro walls can be attacked by necros
 	else
 		return */
 
