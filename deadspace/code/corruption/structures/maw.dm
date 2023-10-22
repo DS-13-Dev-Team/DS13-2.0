@@ -5,7 +5,7 @@
 	name = "maw"
 	icon = 'deadspace/icons/effects/corruption.dmi'
 	icon_state = "maw"
-	density = TRUE
+	density = FALSE
 	max_integrity = 30
 	can_buckle = TRUE
 	max_buckled_mobs = INFINITY
