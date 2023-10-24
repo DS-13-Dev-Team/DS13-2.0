@@ -481,6 +481,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 	flags_1 = CONDUCT_1
 	force = 12
+	block_chance = 15
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 15
 	throw_speed = 4
