@@ -29,6 +29,7 @@
 						span_danger("[user] tries to hit you!"), span_hear("You hear a swoosh!"), null, user)
 		user.play_necro_sound(SOUND_ATTACK, VOLUME_HIGH, 1, 3)
 		user.do_attack_animation(src, user.attack_effect)
+		user.changeNext_move(CLICK_CD_MELEE)
 		playsound(loc, 'sound/weapons/slashmiss.ogg', 50, TRUE, -1)
 		return FALSE
 
