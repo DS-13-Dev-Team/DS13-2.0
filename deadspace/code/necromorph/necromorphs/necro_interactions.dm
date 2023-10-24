@@ -5,6 +5,25 @@
 	to_chat(user, span_narsiesmall("MAKE US WHOLE")) //Might as well scare the bajeebus out of them
 	return
 
+//Corruption
+/obj/structure/corruption/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
+	return //Necros shouldn't be allowed to damage corruption, as it is a part of convergence
+
+/obj/structure/necromorph/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
+	return //Same as corruption, necros should not damage it except in specific instances
+
+//Placeholder for necromorph wall growths, uncomment when in
+/*/obj/structure/necromorph/wall/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
+	if(user.combat_mode)
+		dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper)
+		user.do_attack_animation(src, "smash")
+		user.play_necro_sound(SOUND_ATTACK, VOLUME_HIGH, 1, 3)
+		user.changeNext_move(CLICK_CD_MELEE) //So necros don't JoJo
+		attack_generic(user, dealt_damage, BRUTE, MELEE, TRUE)
+		return //Necro walls can be attacked by necros
+	else
+		return */
+
 //Ladders
 /obj/structure/ladder/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	return use(user, is_ghost = FALSE)
