@@ -11666,7 +11666,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large/ds,
 /obj/effect/spawner/random/maintenance/two,
-/obj/item/plasma_modified,
+/obj/item/chainsaw/plasma_industrial,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse/upper)
 "fwj" = (
@@ -19134,7 +19134,7 @@
 /obj/effect/spawner/random/medical/minor_healing,
 /obj/effect/spawner/random/food_or_drink/snack,
 /obj/effect/turf_decal/box,
-/obj/item/plasma_modified,
+/obj/item/chainsaw/plasma_industrial,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
 "laZ" = (
@@ -35298,7 +35298,7 @@
 "xEG" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/turf_decal/bot,
-/obj/item/plasma_modified,
+/obj/item/chainsaw/plasma_industrial,
 /turf/open/floor/deadspace/mono,
 /area/station/commons/storage/primary)
 "xEM" = (
