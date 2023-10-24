@@ -16,7 +16,7 @@
 /obj/item/circular_saw/bonecutter/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/transforming, \
-		force_on = 15, \
+		force_on = 18, \
 		throwforce_on = 8, \
 		hitsound_on = hitsound, \
 		w_class_on = WEIGHT_CLASS_NORMAL, \
@@ -29,7 +29,7 @@
 	if(active)
 		tool_behaviour = TOOL_SAW
 		sharpness = SHARP_EDGED
-		block_chance = 15
+		block_chance = 20
 		toolspeed = 1
 		icon_state = "bonecutter_on"
 	else
