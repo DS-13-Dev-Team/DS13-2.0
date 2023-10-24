@@ -88,7 +88,7 @@
 
 /obj/item/chainsaw/plasma_industrial/attack_self(mob/user)
 	on = !on
-	to_chat(user, "As you press the power button on the [src], [on ? "producing a spinning blade of energy." : "the energy retracts."]")
+	to_chat(user, "You press the power button on the [src], [on ? "producing a spinning blade of energy." : "the energy retracts."]")
 	force = on ? force_on : initial(force)
 	throwforce = on ? force_on : initial(force)
 	block_chance = on ? block_on : initial(block_chance)
