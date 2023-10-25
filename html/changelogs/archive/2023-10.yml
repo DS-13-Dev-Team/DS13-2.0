@@ -76,3 +76,8 @@
   - rscadd: small map changes
   - rscadd: rivet gun
   - rscadd: jav gun
+2023-10-25:
+  MisterGrimm:
+  - balance: Maw is no longer considered a dense structure, letting people walk over
+      it
+  - bugfix: Necromorphs can no longer attack standard corruption related stuff

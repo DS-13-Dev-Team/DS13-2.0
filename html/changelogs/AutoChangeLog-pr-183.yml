@@ -1,6 +1,0 @@
-author: MisterGrimm
-delete-after: true
-changes:
-  - balance: Maw is no longer considered a dense structure, letting people walk over
-      it
-  - bugfix: Necromorphs can no longer attack standard corruption related stuff
