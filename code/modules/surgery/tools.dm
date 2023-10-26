@@ -195,6 +195,7 @@
 	item_flags = SURGICAL_TOOL
 
 	force = 15
+	block_chance = 10 //You could probably block with this in a emergency
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 9
 	throw_speed = 2

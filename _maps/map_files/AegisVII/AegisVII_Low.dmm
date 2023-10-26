@@ -1703,7 +1703,7 @@
 /area/station/cargo/warehouse)
 "mD" = (
 /obj/structure/table/reinforced,
-/obj/item/plasma_modified,
+/obj/item/chainsaw/plasma_industrial,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "mG" = (
@@ -2629,7 +2629,7 @@
 /area/station/maintenance/fore/lesser)
 "um" = (
 /obj/structure/rack,
-/obj/item/plasma_modified,
+/obj/item/chainsaw/plasma_industrial,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "un" = (
@@ -2878,7 +2878,7 @@
 /area/station/maintenance/port/lesser)
 "wT" = (
 /obj/structure/rack,
-/obj/item/plasma_modified,
+/obj/item/chainsaw/plasma_industrial,
 /obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)

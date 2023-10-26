@@ -63,6 +63,7 @@
 	icon_state = "handdrill"
 	slot_flags = ITEM_SLOT_BELT
 	toolspeed = 0.6 //available from roundstart, faster than a pickaxe.
+	block_chance = 15 //It's big, but pretty unwieldy in a fight
 	usesound = 'sound/weapons/drill.ogg'
 	hitsound = 'sound/weapons/drill.ogg'
 	desc = "An electric mining drill for the especially scrawny."
@@ -118,6 +119,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	force = 8
 	throwforce = 4
+	block_chance = 18 //It's basically a quarterstaff with a metal bit on the end
 	tool_behaviour = TOOL_SHOVEL
 	toolspeed = 1
 	usesound = 'sound/effects/shovel_dig.ogg'

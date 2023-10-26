@@ -25,9 +25,12 @@
 
 /mob/living/carbon/human/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(check_shields(user, 0, "the [user.name]"))
-		visible_message(span_danger("[user] attempts to touch [src]!"), \
-						span_danger("[user] attempts to touch you!"), span_hear("You hear a swoosh!"), null, user)
-		to_chat(user, span_warning("You attempt to touch [src]!"))
+		visible_message(span_danger("[user] tries to hit [src]!"), \
+						span_danger("[user] tries to hit you!"), span_hear("You hear a swoosh!"), null, user)
+		user.play_necro_sound(SOUND_ATTACK, VOLUME_HIGH, 1, 3)
+		user.do_attack_animation(src, user.attack_effect)
+		user.changeNext_move(CLICK_CD_MELEE)
+		playsound(loc, 'sound/weapons/slashmiss.ogg', 50, TRUE, -1)
 		return FALSE
 
 	user.do_attack_animation(src, user.attack_effect)

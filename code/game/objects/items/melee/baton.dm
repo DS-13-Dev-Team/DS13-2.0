@@ -14,6 +14,7 @@
 	stamina_cost = 21
 	stamina_critical_chance = 5
 	force = 12
+	block_chance = 20
 
 	/// Whether this baton is active or not
 	var/active = TRUE

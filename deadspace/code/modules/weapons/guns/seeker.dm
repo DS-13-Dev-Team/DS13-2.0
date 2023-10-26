@@ -22,6 +22,7 @@ Seeker Rifles
 	suppressed = TRUE
 	can_unsuppress = FALSE
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
+	block_chance = 10 //The seeker sucks quite a bit at blocking compared to other guns
 	one_handed_penalty = 50
 	recoil = 2
 	burst_size = 1
