@@ -81,3 +81,8 @@
   - balance: Maw is no longer considered a dense structure, letting people walk over
       it
   - bugfix: Necromorphs can no longer attack standard corruption related stuff
+2023-10-27:
+  MisterGrimm:
+  - balance: Most melee weapons and two handed ranged weapons have block chances now
+  - balance: Bonecutter damage slightly increased
+  - qol: Modified plasma saw name changed to industrial plasma saw
