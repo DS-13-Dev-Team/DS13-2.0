@@ -43,6 +43,7 @@
 	)
 
 	inherent_traits = list(
+		TRAIT_IGNOREDAMAGESLOWDOWN,
 		TRAIT_DEFIB_BLACKLISTED,
 		TRAIT_BADDNA,
 		TRAIT_GENELESS,
@@ -84,7 +85,6 @@
 		NOAUGMENTS,
 	)
 
-	inherent_traits = list()
 	inherent_biotypes = MOB_ORGANIC|MOB_UNDEAD|MOB_HUMANOID
 	inherent_factions = list(FACTION_NECROMORPH)
 	species_mob_size = MOB_SIZE_HUMAN
