@@ -25,9 +25,8 @@
 	if(status_flags & GODMODE)
 		return
 
-	set_health(maxHealth - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss())
+	set_health(maxHealth - getFireLoss() - getBruteLoss() - getCloneLoss())
 	update_stat()
-	med_hud_set_health()
 	SEND_SIGNAL(src, COMSIG_CARBON_HEALTH_UPDATE)
 
 	dna?.species.spec_updatehealth(src)
@@ -81,8 +80,6 @@
 	update_mob_action_buttons()
 	update_damage_hud()
 	update_health_hud()
-	med_hud_set_health()
-	med_hud_set_status()
 	release_all_grabs()
 
 	set_ssd_indicator(FALSE)
@@ -126,7 +123,6 @@
 	update_damage_hud()
 	update_health_hud()
 	update_stamina_hud()
-	med_hud_set_status()
 
 /// Check if the necromorph should die
 /mob/living/carbon/human/necromorph/proc/handle_death_check()
