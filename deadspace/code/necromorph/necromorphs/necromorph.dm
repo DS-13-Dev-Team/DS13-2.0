@@ -22,7 +22,15 @@
 	return TRUE
 
 /mob/living/carbon/human/necromorph/updatehealth()
-	. = ..()
+	if(status_flags & GODMODE)
+		return
+
+	set_health(maxHealth - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss())
+	update_stat()
+	med_hud_set_health()
+	SEND_SIGNAL(src, COMSIG_CARBON_HEALTH_UPDATE)
+
+	dna?.species.spec_updatehealth(src)
 	if(hud_used)
 		var/datum/hud/necromorph/hud = hud_used
 		hud.update_healthbar(src)
