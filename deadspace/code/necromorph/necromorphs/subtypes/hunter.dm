@@ -53,6 +53,7 @@
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "hunter"
+	implemented = TRUE
 
 /datum/species/necromorph/hunter
 	name = "Hunter"
