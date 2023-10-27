@@ -1,0 +1,6 @@
+author: MisterGrimm
+delete-after: true
+changes:
+  - bugfix: Stumps no longer cause terrible pain to necros
+  - bugfix: Necros no longer die when their head is removed
+  - bugfix: Hunter/Uber regenerates limbs again
