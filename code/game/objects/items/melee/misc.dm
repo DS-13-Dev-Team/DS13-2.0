@@ -434,3 +434,18 @@
 	armour_penetration = 50
 	attack_verb_continuous = list("smacks", "strikes", "cracks", "beats")
 	attack_verb_simple = list("smack", "strike", "crack", "beat")
+
+/obj/item/melee/cyborgfist
+	name = "cyborg-fist"
+	desc = "A heavy metal fist purpose built to punch things."
+	icon_state = "powerfist"
+	inhand_icon_state = "powerfist"
+	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	attack_verb_continuous = list("whacks", "fists", "power-punches")
+	attack_verb_simple = list("whack", "fist", "power-punch")
+	force = 20
+	throwforce = 10
+	throw_range = 7
+	w_class = WEIGHT_CLASS_NORMAL
+	block_chance = 6 //yes, I did add a small block just just because I saw it on the item above and thought its cool. don't tell me you wouldn't do the same
