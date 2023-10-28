@@ -86,3 +86,12 @@
   - balance: Most melee weapons and two handed ranged weapons have block chances now
   - balance: Bonecutter damage slightly increased
   - qol: Modified plasma saw name changed to industrial plasma saw
+2023-10-28:
+  DTraitor:
+  - bugfix: Hunter can be spawned once again
+  - bugfix: Ubermorph can move now
+  - bugfix: Necromorphs have proper health now
+  MisterGrimm:
+  - bugfix: Stumps no longer cause terrible pain to necros
+  - bugfix: Necros no longer die when their head is removed
+  - bugfix: Hunter/Uber regenerates limbs again
