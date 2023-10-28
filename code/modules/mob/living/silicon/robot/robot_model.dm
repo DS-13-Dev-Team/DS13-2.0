@@ -680,7 +680,7 @@
 		/obj/item/assembly/flash/cyborg,
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/melee/baton/security/loaded,
-		/obj/item/gun/ballistic/automatic/pistol/divet,
+		/obj/item/gun/ballistic/automatic/pistol/divet/cyborg,
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
 		/obj/item/extinguisher/mini)
 	radio_channels = list(RADIO_CHANNEL_SECURITY)
