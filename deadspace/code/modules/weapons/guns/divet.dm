@@ -20,6 +20,25 @@ Divet pistols
 	eject_sound = 'sound/weapons/gun/pistol/mag_release.ogg'
 	suppressed_sound = 'sound/weapons/gun/pistol/shot_suppressed.ogg'
 
+	/obj/item/gun/ballistic/automatic/pistol/divet/cyborg
+	name = "Cyborg Divet"
+	desc = "A modified Winchester Arms NK-series pistol capable of fully automatic fire. Extended magazine. Unreloadable in situ."
+	icon = 'deadspace/icons/obj/weapons/ds13guns.dmi'
+	icon_state = "divet"
+	inhand_icon_state = "divet"
+	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
+	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
+	w_class = WEIGHT_CLASS_NORMAL
+	mag_type = /obj/item/ammo_box/magazine/divet/cyborg
+	can_suppress = TRUE
+	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
+	burst_size = 1
+	fire_sound= 'deadspace/sound/weapons/guns/fire/divet_fire.ogg'
+	load_sound = 'sound/weapons/gun/pistol/mag_insert.ogg'
+	eject_sound = 'sound/weapons/gun/pistol/mag_release.ogg'
+	suppressed_sound = 'sound/weapons/gun/pistol/shot_suppressed.ogg'
+	//some of these bits can probably be removed, ie slot flags, suppressed_sound, etc. But I dont KNOW for certain, and I cant test it
+
 /obj/item/gun/ballistic/automatic/pistol/divet/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
@@ -81,6 +100,12 @@ Magazines
 	icon_state = "divet_incind"
 	ammo_type = /obj/item/ammo_casing/divet/inc
 
+/obj/item/ammo_box/magazine/divet/cyborg
+	name = "divet magazine (cyborg)"
+	desc = "you shouldn't be seeing this"
+	ammo_type = /obj/item/ammo_casing/divet/cyborg
+	max_ammo = 20
+
 /obj/item/ammo_box/magazine/divet/extended
 	name = "divet magazine (extended)"
 	icon_state = "divet_ext_slug"
@@ -122,6 +147,11 @@ Ammo casings for the mags
 /obj/item/ammo_casing/divet/inc
 	name = "divet incendiary bullet casing"
 	projectile_type = /obj/projectile/bullet/incendiary/divet
+
+/obj/item/ammo_casing/divet/cyborg
+	name = "divet advanced bullet casing"
+	caliber = CALIBER_DIVET
+	projectile_type = /obj/projectile/bullet/divet/cyborg
 
 /obj/item/ammo_casing/divet/extended
 	name = "divet steel bullet casing"
@@ -191,6 +221,13 @@ Projectiles for the casings
 // 	if (istype(L))
 // 		L.fire_stacks += 5
 // 		L.IgniteMob()    //Would likely change it to 'ignite_mob' or so, for 'mob/living/proc/ignite_mob()'
+
+//Hardened core hollow-point, slightly reduced damage and increased armor penetration (this ammo comes preloaded in the cyborg divet pistol, which cannot be refilled)
+/obj/projectile/bullet/divet/cyborg
+	name = "divet advanced bullet"
+	icon_state = "divet"
+	damage = 20
+	armour_penetration = 8
 
 //Cheaper bullets that put inside the extended mags by default, to cut some costs of the more trigger happy prone who use the mags
 /obj/projectile/bullet/divet/extended
