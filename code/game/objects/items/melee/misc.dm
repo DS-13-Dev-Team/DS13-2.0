@@ -448,4 +448,3 @@
 	throwforce = 10
 	throw_range = 7
 	w_class = WEIGHT_CLASS_NORMAL
-	block_chance = 6 //yes, I did add a small block just just because I saw it on the item above and thought its cool. don't tell me you wouldn't do the same
