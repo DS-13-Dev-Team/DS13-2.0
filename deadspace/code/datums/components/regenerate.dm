@@ -44,7 +44,8 @@
 
 	var/mob/living/carbon/human/necromorph/owner = parent
 
-	regenerating_limbs = owner.get_missing_limbs().Cut(max_limbs)
+	regenerating_limbs = owner.get_missing_limbs()
+	regenerating_limbs.len = max_limbs //Reduces the list size to however many limbs the var is set to
 
 	//Special effect:
 	//If the user is missing two or more limbs, play a special sound
