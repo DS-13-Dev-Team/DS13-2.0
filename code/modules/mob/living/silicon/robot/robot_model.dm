@@ -277,6 +277,7 @@
 	name = "Clown"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
+		/obj/item/crowbar/cyborg,
 		/obj/item/toy/crayon/rainbow,
 		/obj/item/instrument/bikehorn,
 		/obj/item/stamp/clown,
@@ -586,6 +587,7 @@
 	name = "Medical"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
+		/obj/item/crowbar/cyborg,
 		/obj/item/healthanalyzer,
 		/obj/item/reagent_containers/borghypo,
 		/obj/item/borg/apparatus/beaker,
@@ -656,6 +658,7 @@
 	name = "Peacekeeper"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
+		/obj/item/crowbar/cyborg,
 		/obj/item/rsf/cookiesynth,
 		/obj/item/harmalarm,
 		/obj/item/reagent_containers/borghypo/peace,
@@ -678,6 +681,7 @@
 	name = "Security"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
+		/obj/item/crowbar/cyborg,
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/melee/baton/security/loaded,
 		/obj/item/gun/ballistic/automatic/pistol/divet/cyborg,
@@ -685,8 +689,8 @@
 		/obj/item/extinguisher/mini)
 	radio_channels = list(RADIO_CHANNEL_SECURITY)
 	emag_modules = list(/obj/item/gun/energy/laser/cyborg)
-	cyborg_base_icon = "sec"
-	model_select_icon = "security"
+	cyborg_base_icon = "synd_sec"
+	model_select_icon = "malf"
 	model_traits = list(TRAIT_PUSHIMMUNE)
 	hat_offset = 3
 
@@ -710,6 +714,7 @@
 	name = "Service"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
+		/obj/item/crowbar/cyborg,
 		/obj/item/reagent_containers/glass/beaker/large, //I know a shaker is more appropiate but this is for ease of identification
 		/obj/item/reagent_containers/food/condiment/enzyme,
 		/obj/item/pen,
