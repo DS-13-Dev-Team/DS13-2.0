@@ -222,12 +222,12 @@ Projectiles for the casings
 // 		L.fire_stacks += 5
 // 		L.IgniteMob()    //Would likely change it to 'ignite_mob' or so, for 'mob/living/proc/ignite_mob()'
 
-//Hardened core hollow-point, slightly reduced damage and increased armor penetration (this ammo comes preloaded in the cyborg divet pistol, which cannot be refilled)
+//Hardened core hollow-point, slightly increased damage and armor penetration (this ammo comes preloaded in the cyborg divet pistol, which cannot be refilled)
 /obj/projectile/bullet/divet/cyborg
 	name = "divet advanced bullet"
 	icon_state = "divet"
-	damage = 20
-	armour_penetration = 8
+	damage = 27.5
+	armour_penetration = 5
 
 //Cheaper bullets that put inside the extended mags by default, to cut some costs of the more trigger happy prone who use the mags
 /obj/projectile/bullet/divet/extended
