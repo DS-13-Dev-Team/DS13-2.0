@@ -684,6 +684,7 @@
 		/obj/item/crowbar/cyborg,
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/melee/baton/security/loaded,
+		/obj/item/melee/cyborgfist,
 		/obj/item/gun/ballistic/automatic/pistol/divet/cyborg,
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
 		/obj/item/extinguisher/mini)
