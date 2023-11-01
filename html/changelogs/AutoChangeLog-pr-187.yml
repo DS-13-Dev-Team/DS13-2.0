@@ -1,6 +1,0 @@
-author: DTraitor
-delete-after: true
-changes:
-  - bugfix: Hunter can be spawned once again
-  - bugfix: Ubermorph can move now
-  - bugfix: Necromorphs have proper health now

@@ -60,7 +60,6 @@
 		TRAIT_RESISTCOLD,
 		TRAIT_DISCOORDINATED_TOOL_USER,
 		TRAIT_PIERCEIMMUNE,
-		TRAIT_IGNOREDAMAGESLOWDOWN,
 		TRAIT_NOSOFTCRIT,
 		TRAIT_NOHUNGER,
 		TRAIT_NO_PAINSHOCK,
@@ -84,6 +83,11 @@
 		NOBLOODOVERLAY,
 		NOAUGMENTS,
 	)
+
+	organs = list(
+		ORGAN_SLOT_EYES = /obj/item/organ/eyes,
+		ORGAN_SLOT_TONGUE = /obj/item/organ/tongue,
+	) //Necros are mostly just biomass, little to no guts
 
 	inherent_biotypes = MOB_ORGANIC|MOB_UNDEAD|MOB_HUMANOID
 	inherent_factions = list(FACTION_NECROMORPH)
