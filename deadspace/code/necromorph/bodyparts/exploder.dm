@@ -36,7 +36,16 @@
 	integrity_failure = 0.25
 	var/list/datum/action/cooldown/necro/exploding_actions
 
-//Projectile hits exploder pustle? BOOM!
+//If someone happens to cut off the limb correctly it won't spontaniously cuban pete like a bottle of nitroglycerin
+/obj/item/bodypart/arm/left/necromorph/exploder/dismember(dismember_type, silent, clean)
+	if(dismember_type == DROPLIMB_EDGE) //Most guns don't cause DROPLIMB_EDGE, so this is mostly for melee
+		playsound(get_turf(src), 'sound/effects/dismember.ogg', 80, TRUE) //clean has no sound, but we still want to have a audio cue that it's cut off
+		. = ..(silent = FALSE, clean = TRUE) //This makes sure the pustule doesn't throw itself and explodes
+	else if(dismember_type == DROPLIMB_BLUNT || DROPLIMB_BURN) //Otherwise, cuban pete
+		. = ..()
+		explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
+
+//Did a projectile hit a pustle that is laying around? BOOM!
 /obj/item/bodypart/arm/left/necromorph/exploder/bullet_act(obj/projectile/P)
 	explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
 	qdel(src)
@@ -44,14 +53,14 @@
 
 //Somehow got your hands on a pustle without it exploding? Free grenade!
 /obj/item/bodypart/arm/left/necromorph/exploder/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+	. = ..()
 	explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
 	qdel(src)
-	. = ..()
 
-//Sanity check for if the limb somehow doesn't explode when it should, explodes on limb destruction
+//Sanity check for if the limb somehow doesn't explode when it should, explodes on destruction
 /obj/item/bodypart/arm/left/necromorph/exploder/atom_break()
-	explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
 	. = ..()
+	explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
 
 /obj/item/bodypart/arm/right/necromorph/exploder
 	name = "right arm"

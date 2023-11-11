@@ -1,5 +1,5 @@
 /datum/action/cooldown/necro/charge/exploder
-	charge_delay = 1 SECONDS
+	charge_delay = 1.5 SECONDS
 	charge_time = 10 SECONDS
 	charge_speed = 4
 
