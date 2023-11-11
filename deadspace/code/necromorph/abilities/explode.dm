@@ -4,11 +4,6 @@
 	cooldown_time = 12 SECONDS
 	click_to_activate = FALSE
 
-#define PLAY_SHAKING_ANIMATION(object, rotation, offset, shake_dir, initial_x, initial_y, initial_transform)\
-	##shake_dir = pick(-1, 1);\
-	animate(transform=turn(##object.transform, ##rotation*##shake_dir), pixel_x=##offset * pick(-1, 1), pixel_y = (##offset * pick(-1, 1)) + ##offset*##shake_dir, time=1);\
-	animate(transform=##initial_transform, pixel_x=##initial_x, pixel_y=##initial_y, time=2, easing=ELASTIC_EASING);
-
 /datum/action/cooldown/necro/explode/Activate(atom/target)
 	var/mob/living/carbon/human/necromorph/exploder/user = owner
 	var/initial_transform = matrix(user.transform)
@@ -33,11 +28,10 @@
 
 	addtimer(CALLBACK(src, PROC_REF(explode), user), 3 SECONDS)
 
-/datum/action/cooldown/necro/explode/proc/explode(mob/living/carbon/human/necromorph/exploder/user)
+/datum/action/cooldown/necro/explode/proc/explode(mob/living/carbon/human/necromorph/exploder/user, target)
 	if(owner == user)
-		var/obj/item/bodypart/leg/left/necromorph/exploder/pustule = target
-		pustule.explode()
-		user.gib_animation()
 		new /obj/effect/temp_visual/scry(get_turf(user), user.marker.markernet)
-		qdel(user)
+		explosion(get_turf(user), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, FALSE, explosion_cause = src)
+		explosion(get_turf(user), 0, 0, 2, 0, 0, FALSE, FALSE, FALSE, FALSE) //Second smaller explosion for more damage
+		user.gib(TRUE, TRUE, TRUE)
 

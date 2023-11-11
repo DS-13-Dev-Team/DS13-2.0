@@ -1,3 +1,8 @@
+#define PLAY_SHAKING_ANIMATION(object, rotation, offset, shake_dir, initial_x, initial_y, initial_transform)\
+	##shake_dir = pick(-1, 1);\
+	animate(transform=turn(##object.transform, ##rotation*##shake_dir), pixel_x=##offset * pick(-1, 1), pixel_y = (##offset * pick(-1, 1)) + ##offset*##shake_dir, time=1);\
+	animate(transform=##initial_transform, pixel_x=##initial_x, pixel_y=##initial_y, time=2, easing=ELASTIC_EASING);
+
 /datum/action/cooldown/necro
 	background_icon_state = "bg_demon"
 	var/activate_keybind = null

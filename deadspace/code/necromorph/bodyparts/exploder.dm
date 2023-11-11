@@ -20,12 +20,12 @@
 	wound_resistance = 5
 	biomass = 7.5
 
-//This is an arm actually. It's just used for walking
-/obj/item/bodypart/leg/left/necromorph/exploder
+/obj/item/bodypart/arm/left/necromorph/exploder
 	name = "yellow pustule"
 	limb_id = SPECIES_NECROMORPH_EXPLODER
+	bodypart_flags = BP_IS_MOVEMENT_LIMB | BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/exploder/exploder.dmi'
-	icon_state = "l_leg"
+	icon_state = "l_arm"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
@@ -36,41 +36,29 @@
 	integrity_failure = 0.25
 	var/list/datum/action/cooldown/necro/exploding_actions
 
-/obj/item/bodypart/leg/left/necromorph/exploder/Initialize(mapload)
-	. = ..()
-	exploding_actions = list(
-		new /datum/action/cooldown/necro/explode(src),
-		new /datum/action/cooldown/necro/charge/exploder(src),
-	)
-
-/obj/item/bodypart/leg/left/necromorph/exploder/Destroy()
-	exploding_actions = null
-	return ..()
-
-/obj/item/bodypart/leg/left/necromorph/exploder/attach_limb(mob/living/carbon/new_limb_owner, special)
-	if(..())
-		for(var/datum/action/cooldown/necro/ability as anything in exploding_actions)
-			ability.Grant(new_limb_owner)
-		return TRUE
-
-/obj/item/bodypart/leg/left/necromorph/exploder/drop_limb(special)
-	for(var/datum/action/cooldown/necro/ability as anything in exploding_actions)
-		ability.Remove(owner)
-	..()
-
-/obj/item/bodypart/leg/left/necromorph/exploder/atom_break()
-	..()
-	explode()
-
-/obj/item/bodypart/leg/left/necromorph/exploder/proc/explode()
-	explosion(get_turf(loc ? loc : owner), 0, 0, 2, 1, smoke = TRUE, explosion_cause = src)
+//Projectile hits exploder pustle? BOOM!
+/obj/item/bodypart/arm/left/necromorph/exploder/bullet_act(obj/projectile/P)
+	explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
 	qdel(src)
+	. = ..()
 
-/obj/item/bodypart/leg/right/necromorph/exploder
+//Somehow got your hands on a pustle without it exploding? Free grenade!
+/obj/item/bodypart/arm/left/necromorph/exploder/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+	explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
+	qdel(src)
+	. = ..()
+
+//Sanity check for if the limb somehow doesn't explode when it should, explodes on limb destruction
+/obj/item/bodypart/arm/left/necromorph/exploder/atom_break()
+	explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
+	. = ..()
+
+/obj/item/bodypart/arm/right/necromorph/exploder
 	name = "right arm"
 	limb_id = SPECIES_NECROMORPH_EXPLODER
+	bodypart_flags = BP_IS_MOVEMENT_LIMB | BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/exploder/exploder.dmi'
-	icon_state = "l_leg"
+	icon_state = "r_arm"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50

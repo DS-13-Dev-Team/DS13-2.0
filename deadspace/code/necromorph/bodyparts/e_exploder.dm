@@ -19,11 +19,11 @@
 	wound_resistance = 5
 
 
-/obj/item/bodypart/leg/left/necromorph/exploder/enhanced
+/obj/item/bodypart/arm/left/necromorph/exploder/enhanced
 	name = "yellow pustule"
 	limb_id = SPECIES_NECROMORPH_EXPLODER_ENHANCED
 	icon_static = 'deadspace/icons/necromorphs/exploder/exploder_enhanced.dmi'
-	icon_state = "l_leg"
+	icon_state = "l_arm"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
@@ -31,11 +31,11 @@
 	px_y = 12
 	wound_resistance = 0
 
-/obj/item/bodypart/leg/right/necromorph/exploder/enhanced
+/obj/item/bodypart/arm/right/necromorph/exploder/enhanced
 	name = "right arm"
 	limb_id = SPECIES_NECROMORPH_EXPLODER_ENHANCED
 	icon_static = 'deadspace/icons/necromorphs/exploder/exploder_enhanced.dmi'
-	icon_state = "l_leg"
+	icon_state = "r_arm"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
