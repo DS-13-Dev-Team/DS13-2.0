@@ -2,7 +2,7 @@
 	name = "excavation"
 	desc = "A modified, lightweight version of the engineering suit. Perfect for quick operations."
 	default_skin = "excavation"
-	armor = list(MELEE = 37.5, BULLET = 30, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 75)
+	armor = list(MELEE = 37.5, BULLET = 30, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 25)
 	resistance_flags = FIRE_PROOF|LAVA_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT

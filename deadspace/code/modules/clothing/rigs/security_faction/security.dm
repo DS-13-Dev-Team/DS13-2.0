@@ -2,7 +2,7 @@
 	name = "security"
 	desc = "A lightweight and flexible armored rig suit used by earthgov, across numerous facilties, also used on Corporate vessels in rare numbers."
 	default_skin = "titan"
-	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 15, BOMB = 45, BIO = 100, FIRE = 100, ACID = 75)
+	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 15, BOMB = 45, BIO = 100, FIRE = 100, ACID = 30)
 	siemens_coefficient = 0
 
 	skins = list(

@@ -2,7 +2,7 @@
 	name = "clown"
 	desc = "Honk honk."
 	default_skin = "clown"
-	armor = list(MELEE = 5, BULLET = 5, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, FIRE = 60, ACID = 30)
+	armor = list(MELEE = 5, BULLET = 5, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, FIRE = 30, ACID = 30)
 
 	skins = list(
 		"clown" = list(
