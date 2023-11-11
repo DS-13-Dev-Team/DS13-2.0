@@ -5,6 +5,7 @@
 	hitscan = TRUE
 	dismemberment = 20
 	damage_type = BRUTE //plasma is a physical object with mass, rather than purely burning. this also means you can decapitate/sever limbs, not just ash them.
+	sharpness = SHARP_EDGED
 	armor_flag = LASER
 	range = 5 //mining tools are not exactly known for their ability to replace firearms, they're good against necros, not so much against anything else.
 	pass_flags = PASSTABLE
