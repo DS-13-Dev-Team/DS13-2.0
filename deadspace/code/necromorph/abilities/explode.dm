@@ -28,7 +28,8 @@
 
 	addtimer(CALLBACK(src, PROC_REF(explode), user), 3 SECONDS)
 
-/datum/action/cooldown/necro/explode/proc/explode(mob/living/carbon/human/necromorph/exploder/user, target)
+///Make sure to not use heavy or devastation explosive range, or you'll break floor tiles
+/datum/action/cooldown/necro/explode/proc/explode(mob/living/carbon/human/necromorph/exploder/user)
 	if(owner == user)
 		new /obj/effect/temp_visual/scry(get_turf(user), user.marker.markernet)
 		explosion(get_turf(user), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, FALSE, explosion_cause = src)
