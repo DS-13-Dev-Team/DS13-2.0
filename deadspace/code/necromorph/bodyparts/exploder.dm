@@ -20,10 +20,11 @@
 	wound_resistance = 5
 	biomass = 7.5
 
+///The pustule shouldn't get BP_IS_MOVEMENT_LIMB, since pressure is what causes a pustule to explode in lore
 /obj/item/bodypart/arm/left/necromorph/exploder
 	name = "yellow pustule"
 	limb_id = SPECIES_NECROMORPH_EXPLODER
-	bodypart_flags = BP_IS_MOVEMENT_LIMB | BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "l_arm"
 	attack_verb_continuous = list("kicks", "stomps")
@@ -75,3 +76,31 @@
 	px_y = 12
 	wound_resistance = 0
 	biomass = 5
+
+/obj/item/bodypart/leg/right/necromorph/exploder
+	name = "fused legs"
+	desc = "Two legs fused together to form a thick, meaty stalk."
+	plaintext_zone = "fused legs"
+	limb_id = SPECIES_NECROMORPH_EXPLODER
+	bodypart_flags = BP_IS_MOVEMENT_LIMB | BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	dismemberable = FALSE //Technically this is actually a part of the chest, so we don't want this to come off
+	can_be_disabled = TRUE //We do however, want humans to be able to immobilize the exploder
+	disable_threshold = 1
+	icon_static = null //Since the leg is part of the chest sprite, we don't want a sprite ontop of the sprite
+	icon_state = null
+	max_damage = 60 //Bit stronger due to it being two limbs fused together
+	biomass = 0 //Handled in chest due to sprite funnies
+
+/obj/item/bodypart/leg/left/necromorph/exploder
+	name = "nub"
+	desc = "The fleshy remains of a leg that was fused together. This is useless."
+	plaintext_zone = "leg nub"
+	limb_id = SPECIES_NECROMORPH_EXPLODER
+	bodypart_flags = BP_NO_PAIN //We don't want this to have anything, as it's just a nub to hide the "X IS MISSING" examine text
+	dismemberable = FALSE
+	can_be_disabled = FALSE
+	is_pseudopart = TRUE //This will prevent the limb from having standard functions
+	icon_static = null
+	icon_state = null
+	max_damage = 150
+	biomass = 0 //Just a nub, not worth anything

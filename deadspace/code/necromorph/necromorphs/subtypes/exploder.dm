@@ -6,6 +6,8 @@
 		/obj/item/bodypart/head/necromorph/exploder,
 		/obj/item/bodypart/arm/left/necromorph/exploder,
 		/obj/item/bodypart/arm/right/necromorph/exploder,
+		/obj/item/bodypart/leg/left/necromorph/exploder,
+		/obj/item/bodypart/leg/right/necromorph/exploder,
 	)
 
 /mob/living/carbon/human/necromorph/exploder/play_necro_sound(audio_type, volume, vary, extra_range)
@@ -43,6 +45,8 @@
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/exploder,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/exploder,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/exploder,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/necromorph/exploder,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/exploder,
 	)
 
 	special_step_sounds = list(
