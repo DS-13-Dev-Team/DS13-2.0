@@ -14,7 +14,7 @@
 	//Lots of shaking with increasing frequency and violence
 
 	shake_dir = pick(-1, 1)
-	animate(user, transform = turn(user.transform, 4*shake_dir), pixel_x = 5 * pick(-1, 1), pixel_y = (5 * pick(-1, 1)) + 5*shake_dir, time=1)
+	animate(user, transform = turn(user.transform, 4*shake_dir), pixel_x = 5 * shake_dir, pixel_y = (5 * pick(-1, 1)) + 5*shake_dir, time=1)
 	animate(transform = initial_transform, pixel_x = initial_x, pixel_y = initial_y, time=2, easing=ELASTIC_EASING)
 	PLAY_SHAKING_ANIMATION(user, 7, 5, shake_dir, initial_x, initial_y, initial_transform)
 	PLAY_SHAKING_ANIMATION(user, 10, 6, shake_dir, initial_x, initial_y, initial_transform)
