@@ -4,8 +4,22 @@
 	cooldown_time = 12 SECONDS
 	click_to_activate = FALSE
 
+///If the exploder doesn't have the pustule they can't explode.
+///This is nested into normal combat abilities so we don't have to define this proc in every single exploder variant ability
+/datum/action/cooldown/necro/proc/can_explode(/mob/living/carbon/human/necromorph/exploder/user)
+	var/mob/living/carbon/human/necromorph/exploder/user = owner
+	.=FALSE
+	var/obj/item/bodypart/arm/left/PU = user.get_bodypart(BODY_ZONE_L_ARM)
+	if(!PU || PU.is_stump)
+		return
+
+	return TRUE
+
 /datum/action/cooldown/necro/explode/Activate(atom/target)
 	var/mob/living/carbon/human/necromorph/exploder/user = owner
+	if(!can_explode())
+		to_chat(user, span_warning("You have no pustule, you cannot explode!"))
+		return
 	var/initial_transform = matrix(user.transform)
 	var/initial_x = user.pixel_x
 	var/initial_y = user.pixel_y
@@ -30,6 +44,9 @@
 
 ///Make sure to not use heavy or devastation explosive range, or you'll break floor tiles
 /datum/action/cooldown/necro/explode/proc/explode(mob/living/carbon/human/necromorph/exploder/user)
+	if(!can_explode()) //Done twice for sanity's sake
+		to_chat(user, span_warning("You have no pustule, you cannot explode!"))
+		return
 	if(owner == user)
 		new /obj/effect/temp_visual/scry(get_turf(user), user.marker.markernet)
 		explosion(get_turf(user), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, FALSE, explosion_cause = src)

@@ -1,4 +1,5 @@
 /datum/action/cooldown/necro/charge/exploder
+	cooldown_time = 10 SECONDS
 	charge_delay = 1.5 SECONDS
 	charge_time = 10 SECONDS
 	charge_speed = 4
@@ -6,6 +7,8 @@
 //Totally not ripped from exploder explode
 /datum/action/cooldown/necro/charge/exploder/Activate(atom/target)
 	var/mob/living/carbon/human/necromorph/exploder/user = owner
+	if(!can_explode())
+		to_chat(user, span_warning("You have no pustule, KILL!"))
 	var/initial_transform = matrix(user.transform)
 	var/initial_x = user.pixel_x
 	var/initial_y = user.pixel_y
@@ -25,6 +28,9 @@
 
 /datum/action/cooldown/necro/charge/exploder/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	if(isliving(target))
+		if(!can_explode()) //Exploders can still charge if they don't have a pustule
+			..() //Just do a normal charge attack
+			return
 		new /obj/effect/temp_visual/scry(get_turf(source), source.marker.markernet)
 		SSmove_manager.stop_looping(source)
 		explosion(get_turf(source), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, FALSE, explosion_cause = src)
