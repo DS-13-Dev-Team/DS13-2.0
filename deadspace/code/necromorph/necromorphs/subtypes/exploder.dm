@@ -14,7 +14,7 @@
 	playsound(src, pick(GLOB.exploder_sounds[audio_type]), volume, vary, extra_range)
 
 /mob/living/carbon/human/necromorph/exploder/has_hand_for_held_index(i)
-	return TRUE //Exploders don't have arms, so we need to do some weird stuff to prevent runtimes
+	return TRUE //Exploders don't have real arms, so we need to do some weird stuff to prevent runtimes
 
 /datum/necro_class/exploder
 	display_name = "Exploder"
