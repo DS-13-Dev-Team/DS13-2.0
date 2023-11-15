@@ -1,8 +1,8 @@
 /datum/action/cooldown/necro/charge/exploder
 	cooldown_time = 10 SECONDS
-	charge_delay = 1.5 SECONDS
+	charge_delay = 1.8 SECONDS
 	charge_time = 10 SECONDS
-	charge_speed = 4
+	charge_speed = 3
 
 //Totally not ripped from exploder explode
 /datum/action/cooldown/necro/charge/exploder/Activate(atom/target)
@@ -28,13 +28,16 @@
 
 /datum/action/cooldown/necro/charge/exploder/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	if(isliving(target))
-		if(!can_explode()) //Exploders can still charge if they don't have a pustule
-			..() //Just do a normal charge attack
+		if(!can_explode())
+			..()
 			return
 		new /obj/effect/temp_visual/scry(get_turf(source), source.marker.markernet)
 		SSmove_manager.stop_looping(source)
-		explosion(get_turf(source), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, FALSE, explosion_cause = src)
-		explosion(get_turf(source), 0, 0, 2, 0, 0, FALSE, FALSE, FALSE, FALSE) //Second smaller explosion for more damage
+		charge_end()
+		if(is_enhanced(source))
+			explosion(get_turf(source), 0, 3, 4, 5, 7, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Big explosion with alot of fire
+		else if(!is_enhanced(source))
+			explosion(get_turf(source), 0, 2, 3, 2, 5, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Deadly proximity, light area
 		source.gib(TRUE, TRUE, TRUE)
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))

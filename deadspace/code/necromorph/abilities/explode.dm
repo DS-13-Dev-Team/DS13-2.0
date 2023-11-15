@@ -42,14 +42,16 @@
 
 	addtimer(CALLBACK(src, PROC_REF(explode), user), 3 SECONDS)
 
-///Make sure to not use heavy or devastation explosive range, or you'll break floor tiles
+///Make sure to not use devastation explosive range, or you'll break floor tiles
 /datum/action/cooldown/necro/explode/proc/explode(mob/living/carbon/human/necromorph/exploder/user)
 	if(!can_explode()) //Done twice for sanity's sake
 		to_chat(user, span_warning("You have no pustule, you cannot explode!"))
 		return
 	if(owner == user)
 		new /obj/effect/temp_visual/scry(get_turf(user), user.marker.markernet)
-		explosion(get_turf(user), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, FALSE, explosion_cause = src)
-		explosion(get_turf(user), 0, 0, 2, 0, 0, FALSE, FALSE, FALSE, FALSE) //Second smaller explosion for more damage
+		if(is_enhanced(user))
+			explosion(get_turf(user), 0, 3, 4, 5, 7, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Big explosion with alot of fire
+		else if(!is_enhanced(user))
+			explosion(get_turf(user), 0, 2, 3, 2, 5, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Deadly proximity, light area
 		user.gib(TRUE, TRUE, TRUE)
 

@@ -34,8 +34,7 @@
 	px_y = 12
 	wound_resistance = 0
 	biomass = 10 //Assuming it doesn't explode, it's packed with biomass
-	integrity_failure = 0.25
-	var/list/datum/action/cooldown/necro/exploding_actions
+	integrity_failure = 0.5 //breaks at roughly 50% health
 
 //If someone happens to cut off the limb correctly it won't spontaniously cuban pete like a bottle of nitroglycerin
 /obj/item/bodypart/arm/left/necromorph/exploder/dismember(dismember_type, silent, clean)
@@ -44,24 +43,24 @@
 		. = ..(silent = FALSE, clean = TRUE) //This makes sure the pustule doesn't throw itself and explodes
 	else if(dismember_type == DROPLIMB_BLUNT || DROPLIMB_BURN) //Otherwise, cuban pete
 		. = ..()
-		explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
+		explosion(get_turf(src), 0, 2, 3, 2, 5, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
 
 //Did a projectile hit a pustle that is laying around? BOOM!
 /obj/item/bodypart/arm/left/necromorph/exploder/bullet_act(obj/projectile/P)
-	explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
+	explosion(get_turf(src), 0, 2, 3, 2, 5, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
 	qdel(src)
 	. = ..()
 
 //Somehow got your hands on a pustle without it exploding? Free grenade!
 /obj/item/bodypart/arm/left/necromorph/exploder/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
-	explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
+	explosion(get_turf(src), 0, 2, 3, 2, 5, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
 	qdel(src)
 
 //Sanity check for if the limb somehow doesn't explode when it should, explodes on destruction
 /obj/item/bodypart/arm/left/necromorph/exploder/atom_break()
 	. = ..()
-	explosion(get_turf(src), 0, 0, 3, 2, 4, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
+	explosion(get_turf(src), 0, 2, 3, 2, 5, TRUE, FALSE, FALSE, TRUE, explosion_cause = src)
 
 /obj/item/bodypart/arm/right/necromorph/exploder
 	name = "right arm"
