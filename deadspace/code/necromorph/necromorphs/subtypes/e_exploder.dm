@@ -32,6 +32,7 @@
 	)
 	minimap_icon = "e_exploder"
 	implemented = TRUE
+	nest_allowed = FALSE
 
 /datum/species/necromorph/exploder/enhanced
 	name = "Enhanced Exploder"
