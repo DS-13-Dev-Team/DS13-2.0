@@ -28,7 +28,7 @@
 /datum/action/cooldown/necro/charge/exploder/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	if(isliving(target))
 		if(!can_explode())
-			..()
+			..() //You can still charge with no pustule, it will just be a normal attack instead
 			return
 		new /obj/effect/temp_visual/scry(get_turf(source), source.marker.markernet)
 		SSmove_manager.stop_looping(source)
