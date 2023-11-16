@@ -25,7 +25,6 @@
 	PLAY_SHAKING_ANIMATION(user, 14, 8, shake_dir, initial_x, initial_y, initial_transform)
 	. = ..()
 
-
 /datum/action/cooldown/necro/charge/exploder/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
 	if(isliving(target))
 		if(!can_explode())
@@ -33,12 +32,13 @@
 			return
 		new /obj/effect/temp_visual/scry(get_turf(source), source.marker.markernet)
 		SSmove_manager.stop_looping(source)
-		charge_end()
+		var/obj/item/bodypart/PU = source.get_bodypart(BODY_ZONE_L_ARM)
+		qdel(PU) //Sanity check to prevent double explosion
 		if(is_enhanced(source))
 			explosion(get_turf(source), 0, 3, 4, 5, 7, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Big explosion with alot of fire
 		else if(!is_enhanced(source))
 			explosion(get_turf(source), 0, 2, 3, 2, 5, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Deadly proximity, light area
-		source.gib(TRUE, TRUE, TRUE)
+		source.dust(TRUE, FALSE, TRUE) //We use dusting for charge so we don't get runtimes.
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)

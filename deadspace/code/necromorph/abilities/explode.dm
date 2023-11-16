@@ -53,5 +53,5 @@
 			explosion(get_turf(user), 0, 3, 4, 5, 7, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Big explosion with alot of fire
 		else if(!is_enhanced(user))
 			explosion(get_turf(user), 0, 2, 3, 2, 5, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Deadly proximity, light area
-		user.gib(TRUE, TRUE, TRUE)
+		user.dust(TRUE, FALSE, TRUE)
 
