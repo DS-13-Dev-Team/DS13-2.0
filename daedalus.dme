@@ -4783,6 +4783,7 @@
 #include "deadspace\code\modules\clothing\rigs\patron_faction\ruined.dm"
 #include "deadspace\code\modules\clothing\rigs\patron_faction\salvagers_venture.dm"
 #include "deadspace\code\modules\clothing\rigs\patron_faction\sea.dm"
+#include "deadspace\code\modules\clothing\rigs\patron_faction\security_green.dm"
 #include "deadspace\code\modules\clothing\rigs\patron_faction\wasp.dm"
 #include "deadspace\code\modules\clothing\rigs\patron_faction\weeb.dm"
 #include "deadspace\code\modules\clothing\rigs\scaf_faction\arctic.dm"
