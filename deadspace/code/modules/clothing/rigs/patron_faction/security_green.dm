@@ -1,15 +1,13 @@
-/datum/mod_theme/deadspace/zealot
-	name = "zealot"
-	desc = "A Security RIG, it has been repainted in black and crimson colours. There are unitologist markings across the suit."
-	default_skin = "security_standard_zealot"
-	armor = list(MELEE = 40, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 100)
-	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
-	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+// {RedsPro}
+/datum/mod_theme/deadspace/security_greene
+	name = "security greene"
+	desc = "A lightweight and flexible armored rig suit used by earthgov, Urban camo with an inbuilt Bomber Jacket (for the rizz).."
+	default_skin = "greenrig"
+	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 15, BOMB = 37.5, BIO = 100, FIRE = 60, ACID = 60)
 	siemens_coefficient = 0
-	complexity_max = 30
 
 	skins = list(
-		"security_standard_zealot" = list(
+		"greenrig" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -35,15 +33,14 @@
 			),
 		),
 	)
-/obj/item/mod/control/pre_equipped/ds/zealot
-	theme = /datum/mod_theme/deadspace/zealot
+
+/obj/item/mod/control/pre_equipped/ds/security_greene
+	theme = /datum/mod_theme/deadspace/security_greene
 	initial_modules = list(
-		/obj/item/mod/module/storage/syndicate,
-		/obj/item/mod/module/emp_shield,
+		/obj/item/mod/module/storage,
+		/obj/item/mod/module/jetpack,
+		/obj/item/mod/module/magboot,
 		/obj/item/mod/module/magnetic_harness,
-		/obj/item/mod/module/jetpack/advanced,
-		/obj/item/mod/module/magboot/advanced,
-		/obj/item/mod/module/welding,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/dna_lock,
+		/obj/item/mod/module/welding,
 	)

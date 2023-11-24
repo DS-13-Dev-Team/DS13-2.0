@@ -1,12 +1,12 @@
 /datum/mod_theme/deadspace/titan_security
 	name = "security"
 	desc = "A lightweight and flexible armored rig suit used by earthgov, across numerous facilties, also used on Corporate vessels in rare numbers."
-	default_skin = "titan"
+	default_skin = "security_standard"
 	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 15, BOMB = 45, BIO = 100, FIRE = 100, ACID = 30)
 	siemens_coefficient = 0
 
 	skins = list(
-		"titan" = list(
+		"security_standard" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -32,6 +32,7 @@
 			),
 		),
 	)
+
 /obj/item/mod/control/pre_equipped/ds/titan_security
 	theme = /datum/mod_theme/deadspace/titan_security
 	initial_modules = list(
