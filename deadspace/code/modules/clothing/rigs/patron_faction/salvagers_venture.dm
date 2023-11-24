@@ -3,7 +3,7 @@
 	name = "salvagers venture"
 	desc = "A repurposed RIG from the resource wars used for fringe space salvage operations. The left side of the chest plating reads 'BROGON' and sports several hash marks underneath."
 	default_skin = "venturebronze"
-	armor = list(MELEE = 37.5, BULLET = 30, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 75)
+	armor = list(MELEE = 37.5, BULLET = 30, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 40)
 	resistance_flags = FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0

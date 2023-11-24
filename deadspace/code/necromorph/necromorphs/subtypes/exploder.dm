@@ -4,12 +4,17 @@
 	bodyparts = list(
 		/obj/item/bodypart/chest/necromorph/exploder,
 		/obj/item/bodypart/head/necromorph/exploder,
+		/obj/item/bodypart/arm/left/necromorph/exploder,
+		/obj/item/bodypart/arm/right/necromorph/exploder,
 		/obj/item/bodypart/leg/left/necromorph/exploder,
 		/obj/item/bodypart/leg/right/necromorph/exploder,
 	)
 
 /mob/living/carbon/human/necromorph/exploder/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.exploder_sounds[audio_type]), volume, vary, extra_range)
+
+/mob/living/carbon/human/necromorph/exploder/has_hand_for_held_index(i)
+	return TRUE //Exploders don't have real arms, so we need to do some weird stuff to prevent runtimes
 
 /datum/necro_class/exploder
 	display_name = "Exploder"
@@ -24,9 +29,12 @@
 	max_health = 100
 	actions = list(
 		/datum/action/cooldown/necro/shout,
+		/datum/action/cooldown/necro/explode,
+		/datum/action/cooldown/necro/charge/exploder,
 	)
 	minimap_icon = "exploder"
-	implemented = FALSE //Explode doesn't work so they're worthless
+	implemented = TRUE
+	nest_allowed = TRUE
 
 /datum/species/necromorph/exploder
 	name = "Exploder"
@@ -34,9 +42,11 @@
 	speedmod = 1.7
 	bodypart_overrides = list(
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/necromorph/exploder,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/exploder,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/exploder,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/exploder,
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/necromorph/exploder,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/exploder,
-		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/exploder,
 	)
 
 	special_step_sounds = list(
