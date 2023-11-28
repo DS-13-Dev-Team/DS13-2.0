@@ -49,6 +49,7 @@
 
 	var/oindex = active_hand_index
 	active_hand_index = held_index
+
 	if(hud_used)
 		var/atom/movable/screen/inventory/hand/H
 		H = hud_used.hand_slots["[oindex]"]
@@ -58,6 +59,7 @@
 		if(H)
 			H.update_appearance()
 
+	update_mouse_pointer()
 
 /mob/living/carbon/activate_hand(selhand) //l/r OR 1-held_items.len
 	if(!selhand)
@@ -106,7 +108,7 @@
 		if(hurt)
 			victim.take_bodypart_damage(10 + 5 * extra_speed, check_armor = TRUE)
 			take_bodypart_damage(10 + 5 * extra_speed, check_armor = TRUE)
-			victim.Paralyze(2 SECONDS)
+			victim.Knockdown(0.1 SECONDS)
 			Paralyze(2 SECONDS)
 			visible_message(span_danger("[src] crashes into [victim][extra_speed ? " really hard" : ""], knocking them both over!"),\
 				span_userdanger("You violently crash into [victim][extra_speed ? " extra hard" : ""]!"))
