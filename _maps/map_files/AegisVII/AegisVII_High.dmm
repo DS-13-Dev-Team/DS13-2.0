@@ -215,7 +215,7 @@
 /area/station/security/detectives_office)
 "bX" = (
 /turf/closed/mineral,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "cc" = (
 /obj/item/paper_bin{
 	pixel_y = 3
@@ -595,7 +595,7 @@
 "fu" = (
 /obj/machinery/telecomms/relay/preset/station,
 /turf/open/floor/deadspace/hardwood,
-/area/ruin/powered/seedvault)
+/area/aegis/seedvault)
 "fv" = (
 /obj/effect/landmark/start/head_of_personnel,
 /obj/structure/chair/office{
@@ -645,7 +645,7 @@
 /area/station/command/bridge)
 "fX" = (
 /turf/closed/wall/r_wall,
-/area/ruin/powered/seedvault)
+/area/aegis/seedvault)
 "gb" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -1342,7 +1342,7 @@
 /area/station/command/heads_quarters/captain)
 "sE" = (
 /turf/closed/indestructible/rock,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "sG" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -1414,7 +1414,7 @@
 /area/station/hallway/primary/central/aft)
 "tR" = (
 /turf/open/floor/deadspace/hardwood,
-/area/ruin/powered/seedvault)
+/area/aegis/seedvault)
 "ub" = (
 /turf/open/openspace,
 /area/station/commons/lounge)
@@ -1441,7 +1441,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
-/area/ruin/powered/seedvault)
+/area/aegis/seedvault)
 "ut" = (
 /obj/machinery/door/firedoor,
 /obj/effect/spawner/structure/window/reinforced/grille,
@@ -2350,7 +2350,7 @@
 /obj/machinery/power/smes/magical,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/ruin/powered/seedvault)
+/area/aegis/seedvault)
 "Hz" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/hardwood,
@@ -3139,7 +3139,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/ruin/powered/seedvault)
+/area/aegis/seedvault)
 "Xd" = (
 /obj/structure/chair/office{
 	dir = 1
