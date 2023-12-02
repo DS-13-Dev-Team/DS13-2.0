@@ -1686,9 +1686,9 @@
 /area/station/science/lab)
 "azl" = (
 /obj/structure/rack,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/eva)
 "azp" = (
@@ -17878,9 +17878,9 @@
 "kkB" = (
 /obj/machinery/light/directional/north,
 /obj/structure/rack,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/eva)
 "kkL" = (
@@ -19109,9 +19109,9 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "lho" = (
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
 /obj/structure/rack,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/warehouse/upper)

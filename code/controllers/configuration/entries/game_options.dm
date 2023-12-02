@@ -299,7 +299,7 @@
 	min_val = -1
 
 /datum/config_entry/string/overflow_job
-	default = JOB_SHAFT_MINER
+	default = JOB_PROSPECTOR
 
 /datum/config_entry/flag/starlight
 /datum/config_entry/flag/grey_assistants

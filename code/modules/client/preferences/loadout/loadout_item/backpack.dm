@@ -94,14 +94,14 @@
 /datum/loadout_item/backpack/rock_saw
 	path = /obj/item/pickaxe/rock
 	subcategory = LOADOUT_SUBCATEGORY_DANGEROUS
-	restricted_roles = list(JOB_SHAFT_MINER)//room for more mining roles later
+	restricted_roles = list(JOB_PROSPECTOR)//room for more mining roles later
 	cost = 2
 
 /datum/loadout_item/backpack/knife_combat
 	path = /obj/item/knife/combat
 	subcategory = LOADOUT_SUBCATEGORY_DANGEROUS
 	cost = 4
-	restricted_roles = list(JOB_SHAFT_MINER,JOB_SECURITY_OFFICER,JOB_WARDEN,JOB_HEAD_OF_SECURITY,JOB_HEAD_OF_PERSONNEL,JOB_CAPTAIN)
+	restricted_roles = list(JOB_PROSPECTOR,JOB_SECURITY_OFFICER,JOB_WARDEN,JOB_HEAD_OF_SECURITY,JOB_HEAD_OF_PERSONNEL,JOB_CAPTAIN)
 
 /datum/loadout_item/backpack/knife_survival
 	path = /obj/item/knife/combat/survival
