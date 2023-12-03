@@ -65,7 +65,7 @@
 /obj/projectile/bullet/biobomb/on_hit(atom/target, blocked, pierce_hit)
 	. = ..()
 	if(. == BULLET_ACT_HIT)
-		var/datum/reagent/acid = GLOB.chemical_reagents_list[acid_type]
+		var/datum/reagent/acid = SSreagents.chemical_reagents_list[acid_type]
 		if(isliving(target))
 			acid.expose_mob(target, TOUCH, acid_amount, TRUE)
 		else if (isturf(target))

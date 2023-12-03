@@ -126,6 +126,7 @@
 	/// The overlay when hovering over with an item in your hand
 	var/image/object_overlay
 	plane = HUD_PLANE
+	mouse_drop_zone = TRUE
 
 /atom/movable/screen/inventory/Click(location, control, params)
 	// At this point in client Click() code we have passed the 1/10 sec check and little else
@@ -438,6 +439,7 @@
 	icon_state = "block"
 	screen_loc = "7,7 to 10,8"
 	plane = HUD_PLANE
+	mouse_drop_zone = TRUE
 
 /atom/movable/screen/storage/Initialize(mapload, new_master)
 	. = ..()
@@ -554,6 +556,7 @@
 	plane = ABOVE_HUD_PLANE
 
 /atom/movable/screen/zone_sel/MouseExited(location, control, params)
+	. = ..()
 	if(!isobserver(usr) && hovering)
 		vis_contents -= hover_overlays_cache[hovering]
 		hovering = null
@@ -654,7 +657,7 @@
 /atom/movable/screen/healths/blob
 	name = "blob health"
 	icon_state = "block"
-	screen_loc = ui_internal
+	screen_loc = ui_blob_health
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /atom/movable/screen/healths/blob/overmind
@@ -676,7 +679,7 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /atom/movable/screen/healthdoll
-	name = "health doll"
+	name = "physical health"
 	screen_loc = ui_healthdoll
 
 /atom/movable/screen/healthdoll/Click()

@@ -29,7 +29,6 @@
 		/obj/item/mining_scanner,
 		/obj/item/t_scanner/adv_mining_scanner,
 		/obj/item/pickaxe,
-		/obj/item/kinetic_crusher,
 		/obj/item/stack/ore,
 		/obj/item/storage/bag/ore,
 		/obj/item/mail,

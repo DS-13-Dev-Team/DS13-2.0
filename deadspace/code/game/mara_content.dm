@@ -11,7 +11,7 @@
 
 /obj/structure/closet/secure_closet/mara/miner/PopulateContents()
 	..()
-	new /obj/item/clothing/mask/gas/explorer(src)
+	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/mod/control/pre_equipped/ds/standard_miner(src)
 	new /obj/item/shovel(src)
 	new /obj/item/pickaxe/rock(src)
