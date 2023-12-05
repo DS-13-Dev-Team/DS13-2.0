@@ -9,8 +9,6 @@
 	icon_dmg_overlay = null
 	icon_bloodycover = null
 	max_damage = 200
-	body_zone = BODY_ZONE_CHEST
-	body_part = CHEST
 	is_dimorphic = FALSE
 	px_x = 0
 	px_y = 0
@@ -29,8 +27,6 @@
 	icon_state = "head"
 	icon_dmg_overlay = null
 	icon_bloodycover = null
-	body_zone = BODY_ZONE_HEAD
-	body_part = HEAD
 	max_damage = 200
 	px_x = 0
 	px_y = -8
@@ -158,8 +154,6 @@
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
-	body_zone = BODY_ZONE_R_LEG
-	body_part = LEG_RIGHT
 	px_x = 2
 	px_y = 12
 	can_be_disabled = FALSE
