@@ -73,10 +73,10 @@
 
 	if(iscarbon(source))
 		var/mob/living/carbon/carbon_source = source
-		if(!carbon_source.get_bodypart(BODY_ZONE_L_LEG) && !carbon_source.get_bodypart(BODY_ZONE_R_LEG))
+		if(carbon_source.usable_legs <= 0) //No usable legs? No sound!
 			return
 		if(carbon_source.m_intent == MOVE_INTENT_WALK)
-			return// stealth
+			return //stealth
 	steps_for_living[source] += 1
 	var/steps = steps_for_living[source]
 
