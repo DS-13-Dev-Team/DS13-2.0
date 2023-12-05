@@ -45,6 +45,11 @@
 /datum/action/cooldown/necro/active/gallop/proc/OnBump(mob/living/carbon/human/necromorph/leaper/source, atom/bumped)
 	SIGNAL_HANDLER
 	source.visible_message(span_danger("[source] crashes into [bumped]!"), span_danger("You crashed into [bumped]!"))
+	if(iscarbon(bumped)) //You can slam into necros and humans while galloping
+		var/mob/living/carbon/victim = bumped
+		shake_camera(victim, 20, 1)
+		victim.Knockdown(20)
+		victim.take_overall_damage(5)
 	StopCrash()
 
 /datum/action/cooldown/necro/active/gallop/proc/OnMoved(mob/living/carbon/human/necromorph/leaper/source)
@@ -74,6 +79,6 @@
 		owner.remove_movespeed_modifier(/datum/movespeed_modifier/gallop)
 
 /datum/movespeed_modifier/gallop
-	multiplicative_slowdown = 0.25
+	multiplicative_slowdown = -2.5
 
 #undef GALLOP_CRASH_LIMIT
