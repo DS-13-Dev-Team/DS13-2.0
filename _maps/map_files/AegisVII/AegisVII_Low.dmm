@@ -167,7 +167,7 @@
 "bK" = (
 /obj/effect/decal/remains/human,
 /turf/open/misc/ironsand,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bN" = (
 /obj/item/flashlight/flare,
 /obj/item/flashlight/flare,
@@ -227,13 +227,7 @@
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "cm" = (
-/obj/structure/displaycase/trophy{
-	alert = 0;
-	desc = "A display case containing an unitologist zealot rig";
-	pixel_y = -4;
-	req_access_txt = "48";
-	start_showpiece_type = /obj/item/mod/control/pre_equipped/ds/zealot
-	},
+/obj/structure/rack,
 /turf/open/floor/deadspace/grater,
 /area/station/ai_monitored/security/armory)
 "co" = (
@@ -244,7 +238,7 @@
 /obj/item/flashlight/flare,
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ct" = (
 /obj/machinery/door/airlock/security{
 	req_one_access_txt = "1;4"
@@ -349,7 +343,7 @@
 	dir = 4
 	},
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "df" = (
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 4
@@ -548,7 +542,7 @@
 "eq" = (
 /obj/structure/barricade/wooden,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "er" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1
@@ -684,7 +678,7 @@
 /obj/structure/rack,
 /obj/item/tank/internals/emergency_oxygen/double,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fi" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/medical,
@@ -736,7 +730,7 @@
 /area/station/maintenance/fore/lesser)
 "fw" = (
 /turf/open/floor/deadspace/grille_spare2,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fx" = (
 /obj/structure/closet/crate/medical,
 /obj/effect/spawner/random/engineering/toolbox,
@@ -840,7 +834,7 @@
 "gg" = (
 /obj/item/wirecutters/abductor,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gh" = (
 /mob/living/simple_animal/hostile/cat_butcherer{
 	name = "Keener"
@@ -863,7 +857,7 @@
 /area/station/maintenance/port/lesser)
 "gm" = (
 /turf/closed/wall/r_wall,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "go" = (
 /obj/machinery/light/small/maintenance/directional/south,
 /obj/structure/chair/office{
@@ -874,7 +868,7 @@
 "gp" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gr" = (
 /obj/structure/table/wood/fancy/red,
 /obj/machinery/telephone/service,
@@ -915,7 +909,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gT" = (
 /mob/living/simple_animal/mouse/brown{
 	name = "Jerry"
@@ -1003,7 +997,7 @@
 	dir = 10
 	},
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hw" = (
 /obj/structure/curtain{
 	color = "red"
@@ -1245,7 +1239,7 @@
 "iW" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "iX" = (
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
@@ -1278,7 +1272,7 @@
 /area/station/cargo)
 "jh" = (
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ji" = (
 /obj/effect/spawner/random/structure/closet_private,
 /obj/effect/spawner/random/clothing/gloves,
@@ -1317,7 +1311,7 @@
 	dir = 8
 	},
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "jt" = (
 /obj/effect/spawner/random/vending/colavend,
 /obj/machinery/camera/autoname/directional/west,
@@ -1342,7 +1336,7 @@
 "jy" = (
 /obj/item/storage/lunchbox/egov,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "jC" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
@@ -1499,7 +1493,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "kQ" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
@@ -1532,15 +1526,15 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/foamedmetal,
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "la" = (
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash,
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lc" = (
 /obj/machinery/cryopod,
 /turf/open/floor/iron/ported/lino,
@@ -1595,7 +1589,7 @@
 "lu" = (
 /obj/structure/grille,
 /turf/closed/mineral/random/aegis,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lw" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -1613,7 +1607,7 @@
 	dir = 5
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lD" = (
 /obj/structure/toilet,
 /turf/open/floor/deadspace/grater,
@@ -1639,11 +1633,11 @@
 "lP" = (
 /obj/effect/decal/cleanable/blood/gibs/up,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lT" = (
 /obj/machinery/power/floodlight,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lU" = (
 /obj/machinery/door/firedoor,
 /obj/effect/spawner/structure/window/reinforced/grille,
@@ -1675,7 +1669,7 @@
 	dir = 4
 	},
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "mm" = (
 /obj/structure/chair/stool,
 /turf/open/floor/plating,
@@ -1741,7 +1735,7 @@
 	dir = 4
 	},
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "mV" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/engineering/tool,
@@ -1771,7 +1765,7 @@
 "nf" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ng" = (
 /obj/structure/closet,
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -1812,7 +1806,7 @@
 /obj/structure/table/reinforced,
 /obj/item/plate_shard/marker_shard,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ny" = (
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/wood,
@@ -1915,7 +1909,7 @@
 "on" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "oo" = (
 /obj/machinery/light/small/red,
 /turf/open/floor/deadspace/grille_spare3,
@@ -1924,7 +1918,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/engineering/material,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ou" = (
 /obj/machinery/firealarm,
 /turf/closed/wall/r_wall,
@@ -1962,7 +1956,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "oG" = (
 /obj/structure/filingcabinet/filingcabinet,
 /turf/open/floor/plating,
@@ -1975,14 +1969,14 @@
 "oK" = (
 /obj/structure/grille/broken,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "oP" = (
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/structure/rack,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "oR" = (
 /obj/machinery/power/terminal{
 	dir = 8
@@ -1994,7 +1988,7 @@
 /obj/item/radio,
 /obj/structure/rack,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "oW" = (
 /obj/structure/table/wood/poker,
 /turf/open/floor/plating,
@@ -2015,13 +2009,13 @@
 	name = "Cave-In Shelter 3"
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pf" = (
 /obj/machinery/door/airlock/external{
 	name = "Cave-In Shelter 2"
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ph" = (
 /turf/open/floor/deadspace/mono,
 /area/station/medical/medbay/aft)
@@ -2033,7 +2027,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pm" = (
 /obj/machinery/camera/autoname/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -2043,7 +2037,7 @@
 /area/station/security/checkpoint/medical)
 "po" = (
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pr" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -2061,13 +2055,13 @@
 /obj/item/bedsheet/random,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "py" = (
 /obj/machinery/door/airlock/external{
 	name = "Cave-In-Shelter 1"
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pA" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/random/food_or_drink/booze,
@@ -2076,7 +2070,7 @@
 "pC" = (
 /obj/structure/ore_box,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pD" = (
 /obj/structure/ladder/invincible,
 /turf/open/floor/plating,
@@ -2085,7 +2079,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/fax_machine,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pI" = (
 /obj/structure/closet/athletic_mixed,
 /turf/open/floor/plating,
@@ -2093,7 +2087,7 @@
 "pJ" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pK" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -2179,7 +2173,7 @@
 	dir = 9
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ql" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1
@@ -2199,7 +2193,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qt" = (
 /mob/living/simple_animal/hostile/rat,
 /turf/open/floor/plating,
@@ -2207,10 +2201,10 @@
 "qu" = (
 /obj/machinery/light/small/red,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qw" = (
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qy" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/electrical,
@@ -2341,7 +2335,7 @@
 "rv" = (
 /obj/structure/ladder/invincible,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rw" = (
 /obj/structure/table,
 /obj/effect/spawner/random/food_or_drink/snack,
@@ -2374,11 +2368,11 @@
 "rD" = (
 /obj/structure/table,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rG" = (
 /obj/machinery/hydroponics/constructable,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rH" = (
 /obj/structure/railing{
 	dir = 8
@@ -2446,7 +2440,7 @@
 "sj" = (
 /obj/structure/foamedmetal,
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "sk" = (
 /obj/structure/foamedmetal,
 /turf/open/floor/plating,
@@ -2457,7 +2451,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "su" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
@@ -2503,7 +2497,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/ruin/powered/snow_biodome)
+/area/aegis/snow_biodome)
 "sI" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1
@@ -2536,7 +2530,7 @@
 	dir = 6
 	},
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "th" = (
 /obj/structure/closet/crate/large/ds/green_vertical,
 /obj/effect/turf_decal/box,
@@ -2550,7 +2544,7 @@
 /area/station/cargo/warehouse)
 "tp" = (
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "tr" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/maintenance/two,
@@ -2572,7 +2566,7 @@
 	id = "Lower Marker Conveyor"
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "tD" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/medical/minor_healing,
@@ -2586,7 +2580,7 @@
 /area/station/maintenance/fore/lesser)
 "tQ" = (
 /turf/open/misc/ironsand,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "tR" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/warehouse)
@@ -2617,7 +2611,7 @@
 /area/station/cargo/warehouse)
 "ui" = (
 /turf/closed/wall/r_wall,
-/area/ruin/powered/snow_biodome)
+/area/aegis/snow_biodome)
 "uk" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/maintenance/port/lesser)
@@ -2649,13 +2643,13 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uw" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uz" = (
 /obj/structure/rack,
 /obj/item/clothing/under/dress/skirt,
@@ -2761,7 +2755,7 @@
 "vP" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vQ" = (
 /obj/effect/spawner/random/contraband/armory,
 /turf/open/floor/plating,
@@ -2769,7 +2763,7 @@
 "vR" = (
 /obj/effect/landmark,
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vU" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -2793,7 +2787,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "we" = (
 /obj/machinery/modular_computer/console/preset/curator,
 /turf/open/floor/deadspace/random/maint_center,
@@ -2806,7 +2800,7 @@
 	},
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wg" = (
 /obj/structure/barricade/wooden,
 /turf/open/water,
@@ -2822,7 +2816,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/medical/medkit,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wu" = (
 /obj/structure/rack/shelf,
 /obj/effect/turf_decal/bot_white,
@@ -2834,7 +2828,7 @@
 /obj/machinery/power/smes/magical,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/ruin/powered/snow_biodome)
+/area/aegis/snow_biodome)
 "wy" = (
 /obj/item/toy/figure/wizard,
 /turf/open/floor/plating,
@@ -2939,7 +2933,7 @@
 "xB" = (
 /obj/structure/sign/warning,
 /turf/closed/wall/mineral/titanium/survival/pod,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "xC" = (
 /turf/closed/wall/r_wall,
 /area/station/service/chapel/storage)
@@ -2964,7 +2958,7 @@
 	dir = 8
 	},
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "xQ" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
@@ -3021,7 +3015,7 @@
 /area/station/maintenance/port/lesser)
 "yB" = (
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "yC" = (
 /obj/structure/cable,
 /obj/item/radio/intercom/directional/west,
@@ -3036,7 +3030,7 @@
 "yE" = (
 /obj/structure/barricade/wooden,
 /turf/closed/mineral/random/aegis,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "yF" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -3045,7 +3039,7 @@
 /area/station/maintenance/port/lesser)
 "yG" = (
 /turf/closed/mineral/random/aegis,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "yJ" = (
 /obj/structure/table,
 /obj/item/clothing/head/welding/fancy,
@@ -3101,7 +3095,7 @@
 "zi" = (
 /obj/structure/closet/crate/grave/filled/lead_researcher,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "zm" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/effect/spawner/random/trash,
@@ -3111,7 +3105,7 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "zp" = (
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/lesser)
@@ -3129,7 +3123,7 @@
 	dir = 1
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "zF" = (
 /obj/effect/turf_decal/box/white,
 /turf/open/floor/deadspace/grater,
@@ -3145,14 +3139,14 @@
 "zW" = (
 /obj/item/flashlight/flare,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Aa" = (
 /obj/machinery/conveyor{
 	id = "Lower Marker Conveyor";
 	dir = 4
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Ad" = (
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
@@ -3203,7 +3197,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Az" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
@@ -3215,7 +3209,7 @@
 /obj/effect/spawner/random/entertainment/money_large,
 /obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "AI" = (
 /obj/item/clothing/head/welding/knight,
 /turf/open/floor/plating,
@@ -3225,7 +3219,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "AR" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -3270,7 +3264,7 @@
 /obj/structure/rack,
 /obj/item/storage/lunchbox/scaf,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Bx" = (
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
@@ -3282,7 +3276,7 @@
 	},
 /obj/effect/spawner/random/deadspace/rig/scaf,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "BB" = (
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plating,
@@ -3299,7 +3293,7 @@
 "BM" = (
 /obj/machinery/telecomms/relay/preset/station,
 /turf/open/floor/deadspace/hardwood,
-/area/ruin/powered/snow_biodome)
+/area/aegis/snow_biodome)
 "BP" = (
 /obj/effect/spawner/random/maintenance/two,
 /obj/structure/rack,
@@ -3328,12 +3322,12 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "BZ" = (
 /obj/structure/table,
 /obj/effect/spawner/random/deadspace/ammo,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Ch" = (
 /obj/effect/landmark{
 	name = "ShuttleRepairPart"
@@ -3356,7 +3350,7 @@
 	dir = 5
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Cn" = (
 /turf/open/floor/deadspace/mono,
 /area/station/maintenance/port/lesser)
@@ -3378,7 +3372,7 @@
 /area/station/cargo/warehouse)
 "Cr" = (
 /turf/closed/indestructible/rock,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Cs" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -3391,7 +3385,7 @@
 	},
 /obj/structure/table,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Cx" = (
 /obj/structure/table,
 /obj/structure/railing{
@@ -3403,7 +3397,7 @@
 "CC" = (
 /obj/structure/chair/office,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "CE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/hydroponics/constructable,
@@ -3420,11 +3414,11 @@
 	id = "Lower Marker Conveyor"
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "CN" = (
 /obj/machinery/chem_dispenser,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "CO" = (
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -3464,7 +3458,7 @@
 "Dk" = (
 /obj/machinery/light/small/maintenance/directional/east,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Dn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/maintenance/directional/north,
@@ -3477,7 +3471,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Dt" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
@@ -3494,7 +3488,7 @@
 /area/station/maintenance/fore/lesser)
 "Dy" = (
 /turf/closed/wall/mineral/titanium/survival/pod,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "DE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /obj/machinery/light/small/maintenance/directional/south,
@@ -3611,7 +3605,7 @@
 "EZ" = (
 /obj/machinery/light/small/maintenance/directional/east,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Fc" = (
 /obj/structure/easel,
 /obj/item/canvas/twentythree_twentythree,
@@ -3634,7 +3628,7 @@
 /area/station/maintenance/fore/lesser)
 "Fq" = (
 /turf/open/floor/deadspace/random/slides,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Fy" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/contraband/permabrig_weapon,
@@ -3644,7 +3638,7 @@
 /obj/item/crowbar/power,
 /obj/item/weldingtool/experimental,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "FC" = (
 /obj/structure/rack/shelf,
 /obj/effect/turf_decal/bot_white,
@@ -3666,7 +3660,7 @@
 /obj/item/paper,
 /obj/item/pen,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "FP" = (
 /obj/structure/table/optable,
 /turf/open/floor/plating,
@@ -3751,7 +3745,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "GP" = (
 /obj/machinery/door/poddoor,
 /turf/open/floor/deadspace/mono,
@@ -3767,7 +3761,7 @@
 	dir = 8
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Hb" = (
 /obj/structure/table,
 /obj/effect/spawner/random/food_or_drink/booze,
@@ -3777,7 +3771,7 @@
 "Hn" = (
 /obj/structure/closet/crate/grave/filled,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Hr" = (
 /obj/structure/table,
 /obj/effect/spawner/random/engineering/toolbox,
@@ -3808,7 +3802,7 @@
 "HG" = (
 /obj/item/pickaxe/rock,
 /turf/open/misc/ironsand,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "HI" = (
 /turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
@@ -3851,7 +3845,7 @@
 "In" = (
 /obj/structure/etherealball,
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Ip" = (
 /obj/structure/rack/shelf,
 /obj/effect/spawner/random/clothing/lizardboots,
@@ -3872,7 +3866,7 @@
 	dir = 10
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "IB" = (
 /obj/structure/fence/door/barred,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -3924,7 +3918,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Je" = (
 /obj/structure/closet/crate/secure/hydroponics,
 /turf/open/floor/plating,
@@ -3952,7 +3946,7 @@
 /obj/structure/grille,
 /obj/structure/grille,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Jx" = (
 /obj/machinery/button/door/directional/east{
 	id = "UndergroundSouthCargo";
@@ -3966,7 +3960,7 @@
 /area/station/maintenance/fore/lesser)
 "JB" = (
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "JG" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 4
@@ -4004,7 +3998,7 @@
 "Kb" = (
 /obj/machinery/chem_master,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Kd" = (
 /obj/structure/cable,
 /obj/machinery/light/small/maintenance/directional/south,
@@ -4076,7 +4070,7 @@
 "KK" = (
 /obj/structure/grille,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "KN" = (
 /obj/machinery/door/airlock/security{
 	req_one_access_txt = "1;4"
@@ -4090,7 +4084,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
-/area/ruin/powered/snow_biodome)
+/area/aegis/snow_biodome)
 "KQ" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 1;
@@ -4107,11 +4101,11 @@
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/table,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Lb" = (
 /obj/effect/spawner/random/trash,
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Lc" = (
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse)
@@ -4120,7 +4114,7 @@
 	dir = 9
 	},
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Lm" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -4136,7 +4130,7 @@
 "Lw" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Ly" = (
 /turf/closed/wall/r_wall,
 /area/station/medical/medbay/aft)
@@ -4147,7 +4141,7 @@
 "LB" = (
 /obj/item/pickaxe/rock,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "LG" = (
 /obj/machinery/light/small/maintenance/directional/east,
 /turf/open/floor/plating,
@@ -4178,7 +4172,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "LZ" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
@@ -4200,7 +4194,7 @@
 	dir = 6
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Mk" = (
 /obj/structure/rack,
 /obj/item/storage/lunchbox/cec,
@@ -4318,11 +4312,11 @@
 "Nr" = (
 /obj/item/storage/toolbox/syndicate,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Nu" = (
 /obj/effect/spawner/random/decoration/glowstick,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Nv" = (
 /obj/machinery/light/floor/has_bulb,
 /turf/open/floor/wood,
@@ -4338,7 +4332,7 @@
 "NA" = (
 /obj/machinery/power/floodlight,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "NE" = (
 /obj/machinery/door/poddoor{
 	dir = 4;
@@ -4418,7 +4412,7 @@
 "OB" = (
 /obj/machinery/autolathe,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "OE" = (
 /obj/structure/table/wood/poker,
 /obj/item/stack/sheet/mineral/silver,
@@ -4440,7 +4434,7 @@
 /area/station/maintenance/fore/lesser)
 "OT" = (
 /turf/open/floor/deadspace/hardwood,
-/area/ruin/powered/snow_biodome)
+/area/aegis/snow_biodome)
 "OU" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plating,
@@ -4474,11 +4468,11 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Pe" = (
 /obj/item/clothing/shoes/discoshoes,
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Pg" = (
 /obj/machinery/computer/slot_machine,
 /obj/effect/turf_decal/box,
@@ -4498,14 +4492,14 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Pr" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -7;
 	pixel_y = 12
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Ps" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/clothing,
@@ -4543,7 +4537,7 @@
 "PM" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "PT" = (
 /mob/living/simple_animal/hostile/rat,
 /turf/open/water,
@@ -4573,11 +4567,11 @@
 /obj/structure/rack,
 /obj/item/plate_shard/marker_shard,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Qr" = (
 /mob/living/simple_animal/hostile/rat,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Qy" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/deadspace/grater,
@@ -4723,7 +4717,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Sl" = (
 /obj/structure/girder/reinforced,
 /turf/open/floor/plating,
@@ -4783,7 +4777,7 @@
 /area/station/security/checkpoint/medical)
 "SI" = (
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "SM" = (
 /turf/open/floor/deadspace/grater,
 /area/station/medical/medbay/aft)
@@ -4812,7 +4806,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Tb" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1
@@ -4938,7 +4932,7 @@
 "Ux" = (
 /obj/effect/decal/remains/human,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "UA" = (
 /obj/structure/rack,
 /obj/item/toy/plush/beeplushie,
@@ -4994,7 +4988,7 @@
 "Vf" = (
 /obj/effect/spawner/random/deadspace/rig/scaf,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Vh" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
@@ -5073,7 +5067,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "VW" = (
 /obj/structure/sign/poster/contraband/lusty_xenomorph,
 /turf/closed/wall/r_wall,
@@ -5132,7 +5126,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Ws" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -5145,7 +5139,7 @@
 "Wz" = (
 /obj/structure/railing,
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "WB" = (
 /obj/machinery/light/small/maintenance/directional/south,
 /turf/open/floor/plating,
@@ -5157,14 +5151,14 @@
 "WG" = (
 /obj/item/clothing/neck/tie/disco,
 /turf/open/floor/eighties/red,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "WR" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/engineering/material,
 /obj/effect/spawner/random/engineering/material,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "WT" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -5233,7 +5227,7 @@
 	id = "Marker Conveyor"
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Xs" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
@@ -5242,7 +5236,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/deadspace/rig,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "Xv" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/maintenance/three,
@@ -5347,7 +5341,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/decoration/glowstick,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "YH" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/plating,
@@ -5446,7 +5440,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ZF" = (
 /obj/structure/closet/body_bag,
 /obj/effect/turf_decal/box/white,
@@ -5489,7 +5483,7 @@
 "ZO" = (
 /obj/item/clothing/glasses/welding,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ZQ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -5508,7 +5502,7 @@
 "ZW" = (
 /obj/machinery/light/small/maintenance/directional/north,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ZY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mob_spawn/corpse/human/charredskeleton,

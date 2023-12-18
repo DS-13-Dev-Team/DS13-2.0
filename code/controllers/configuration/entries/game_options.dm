@@ -299,20 +299,10 @@
 	min_val = -1
 
 /datum/config_entry/string/overflow_job
-	default = JOB_SHAFT_MINER
+	default = JOB_PROSPECTOR
 
 /datum/config_entry/flag/starlight
 /datum/config_entry/flag/grey_assistants
-
-/datum/config_entry/number/lavaland_budget
-	default = 60
-	integer = FALSE
-	min_val = 0
-
-/datum/config_entry/number/icemoon_budget
-	default = 90
-	integer = FALSE
-	min_val = 0
 
 /datum/config_entry/number/space_budget
 	default = 16
@@ -320,14 +310,6 @@
 	min_val = 0
 
 #ifdef DISABLE_RUINS
-
-/datum/config_entry/number/lavaland_budget
-	max_val = 0
-	default = 0
-
-/datum/config_entry/number/icemoon_budget
-	max_val = 0
-	default = 0
 
 /datum/config_entry/number/space_budget
 	max_val = 0

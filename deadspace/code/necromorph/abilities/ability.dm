@@ -1,3 +1,8 @@
+#define PLAY_SHAKING_ANIMATION(object, rotation, offset, shake_dir, initial_x, initial_y, initial_transform)\
+	##shake_dir = pick(-1, 1);\
+	animate(transform=turn(##object.transform, ##rotation*##shake_dir), pixel_x=##offset * shake_dir, pixel_y = (##offset * pick(-1, 1)) + ##offset*##shake_dir, time=1);\
+	animate(transform=##initial_transform, pixel_x=##initial_x, pixel_y=##initial_y, time=2, easing=ELASTIC_EASING);
+
 /datum/action/cooldown/necro
 	background_icon_state = "bg_demon"
 	var/activate_keybind = null
@@ -23,6 +28,14 @@
 	SIGNAL_HANDLER
 	Trigger()
 	return COMSIG_KB_ACTIVATED
+
+///Checks if the necro is enhanced, and if so do a different interaction in the ability.
+///Will primarily be used for infector and exploder
+/datum/action/cooldown/necro/proc/is_enhanced(mob/living/carbon/human/necromorph/N)
+	.=FALSE
+	if(initial(N.class.tier) >= 2) //Necro tier would only change through adminbus, so we can just grab the initial
+		return TRUE
+	return
 
 /*
 	Active abilties that can be activated but can't be deactivated

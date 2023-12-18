@@ -2,7 +2,7 @@
 	name = "Standard Engineer"
 	desc = "the most basic form of Resource Integration Gear available for engineers throughout the course of their employment."
 	default_skin = "standard_engineer"
-	armor = list(MELEE = 25, BULLET = 20, LASER = 25, ENERGY = 25, BOMB =25, BIO = 100, FIRE = 100, ACID = 50)
+	armor = list(MELEE = 25, BULLET = 20, LASER = 25, ENERGY = 25, BOMB =35, BIO = 100, FIRE = 100, ACID = 35)
 	resistance_flags = FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0

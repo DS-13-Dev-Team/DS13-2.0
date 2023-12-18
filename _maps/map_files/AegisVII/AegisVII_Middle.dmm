@@ -6,7 +6,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "aav" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -41,7 +41,7 @@
 /obj/effect/turf_decal/box,
 /obj/machinery/power/floodlight,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "abe" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
@@ -53,7 +53,7 @@
 /area/shuttle/abandoned)
 "abg" = (
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "abo" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 1
@@ -84,7 +84,7 @@
 "abK" = (
 /obj/item/storage/toolbox/electrical,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "abL" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -97,7 +97,7 @@
 	dir = 8
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "abU" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 1
@@ -108,7 +108,7 @@
 "abV" = (
 /obj/item/light/tube,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aci" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -120,7 +120,7 @@
 	id = "Storage Upper"
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "acx" = (
 /obj/machinery/light/directional/north,
 /obj/structure/chair/comfy/shuttle,
@@ -208,10 +208,10 @@
 	},
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aeM" = (
 /turf/open/floor/deadspace/random/golf_gray,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aeN" = (
 /obj/machinery/cryopod{
 	dir = 4
@@ -272,7 +272,7 @@
 "afH" = (
 /obj/structure/cable,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "afS" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/cable,
@@ -341,7 +341,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "agG" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
@@ -445,7 +445,7 @@
 "ahZ" = (
 /obj/structure/grille,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aif" = (
 /obj/machinery/door/airlock{
 	id_tag = "Cabin13";
@@ -527,7 +527,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ajJ" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/storage)
@@ -689,7 +689,7 @@
 "amt" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "amx" = (
 /obj/machinery/door/airlock{
 	id_tag = "Cabin9";
@@ -940,7 +940,7 @@
 "aoW" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aoZ" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -951,7 +951,7 @@
 "apa" = (
 /obj/structure/girder,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ape" = (
 /obj/structure/chair/stool/bar/directional/south,
 /obj/effect/landmark/navigate_destination/kitchen,
@@ -1002,7 +1002,7 @@
 /area/station/cargo/qm)
 "apG" = (
 /turf/closed/mineral/random/aegis,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "apT" = (
 /obj/machinery/field/generator,
 /turf/open/floor/plating,
@@ -1048,7 +1048,7 @@
 "aqv" = (
 /obj/machinery/light/directional/south,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aqA" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 1
@@ -1063,7 +1063,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aqF" = (
 /turf/open/openspace,
 /area/station/medical/medbay/central)
@@ -1140,13 +1140,13 @@
 "arl" = (
 /obj/machinery/vending/snack,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "arv" = (
 /obj/item/stack/rods/ten,
 /obj/structure/table,
 /obj/effect/spawner/random/engineering/material,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "arx" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -1176,7 +1176,7 @@
 /obj/machinery/hydroponics/constructable,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "arK" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1232,11 +1232,11 @@
 	name = "ShuttleRepairPart"
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "asp" = (
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "asr" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/random/rectangles,
@@ -1246,11 +1246,11 @@
 	anchored = 1
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ast" = (
 /obj/structure/grille/broken,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "asz" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
@@ -1266,7 +1266,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "asE" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -1366,11 +1366,11 @@
 "atD" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "atI" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "atP" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock"
@@ -1424,7 +1424,7 @@
 	name = "\improper WARNING: RESTRICTED AREA"
 	},
 /turf/closed/wall/r_wall,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "auP" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	dir = 4;
@@ -1518,7 +1518,7 @@
 "awo" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "awq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/railing{
@@ -1616,7 +1616,7 @@
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "axB" = (
 /obj/machinery/mineral/ore_redemption,
 /turf/open/floor/deadspace/random/rectangles,
@@ -1687,9 +1687,9 @@
 /area/station/science/lab)
 "azl" = (
 /obj/structure/rack,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/eva)
 "azp" = (
@@ -1701,7 +1701,7 @@
 "azy" = (
 /obj/item/clothing/head/hardhat,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "azB" = (
 /obj/structure/toilet{
 	pixel_y = 5
@@ -1910,7 +1910,7 @@
 /obj/item/stack/sheet/iron/ten,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aCI" = (
 /obj/structure/sink/kitchen{
 	dir = 8;
@@ -2118,7 +2118,7 @@
 	},
 /obj/structure/table,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aEu" = (
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
@@ -2137,7 +2137,7 @@
 /obj/structure/closet/secure_closet/hydroponics,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aED" = (
 /obj/structure/chair{
 	dir = 8
@@ -2169,7 +2169,7 @@
 "aEQ" = (
 /obj/structure/chair/sofa/bench/right,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aEY" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -2203,7 +2203,7 @@
 	dir = 9
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aFf" = (
 /obj/structure/table,
 /turf/open/floor/iron,
@@ -2280,7 +2280,7 @@
 "aGq" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "aGw" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/disposalpipe/segment{
@@ -2324,7 +2324,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aGT" = (
 /obj/structure/closet/crate/trashcart/laundry,
 /turf/open/floor/iron/showroomfloor,
@@ -2334,7 +2334,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aHf" = (
 /obj/machinery/exodrone_launcher,
 /turf/open/floor/plating,
@@ -2358,10 +2358,10 @@
 /obj/effect/decal/cleanable/blood,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "aHx" = (
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "aHI" = (
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/deadspace/mono,
@@ -2413,7 +2413,7 @@
 "aHY" = (
 /obj/structure/rack,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aIb" = (
 /obj/machinery/light/small/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -2463,7 +2463,7 @@
 "aIr" = (
 /obj/structure/barricade/wooden,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aIt" = (
 /obj/effect/spawner/random/trash,
 /obj/structure/disposalpipe/segment{
@@ -2786,12 +2786,12 @@
 "aKN" = (
 /obj/structure/low_wall,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aKT" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aKW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/catwalk_floor/iron_dark,
@@ -2800,7 +2800,7 @@
 /obj/structure/table,
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aLe" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/east,
@@ -2897,7 +2897,7 @@
 "aLx" = (
 /obj/item/shard,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aLy" = (
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/living_quarters)
@@ -2935,7 +2935,7 @@
 "aLX" = (
 /obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aMd" = (
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
@@ -3075,7 +3075,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large/ds/green_horizontal,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "aOj" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3285,7 +3285,7 @@
 "aRt" = (
 /obj/machinery/power/port_gen/pacman,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aRw" = (
 /obj/machinery/computer/exoscanner_control{
 	dir = 1
@@ -3429,7 +3429,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "aSS" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/structure/disposalpipe/segment{
@@ -3445,7 +3445,7 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/deadspace/bathroom,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "aSX" = (
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 1
@@ -3499,7 +3499,7 @@
 "aTk" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aTp" = (
 /obj/effect/spawner/random/trash,
 /turf/open/floor/plating,
@@ -3555,7 +3555,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aTL" = (
 /obj/machinery/door/airlock/engineering/glass/critical{
 	heat_proof = 1;
@@ -3587,7 +3587,7 @@
 "aTV" = (
 /obj/structure/rack,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aTW" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Telecomms Server Room"
@@ -3612,7 +3612,7 @@
 	name = "Dormitories"
 	},
 /turf/open/floor/wood,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "aUe" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/bot{
@@ -3792,7 +3792,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "aWo" = (
 /obj/structure/cable,
 /obj/machinery/newscaster/directional/east,
@@ -3808,7 +3808,7 @@
 /obj/item/toner,
 /obj/item/toner,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "aWB" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -3849,7 +3849,7 @@
 	dir = 4
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "aXd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -4264,7 +4264,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/medical/minor_healing,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bdg" = (
 /obj/machinery/chem_dispenser,
 /obj/structure/extinguisher_cabinet/directional/west,
@@ -4368,7 +4368,7 @@
 	dir = 1
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bdQ" = (
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/box,
@@ -4386,7 +4386,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "beg" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -4408,7 +4408,7 @@
 /obj/structure/table,
 /obj/item/pickaxe/rock,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "beP" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
@@ -4593,7 +4593,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/bathroom,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "bgq" = (
 /mob/living/simple_animal/bot/mulebot/cargobot{
 	dir = 8;
@@ -4608,7 +4608,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "bgG" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -4751,7 +4751,7 @@
 /obj/item/dice,
 /obj/structure/table,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "biv" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
@@ -4869,7 +4869,7 @@
 "bjL" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bjM" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 4
@@ -4959,7 +4959,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "bkQ" = (
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron,
@@ -5081,7 +5081,7 @@
 /obj/item/clothing/head/welding/engie,
 /obj/structure/table,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "blR" = (
 /obj/machinery/vending/hydroseeds,
 /obj/effect/turf_decal/stripes/line{
@@ -5127,7 +5127,7 @@
 /obj/structure/table,
 /obj/effect/spawner/random/engineering/material,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bmn" = (
 /obj/structure/table,
 /obj/item/paper_bin,
@@ -5156,7 +5156,7 @@
 "bmq" = (
 /obj/structure/table,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bmB" = (
 /obj/structure/dresser,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
@@ -5403,7 +5403,7 @@
 	},
 /obj/structure/rack,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bof" = (
 /obj/effect/decal/cleanable/vomit,
 /obj/structure/disposalpipe/segment{
@@ -5586,7 +5586,7 @@
 /obj/structure/lattice,
 /obj/effect/spawner/random/structure/grille,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bqa" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/machinery/door/poddoor/preopen{
@@ -5629,7 +5629,7 @@
 	id = "Storage Upper"
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bqs" = (
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/security/checkpoint/customs)
@@ -5697,7 +5697,7 @@
 /obj/item/camera_film,
 /obj/structure/table,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bqH" = (
 /obj/machinery/cell_charger,
 /obj/structure/table,
@@ -5776,7 +5776,7 @@
 /obj/item/gps,
 /obj/structure/table,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "brN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -5796,7 +5796,7 @@
 /area/station/security/execution)
 "bsc" = (
 /turf/open/floor/deadspace/mono,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "bsf" = (
 /obj/machinery/door/airlock{
 	name = "Abandoned Shuttle Bay"
@@ -5917,7 +5917,7 @@
 "btK" = (
 /obj/item/shard,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "btM" = (
 /obj/structure/window/reinforced/spawner/east,
 /obj/structure/closet/secure_closet/ds/miner,
@@ -5969,7 +5969,7 @@
 "bul" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bun" = (
 /obj/structure/table/wood/fancy/orange,
 /obj/item/gps{
@@ -6062,7 +6062,7 @@
 "byk" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "byr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -6095,7 +6095,7 @@
 /obj/item/shard,
 /obj/effect/spawner/random/trash/food_packaging,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bzA" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 4
@@ -6152,13 +6152,13 @@
 "bBG" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "bBR" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "bCd" = (
 /mob/living/simple_animal/drone/classic/scavbot{
 	dir = 4;
@@ -6259,7 +6259,7 @@
 /obj/effect/spawner/random/trash/cigbutt,
 /obj/effect/spawner/random/trash/mess,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bEY" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line,
 /obj/item/kirbyplants/random,
@@ -6310,7 +6310,7 @@
 	id = "miningprep2"
 	},
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "bHg" = (
 /obj/machinery/door/airlock{
 	id_tag = "Toilet1";
@@ -6328,7 +6328,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "bIu" = (
 /turf/open/floor/iron/white,
 /area/station/science/misc_lab)
@@ -6432,7 +6432,7 @@
 /obj/effect/spawner/random/entertainment/cigarette_pack,
 /obj/effect/spawner/random/entertainment/lighter,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bKO" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -6450,7 +6450,7 @@
 "bLw" = (
 /obj/structure/cable,
 /turf/open/misc/ironsand,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bLz" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -6637,7 +6637,7 @@
 /obj/structure/cable,
 /obj/effect/landmark/pestspawn,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "bSa" = (
 /obj/machinery/firealarm/directional/north,
 /obj/machinery/airalarm/directional/east,
@@ -6772,7 +6772,7 @@
 	width = 5
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "bWR" = (
 /obj/machinery/atmospherics/pipe/smart/simple/pink/visible{
 	dir = 6
@@ -6861,7 +6861,7 @@
 /obj/item/flashlight/glowstick/cyan,
 /obj/item/flashlight/glowstick/cyan,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "caa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7147,7 +7147,7 @@
 "cjU" = (
 /obj/machinery/computer/security/wooden_tv,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ckl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -7310,7 +7310,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "cqx" = (
 /obj/machinery/door/airlock{
 	name = "Abandonded Storage"
@@ -7449,7 +7449,7 @@
 	id = "miningprep2"
 	},
 /turf/open/floor/deadspace/mono,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "cvl" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/chair/office{
@@ -7500,7 +7500,7 @@
 "cxq" = (
 /obj/effect/spawner/random/structure/crate_abandoned,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "cym" = (
 /obj/structure/closet/secure_closet/medical3,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
@@ -7600,7 +7600,7 @@
 /obj/item/flashlight/glowstick,
 /obj/item/flashlight/glowstick,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "cCm" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/deadspace/grater,
@@ -7679,7 +7679,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "cEZ" = (
 /obj/structure/closet/wardrobe/white/medical,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
@@ -7915,7 +7915,7 @@
 "cLN" = (
 /obj/machinery/light,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "cLX" = (
 /obj/machinery/light/small/directional/east,
 /obj/machinery/power/smes,
@@ -7932,7 +7932,7 @@
 	dir = 4
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "cMW" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/deadspace/random/rectangles,
@@ -8010,7 +8010,7 @@
 	dir = 1
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "cQa" = (
 /obj/structure/railing{
 	dir = 6
@@ -8090,7 +8090,7 @@
 /area/station/engineering/supermatter/room)
 "cTf" = (
 /turf/open/floor/wood,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "cTu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -8178,15 +8178,15 @@
 "cWH" = (
 /obj/structure/window/reinforced/spawner/east,
 /turf/open/floor/deadspace/mono,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "cWL" = (
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "cWN" = (
 /obj/structure/reagent_dispensers/beerkeg,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "cXf" = (
 /obj/structure/table,
 /turf/open/floor/deadspace/grater,
@@ -8353,7 +8353,7 @@
 /obj/structure/cable,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "dfE" = (
 /turf/closed/wall/r_wall,
 /area/mine/living_quarters)
@@ -8447,10 +8447,10 @@
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/clothing/backpack,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "diR" = (
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "diZ" = (
 /turf/open/floor/iron/dark/side{
 	dir = 1
@@ -8525,7 +8525,7 @@
 /obj/item/shard,
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dmm" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -8587,7 +8587,7 @@
 "doU" = (
 /obj/effect/landmark/pestspawn,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "dpe" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -8606,7 +8606,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "dqG" = (
 /turf/open/floor/iron,
 /area/station/security/range)
@@ -8639,7 +8639,7 @@
 "dsk" = (
 /obj/effect/spawner/random/trash,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dsM" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
@@ -8792,7 +8792,7 @@
 /obj/item/shard,
 /obj/effect/spawner/random/trash/cigbutt,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dyi" = (
 /obj/machinery/telecomms/receiver/preset_right,
 /obj/machinery/light/small/directional/north,
@@ -8822,7 +8822,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dzA" = (
 /obj/effect/turf_decal/bot{
 	dir = 1
@@ -8890,7 +8890,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dCn" = (
 /obj/machinery/computer/cargo/request{
 	dir = 4
@@ -8948,7 +8948,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/clothing/costume,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dEs" = (
 /obj/effect/turf_decal/box,
 /obj/structure/rack,
@@ -9066,7 +9066,7 @@
 /obj/machinery/hydroponics/constructable,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dMy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -9128,7 +9128,7 @@
 /obj/item/flashlight/glowstick/orange,
 /obj/item/flashlight/glowstick/orange,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dOe" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -9182,7 +9182,7 @@
 /area/station/hallway/primary/aft)
 "dPH" = (
 /turf/open/floor/deadspace/random/slides,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "dPS" = (
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
@@ -9233,7 +9233,7 @@
 /obj/effect/spawner/random/trash/food_packaging,
 /obj/effect/spawner/random/vending/snackvend,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dSq" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/maint_center,
@@ -9271,7 +9271,7 @@
 "dUb" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "dUn" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/showroomfloor,
@@ -9365,11 +9365,11 @@
 /obj/item/clothing/accessory/armband/cargo,
 /obj/machinery/light/directional/west,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dWs" = (
 /obj/effect/spawner/random/trash/food_packaging,
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dWx" = (
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/random/maint_right,
@@ -9455,7 +9455,7 @@
 "dZg" = (
 /obj/structure/table,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "dZM" = (
 /obj/item/radio/intercom/directional/south,
 /obj/machinery/light/no_nightlight/directional/south,
@@ -9540,7 +9540,7 @@
 	dir = 9
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ebQ" = (
 /obj/machinery/door/airlock/security{
 	name = "P-Sec Lobby";
@@ -9647,7 +9647,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "eeF" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/structure/cable,
@@ -9726,7 +9726,7 @@
 "egq" = (
 /obj/structure/railing,
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "egF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9737,7 +9737,7 @@
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "egQ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -9951,7 +9951,7 @@
 /obj/item/storage/toolbox/electrical,
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "enQ" = (
 /obj/structure/table,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -10182,7 +10182,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "eym" = (
 /obj/structure/sign/cec/deck/cargo{
 	pixel_y = -32
@@ -10645,7 +10645,7 @@
 /obj/item/folder/blue,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "eUQ" = (
 /obj/structure/railing{
 	dir = 5
@@ -10696,7 +10696,7 @@
 	name = "Mining Preparations A-2"
 	},
 /turf/open/floor/deadspace/mono,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "eWi" = (
 /obj/effect/landmark/navigate_destination/med,
 /obj/structure/disposalpipe/junction{
@@ -10756,7 +10756,7 @@
 	pixel_y = 6
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "eXO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/newscaster/directional/west,
@@ -10834,7 +10834,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "eZF" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
@@ -11110,7 +11110,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fgw" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -11216,7 +11216,7 @@
 "fjR" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fjY" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/deadspace/random/rectangles,
@@ -11237,7 +11237,7 @@
 "fkq" = (
 /obj/structure/railing/corner,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fkw" = (
 /obj/machinery/door/airlock/mining{
 	name = "Cargo Bay";
@@ -11249,7 +11249,7 @@
 "fkx" = (
 /obj/machinery/seed_extractor,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fkM" = (
 /obj/machinery/camera/directional/north{
 	network = list("training");
@@ -11278,7 +11278,7 @@
 /obj/item/flashlight/glowstick/blue,
 /obj/item/flashlight/glowstick/blue,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "flI" = (
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/circuit/green/telecomms/mainframe,
@@ -11390,7 +11390,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "fpw" = (
 /turf/open/floor/wood,
 /area/station/cargo/qm)
@@ -11478,7 +11478,7 @@
 "ftC" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "ftV" = (
 /obj/structure/chair{
 	dir = 8
@@ -11546,7 +11546,7 @@
 "fwj" = (
 /obj/effect/spawner/random/food_or_drink,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fwK" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/smart/manifold/yellow/visible{
@@ -11559,7 +11559,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fxt" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -11941,7 +11941,7 @@
 "fKM" = (
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "fLI" = (
 /obj/effect/spawner/random/vending/colavend,
 /obj/effect/turf_decal/box,
@@ -12065,7 +12065,7 @@
 "fPz" = (
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fPF" = (
 /turf/open/floor/iron/dark,
 /area/station/medical/office)
@@ -12142,7 +12142,7 @@
 /area/station/hallway/secondary/service)
 "fQO" = (
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fQS" = (
 /obj/machinery/door/airlock/mining{
 	name = "Front Desk";
@@ -12337,7 +12337,7 @@
 	dir = 1
 	},
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "fXM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12670,7 +12670,7 @@
 "ghN" = (
 /obj/structure/girder/displaced,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ghS" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/machinery/light/small/maintenance/directional/east,
@@ -12703,6 +12703,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos)
+"gke" = (
+/obj/machinery/holopad,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/floor_decal/ds/spline/fancy/wood,
+/turf/open/floor/carpet/royalblue,
+/area/station/service/library)
 "gkz" = (
 /turf/closed/wall/r_wall,
 /area/station/service/kitchen/coldroom)
@@ -12732,7 +12738,7 @@
 /obj/machinery/power/smes/magical,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gmA" = (
 /obj/effect/turf_decal/box,
 /obj/item/target/clown,
@@ -12790,7 +12796,7 @@
 	name = "Scrapping Observation"
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gpC" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/bar/opposingcorners,
@@ -12853,7 +12859,7 @@
 "gqV" = (
 /obj/structure/window/reinforced/spawner/north,
 /turf/open/floor/deadspace/random/golf_gray,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "grl" = (
 /obj/structure/chair,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -12887,7 +12893,7 @@
 	dir = 8
 	},
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gsM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -12902,7 +12908,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gsU" = (
 /obj/structure/table,
 /obj/item/folder/white{
@@ -13013,7 +13019,7 @@
 /area/station/medical/chemistry)
 "gzk" = (
 /turf/open/floor/deadspace/random/maint_center,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gzl" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/disposalpipe/segment{
@@ -13107,7 +13113,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/medical/minor_healing,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gBy" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/smart/simple/purple/visible{
@@ -13228,11 +13234,11 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/deadspace/bathroom,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "gFh" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gFk" = (
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
@@ -13440,7 +13446,7 @@
 /obj/structure/table,
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "gQn" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
@@ -13468,7 +13474,7 @@
 /obj/effect/mob_spawn/corpse/human/miner,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "gQP" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "mininghallwayshutter";
@@ -13500,7 +13506,7 @@
 /obj/machinery/door/airlock/mining,
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "gRJ" = (
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/deadspace/random/maint_right,
@@ -13774,7 +13780,7 @@
 	dir = 10
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hbJ" = (
 /obj/effect/turf_decal/bot{
 	dir = 1
@@ -13850,7 +13856,7 @@
 	id = "Storage Upper"
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hfc" = (
 /obj/machinery/light/floor/has_bulb,
 /turf/open/floor/deadspace/cable,
@@ -13966,7 +13972,7 @@
 "hjV" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hki" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 4
@@ -14061,7 +14067,7 @@
 "hnA" = (
 /obj/effect/spawner/random/food_or_drink/booze,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hnX" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/plating,
@@ -14127,7 +14133,7 @@
 "hpS" = (
 /obj/item/shard,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hqo" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/ported/lino,
@@ -14184,7 +14190,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hrP" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -14231,7 +14237,7 @@
 	dir = 4
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "htk" = (
 /obj/structure/railing,
 /turf/open/floor/plating,
@@ -14288,7 +14294,7 @@
 /area/station/commons/dorms/barracks)
 "huo" = (
 /turf/closed/wall/r_wall,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hur" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/bot,
@@ -14445,7 +14451,7 @@
 /obj/effect/spawner/random/engineering/tool,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "hzC" = (
 /obj/machinery/firealarm/directional/north,
 /obj/structure/cable,
@@ -14729,7 +14735,7 @@
 "hKO" = (
 /obj/machinery/light/directional/west,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hLx" = (
 /obj/machinery/vending/coffee,
 /obj/effect/turf_decal/box,
@@ -14937,7 +14943,7 @@
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hVe" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
@@ -14959,7 +14965,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hVV" = (
 /obj/machinery/cryopod{
 	dir = 4
@@ -15060,7 +15066,7 @@
 /obj/effect/spawner/random/clothing/backpack,
 /obj/effect/spawner/random/clothing/backpack,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "hZa" = (
 /obj/structure/stairs/south,
 /turf/open/floor/iron/dark/side{
@@ -15249,7 +15255,7 @@
 "igA" = (
 /obj/structure/ore_box,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "igB" = (
 /obj/structure/table/glass,
 /obj/machinery/camera{
@@ -15321,7 +15327,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet/dorms,
 /turf/open/floor/wood,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "ikz" = (
 /obj/machinery/door/poddoor/preopen,
 /turf/open/floor/deadspace/mono,
@@ -15350,7 +15356,7 @@
 	spawn_loot_count = 3
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "iln" = (
 /obj/machinery/atmospherics/pipe/layer_manifold/cyan/visible,
 /turf/open/floor/iron,
@@ -15551,13 +15557,13 @@
 	},
 /obj/structure/table,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "irq" = (
 /obj/effect/spawner/random/trash/garbage{
 	spawn_loot_count = 3
 	},
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "irE" = (
 /obj/structure/table,
 /obj/structure/bedsheetbin,
@@ -15638,7 +15644,7 @@
 "ivi" = (
 /obj/structure/chair/sofa/corp/left,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "iwc" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
@@ -15765,7 +15771,7 @@
 /obj/item/shard,
 /obj/effect/spawner/random/trash/mess,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "iAe" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
@@ -15781,7 +15787,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/engineering/material,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "iCs" = (
 /obj/structure/table/glass,
 /obj/machinery/light/cold/directional/north,
@@ -15932,7 +15938,7 @@
 	dir = 8
 	},
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "iIL" = (
 /obj/structure/table,
 /obj/effect/turf_decal/delivery,
@@ -16097,7 +16103,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "iQS" = (
 /obj/structure/chair/sofa/bench,
 /turf/open/floor/deadspace/mono,
@@ -16260,7 +16266,7 @@
 "iXp" = (
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "iXy" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible,
@@ -16309,12 +16315,12 @@
 	id = "Storage Upper"
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "iYp" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/medical/medkit_rare,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "iYq" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Cryosleep Bay"
@@ -16368,7 +16374,7 @@
 	dir = 5
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "jaF" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron/showroomfloor,
@@ -16677,7 +16683,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "jlR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -16811,7 +16817,7 @@
 "jrw" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "jsq" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "Engineering";
@@ -16955,7 +16961,7 @@
 /area/station/engineering/supermatter/room)
 "jzx" = (
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "jzy" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -17057,7 +17063,7 @@
 "jBR" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/wood,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "jCt" = (
 /obj/structure/window/reinforced/spawner/east,
 /obj/structure/table,
@@ -17083,7 +17089,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/grille,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "jDx" = (
 /obj/structure/cable,
 /obj/machinery/power/emitter/welded{
@@ -17349,7 +17355,7 @@
 /obj/structure/filingcabinet,
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "jNK" = (
 /turf/open/floor/iron/dark/side{
 	dir = 10
@@ -17389,7 +17395,7 @@
 /obj/structure/closet/crate/large,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "jPV" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/medical/medkit_rare,
@@ -17517,7 +17523,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "jVs" = (
 /obj/machinery/disposal/bin,
 /obj/effect/turf_decal/delivery,
@@ -17542,7 +17548,7 @@
 "jWq" = (
 /obj/structure/grille,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "jXz" = (
 /obj/machinery/door/airlock/mining{
 	name = "Mining Floor";
@@ -17606,7 +17612,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "jZE" = (
 /turf/closed/wall/r_wall,
 /area/station/maintenance/disposal)
@@ -17687,7 +17693,7 @@
 "kcO" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "kdn" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
 	dir = 4
@@ -17857,7 +17863,7 @@
 /area/station/commons/dorms)
 "kkj" = (
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "kkx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
@@ -17880,15 +17886,15 @@
 "kkB" = (
 /obj/machinery/light/directional/north,
 /obj/structure/rack,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/eva)
 "kkL" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "kkM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 10
@@ -18018,7 +18024,7 @@
 	dir = 5
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "kpW" = (
 /obj/machinery/door/airlock/security{
 	name = "P-Sec Maintenance";
@@ -18042,7 +18048,7 @@
 /obj/effect/spawner/random/trash/food_packaging,
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "krV" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
 	dir = 4
@@ -18092,7 +18098,7 @@
 "ktm" = (
 /obj/effect/spawner/random/trash/mess,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ktp" = (
 /obj/machinery/door/firedoor,
 /obj/structure/window/reinforced/spawner,
@@ -18165,7 +18171,7 @@
 "kup" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/random/slides,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "kuG" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/commons/storage/primary)
@@ -18302,7 +18308,7 @@
 "kCB" = (
 /obj/structure/window/reinforced/spawner,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "kCW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -18359,7 +18365,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "kHh" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -18611,7 +18617,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "kQg" = (
 /obj/machinery/disposal/delivery_chute{
 	dir = 4
@@ -18856,7 +18862,7 @@
 "kWP" = (
 /obj/structure/railing,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "kWV" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -19111,9 +19117,9 @@
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "lho" = (
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
-/obj/item/clothing/mask/gas/explorer,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
 /obj/structure/rack,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/warehouse/upper)
@@ -19143,7 +19149,7 @@
 	},
 /obj/item/shard,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "liK" = (
 /obj/machinery/component_printer,
 /turf/open/floor/iron/white,
@@ -19314,7 +19320,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "lnQ" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
 	dir = 8
@@ -19446,7 +19452,7 @@
 /area/station/commons/dorms)
 "lsm" = (
 /turf/open/misc/ironsand,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lsp" = (
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible{
 	dir = 10
@@ -19659,7 +19665,7 @@
 	},
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lAN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -19704,7 +19710,7 @@
 	dir = 4
 	},
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lCh" = (
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine)
@@ -19747,7 +19753,7 @@
 /obj/effect/spawner/random/vending/snackvend,
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "lEd" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -19909,7 +19915,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "lKR" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	name = "Distro to Waste"
@@ -19920,11 +19926,11 @@
 "lLi" = (
 /obj/structure/railing,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lLt" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lLx" = (
 /obj/machinery/light/small/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -19964,7 +19970,7 @@
 	name = "\improper WARNING: FALL RISK"
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lOh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -19988,7 +19994,7 @@
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lOF" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -20011,7 +20017,7 @@
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/burgundy,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lPw" = (
 /turf/open/floor/iron/showroomfloor,
 /area/station/commons/dorms/laundry)
@@ -20021,7 +20027,7 @@
 /obj/effect/spawner/random/food_or_drink/booze,
 /obj/effect/spawner/random/food_or_drink/booze,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "lQi" = (
 /obj/machinery/camera/autoname/directional/south,
 /obj/machinery/light/directional/south,
@@ -20107,7 +20113,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "lUe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/purple{
@@ -20135,7 +20141,7 @@
 "lUK" = (
 /obj/effect/spawner/random/trash/food_packaging,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lUM" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -20147,7 +20153,7 @@
 "lUQ" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lUZ" = (
 /turf/closed/wall/r_wall,
 /area/station/hallway/secondary/exit/departure_lounge)
@@ -20188,7 +20194,7 @@
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "lVB" = (
 /obj/structure/cable,
 /turf/open/floor/iron/white,
@@ -20224,7 +20230,7 @@
 "lXz" = (
 /obj/structure/chair/sofa/bench/left,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "lXD" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible/layer5{
 	dir = 4
@@ -20417,7 +20423,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "miO" = (
 /obj/machinery/washing_machine,
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -20491,7 +20497,7 @@
 	dir = 1
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "mkX" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/extinguisher_cabinet/directional/east,
@@ -20519,7 +20525,7 @@
 /area/station/medical/medbay/central)
 "mlO" = (
 /turf/closed/indestructible/rock,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "mlT" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -21064,7 +21070,7 @@
 /obj/structure/ore_box,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "mKw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -21168,7 +21174,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "mPS" = (
 /obj/machinery/door/window/left/directional/west{
 	name = "Inner Pipe Access";
@@ -21330,7 +21336,7 @@
 /obj/item/flashlight/glowstick/red,
 /obj/item/flashlight/glowstick/red,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "mVe" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -21392,7 +21398,7 @@
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "mXx" = (
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/iron,
@@ -21433,7 +21439,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "mYj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -21523,7 +21529,7 @@
 /obj/structure/rack,
 /obj/item/disk/holodisk/ds13/odd_shanty,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "nbo" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /turf/open/floor/iron/white,
@@ -21586,7 +21592,7 @@
 /obj/item/stack/sheet/iron/ten,
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ndd" = (
 /turf/closed/wall/r_wall,
 /area/station/science/misc_lab)
@@ -21669,7 +21675,7 @@
 /obj/structure/table,
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ngr" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -21689,7 +21695,7 @@
 "nhf" = (
 /obj/item/stack/rods,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "nho" = (
 /obj/machinery/vending/coffee,
 /obj/effect/turf_decal/bot,
@@ -21702,7 +21708,7 @@
 "nhL" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "nja" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -21843,7 +21849,7 @@
 "npS" = (
 /obj/structure/closet/crate/large/ds/green_horizontal,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "nqb" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/monitored/oxygen_output{
 	dir = 8
@@ -21911,7 +21917,7 @@
 	name = "Abandoned Auxilary Room"
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ntm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/directional/north,
@@ -22220,7 +22226,7 @@
 "nEA" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "nFM" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	name = "Air to Ports"
@@ -22318,12 +22324,12 @@
 	desc = "FUK CEC!11!"
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "nIC" = (
 /obj/structure/table,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "nIK" = (
 /obj/machinery/sleeper{
 	dir = 1
@@ -22342,7 +22348,7 @@
 "nJd" = (
 /obj/machinery/light/small/red,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "nJG" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/disposalpipe/junction{
@@ -22525,11 +22531,11 @@
 /area/station/command/heads_quarters/rd)
 "nSm" = (
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "nSn" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "nSp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -22674,7 +22680,7 @@
 "nWc" = (
 /obj/effect/spawner/random/trash/mess,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "nWl" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/turf_decal/tile/bar{
@@ -22855,7 +22861,7 @@
 "ocK" = (
 /obj/machinery/light/directional/east,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "odx" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -23024,7 +23030,7 @@
 	dir = 1
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "okK" = (
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/box,
@@ -23044,7 +23050,7 @@
 "omj" = (
 /obj/effect/spawner/random/trash/cigbutt,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "omv" = (
 /obj/machinery/light/small/directional/west,
 /obj/machinery/camera/directional/west{
@@ -23094,12 +23100,12 @@
 "onv" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "onB" = (
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large/ds/green_vertical,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "onE" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/hallway/secondary/exit/departure_lounge)
@@ -23189,7 +23195,7 @@
 "oqS" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "orm" = (
 /obj/machinery/camera/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -23214,7 +23220,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "osl" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -23426,7 +23432,7 @@
 "oEG" = (
 /obj/structure/rack,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "oES" = (
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron/dark/side{
@@ -23490,7 +23496,7 @@
 /area/station/security/interrogation)
 "oHb" = (
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "oHk" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -23671,7 +23677,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "oNt" = (
 /obj/machinery/door/airlock{
 	name = "Kitchen";
@@ -23806,7 +23812,7 @@
 "oRd" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "oRk" = (
 /obj/structure/railing,
 /turf/open/floor/deadspace/mono,
@@ -24040,7 +24046,7 @@
 "oZu" = (
 /obj/effect/spawner/random/trash/mess,
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "oZI" = (
 /turf/open/floor/deadspace/bathroom,
 /area/mine/production)
@@ -24057,7 +24063,7 @@
 /obj/structure/ladder/invincible,
 /obj/structure/lattice,
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "paD" = (
 /obj/machinery/atmospherics/components/trinary/filter/atmos/h2{
 	dir = 8
@@ -24090,7 +24096,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pbY" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /obj/structure/table,
@@ -24316,7 +24322,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "pnr" = (
 /obj/machinery/light/directional/south,
 /obj/item/stack/ore/plasma,
@@ -24570,7 +24576,7 @@
 /obj/item/bedsheet/dorms,
 /obj/effect/mob_spawn/corpse/human/miner,
 /turf/open/floor/wood,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "pxh" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/deadspace/random/slides{
@@ -24704,7 +24710,7 @@
 	dir = 8
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pDh" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -24723,7 +24729,7 @@
 	name = "\improper WARNING: FALL RISK"
 	},
 /turf/open/misc/ironsand,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pEd" = (
 /obj/machinery/light/directional/east,
 /turf/open/misc/asteroid,
@@ -24791,7 +24797,7 @@
 /obj/effect/spawner/random/engineering/tool,
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/random/maint_center,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "pFW" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -24834,7 +24840,7 @@
 	dir = 4
 	},
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pGZ" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/cable_end,
@@ -24871,7 +24877,7 @@
 	name = "Abandoned Storage"
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pIp" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/prepainted/daedalus,
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
@@ -25024,7 +25030,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "pOc" = (
 /obj/structure/cable,
 /obj/machinery/light/floor/has_bulb,
@@ -25208,7 +25214,7 @@
 	dir = 5
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pWb" = (
 /obj/structure/table,
 /obj/item/crowbar/red,
@@ -25278,7 +25284,7 @@
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/north,
 /turf/open/floor/deadspace/random/golf_gray,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "pXC" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/cable_start,
@@ -25339,7 +25345,7 @@
 	dir = 1
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qbp" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /turf/open/floor/iron/dark,
@@ -25371,7 +25377,7 @@
 /obj/item/shard,
 /obj/effect/spawner/random/trash/mess,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qdi" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "mininghallwayshutter";
@@ -25395,7 +25401,7 @@
 "qdG" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qdO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -25664,7 +25670,7 @@
 /obj/machinery/light/directional/east,
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/random/slides,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "qps" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -25783,7 +25789,7 @@
 "qvu" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qvL" = (
 /obj/machinery/door/window/brigdoor/security/cell{
 	id = "Cell 2";
@@ -25924,7 +25930,7 @@
 /obj/item/flashlight/glowstick/pink,
 /obj/item/flashlight/glowstick/pink,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qAD" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/structure/cable,
@@ -25967,7 +25973,7 @@
 "qBv" = (
 /obj/machinery/modular_computer/console/preset/civilian,
 /turf/open/floor/deadspace/random/maint_center,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "qBH" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/monitored/plasma_output{
 	dir = 8
@@ -26069,7 +26075,7 @@
 /obj/structure/closet/crate/large/ds/green_horizontal,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qEG" = (
 /obj/machinery/vending/cigarette,
 /turf/open/floor/deadspace/random/rectangles,
@@ -26145,7 +26151,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "qHV" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26160,7 +26166,7 @@
 	dir = 1
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qIu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26200,7 +26206,7 @@
 "qJv" = (
 /obj/effect/spawner/random/structure/grille,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qJx" = (
 /obj/structure/table,
 /obj/item/storage/fancy/donut_box,
@@ -26327,7 +26333,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qOl" = (
 /obj/structure/railing,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -26473,7 +26479,7 @@
 "qZq" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "qZw" = (
 /obj/structure/table/reinforced,
 /obj/machinery/telephone/security,
@@ -26781,7 +26787,7 @@
 	pixel_x = 3
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rnh" = (
 /turf/open/floor/deadspace/cable_end,
 /area/station/hallway/secondary/exit/departure_lounge)
@@ -26803,7 +26809,7 @@
 "rnW" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/closed/wall/r_wall,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rnX" = (
 /obj/effect/decal/cleanable/cobweb{
 	dir = 8
@@ -26893,7 +26899,7 @@
 /area/station/science/research)
 "rrV" = (
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rrW" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
@@ -27030,7 +27036,7 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/corpse/human/miner,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "rxO" = (
 /obj/machinery/firealarm/directional/north,
 /obj/structure/chair,
@@ -27070,7 +27076,7 @@
 "rzf" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rzi" = (
 /obj/machinery/door_timer{
 	id = "Cell 4";
@@ -27124,7 +27130,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "rBP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -27135,11 +27141,11 @@
 	dir = 9
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rCq" = (
 /obj/item/clothing/head/cone,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rCL" = (
 /obj/structure/chair/office,
 /turf/open/floor/iron,
@@ -27147,7 +27153,7 @@
 "rCN" = (
 /obj/machinery/door/window,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rDh" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 8;
@@ -27289,7 +27295,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/deadspace/random/golf_gray,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rIM" = (
 /obj/machinery/power/floodlight,
 /obj/effect/turf_decal/box,
@@ -27353,7 +27359,7 @@
 	spawn_loot_count = 3
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rLO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -27372,14 +27378,14 @@
 /obj/structure/table,
 /obj/item/reagent_containers/food/condiment/quality_oil,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rMO" = (
 /obj/effect/landmark{
 	name = "ShuttleRepairPart"
 	},
 /obj/structure/table,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rMQ" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -27549,7 +27555,7 @@
 "rSS" = (
 /obj/effect/landmark/pestspawn,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rSV" = (
 /obj/structure/disposalpipe/junction/flip{
 	dir = 4
@@ -27564,7 +27570,7 @@
 	dir = 1
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "rTe" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -27895,7 +27901,7 @@
 "sfR" = (
 /obj/item/shard,
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "sgy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -27908,7 +27914,7 @@
 "sgF" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "shn" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grille_spare1,
@@ -27949,7 +27955,7 @@
 /area/station/commons/dorms/cryo)
 "siW" = (
 /turf/closed/wall/r_wall,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "sjw" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/east,
@@ -27990,7 +27996,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "slp" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/machinery/door/poddoor/shutters{
@@ -28061,7 +28067,7 @@
 	dir = 1
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "spU" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/cola{
 	pixel_x = -8;
@@ -28232,7 +28238,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "sxd" = (
 /turf/open/floor/deadspace/cable_start,
 /area/station/hallway/secondary/exit/departure_lounge)
@@ -28541,7 +28547,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/bathroom,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "sHH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/toolbox/mechanical,
@@ -28578,7 +28584,7 @@
 "sIE" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "sIV" = (
 /obj/machinery/light/directional/south,
 /obj/machinery/requests_console/directional/south{
@@ -28664,13 +28670,13 @@
 /obj/item/flashlight/glowstick/yellow,
 /obj/item/flashlight/glowstick/yellow,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "sNX" = (
 /obj/structure/closet/crate/large/ds,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "sNZ" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 5
@@ -28757,7 +28763,7 @@
 "sSh" = (
 /obj/effect/spawner/random/trash,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "sSN" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/bar{
@@ -29119,7 +29125,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/medical/medkit_rare,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "thM" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -29404,7 +29410,7 @@
 	dir = 10
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ttr" = (
 /obj/item/radio/intercom/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -29490,7 +29496,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "twF" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/machinery/vending/coffee,
@@ -29690,18 +29696,18 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "tDi" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "tEw" = (
 /obj/machinery/computer,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "tEL" = (
 /obj/structure/easel,
 /obj/machinery/light/small/directional/north,
@@ -29798,7 +29804,7 @@
 "tIc" = (
 /obj/structure/lattice,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "tIi" = (
 /turf/closed/wall/r_wall,
 /area/station/maintenance/fore)
@@ -29961,7 +29967,7 @@
 "tNN" = (
 /obj/structure/girder,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "tNZ" = (
 /obj/machinery/light/small/directional/north,
 /obj/machinery/camera/autoname/directional/north,
@@ -29992,7 +29998,7 @@
 	name = "Defective Janibot"
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "tPr" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
@@ -30064,7 +30070,7 @@
 "tRS" = (
 /obj/machinery/power/floodlight,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "tRW" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -30095,11 +30101,11 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "tSX" = (
 /obj/machinery/light,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "tTp" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8
@@ -30183,7 +30189,7 @@
 	id = "Storage Upper"
 	},
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "tUQ" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -30203,7 +30209,7 @@
 /obj/machinery/light/directional/west,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "tVy" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	name = "Air to Distro"
@@ -30258,7 +30264,7 @@
 /obj/effect/spawner/random/maintenance,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "tXt" = (
 /obj/effect/landmark/pestspawn,
 /turf/open/floor/deadspace/random/rectangles,
@@ -30401,7 +30407,7 @@
 	dir = 10
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "ueH" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -30646,7 +30652,7 @@
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/engineering/toolbox,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uoi" = (
 /turf/closed/wall/r_wall,
 /area/station/service/hydroponics)
@@ -30745,14 +30751,14 @@
 "usV" = (
 /obj/machinery/light/small/red/directional/west,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "usW" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/warehouse/upper)
 "usZ" = (
 /obj/structure/cable,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uto" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/airalarm/directional/north,
@@ -30760,7 +30766,7 @@
 /area/station/service/chapel)
 "utF" = (
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "utK" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/showroomfloor,
@@ -30829,7 +30835,7 @@
 	id = "Storage Upper"
 	},
 /turf/open/floor/deadspace/roller,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uvt" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/green/visible{
 	icon_state = "manifold-3";
@@ -30865,7 +30871,7 @@
 "uwT" = (
 /obj/machinery/light/directional/north,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uxl" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/random/slides,
@@ -30881,7 +30887,7 @@
 /area/station/medical/medbay/central)
 "uxr" = (
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uyc" = (
 /turf/open/floor/iron/dark/side{
 	dir = 4
@@ -30917,7 +30923,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "uzN" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -31057,7 +31063,7 @@
 	dir = 1
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uFn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -31136,14 +31142,14 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "uGt" = (
 /turf/closed/wall/r_wall,
 /area/station/medical/chemistry)
 "uGN" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uHC" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -31397,7 +31403,7 @@
 "uQI" = (
 /obj/item/clothing/head/cone,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uQJ" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4
@@ -31454,7 +31460,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uTm" = (
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/deadspace/grater,
@@ -31478,7 +31484,7 @@
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/food_or_drink/snack,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uTK" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
@@ -31534,7 +31540,7 @@
 /obj/structure/lattice,
 /obj/structure/ladder/invincible,
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "uWZ" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
@@ -31625,7 +31631,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "vdt" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/machinery/door/poddoor/preopen{
@@ -31720,7 +31726,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "vhn" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/ported/lino,
@@ -31842,7 +31848,7 @@
 	},
 /obj/effect/spawner/random/trash/food_packaging,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vno" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Medbay Clinic"
@@ -31962,7 +31968,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vst" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -31991,7 +31997,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vuK" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/heavy,
@@ -31999,7 +32005,7 @@
 "vvb" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vvh" = (
 /obj/structure/flora/rock/pile,
 /turf/open/misc/asteroid,
@@ -32086,7 +32092,7 @@
 	dir = 8
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vzw" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood,
 /obj/machinery/light/directional/south,
@@ -32111,11 +32117,11 @@
 "vAl" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vAr" = (
 /obj/item/clothing/head/cone,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vAy" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/turf_decal/box,
@@ -32219,7 +32225,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vDX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 10
@@ -32395,7 +32401,7 @@
 "vKb" = (
 /obj/structure/window/reinforced/spawner,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vKj" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 4
@@ -32526,7 +32532,7 @@
 "vOF" = (
 /obj/machinery/hydroponics/constructable,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vOX" = (
 /obj/machinery/light/small/directional/south,
 /obj/effect/floor_decal/ds/spline/fancy/wood{
@@ -32721,7 +32727,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "vUO" = (
 /obj/effect/landmark/start/medical_doctor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -32925,7 +32931,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "wdf" = (
 /obj/machinery/door/poddoor/preopen,
 /obj/machinery/door/firedoor,
@@ -32990,7 +32996,7 @@
 /obj/structure/table,
 /obj/item/storage/bag/ore,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "weF" = (
 /obj/effect/landmark/navigate_destination{
 	location = "Mining"
@@ -33072,7 +33078,7 @@
 	id = "Storage Upper"
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wkk" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -33136,7 +33142,7 @@
 /obj/machinery/door/airlock/mining,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "wmR" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -33168,7 +33174,7 @@
 	dir = 6
 	},
 /turf/open/floor/plating,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wnM" = (
 /mob/living/simple_animal/bot/cleanbot/janibot{
 	name = "Doctor Scrubs";
@@ -33180,7 +33186,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "woq" = (
 /obj/structure/sign/warning/securearea{
 	pixel_y = 32
@@ -33207,7 +33213,7 @@
 "woV" = (
 /obj/structure/ore_box,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wpf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -33385,7 +33391,7 @@
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "wyv" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/deadspace/grater,
@@ -33422,7 +33428,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/food_or_drink/booze,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wyY" = (
 /obj/machinery/door/airlock/security{
 	name = "P-Sec Lobby";
@@ -33505,7 +33511,7 @@
 "wBB" = (
 /obj/machinery/disposal/bin,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wBF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -33551,7 +33557,7 @@
 	},
 /obj/structure/chair/sofa/corp/right,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wDz" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/iron,
@@ -33649,7 +33655,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wHD" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating,
@@ -33668,7 +33674,7 @@
 /obj/effect/mob_spawn/corpse/human/miner,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "wIz" = (
 /obj/machinery/light{
 	dir = 8
@@ -33706,7 +33712,7 @@
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/table,
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wKf" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 4
@@ -33928,7 +33934,7 @@
 "wRS" = (
 /obj/structure/window/reinforced/spawner/north,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "wRY" = (
 /obj/machinery/modular_computer/console/preset/cargochat/medical{
 	dir = 8
@@ -34221,7 +34227,7 @@
 	dir = 1
 	},
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "xao" = (
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating,
@@ -34268,7 +34274,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large/ds/blue_vertical,
 /turf/open/floor/deadspace/grater,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "xcc" = (
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/miningdock/oresilo)
@@ -34359,7 +34365,7 @@
 "xes" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "xev" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -34455,11 +34461,11 @@
 	dir = 8
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "xhY" = (
 /obj/structure/railing/corner,
 /turf/open/openspace,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "xiE" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/deadspace/ammo/security,
@@ -34535,7 +34541,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "xns" = (
 /obj/effect/spawner/random/structure/crate_abandoned,
 /turf/open/floor/plating,
@@ -34759,7 +34765,7 @@
 "xuQ" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/stone,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "xuU" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
@@ -34880,7 +34886,7 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/cable,
 /turf/open/floor/deadspace/bathroom,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "xAi" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -34910,7 +34916,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/exotic/tool,
 /turf/open/floor/deadspace/mono,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "xBq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -35203,7 +35209,7 @@
 "xPP" = (
 /obj/structure/lattice/catwalk,
 /turf/open/misc/asteroid,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "xPR" = (
 /obj/machinery/light/small/directional/west,
 /obj/effect/landmark/pestspawn,
@@ -35497,7 +35503,7 @@
 /obj/item/computer_hardware/network_card/advanced,
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/random/maint_center,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "xZe" = (
 /obj/machinery/piratepad/civilian,
 /obj/effect/turf_decal/bot_white,
@@ -35576,7 +35582,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/ruin/powered/bathhouse)
+/area/aegis/bath_house)
 "ybH" = (
 /obj/machinery/computer/atmos_alert{
 	dir = 4
@@ -35691,7 +35697,7 @@
 	id = "Mining_Receiving"
 	},
 /turf/open/floor/deadspace/grater,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "yfj" = (
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/security/checkpoint/science)
@@ -35710,7 +35716,7 @@
 /area/station/medical/medbay/central)
 "yft" = (
 /turf/open/floor/deadspace/hardwood,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "yfC" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark/corner{
@@ -35795,7 +35801,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
-/area/lavaland/surface/outdoors)
+/area/aegis/surface)
 "yjy" = (
 /obj/machinery/space_heater,
 /turf/open/floor/plating,
@@ -44755,7 +44761,7 @@ cSu
 oaX
 jdN
 lfB
-ujs
+gke
 hae
 boM
 csD

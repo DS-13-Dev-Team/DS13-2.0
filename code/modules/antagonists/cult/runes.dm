@@ -455,8 +455,8 @@ structure_check() searches for nearby cultist structures required for the invoca
 			to_chat(user, span_cult("You[moveuserlater ? "r vision blurs, and you suddenly appear somewhere else":" send everything above the rune away"]."))
 		else
 			to_chat(user, span_cult("You[moveuserlater ? "r vision blurs briefly, but nothing happens":" try send everything above the rune away, but the teleportation fails"]."))
-		if(is_mining_level(z) && !is_mining_level(target.z)) //No effect if you stay on lavaland
-			actual_selected_rune.handle_portal("lava")
+		if(is_mining_level(z) && !is_mining_level(target.z))
+			actual_selected_rune.handle_portal("space")
 		else
 			var/area/A = get_area(T)
 			if(initial(A.name) == "Space")
@@ -1013,18 +1013,9 @@ structure_check() searches for nearby cultist structures required for the invoca
 			if(41 to 50)
 				var/datum/round_event_control/meteor_wave/MW = new()
 				MW.runEvent()
-			if(51 to 60)
+			if(51 to 70)
 				var/datum/round_event_control/spider_infestation/SI = new()
 				SI.runEvent()
-			if(61 to 70)
-				var/datum/round_event_control/anomaly/anomaly_flux/AF
-				var/datum/round_event_control/anomaly/anomaly_grav/AG
-				var/datum/round_event_control/anomaly/anomaly_pyro/AP
-				var/datum/round_event_control/anomaly/anomaly_vortex/AV
-				AF.runEvent()
-				AG.runEvent()
-				AP.runEvent()
-				AV.runEvent()
 			if(71 to 80)
 				var/datum/round_event_control/spacevine/SV = new()
 				var/datum/round_event_control/grey_tide/GT = new()

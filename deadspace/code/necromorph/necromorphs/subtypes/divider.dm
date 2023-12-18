@@ -22,7 +22,6 @@
 /datum/species/necromorph/divider
 	name = "Divider"
 	id = SPECIES_NECROMORPH_DIVIDER
-	speedmod = 0.8
 	speedmod = 1.4
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/divider,
