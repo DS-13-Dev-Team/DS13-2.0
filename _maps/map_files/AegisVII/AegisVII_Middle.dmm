@@ -1416,6 +1416,7 @@
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 6
 	},
+/obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
 "auN" = (
@@ -11601,6 +11602,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
+"fyI" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/deadspace/random/slides,
+/area/awaymission/centcom_away/hangar)
 "fyM" = (
 /obj/machinery/meter,
 /obj/effect/turf_decal/stripes/line,
@@ -17051,10 +17059,10 @@
 /turf/open/floor/wood,
 /area/ruin/powered/bathhouse)
 "jCt" = (
-/obj/machinery/computer/cargo{
-	dir = 8
-	},
 /obj/structure/window/reinforced/spawner/east,
+/obj/structure/table,
+/obj/machinery/telephone/cargo,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/lobby)
 "jCD" = (
@@ -18065,7 +18073,7 @@
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 9
 	},
-/obj/structure/filingcabinet,
+/obj/structure/filingcabinet/filingcabinet,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
@@ -24613,13 +24621,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/commons/dorms/barracks)
-"pzz" = (
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 8
-	},
-/obj/machinery/firealarm/directional/east,
-/turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
 "pzJ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -26383,10 +26384,6 @@
 	},
 /area/station/hallway/primary/central)
 "qTO" = (
-/obj/structure/table,
-/obj/machinery/telephone/cargo,
-/obj/structure/cable,
-/obj/machinery/power/data_terminal,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
 "qTV" = (
@@ -29853,6 +29850,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
+/obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
 "tKF" = (
@@ -47155,7 +47153,7 @@ kVf
 bno
 bno
 dnQ
-pzz
+bno
 dUJ
 xfR
 bno
@@ -53887,7 +53885,7 @@ rzx
 ktp
 csC
 qTO
-fYV
+gcO
 ajJ
 wOD
 qKC
@@ -54201,7 +54199,7 @@ cdl
 uMA
 aWc
 baU
-gcO
+fYV
 ajJ
 sWk
 czJ
@@ -65076,7 +65074,7 @@ mlO
 apG
 aKc
 vBM
-hcF
+fyI
 gBk
 hcF
 hcF
