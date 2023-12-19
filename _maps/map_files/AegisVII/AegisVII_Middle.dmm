@@ -9123,6 +9123,13 @@
 /obj/item/flashlight/glowstick/orange,
 /turf/open/floor/stone,
 /area/aegis/surface)
+"dNQ" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/airlock/mining{
+	name = "Mining Decontamination Room"
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mine/production)
 "dOe" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -13213,6 +13220,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/mono,
+/area/station/cargo/miningoffice)
+"gEM" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/directional/east,
+/turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/miningoffice)
 "gEZ" = (
 /obj/machinery/shower{
@@ -56041,7 +56053,7 @@ apG
 apG
 iSU
 sUx
-sUx
+cZM
 qdO
 sUx
 sUx
@@ -56355,7 +56367,7 @@ apG
 apG
 iSU
 fjY
-tcj
+gEM
 tcj
 sUx
 sUx
@@ -59183,7 +59195,7 @@ pWN
 oZI
 gaO
 gaO
-fSD
+dNQ
 fSD
 fSD
 pwK
@@ -62332,7 +62344,7 @@ ahZ
 oHb
 oHb
 oHb
-tRS
+oHb
 rrV
 rrV
 oHb
@@ -62651,7 +62663,7 @@ qzS
 mUZ
 oHb
 rrV
-rrV
+rzf
 usW
 yfI
 yfI
@@ -63431,7 +63443,7 @@ oHb
 oHb
 oHb
 oHb
-tRS
+oHb
 rrV
 rrV
 oHb
@@ -63750,7 +63762,7 @@ rrV
 rrV
 rrV
 rrV
-rrV
+rzf
 usW
 yfI
 yfI
