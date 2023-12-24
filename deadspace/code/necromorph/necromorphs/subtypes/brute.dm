@@ -128,7 +128,7 @@
 	if(world.time < user.next_attack_delay)
 		return
 	user.next_attack_delay = user.spec_attack_delay + world.time
-	user.play_necro_sound(SOUND_ATTACK, VOLUME_HIGH, 1, 3)
+	user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
 	if(isliving(target) && get_turf(target) != get_turf(user))
 		var/mob/living/our_target = target
 		var/throw_dir = pick(

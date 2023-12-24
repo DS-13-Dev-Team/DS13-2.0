@@ -14,7 +14,7 @@
 		return
 	..()
 	crash_count = 0
-	holder.play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, TRUE, 3)
+	holder.play_necro_sound(SOUND_SHOUT, VOLUME_MID, TRUE, 3)
 	RegisterSignal(holder, COMSIG_STARTED_CHARGE, TYPE_PROC_REF(/datum/action/cooldown/necro/active, CooldownEnd))
 	RegisterSignal(holder, COMSIG_MOB_STATCHANGE, PROC_REF(OnStatChange))
 	RegisterSignal(holder, COMSIG_LIVING_UPDATED_RESTING, PROC_REF(OnUpdateResting))

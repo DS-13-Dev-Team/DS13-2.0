@@ -131,9 +131,9 @@
 				return
 			var/mob/living/carbon/human/H = user
 
-			playsound(H, H.dna?.species.get_deathgasp_sound(H), 100, 0)
+			playsound(H, H.dna?.species.get_deathgasp_sound(H), 55, 0)
 			return
-		playsound(user, user.deathsound, 200, TRUE, TRUE)
+		playsound(user, user.deathsound, 100, TRUE, TRUE)
 
 /datum/emote/living/drool
 	key = "drool"
