@@ -79,9 +79,9 @@
 			var/turf/new_turf = get_step(target_turf, direction)
 			if(!new_turf)
 				break
+			target_turf = new_turf
 			if(new_turf.density)
 				break
-			target_turf = new_turf
 		throw_at(target_turf, throw_range, throw_speed)
 
 	if(dismember_type == DROPLIMB_BLUNT)
