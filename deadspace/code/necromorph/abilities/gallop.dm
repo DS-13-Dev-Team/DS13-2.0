@@ -3,8 +3,8 @@
 /datum/action/cooldown/necro/active/gallop
 	name = "Gallop"
 	desc = "Gives a huge burst of speed, but makes you vulnerable."
-	cooldown_time = 10 SECONDS
-	duration_time = 6 SECONDS
+	cooldown_time = 12 SECONDS
+	duration_time = 7 SECONDS
 	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_GALLOP_DOWN
 	var/crash_count = 0
 
@@ -44,18 +44,21 @@
 
 /datum/action/cooldown/necro/active/gallop/proc/OnBump(mob/living/carbon/human/necromorph/leaper/source, atom/bumped)
 	SIGNAL_HANDLER
-	source.visible_message(span_danger("[source] crashes into [bumped]!"), span_danger("You crashed into [bumped]!"))
+	source.visible_message(span_danger("[source] slams into [bumped]!"), span_danger("You slam into [bumped]!"))
 	if(iscarbon(bumped)) //You can slam into necros and humans while galloping
 		var/mob/living/carbon/victim = bumped
+		if(is_enhanced(source)) //You really don't want to be bodied by the enhanced leaper
+			victim.Knockdown(25)
+			victim.take_overall_damage(15)
+		else
+			victim.Knockdown(20)
+			victim.take_overall_damage(5)
 		shake_camera(victim, 20, 1)
-		victim.Knockdown(20)
-		victim.take_overall_damage(5)
 	StopCrash()
 
 /datum/action/cooldown/necro/active/gallop/proc/OnMoved(mob/living/carbon/human/necromorph/leaper/source)
 	SIGNAL_HANDLER
 	shake_camera(source, 3, 0.5)
-	source.play_necro_sound(SOUND_FOOTSTEP, VOLUME_QUIET)
 
 /datum/action/cooldown/necro/active/gallop/proc/StopCrash()
 	var/mob/living/carbon/human/necromorph/holder = owner
