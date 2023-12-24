@@ -71,7 +71,7 @@
 
 
 //Consoles
-/obj/machinery/modular_computer/console/preset/command/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
+/obj/machinery/modular_computer/console/preset/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	to_chat(user, span_notice("This has no use for Convergence."))
 	return
 
