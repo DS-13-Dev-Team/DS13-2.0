@@ -7,7 +7,7 @@
 	click_to_activate = TRUE
 	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN
 	/// Delay before the charge actually occurs
-	var/charge_delay = 0.3 SECONDS
+	var/charge_delay = 1 SECONDS
 	/// The maximum amount of time we can charge
 	var/charge_time = 10 SECONDS
 	/// The sleep time before moving in deciseconds while charging
@@ -47,6 +47,27 @@
 	return ..()
 
 /datum/action/cooldown/necro/charge/Activate(atom/target)
+	var/mob/living/carbon/human/necromorph/exploder/user = owner
+	var/initial_transform = matrix(user.transform)
+	var/initial_x = user.pixel_x
+	var/initial_y = user.pixel_y
+	var/shake_dir
+	shake_dir = pick(-1, 1)
+	user.play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, TRUE, 3)
+	animate(
+		user,
+		pixel_x = (3 * shake_dir),
+		pixel_y = (2 * shake_dir),
+		time = 1
+	)
+	animate(
+		pixel_x = initial_x,
+		pixel_y = initial_y,
+		time = 2,
+		easing = ELASTIC_EASING
+	)
+	PLAY_SHAKING_ANIMATION(user, 7, 5, shake_dir, initial_x, initial_y, initial_transform)
+	PLAY_SHAKING_ANIMATION(user, 10, 6, shake_dir, initial_x, initial_y, initial_transform)
 	// Start pre-cooldown so that the ability can't come up while the charge is happening
 	StartCooldown(charge_time+charge_delay+1)
 	addtimer(CALLBACK(src, PROC_REF(do_charge)), charge_delay)
