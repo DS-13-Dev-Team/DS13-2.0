@@ -88,9 +88,15 @@
 		stages[i] = list()
 
 	for(var/turf/T as anything in RANGE_TURFS(range, our_loc)-our_loc)
+		if(get_dist_euclidian(our_loc, T) > range)
+			continue
 		var/angle_to_turf = SIMPLIFY_DEGREES(ATAN2(T.x - our_loc.x, T.y - our_loc.y))
-		if(angle_to_turf >= smallest_angle && angle_to_turf <= biggest_angle && get_dist_euclidian(our_loc, T) <= range)
-			stages[ROUND_UP(SIMPLIFY_DEGREES(angle_to_turf - smallest_angle)/30)] += T
+		if(smallest_angle > biggest_angle)
+			if(angle_to_turf < smallest_angle && angle_to_turf > biggest_angle)
+				continue
+		else if (angle_to_turf < smallest_angle || angle_to_turf > biggest_angle)
+			continue
+		stages[ROUND_UP(SIMPLIFY_DEGREES(angle_to_turf - smallest_angle)/30)] += T
 
 	// 1 is right, -1 is left
 	var/hand_modifier = (owner.active_hand_index % 2) ? - 1 : 1
