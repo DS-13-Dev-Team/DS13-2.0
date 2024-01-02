@@ -155,6 +155,12 @@
 	pixel_x = -40
 	pixel_y = -32
 	var/variable_icon = FALSE
+	//This lets us have different swing sounds for different swing visuals
+	var/swing_sound = list(
+		'deadspace/sound/effects/attacks/big_swoosh_1.ogg',
+		'deadspace/sound/effects/attacks/big_swoosh_2.ogg',
+		'deadspace/sound/effects/attacks/big_swoosh_3.ogg',
+		)
 
 /obj/effect/temp_visual/swing/Initialize(mapload, duration, angle, swing_direction, starting_degree)
 	src.duration = duration
@@ -164,9 +170,6 @@
 	transform = transform.Turn(starting_degree + 90)
 	. = ..()
 	var/turn_angle = angle * swing_direction * 1.1
+	var/swing_sounds = src.swing_sound
 	animate(src, duration, transform = transform.Turn(turn_angle), easing = CIRCULAR_EASING)
-	playsound(src, pick(
-		'deadspace/sound/effects/attacks/big_swoosh_1.ogg',
-		'deadspace/sound/effects/attacks/big_swoosh_2.ogg',
-		'deadspace/sound/effects/attacks/big_swoosh_3.ogg',
-	), VOLUME_MID, 1)
+	playsound(src, pick(swing_sounds), VOLUME_MID, 1)

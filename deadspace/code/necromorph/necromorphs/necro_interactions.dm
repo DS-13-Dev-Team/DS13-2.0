@@ -17,7 +17,7 @@
 	if(user.combat_mode)
 		dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper)
 		user.do_attack_animation(src, "smash")
-		user.play_necro_sound(SOUND_ATTACK, VOLUME_HIGH, 1, 3)
+		user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
 		user.changeNext_move(CLICK_CD_MELEE) //So necros don't JoJo
 		attack_generic(user, dealt_damage, BRUTE, MELEE, TRUE)
 		return //Necro walls can be attacked by necros
@@ -71,7 +71,7 @@
 
 
 //Consoles
-/obj/machinery/modular_computer/console/preset/command/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
+/obj/machinery/modular_computer/console/preset/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	to_chat(user, span_notice("This has no use for Convergence."))
 	return
 
@@ -155,7 +155,7 @@
 		if(user.combat_mode)
 			dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper) + 8 //extra damage to overwhelm airlock damage deflection
 			user.do_attack_animation(src, "smash")
-			user.play_necro_sound(SOUND_ATTACK, VOLUME_HIGH, 1, 3)
+			user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
 			user.changeNext_move(CLICK_CD_MELEE) //So necros don't JoJo
 			attack_generic(user, dealt_damage, BRUTE, MELEE, TRUE)
 			return //Angry necro smash locked door
@@ -169,7 +169,7 @@
 	if(hasPower())
 		//Powered airlocks take longer to open, and are loud.
 		time_to_open = 5 SECONDS
-		playsound(src, 'sound/machines/airlock_alien_prying.ogg', 100, TRUE)
+		playsound(src, 'sound/machines/airlock_alien_prying.ogg', VOLUME_HIGH, TRUE)
 
 	if(do_after(user, src, time_to_open))
 		//The airlock is still closed, but something prevented it opening. (Another player noticed and bolted/welded the airlock in time!)
@@ -177,4 +177,4 @@
 			to_chat(user, span_warning("Despite your efforts, [src] managed to resist your attempts to open it!"))
 		else
 			atom_break()
-			playsound(src, 'sound/machines/airlock_tear_open.ogg', 50, TRUE)
+			playsound(src, 'sound/machines/airlock_tear_open.ogg', VOLUME_HIGH, TRUE)

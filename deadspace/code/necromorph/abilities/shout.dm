@@ -13,7 +13,7 @@
 /datum/action/cooldown/necro/shout/Activate(atom/target)
 	StartCooldown()
 	var/mob/living/carbon/human/necromorph/holder = owner
-	holder.play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, TRUE, 2)
+	holder.play_necro_sound(SOUND_SHOUT, VOLUME_MID_HIGH, TRUE, 2)
 	var/matrix/new_matrix = matrix(holder.transform)
 	var/shake_dir = pick(-1, 1)
 	new_matrix.Turn(17*shake_dir)
@@ -40,7 +40,7 @@
 /datum/action/cooldown/necro/scream/Activate(atom/target)
 	StartCooldown()
 	var/mob/living/carbon/human/necromorph/holder = owner
-	holder.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_HIGH, TRUE, 2)
+	holder.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_MID_HIGH, TRUE, 2)
 	ADD_TRAIT(owner, TRAIT_IMMOBILIZED, src)
 	var/matrix/new_matrix = matrix(holder.transform)
 	var/shake_dir = pick(-1, 1)

@@ -12,19 +12,22 @@
 //placeholder lurker abilities, remove comment when implemented
 #define COMSIG_KB_NECROMORPH_ABILITY_TOGGLESHELL_DOWN "keybinding_necromorph_ability_toggleshell_down"
 #define COMSIG_KB_NECROMORPH_ABILITY_SPINELAUNCH_DOWN "keybinding_necromorph_ability_spinelaunch_down"
-//placeholder end
+//Leaper
 #define COMSIG_KB_NECROMORPH_ABILITY_GALLOP_DOWN "keybinding_necromorph_ability_gallop_down"
+#define COMSIG_KB_NECROMORPH_ABILITY_TAILSTAB_DOWN "keybinding_necromorph_ability_tailstab_down"
 //placeholder infector abilities, remove comment when implemented
 #define COMSIG_KB_NECROMORPH_ABILITY_FLY_DOWN "keybinding_necromorph_ability_fly_down"
 #define COMSIG_KB_NECROMORPH_ABILITY_STING_DOWN "keybinding_necromorph_ability_sting_down"
 #define COMSIG_KB_NECROMORPH_ABILITY_INFECTOR_EXECUTION_DOWN "keybinding_necromorph_ability_infector_execution_down"
-//placeholder exploder abilities, remove comment when implemented
+//Exploder
 #define COMSIG_KB_NECROMORPH_ABILITY_EXPLODE_DOWN "keybinding_necromorph_ability_explode_down"
 #define COMSIG_KB_NECROMORPH_ABILITY_EXPLODECHARGE_DOWN "keybinding_necromorph_ability_explodecharge_down"
-//placeholder end
+//Hunter & Uber
 #define COMSIG_KB_NECROMORPH_ABILITY_HUNTERSWING_DOWN "keybinding_necromorph_ability_hunterswing_down"
 #define COMSIG_KB_NECROMORPH_ABILITY_TAUNT_DOWN "keybinding_necromorph_ability_taunt_down"
 #define COMSIG_KB_NECROMORPH_ABILITY_REGENERATE_DOWN "keybinding_necromorph_ability_regenerate_down"
+#define COMSIG_KB_NECROMORPH_ABILITY_FRENZY_DOWN "keybinding_necromorph_ability_frenzy_down"
+//Brute
 #define COMSIG_KB_NECROMORPH_ABILITY_SLAM_DOWN "keybinding_necromorph_ability_slam_down"
 #define COMSIG_KB_NECROMORPH_ABILITY_CURL_DOWN "keybinding_necromorph_ability_curl_down"
 //placeholder divider abilities, remove comment when implemented
@@ -38,5 +41,3 @@
 #define COMSIG_KB_NECROMORPH_ABILITY_TRIPODSWING_DOWN "keybinding_necromorph_ability_tripod_swing"
 #define COMSIG_KB_NECROMORPH_ABILITY_TRIPODTONGUE_DOWN "keybinding_necromorph_ability_tripodtongue_down"
 #define COMSIG_KB_NECROMORPH_ABILITY_TRIPODKISS_DOWN "keybinding_necromorph_ability_tripodkiss_down"
-//placeholder end
-#define COMSIG_KB_NECROMORPH_ABILITY_FRENZY_DOWN "keybinding_necromorph_ability_frenzy_down"

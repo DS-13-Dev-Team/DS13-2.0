@@ -8,6 +8,8 @@
 	bodyparts = list(
 		/obj/item/bodypart/chest/necromorph/leaper,
 		/obj/item/bodypart/head/necromorph/leaper,
+		/obj/item/bodypart/arm/left/necromorph/leaper,
+		/obj/item/bodypart/arm/right/necromorph/leaper,
 		/obj/item/bodypart/leg/left/necromorph/leaper,
 		/obj/item/bodypart/leg/right/necromorph/leaper,
 	)
@@ -21,22 +23,23 @@
 
 /datum/necro_class/leaper
 	display_name = "Leaper"
-	desc = "A long range ambusher, the leaper can leap on unsuspecting victims from afar, knock them down, and tear them apart with its bladed tail. Not good for prolonged combat though."
+	desc = "A long range ambusher, the leaper can leap or gallop onto a victim, knock them down, and then tear them apart with its bladed tails and claws. Best at hit and run tactics."
 	ui_icon = 'deadspace/icons/necromorphs/leaper.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/leaper
 	nest_allowed = TRUE
-	biomass_cost = 50
+	biomass_cost = 65
 	biomass_spent_required = 0
 	melee_damage_lower = 10
 	melee_damage_upper = 16
-	max_health = 100
+	max_health = 110
 	actions = list(
 		/datum/action/cooldown/necro/charge/leaper,
+		/datum/action/cooldown/necro/swing/leaper,
 		/datum/action/cooldown/necro/active/gallop,
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "leaper"
-	implemented = FALSE
+	implemented = TRUE
 
 /datum/species/necromorph/leaper
 	name = "Leaper"
@@ -45,8 +48,18 @@
 	bodypart_overrides = list(
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/necromorph/leaper,
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/necromorph/leaper,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/leaper,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/leaper,
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/necromorph/leaper,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/necromorph/leaper,
+	)
+
+	special_step_sounds = list(
+		'deadspace/sound/effects/footstep/leaper_footstep_1.ogg',
+		'deadspace/sound/effects/footstep/leaper_footstep_2.ogg',
+		'deadspace/sound/effects/footstep/leaper_footstep_3.ogg',
+		'deadspace/sound/effects/footstep/leaper_footstep_4.ogg',
+		'deadspace/sound/effects/footstep/leaper_footstep_5.ogg',
 	)
 
 /datum/species/necromorph/leaper/get_scream_sound(mob/living/carbon/human/necromorph/leaper)

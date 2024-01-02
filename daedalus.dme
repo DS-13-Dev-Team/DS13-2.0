@@ -4800,6 +4800,7 @@
 #include "deadspace\code\necromorph\abilities\shout.dm"
 #include "deadspace\code\necromorph\abilities\slam.dm"
 #include "deadspace\code\necromorph\abilities\swing.dm"
+#include "deadspace\code\necromorph\abilities\tailstab.dm"
 #include "deadspace\code\necromorph\abilities\taunt.dm"
 #include "deadspace\code\necromorph\abilities\wallrun.dm"
 #include "deadspace\code\necromorph\abilities\frenzy\frenzy_buff.dm"

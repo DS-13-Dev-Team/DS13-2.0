@@ -74,6 +74,13 @@
 	description = "Gives a huge burst of speed, but makes you vulnerable."
 	keybind_signal = COMSIG_KB_NECROMORPH_ABILITY_GALLOP_DOWN
 
+/datum/keybinding/necromorph/tailstab
+	hotkey_keys = list("Unbound")
+	name = "use_tailstab"
+	full_name = "Leaper Tailstab"
+	description = "Stab a victim with your tails."
+	keybind_signal =COMSIG_KB_NECROMORPH_ABILITY_TAILSTAB_DOWN
+
 /datum/keybinding/necromorph/fly
 	hotkey_keys = list("Unbound")
 	name = "use_fly"

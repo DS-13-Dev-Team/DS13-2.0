@@ -4,9 +4,7 @@
 	icon_static = 'deadspace/icons/necromorphs/leaper_enhanced.dmi'
 	icon_state = "chest"
 	max_damage = 200
-	px_x = 0
-	px_y = 0
-	wound_resistance = 10
+	biomass = 20
 
 /obj/item/bodypart/head/necromorph/leaper/enhanced
 	name = BODY_ZONE_HEAD
@@ -14,32 +12,44 @@
 	icon_static = 'deadspace/icons/necromorphs/leaper_enhanced.dmi'
 	icon_state = "head"
 	max_damage = 200
-	px_x = 0
-	px_y = -8
-	wound_resistance = 5
+	biomass = 10
 
 //Leapers use arms to walk
-/obj/item/bodypart/leg/left/necromorph/leaper/enhanced
-	name = "left arm"
+/obj/item/bodypart/arm/left/necromorph/leaper/enhanced
 	limb_id = SPECIES_NECROMORPH_LEAPER_ENHANCED
 	icon_static = 'deadspace/icons/necromorphs/leaper_enhanced.dmi'
 	icon_state = "l_arm"
-	body_part = LEG_LEFT
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 50
-	px_x = -2
-	px_y = 12
-	wound_resistance = 0
+	max_damage = 100
+	biomass = 15
+
+/obj/item/bodypart/arm/right/necromorph/leaper/enhanced
+	limb_id = SPECIES_NECROMORPH_LEAPER_ENHANCED
+	icon_static = 'deadspace/icons/necromorphs/leaper_enhanced.dmi'
+	icon_state = "r_arm"
+	attack_verb_continuous = list("kicks", "stomps")
+	attack_verb_simple = list("kick", "stomp")
+	max_damage = 100
+	biomass = 15
 
 /obj/item/bodypart/leg/right/necromorph/leaper/enhanced
-	name = "right arm"
+	desc = "A long calloused string of flesh held securely together with tendons and exposed bone, it looks very sharp at the tip."
 	limb_id = SPECIES_NECROMORPH_LEAPER_ENHANCED
 	icon_static = 'deadspace/icons/necromorphs/leaper_enhanced.dmi'
-	icon_state = "l_arm"
-	attack_verb_continuous = list("kicks", "stomps")
-	attack_verb_simple = list("kick", "stomp")
-	max_damage = 50
-	px_x = 2
-	px_y = 12
-	wound_resistance = 0
+	icon_state = "r_leg"
+	max_damage = 65
+	force = 20 //A surprisingly effective weapon if used in a emergency
+	throwforce = 30 //You could really hurt someone with this
+	biomass = 5
+
+/obj/item/bodypart/leg/left/necromorph/leaper/enhanced
+	desc = "A long calloused string of flesh held securely together with tendons and exposed bone, it looks very sharp at the tip."
+	limb_id = SPECIES_NECROMORPH_LEAPER_ENHANCED
+	icon_static = 'deadspace/icons/necromorphs/leaper_enhanced.dmi'
+	icon_state = "l_leg"
+	max_damage = 65
+	force = 20 //A surprisingly effective weapon if used in a emergency
+	throwforce = 30 //You could really hurt someone with this
+	biomass = 5
+

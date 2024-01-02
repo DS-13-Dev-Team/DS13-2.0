@@ -57,7 +57,7 @@
 	disable_threshold = 1
 	icon_static = null
 	icon_state = null
-	max_damage = 120
+	max_damage = 100
 	biomass = 0 //Handled in chest due to sprite funnies
 
 /obj/item/bodypart/leg/left/necromorph/exploder/enhanced
