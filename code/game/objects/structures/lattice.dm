@@ -51,6 +51,20 @@
 		new build_material(get_turf(src), number_of_mats)
 	qdel(src)
 
+/obj/structure/lattice/ex_act(severity, target)
+	if(resistance_flags & INDESTRUCTIBLE)
+		return
+	if(QDELETED(src))
+		return
+	switch(severity)
+		if(EXPLODE_DEVASTATE)
+			take_damage(INFINITY, BRUTE, BOMB, 0)
+		if(EXPLODE_HEAVY)
+			return //We don't want explosions to destroy lattice unless it's devastate range
+		if(EXPLODE_LIGHT)
+			return
+	. = ..()
+
 /obj/structure/lattice/intercept_zImpact(list/falling_movables, levels)
 	. = ..()
 	if(levels == 1 && !istype(src, /obj/structure/lattice/catwalk))
