@@ -42,4 +42,4 @@
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)
-		source.Stun(20)
+		source.Knockdown(20)
