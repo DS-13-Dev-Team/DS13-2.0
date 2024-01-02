@@ -3,8 +3,8 @@
 	description = "Assist the crew, follow your laws, coordinate your cyborgs."
 	auto_deadmin_role_flags = DEADMIN_POSITION_SILICON
 	faction = FACTION_STATION
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "your laws"
 	selection_color = "#3f823f"
 	spawn_type = /mob/living/silicon/ai

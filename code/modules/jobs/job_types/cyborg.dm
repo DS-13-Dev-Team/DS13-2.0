@@ -4,7 +4,7 @@
 	auto_deadmin_role_flags = DEADMIN_POSITION_SILICON
 	faction = FACTION_STATION
 	total_positions = 0
-	spawn_positions = 1
+	spawn_positions = 0
 	supervisors = "your laws and the AI" //Nodrak
 	selection_color = "#254c25"
 	spawn_type = /mob/living/silicon/robot
