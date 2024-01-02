@@ -1,0 +1,12 @@
+author: MisterGrimm
+delete-after: true
+changes:
+  - rscadd: Leaper & Enhanced Leaper implemented
+  - qol: Swing sounds now use a modular system
+  - qol: Some necros have a better description now
+  - bugfix: Stumps now get their name from the name of the zone, rather then the zone
+      define
+  - bugfix: Footsteps now check for movement limb flags, rather then legs
+  - bugfix: Necros no longer blow out your ear drums and speakers with the wrath of
+      ten airhorns
+  - bugfix: Necros can drag things again
