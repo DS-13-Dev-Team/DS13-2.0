@@ -38,7 +38,7 @@
 			explosion(get_turf(source), 0, 3, 4, 5, 7, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Big explosion with alot of fire
 		else if(!is_enhanced(source))
 			explosion(get_turf(source), 0, 2, 3, 2, 5, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Deadly proximity, light area
-		source.dust(TRUE, FALSE, TRUE) //We use dusting for charge so we don't get runtimes.
+		source.death()
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)
