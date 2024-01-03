@@ -1,6 +1,5 @@
-author: MisterGrimm
-delete-after: true
-changes:
+2024-01-03:
+  MisterGrimm:
   - rscadd: Leaper & Enhanced Leaper implemented
   - qol: Swing sounds now use a modular system
   - qol: Some necros have a better description now
