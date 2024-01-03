@@ -48,10 +48,12 @@
 		to_chat(user, span_warning("You have no pustule, you cannot explode!"))
 		return
 	if(owner == user)
+		var/obj/item/bodypart/arm/left/PU = user.get_bodypart(BODY_ZONE_L_ARM)
 		new /obj/effect/temp_visual/scry(get_turf(user), user.marker.markernet)
+		qdel(PU) //Prevents the pustule from exploding twice due to explode
 		if(is_enhanced(user))
 			explosion(get_turf(user), 0, 3, 4, 5, 7, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Big explosion with alot of fire
-		else if(!is_enhanced(user))
+		else
 			explosion(get_turf(user), 0, 2, 3, 2, 5, TRUE, FALSE, FALSE, TRUE, explosion_cause = src) //Deadly proximity, light area
-		user.dust(TRUE, FALSE, TRUE)
+		user.death() //OOF
 

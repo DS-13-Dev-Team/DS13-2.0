@@ -38,7 +38,6 @@
 		/turf/open/space,
 		/turf/open/chasm,
 		/turf/open/lava,
-		/turf/open/water,
 		/turf/open/openspace,
 	)
 
