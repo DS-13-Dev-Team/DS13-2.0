@@ -164,7 +164,7 @@
 		return
 
 	playsound(loc, "punch", 25, 1)
-	take_damage(speed_to_crush_damage(action, speed), BRUTE, MELEE)
+	take_damage(speed_to_crush_damage(action, speed), BRUTE, BLUNT)
 	if(QDELING(src))
 		return
 
@@ -210,7 +210,7 @@
 		return
 
 /obj/vehicle/crush_act(mob/living/crushing, datum/action/cooldown/necro/long_charge/action, speed)
-	take_damage(speed_to_crush_damage(action, speed), BRUTE, MELEE)
+	take_damage(speed_to_crush_damage(action, speed), BRUTE, BLUNT)
 	if(density && crushing.move_force <= move_resist)
 		action.slowdown_charge(CHARGE_STOP)
 		return

@@ -1,6 +1,6 @@
 //Command
 
-/obj/item/circuitboard/machine/bsa/back
+/*obj/item/circuitboard/machine/bsa/back
 	name = "Bluespace Artillery Generator (Machine Board)"
 	greyscale_colors = CIRCUIT_COLOR_COMMAND
 	build_path = /obj/machinery/bsa/back //No freebies!
@@ -22,9 +22,9 @@
 	build_path = /obj/machinery/bsa/middle
 	req_components = list(
 		/obj/item/stack/ore/bluespace_crystal = 20,
-		/obj/item/stack/cable_coil = 2)
+		/obj/item/stack/cable_coil = 2)*/
 
-/obj/item/circuitboard/machine/dna_vault
+/*obj/item/circuitboard/machine/dna_vault
 	name = "DNA Vault (Machine Board)"
 	greyscale_colors = CIRCUIT_COLOR_COMMAND
 	build_path = /obj/machinery/dna_vault //No freebies!
@@ -32,7 +32,7 @@
 		/obj/item/stock_parts/capacitor/super = 5,
 		/obj/item/stock_parts/manipulator/pico = 5,
 		/obj/item/stack/cable_coil = 2)
-
+*/
 //Engineering
 
 /obj/item/circuitboard/machine/announcement_system

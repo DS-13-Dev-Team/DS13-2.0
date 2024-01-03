@@ -7,7 +7,7 @@
 	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
 	user.do_attack_animation(src, user.attack_effect)
 	user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
-	attack_generic(user, dealt_damage, BRUTE, MELEE, TRUE, user.armour_penetration)
+	attack_generic(user, dealt_damage, BRUTE, SLASH, TRUE, user.armour_penetration)
 
 /mob/living/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	dealt_damage = dealt_damage || rand(user.melee_damage_lower, user.melee_damage_upper)
@@ -18,7 +18,7 @@
 					span_userdanger("[user.name] slashes you!"), span_hear("You hear a cutting of the flesh!"), COMBAT_MESSAGE_RANGE, user)
 	to_chat(user, span_danger("You slash [src]!"))
 	var/zone_attacked = ran_zone(user.zone_selected)
-	var/armor_block = run_armor_check(zone_attacked, MELEE)
+	var/armor_block = run_armor_check(zone_attacked, SLASH)
 	user.changeNext_move(CLICK_CD_MELEE) //So necros don't JoJo
 	apply_damage(dealt_damage, BRUTE, zone_attacked, armor_block)
 	log_combat(user, src, "attacked")
@@ -47,7 +47,7 @@
 	var/obj/item/bodypart/affecting = get_bodypart(ran_zone(user.zone_selected))
 	if(!affecting)
 		affecting = get_bodypart(BODY_ZONE_CHEST)
-	var/armor_block = run_armor_check(affecting, MELEE)
+	var/armor_block = run_armor_check(affecting, SLASH)
 
 	playsound(loc, 'sound/weapons/slice.ogg', 25, TRUE, -1)
 	user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)

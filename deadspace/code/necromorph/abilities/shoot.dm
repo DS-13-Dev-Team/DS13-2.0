@@ -55,7 +55,7 @@
 
 	armor_flag = ACID
 	//We deal real damage by exposing reagent at victims, though we need run armour checks
-	armour_penetration = 25
+	armor_penetration = 25
 	eyeblur = 5
 
 	var/acid_type = /datum/reagent/toxin/acid

@@ -651,13 +651,13 @@
 					/obj/item/clothing/gloves/tackler/combat)
 	crate_name = "swat crate"
 
-/*/datum/supply_pack/security/armory/thermal
+/*datum/supply_pack/security/armory/thermal
 	name = "Thermal Pistol Crate"
 	desc = "Contains a pair of holsters each with two experimental thermal pistols, using nanites as the basis for their ammo. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 7
 	contains = list(/obj/item/storage/belt/holster/shoulder/thermal,
 					/obj/item/storage/belt/holster/shoulder/thermal)
-	crate_name = "thermal pistol crate"
+	crate_name = "thermal pistol crate"*/
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Engineering /////////////////////////////////////
@@ -667,7 +667,7 @@
 	group = "Engineering"
 	crate_type = /obj/structure/closet/crate/engineering
 
-/datum/supply_pack/engineering/shieldgen
+/*datum/supply_pack/engineering/shieldgen
 	name = "Anti-breach Shield Projector Crate"
 	desc = "Hull breaches again? Say no more with the Daedalus Industries Anti-Breach Shield Projector! Uses forcefield technology to keep the air in, and the space out. Contains two shield projectors."
 	cost = CARGO_CRATE_VALUE * 3
@@ -693,7 +693,7 @@
 					/obj/item/circuitboard/mecha/ripley/peripherals,
 					/obj/item/mecha_parts/mecha_equipment/drill,
 					/obj/item/mecha_parts/mecha_equipment/hydraulic_clamp)
-	crate_name= "\improper APLU MK-I kit"
+	crate_name= "\improper APLU MK-I kit"*/
 
 /datum/supply_pack/engineering/conveyor
 	name = "Conveyor Assembly Crate"
@@ -822,7 +822,7 @@
 	crate_name = "space heater crate"
 	crate_type = /obj/structure/closet/crate/large
 
-/datum/supply_pack/engineering/bsa
+/*datum/supply_pack/engineering/bsa
 	name = "Bluespace Artillery Parts"
 	desc = "The pride of Mars Executive Solutions command staff. The legendary Bluespace Artillery Cannon is a devastating feat of human engineering and testament to wartime determination. Highly advanced research is required for proper construction. "
 	cost = CARGO_CRATE_VALUE * 30
@@ -887,7 +887,7 @@
 	special = TRUE
 	access_view = ACCESS_HEADS
 	contains = list(/obj/item/circuitboard/computer/sat_control)
-	crate_name= "shield control board crate"
+	crate_name= "shield control board crate"*/
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -1080,7 +1080,7 @@
 	contains = list(/obj/item/stack/sheet/mineral/wood/fifty)
 	crate_name = "wood planks crate"
 
-/datum/supply_pack/materials/rcd_ammo
+/*datum/supply_pack/materials/rcd_ammo
 	name = "RCD Ammo"
 	desc = "Contains four raw material cartridges that can be used to quickly recharge any RCD."
 	cost = CARGO_CRATE_VALUE * 8.5
@@ -1088,7 +1088,7 @@
 					/obj/item/rcd_ammo,
 					/obj/item/rcd_ammo/large,
 					/obj/item/rcd_ammo/large,)
-	crate_name = "rcd ammo crate"
+	crate_name = "rcd ammo crate"*/
 
 /datum/supply_pack/materials/foamtank
 	name = "Firefighting Foam Tank Crate"
@@ -1432,7 +1432,7 @@
 	crate_name = "plasma assembly crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
 
-/datum/supply_pack/science/raw_flux_anomaly
+/*datum/supply_pack/science/raw_flux_anomaly
 	name = "Raw Flux Anomaly"
 	desc = "The raw core of a flux anomaly, ready to be implosion-compressed into a powerful artifact."
 	cost = CARGO_CRATE_VALUE * 10
@@ -1480,9 +1480,9 @@
 	access_view = ACCESS_ORDNANCE
 	contains = list(/obj/item/raw_anomaly_core/pyro)
 	crate_name = "raw pyro anomaly"
-	crate_type = /obj/structure/closet/crate/secure/science
+	crate_type = /obj/structure/closet/crate/secure/science*/
 
-/datum/supply_pack/science/robotics
+/*datum/supply_pack/science/robotics
 	name = "Robotics Assembly Crate"
 	desc = "The tools you need to replace those finicky humans with a loyal robot army! Contains four proximity sensors, two empty first aid kits, two health analyzers, two red hardhats, two mechanical toolboxes, and two cleanbot assemblies! Requires Robotics access to open."
 	cost = CARGO_CRATE_VALUE * 3
@@ -1503,7 +1503,7 @@
 					/obj/item/bot_assembly/cleanbot,
 					/obj/item/bot_assembly/cleanbot)
 	crate_name = "robotics assembly crate"
-	crate_type = /obj/structure/closet/crate/secure/science
+	crate_type = /obj/structure/closet/crate/secure/science*/
 
 /datum/supply_pack/science/rped
 	name = "RPED crate"
@@ -1513,7 +1513,7 @@
 	contains = list(/obj/item/storage/part_replacer/cargo)
 	crate_name = "\improper RPED crate"
 
-/datum/supply_pack/science/shieldwalls
+/*datum/supply_pack/science/shieldwalls
 	name = "Shield Generator Crate"
 	desc = "These high powered Shield Wall Generators are guaranteed to keep any unwanted lifeforms on the outside, where they belong! Contains four shield wall generators. Requires Teleporter access to open."
 	cost = CARGO_CRATE_VALUE * 4
@@ -1524,7 +1524,7 @@
 					/obj/machinery/power/shieldwallgen,
 					/obj/machinery/power/shieldwallgen)
 	crate_name = "shield generators crate"
-	crate_type = /obj/structure/closet/crate/secure/science
+	crate_type = /obj/structure/closet/crate/secure/science*/
 
 /datum/supply_pack/science/transfer_valves
 	name = "Tank Transfer Valves Crate"
@@ -1545,7 +1545,7 @@
 					/obj/item/clothing/head/helmet/monkey_sentience)
 	crate_name = "monkey mind magnification crate"
 
-/datum/supply_pack/science/mod_core
+/*datum/supply_pack/science/mod_core
 	name = "MOD core Crate"
 	desc = "Three cores, perfect for any MODsuit construction! Naturally harvested™, of course."
 	cost = CARGO_CRATE_VALUE * 3
@@ -1555,7 +1555,7 @@
 		/obj/item/mod/core/standard,
 		/obj/item/mod/core/standard)
 	crate_name = "\improper MOD core crate"
-	crate_type = /obj/structure/closet/crate/secure/science
+	crate_type = /obj/structure/closet/crate/secure/science*/
 
 //////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// Service //////////////////////////////////////
@@ -2538,7 +2538,7 @@
 			the_toy = pick(subtypesof(/obj/item/toy/plush))
 		new the_toy(C)
 
-/datum/supply_pack/costumes_toys/wizard
+/*datum/supply_pack/costumes_toys/wizard
 	name = "Wizard Costume Crate"
 	desc = "Pretend to join the Wizard Federation with this full wizard outfit! Daedalus Industries would like to remind its employees that actually joining the Wizard Federation is subject to termination of job and life."
 	cost = CARGO_CRATE_VALUE * 4
@@ -2547,7 +2547,7 @@
 					/obj/item/clothing/shoes/sandal,
 					/obj/item/clothing/head/wizard/fake)
 	crate_name = "wizard costume crate"
-	crate_type = /obj/structure/closet/crate/wooden
+	crate_type = /obj/structure/closet/crate/wooden*/
 
 /datum/supply_pack/costumes_toys/randomised/fill(obj/structure/closet/crate/C)
 	var/list/L = contains.Copy()
@@ -2571,7 +2571,7 @@
 	if(prob(10)) //A little extra sugar every now and then to shake things up.
 		new /obj/item/switchblade(C)
 
-/datum/supply_pack/costumes_toys/randomised/tcg
+/*datum/supply_pack/costumes_toys/randomised/tcg
 	name = "Big-Ass Booster Pack Pack"
 	desc = "A bumper load of NT TCG Booster Packs of varying series. Collect them all!"
 	cost = 1000
@@ -2582,7 +2582,7 @@
 	var/cardpacktype
 	for(var/i in 1 to 10)
 		cardpacktype = pick(subtypesof(/obj/item/cardpack))
-		new cardpacktype(C)
+		new cardpacktype(C)*/
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Miscellaneous ///////////////////////////////////
@@ -2717,7 +2717,7 @@
 	crate_type = /obj/structure/closet/crate/secure
 	crate_name = "command encryption key crate"
 
-/datum/supply_pack/misc/exploration_drone
+/*datum/supply_pack/misc/exploration_drone
 	name = "Exploration Drone"
 	desc = "A replacement long-range exploration drone."
 	cost = CARGO_CRATE_VALUE * 5
@@ -2729,7 +2729,7 @@
 	desc = "A fresh tank of exploration drone fuel."
 	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/item/fuel_pellet)
-	crate_name = "exodrone fuel crate"
+	crate_name = "exodrone fuel crate"*/
 
 /datum/supply_pack/misc/paper
 	name = "Bureaucracy Crate"
@@ -3138,11 +3138,11 @@
 	contains = list(/obj/item/disk/data/hyper/preloaded/fabricator/omni)
 	crate_name = "omnifab disk crate"
 
-/datum/supply_pack/data_disk/preloaded/robotics
+/*datum/supply_pack/data_disk/preloaded/robotics
 	name = "Data Disk (Robofab)"
 	access = ACCESS_MECH_SCIENCE
 	contains = list(/obj/item/disk/data/hyper/preloaded/fabricator/robotics)
-	crate_name = "robofab disk crate"
+	crate_name = "robofab disk crate"*/
 
 /datum/supply_pack/data_disk/preloaded/civ
 	name = "Data Disk (Civfab)"

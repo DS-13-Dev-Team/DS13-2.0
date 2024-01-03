@@ -141,7 +141,7 @@ Projectiles for the casings
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "divet"
 	damage = 17.5
-	armour_penetration = 10
+	armor_penetration = 10
 	wound_falloff_tile = -10
 	dismemberment = 5
 	embedding = list(embed_chance=25, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=1 SECONDS)
@@ -151,15 +151,15 @@ Projectiles for the casings
 	name = "divet hollow-point bullet"
 	icon_state = "divet_hp"
 	damage = 22.5
-	armour_penetration = 0
-	weak_against_armour = TRUE
+	armor_penetration = 0
+	weak_against_armor = TRUE
 
 //Opposite of hollowpoint
 /obj/projectile/bullet/divet/ap
 	name = "divet armor-piercing bullet"
 	icon_state = "divet_ap"
 	damage = 15
-	armour_penetration = 20
+	armor_penetration = 20
 
 //Less lethal ammo. Rubber bullets, now with bounce!
 /obj/projectile/bullet/divet/rb
@@ -167,7 +167,7 @@ Projectiles for the casings
 	icon_state = "divet" //Maybe get rubber bullet sprite in future
 	damage = 6
 	stamina = 30
-	weak_against_armour = TRUE
+	weak_against_armor = TRUE
 	ricochets_max = 6
 	ricochet_incidence_leeway = 0
 	ricochet_chance = 130
@@ -183,7 +183,7 @@ Projectiles for the casings
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "divet_incend"
 	damage = 12.5
-	armour_penetration = 5
+	armor_penetration = 5
 	fire_stacks = 1
 
 //Leaving here if someone wanted to try to use old incendiary stuff (slightly modified, not enougb to work though)
@@ -202,7 +202,7 @@ Projectiles for the casings
 	icon_state = "divet"
 	damage = 1 //Can do burn damage, reduced range...
 	dismemberment = 0
-	weak_against_armour = TRUE
+	weak_against_armor = TRUE
 	shrapnel_type = null
 	sharpness = NONE
 	embedding = null

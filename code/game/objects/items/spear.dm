@@ -9,7 +9,6 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	throwforce = 15
-	block_chance = 20 //Doesn't get as much block as other twohanded due to makeshift creation
 	throw_speed = 4
 	embedding = list("impact_pain_mult" = 2, "remove_pain_mult" = 4, "jostle_chance" = 2.5)
 	armor_penetration = 10
@@ -31,17 +30,6 @@
 	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=18, icon_wielded="[icon_prefix]1")
 	update_appearance()
 
-/obj/item/spear/proc/on_wield(obj/item/source, mob/user)
-	SIGNAL_HANDLER
-
-	wielded = TRUE
-
-/// triggered on unwield of two handed item
-/obj/item/spear/proc/on_unwield(obj/item/source, mob/user)
-	SIGNAL_HANDLER
-
-	wielded = FALSE
-
 /obj/item/spear/update_icon_state()
 	icon_state = "[icon_prefix]0"
 	return ..()
@@ -49,11 +37,6 @@
 /obj/item/spear/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins to sword-swallow \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return BRUTELOSS
-
-/obj/item/spear/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	if(wielded) //Can only block if being wielded
-		return ..()
-	return 0
 
 /obj/item/spear/CheckParts(list/parts_list)
 	var/obj/item/shard/tip = locate() in contents
@@ -92,14 +75,10 @@
 	icon_prefix = "spearbomb"
 	block_chance = 0 //You probably don't want to block with a explosive
 	var/obj/item/grenade/explosive = null
-	wielded = FALSE // track wielded status on item
 
 /obj/item/spear/explosive/Initialize(mapload)
 	. = ..()
-	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
-	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 	set_explosive(new /obj/item/grenade/iedcasing/spawned()) //For admin-spawned explosive lances
-	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=18, icon_wielded="[icon_prefix]1")
 
 /obj/item/spear/explosive/proc/set_explosive(obj/item/grenade/G)
 	if(explosive)
@@ -148,7 +127,7 @@
 
 /obj/item/spear/explosive/afterattack(atom/movable/AM, mob/user, proximity)
 	. = ..()
-	if(!proximity || !wielded || !istype(AM))
+	if(!proximity || !istype(AM))
 		return
 	if(AM.resistance_flags & INDESTRUCTIBLE) //due to the lich incident of 2021, embedding grenades inside of indestructible structures is forbidden
 		return
@@ -202,7 +181,7 @@
 	force = 12
 	throwforce = 22
 	block_chance = 23 //Slightly better then makeshift glass spear
-	armour_penetration = 15 //Enhanced armor piercing
+	armor_penetration = 15 //Enhanced armor piercing
 
 /obj/item/spear/bonespear/Initialize(mapload)
 	. = ..()

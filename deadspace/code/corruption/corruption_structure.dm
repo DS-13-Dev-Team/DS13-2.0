@@ -83,12 +83,11 @@
 				playsound(loc, 'sound/items/welder.ogg', 100, TRUE)
 
 /obj/structure/necromorph/run_atom_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
-	if(damage_flag == MELEE)
-		switch(damage_type)
-			if(BRUTE)
-				damage_amount *= 0.25
-			if(BURN)
-				damage_amount *= 2
+	switch(damage_type)
+		if(BRUTE)
+			damage_amount *= 0.25
+		if(BURN)
+			damage_amount *= 2
 	return ..()
 
 /obj/structure/necromorph/CanAllowThrough(atom/movable/mover, border_dir)

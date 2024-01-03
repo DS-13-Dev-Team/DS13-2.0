@@ -252,7 +252,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	var/datum/hud/marker_signal/our_hud = hud_override || hud_used
 	our_hud?.foreground_bio.maptext = MAPTEXT("[round(marker.signal_biomass, 1)] | +[marker.last_biomass_income*marker.signal_biomass_percent] bio/sec")
 
-/mob/camera/marker_signal/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null, filterproof = null)
+/mob/camera/marker_signal/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null, filterproof = null, range)
 	if(!message || stat)
 		return
 
