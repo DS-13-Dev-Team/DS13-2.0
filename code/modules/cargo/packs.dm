@@ -822,7 +822,7 @@
 	crate_name = "space heater crate"
 	crate_type = /obj/structure/closet/crate/large
 
-/*datum/supply_pack/engineering/bsa
+/datum/supply_pack/engineering/bsa
 	name = "Bluespace Artillery Parts"
 	desc = "The pride of Mars Executive Solutions command staff. The legendary Bluespace Artillery Cannon is a devastating feat of human engineering and testament to wartime determination. Highly advanced research is required for proper construction. "
 	cost = CARGO_CRATE_VALUE * 30
@@ -887,7 +887,7 @@
 	special = TRUE
 	access_view = ACCESS_HEADS
 	contains = list(/obj/item/circuitboard/computer/sat_control)
-	crate_name= "shield control board crate"*/
+	crate_name= "shield control board crate"
 
 
 //////////////////////////////////////////////////////////////////////////////
