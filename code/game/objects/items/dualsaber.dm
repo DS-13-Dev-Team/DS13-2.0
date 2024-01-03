@@ -15,7 +15,7 @@
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_SMALL
 	hitsound = SFX_SWING_HIT
-	armour_penetration = 35
+	armor_penetration = 35
 	light_system = MOVABLE_LIGHT
 	light_outer_range = 6 //TWICE AS BRIGHT AS A REGULAR ESWORD
 	light_color = LIGHT_COLOR_ELECTRIC_GREEN
@@ -24,7 +24,7 @@
 	attack_verb_simple = list("attack", "slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut")
 	block_chance = 75
 	max_integrity = 200
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 100, ACID = 70)
+	armor = list(BLUNT = 0, PUNCTURE = 0, SLASH = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 100, ACID = 70)
 	resistance_flags = FIRE_PROOF
 	var/w_class_on = WEIGHT_CLASS_BULKY
 	var/saber_color = "green"
@@ -142,12 +142,12 @@
 	return 0
 
 /obj/item/dualsaber/process()
-	if(wielded)
-		if(hacked)
-			set_light_color(pick(COLOR_SOFT_RED, LIGHT_COLOR_GREEN, LIGHT_COLOR_LIGHT_CYAN, LIGHT_COLOR_LAVENDER))
-		open_flame()
-	else
-		STOP_PROCESSING(SSobj, src)
+	if(!wielded)
+		return PROCESS_KILL
+
+	if(hacked)
+		set_light_color(pick(COLOR_SOFT_RED, LIGHT_COLOR_GREEN, LIGHT_COLOR_LIGHT_CYAN, LIGHT_COLOR_LAVENDER))
+	open_flame()
 
 /obj/item/dualsaber/IsReflect()
 	if(wielded)

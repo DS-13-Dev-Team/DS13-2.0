@@ -83,7 +83,7 @@
 	healing_beam.mounted = TRUE
 
 /obj/item/gun/magic/staff/healing/Destroy()
-	qdel(healing_beam)
+	QDEL_NULL(healing_beam)
 	return ..()
 
 /obj/item/gun/magic/staff/healing/unrestricted
@@ -172,7 +172,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	hitsound = 'sound/weapons/rapierhit.ogg'
 	force = 20
-	armour_penetration = 75
+	armor_penetration = 75
 	block_chance = 50
 	sharpness = SHARP_EDGED
 	max_charges = 4
