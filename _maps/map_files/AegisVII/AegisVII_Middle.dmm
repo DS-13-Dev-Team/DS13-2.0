@@ -2366,7 +2366,7 @@
 /turf/open/floor/deadspace/mono,
 /area/station/security/brig)
 "aHL" = (
-/obj/structure/cable/multilayer/connected/one_two,
+/obj/structure/cable/smart_cable/color_connector/yellow,
 /turf/open/floor/iron/ported/techfloor_grid,
 /area/station/engineering/supermatter/room)
 "aHQ" = (
@@ -3329,7 +3329,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
 "aRL" = (
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /turf/open/floor/iron/ported/techfloor_grid,
 /area/station/engineering/supermatter/room)
@@ -3926,7 +3926,7 @@
 /obj/structure/table,
 /obj/item/paper_bin/construction,
 /obj/item/airlock_painter,
-/obj/item/rcl/pre_loaded,
+/obj/item/stack/cable_coil/red,
 /obj/effect/turf_decal/bot,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -5730,7 +5730,7 @@
 	},
 /area/station/engineering/main)
 "bqV" = (
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/machinery/atmospherics/pipe/smart/simple/orange/visible{
 	dir = 4
 	},
@@ -7465,7 +7465,7 @@
 /area/station/hallway/primary/starboard)
 "cwd" = (
 /obj/structure/cable,
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
 	dir = 1
 	},
@@ -7556,7 +7556,7 @@
 /obj/machinery/atmospherics/components/binary/circulator{
 	dir = 1
 	},
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -7754,7 +7754,7 @@
 /area/station/engineering/main)
 "cGE" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/structure/cable/multilayer/connected/one_two,
+/obj/structure/cable/smart_cable/color_connector/yellow,
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
 "cGF" = (
@@ -7814,7 +7814,7 @@
 /obj/structure/disposalpipe/trunk/multiz/down{
 	dir = 1
 	},
-/obj/structure/cable/multilayer/multiz,
+/obj/structure/cable/multiz,
 /turf/open/floor/deadspace/random/slides,
 /area/station/security/brig)
 "cIo" = (
@@ -7841,7 +7841,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "cKs" = (
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/supermatter/room)
@@ -7855,7 +7855,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/high,
-/obj/item/rcl/pre_loaded,
+/obj/item/stack/cable_coil/red,
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
@@ -8081,7 +8081,7 @@
 /turf/open/floor/iron/ported/lino,
 /area/station/service/library)
 "cSZ" = (
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible{
 	dir = 4
 	},
@@ -8456,7 +8456,7 @@
 	},
 /area/station/hallway/primary/port)
 "djB" = (
-/obj/structure/cable/multilayer/multiz,
+/obj/structure/cable/multiz,
 /turf/open/floor/deadspace/grater,
 /area/station/cargo/warehouse/upper)
 "djG" = (
@@ -9211,7 +9211,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/light/floor/has_bulb,
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/supermatter/room)
 "dRx" = (
@@ -12240,7 +12240,7 @@
 /area/station/cargo/office)
 "fUB" = (
 /obj/machinery/light/small/directional/north,
-/obj/structure/cable/multilayer/connected/one_two,
+/obj/structure/cable/smart_cable/color_connector/yellow,
 /turf/open/floor/plating,
 /area/station/engineering/engine_smes)
 "fUH" = (
@@ -14742,7 +14742,7 @@
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit)
 "hLW" = (
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /turf/open/floor/plating,
 /area/station/engineering/engine_smes)
 "hMa" = (
@@ -16796,7 +16796,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/obj/structure/cable/multilayer/multiz,
+/obj/structure/cable/multiz,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/sorting)
 "jqx" = (
@@ -20509,7 +20509,7 @@
 /obj/structure/disposalpipe/trunk/multiz/down{
 	dir = 1
 	},
-/obj/structure/cable/multilayer/multiz,
+/obj/structure/cable/multiz,
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/machinery/atmospherics/pipe/multiz/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/multiz/supply/hidden/layer4,
@@ -20772,7 +20772,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/multiz/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/multiz/scrubbers/hidden/layer2,
-/obj/structure/cable/multilayer/multiz,
+/obj/structure/cable/multiz,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -22990,7 +22990,7 @@
 /area/awaymission/centcom_away/hangar)
 "oin" = (
 /obj/structure/cable,
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/supermatter/room)
 "oiH" = (
@@ -23456,7 +23456,7 @@
 /area/station/engineering/atmos)
 "oGg" = (
 /obj/structure/cable,
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/machinery/atmospherics/components/binary/volume_pump{
 	name = "Unit 1 Head Pressure Pump"
 	},
@@ -25727,7 +25727,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "qqE" = (
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/engine_smes)
@@ -26339,7 +26339,7 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/hallway/secondary/exit)
 "qOE" = (
-/obj/structure/cable/multilayer/multiz,
+/obj/structure/cable/multiz,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/starboard/central)
 "qOI" = (
@@ -30705,7 +30705,7 @@
 /area/station/engineering/atmos)
 "urv" = (
 /obj/structure/cable,
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/engine_smes)
 "ury" = (
@@ -32462,7 +32462,7 @@
 /turf/open/floor/iron,
 /area/station/security/range)
 "vLP" = (
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/machinery/atmospherics/pipe/smart/simple/orange/visible{
 	dir = 9
 	},
@@ -32513,11 +32513,13 @@
 "vOt" = (
 /obj/structure/table,
 /obj/item/paper_bin,
-/obj/item/stack/pipe_cleaner_coil/random,
-/obj/item/stack/pipe_cleaner_coil/random,
-/obj/item/stack/pipe_cleaner_coil/random,
-/obj/item/stack/pipe_cleaner_coil/random,
-/obj/item/stack/pipe_cleaner_coil/random,
+/obj/item/stack/cable_coil/blue,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/red,
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/pink,
+/obj/item/stack/cable_coil/orange,
+/obj/item/stack/cable_coil/white,
 /obj/item/canvas,
 /obj/item/canvas,
 /obj/item/canvas,
@@ -32589,7 +32591,7 @@
 /area/station/cargo/sorting)
 "vQY" = (
 /obj/structure/cable,
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/machinery/door/airlock/hatch{
 	id_tag = "smesroom_door";
 	name = "SMES Access";
@@ -32920,7 +32922,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "wcL" = (
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -33026,7 +33028,7 @@
 /area/station/engineering/break_room)
 "wgc" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/structure/cable/layer1,
+/obj/structure/cable/smart_cable/color/red,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/supermatter/room)
