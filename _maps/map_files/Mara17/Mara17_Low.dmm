@@ -659,19 +659,19 @@
 /turf/open/floor/plating,
 /area/mara17/interior/lower/tunnel)
 "cG" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room9)
 "cH" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room7)
 "cI" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/rivets,
@@ -691,7 +691,7 @@
 /area/mara17/interior/lower/scaf_storage1)
 "cM" = (
 /obj/machinery/light/small/red/directional/north,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -721,7 +721,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/old_bunker)
 "cS" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/lower/scaf_storage_hallway)
 "cT" = (
@@ -823,7 +823,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room1)
 "dp" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -840,7 +840,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage1)
 "ds" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/highcap/five_k/directional/north,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage1)
@@ -892,7 +892,7 @@
 /obj/structure/rack/shelf,
 /obj/machinery/light/small/directional/east,
 /obj/effect/spawner/random/maintenance/four,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage2)
 "dE" = (
@@ -906,11 +906,11 @@
 /area/mara17/interior/lower/scaf_storage1)
 "dG" = (
 /obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/lower/scaf_storage_hallway)
 "dH" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room2)
@@ -934,7 +934,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/aux_storage)
 "dM" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -963,12 +963,12 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage1)
 "dT" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/old_chapel)
 "dU" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
@@ -981,7 +981,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage1)
 "dW" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room8)
@@ -1008,7 +1008,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/scaf_storage1)
 "ec" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/mara17/interior/lower/tunnel)
@@ -1018,7 +1018,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage1)
 "ee" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/light/small/red/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1026,7 +1026,7 @@
 /area/mara17/interior/lower/scaf_storage_hallway)
 "ef" = (
 /obj/machinery/vending/cigarette,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -1038,21 +1038,21 @@
 	fair_market_price = 0;
 	name = "\improper Jim Norton's Quebecois Coffee"
 	},
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage1)
 "eh" = (
 /obj/machinery/vending/cola/black,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage1)
 "ei" = (
 /obj/machinery/vending/cola/pwr_game,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -1063,29 +1063,29 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage1)
 "ek" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/sec_checkpoint)
 "el" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage2)
 "em" = (
 /obj/machinery/power/terminal{
 	dir = 4
 	},
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage2)
 "en" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/smes/engineering,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage2)
 "eo" = (
 /obj/machinery/power/apc/auto_name/directional/south,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/scaf_storage2)
 "eq" = (
@@ -1096,7 +1096,7 @@
 	id = "bunker";
 	name = "SCAF Warehouse Lockdown"
 	},
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -1105,21 +1105,21 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/scaf_storage2)
 "er" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room10)
 "es" = (
 /obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/old_bunker)
 "et" = (
 /obj/structure/chair/comfy/brown{
 	dir = 8
 	},
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/old_chapel)
 "eu" = (
@@ -1252,7 +1252,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room10)
 "eU" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/effect/turf_decal/loading_area{
 	dir = 1
 	},
@@ -1277,14 +1277,14 @@
 /area/mara17/interior/lower/scaf_storage1)
 "eZ" = (
 /obj/machinery/light/small/red/directional/east,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/lower/scaf_storage_hallway)
 "fa" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -1378,7 +1378,7 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/mara17/interior/lower/room6)
 "ft" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/effect/turf_decal/loading_area,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1395,7 +1395,7 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/mara17/interior/lower/room6)
 "fw" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/effect/turf_decal/loading_area{
 	dir = 8
 	},
@@ -1436,7 +1436,7 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/sec_checkpoint)
 "fC" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock{
 	name = "SCAF Equipment Warehouse"
 	},
@@ -1463,7 +1463,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/sec_checkpoint)
 "fG" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/item/clothing/head/hardhat,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1511,7 +1511,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/sec_checkpoint)
 "fO" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/light/small/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1541,7 +1541,7 @@
 "fT" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/food/drinks/soda_cans/cola,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/sec_checkpoint)
 "fU" = (
@@ -1635,7 +1635,7 @@
 "gj" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/random/medical/surgery_tool,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/hardwood,
@@ -1666,11 +1666,11 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/room8)
 "gS" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room5)
 "gU" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -1679,14 +1679,14 @@
 /turf/open/floor/plating,
 /area/mara17/interior/lower/room10)
 "gZ" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/room8)
 "hk" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/aux_storage)
@@ -1704,7 +1704,7 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/scaf_storage1)
 "hE" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/small/red/directional/west,
@@ -1715,7 +1715,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/tunnel)
 "hI" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/room5)
@@ -1730,7 +1730,7 @@
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/lower/scaf_storage_hallway)
 "in" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -1753,7 +1753,7 @@
 /area/mara17/interior/lower/room10)
 "jS" = (
 /obj/machinery/power/apc/auto_name/directional/west,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room1)
 "ko" = (
@@ -1777,7 +1777,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room10)
 "lE" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room6)
@@ -1798,13 +1798,13 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/old_chapel)
 "ms" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room10)
 "mJ" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage2)
@@ -1827,7 +1827,7 @@
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/scaf_storage1)
 "oc" = (
-/obj/structure/cable/multilayer/multiz,
+/obj/structure/cable/multiz,
 /obj/machinery/atmospherics/pipe/multiz/scrubbers/hidden/layer2{
 	dir = 4
 	},
@@ -1837,7 +1837,7 @@
 /turf/open/floor/plating,
 /area/mara17/interior/lower/sec_checkpoint)
 "og" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1855,20 +1855,20 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/aux_storage)
 "os" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room8)
 "ow" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/old_chapel)
 "oG" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1903,7 +1903,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room4)
 "qu" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
@@ -1916,7 +1916,7 @@
 /turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "qV" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1942,28 +1942,28 @@
 /turf/closed/wall,
 /area/mara17/interior/lower/room6)
 "rW" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/room9)
 "sy" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/sec_checkpoint)
 "sD" = (
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage1)
 "sJ" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/table/wood,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/old_chapel)
 "sM" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/hardwood,
@@ -1976,7 +1976,7 @@
 /turf/closed/wall/rust,
 /area/mara17/interior/caves)
 "tF" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room9)
@@ -2002,7 +2002,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/old_chapel)
 "uu" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
@@ -2045,7 +2045,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room8)
 "vR" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -2082,7 +2082,7 @@
 /turf/closed/wall/rust,
 /area/mara17/interior/medium/abandoned/watchtower2)
 "xt" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage1)
 "xz" = (
@@ -2102,13 +2102,13 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/old_bunker)
 "yA" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room1)
 "zd" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room2)
@@ -2116,13 +2116,13 @@
 /turf/closed/wall,
 /area/mara17/interior/lower/tunnel)
 "zE" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage2)
 "zR" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/small/red/directional/south,
@@ -2181,7 +2181,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/scaf_storage1)
 "Cn" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -2219,11 +2219,11 @@
 /turf/open/misc/asteroid/snow/mara,
 /area/mara17/exterior)
 "Dq" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/tunnel)
 "DB" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/deadspace/grater,
@@ -2234,14 +2234,14 @@
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/lower/scaf_storage_hallway)
 "DM" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/room10)
 "DO" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2262,7 +2262,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage_hallway)
 "Ez" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -2272,7 +2272,7 @@
 /turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/caves)
 "EZ" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
@@ -2290,7 +2290,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room9)
 "Fi" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -2299,7 +2299,7 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/mara17/interior/lower/sec_checkpoint)
 "FP" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/mono,
@@ -2372,7 +2372,7 @@
 /area/mara17/interior/lower/scaf_storage1)
 "IY" = (
 /obj/machinery/power/apc/auto_name/directional/west,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room5)
 "Jb" = (
@@ -2380,7 +2380,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room1)
 "Jj" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2388,7 +2388,7 @@
 /area/mara17/interior/lower/scaf_storage1)
 "Jp" = (
 /obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/old_chapel)
 "Ju" = (
@@ -2430,7 +2430,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/old_chapel)
 "KD" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/grater,
@@ -2445,13 +2445,13 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room7)
 "LJ" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/lower/scaf_storage_hallway)
 "LK" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/small/directional/south,
@@ -2464,7 +2464,7 @@
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/lower/scaf_storage_hallway)
 "Mi" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/airlock/maintenance,
@@ -2476,7 +2476,7 @@
 /area/mara17/interior/caves)
 "Mo" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage2)
 "Mq" = (
@@ -2488,7 +2488,7 @@
 /turf/closed/wall,
 /area/mara17/interior/lower/room1)
 "MF" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2501,7 +2501,7 @@
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/lower/scaf_storage_hallway)
 "NP" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -2520,7 +2520,7 @@
 /turf/closed/wall,
 /area/mara17/interior/lower/room4)
 "Pi" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/scaf_storage2)
 "Pk" = (
@@ -2543,7 +2543,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/old_chapel)
 "PE" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/lower/scaf_storage_hallway)
@@ -2557,12 +2557,12 @@
 /turf/closed/wall,
 /area/mara17/interior/caves)
 "PY" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room9)
 "Qa" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -2571,12 +2571,12 @@
 /turf/closed/wall,
 /area/mara17/interior/lower/room5)
 "QK" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/tunnel)
 "QW" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/hardwood,
@@ -2591,7 +2591,7 @@
 /turf/open/floor/plating,
 /area/mara17/interior/lower/old_chapel)
 "Rk" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/small/red/directional/north,
@@ -2607,11 +2607,11 @@
 "Sg" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/table/wood,
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/old_chapel)
 "Sm" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/small/red/directional/east,
@@ -2635,13 +2635,13 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room6)
 "Tz" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/sec_checkpoint)
 "TD" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2654,13 +2654,13 @@
 /turf/open/misc/asteroid/snow/mara,
 /area/mara17/interior/medium/abandoned)
 "Ug" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room4)
 "Us" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -2702,24 +2702,24 @@
 /turf/closed/wall,
 /area/mara17/interior/lower/scaf_storage1)
 "Wv" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/aux_storage)
 "Ww" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room4)
 "WF" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/mono,
 /area/mara17/interior/lower/room4)
 "WO" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
@@ -2752,7 +2752,7 @@
 /turf/open/floor/deadspace/hardwood,
 /area/mara17/interior/lower/old_chapel)
 "Ya" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/room9)
 "Yt" = (
@@ -2769,7 +2769,7 @@
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/lower/tunnel)
 "YK" = (
-/obj/structure/cable,
+/obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
