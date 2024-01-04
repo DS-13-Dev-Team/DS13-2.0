@@ -2,7 +2,7 @@
 	name = "intermediate mining"
 	desc = "Exclusive only to class 2 miners and is a standard equipment when working in hostile environments or during a hazardous mining operation."
 	default_skin = "intermediate_miner"
-	armor = list(MELEE = 37.5, BULLET = 30, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 25)
+	armor = list(BLUNT = 37.5, PUNCTURE = 30, SLASH = 37.5, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 25)
 	resistance_flags = FIRE_PROOF|LAVA_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT

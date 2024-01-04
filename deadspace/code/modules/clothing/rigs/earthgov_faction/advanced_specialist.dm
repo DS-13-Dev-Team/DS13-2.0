@@ -2,7 +2,7 @@
 	name = "advanced specialist"
 	desc = "A military-grade RIG that was issued to the Earth Defense Force personnel. This one is kitted out with Command Ensignia"
 	default_skin = "adv_soldier_dark"
-	armor = list(MELEE = 40, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 45)
+	armor = list(BLUNT = 50, PUNCTURE = 50, SLASH = 45, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 45)
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0

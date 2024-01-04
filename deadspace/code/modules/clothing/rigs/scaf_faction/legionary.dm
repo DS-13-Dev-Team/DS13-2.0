@@ -2,7 +2,7 @@
 	name = "legionary"
 	desc = "an armored exosuit that was last fielded by S.C.A.F. forces in the 24th Century."
 	default_skin = "scaf_legionnaire"
-	armor = list(MELEE = 40, BULLET = 20, LASER = 20, ENERGY = 15, BOMB = 30, BIO = 100, FIRE = 75, ACID = 30)
+	armor = list(BLUNT = 30, PUNCTURE = 27.5, SLASH = 40, LASER = 20, ENERGY = 15, BOMB = 30, BIO = 100, FIRE = 75, ACID = 30)
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	siemens_coefficient = 0
