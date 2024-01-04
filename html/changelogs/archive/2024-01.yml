@@ -9,3 +9,13 @@
   - bugfix: Necros no longer blow out your ear drums and speakers with the wrath of
       ten airhorns
   - bugfix: Necros can drag things again
+2024-01-04:
+  MisterGrimm:
+  - rscdel: Cyborg and AI removed from job availability
+  - qol: Corruption can grow on water again
+  - balance: Explosions no longer scrape to lattice
+  - balance: Lattices can no longer be destroyed by non-devastation level explosions
+  - balance: Exploders now just die instead of turning to dust when exploding
+  - balance: Exploders now get knocked down when they charge a inanimate object, instead
+      of being stunned
+  - bugfix: Brute slam no longer destroys disposal pipes
