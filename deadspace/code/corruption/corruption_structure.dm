@@ -23,6 +23,7 @@
 	update_signals(null, loc)
 
 /obj/structure/necromorph/Destroy()
+	STOP_PROCESSING(SScorruption, src)
 	return ..()
 
 /obj/structure/necromorph/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change)
