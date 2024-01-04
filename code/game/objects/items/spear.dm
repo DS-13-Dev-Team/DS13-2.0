@@ -10,6 +10,7 @@
 	slot_flags = ITEM_SLOT_BACK
 	throwforce = 15
 	throw_speed = 4
+	block_chance = 20 //Doesn't get as much block as other twohanded due to makeshift creation
 	embedding = list("impact_pain_mult" = 2, "remove_pain_mult" = 4, "jostle_chance" = 2.5)
 	armor_penetration = 10
 	custom_materials = list(/datum/material/iron=1150, /datum/material/glass=2075)
@@ -22,6 +23,7 @@
 
 	var/war_cry = "AAAAARGH!!!"
 	var/icon_prefix = "spearglass"
+	var/wielded = FALSE
 
 /obj/item/spear/Initialize(mapload)
 	. = ..()
@@ -30,6 +32,17 @@
 	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=18, icon_wielded="[icon_prefix]1")
 	update_appearance()
 
+/obj/item/spear/proc/on_wield(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+
+	wielded = TRUE
+
+/// triggered on unwield of two handed item
+/obj/item/spear/proc/on_unwield(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+
+	wielded = FALSE
+
 /obj/item/spear/update_icon_state()
 	icon_state = "[icon_prefix]0"
 	return ..()
@@ -37,6 +50,11 @@
 /obj/item/spear/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] begins to sword-swallow \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return BRUTELOSS
+
+/obj/item/spear/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	if(wielded) //Can only block if being wielded
+		return ..()
+	return 0
 
 /obj/item/spear/CheckParts(list/parts_list)
 	var/obj/item/shard/tip = locate() in contents
