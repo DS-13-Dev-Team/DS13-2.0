@@ -22727,7 +22727,6 @@
 /area/station/medical/surgery/theatre)
 "nXr" = (
 /obj/structure/table,
-/obj/item/paper/fluff/smartwire_rant,
 /obj/machinery/button/door/directional/south{
 	id = "smesroom_door";
 	name = "Access Door Bolt Control";
