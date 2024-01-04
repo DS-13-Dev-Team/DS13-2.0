@@ -14,11 +14,12 @@
 	user.do_attack_animation(src, user.attack_effect)
 	playsound(loc, 'sound/weapons/slash.ogg', 50, TRUE, -1)
 	user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
-	visible_message(span_danger("[user.name] slashes [src]!"), \
-					span_userdanger("[user.name] slashes you!"), span_hear("You hear a cutting of the flesh!"), COMBAT_MESSAGE_RANGE, user)
-	to_chat(user, span_danger("You slash [src]!"))
 	var/zone_attacked = ran_zone(user.zone_selected)
-	var/armor_block = run_armor_check(zone_attacked, SLASH)
+	var/attack_flag = pick(SLASH, PUNCTURE) //Necros vary between slashing and stabbing
+	var/armor_block = run_armor_check(zone_attacked, attack_flag)
+	visible_message(span_danger("[user.name] [armor_flag_to_strike_string(attack_flag)] [src]!"), \
+	span_userdanger("[user.name] [armor_flag_to_strike_string(attack_flag)] you!"), span_hear("You hear a [armor_flag_to_strike_string(attack_flag)] of the flesh!"), COMBAT_MESSAGE_RANGE, user)
+	to_chat(user, span_danger("You [armor_flag_to_strike_string(attack_flag)] [src]!"))
 	user.changeNext_move(CLICK_CD_MELEE) //So necros don't JoJo
 	apply_damage(dealt_damage, BRUTE, zone_attacked, armor_block)
 	log_combat(user, src, "attacked")
@@ -41,19 +42,18 @@
 		playsound(loc, 'sound/weapons/slashmiss.ogg', 50, TRUE, -1)
 		user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
 		visible_message(span_danger("[user] lunges at [src]!"), \
-						span_userdanger("[user] lunges at you!"), span_hear("You hear a swoosh!"), null, user)
+		span_userdanger("[user] lunges at you!"), span_hear("You hear a swoosh!"), null, user)
 		to_chat(user, span_danger("You lunge at [src]!"))
 		return FALSE
 	var/obj/item/bodypart/affecting = get_bodypart(ran_zone(user.zone_selected))
 	if(!affecting)
 		affecting = get_bodypart(BODY_ZONE_CHEST)
-	var/armor_block = run_armor_check(affecting, SLASH)
-
+	var/attack_flag = pick(SLASH, PUNCTURE) //Necros vary between slashing and stabbing
+	var/armor_block = run_armor_check(affecting, attack_flag)
 	playsound(loc, 'sound/weapons/slice.ogg', 25, TRUE, -1)
-	user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
-	visible_message(span_danger("[user] slashes at [src]!"), \
-					span_userdanger("[user] slashes at you!"), span_hear("You hear a sickening sound of a slice!"), null, user)
-	to_chat(user, span_danger("You slash at [src]!"))
+	visible_message(span_danger("[user.name] [armor_flag_to_strike_string(attack_flag)] [src]!"), \
+	span_userdanger("[user.name] [armor_flag_to_strike_string(attack_flag)] you!"), span_hear("You hear a [armor_flag_to_strike_string(attack_flag)] of the flesh!"), COMBAT_MESSAGE_RANGE, user)
+	to_chat(user, span_danger("You [armor_flag_to_strike_string(attack_flag)] [src]!"))
 	log_combat(user, src, "attacked")
 	user.changeNext_move(CLICK_CD_MELEE)
 	if(!dismembering_strike(user, user.zone_selected)) //Dismemberment successful

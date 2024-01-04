@@ -21,6 +21,10 @@
 /mob/living/carbon/human/necromorph/has_active_hand()
 	return TRUE
 
+//This messes with bloody hands, we don't want those on necros yet due to having no custom sprites for it
+/mob/living/carbon/human/necromorph/update_worn_gloves()
+	return
+
 /mob/living/carbon/human/necromorph/updatehealth()
 	if(status_flags & GODMODE)
 		return
