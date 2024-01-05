@@ -153,7 +153,7 @@ Projectiles for the casings
 	icon_state = "pulse"
 	damage = 14
 	speed = 1
-	armour_penetration = 4 //Should be quite low I'd think, especially for standard rounds. Bullet made to shred and liquify flesh but not affect materialistic objects much.
+	armor_penetration = 4 //Should be quite low I'd think, especially for standard rounds. Bullet made to shred and liquify flesh but not affect materialistic objects much.
 	shrapnel_type = null
 	embedding = null
 	//muzzle_type = /obj/effect/projectile/pulse/light
@@ -161,7 +161,7 @@ Projectiles for the casings
 /obj/projectile/bullet/pulse/hv
 	icon_state = "pulse_hv"
 	damage = 15.5
-	armour_penetration = 12
+	armor_penetration = 12
 	//muzzle_type = /obj/effect/projectile/pulse/hv
 
 /obj/projectile/bullet/pulse/df
@@ -177,8 +177,8 @@ Projectiles for the casings
 	//muzzle_type = /obj/effect/projectile/pulse/df
 /obj/projectile/bullet/pulse/blank //Use Divet blank when it changes
 	damage = 1 //Can maybe do burn damage, reduced range
-	armour_penetration = 0
-	weak_against_armour = TRUE
+	armor_penetration = 0
+	weak_against_armor = TRUE
 	sharpness = NONE
 	//muzzle_type = /obj/effect/projectile/pulse/df
 

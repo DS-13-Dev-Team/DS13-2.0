@@ -1,4 +1,4 @@
-/mob/living/carbon/human/necromorph/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null, filterproof = null)
+/mob/living/carbon/human/necromorph/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null, filterproof = null, range)
 	if(!message || stat)
 		return
 

@@ -53,7 +53,7 @@
 	var/initial_y = user.pixel_y
 	var/shake_dir
 	shake_dir = pick(-1, 1)
-	user.play_necro_sound(SOUND_SHOUT, VOLUME_HIGH, TRUE, 3)
+	user.play_necro_sound(SOUND_SHOUT, VOLUME_MID, TRUE, 3)
 	animate(
 		user,
 		pixel_x = (3 * shake_dir),

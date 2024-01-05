@@ -186,7 +186,7 @@
 					/datum/supply_pack/emergency/weedcontrol,
 					/datum/supply_pack/engineering/tools,
 					/datum/supply_pack/engineering/engiequipment,
-					/datum/supply_pack/science/robotics,
+					//datum/supply_pack/science/robotics,
 					/datum/supply_pack/science/plasma,
 					/datum/supply_pack/medical/supplies
 					)

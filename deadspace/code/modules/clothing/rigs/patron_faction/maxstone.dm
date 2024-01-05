@@ -3,7 +3,7 @@
 	name = "engineering advanced"
 	desc = "The latest in cutting-edge RIG technology, uses the standard engineering suit scheme. It has `Parker R.` engraved next to the monitor lights."
 	default_skin = "engineering_advanced"
-	armor = list(MELEE = 50, BULLET = 40, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 45)
+	armor = list(BLUNT = 50, PUNCTURE = 40, SLASH = 45, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 45)
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT

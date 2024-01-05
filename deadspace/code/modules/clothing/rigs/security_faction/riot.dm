@@ -2,7 +2,7 @@
 	name = "riot"
 	desc = "A heavy duty and armoured rig suit, designed for riot control and shipboard disciplinary enforcement. This suit is commonly found among police officers on the Sprawl, and in lesser capacity on private ships and stations."
 	default_skin = "riot"
-	armor = list(MELEE = 40, BULLET = 20, LASER = 20, ENERGY = 15, BOMB = 20, BIO = 100, FIRE = 20, ACID = 30)
+	armor = list(BLUNT = 55, PUNCTURE = 20, SLASH = 40, LASER = 20, ENERGY = 15, BOMB = 20, BIO = 100, FIRE = 20, ACID = 30)
 	siemens_coefficient = 0
 
 	skins = list(

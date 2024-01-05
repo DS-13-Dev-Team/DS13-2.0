@@ -2,7 +2,7 @@
 	name = "standard mining"
 	desc = "A standard issued mining suit, issued to class 1 miners; Commonly used during planet cracking operations."
 	default_skin = "standard_miner"
-	armor = list(MELEE = 25, BULLET = 20, LASER = 25, ENERGY = 25, BOMB = 30, BIO = 100, FIRE = 100, ACID = 15)
+	armor = list(BLUNT = 30, PUNCTURE = 20, SLASH = 25, LASER = 25, ENERGY = 25, BOMB = 30, BIO = 100, FIRE = 100, ACID = 15)
 	resistance_flags = FIRE_PROOF|LAVA_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT

@@ -3,7 +3,7 @@
 	name = "SMO"
 	desc = "A durable RIG designed for medical rescue in high risk areas, and protecting the wearer against acids. This one was made for the SMO and is well taken care of."
 	default_skin = "med"
-	armor = list(MELEE = 15, BULLET = 10, LASER = 25, ENERGY = 10, BOMB = 30, BIO = 100, FIRE = 40, ACID = 80)
+	armor = list(BLUNT = 30, PUNCTURE = 10, SLASH = 15, LASER = 25, ENERGY = 10, BOMB = 30, BIO = 100, FIRE = 40, ACID = 80)
 	complexity_max = 20
 
 	skins = list(

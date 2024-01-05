@@ -157,7 +157,7 @@
 			user.do_attack_animation(src, "smash")
 			user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
 			user.changeNext_move(CLICK_CD_MELEE) //So necros don't JoJo
-			attack_generic(user, dealt_damage, BRUTE, MELEE, TRUE)
+			attack_generic(user, dealt_damage, BRUTE, PUNCTURE, TRUE)
 			return //Angry necro smash locked door
 		to_chat(user, span_warning("[src] refuses to budge!"))
 		return

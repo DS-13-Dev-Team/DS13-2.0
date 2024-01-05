@@ -52,7 +52,7 @@ Ammo casings for the mags
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "rivet"
 	damage = 13.125
-	armour_penetration = 10
+	armor_penetration = 10
 	wound_falloff_tile = -10
 	dismemberment = 5
 	embedding = list(embed_chance=25, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=1 SECONDS)
