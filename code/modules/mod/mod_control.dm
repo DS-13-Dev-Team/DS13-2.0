@@ -153,6 +153,7 @@
 	for(var/obj/item/mod/module/module as anything in modules)
 		uninstall(module, deleting = TRUE)
 	for(var/obj/item/part as anything in mod_parts)
+		UnregisterSignal(part, list(COMSIG_ATOM_DESTRUCTION, COMSIG_PARENT_QDELETING))
 		overslotting_parts -= part
 	mod_parts -= helmet
 	mod_parts -= chestplate
