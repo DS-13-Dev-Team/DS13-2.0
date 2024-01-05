@@ -667,14 +667,12 @@
 /obj/item/mod/control/proc/on_part_destruction(obj/item/part, damage_flag)
 	SIGNAL_HANDLER
 
-	for(var/obj/item/part as anything in mod_parts)
-		UnregisterSignal(part, list(COMSIG_ATOM_DESTRUCTION, COMSIG_PARENT_QDELETING))
 	if(overslotting_parts[part])
 		var/obj/item/overslot = overslotting_parts[part]
 		overslot.forceMove(drop_location())
 		overslotting_parts[part] = null
-	if(QDELETED(src))
-		return
+	for(var/obj/item/part as anything in mod_parts)
+		UnregisterSignal(part, list(COMSIG_ATOM_DESTRUCTION, COMSIG_PARENT_QDELETING))
 	atom_destruction(damage_flag)
 
 /obj/item/mod/control/proc/on_part_deletion(obj/item/part)
