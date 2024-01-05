@@ -28,7 +28,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 
 	var/is_fully_initialized = FALSE
 
-/obj/structure/cable/layer1
+/obj/structure/cable/layer1 //DS13 : Do not switch to the "dumb cable" version from upstream
 	color = "red"
 	cable_layer = CABLE_LAYER_1
 	machinery_layer = null
