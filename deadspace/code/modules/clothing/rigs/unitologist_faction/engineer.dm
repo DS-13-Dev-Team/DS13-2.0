@@ -39,6 +39,7 @@
 
 /obj/item/mod/control/pre_equipped/ds/engineer_advanced_unitologist
 	theme = /datum/mod_theme/deadspace/engineer_advanced_unitologist
+	starting_frequency = MODLINK_FREQ_SYNDICATE
 	initial_modules = list(
 		/obj/item/mod/module/storage/syndicate,
 		/obj/item/mod/module/emp_shield,

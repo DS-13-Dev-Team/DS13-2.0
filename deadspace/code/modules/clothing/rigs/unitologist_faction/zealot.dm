@@ -37,6 +37,7 @@
 	)
 /obj/item/mod/control/pre_equipped/ds/zealot
 	theme = /datum/mod_theme/deadspace/zealot
+	starting_frequency = MODLINK_FREQ_SYNDICATE
 	initial_modules = list(
 		/obj/item/mod/module/storage/syndicate,
 		/obj/item/mod/module/emp_shield,

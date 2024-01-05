@@ -38,6 +38,7 @@
 
 /obj/item/mod/control/pre_equipped/ds/marine_medic
 	theme = /datum/mod_theme/deadspace/marine_medic
+	starting_frequency = MODLINK_FREQ_CENTCOM
 	initial_modules = list(
 		/obj/item/mod/module/storage/syndicate,
 		/obj/item/mod/module/emp_shield,
