@@ -158,7 +158,7 @@
 	mod_parts -= chestplate
 	mod_parts -= gauntlets
 	mod_parts -= boots
-	if(!QDELETED(hemlet))
+	if(!QDELETED(helmet))
 		qdel(helmet)
 	if(!QDELETED(chestplate))
 		qdel(chestplate)
