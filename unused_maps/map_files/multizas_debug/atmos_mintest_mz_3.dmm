@@ -47,12 +47,12 @@
 /area/hallway/primary/central/fore)
 "n" = (
 /obj/machinery/light/floor/has_bulb,
-/obj/structure/cable/smart_cable/color/yellow,
+/obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/iron,
 /area/hallway/primary/central/fore)
 "o" = (
-/obj/structure/cable/multiz,
+/obj/structure/cable/multilayer/multiz,
 /turf/open/floor/plating,
 /area/hallway/primary/central/fore)
 "p" = (

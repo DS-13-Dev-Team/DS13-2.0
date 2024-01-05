@@ -9,11 +9,11 @@
 /area/template_noop)
 "L" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/cable/smart_cable/color/yellow,
+/obj/structure/cable,
 /turf/template_noop,
 /area/ruin/space/djstation/solars)
 "P" = (
-/obj/structure/cable/smart_cable/color/yellow,
+/obj/structure/cable,
 /obj/machinery/power/solar/fake,
 /turf/open/floor/iron/solarpanel/airless,
 /area/ruin/space/djstation/solars)
@@ -23,7 +23,7 @@
 /area/space/nearstation)
 "V" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/cable/smart_cable/color/yellow,
+/obj/structure/cable,
 /obj/modular_map_connector,
 /turf/template_noop,
 /area/ruin/space/djstation/solars)

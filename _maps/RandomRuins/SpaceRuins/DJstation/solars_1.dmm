@@ -40,7 +40,7 @@
 /area/space/nearstation)
 "u" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/cable/smart_cable/color/yellow,
+/obj/structure/cable,
 /obj/modular_map_connector,
 /turf/template_noop,
 /area/ruin/space/djstation/solars)
@@ -67,14 +67,14 @@
 /area/ruin/space/djstation/solars)
 "O" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/cable/smart_cable/color/yellow,
+/obj/structure/cable,
 /turf/template_noop,
 /area/ruin/space/djstation/solars)
 "T" = (
 /turf/template_noop,
 /area/template_noop)
 "U" = (
-/obj/structure/cable/smart_cable/color/yellow,
+/obj/structure/cable,
 /obj/machinery/power/solar/fake,
 /turf/open/floor/iron/solarpanel/airless,
 /area/ruin/space/djstation/solars)
