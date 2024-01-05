@@ -667,6 +667,8 @@
 /obj/item/mod/control/proc/on_part_destruction(obj/item/part, damage_flag)
 	SIGNAL_HANDLER
 
+	for(var/obj/item/part as anything in mod_parts)
+		UnregisterSignal(part, list(COMSIG_ATOM_DESTRUCTION, COMSIG_PARENT_QDELETING))
 	if(overslotting_parts[part])
 		var/obj/item/overslot = overslotting_parts[part]
 		overslot.forceMove(drop_location())
@@ -678,8 +680,8 @@
 /obj/item/mod/control/proc/on_part_deletion(obj/item/part)
 	SIGNAL_HANDLER
 
-	if(QDELETED(src))
-		return
+	for(var/obj/item/part as anything in mod_parts)
+		UnregisterSignal(part, list(COMSIG_ATOM_DESTRUCTION, COMSIG_PARENT_QDELETING))
 	qdel(src)
 
 /obj/item/mod/control/proc/on_potion(atom/movable/source, obj/item/slimepotion/speed/speed_potion, mob/living/user)
