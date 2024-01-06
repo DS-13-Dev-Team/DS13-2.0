@@ -93,3 +93,12 @@
 	default_priority = 50
 
 	icon_state = "xeno"
+
+///Checks if the necro is enhanced, and if so do a different interaction in the ability.
+///Can be used in pretty much anything to do special stuff without needing new procs, sky is the limit.
+/proc/is_enhanced(mob/living/carbon/human/necromorph/N)
+	.=FALSE
+	if(initial(N.class.tier) >= 2) //Necro tier would only change through adminbus, so we can just grab the initial
+		return TRUE
+	return
+
