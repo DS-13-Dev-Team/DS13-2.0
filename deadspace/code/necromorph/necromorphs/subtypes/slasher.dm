@@ -9,7 +9,7 @@
 
 /datum/necro_class/slasher
 	display_name = "Slasher"
-	desc = "The frontline soldier of the necromorph horde. Slow when not charging, but its blade arms make for powerful melee attacks"
+	desc = "The frontline soldier of the necromorph horde. While slow, the slasher's charge and dodge help it close the distance."
 	ui_icon = 'deadspace/icons/necromorphs/slasher/fleshy.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/slasher
 	nest_allowed = TRUE
@@ -60,4 +60,4 @@
 	new_matrix.Turn(16*shake_dir)
 	animate(source, transform = new_matrix, pixel_x = source.pixel_x + 5*shake_dir, time = 1)
 	animate(transform = matrix(), pixel_x = source.pixel_x-5*shake_dir, time = 9, easing = ELASTIC_EASING)
-	source.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_HIGH, TRUE, 3)
+	source.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_MID, TRUE, 3)

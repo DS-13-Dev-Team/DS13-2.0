@@ -3,7 +3,7 @@
 	name = "forged engineering"
 	desc = "An standard CEC Engineering rig that has been forged in the fire of time."
 	default_skin = "forged"
-	armor = list(MELEE = 37.5, BULLET = 30, LASER = 37.5, ENERGY = 37.5, BOMB = 45, BIO = 100, FIRE = 100, ACID = 45)
+	armor = list(BLUNT = 45, PUNCTURE = 30, SLASH = 37.5, LASER = 37.5, ENERGY = 37.5, BOMB = 45, BIO = 100, FIRE = 100, ACID = 45)
 	resistance_flags = FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0

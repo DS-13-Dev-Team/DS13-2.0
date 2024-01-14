@@ -6,7 +6,7 @@
 	base_icon_state = "lattice"
 	density = FALSE
 	anchored = TRUE
-	armor = list(MELEE = 50, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 80, ACID = 50)
+	armor = list(BLUNT = 50, PUNCTURE = 0, SLASH = 90, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 80, ACID = 50)
 	max_integrity = 50
 	layer = LATTICE_LAYER //under pipes
 	plane = FLOOR_PLANE
@@ -50,6 +50,20 @@
 	if(!(flags_1 & NODECONSTRUCT_1))
 		new build_material(get_turf(src), number_of_mats)
 	qdel(src)
+
+/obj/structure/lattice/ex_act(severity, target)
+	if(resistance_flags & INDESTRUCTIBLE)
+		return
+	if(QDELETED(src))
+		return
+	switch(severity)
+		if(EXPLODE_DEVASTATE)
+			take_damage(INFINITY, BRUTE, BOMB, 0)
+		if(EXPLODE_HEAVY)
+			return //We don't want explosions to destroy lattice unless it's devastate range
+		if(EXPLODE_LIGHT)
+			return
+	. = ..()
 
 /obj/structure/lattice/intercept_zImpact(list/falling_movables, levels)
 	. = ..()

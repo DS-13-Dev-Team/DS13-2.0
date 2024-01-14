@@ -138,7 +138,7 @@
 				to_chat(src, span_warning("[L] is restrained, you cannot push past."))
 			return TRUE
 
-		var/list/grabs = L.get_active_grabs()
+		var/list/grabs = L.active_grabs
 		if(length(grabs))
 			for(var/obj/item/hand_item/grab/G in grabs)
 				if(ismob(G.affecting))
@@ -613,6 +613,9 @@
 
 //Proc used to resuscitate a mob, for full_heal see fully_heal()
 /mob/living/proc/revive(full_heal = FALSE, admin_revive = FALSE, excess_healing = 0)
+	if(QDELETED(src))
+		return
+
 	if(excess_healing)
 		if(iscarbon(src))
 			var/mob/living/carbon/C = src
@@ -628,7 +631,7 @@
 		adjustToxLoss(-20, TRUE, TRUE) //slime friendly
 		updatehealth()
 
-		grab_ghost()
+	grab_ghost()
 
 	if(full_heal)
 		fully_heal(admin_revive = admin_revive)
@@ -759,10 +762,7 @@
 		lying_angle_on_movement(direct)
 	if (buckled && buckled.loc != newloc) //not updating position
 		if (!buckled.anchored)
-			buckled.moving_from_pull = moving_from_pull
-			. = buckled.Move(newloc, direct, glide_size)
-			buckled.moving_from_pull = null
-		return
+			return buckled.move_from_pull(newloc, buckled, glide_size)
 
 	var/old_direction = dir
 	var/turf/T = loc
@@ -1137,7 +1137,7 @@
 		Robot.notify_ai(AI_NOTIFICATION_NEW_BORG)
 	else
 		for(var/obj/item/item in src)
-			if(!dropItemToGround(item))
+			if(!dropItemToGround(item) || (item.item_flags & ABSTRACT))
 				qdel(item)
 				continue
 			item_contents += item
@@ -1466,6 +1466,9 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 
 	if(!QDELETED(src) && currently_z_moving == ZMOVING_VERTICAL) // Lateral Z movement handles this on it's own
 		handle_grabs_during_movement(old_loc, get_dir(old_loc, src))
+		recheck_grabs()
+
+	else if(!forcemove_should_maintain_grab && length(active_grabs))
 		recheck_grabs()
 
 	if(client)
@@ -2216,3 +2219,5 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 				return MOUSE_ICON_HOVERING_INTERACTABLE
 		else
 			return MOUSE_ICON_HOVERING_INTERACTABLE
+
+

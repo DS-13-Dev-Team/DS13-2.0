@@ -7,7 +7,7 @@
 
 /datum/necro_class/puker
 	display_name = "Puker"
-	desc = "A tough and flexible elite who fights by dousing enemies in acid, and is effective at all ranges. Good for crowd control and direct firefights"
+	desc = "A flexible ranged necromorph who fights by dousing enemies in acid, and is effective at long ranges. Good for crowd control and direct firefights, but suffers greatly in melee combat."
 	ui_icon = 'deadspace/icons/necromorphs/puker/puker.dmi'
 	necromorph_type_path = /mob/living/carbon/human/necromorph/puker
 	nest_allowed = TRUE
@@ -16,7 +16,7 @@
 	biomass_spent_required = 680
 	melee_damage_lower = 7
 	melee_damage_upper = 10
-	max_health = 100
+	max_health = 125
 	actions = list(
 		/datum/action/cooldown/necro/shoot/puker_snapshot,
 		/datum/action/cooldown/necro/shoot/puker_longshot,

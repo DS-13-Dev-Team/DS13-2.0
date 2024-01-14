@@ -12,11 +12,11 @@
 	necromorph_type_path = /mob/living/carbon/human/necromorph/spitter
 	nest_allowed = TRUE
 	tier = 1
-	biomass_cost = 50
+	biomass_cost = 45
 	biomass_spent_required = 0
 	melee_damage_lower = 10
 	melee_damage_upper = 13
-	max_health = 100
+	max_health = 90
 	actions = list(
 		/datum/action/cooldown/necro/shoot/spitter_snapshoot,
 		/datum/action/cooldown/necro/shoot/spitter_longshoot,

@@ -89,7 +89,7 @@
 			SSexplosions.lowturf += T
 			for(var/atom/A in T)
 				//We dont want brute to destroy this stuff
-				if(!istype(A, /obj/machinery/atmospherics/pipe) && !istype(A, /obj/structure/cable))
+				if(!istype(A, /obj/machinery/atmospherics/pipe) && !istype(A, /obj/structure/cable) && !istype(A, /obj/structure/disposalpipe))
 					SSexplosions.med_mov_atom += A
 
 	sleep(1)

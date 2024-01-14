@@ -3,7 +3,7 @@
 	name = "knight"
 	desc = "A rig made from the reforged armor of his family that was passed from generation to generations for decades."
 	default_skin = "knight"
-	armor = list(MELEE = 50, BULLET = 40, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 45)
+	armor = list(BLUNT = 45, PUNCTURE = 50, SLASH = 65, LASER = 50, ENERGY = 50, BOMB = 45, BIO = 100, FIRE = 100, ACID = 45)
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT

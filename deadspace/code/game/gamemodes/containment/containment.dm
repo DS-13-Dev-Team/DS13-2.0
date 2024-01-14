@@ -109,6 +109,9 @@
 
 	return ..()
 
+/datum/game_mode/containment/process(delta_time)
+	return //A bandaid fix to prevent runtimes. Replace this if we want to do certain stuff midround
+
 /datum/game_mode/containment/proc/announce_marker()
 	. += "<center><b><h2>CEC Corporation Report</h2></b></center><hr><br />"
 	. += "Your ship is currently in Cygnus System not far from Aegis VII planet. It is resricted area of space and you shold avoid outside contancts. Your task is to extract alien artifact on the planet surface and deliver it to the rendezvous point. Make sure Earth Government or crew without priority access will not find out about your location, task or cargo. "

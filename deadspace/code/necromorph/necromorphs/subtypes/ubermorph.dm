@@ -69,7 +69,7 @@
 	. = ..()
 	if(.)
 		var/mob/living/carbon/human/necromorph/N = owner
-		N.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_MAX, 1, 6)
+		N.play_necro_sound(SOUND_SHOUT_LONG, VOLUME_HIGH, 1, 6)
 		shake_camera(N, 6, 4)
 
 		for (var/mob/living/L in view(7, N))

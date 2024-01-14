@@ -12,7 +12,6 @@
 	burnmod = 1.2
 
 	examine_limb_id = SPECIES_NECROMORPH
-	exotic_bloodtype = "X"
 	meat = /obj/item/food/meat/slab/human/mutant/necro
 	liked_food = NONE
 	disliked_food = NONE

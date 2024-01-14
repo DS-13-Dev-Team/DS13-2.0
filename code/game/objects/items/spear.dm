@@ -5,24 +5,25 @@
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
-	force = 10
+	force = 7
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
-	var/wielded = FALSE
-	block_chance = 20 //Doesn't get as much block as other twohanded due to makeshift creation
-	throwforce = 20
+	throwforce = 15
 	throw_speed = 4
+	block_chance = 20 //Doesn't get as much block as other twohanded due to makeshift creation
 	embedding = list("impact_pain_mult" = 2, "remove_pain_mult" = 4, "jostle_chance" = 2.5)
-	armour_penetration = 10
+	armor_penetration = 10
 	custom_materials = list(/datum/material/iron=1150, /datum/material/glass=2075)
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "pokes", "jabs", "tears", "lacerates", "gores")
 	attack_verb_simple = list("attack", "poke", "jab", "tear", "lacerate", "gore")
 	sharpness = SHARP_EDGED // i know the whole point of spears is that they're pointy, but edged is more devastating at the moment so
 	max_integrity = 200
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 30)
+	armor = list(BLUNT = 0, PUNCTURE = 0, SLASH = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 30)
+
 	var/war_cry = "AAAAARGH!!!"
 	var/icon_prefix = "spearglass"
+	var/wielded = FALSE
 
 /obj/item/spear/Initialize(mapload)
 	. = ..()
@@ -56,16 +57,16 @@
 	return 0
 
 /obj/item/spear/CheckParts(list/parts_list)
-	var/obj/item/shard/tip = locate() in parts_list
+	var/obj/item/shard/tip = locate() in contents
 	if(tip)
 		if (istype(tip, /obj/item/shard/plasma))
-			force = 11
+			force = 8
 			throwforce = 21
 			block_chance = 22
 			icon_prefix = "spearplasma"
 			AddComponent(/datum/component/two_handed, force_unwielded=11, force_wielded=19, icon_wielded="[icon_prefix]1")
 		else if (istype(tip, /obj/item/shard/titanium))
-			force = 13
+			force = 10
 			throwforce = 21
 			throw_range = 8
 			throw_speed = 5
@@ -73,7 +74,7 @@
 			icon_prefix = "speartitanium"
 			AddComponent(/datum/component/two_handed, force_unwielded=13, force_wielded=18, icon_wielded="[icon_prefix]1")
 		else if (istype(tip, /obj/item/shard/plastitanium))
-			force = 13
+			force = 10
 			throwforce = 22
 			throw_range = 9
 			throw_speed = 5
@@ -92,14 +93,10 @@
 	icon_prefix = "spearbomb"
 	block_chance = 0 //You probably don't want to block with a explosive
 	var/obj/item/grenade/explosive = null
-	wielded = FALSE // track wielded status on item
 
 /obj/item/spear/explosive/Initialize(mapload)
 	. = ..()
-	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
-	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 	set_explosive(new /obj/item/grenade/iedcasing/spawned()) //For admin-spawned explosive lances
-	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=18, icon_wielded="[icon_prefix]1")
 
 /obj/item/spear/explosive/proc/set_explosive(obj/item/grenade/G)
 	if(explosive)
@@ -148,7 +145,7 @@
 
 /obj/item/spear/explosive/afterattack(atom/movable/AM, mob/user, proximity)
 	. = ..()
-	if(!proximity || !wielded || !istype(AM))
+	if(!proximity || !istype(AM))
 		return
 	if(AM.resistance_flags & INDESTRUCTIBLE) //due to the lich incident of 2021, embedding grenades inside of indestructible structures is forbidden
 		return
@@ -202,7 +199,7 @@
 	force = 12
 	throwforce = 22
 	block_chance = 23 //Slightly better then makeshift glass spear
-	armour_penetration = 15 //Enhanced armor piercing
+	armor_penetration = 15 //Enhanced armor piercing
 
 /obj/item/spear/bonespear/Initialize(mapload)
 	. = ..()

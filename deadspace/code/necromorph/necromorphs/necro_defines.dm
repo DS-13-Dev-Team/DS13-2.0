@@ -22,7 +22,7 @@
 	initial_language_holder = /datum/language_holder/necro_talk
 	type_of_meat = /obj/item/food/meat/slab/human/mutant/necro
 	mob_biotypes = MOB_ORGANIC|MOB_UNDEAD|MOB_HUMANOID
-	mobility_flags = MOBILITY_MOVE|MOBILITY_STAND|MOBILITY_PULL|MOBILITY_REST|MOBILITY_LIEDOWN
+	mobility_flags = MOBILITY_MOVE|MOBILITY_STAND|MOBILITY_PULL|MOBILITY_REST|MOBILITY_LIEDOWN|MOBILITY_UI
 	base_pixel_x = -8
 	base_pixel_y = 0
 	pixel_x = -8

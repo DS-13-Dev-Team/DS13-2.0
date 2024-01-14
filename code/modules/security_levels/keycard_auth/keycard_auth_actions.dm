@@ -37,7 +37,7 @@
 		make_maint_all_access()
 
 
-/datum/keycard_auth_action/bsa_firing_toggle
+/*datum/keycard_auth_action/bsa_firing_toggle
 	name = "Bluespace Artillery Unlock"
 	ui_icon = "meteor"
 
@@ -47,5 +47,5 @@
 		return
 	GLOB.bsa_unlock = !GLOB.bsa_unlock
 	minor_announce("Bluespace Artillery firing protocols have been [GLOB.bsa_unlock? "unlocked" : "locked"]", "Weapons Systems Update:")
-	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("bluespace artillery", GLOB.bsa_unlock? "unlocked" : "locked"))
+	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("bluespace artillery", GLOB.bsa_unlock? "unlocked" : "locked"))*/
 

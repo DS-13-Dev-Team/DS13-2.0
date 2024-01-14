@@ -88,9 +88,15 @@
 		stages[i] = list()
 
 	for(var/turf/T as anything in RANGE_TURFS(range, our_loc)-our_loc)
+		if(get_dist_euclidian(our_loc, T) > range)
+			continue
 		var/angle_to_turf = SIMPLIFY_DEGREES(ATAN2(T.x - our_loc.x, T.y - our_loc.y))
-		if(angle_to_turf >= smallest_angle && angle_to_turf <= biggest_angle && get_dist_euclidian(our_loc, T) <= range)
-			stages[ROUND_UP(SIMPLIFY_DEGREES(angle_to_turf - smallest_angle)/30)] += T
+		if(smallest_angle > biggest_angle)
+			if(angle_to_turf < smallest_angle && angle_to_turf > biggest_angle)
+				continue
+		else if (angle_to_turf < smallest_angle || angle_to_turf > biggest_angle)
+			continue
+		stages[ROUND_UP(SIMPLIFY_DEGREES(angle_to_turf - smallest_angle)/30)] += T
 
 	// 1 is right, -1 is left
 	var/hand_modifier = (owner.active_hand_index % 2) ? - 1 : 1
@@ -149,6 +155,12 @@
 	pixel_x = -40
 	pixel_y = -32
 	var/variable_icon = FALSE
+	//This lets us have different swing sounds for different swing visuals
+	var/swing_sound = list(
+		'deadspace/sound/effects/attacks/big_swoosh_1.ogg',
+		'deadspace/sound/effects/attacks/big_swoosh_2.ogg',
+		'deadspace/sound/effects/attacks/big_swoosh_3.ogg',
+		)
 
 /obj/effect/temp_visual/swing/Initialize(mapload, duration, angle, swing_direction, starting_degree)
 	src.duration = duration
@@ -158,9 +170,6 @@
 	transform = transform.Turn(starting_degree + 90)
 	. = ..()
 	var/turn_angle = angle * swing_direction * 1.1
+	var/swing_sounds = src.swing_sound
 	animate(src, duration, transform = transform.Turn(turn_angle), easing = CIRCULAR_EASING)
-	playsound(src, pick(
-		'deadspace/sound/effects/attacks/big_swoosh_1.ogg',
-		'deadspace/sound/effects/attacks/big_swoosh_2.ogg',
-		'deadspace/sound/effects/attacks/big_swoosh_3.ogg',
-	), VOLUME_MID, 1)
+	playsound(src, pick(swing_sounds), VOLUME_MID, 1)

@@ -3,7 +3,7 @@
 	name = "Spec Ops"
 	desc = "A heavily armoured rig suit, designed for military use. Especially effective against bullets."
 	default_skin = "carver"
-	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 15, BOMB = 40, BIO = 100, FIRE = 35, ACID = 45)
+	armor = list(BLUNT = 40, PUNCTURE = 65, SLASH = 30, LASER = 20, ENERGY = 15, BOMB = 40, BIO = 100, FIRE = 35, ACID = 45)
 	siemens_coefficient = 0
 
 	skins = list(
