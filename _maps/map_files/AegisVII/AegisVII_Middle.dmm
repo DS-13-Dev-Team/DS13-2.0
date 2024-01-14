@@ -8206,7 +8206,6 @@
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/table,
 /obj/effect/spawner/random/food_or_drink/pizzaparty,
-/obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningdock/cafeteria)
 "cYO" = (
