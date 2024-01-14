@@ -3050,15 +3050,6 @@
 /obj/structure/stairs/south,
 /turf/open/floor/deadspace/mono,
 /area/station/security/brig)
-"aOa" = (
-/obj/machinery/power/apc/auto_name/directional/west,
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/turf/open/floor/deadspace/random/slides{
-	dir = 1
-	},
-/area/aegis/hanger)
 "aOf" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/techstorage/tcomms_all,
@@ -61921,7 +61912,7 @@ abe
 abU
 apU
 aNT
-aOa
+oXA
 xOt
 hAc
 oXA
