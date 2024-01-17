@@ -42,7 +42,7 @@
 	nest_allowed = FALSE
 	tier = 3
 	biomass_cost = 400
-	biomass_spent_required = 950
+	biomass_spent_required = 1200
 	max_health = 275
 	melee_damage_lower = 18
 	melee_damage_upper = 22
