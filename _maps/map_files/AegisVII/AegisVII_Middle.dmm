@@ -6935,8 +6935,8 @@
 /turf/open/floor/carpet/blue,
 /area/station/service/chapel/office)
 "cdf" = (
-/obj/structure/closet/firecloset,
-/turf/open/floor/deadspace/mono,
+/obj/structure/bed/roller,
+/turf/open/floor/iron/white,
 /area/station/maintenance/starboard/central)
 "cdk" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -16580,13 +16580,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
-"jjd" = (
-/obj/effect/turf_decal/tile/red/half/contrasted{
-	dir = 8
-	},
-/obj/machinery/firealarm/directional/west,
-/turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
 "jjm" = (
 /obj/machinery/light/directional/west,
 /obj/machinery/firealarm/directional/west,
@@ -26308,6 +26301,7 @@
 /area/station/hallway/secondary/exit)
 "qOE" = (
 /obj/structure/cable/multilayer/multiz,
+/obj/structure/closet/firecloset,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/starboard/central)
 "qOI" = (
@@ -30579,6 +30573,7 @@
 	dir = 4
 	},
 /obj/structure/railing,
+/obj/machinery/light/small/maintenance/directional/east,
 /turf/open/floor/deadspace/mono,
 /area/station/maintenance/starboard/central)
 "ulZ" = (
@@ -32077,12 +32072,9 @@
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
 "vzL" = (
-/obj/structure/stairs/north{
-	dir = 4
-	},
-/obj/machinery/light/small/maintenance/directional/east,
-/obj/structure/railing,
-/turf/open/floor/deadspace/mono,
+/obj/machinery/firealarm/directional/west,
+/obj/structure/bed/roller,
+/turf/open/floor/iron/white,
 /area/station/maintenance/starboard/central)
 "vAl" = (
 /obj/machinery/light/directional/north,
@@ -44744,8 +44736,8 @@ aoU
 tCf
 vGs
 ogl
-vzL
-cdf
+ogl
+ogl
 ogl
 nmQ
 nTl
@@ -44901,8 +44893,8 @@ rQG
 hae
 hae
 ogl
-ogl
-ogl
+cdf
+vzL
 ogl
 fKw
 fKw
@@ -45059,7 +45051,7 @@ aEx
 kBN
 sim
 sim
-jjd
+sim
 cRP
 dWR
 jpv
