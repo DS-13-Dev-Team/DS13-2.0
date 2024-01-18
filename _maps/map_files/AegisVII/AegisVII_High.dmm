@@ -2698,6 +2698,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
+"NA" = (
+/obj/machinery/light/small/maintenance/directional/east,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/upper)
 "NC" = (
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/random/slides,
@@ -12211,7 +12215,7 @@ bX
 bX
 RN
 oU
-iT
+NA
 oU
 RN
 QT
