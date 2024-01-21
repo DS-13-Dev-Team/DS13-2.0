@@ -29,6 +29,7 @@
 	actions = list(
 		/datum/action/cooldown/necro/shout,
 		/datum/action/cooldown/necro/charge,
+		/datum/action/cooldown/necro/charge/twitcher,
 	)
 	minimap_icon = "twitcher"
 	implemented = TRUE
