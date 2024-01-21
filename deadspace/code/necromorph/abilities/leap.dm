@@ -5,7 +5,6 @@
 	charge_delay = 1.2 SECONDS
 	charge_time = 8 SECONDS
 	charge_speed = 2
-	charge_damage = 30
 	var/cached_pass_flags
 
 /datum/action/cooldown/necro/charge/leaper/enhanced
@@ -14,7 +13,6 @@
 	cooldown_time = 18 SECONDS
 	charge_time = 8 SECONDS
 	charge_speed = 1.5
-	charge_damage = 50
 
 /datum/action/cooldown/necro/charge/leaper/do_charge_indicator(atom/charge_target)
 	var/mob/living/carbon/human/necromorph/source = owner

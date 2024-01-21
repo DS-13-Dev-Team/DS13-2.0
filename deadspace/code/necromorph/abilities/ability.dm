@@ -29,14 +29,6 @@
 	Trigger()
 	return COMSIG_KB_ACTIVATED
 
-///Checks if the necro is enhanced, and if so do a different interaction in the ability.
-///Will primarily be used for infector and exploder
-/datum/action/cooldown/necro/proc/is_enhanced(mob/living/carbon/human/necromorph/N)
-	.=FALSE
-	if(initial(N.class.tier) >= 2) //Necro tier would only change through adminbus, so we can just grab the initial
-		return TRUE
-	return
-
 /*
 	Active abilties that can be activated but can't be deactivated
 */

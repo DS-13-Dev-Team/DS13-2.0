@@ -3,17 +3,15 @@
 /datum/action/cooldown/necro/charge
 	name = "Charge"
 	desc = "Allows you to charge at a chosen position."
-	cooldown_time = 1.5 SECONDS
+	cooldown_time = 10 SECONDS
 	click_to_activate = TRUE
 	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_CHARGE_DOWN
 	/// Delay before the charge actually occurs
-	var/charge_delay = 1 SECONDS
+	var/charge_delay = 10 SECONDS
 	/// The maximum amount of time we can charge
 	var/charge_time = 10 SECONDS
 	/// The sleep time before moving in deciseconds while charging
 	var/charge_speed = 4
-	/// The damage the charger does when bumping into something
-	var/charge_damage = 30
 	/// If the current move is being triggered by us or not
 	var/actively_moving = FALSE
 	var/valid_steps_taken = 0
@@ -153,7 +151,7 @@
 	SSmove_manager.stop_looping(owner)
 
 /datum/action/cooldown/necro/charge/proc/hit_target(mob/living/carbon/human/necromorph/source, mob/living/target)
-	target.attack_necromorph(source, dealt_damage = charge_damage)
+	target.attack_necromorph(source)
 	if(isliving(target))
 		if(ishuman(target))
 			var/mob/living/carbon/human/human_target = target
@@ -166,7 +164,7 @@
 		shake_camera(source, 2, 3)
 		target.visible_message(
 			span_danger("[source] slams into [target]!"),
-			span_userdanger("[source] tramples you into the ground!")
+			span_userdanger("[source] tramples you onto the ground!")
 			)
 		target.Knockdown(6)
 	else
