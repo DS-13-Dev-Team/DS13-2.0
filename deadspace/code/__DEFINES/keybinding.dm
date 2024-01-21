@@ -34,7 +34,7 @@
 #define COMSIG_KB_NECROMORPH_ABILITY_DIVIDE_DOWN "keybinding_necromorph_ability_divide_down"
 #define COMSIG_KB_NECROMORPH_ABILITY_TONGUE_DOWN "keybinding_necromorph_ability_tongue_down"
 #define COMSIG_KB_NECROMORPH_ABILITY_DIVIDERSWING_DOWN "keybinding_necromorph_ability_dividerswing_down"
-//placeholder twitcher abilities, remove comment when implemented
+//Twitcher
 #define COMSIG_KB_NECROMORPH_ABILITY_STEPSTRIKE_DOWN "keybinding_necromorph_ability_stepstrike_down"
 //placeholder tripod abilities, remove comment when implemented
 #define COMSIG_KB_NECROMORPH_ABILITY_TRIPODLEAP_DOWN "keybinding_necromorph_ability_tripodleap_down"
