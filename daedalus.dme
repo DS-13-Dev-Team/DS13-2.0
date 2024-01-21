@@ -4659,8 +4659,6 @@
 #include "deadspace\code\game\aegis_areas.dm"
 #include "deadspace\code\game\aegis_content.dm"
 #include "deadspace\code\game\atoms.dm"
-#include "deadspace\code\game\mara_areas.dm"
-#include "deadspace\code\game\mara_content.dm"
 #include "deadspace\code\game\mob.dm"
 #include "deadspace\code\game\movable.dm"
 #include "deadspace\code\game\objs.dm"
