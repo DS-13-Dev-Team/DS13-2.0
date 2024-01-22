@@ -96,7 +96,7 @@
 	if(. == BULLET_ACT_HIT)
 		if(isliving(target))
 			var/mob/living/M = target
-			M.adjust_timed_status_effect(8 SECONDS, /datum/status_effect/bioacid)
+			M.adjust_timed_status_effect(18 SECONDS, /datum/status_effect/bioacid)
 
 #define PUKER_SNAPSHOT_AUTOTARGET_RANGE 3
 
@@ -139,4 +139,4 @@
 	if(. == BULLET_ACT_HIT)
 		if(isliving(target))
 			var/mob/living/M = target
-			M.adjust_timed_status_effect(5 SECONDS, /datum/status_effect/bioacid)
+			M.adjust_timed_status_effect(10 SECONDS, /datum/status_effect/bioacid)

@@ -226,7 +226,7 @@
 	if(. == BULLET_ACT_HIT)
 		if(isliving(target))
 			var/mob/living/M = target
-			M.adjust_timed_status_effect(15 SECONDS, /datum/status_effect/bioacid)
+			M.adjust_timed_status_effect(30 SECONDS, /datum/status_effect/bioacid)
 
 #undef CURL_ANIMATION_TIME
 #undef CURL_FORCED_DURATION

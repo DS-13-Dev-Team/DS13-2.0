@@ -80,7 +80,7 @@
 	if(. == BULLET_ACT_HIT)
 		if(isliving(target))
 			var/mob/living/M = target
-			M.adjust_timed_status_effect(6 SECONDS, /datum/status_effect/bioacid)
+			M.adjust_timed_status_effect(9 SECONDS, /datum/status_effect/bioacid)
 
 #define SPITTER_SNAPSHOT_AUTOTARGET_RANGE 3
 
@@ -123,5 +123,5 @@
 	if(. == BULLET_ACT_HIT)
 		if(isliving(target))
 			var/mob/living/M = target
-			M.adjust_timed_status_effect(3 SECONDS, /datum/status_effect/bioacid)
+			M.adjust_timed_status_effect(6 SECONDS, /datum/status_effect/bioacid)
 

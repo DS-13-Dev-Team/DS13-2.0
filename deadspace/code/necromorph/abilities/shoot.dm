@@ -61,21 +61,38 @@
 /datum/status_effect/bioacid
 	id = "bioacid"
 	status_type = STATUS_EFFECT_UNIQUE //Won't give us a new effect until this one wears off
-	duration = 1 SECONDS //The different necro acid projectiles increase this duration
-	max_duration = 40 SECONDS
+	duration = 4 SECONDS //The different necro acid projectiles increase this duration
+	max_duration = 180 SECONDS
+	tick_interval = 2 SECONDS
 	alert_type = /atom/movable/screen/alert/status_effect/bioacid
+
+/datum/status_effect/bioacid/on_creation(mob/living/new_owner)
+	RegisterSignal(new_owner, COMSIG_COMPONENT_CLEAN_ACT, PROC_REF(on_clean))
+	. = ..()
+
+/datum/status_effect/bioacid/on_remove()
+	UnregisterSignal(owner, COMSIG_COMPONENT_CLEAN_ACT, PROC_REF(on_clean))
+	. = ..()
+
+//If the poor sod gets some water they can wash the acid off
+/datum/status_effect/bioacid/proc/on_clean(atom/source, clean_types)
+	SIGNAL_HANDLER
+	if(!(clean_types & CLEAN_TYPE_ACID))
+		return NONE
+	owner.remove_status_effect(/datum/status_effect/bioacid)
+	return COMPONENT_CLEANED
 
 /datum/status_effect/bioacid/tick()
 	linked_alert.icon_state = "bioacid"
 	var/armor = owner.run_armor_check(attack_flag = ACID, silent = TRUE)
-	owner.apply_damage(2.7, BURN, blocked = armor, spread_damage = TRUE)
+	owner.apply_damage(3, BURN, blocked = armor, spread_damage = TRUE)
 
 /datum/status_effect/bioacid/get_examine_text()
 	return span_warning("[owner.p_they(TRUE)] [owner.p_are()] covered in sizzling acid!")
 
 /atom/movable/screen/alert/status_effect/bioacid
 	name = "Covered in acid"
-	desc = "You are covered in sizzling acid! <i>You take burn damage over time.</i>"
+	desc = "You are covered in sizzling acid! <i>Splash yourself with some water, or find a shower!</i>"
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "impact_acid_4"
 
