@@ -6,6 +6,8 @@
 	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_CHEST & ~(BP_HAS_BONES|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "chest"
+	interaction_flags_item = NONE //So you don't pick it up
+	w_class = WEIGHT_CLASS_GIGANTIC //So you can't put them in bags
 	icon_dmg_overlay = null
 	icon_bloodycover = null
 	max_damage = 200
@@ -25,6 +27,8 @@
 	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_HEAD & ~(BP_HAS_BONES|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "head"
+	interaction_flags_item = NONE
+	w_class = WEIGHT_CLASS_GIGANTIC
 	icon_dmg_overlay = null
 	icon_bloodycover = null
 	max_damage = 200
@@ -56,6 +60,8 @@
 	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_arm"
+	interaction_flags_item = NONE
+	w_class = WEIGHT_CLASS_GIGANTIC
 	icon_dmg_overlay = null
 	icon_bloodycover = null
 	attack_verb_continuous = list("slaps", "punches")
@@ -87,6 +93,8 @@
 	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_arm"
+	interaction_flags_item = NONE
+	w_class = WEIGHT_CLASS_GIGANTIC
 	icon_dmg_overlay = null
 	icon_bloodycover = null
 	attack_verb_continuous = list("slaps", "punches")
@@ -118,6 +126,8 @@
 	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_LEGS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_leg"
+	interaction_flags_item = NONE
+	w_class = WEIGHT_CLASS_GIGANTIC
 	icon_dmg_overlay = null
 	icon_bloodycover = null
 	attack_verb_continuous = list("kicks", "stomps")
@@ -149,6 +159,8 @@
 	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_LEGS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_leg"
+	interaction_flags_item = NONE
+	w_class = WEIGHT_CLASS_GIGANTIC
 	icon_dmg_overlay = null
 	icon_bloodycover = null
 	attack_verb_continuous = list("kicks", "stomps")
