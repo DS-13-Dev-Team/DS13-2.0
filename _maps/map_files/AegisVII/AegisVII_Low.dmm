@@ -678,7 +678,7 @@
 /obj/structure/rack,
 /obj/item/tank/internals/emergency_oxygen/double,
 /turf/open/floor/deadspace/grater,
-/area/aegis/surface)
+/area/aegis/mining)
 "fi" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/medical,
@@ -1956,7 +1956,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/aegis/surface)
+/area/aegis/mining)
 "oG" = (
 /obj/structure/filingcabinet/filingcabinet,
 /turf/open/floor/plating,
@@ -1976,7 +1976,7 @@
 /obj/item/clothing/mask/gas,
 /obj/structure/rack,
 /turf/open/floor/deadspace/grater,
-/area/aegis/surface)
+/area/aegis/mining)
 "oR" = (
 /obj/machinery/power/terminal{
 	dir = 8
@@ -1988,7 +1988,7 @@
 /obj/item/radio,
 /obj/structure/rack,
 /turf/open/floor/deadspace/grater,
-/area/aegis/surface)
+/area/aegis/mining)
 "oW" = (
 /obj/structure/table/wood/poker,
 /turf/open/floor/plating,
@@ -2009,13 +2009,13 @@
 	name = "Cave-In Shelter 3"
 	},
 /turf/open/floor/deadspace/mono,
-/area/aegis/surface)
+/area/aegis/mining)
 "pf" = (
 /obj/machinery/door/airlock/external{
 	name = "Cave-In Shelter 2"
 	},
 /turf/open/floor/deadspace/mono,
-/area/aegis/surface)
+/area/aegis/mining)
 "ph" = (
 /turf/open/floor/deadspace/mono,
 /area/station/medical/medbay/aft)
@@ -2027,7 +2027,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/surface)
+/area/aegis/mining)
 "pm" = (
 /obj/machinery/camera/autoname/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -2055,13 +2055,13 @@
 /obj/item/bedsheet/random,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/aegis/surface)
+/area/aegis/mining)
 "py" = (
 /obj/machinery/door/airlock/external{
 	name = "Cave-In-Shelter 1"
 	},
 /turf/open/floor/deadspace/mono,
-/area/aegis/surface)
+/area/aegis/mining)
 "pA" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/random/food_or_drink/booze,
@@ -2451,7 +2451,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/surface)
+/area/aegis/mining)
 "su" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
@@ -2497,7 +2497,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/aegis/snow_biodome)
+/area/aegis/telecomms)
 "sI" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 1
@@ -2611,7 +2611,7 @@
 /area/station/cargo/warehouse)
 "ui" = (
 /turf/closed/wall/r_wall,
-/area/aegis/snow_biodome)
+/area/aegis/telecomms)
 "uk" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/maintenance/port/lesser)
@@ -2787,7 +2787,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/surface)
+/area/aegis/mining)
 "we" = (
 /obj/machinery/modular_computer/console/preset/curator,
 /turf/open/floor/deadspace/random/maint_center,
@@ -2816,7 +2816,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/medical/medkit,
 /turf/open/floor/deadspace/grater,
-/area/aegis/surface)
+/area/aegis/mining)
 "wu" = (
 /obj/structure/rack/shelf,
 /obj/effect/turf_decal/bot_white,
@@ -2828,7 +2828,7 @@
 /obj/machinery/power/smes/magical,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/aegis/snow_biodome)
+/area/aegis/telecomms)
 "wy" = (
 /obj/item/toy/figure/wizard,
 /turf/open/floor/plating,
@@ -3105,7 +3105,7 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/aegis/surface)
+/area/aegis/mining)
 "zp" = (
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/lesser)
@@ -3209,7 +3209,7 @@
 /obj/effect/spawner/random/entertainment/money_large,
 /obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/deadspace/grater,
-/area/aegis/surface)
+/area/aegis/mining)
 "AI" = (
 /obj/item/clothing/head/welding/knight,
 /turf/open/floor/plating,
@@ -3293,7 +3293,7 @@
 "BM" = (
 /obj/machinery/telecomms/relay/preset/station,
 /turf/open/floor/deadspace/hardwood,
-/area/aegis/snow_biodome)
+/area/aegis/telecomms)
 "BP" = (
 /obj/effect/spawner/random/maintenance/two,
 /obj/structure/rack,
@@ -3628,7 +3628,7 @@
 /area/station/maintenance/fore/lesser)
 "Fq" = (
 /turf/open/floor/deadspace/random/slides,
-/area/aegis/surface)
+/area/aegis/mining)
 "Fy" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/contraband/permabrig_weapon,
@@ -4084,7 +4084,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/hardwood,
-/area/aegis/snow_biodome)
+/area/aegis/telecomms)
 "KQ" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 1;
@@ -4313,6 +4313,9 @@
 /obj/item/storage/toolbox/syndicate,
 /turf/open/misc/asteroid,
 /area/aegis/surface)
+"Ns" = (
+/turf/open/floor/deadspace/grater,
+/area/aegis/mining)
 "Nu" = (
 /obj/effect/spawner/random/decoration/glowstick,
 /turf/open/misc/asteroid,
@@ -4434,7 +4437,7 @@
 /area/station/maintenance/fore/lesser)
 "OT" = (
 /turf/open/floor/deadspace/hardwood,
-/area/aegis/snow_biodome)
+/area/aegis/telecomms)
 "OU" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plating,
@@ -4468,7 +4471,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/surface)
+/area/aegis/mining)
 "Pe" = (
 /obj/item/clothing/shoes/discoshoes,
 /turf/open/floor/eighties/red,
@@ -4552,6 +4555,9 @@
 /obj/structure/bookcase/random,
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
+"Qb" = (
+/turf/closed/wall/mineral/titanium/survival/pod,
+/area/aegis/mining)
 "Qh" = (
 /obj/structure/frame/machine,
 /obj/machinery/light/small/maintenance/directional/west,
@@ -5067,7 +5073,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/surface)
+/area/aegis/mining)
 "VW" = (
 /obj/structure/sign/poster/contraband/lusty_xenomorph,
 /turf/closed/wall/r_wall,
@@ -5126,7 +5132,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/surface)
+/area/aegis/mining)
 "Ws" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -5236,7 +5242,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/deadspace/rig,
 /turf/open/floor/deadspace/grater,
-/area/aegis/surface)
+/area/aegis/mining)
 "Xv" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/maintenance/three,
@@ -10725,13 +10731,13 @@ yG
 yG
 yG
 yG
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
 yG
 yG
 yG
@@ -10882,13 +10888,13 @@ yG
 yG
 yG
 yG
-Dy
+Qb
 wn
 oF
 oF
 oF
 pv
-Dy
+Qb
 yG
 yG
 yG
@@ -11039,13 +11045,13 @@ yG
 yG
 yG
 yG
-Dy
+Qb
 Pd
-la
+Ns
 oP
-la
+Ns
 VR
-Dy
+Qb
 yG
 JB
 JB
@@ -11196,9 +11202,9 @@ yG
 yG
 yG
 yG
-Dy
+Qb
 vZ
-la
+Ns
 Xt
 oT
 Wr
@@ -11353,13 +11359,13 @@ yG
 yG
 yG
 yG
-Dy
+Qb
 pk
-la
+Ns
 fh
-la
+Ns
 VR
-Dy
+Qb
 po
 JB
 JB
@@ -11510,13 +11516,13 @@ yG
 yG
 yG
 yG
-Dy
+Qb
 zn
 Fq
 Fq
 Fq
 AH
-Dy
+Qb
 yG
 JB
 po
@@ -11667,13 +11673,13 @@ yG
 yG
 yG
 yG
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
 yG
 JB
 JB
@@ -27022,13 +27028,13 @@ Cr
 Cr
 Cr
 yG
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
 yG
 yG
 yG
@@ -27179,13 +27185,13 @@ Cr
 Cr
 Cr
 yG
-Dy
+Qb
 wn
 oF
 oF
 oF
 pv
-Dy
+Qb
 yG
 yG
 yG
@@ -27336,13 +27342,13 @@ Cr
 Cr
 Cr
 yG
-Dy
+Qb
 sq
-la
+Ns
 oP
-la
+Ns
 VR
-Dy
+Qb
 yG
 JB
 JB
@@ -27493,9 +27499,9 @@ Cr
 Cr
 Cr
 yG
-Dy
+Qb
 vZ
-la
+Ns
 Xt
 oT
 VR
@@ -27650,13 +27656,13 @@ Cr
 Cr
 Cr
 yG
-Dy
+Qb
 pk
-la
+Ns
 fh
-la
+Ns
 VR
-Dy
+Qb
 JB
 JB
 JB
@@ -27807,13 +27813,13 @@ Cr
 Cr
 Cr
 yG
-Dy
+Qb
 zn
 Fq
 Fq
 Fq
 AH
-Dy
+Qb
 yG
 JB
 JB
@@ -27964,13 +27970,13 @@ Cr
 Cr
 Cr
 yG
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
 yG
 JB
 JB
@@ -30223,13 +30229,13 @@ yG
 yG
 yG
 yG
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
 yG
 yG
 yG
@@ -30380,13 +30386,13 @@ yG
 yG
 yG
 yG
-Dy
+Qb
 wn
 oF
 oF
 oF
 pv
-Dy
+Qb
 yG
 yG
 yG
@@ -30537,13 +30543,13 @@ yG
 yG
 yG
 yG
-Dy
+Qb
 sq
-la
+Ns
 oP
-la
+Ns
 VR
-Dy
+Qb
 po
 JB
 JB
@@ -30694,9 +30700,9 @@ yG
 yG
 yG
 yG
-Dy
+Qb
 vZ
-la
+Ns
 Xt
 oT
 VR
@@ -30851,13 +30857,13 @@ yG
 yG
 yG
 yG
-Dy
+Qb
 pk
-la
+Ns
 fh
-la
+Ns
 VR
-Dy
+Qb
 JB
 JB
 JB
@@ -31008,13 +31014,13 @@ yG
 yG
 yG
 yG
-Dy
+Qb
 zn
 Fq
 Fq
 Fq
 AH
-Dy
+Qb
 yG
 yG
 yG
@@ -31165,13 +31171,13 @@ yG
 yG
 yG
 yG
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
-Dy
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
+Qb
 yG
 yG
 yG

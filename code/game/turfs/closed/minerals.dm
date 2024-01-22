@@ -321,8 +321,8 @@
 			spread_vein(path)
 
 /turf/closed/mineral/random/aegis
-	initial_gas = MARASTATION_DEFAULT_ATMOS
-	defer_change = TRUE
+	baseturfs = /turf/open/misc/asteroid
+	initial_gas = OPENTURF_DEFAULT_ATMOS
 
 /turf/closed/mineral/random/high_chance
 	icon_state = "rock_highchance"

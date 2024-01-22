@@ -6,7 +6,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "aav" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -14,7 +14,7 @@
 /obj/structure/table/glass,
 /obj/effect/spawner/random/medical/minor_healing,
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aaA" = (
 /obj/structure/ore_box,
 /obj/effect/turf_decal/box,
@@ -50,7 +50,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "abg" = (
 /turf/open/floor/plating,
 /area/aegis/surface)
@@ -104,7 +104,7 @@
 	},
 /obj/structure/window/reinforced/spawner,
 /turf/open/floor/plating,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "abV" = (
 /obj/item/light/tube,
 /turf/open/floor/stone,
@@ -127,7 +127,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "acE" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -335,7 +335,7 @@
 /area/station/cargo/storage)
 "agy" = (
 /turf/open/floor/deadspace/roller,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "agF" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -431,7 +431,7 @@
 "ahQ" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/bathroom,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "ahR" = (
 /obj/effect/turf_decal/bot_white,
 /obj/effect/spawner/random/maintenance,
@@ -548,7 +548,7 @@
 "akl" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "akm" = (
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /obj/structure/cable,
@@ -780,7 +780,7 @@
 	id = "executiveevac"
 	},
 /turf/open/floor/deadspace/mono,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "anG" = (
 /obj/structure/closet/firecloset,
 /obj/effect/turf_decal/delivery,
@@ -1009,7 +1009,7 @@
 /area/station/engineering/main)
 "apU" = (
 /turf/closed/wall/mineral/titanium,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "apW" = (
 /obj/machinery/telecomms/server/presets/medical,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -1366,7 +1366,7 @@
 "atD" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "atI" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/deadspace/grater,
@@ -1416,6 +1416,7 @@
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 6
 	},
+/obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
 "auN" = (
@@ -1478,7 +1479,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "avK" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/effect/spawner/random/vending/snackvend,
@@ -1490,7 +1491,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "avP" = (
 /obj/structure/window/reinforced/spawner/east,
 /obj/structure/closet/secure_closet/ds/miner,
@@ -1584,7 +1585,7 @@
 "awM" = (
 /obj/machinery/sleeper,
 /turf/open/floor/deadspace/grater,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "awV" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 4
@@ -1596,7 +1597,7 @@
 	name = "\improper Executive Shuttle Controls"
 	},
 /turf/open/floor/deadspace/mono,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "axa" = (
 /obj/machinery/modular_computer/console/preset/civilian{
 	dir = 4
@@ -1604,13 +1605,12 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "axn" = (
 /obj/machinery/light/directional/east,
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "axw" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/random/maintenance,
@@ -1636,7 +1636,7 @@
 	},
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "ayk" = (
 /obj/machinery/vending/wardrobe/chap_wardrobe,
 /turf/open/floor/deadspace/mono,
@@ -1725,7 +1725,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aAd" = (
 /obj/structure/ore_box,
 /turf/open/floor/deadspace/random/rectangles,
@@ -1884,7 +1884,7 @@
 "aCp" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aCz" = (
 /obj/effect/landmark/start/security_officer,
 /obj/effect/decal/cleanable/dirt,
@@ -1920,7 +1920,7 @@
 "aCJ" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aCK" = (
 /obj/machinery/door/airlock{
 	id_tag = "Cabin14";
@@ -2076,7 +2076,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aDW" = (
 /obj/structure/closet/crate/large/ds/green_horizontal,
 /obj/effect/spawner/random/medical/minor_healing,
@@ -2098,7 +2098,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aEh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2279,7 +2279,7 @@
 "aGq" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "aGw" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/disposalpipe/segment{
@@ -2343,7 +2343,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aHm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/green/visible,
 /turf/open/floor/iron/ported/techfloor_grid,
@@ -2357,10 +2357,10 @@
 /obj/effect/decal/cleanable/blood,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "aHx" = (
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "aHI" = (
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/deadspace/mono,
@@ -2721,7 +2721,7 @@
 /area/station/cargo/warehouse/upper)
 "aKc" = (
 /turf/closed/wall/r_wall,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aKd" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -2943,7 +2943,7 @@
 "aMt" = (
 /obj/machinery/door/poddoor/preopen,
 /turf/open/floor/deadspace/roller,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aMy" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood,
 /obj/effect/floor_decal/ds/spline/fancy/wood{
@@ -3040,7 +3040,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "aNU" = (
 /obj/machinery/computer/crew,
 /obj/structure/window/reinforced/spawner/north,
@@ -3050,15 +3050,6 @@
 /obj/structure/stairs/south,
 /turf/open/floor/deadspace/mono,
 /area/station/security/brig)
-"aOa" = (
-/obj/machinery/power/apc/auto_name/directional/west,
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/turf/open/floor/deadspace/random/slides{
-	dir = 1
-	},
-/area/shuttle/abandoned)
 "aOf" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/techstorage/tcomms_all,
@@ -3074,7 +3065,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large/ds/green_horizontal,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "aOj" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3115,7 +3106,7 @@
 "aOP" = (
 /obj/structure/inflatable/wall,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aOS" = (
 /obj/structure/table,
 /turf/open/floor/deadspace/bathroom,
@@ -3227,7 +3218,7 @@
 /obj/effect/spawner/random/engineering/tool,
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "aQw" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/machinery/light/small/maintenance/directional/north,
@@ -3428,7 +3419,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "aSS" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/structure/disposalpipe/segment{
@@ -3444,7 +3435,7 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/deadspace/bathroom,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "aSX" = (
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 1
@@ -3611,7 +3602,7 @@
 	name = "Dormitories"
 	},
 /turf/open/floor/wood,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "aUe" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/bot{
@@ -3791,7 +3782,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "aWo" = (
 /obj/structure/cable,
 /obj/machinery/newscaster/directional/east,
@@ -3807,7 +3798,7 @@
 /obj/item/toner,
 /obj/item/toner,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "aWB" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -3914,7 +3905,7 @@
 "aZb" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/deadspace/grater,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "aZc" = (
 /obj/structure/closet/secure_closet/ds/security,
 /obj/machinery/light,
@@ -3974,7 +3965,7 @@
 "aZH" = (
 /obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/carpet/red,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "aZM" = (
 /obj/machinery/power/terminal{
 	dir = 1
@@ -4000,13 +3991,13 @@
 /turf/open/floor/deadspace/cable{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "baj" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "ban" = (
 /obj/item/kirbyplants{
 	icon_state = "plant-10"
@@ -4039,7 +4030,7 @@
 /area/station/service/kitchen)
 "baA" = (
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "baF" = (
 /obj/structure/table,
 /obj/effect/spawner/random/medical/medkit,
@@ -4592,7 +4583,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/bathroom,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "bgq" = (
 /mob/living/simple_animal/bot/mulebot/cargobot{
 	dir = 8;
@@ -4607,7 +4598,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "bgG" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -4634,7 +4625,7 @@
 /area/station/security/range)
 "bhg" = (
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "bhk" = (
 /obj/structure/rack,
 /obj/item/storage/pill_bottle/iron,
@@ -4662,7 +4653,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "bhw" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/disposalpipe/segment{
@@ -4716,7 +4707,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "bhU" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -4958,7 +4949,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "bkQ" = (
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron,
@@ -5795,7 +5786,7 @@
 /area/station/security/execution)
 "bsc" = (
 /turf/open/floor/deadspace/mono,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "bsf" = (
 /obj/machinery/door/airlock{
 	name = "Abandoned Shuttle Bay"
@@ -6083,7 +6074,7 @@
 "bza" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "bzj" = (
 /obj/structure/chair{
 	dir = 4
@@ -6151,13 +6142,13 @@
 "bBG" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "bBR" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "bCd" = (
 /mob/living/simple_animal/drone/classic/scavbot{
 	dir = 4;
@@ -6309,7 +6300,7 @@
 	id = "miningprep2"
 	},
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "bHg" = (
 /obj/machinery/door/airlock{
 	id_tag = "Toilet1";
@@ -6327,7 +6318,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "bIu" = (
 /turf/open/floor/iron/white,
 /area/station/science/misc_lab)
@@ -6413,7 +6404,7 @@
 /obj/structure/table,
 /obj/machinery/recharger,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "bKg" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/prepainted/daedalus,
 /obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
@@ -6619,7 +6610,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "bRq" = (
 /obj/structure/cable,
 /turf/open/floor/iron/dark/corner{
@@ -6636,7 +6627,7 @@
 /obj/structure/cable,
 /obj/effect/landmark/pestspawn,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "bSa" = (
 /obj/machinery/firealarm/directional/north,
 /obj/machinery/airalarm/directional/east,
@@ -6734,7 +6725,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "bVX" = (
 /obj/machinery/portable_atmospherics/pump,
 /obj/effect/turf_decal/tile/blue{
@@ -6789,7 +6780,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/random/slides,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "bXw" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/table,
@@ -6820,7 +6811,7 @@
 "bYp" = (
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "bYr" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/cable,
@@ -6919,7 +6910,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "cbO" = (
 /obj/machinery/shower,
 /obj/structure/window/reinforced/spawner/east,
@@ -6944,9 +6935,10 @@
 /turf/open/floor/carpet/blue,
 /area/station/service/chapel/office)
 "cdf" = (
-/obj/structure/closet/firecloset,
-/turf/open/floor/deadspace/mono,
-/area/station/maintenance/starboard/central)
+/obj/structure/railing,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/deadspace/grater,
+/area/station/hallway/secondary/exit)
 "cdk" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
@@ -7002,7 +6994,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "ceV" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden{
@@ -7015,7 +7007,7 @@
 "ceX" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "cfa" = (
 /obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
 	dir = 4
@@ -7315,7 +7307,7 @@
 	name = "Abandonded Storage"
 	},
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "cri" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/structure/disposalpipe/segment{
@@ -7448,7 +7440,7 @@
 	id = "miningprep2"
 	},
 /turf/open/floor/deadspace/mono,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "cvl" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/chair/office{
@@ -7592,7 +7584,7 @@
 	dir = 6
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "cBZ" = (
 /obj/structure/rack,
 /obj/item/flashlight/glowstick,
@@ -7603,7 +7595,7 @@
 "cCm" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/deadspace/grater,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "cCo" = (
 /turf/open/floor/deadspace/random/slides,
 /area/station/security/lockers)
@@ -7678,7 +7670,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "cEZ" = (
 /obj/structure/closet/wardrobe/white/medical,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
@@ -7776,7 +7768,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "cHb" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -8057,7 +8049,7 @@
 /obj/effect/spawner/random/engineering/material,
 /obj/effect/spawner/random/engineering/material,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "cSh" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -8089,7 +8081,7 @@
 /area/station/engineering/supermatter/room)
 "cTf" = (
 /turf/open/floor/wood,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "cTu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -8177,11 +8169,11 @@
 "cWH" = (
 /obj/structure/window/reinforced/spawner/east,
 /turf/open/floor/deadspace/mono,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "cWL" = (
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "cWN" = (
 /obj/structure/reagent_dispensers/beerkeg,
 /turf/open/misc/asteroid,
@@ -8189,7 +8181,7 @@
 "cXf" = (
 /obj/structure/table,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "cXv" = (
 /obj/structure/table,
 /obj/item/stock_parts/subspace/filter,
@@ -8215,7 +8207,6 @@
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/table,
 /obj/effect/spawner/random/food_or_drink/pizzaparty,
-/obj/machinery/light/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningdock/cafeteria)
 "cYO" = (
@@ -8312,7 +8303,7 @@
 "dcn" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/carpet/red,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "dcv" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -8332,6 +8323,11 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
+"dcL" = (
+/obj/machinery/firealarm/directional/west,
+/obj/structure/bed/roller,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "dcM" = (
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/reinforced/tinted/grille,
@@ -8346,13 +8342,13 @@
 	},
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "dec" = (
 /obj/structure/rack,
 /obj/structure/cable,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "dfE" = (
 /turf/closed/wall/r_wall,
 /area/mine/living_quarters)
@@ -8449,7 +8445,7 @@
 /area/aegis/surface)
 "diR" = (
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "diZ" = (
 /turf/open/floor/iron/dark/side{
 	dir = 1
@@ -8586,7 +8582,7 @@
 "doU" = (
 /obj/effect/landmark/pestspawn,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "dpe" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -8605,15 +8601,10 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "dqG" = (
 /turf/open/floor/iron,
 /area/station/security/range)
-"dqX" = (
-/obj/structure/stairs/north,
-/obj/machinery/light/directional/north,
-/turf/open/floor/deadspace/mono,
-/area/station/hallway/primary/fore)
 "drl" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -8941,7 +8932,7 @@
 /obj/structure/table,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "dDR" = (
 /obj/effect/turf_decal/box,
 /obj/structure/rack,
@@ -9128,6 +9119,13 @@
 /obj/item/flashlight/glowstick/orange,
 /turf/open/floor/stone,
 /area/aegis/surface)
+"dNQ" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/airlock/mining{
+	name = "Mining Decontamination Room"
+	},
+/turf/open/floor/deadspace/random/golf_brown,
+/area/mine/production)
 "dOe" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -9181,7 +9179,7 @@
 /area/station/hallway/primary/aft)
 "dPH" = (
 /turf/open/floor/deadspace/random/slides,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "dPS" = (
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
@@ -9191,7 +9189,7 @@
 /area/station/security/lockers)
 "dQk" = (
 /turf/open/floor/iron/stairs,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "dQw" = (
 /turf/closed/wall/r_wall,
 /area/station/security/office)
@@ -9270,7 +9268,7 @@
 "dUb" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "dUn" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/showroomfloor,
@@ -9736,7 +9734,7 @@
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "egQ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -9786,7 +9784,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "eio" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -9950,7 +9948,7 @@
 /obj/item/storage/toolbox/electrical,
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "enQ" = (
 /obj/structure/table,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -10181,7 +10179,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "eym" = (
 /obj/structure/sign/cec/deck/cargo{
 	pixel_y = -32
@@ -10259,7 +10257,7 @@
 "eCx" = (
 /obj/structure/railing,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "eCD" = (
 /obj/machinery/door/airlock{
 	name = "Kitchen Cold Room";
@@ -10449,7 +10447,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "eKO" = (
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/rack,
@@ -10644,7 +10642,7 @@
 /obj/item/folder/blue,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "eUQ" = (
 /obj/structure/railing{
 	dir = 5
@@ -10695,7 +10693,7 @@
 	name = "Mining Preparations A-2"
 	},
 /turf/open/floor/deadspace/mono,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "eWi" = (
 /obj/effect/landmark/navigate_destination/med,
 /obj/structure/disposalpipe/junction{
@@ -11184,7 +11182,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "fjh" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 4
@@ -11389,7 +11387,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "fpw" = (
 /turf/open/floor/wood,
 /area/station/cargo/qm)
@@ -11477,7 +11475,7 @@
 "ftC" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "ftV" = (
 /obj/structure/chair{
 	dir = 8
@@ -11525,7 +11523,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "fvM" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/table/reinforced,
@@ -11871,7 +11869,7 @@
 	},
 /obj/effect/spawner/random/medical/medkit,
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "fJj" = (
 /obj/machinery/shower,
 /obj/structure/window/reinforced/spawner/east,
@@ -11933,7 +11931,7 @@
 "fKM" = (
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "fLI" = (
 /obj/effect/spawner/random/vending/colavend,
 /obj/effect/turf_decal/box,
@@ -12494,7 +12492,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/random/slides,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "gcm" = (
 /turf/open/misc/asteroid,
 /area/station/hallway/primary/fore)
@@ -12774,7 +12772,7 @@
 "goD" = (
 /obj/machinery/vending/cigarette,
 /turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "goK" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/deadspace/heavy,
@@ -13083,9 +13081,8 @@
 /area/station/science/lobby)
 "gBk" = (
 /obj/machinery/light/directional/east,
-/obj/structure/cable,
 /turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "gBo" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/medical/medkit_rare,
@@ -13220,13 +13217,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/miningoffice)
+"gEM" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/directional/east,
+/turf/open/floor/deadspace/random/rectangles,
+/area/station/cargo/miningoffice)
 "gEZ" = (
 /obj/machinery/shower{
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/deadspace/bathroom,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "gFh" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/grater,
@@ -13270,7 +13272,7 @@
 /obj/effect/spawner/random/food_or_drink/refreshing_beverage,
 /obj/effect/spawner/random/food_or_drink/snack,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "gGx" = (
 /turf/open/floor/iron/dark/side{
 	dir = 8
@@ -13466,7 +13468,7 @@
 /obj/effect/mob_spawn/corpse/human/miner,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "gQP" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "mininghallwayshutter";
@@ -13498,7 +13500,7 @@
 /obj/machinery/door/airlock/mining,
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "gRJ" = (
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/deadspace/random/maint_right,
@@ -13796,10 +13798,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/engineering/storage_shared)
-"hcF" = (
-/obj/structure/cable,
-/turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
 "hcP" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/disposalpipe/segment,
@@ -13884,10 +13882,6 @@
 /obj/machinery/light/small/maintenance/directional/north,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
-"hgq" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/deadspace/grater,
-/area/shuttle/abandoned)
 "hgz" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood/corner{
 	dir = 4
@@ -14055,7 +14049,7 @@
 /area/station/commons/toilet/restrooms)
 "hnq" = (
 /turf/open/floor/carpet/red,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "hnA" = (
 /obj/effect/spawner/random/food_or_drink/booze,
 /turf/open/misc/asteroid,
@@ -14080,7 +14074,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "hor" = (
 /obj/machinery/stasis/survival_pod,
 /turf/open/floor/iron/white,
@@ -14233,7 +14227,7 @@
 "htk" = (
 /obj/structure/railing,
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "htl" = (
 /obj/structure/table,
 /obj/effect/turf_decal/delivery,
@@ -14443,7 +14437,7 @@
 /obj/effect/spawner/random/engineering/tool,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "hzC" = (
 /obj/machinery/firealarm/directional/north,
 /obj/structure/cable,
@@ -14463,7 +14457,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "hAq" = (
 /obj/effect/spawner/random/vending/snackvend,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
@@ -14845,7 +14839,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "hSc" = (
 /obj/structure/closet/crate,
 /obj/effect/landmark{
@@ -14971,7 +14965,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "hWi" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
@@ -15111,7 +15105,7 @@
 /area/station/hallway/primary/port)
 "iaU" = (
 /obj/structure/railing,
-/obj/machinery/light/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
 "ibf" = (
@@ -15319,11 +15313,11 @@
 /obj/structure/bed,
 /obj/item/bedsheet/dorms,
 /turf/open/floor/wood,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "ikz" = (
 /obj/machinery/door/poddoor/preopen,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "ikB" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/east,
@@ -15604,7 +15598,7 @@
 "iuc" = (
 /obj/effect/spawner/random/engineering/toolbox,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "iuj" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
@@ -15809,7 +15803,7 @@
 	name = "Abandonded Surgery Room"
 	},
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "iDy" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -15884,7 +15878,7 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "iGK" = (
 /turf/open/floor/iron/dark/corner{
 	dir = 1
@@ -16095,7 +16089,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "iQS" = (
 /obj/structure/chair/sofa/bench,
 /turf/open/floor/deadspace/mono,
@@ -16486,7 +16480,7 @@
 "jeB" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/random/slides,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "jfo" = (
 /obj/structure/table,
 /obj/item/plant_analyzer,
@@ -16570,7 +16564,7 @@
 "jik" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "jiZ" = (
 /obj/machinery/atmospherics/pipe/bridge_pipe/green/visible,
 /obj/machinery/door/window/left/directional/west{
@@ -16593,12 +16587,10 @@
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
 "jjd" = (
-/obj/effect/turf_decal/tile/red/half/contrasted{
-	dir = 8
-	},
-/obj/machinery/firealarm/directional/west,
-/turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/railing,
+/turf/open/floor/deadspace/grater,
+/area/station/hallway/secondary/exit)
 "jjm" = (
 /obj/machinery/light/directional/west,
 /obj/machinery/firealarm/directional/west,
@@ -16675,7 +16667,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "jlR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -16742,7 +16734,7 @@
 "joZ" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "jpd" = (
 /obj/structure/table,
 /obj/item/stock_parts/micro_laser{
@@ -16785,7 +16777,7 @@
 	dir = 6
 	},
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "jpK" = (
 /obj/structure/stairs/north,
 /turf/open/floor/iron/dark/side{
@@ -16846,7 +16838,7 @@
 "jtw" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/mono,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "jtI" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/junction/flip{
@@ -17055,12 +17047,12 @@
 "jBR" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/wood,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "jCt" = (
-/obj/machinery/computer/cargo{
-	dir = 8
-	},
 /obj/structure/window/reinforced/spawner/east,
+/obj/structure/table,
+/obj/machinery/telephone/cargo,
+/obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/lobby)
 "jCD" = (
@@ -17387,7 +17379,7 @@
 /obj/structure/closet/crate/large,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "jPV" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/medical/medkit_rare,
@@ -17515,7 +17507,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "jVs" = (
 /obj/machinery/disposal/bin,
 /obj/effect/turf_decal/delivery,
@@ -17685,7 +17677,7 @@
 "kcO" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "kdn" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
 	dir = 4
@@ -17801,7 +17793,7 @@
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "khj" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -18035,7 +18027,7 @@
 "kqX" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/iron/stairs,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "krn" = (
 /obj/effect/spawner/random/trash/food_packaging,
 /obj/effect/spawner/random/vending/colavend,
@@ -18071,7 +18063,7 @@
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 9
 	},
-/obj/structure/filingcabinet,
+/obj/structure/filingcabinet/filingcabinet,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
@@ -18163,7 +18155,7 @@
 "kup" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/random/slides,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "kuG" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/commons/storage/primary)
@@ -18185,7 +18177,7 @@
 /area/station/hallway/secondary/service)
 "kvj" = (
 /turf/open/floor/deadspace/bathroom,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "kvr" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/random/slides,
@@ -18609,7 +18601,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "kQg" = (
 /obj/machinery/disposal/delivery_chute{
 	dir = 4
@@ -18780,7 +18772,7 @@
 	id = "executiveevac"
 	},
 /turf/open/floor/plating,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "kUH" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Secure Tech Storage"
@@ -18943,7 +18935,7 @@
 /area/station/security/checkpoint/science)
 "lal" = (
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "lam" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -19016,6 +19008,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
+"lcz" = (
+/obj/structure/bed/roller,
+/turf/open/floor/iron/white,
+/area/station/medical/medbay/central)
 "lcZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -19160,7 +19156,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "lju" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -19312,7 +19308,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "lnQ" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
 	dir = 8
@@ -19618,9 +19614,6 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
-"lyD" = (
-/turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
 "lyY" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Engineering Foyer";
@@ -19735,7 +19728,7 @@
 "lDg" = (
 /obj/structure/chair,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "lDI" = (
 /turf/open/floor/iron/dark/corner{
 	dir = 8
@@ -19745,7 +19738,7 @@
 /obj/effect/spawner/random/vending/snackvend,
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "lEd" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -19896,9 +19889,8 @@
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "lKA" = (
+/obj/machinery/light/small/directional/west,
 /obj/structure/railing,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
 "lKM" = (
@@ -19907,7 +19899,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "lKR" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	name = "Distro to Waste"
@@ -20019,7 +20011,7 @@
 /obj/effect/spawner/random/food_or_drink/booze,
 /obj/effect/spawner/random/food_or_drink/booze,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "lQi" = (
 /obj/machinery/camera/autoname/directional/south,
 /obj/machinery/light/directional/south,
@@ -20098,14 +20090,14 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "lTR" = (
 /obj/structure/chair/office{
 	dir = 1
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/maint_center,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "lUe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/purple{
@@ -20186,7 +20178,7 @@
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "lVB" = (
 /obj/structure/cable,
 /turf/open/floor/iron/white,
@@ -20374,7 +20366,7 @@
 /area/station/security/execution)
 "meL" = (
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "mfJ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -20415,7 +20407,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "miO" = (
 /obj/machinery/washing_machine,
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -21062,7 +21054,7 @@
 /obj/structure/ore_box,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "mKw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -21092,7 +21084,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/mono,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "mMz" = (
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
@@ -21166,7 +21158,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "mPS" = (
 /obj/machinery/door/window/left/directional/west{
 	name = "Inner Pipe Access";
@@ -21303,7 +21295,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "mTV" = (
 /obj/structure/chair/stool/directional/west,
 /turf/open/floor/wood,
@@ -21431,7 +21423,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "mYj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -21509,14 +21501,14 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "nbd" = (
 /obj/machinery/door/airlock{
 	name = "Abandonded Control Room"
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "nbn" = (
 /obj/structure/rack,
 /obj/item/disk/holodisk/ds13/odd_shanty,
@@ -21566,7 +21558,7 @@
 /obj/machinery/power/floodlight,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "ncQ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
@@ -21700,7 +21692,7 @@
 "nhL" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "nja" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -21941,7 +21933,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "nvY" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -22209,6 +22201,11 @@
 	dir = 5
 	},
 /area/station/hallway/primary/central)
+"nDN" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/railing,
+/turf/open/floor/deadspace/grater,
+/area/station/hallway/secondary/exit)
 "nDZ" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
@@ -22218,7 +22215,7 @@
 "nEA" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "nFM" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	name = "Air to Ports"
@@ -22248,7 +22245,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "nGy" = (
 /obj/structure/toilet{
 	pixel_y = 5;
@@ -22327,7 +22324,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/grater,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "nIM" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
 	dir = 8
@@ -22523,11 +22520,11 @@
 /area/station/command/heads_quarters/rd)
 "nSm" = (
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "nSn" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "nSp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -22778,7 +22775,7 @@
 "oav" = (
 /obj/machinery/light,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "oay" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line,
 /turf/open/floor/iron,
@@ -22849,7 +22846,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "ocK" = (
 /obj/machinery/light/directional/east,
 /turf/open/misc/asteroid,
@@ -22879,7 +22876,7 @@
 	name = "Shuttle Lock Down"
 	},
 /turf/open/floor/deadspace/grater,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "oeu" = (
 /obj/effect/spawner/random/trash,
 /turf/open/floor/deadspace/grater,
@@ -22987,7 +22984,7 @@
 	dir = 9
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "oin" = (
 /obj/structure/cable,
 /obj/structure/cable/layer1,
@@ -23097,7 +23094,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large/ds/green_vertical,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "onE" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/hallway/secondary/exit/departure_lounge)
@@ -23157,11 +23154,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/hallway/secondary/service)
-"opI" = (
-/turf/open/floor/deadspace/random/slides{
-	dir = 1
-	},
-/area/awaymission/centcom_away/hangar)
 "opQ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
 	dir = 4
@@ -23183,11 +23175,11 @@
 /turf/open/floor/deadspace/cable{
 	dir = 8
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "oqS" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "orm" = (
 /obj/machinery/camera/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -23212,7 +23204,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "osl" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -23367,7 +23359,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/random/slides,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "oAq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -23574,7 +23566,7 @@
 /obj/structure/table/glass,
 /obj/effect/spawner/random/medical/medkit_rare,
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "oJu" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -23808,7 +23800,7 @@
 "oRk" = (
 /obj/structure/railing,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "oRB" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/norn,
@@ -23975,7 +23967,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "oXc" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -24007,7 +23999,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "oYm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/maint_center,
@@ -24279,11 +24271,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/service/bar)
-"pmq" = (
-/obj/structure/stairs/south,
-/obj/machinery/light/directional/south,
-/turf/open/floor/deadspace/mono,
-/area/station/hallway/primary/fore)
 "pms" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
 	dir = 5
@@ -24314,7 +24301,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "pnr" = (
 /obj/machinery/light/directional/south,
 /obj/item/stack/ore/plasma,
@@ -24568,13 +24555,13 @@
 /obj/item/bedsheet/dorms,
 /obj/effect/mob_spawn/corpse/human/miner,
 /turf/open/floor/wood,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "pxh" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "pxF" = (
 /turf/open/floor/wood,
 /area/station/medical/psychology)
@@ -24619,13 +24606,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/commons/dorms/barracks)
-"pzz" = (
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 8
-	},
-/obj/machinery/firealarm/directional/east,
-/turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
 "pzJ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -24686,7 +24666,7 @@
 "pCN" = (
 /obj/structure/inflatable/door,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "pCV" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
 	dir = 4
@@ -24796,7 +24776,7 @@
 /obj/effect/spawner/random/engineering/tool,
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/random/maint_center,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "pFW" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -25029,7 +25009,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "pOc" = (
 /obj/structure/cable,
 /obj/machinery/light/floor/has_bulb,
@@ -25419,7 +25399,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "qer" = (
 /obj/machinery/atmospherics/components/binary/volume_pump{
 	dir = 4
@@ -25446,7 +25426,7 @@
 	dir = 5
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "qfa" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/bot{
@@ -25669,7 +25649,7 @@
 /obj/machinery/light/directional/east,
 /obj/effect/spawner/random/engineering/tool,
 /turf/open/floor/deadspace/random/slides,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "qps" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -25972,7 +25952,7 @@
 "qBv" = (
 /obj/machinery/modular_computer/console/preset/civilian,
 /turf/open/floor/deadspace/random/maint_center,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "qBH" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/monitored/plasma_output{
 	dir = 8
@@ -25987,7 +25967,7 @@
 "qCs" = (
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "qCF" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
@@ -26150,7 +26130,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "qHV" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26340,6 +26320,7 @@
 /area/station/hallway/secondary/exit)
 "qOE" = (
 /obj/structure/cable/multilayer/multiz,
+/obj/structure/closet/firecloset,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/starboard/central)
 "qOI" = (
@@ -26389,10 +26370,6 @@
 	},
 /area/station/hallway/primary/central)
 "qTO" = (
-/obj/structure/table,
-/obj/machinery/telephone/cargo,
-/obj/structure/cable,
-/obj/machinery/power/data_terminal,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
 "qTV" = (
@@ -26544,7 +26521,7 @@
 	name = "Abandonded Locker Room"
 	},
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "reb" = (
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/maintenance/fore)
@@ -26831,10 +26808,13 @@
 /area/station/medical/surgery/theatre)
 "roT" = (
 /obj/structure/table,
+/obj/machinery/power/data_terminal,
+/obj/machinery/telephone/service,
+/obj/structure/cable,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "roU" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -26868,7 +26848,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "rrd" = (
 /obj/structure/table/glass,
 /obj/item/storage/backpack/duffelbag/med/surgery,
@@ -26876,7 +26856,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "rrn" = (
 /obj/machinery/light/small/maintenance/directional/north,
 /turf/open/floor/wood,
@@ -26966,7 +26946,7 @@
 	},
 /obj/machinery/door/poddoor/preopen,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "rvl" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood/corner,
 /obj/effect/floor_decal/ds/spline/fancy/wood/corner{
@@ -27039,7 +27019,7 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/corpse/human/miner,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "rxO" = (
 /obj/machinery/firealarm/directional/north,
 /obj/structure/chair,
@@ -27133,7 +27113,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "rBP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -27303,7 +27283,7 @@
 /obj/machinery/power/floodlight,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "rIW" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -27320,7 +27300,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "rJN" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/clothing/backpack,
@@ -27440,7 +27420,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "rOC" = (
 /turf/closed/wall/r_wall,
 /area/station/engineering/monitoring)
@@ -27500,7 +27480,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "rRJ" = (
 /obj/machinery/disposal/bin,
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
@@ -27678,7 +27658,7 @@
 "rXR" = (
 /obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "rXW" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/navbeacon{
@@ -27737,8 +27717,7 @@
 /turf/open/floor/deadspace/random/golf_gray,
 /area/mine/hydroponics)
 "san" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/directional/west,
 /obj/structure/railing,
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
@@ -27838,7 +27817,7 @@
 "seb" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "seh" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Engine Airlock Internal";
@@ -27958,7 +27937,7 @@
 /area/station/commons/dorms/cryo)
 "siW" = (
 /turf/closed/wall/r_wall,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "sjw" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/east,
@@ -27970,7 +27949,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "sjZ" = (
 /turf/open/floor/iron/norn,
 /area/station/hallway/primary/fore)
@@ -27999,7 +27978,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "slp" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/machinery/door/poddoor/shutters{
@@ -28091,7 +28070,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "sqP" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
@@ -28203,7 +28182,7 @@
 "suA" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "suP" = (
 /turf/closed/wall/r_wall,
 /area/station/service/chapel)
@@ -28455,7 +28434,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/random/slides,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "sFz" = (
 /obj/machinery/modular_computer/console/preset/id,
 /obj/machinery/requests_console/directional/north{
@@ -28550,7 +28529,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/bathroom,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "sHH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/toolbox/mechanical,
@@ -28587,7 +28566,7 @@
 "sIE" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "sIV" = (
 /obj/machinery/light/directional/south,
 /obj/machinery/requests_console/directional/south{
@@ -28679,13 +28658,13 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "sNZ" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 5
 	},
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "sOh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/directions/evac{
@@ -29302,7 +29281,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/grater,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "tpB" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden,
 /turf/open/floor/iron,
@@ -29328,7 +29307,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "tqt" = (
 /obj/machinery/vending/hydronutrients,
 /obj/effect/turf_decal/stripes/line{
@@ -29499,7 +29478,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "twF" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/machinery/vending/coffee,
@@ -29576,7 +29555,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "tzq" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/britcup{
@@ -29699,18 +29678,18 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "tDi" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "tEw" = (
 /obj/machinery/computer,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "tEL" = (
 /obj/structure/easel,
 /obj/machinery/light/small/directional/north,
@@ -29859,6 +29838,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
+/obj/structure/cable,
 /turf/open/floor/carpet/royalblack,
 /area/station/cargo/lobby)
 "tKF" = (
@@ -30004,7 +29984,7 @@
 "tPr" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "tPs" = (
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
@@ -30160,7 +30140,7 @@
 	},
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "tUd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -30211,7 +30191,7 @@
 /obj/machinery/light/directional/west,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "tVy" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	name = "Air to Distro"
@@ -30266,7 +30246,7 @@
 /obj/effect/spawner/random/maintenance,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "tXt" = (
 /obj/effect/landmark/pestspawn,
 /turf/open/floor/deadspace/random/rectangles,
@@ -30611,6 +30591,7 @@
 	dir = 4
 	},
 /obj/structure/railing,
+/obj/machinery/light/small/maintenance/directional/east,
 /turf/open/floor/deadspace/mono,
 /area/station/maintenance/starboard/central)
 "ulZ" = (
@@ -30749,7 +30730,7 @@
 "usK" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "usV" = (
 /obj/machinery/light/small/red/directional/west,
 /turf/open/misc/asteroid,
@@ -30781,7 +30762,7 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "utV" = (
 /turf/open/floor/deadspace/grille_spare4,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "utZ" = (
 /obj/effect/landmark/start/security_officer,
 /turf/open/floor/deadspace/random/maint_center,
@@ -30848,7 +30829,7 @@
 "uvA" = (
 /obj/structure/lattice,
 /turf/closed/wall/r_wall,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "uvL" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/machinery/vending/coffee,
@@ -30925,7 +30906,7 @@
 /obj/effect/turf_decal/box,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "uzN" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -31144,7 +31125,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "uGt" = (
 /turf/closed/wall/r_wall,
 /area/station/medical/chemistry)
@@ -31181,7 +31162,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "uJl" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -31256,7 +31237,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "uMk" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/decal/cleanable/dirt,
@@ -31350,7 +31331,7 @@
 /area/station/ai_monitored/security/armory/upper)
 "uOr" = (
 /turf/open/floor/deadspace/random/golf_brown,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "uOt" = (
 /obj/machinery/shower{
 	dir = 8
@@ -31548,7 +31529,7 @@
 	dir = 8
 	},
 /turf/open/floor/deadspace/grater,
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "uXm" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/east,
@@ -31633,7 +31614,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "vdt" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /obj/machinery/door/poddoor/preopen{
@@ -31715,10 +31696,7 @@
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
 "vgE" = (
-/obj/effect/turf_decal/loading_area{
-	pixel_y = 10
-	},
-/obj/machinery/light/directional/west,
+/obj/machinery/light/floor/has_bulb,
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
 "vgG" = (
@@ -31728,7 +31706,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "vhn" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/ported/lino,
@@ -32109,13 +32087,10 @@
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
 "vzL" = (
-/obj/structure/stairs/north{
-	dir = 4
-	},
-/obj/machinery/light/small/maintenance/directional/east,
-/obj/structure/railing,
-/turf/open/floor/deadspace/mono,
-/area/station/maintenance/starboard/central)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/deadspace/grater,
+/area/station/hallway/secondary/exit)
 "vAl" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating,
@@ -32128,7 +32103,7 @@
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/turf_decal/box,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "vAT" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -32149,9 +32124,8 @@
 /turf/open/floor/iron/dark,
 /area/station/science/robotics/lab)
 "vBM" = (
-/obj/machinery/power/smes/magical,
 /turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "vBQ" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/table,
@@ -32421,7 +32395,7 @@
 	dir = 1
 	},
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "vKP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -32612,7 +32586,7 @@
 	},
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/deadspace/random/rectangles,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "vRL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -32865,7 +32839,7 @@
 /obj/machinery/iv_drip,
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "waC" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 4
@@ -32894,7 +32868,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "wcc" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green,
@@ -32933,7 +32907,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "wdf" = (
 /obj/machinery/door/poddoor/preopen,
 /obj/machinery/door/firedoor,
@@ -33126,7 +33100,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "wmo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -33144,7 +33118,7 @@
 /obj/machinery/door/airlock/mining,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "wmR" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -33188,7 +33162,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "woq" = (
 /obj/structure/sign/warning/securearea{
 	pixel_y = 32
@@ -33245,7 +33219,7 @@
 /area/station/cargo/warehouse/upper)
 "wqz" = (
 /turf/open/floor/iron/white,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "wqU" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -33393,16 +33367,16 @@
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
 /turf/open/floor/deadspace/random/golf_brown,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "wyv" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "wyD" = (
+/obj/machinery/light/directional/west,
 /obj/effect/turf_decal/loading_area{
 	pixel_y = 10
 	},
-/obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/grater,
 /area/station/hallway/secondary/exit)
 "wyH" = (
@@ -33465,7 +33439,7 @@
 "wzl" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/deadspace/mono,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "wzt" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -33594,7 +33568,7 @@
 	dir = 10
 	},
 /turf/open/floor/plating,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "wFM" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible/layer5,
 /obj/structure/cable,
@@ -33676,7 +33650,7 @@
 /obj/effect/mob_spawn/corpse/human/miner,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "wIz" = (
 /obj/machinery/light{
 	dir = 8
@@ -34134,7 +34108,7 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/random/slides,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "wXS" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/deadspace/mono,
@@ -34276,7 +34250,7 @@
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large/ds/blue_vertical,
 /turf/open/floor/deadspace/grater,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "xcc" = (
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/miningdock/oresilo)
@@ -34367,7 +34341,7 @@
 "xes" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "xev" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -34543,7 +34517,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
-/area/aegis/bath_house)
+/area/aegis/mining)
 "xns" = (
 /obj/effect/spawner/random/structure/crate_abandoned,
 /turf/open/floor/plating,
@@ -34888,7 +34862,7 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/cable,
 /turf/open/floor/deadspace/bathroom,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "xAi" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -34958,9 +34932,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
-"xEY" = (
-/turf/open/floor/deadspace/grater,
-/area/shuttle/abandoned)
 "xFk" = (
 /obj/machinery/computer/security,
 /obj/machinery/computer/security/telescreen{
@@ -35167,7 +35138,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/shuttle/abandoned)
+/area/aegis/hanger)
 "xOI" = (
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible{
 	dir = 4
@@ -35505,7 +35476,7 @@
 /obj/item/computer_hardware/network_card/advanced,
 /obj/structure/table/reinforced,
 /turf/open/floor/deadspace/random/maint_center,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "xZe" = (
 /obj/machinery/piratepad/civilian,
 /obj/effect/turf_decal/bot_white,
@@ -35542,7 +35513,7 @@
 /obj/effect/spawner/random/food_or_drink/refreshing_beverage,
 /obj/effect/spawner/random/food_or_drink/snack,
 /turf/open/floor/deadspace/grater,
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "yax" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/east,
@@ -35584,7 +35555,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
-/area/aegis/bath_house)
+/area/aegis/mining)
 "ybH" = (
 /obj/machinery/computer/atmos_alert{
 	dir = 4
@@ -35592,7 +35563,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "ybM" = (
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
@@ -35791,7 +35762,7 @@
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/area/awaymission/centcom_away/hangar)
+/area/aegis/hanger)
 "yjl" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -44780,8 +44751,8 @@ aoU
 tCf
 vGs
 ogl
-vzL
-cdf
+ogl
+ogl
 ogl
 nmQ
 nTl
@@ -44937,8 +44908,8 @@ rQG
 hae
 hae
 ogl
-ogl
-ogl
+lcz
+dcL
 ogl
 fKw
 fKw
@@ -45083,10 +45054,10 @@ boM
 nbT
 htv
 dgg
-pmq
+bng
 hae
 hae
-dqX
+aUO
 jpK
 sjZ
 juP
@@ -45095,7 +45066,7 @@ aEx
 kBN
 sim
 sim
-jjd
+sim
 cRP
 dWR
 jpv
@@ -45663,7 +45634,7 @@ apG
 apG
 apG
 raZ
-wsR
+aFQ
 aZM
 rVd
 upo
@@ -45820,7 +45791,7 @@ apG
 apG
 apG
 raZ
-aFQ
+wsR
 aZM
 oYK
 hoi
@@ -47161,7 +47132,7 @@ kVf
 bno
 bno
 dnQ
-pzz
+bno
 dUJ
 xfR
 bno
@@ -51954,21 +51925,21 @@ txn
 aiL
 iOy
 iOy
-iOy
-pEj
-iOy
-iOy
-xSy
-iOy
-pEj
-iOy
-iOy
-xSy
-pEj
-iOy
-iOy
-xSy
-pEj
+eUQ
+wef
+txn
+wef
+kjS
+kjS
+wef
+wef
+txn
+wef
+wef
+wef
+txn
+wef
+bCs
 uTm
 age
 iuj
@@ -52119,11 +52090,11 @@ iOy
 iOy
 iOy
 xSy
-ciT
+lKA
 iOy
 iOy
 xSy
-ciT
+san
 iOy
 iOy
 xSy
@@ -52267,24 +52238,24 @@ aTG
 txn
 aiL
 gUG
-iOy
-qgd
-nFR
-txn
-nFR
-rDh
-rDh
-nFR
-nFR
-txn
-nFR
-nFR
-nFR
-txn
-nFR
-wns
-iOy
-beX
+gUG
+gUG
+jjd
+gUG
+jjd
+gUG
+gUG
+iaU
+gUG
+iaU
+gUG
+iaU
+gUG
+iaU
+gUG
+iaU
+gUG
+vzL
 qgd
 nFR
 wJd
@@ -52423,25 +52394,25 @@ oHb
 oHb
 txn
 aiL
-gUG
 iOy
-rii
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-mmz
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-iCF
 iOy
-beX
+iOy
+pEj
+vfv
+iOy
+xSy
+iOy
+pEj
+iOy
+gCL
+xSy
+pEj
+iOy
+vfv
+xSy
+pEj
+iOy
+vzL
 mjr
 kjS
 wJd
@@ -52580,25 +52551,25 @@ oHb
 oHb
 txn
 aiL
-gUG
 iOy
-rii
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-iCF
 iOy
-beX
+qgd
+nFR
+txn
+nFR
+awV
+awV
+nFR
+nFR
+txn
+nFR
+nFR
+nFR
+txn
+nFR
+wns
+iOy
+vzL
 nJP
 kjS
 wJd
@@ -52737,25 +52708,25 @@ oHb
 oHb
 txn
 tfH
-gUG
 iOy
+iOy
+rii
+kjS
 rii
 kjS
 kjS
 kjS
 kjS
 kjS
-kjS
-kjS
-kjS
-kjS
-kjS
+iCF
 kjS
 kjS
 kjS
 iCF
+kjS
+iCF
 iOy
-beX
+vzL
 ooM
 qYc
 txn
@@ -52894,25 +52865,25 @@ oHb
 oHb
 txn
 aiL
-gUG
 iOy
+iOy
+rii
+kjS
 rii
 kjS
 kjS
 kjS
 kjS
 kjS
-kjS
-kjS
-kjS
-kjS
-kjS
+iCF
 kjS
 kjS
 kjS
 iCF
+kjS
+iCF
 iOy
-beX
+vzL
 ksm
 kjS
 wlx
@@ -53051,25 +53022,25 @@ oHb
 oHb
 txn
 aiL
-gUG
 iOy
+iOy
+rii
+kjS
 rii
 kjS
 kjS
 kjS
 kjS
 kjS
-kjS
-kjS
-kjS
-kjS
-kjS
+iCF
 kjS
 kjS
 kjS
 iCF
+kjS
+iCF
 iOy
-beX
+vzL
 ksm
 kjS
 wlx
@@ -53208,25 +53179,25 @@ nWv
 fuN
 txn
 aiL
-gUG
 iOy
+iOy
+rii
+kjS
 rii
 kjS
 kjS
 kjS
 kjS
 kjS
-kjS
-kjS
-kjS
-kjS
-kjS
+iCF
 kjS
 kjS
 kjS
 iCF
+kjS
+iCF
 iOy
-beX
+vzL
 mjr
 kjS
 bTU
@@ -53365,25 +53336,25 @@ oHb
 oHb
 txn
 aiL
-gUG
 iOy
-rii
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-iCF
 iOy
-beX
+qgd
+nFR
+txn
+nFR
+rDh
+rDh
+nFR
+nFR
+txn
+nFR
+nFR
+nFR
+txn
+nFR
+wns
+iOy
+vzL
 mjr
 kjS
 lOT
@@ -53522,7 +53493,7 @@ oHb
 oHb
 txn
 aiL
-gUG
+iOy
 iOy
 rii
 kjS
@@ -53531,7 +53502,7 @@ kjS
 kjS
 kjS
 kjS
-kjS
+mmz
 kjS
 kjS
 kjS
@@ -53540,7 +53511,7 @@ kjS
 kjS
 iCF
 iOy
-beX
+vzL
 mjr
 kjS
 lOT
@@ -53679,25 +53650,25 @@ oHb
 oHb
 txn
 aiL
-gUG
 iOy
-eUQ
-wef
-txn
-wef
-sXA
-sXA
-wef
-wef
-txn
-wef
-wef
-wef
-txn
-wef
-bCs
 iOy
-beX
+rii
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+iCF
+iOy
+vzL
 gew
 wef
 jHW
@@ -53836,25 +53807,25 @@ oHb
 oHb
 txn
 aiL
-gUG
 iOy
 iOy
-pEj
-xFl
-tUo
+rii
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+iCF
 iOy
-iOy
-pEj
-iOy
-mxx
-iOy
-pEj
-iOy
-oNF
-iOy
-pEj
-iOy
-beX
+vzL
 iOy
 iOy
 iOy
@@ -53893,7 +53864,7 @@ rzx
 ktp
 csC
 qTO
-fYV
+gcO
 ajJ
 wOD
 qKC
@@ -53993,24 +53964,24 @@ aTG
 aTG
 txn
 aiL
-eeQ
-wzg
-wzg
-san
-wzg
-san
-wzg
-wzg
-lKA
-wzg
-lKA
-wzg
-lKA
-wzg
-lKA
-wzg
-lKA
-wzg
+vgE
+iOy
+rii
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+iCF
+iOy
 wzg
 wzg
 eeQ
@@ -54150,25 +54121,25 @@ aTG
 aTG
 txn
 aiL
+iOy
+iOy
+rii
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+iCF
+iOy
 beX
-iOy
-iOy
-tUo
-vfv
-pEj
-iOy
-iOy
-tUo
-iOy
-ciT
-iOy
-tUo
-iOy
-cZb
-iOy
-tUo
-iOy
-iOy
 iOy
 iOy
 iOy
@@ -54207,7 +54178,7 @@ cdl
 uMA
 aWc
 baU
-gcO
+fYV
 ajJ
 sWk
 czJ
@@ -54307,25 +54278,25 @@ nWv
 nWv
 txn
 aiL
+iOy
+iOy
+rii
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+kjS
+iCF
+iOy
 beX
-iOy
-qgd
-nFR
-txn
-nFR
-awV
-awV
-nFR
-nFR
-txn
-nFR
-nFR
-nFR
-txn
-nFR
-wns
-iOy
-iOy
 wPD
 nFR
 ouK
@@ -54464,7 +54435,7 @@ aTG
 aTG
 txn
 aiL
-beX
+iOy
 iOy
 rii
 kjS
@@ -54482,7 +54453,7 @@ kjS
 kjS
 iCF
 iOy
-iOy
+beX
 mjr
 kjS
 icQ
@@ -54621,7 +54592,7 @@ aTG
 aTG
 txn
 aiL
-beX
+iOy
 iOy
 rii
 kjS
@@ -54639,7 +54610,7 @@ kjS
 kjS
 iCF
 iOy
-iOy
+beX
 nJP
 kjS
 lOT
@@ -54778,25 +54749,25 @@ oHb
 oHb
 txn
 aiL
+iOy
+iOy
+eUQ
+wef
+txn
+wef
+ekk
+ekk
+wef
+wef
+txn
+wef
+wef
+wef
+txn
+wef
+bCs
+iOy
 beX
-iOy
-rii
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-iCF
-iOy
-iOy
 ooM
 kjS
 bTU
@@ -54935,25 +54906,25 @@ oHb
 ahZ
 txn
 aiL
-beX
 iOy
+iOy
+rii
+kjS
 rii
 kjS
 kjS
 kjS
 kjS
 kjS
-kjS
-kjS
-kjS
-kjS
-kjS
+iCF
 kjS
 kjS
 kjS
 iCF
+kjS
+iCF
 iOy
-iOy
+beX
 ksm
 kjS
 wlx
@@ -55092,25 +55063,25 @@ apG
 apG
 txn
 aiL
-beX
 iOy
+iOy
+rii
+kjS
 rii
 kjS
 kjS
 kjS
 kjS
 kjS
-kjS
-kjS
-kjS
-kjS
-kjS
+iCF
 kjS
 kjS
 kjS
 iCF
+kjS
+iCF
 iOy
-iOy
+beX
 ksm
 vyO
 wlx
@@ -55249,25 +55220,25 @@ oHb
 apG
 txn
 tfH
-beX
 iOy
+iOy
+rii
+kjS
 rii
 kjS
 kjS
 kjS
 kjS
 kjS
-kjS
-kjS
-kjS
-kjS
-kjS
+iCF
 kjS
 kjS
 kjS
 iCF
+kjS
+iCF
 iOy
-iOy
+beX
 ooM
 kjS
 bTU
@@ -55406,25 +55377,25 @@ oHb
 apG
 txn
 aiL
+iOy
+iOy
+eUQ
+wef
+txn
+wef
+sXA
+sXA
+wef
+wef
+txn
+wef
+wef
+wef
+txn
+wef
+bCs
+iOy
 beX
-iOy
-rii
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-iCF
-iOy
-iOy
 nJP
 kjS
 lOT
@@ -55563,25 +55534,25 @@ oHb
 oHb
 txn
 aiL
+iOy
+iOy
+iOy
+pEj
+xFl
+tUo
+iOy
+iOy
+pEj
+iOy
+mxx
+iOy
+pEj
+iOy
+oNF
+iOy
+pEj
+iOy
 beX
-iOy
-rii
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-kjS
-iCF
-iOy
-iOy
 fHc
 kjS
 icQ
@@ -55721,24 +55692,24 @@ apG
 txn
 aiL
 beX
-iOy
-eUQ
-wef
-txn
-wef
-ekk
-ekk
-wef
-wef
-txn
-wef
-wef
-wef
-txn
-wef
-bCs
-iOy
-iOy
+beX
+beX
+nDN
+beX
+nDN
+beX
+beX
+cdf
+beX
+cdf
+beX
+cdf
+beX
+cdf
+beX
+cdf
+beX
+beX
 mhu
 wef
 cQa
@@ -55880,21 +55851,21 @@ mEU
 beX
 iOy
 iOy
-iOy
-vgE
+tUo
+vfv
 pEj
 iOy
 iOy
+tUo
 iOy
-xSy
-iaU
+ciT
 iOy
+tUo
 iOy
-xSy
-iaU
+cZb
 iOy
+tUo
 iOy
-xSy
 iOy
 iOy
 iOy
@@ -56036,21 +56007,21 @@ txn
 aiL
 iOy
 iOy
-iOy
-pEj
-iOy
-iOy
-xSy
-iOy
-pEj
-iOy
-iOy
-xSy
-pEj
-iOy
-iOy
-xSy
-pEj
+qgd
+nFR
+txn
+nFR
+nFR
+nFR
+nFR
+nFR
+txn
+nFR
+nFR
+nFR
+txn
+nFR
+wns
 iOy
 iOy
 iOy
@@ -56079,7 +56050,7 @@ apG
 apG
 iSU
 sUx
-sUx
+cZM
 qdO
 sUx
 sUx
@@ -56393,7 +56364,7 @@ apG
 apG
 iSU
 fjY
-tcj
+gEM
 tcj
 sUx
 sUx
@@ -59221,7 +59192,7 @@ pWN
 oZI
 gaO
 gaO
-fSD
+dNQ
 fSD
 fSD
 pwK
@@ -61947,7 +61918,7 @@ abe
 abU
 apU
 aNT
-aOa
+oXA
 xOt
 hAc
 oXA
@@ -62109,9 +62080,9 @@ hnq
 hnq
 hnq
 apU
-xEY
+lal
 uWZ
-xEY
+lal
 jik
 kUu
 bza
@@ -62266,8 +62237,8 @@ hnq
 hnq
 dcn
 awW
-xEY
-hgq
+lal
+wyv
 cCm
 mLI
 kUu
@@ -62370,7 +62341,7 @@ ahZ
 oHb
 oHb
 oHb
-tRS
+oHb
 rrV
 rrV
 oHb
@@ -62423,7 +62394,7 @@ hnq
 hnq
 aZH
 apU
-xEY
+lal
 toE
 oem
 jtw
@@ -62689,7 +62660,7 @@ qzS
 mUZ
 oHb
 rrV
-rrV
+rzf
 usW
 yfI
 yfI
@@ -63469,7 +63440,7 @@ oHb
 oHb
 oHb
 oHb
-tRS
+oHb
 rrV
 rrV
 oHb
@@ -63788,7 +63759,7 @@ rrV
 rrV
 rrV
 rrV
-rrV
+rzf
 usW
 yfI
 yfI
@@ -64470,23 +64441,23 @@ lal
 oqK
 wyv
 aKc
-opI
-opI
-opI
+xOt
+xOt
+xOt
 naV
-opI
-opI
-opI
-opI
+xOt
+xOt
+xOt
+xOt
 aHl
 naV
-opI
-opI
-opI
+xOt
+xOt
+xOt
 aKc
-opI
-opI
-opI
+xOt
+xOt
+xOt
 aKc
 utF
 utF
@@ -65082,12 +65053,12 @@ mlO
 apG
 aKc
 vBM
-hcF
+vBM
 gBk
-hcF
-hcF
+vBM
+vBM
 axn
-hcF
+vBM
 aKc
 tPr
 lal
@@ -65726,23 +65697,23 @@ lal
 akl
 lal
 aKc
-lyD
-lyD
+vBM
+vBM
 goD
 liX
 qCs
-lyD
-lyD
-lyD
+vBM
+vBM
+vBM
 rXR
-lyD
-lyD
-lyD
-lyD
+vBM
+vBM
+vBM
+vBM
 aKc
-lyD
-lyD
-lyD
+vBM
+vBM
+vBM
 aKc
 utF
 utF

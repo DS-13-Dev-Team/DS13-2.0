@@ -33,7 +33,7 @@
 	desc = "This is random ammunition."
 	icon_state = "clusterbang"
 	loot = list(
-		/obj/item/ammo_casing/energy/plasma = 2,
+		/obj/item/stock_parts/cell/plasmacutter = 2,
 		/obj/item/ammo_box/magazine/rivet = 2,
 		/obj/item/ammo_box/magazine/javelin = 2,
 	)
