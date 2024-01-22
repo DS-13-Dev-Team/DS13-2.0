@@ -1,5 +1,0 @@
-author: MisterGrimm
-delete-after: true
-changes:
-  - rscadd: Twitcher Implemented
-  - code_imp: is_enhanced moved to necro_defines and made a global proc
