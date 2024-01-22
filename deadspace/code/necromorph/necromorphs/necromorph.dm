@@ -1,6 +1,8 @@
 /mob/living/carbon/human/necromorph/Initialize(mapload, obj/structure/marker/marker_master)
 	.=..()
 
+	//AddComponent(/datum/component/seethrough_mob) //Uncomment this when we get seethrough comp from upstream
+
 	if(!marker_master)
 		return INITIALIZE_HINT_QDEL
 
