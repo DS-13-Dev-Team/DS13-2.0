@@ -9,7 +9,7 @@
 	pass_flags_self = LETPASSTHROW|PASSSTRUCTURE|PASSGRILLE
 	/// armor more or less consistent with grille. max_integrity about one time and a half that of a grille.
 	armor = list(BLUNT = 50, PUNCTURE = 70, SLASH = 90, LASER = 70, ENERGY = 100, BOMB = 10, BIO = 100, FIRE = 0, ACID = 0)
-	max_integrity = 75
+	max_integrity = 50
 
 	var/climbable = TRUE
 	///Initial direction of the railing.
