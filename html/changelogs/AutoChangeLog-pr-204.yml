@@ -1,0 +1,7 @@
+author: blackwolf602
+delete-after: true
+changes:
+  - bugfix: fixed plasma cutter ammo spawns
+  - bugfix: mining atmos issue
+  - bugfix: command maints
+  - config: changed overflow job from assistant to shaft miner
