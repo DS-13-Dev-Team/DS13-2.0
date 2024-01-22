@@ -221,8 +221,12 @@
 	speed = 0.8
 	pixel_speed_multiplier = 0.5
 
-	acid_type = /datum/reagent/toxin/acid/fluacid
-	acid_amount = 3
+/obj/projectile/bullet/biobomb/brute/on_hit(atom/target, blocked, pierce_hit)
+	. = ..()
+	if(. == BULLET_ACT_HIT)
+		if(isliving(target))
+			var/mob/living/M = target
+			M.adjust_timed_status_effect(15 SECONDS, /datum/status_effect/bioacid)
 
 #undef CURL_ANIMATION_TIME
 #undef CURL_FORCED_DURATION

@@ -4887,7 +4887,6 @@
 #include "deadspace\code\necromorph\necromorphs\subtypes\tripod.dm"
 #include "deadspace\code\necromorph\necromorphs\subtypes\twitcher.dm"
 #include "deadspace\code\necromorph\necromorphs\subtypes\ubermorph.dm"
-#include "deadspace\code\reagents\Chemistry-Reagents\acid.dm"
 #include "interface\interface.dm"
 #include "interface\menu.dm"
 #include "interface\stylesheet.dm"

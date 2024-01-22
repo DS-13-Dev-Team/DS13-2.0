@@ -49,29 +49,42 @@
 	pixel_speed_multiplier = 0.3
 
 	impact_effect_type = /obj/effect/temp_visual/biombomb_impact
-	//The immediate damage from a direct hit, acid gives more damage over time.
-	damage = 10
+	//The immediate damage from a direct hit, bioacid gives more damage over time.
+	damage = 5
 	damage_type = BURN
 
 	armor_flag = ACID
-	//We deal real damage by exposing reagent at victims, though we need run armour checks
-	armor_penetration = 25
+	armor_penetration = 0
 	eyeblur = 5
 
-	var/acid_type = /datum/reagent/toxin/acid
-	//Amount of acid we expose at target when it is hit
-	var/acid_amount = 5
+//burns a living target over the course of it's duration
+/datum/status_effect/bioacid
+	id = "bioacid"
+	status_type = STATUS_EFFECT_UNIQUE //Won't give us a new effect until this one wears off
+	duration = 1 SECONDS //The different necro acid projectiles increase this duration
+	max_duration = 40 SECONDS
+	alert_type = /atom/movable/screen/alert/status_effect/bioacid
+
+/datum/status_effect/bioacid/tick()
+	linked_alert.icon_state = "bioacid"
+	var/armor = owner.run_armor_check(attack_flag = ACID, silent = TRUE)
+	owner.apply_damage(2.7, BURN, blocked = armor, spread_damage = TRUE)
+
+/datum/status_effect/bioacid/get_examine_text()
+	return span_warning("[owner.p_they(TRUE)] [owner.p_are()] covered in sizzling acid!")
+
+/atom/movable/screen/alert/status_effect/bioacid
+	name = "Covered in acid"
+	desc = "You are covered in sizzling acid! <i>You take burn damage over time.</i>"
+	icon = 'deadspace/icons/obj/projectiles.dmi'
+	icon_state = "impact_acid_4"
 
 /obj/projectile/bullet/biobomb/on_hit(atom/target, blocked, pierce_hit)
 	. = ..()
 	if(. == BULLET_ACT_HIT)
-		var/datum/reagent/acid = SSreagents.chemical_reagents_list[acid_type]
 		if(isliving(target))
-			acid.expose_mob(target, TOUCH, acid_amount, TRUE)
-		else if (isturf(target))
-			acid.expose_turf(target, acid_amount)
-		else
-			acid.expose_obj(target, acid_amount)
+			var/mob/living/M = target
+			M.apply_status_effect(/datum/status_effect/bioacid)
 
 /obj/effect/temp_visual/biombomb_impact
 	name = "\improper acid bolt impact"
