@@ -17,6 +17,7 @@
 	melee_damage_lower = 7
 	melee_damage_upper = 10
 	max_health = 125
+	armor = list(BLUNT = 50, PUNCTURE = 40, SLASH = 15, LASER = 0, ENERGY = 0, BOMB = 5, BIO = 75, FIRE = 10, ACID = 100)
 	actions = list(
 		/datum/action/cooldown/necro/shoot/puker_snapshot,
 		/datum/action/cooldown/necro/shoot/puker_longshot,
@@ -30,7 +31,6 @@
 /datum/species/necromorph/puker
 	name = "Puker"
 	id = SPECIES_NECROMORPH_PUKER
-	burnmod = 1.1
 	speedmod = 1.6
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/puker,

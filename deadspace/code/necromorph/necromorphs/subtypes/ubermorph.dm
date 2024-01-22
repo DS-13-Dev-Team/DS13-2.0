@@ -23,6 +23,7 @@
 	melee_damage_upper = 25
 	max_health = INFINITY
 	implemented = TRUE
+	armor = list(BLUNT = 75, PUNCTURE = 50, SLASH = 30, LASER = 10, ENERGY = 15, BOMB = 25, BIO = 100, FIRE = 80, ACID = 100)
 	actions = list(
 		/datum/action/cooldown/necro/charge/ubermorph,
 		/datum/action/cooldown/necro/sense,

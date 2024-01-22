@@ -26,6 +26,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 16
 	max_health = 185
+	armor = list(BLUNT = 45, PUNCTURE = 45, SLASH = 25, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 80)
 	actions = list(
 		/datum/action/cooldown/necro/shout,
 		/datum/action/cooldown/necro/charge,
@@ -39,8 +40,6 @@
 	name = "Twitcher"
 	id = SPECIES_NECROMORPH_TWITCHER
 	speedmod = 0.8
-	brutemod = 0.8 //He's quite good at mitigating damage
-	burnmod = 1.1
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/twitcher,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/twitcher,

@@ -71,6 +71,7 @@
 	melee_damage_lower = 24
 	melee_damage_upper = 28
 	max_health = 510
+	armor = list(BLUNT = 55, PUNCTURE = 80, SLASH = 45, LASER = 0, ENERGY = 0, BOMB = 45, BIO = 50, FIRE = 10, ACID = 80)
 	actions = list(
 		/datum/action/cooldown/necro/slam,
 		/datum/action/cooldown/necro/long_charge/brute,
