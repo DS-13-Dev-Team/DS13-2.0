@@ -59,16 +59,20 @@
 	to_chat(user, span_notice("This has no use for Convergence."))
 	return
 
-
 /obj/machinery/bodyscanner/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
-	to_chat(user, span_notice("This has no use for Convergence."))
-	return
-
+	if(user.combat_mode)
+		return ..()
+	else
+		return
 
 /obj/machinery/sleeper/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
-	to_chat(user, span_notice("This has no use for Convergence."))
-	return
+	if(user.combat_mode)
+		return ..()
+	else
+		return
 
+/obj/machinery/firealarm/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
+	return
 
 //Consoles
 /obj/machinery/modular_computer/console/preset/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
@@ -103,7 +107,7 @@
 
 /obj/machinery/power/generator/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	to_chat(user, span_notice("This has no use for Convergence."))
-	log_combat(user, src, "tried to attack") //Lets us know when necros are trying to be naughty
+	log_combat(user, src, "attacked") //Lets us know when necros are trying to be naughty
 	return
 
 /obj/machinery/power/terminal/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
@@ -112,16 +116,17 @@
 
 /obj/machinery/telecomms/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	to_chat(user, span_notice("This has no use for Convergence."))
-	log_combat(user, src, "tried to attack") //Lets us know when necros are trying to be naughty
+	log_combat(user, src, "attacked") //Lets us know when necros are trying to be naughty
 	return
 
 /obj/machinery/power/smes/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	to_chat(user, span_notice("This has no use for Convergence."))
-	log_combat(user, src, "tried to attack") //Lets us know when necros are trying to be naughty
+	log_combat(user, src, "attacked") //Lets us know when necros are trying to be naughty
 	return
 
 /obj/machinery/power/supermatter/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	dust_mob(user) //What did you think was going to happen?
+	log_combat(user, src, "dusted")
 	return
 
 //Atmos based
@@ -141,6 +146,26 @@
 		return attack_hand(user) //Try to open/close the fence door
 	else
 		return ..() //Otherwise, smash it
+
+/obj/machinery/door/firedoor/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
+	if(locked || welded || density)
+		if(user.combat_mode)
+			dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper) + 5
+			user.do_attack_animation(src, "smash")
+			user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
+			user.changeNext_move(CLICK_CD_MELEE)
+			attack_generic(user, dealt_damage, BRUTE, PUNCTURE, TRUE)
+			return
+
+/obj/machinery/door/poddoor/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
+	if(user.combat_mode)
+		dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper) + 55 //Weak shutters get smashed easily, blast doors take a while
+		user.do_attack_animation(src, "smash")
+		user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
+		user.changeNext_move(CLICK_CD_MELEE)
+		attack_generic(user, dealt_damage, BRUTE, PUNCTURE, TRUE)
+		return
+
 
 /obj/machinery/door/airlock/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
 	if(isElectrified() && shock(user, 100))
@@ -177,4 +202,4 @@
 			to_chat(user, span_warning("Despite your efforts, [src] managed to resist your attempts to open it!"))
 		else
 			atom_break()
-			playsound(src, 'sound/machines/airlock_tear_open.ogg', VOLUME_HIGH, TRUE)
+			playsound(src, 'sound/machines/airlock_tear_open.ogg', 65, TRUE)
