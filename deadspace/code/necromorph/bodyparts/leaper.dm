@@ -17,6 +17,8 @@
 	biomass = 3
 	px_x = 0
 	px_y = -8
+	base_pixel_x = -12
+	base_pixel_y = -11
 
 //Leapers use arms to walk
 /obj/item/bodypart/arm/left/necromorph/leaper
@@ -63,6 +65,8 @@
 	throwforce = 20 //It's practically a limp spear
 	biomass = 3.5 //The tail is practically a piece of flesh with a sharp bit at the end, not much biomass
 	sharpness = SHARP_POINTY
+	base_pixel_x = -26
+	base_pixel_y = -15
 	can_be_disabled = FALSE
 
 /obj/item/bodypart/leg/left/necromorph/leaper
@@ -81,6 +85,8 @@
 	throwforce = 15 //It's practically a limp spear
 	biomass = 3.5
 	sharpness = SHARP_POINTY
+	base_pixel_x = -26
+	base_pixel_y = -15
 	can_be_disabled = FALSE
 
 

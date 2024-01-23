@@ -71,6 +71,7 @@
 	melee_damage_lower = 24
 	melee_damage_upper = 28
 	max_health = 510
+	armor = list(BLUNT = 55, PUNCTURE = 80, SLASH = 45, LASER = 0, ENERGY = 0, BOMB = 45, BIO = 50, FIRE = 10, ACID = 80)
 	actions = list(
 		/datum/action/cooldown/necro/slam,
 		/datum/action/cooldown/necro/long_charge/brute,
@@ -221,8 +222,12 @@
 	speed = 0.8
 	pixel_speed_multiplier = 0.5
 
-	acid_type = /datum/reagent/toxin/acid/fluacid
-	acid_amount = 3
+/obj/projectile/bullet/biobomb/brute/on_hit(atom/target, blocked, pierce_hit)
+	. = ..()
+	if(. == BULLET_ACT_HIT)
+		if(isliving(target))
+			var/mob/living/M = target
+			M.adjust_timed_status_effect(30 SECONDS, /datum/status_effect/bioacid)
 
 #undef CURL_ANIMATION_TIME
 #undef CURL_FORCED_DURATION

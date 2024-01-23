@@ -1,8 +1,10 @@
-#define MAW_DAMAGE_PER_SECOND 3
+#define MAW_DAMAGE_PER_SECOND 2
 
 // Human biomass = their limbs
 /obj/structure/necromorph/maw
 	name = "maw"
+	desc = "A disgusting mass of throbbing flesh and gnashing teeth, it looks like something out of a nightmare."
+	desc_controls = "Click-drag a body onto the maw to begin biomass consumption."
 	icon = 'deadspace/icons/effects/corruption.dmi'
 	icon_state = "maw"
 	density = FALSE
@@ -169,7 +171,7 @@
 
 /datum/action/cooldown/necro/corruption/maw
 	name = "maw"
-	desc = "It acts as a corpose disposal location slowly devouring any corpses put inside. Drag-n-drop the body for it to start consuming the body."
+	desc = "It acts as a corpose disposal, slowly devouring any corpses put inside. Gives 20% extra biomass for humans, can devour normal mobs, and can recycle necromorphs."
 	button_icon_state = "maw"
 	place_structure = /obj/structure/necromorph/maw
 	cost = 40

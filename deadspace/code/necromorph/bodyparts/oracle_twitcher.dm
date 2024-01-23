@@ -12,6 +12,8 @@
 	icon_state = "head"
 	max_damage = 200
 	biomass = 26
+	base_pixel_x = -10
+	base_pixel_y = -40
 
 /obj/item/bodypart/arm/left/necromorph/twitcher/enhanced
 	name = "left arm"
@@ -20,6 +22,8 @@
 	icon_state = "l_arm"
 	max_damage = 75
 	biomass = 16
+	base_pixel_x = -28
+	base_pixel_y = -17
 
 /obj/item/bodypart/arm/right/necromorph/twitcher/enhanced
 	name = "right arm"
@@ -28,6 +32,8 @@
 	icon_state = "l_arm"
 	max_damage = 75
 	biomass = 16
+	base_pixel_x = 0
+	base_pixel_y = 0
 
 /obj/item/bodypart/leg/left/necromorph/twitcher/enhanced
 	name = "left leg"
@@ -36,6 +42,7 @@
 	icon_state = "l_leg"
 	max_damage = 75
 	biomass = 16
+	base_pixel_x = -16
 
 /obj/item/bodypart/leg/right/necromorph/twitcher/enhanced
 	name = "right leg"
@@ -44,3 +51,5 @@
 	icon_state = "r_leg"
 	max_damage = 75
 	biomass = 16
+	base_pixel_x = 0
+	base_pixel_y = 0

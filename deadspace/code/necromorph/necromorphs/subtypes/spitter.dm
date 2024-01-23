@@ -17,9 +17,10 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 13
 	max_health = 90
+	armor = list(BLUNT = 40, PUNCTURE = 30, SLASH = 10, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 65, FIRE = 0, ACID = 90)
 	actions = list(
-		/datum/action/cooldown/necro/shoot/spitter_snapshoot,
-		/datum/action/cooldown/necro/shoot/spitter_longshoot,
+		/datum/action/cooldown/necro/shoot/spitter_snapshot,
+		/datum/action/cooldown/necro/shoot/spitter_longshot,
 		/datum/action/cooldown/necro/shout,
 		/datum/action/cooldown/necro/scream,
 	)
@@ -52,47 +53,51 @@
 		'deadspace/sound/effects/creatures/necromorph/spitter/spitter_death_3.ogg',
 	)
 
-/datum/action/cooldown/necro/shoot/spitter_longshoot
+/datum/action/cooldown/necro/shoot/spitter_longshot
 	name = "Long shot"
 	desc = "A powerful projectile for longrange shooting."
 	cooldown_time = 3.5 SECONDS
 	windup_time = 0.5 SECONDS
-	projectiletype = /obj/projectile/bullet/biobomb/spitter_longshoot
+	projectiletype = /obj/projectile/bullet/biobomb/spitter_longshot
 	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_LONGSHOT_DOWN
 
-/datum/action/cooldown/necro/shoot/spitter_longshoot/pre_fire(atom/target)
+/datum/action/cooldown/necro/shoot/spitter_longshot/pre_fire(atom/target)
 	ADD_TRAIT(owner, TRAIT_IMMOBILIZED, src)
 
-/datum/action/cooldown/necro/shoot/spitter_longshoot/post_fire()
+/datum/action/cooldown/necro/shoot/spitter_longshot/post_fire()
 	REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, src)
 
-/obj/projectile/bullet/biobomb/spitter_longshoot
+/obj/projectile/bullet/biobomb/spitter_longshot
 	name = "acid blast"
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
-	damage = 15
+	damage = 7
 	speed = 0.8
 	pixel_speed_multiplier = 0.5
 
-	acid_type = /datum/reagent/toxin/acid/fluacid
-	acid_amount = 3
+/obj/projectile/bullet/biobomb/spitter_longshot/on_hit(atom/target, blocked, pierce_hit)
+	. = ..()
+	if(. == BULLET_ACT_HIT)
+		if(isliving(target))
+			var/mob/living/M = target
+			M.adjust_timed_status_effect(9 SECONDS, /datum/status_effect/bioacid)
 
 #define SPITTER_SNAPSHOT_AUTOTARGET_RANGE 3
 
-/datum/action/cooldown/necro/shoot/spitter_snapshoot
+/datum/action/cooldown/necro/shoot/spitter_snapshot
 	name = "Snapshot"
 	desc = "A moderate-strength projectile that auto-aims at targets within X range."
 	cooldown_time = 3 SECONDS
 	windup_time = 0 SECONDS
-	projectiletype = /obj/projectile/bullet/biobomb/spitter_snapshoot
+	projectiletype = /obj/projectile/bullet/biobomb/spitter_snapshot
 	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_SNAPSHOT_DOWN
 
-/datum/action/cooldown/necro/shoot/spitter_snapshoot/New(Target, original, cooldown)
+/datum/action/cooldown/necro/shoot/spitter_snapshot/New(Target, original, cooldown)
 	desc = "A moderate-strength projectile. Auto-aims at targets within [SPITTER_SNAPSHOT_AUTOTARGET_RANGE] range."
 	..()
 
-/datum/action/cooldown/necro/shoot/spitter_snapshoot/PreActivate(atom/target)
+/datum/action/cooldown/necro/shoot/spitter_snapshot/PreActivate(atom/target)
 	if(!isliving(target))
 		for(var/mob/potential_target in view(SPITTER_SNAPSHOT_AUTOTARGET_RANGE, get_turf(target)))
 			if(!faction_check(potential_target.faction, owner.faction))
@@ -105,14 +110,19 @@
 
 #undef SPITTER_SNAPSHOT_AUTOTARGET_RANGE
 
-/obj/projectile/bullet/biobomb/spitter_snapshoot
+/obj/projectile/bullet/biobomb/spitter_snapshot
 	name = "acid bolt"
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
-	damage = 9
+	damage = 4
 	speed = 0.8
 	pixel_speed_multiplier = 0.7 //meant to be a close range attack, easier to hit but does less damage
 
-	acid_type = /datum/reagent/toxin/acid/fluacid
-	acid_amount = 2
+/obj/projectile/bullet/biobomb/spitter_snapshot/on_hit(atom/target, blocked, pierce_hit)
+	. = ..()
+	if(. == BULLET_ACT_HIT)
+		if(isliving(target))
+			var/mob/living/M = target
+			M.adjust_timed_status_effect(6 SECONDS, /datum/status_effect/bioacid)
+

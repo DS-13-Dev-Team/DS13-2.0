@@ -19,6 +19,7 @@
 	px_y = -8
 	wound_resistance = 5
 	biomass = 7.5
+	base_pixel_y = -30
 
 ///The pustule shouldn't get BP_IS_MOVEMENT_LIMB, since pressure is what causes a pustule to explode in lore
 /obj/item/bodypart/arm/left/necromorph/exploder
@@ -27,6 +28,8 @@
 	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	icon_static = 'deadspace/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "l_arm"
+	interaction_flags_item = INTERACT_ITEM_ATTACK_HAND_PICKUP //We want to be able to pick up and throw the pustle
+	w_class = WEIGHT_CLASS_BULKY //But we don't want to store it
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
@@ -35,6 +38,7 @@
 	wound_resistance = 0
 	biomass = 10 //Assuming it doesn't explode, it's packed with biomass
 	integrity_failure = 0.5 //breaks at roughly 50% health
+	base_pixel_x = -27
 
 //If someone happens to cut off the limb correctly it won't spontaniously cuban pete like a bottle of nitroglycerin
 /obj/item/bodypart/arm/left/necromorph/exploder/dismember(dismember_type, silent, clean)

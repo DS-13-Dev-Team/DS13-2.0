@@ -19,6 +19,8 @@
 	px_y = -8
 	wound_resistance = 5
 	biomass = 7
+	base_pixel_x = -5
+	base_pixel_y = -20
 
 /obj/item/bodypart/arm/left/necromorph/slasher
 	name = "left blade"
@@ -32,6 +34,8 @@
 	px_y = 0
 	wound_resistance = 0
 	biomass = 2
+	base_pixel_x = -15
+	base_pixel_y = -15
 
 /obj/item/bodypart/arm/right/necromorph/slasher
 	name = "right blade"
@@ -45,6 +49,7 @@
 	px_y = 0
 	wound_resistance = 0
 	biomass = 2
+	base_pixel_y = -15
 
 /obj/item/bodypart/leg/left/necromorph/slasher
 	name = "left leg"

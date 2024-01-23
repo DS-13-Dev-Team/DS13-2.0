@@ -17,6 +17,7 @@
 	melee_damage_lower = 7
 	melee_damage_upper = 10
 	max_health = 125
+	armor = list(BLUNT = 50, PUNCTURE = 40, SLASH = 15, LASER = 0, ENERGY = 0, BOMB = 5, BIO = 75, FIRE = 10, ACID = 100)
 	actions = list(
 		/datum/action/cooldown/necro/shoot/puker_snapshot,
 		/datum/action/cooldown/necro/shoot/puker_longshot,
@@ -30,7 +31,6 @@
 /datum/species/necromorph/puker
 	name = "Puker"
 	id = SPECIES_NECROMORPH_PUKER
-	burnmod = 1.1
 	speedmod = 1.6
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/puker,
@@ -87,12 +87,16 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
-	damage = 25
+	damage = 10
 	speed = 0.8
 	pixel_speed_multiplier = 0.5
 
-	acid_type = /datum/reagent/toxin/acid/fluacid
-	acid_amount = 5
+/obj/projectile/bullet/biobomb/puker_longshot/on_hit(atom/target, blocked, pierce_hit)
+	. = ..()
+	if(. == BULLET_ACT_HIT)
+		if(isliving(target))
+			var/mob/living/M = target
+			M.adjust_timed_status_effect(18 SECONDS, /datum/status_effect/bioacid)
 
 #define PUKER_SNAPSHOT_AUTOTARGET_RANGE 3
 
@@ -126,9 +130,13 @@
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "acid_large"
 
-	damage = 13.5 //does 25% more damage then a spitter's snapshot
+	damage = 6
 	speed = 0.8
 	pixel_speed_multiplier = 0.7
 
-	acid_type = /datum/reagent/toxin/acid/fluacid
-	acid_amount = 3.2
+/obj/projectile/bullet/biobomb/puker_snapshot/on_hit(atom/target, blocked, pierce_hit)
+	. = ..()
+	if(. == BULLET_ACT_HIT)
+		if(isliving(target))
+			var/mob/living/M = target
+			M.adjust_timed_status_effect(10 SECONDS, /datum/status_effect/bioacid)

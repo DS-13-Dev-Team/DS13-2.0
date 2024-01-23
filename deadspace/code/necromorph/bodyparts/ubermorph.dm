@@ -17,6 +17,8 @@
 	px_x = 0
 	px_y = -8
 	wound_resistance = 5
+	base_pixel_x = -5
+	base_pixel_y = -45
 
 /obj/item/bodypart/arm/left/necromorph/ubermorph
 	name = "left blade"
@@ -29,6 +31,8 @@
 	px_x = -6
 	px_y = 0
 	wound_resistance = 0
+	base_pixel_x = -15
+	base_pixel_y = -20
 
 /obj/item/bodypart/arm/right/necromorph/ubermorph
 	name = "right blade"
@@ -41,6 +45,7 @@
 	px_x = 6
 	px_y = 0
 	wound_resistance = 0
+	base_pixel_y = -20
 
 /obj/item/bodypart/leg/left/necromorph/ubermorph
 	name = "left leg"
@@ -53,6 +58,7 @@
 	px_x = -2
 	px_y = 12
 	wound_resistance = 0
+	base_pixel_x = -13
 
 /obj/item/bodypart/leg/right/necromorph/ubermorph
 	name = "right leg"

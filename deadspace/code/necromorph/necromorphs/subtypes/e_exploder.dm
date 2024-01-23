@@ -25,6 +25,7 @@
 	max_health = 200
 	biomass_cost = 165
 	biomass_spent_required = 850
+	armor = list(BLUNT = 40, PUNCTURE = 35, SLASH = 15, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 70, FIRE = 25, ACID = 100)
 	actions = list(
 		/datum/action/cooldown/necro/shout,
 		/datum/action/cooldown/necro/explode,

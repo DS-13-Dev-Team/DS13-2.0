@@ -19,6 +19,7 @@
 	px_y = -8
 	wound_resistance = 5
 	biomass = 20
+	base_pixel_y = -25
 
 /obj/item/bodypart/arm/left/necromorph/twitcher
 	name = "left arm"
@@ -32,6 +33,8 @@
 	px_y = 0
 	wound_resistance = 0
 	biomass = 7
+	base_pixel_x = -10
+	base_pixel_y = -10
 
 /obj/item/bodypart/arm/right/necromorph/twitcher
 	name = "right arm"
@@ -45,6 +48,8 @@
 	px_y = 0
 	wound_resistance = 0
 	biomass = 7
+	base_pixel_x = 10
+	base_pixel_y = -10
 
 /obj/item/bodypart/leg/left/necromorph/twitcher
 	name = "left leg"

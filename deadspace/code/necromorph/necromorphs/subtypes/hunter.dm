@@ -46,6 +46,7 @@
 	max_health = 275
 	melee_damage_lower = 18
 	melee_damage_upper = 22
+	armor = list(BLUNT = 80, PUNCTURE = 60, SLASH = 10, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 75, FIRE = 0, ACID = 95)
 	actions = list(
 		/datum/action/cooldown/necro/swing/hunter,
 		// /datum/action/cooldown/necro/taunt/hunter,
@@ -59,7 +60,6 @@
 	name = "Hunter"
 	id = SPECIES_NECROMORPH_HUNTER
 	speedmod = 1.6
-	burnmod = 1.3
 	bodypart_overrides = list(
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/necromorph/hunter,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/necromorph/hunter,

@@ -19,6 +19,8 @@
 	px_y = -8
 	wound_resistance = 5
 	biomass = 30
+	base_pixel_x = -5
+	base_pixel_y = -35
 
 /obj/item/bodypart/arm/left/necromorph/hunter
 	name = "left blade"
@@ -32,6 +34,8 @@
 	px_y = 0
 	wound_resistance = 0
 	biomass = 20
+	base_pixel_x = -17
+	base_pixel_y = -22
 
 /obj/item/bodypart/arm/right/necromorph/hunter
 	name = "right blade"
@@ -45,6 +49,8 @@
 	px_y = 0
 	wound_resistance = 0
 	biomass = 20
+	base_pixel_x = 5
+	base_pixel_y = -22
 
 /obj/item/bodypart/leg/left/necromorph/hunter
 	name = "left leg"
@@ -58,6 +64,7 @@
 	px_y = 12
 	wound_resistance = 0
 	biomass = 20
+	base_pixel_x = -10
 
 /obj/item/bodypart/leg/right/necromorph/hunter
 	name = "right leg"
