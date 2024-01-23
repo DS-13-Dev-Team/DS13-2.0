@@ -51,3 +51,9 @@
   MisterGrimm:
   - rscadd: Twitcher Implemented
   - code_imp: is_enhanced moved to necro_defines and made a global proc
+2024-01-23:
+  blackwolf602:
+  - bugfix: fixed plasma cutter ammo spawns
+  - bugfix: mining atmos issue
+  - bugfix: command maints
+  - config: changed overflow job from assistant to shaft miner
