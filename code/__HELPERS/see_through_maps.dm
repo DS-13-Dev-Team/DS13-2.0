@@ -83,11 +83,11 @@ GLOBAL_LIST_INIT(see_through_maps, list(
 	// XXX
 	// OAO
 	SEE_THROUGH_MAP_MARKER = list(
-		list(-1, 4, 0), list(0, 4, 0), list(1, 4, 0)
+		list(-1, 4, 0), list(0, 4, 0), list(1, 4, 0),
 		list(-1, 3, 0), list(0, 3, 0), list(1, 3, 0),
 		list(-1, 2, 0), list(0, 2, 0), list(1, 2, 0),
 		list(-1, 1, 0), list(0, 1, 0), list(1, 1, 0)
-	),
+	)
 ))
 
 
