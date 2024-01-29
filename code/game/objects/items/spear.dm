@@ -5,14 +5,18 @@
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
-	force = 7
+
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
+
+	force = 7
+	force_wielded = 14
 	throwforce = 15
 	throw_speed = 4
 	block_chance = 20 //Doesn't get as much block as other twohanded due to makeshift creation
 	embedding = list("impact_pain_mult" = 2, "remove_pain_mult" = 4, "jostle_chance" = 2.5)
 	armor_penetration = 10
+
 	custom_materials = list(/datum/material/iron=1150, /datum/material/glass=2075)
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb_continuous = list("attacks", "pokes", "jabs", "tears", "lacerates", "gores")
@@ -27,9 +31,9 @@
 
 /obj/item/spear/Initialize(mapload)
 	. = ..()
+	icon_state_wielded = "[icon_prefix]1"
 	AddComponent(/datum/component/butchering, 100, 70) //decent in a pinch, but pretty bad.
 	AddComponent(/datum/component/jousting)
-	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=18, icon_wielded="[icon_prefix]1")
 	update_appearance()
 
 /obj/item/spear/proc/on_wield(obj/item/source, mob/user)
@@ -61,26 +65,31 @@
 	if(tip)
 		if (istype(tip, /obj/item/shard/plasma))
 			force = 8
+			force_wielded = 16
 			throwforce = 21
 			block_chance = 22
 			icon_prefix = "spearplasma"
-			AddComponent(/datum/component/two_handed, force_unwielded=11, force_wielded=19, icon_wielded="[icon_prefix]1")
+			icon_state_wielded = "[icon_prefix]1"
+
 		else if (istype(tip, /obj/item/shard/titanium))
 			force = 10
+			force_wielded = 20
 			throwforce = 21
 			throw_range = 8
 			throw_speed = 5
 			block_chance = 25
 			icon_prefix = "speartitanium"
-			AddComponent(/datum/component/two_handed, force_unwielded=13, force_wielded=18, icon_wielded="[icon_prefix]1")
+			icon_state_wielded = "[icon_prefix]1"
+
 		else if (istype(tip, /obj/item/shard/plastitanium))
-			force = 10
+			force = 12
+			force_wielded = 24
 			throwforce = 22
 			throw_range = 9
 			throw_speed = 5
 			block_chance = 26 //Ever so slightly more nimble then titanium
 			icon_prefix = "spearplastitanium"
-			AddComponent(/datum/component/two_handed, force_unwielded=13, force_wielded=20, icon_wielded="[icon_prefix]1")
+			icon_state_wielded = "[icon_prefix]1"
 		update_appearance()
 		parts_list -= tip
 		qdel(tip)
@@ -92,6 +101,7 @@
 	base_icon_state = "spearbomb"
 	icon_prefix = "spearbomb"
 	block_chance = 0 //You probably don't want to block with a explosive
+	force = 10
 	var/obj/item/grenade/explosive = null
 
 /obj/item/spear/explosive/Initialize(mapload)
@@ -109,16 +119,15 @@
 	var/obj/item/grenade/G = locate() in parts_list
 	if(G)
 		var/obj/item/spear/lancePart = locate() in parts_list
-		var/datum/component/two_handed/comp_twohand = lancePart.GetComponent(/datum/component/two_handed)
-		if(comp_twohand)
-			var/lance_wielded = comp_twohand.force_wielded
-			var/lance_unwielded = comp_twohand.force_unwielded
-			AddComponent(/datum/component/two_handed, force_unwielded=lance_unwielded, force_wielded=lance_wielded)
+		force = lancePart.force
+		force_wielded = lancePart.force_wielded
 		throwforce = lancePart.throwforce
 		icon_prefix = lancePart.icon_prefix
+
 		parts_list -= G
 		parts_list -= lancePart
 		set_explosive(G)
+
 		qdel(lancePart)
 	..()
 
@@ -166,11 +175,9 @@
 	desc = "Recovered from the aftermath of a revolt aboard Defense Outpost Theta Aegis, in which a seemingly endless tide of Assistants caused heavy casualities among Mars security staff."
 	attack_verb_continuous = list("gores")
 	attack_verb_simple = list("gore")
-	force=15
 
-/obj/item/spear/grey_tide/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=15, force_wielded=25, icon_wielded="[icon_prefix]1")
+	force = 15
+	force_wielded = 25
 
 /obj/item/spear/grey_tide/afterattack(atom/movable/AM, mob/living/user, proximity)
 	. = ..()
@@ -194,16 +201,11 @@
 	icon_state = "bone_spear0"
 	base_icon_state = "bone_spear0"
 	icon_prefix = "bone_spear"
+
 	name = "bone spear"
 	desc = "A haphazardly-constructed yet still deadly weapon. The pinnacle of modern technology."
-	force = 12
-	throwforce = 22
 	block_chance = 23 //Slightly better then makeshift glass spear
 	armor_penetration = 15 //Enhanced armor piercing
-
-/obj/item/spear/bonespear/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=12, force_wielded=20, icon_wielded="[icon_prefix]1")
 
 /*
  * Bamboo Spear
@@ -214,9 +216,9 @@
 	icon_prefix = "bamboo_spear"
 	name = "bamboo spear"
 	desc = "A haphazardly-constructed bamboo stick with a sharpened tip, ready to poke holes into unsuspecting people."
+
+	force = 8
+	force_wielded = 16
 	throwforce = 22	//Better to throw
 	block_chance = 10 //And you thought glass and rods were flimsy
 
-/obj/item/spear/bamboospear/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=18, icon_wielded="[icon_prefix]1")
