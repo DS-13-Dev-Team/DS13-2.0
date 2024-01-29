@@ -15,7 +15,7 @@
 
 /obj/structure/necromorph/harvester/Initialize(mapload, obj/structure/marker/new_master)
 	.=..()
-	//AddComponent(/datum/component/seethrough, SEE_THROUGH_MAP_THREE_X_THREE)
+	AddComponent(/datum/component/seethrough, SEE_THROUGH_MAP_THREE_X_THREE)
 	if(!new_master)
 		return INITIALIZE_HINT_QDEL
 	marker = new_master

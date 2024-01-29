@@ -75,6 +75,17 @@ GLOBAL_LIST_INIT(see_through_maps, list(
 		list(0, 1, 0), list(1, 1, 0), list(2, 1, 0), list(3, 1, 0), list(4, 1, 0), list(5, 1, 0), list(6, 1, 0), list(7, 1, 0), list(8, 1, 0), list(9, 1, 0), list(10, 1, 0), list(11, 1, 0), list(12, 1, 0),
 		list(0, 0, 0), list(1, 0, 0), list(2, 0, 0), list(3, 0, 0), list(4, 0, 0), list(5, 0, 0), list(6, 0, 0), list(7, 0, 0), list(8, 0, 0), list(9, 0, 0), list(10, 0, 0), list(11, 0, 0), list(12, 0, 0), list(13, 0, 0)
 	)
+	///Marker
+	// XXX
+	// XXX
+	// XXX
+	// OAO
+	SEE_THROUGH_MAP_MARKER = list(
+		list(-1, 4, 0), list(0, 4, 0), list(1, 4, 0)
+		list(-1, 3, 0), list(0, 3, 0), list(1, 3, 0),
+		list(-1, 2, 0), list(0, 2, 0), list(1, 2, 0),
+		list(-1, 1, 0), list(0, 1, 0), list(1, 1, 0)
+	),
 ))
 
 

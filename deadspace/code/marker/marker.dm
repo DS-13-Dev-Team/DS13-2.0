@@ -13,8 +13,7 @@
 			necro_classes[class] = new class()
 
 	necro_spawn_atoms += src
-	//Uncomment when implemented
-	//AddComponent(AddComponent(/datum/component/seethrough, SEE_THROUGH_MAP_MARKER))
+	AddComponent(AddComponent(/datum/component/seethrough, SEE_THROUGH_MAP_MARKER))
 	START_PROCESSING(SSobj, src)
 
 /obj/structure/marker/Destroy()
