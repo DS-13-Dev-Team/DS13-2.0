@@ -2,7 +2,7 @@
 Pulse Rifles
 */
 
-/obj/item/gun/ballistic/deadspace/twohanded/pulse
+/obj/item/gun/ballistic/automatic/pulse
 	name = "SWS Motorized Pulse Rifle"
 	desc = "The SWS Motorized Pulse Rifle is a military-grade, triple-barreled assault rifle, manufactured by Winchester Arms, is capable of a rapid rate of fire. \
 			The Pulse Rifle is the standard-issue service rifle of the Earth Defense Force and is also common among corporate security officers. "
@@ -17,38 +17,55 @@ Pulse Rifles
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	mag_display = FALSE
 	mag_type = /obj/item/ammo_box/magazine/pulse
-	default_ammo = /obj/item/ammo_casing/caseless/pulse
-	weapon_weight = WEAPON_HEAVY
+	gun_flags = NO_AKIMBO
 	empty_alarm = TRUE
 	show_bolt_icon = FALSE
 	burst_size = 1
-	bolt_type = BOLT_TYPE_OPEN
+	bolt = /datum/gun_bolt/open
 	can_suppress = FALSE
-	one_handed_penalty = 20
 	spread = 5
+	unwielded_spread_bonus = 20
 	fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_shot.ogg'
 	load_sound = 'deadspace/sound/weapons/guns/interaction/pulse_magin.ogg'
 	eject_sound = 'deadspace/sound/weapons/guns/interaction/pulse_magout.ogg'
-	default_fire_sound ='deadspace/sound/weapons/guns/fire/pulse_shot.ogg'
 	//alt fire stuff
-	alt_fire_ammo = /obj/item/ammo_casing/caseless/rocket/pulse
-	alt_fire_cost = 25
-	alt_fire = "grenade launcher"
-	alt_fire_delay = 20
-	alt_fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_grenade.ogg'
+	var/obj/item/gun/ballistic/revolver/grenadelauncher/pulse/underbarrel
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/pulse
+	desc = "A break-operated grenade launcher for the pulse rifle."
+	name = "pulse underbarrel launcher"
+	icon_state = "dshotgun_sawn"
+	inhand_icon_state = "gun"
+	mag_type = /obj/item/ammo_casing/caseless/rocket/pulse
+	fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_grenade.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	bolt = /datum/gun_bolt/no_bolt
 
 /obj/item/gun/ballistic/automatic/pulse/no_mag
 	spawnwithmagazine = FALSE
 
-/obj/item/gun/ballistic/deadspace/twohanded/pulse/Initialize(mapload)
+/obj/item/gun/ballistic/automatic/pulse/Initialize(mapload)
 	. = ..()
-	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
-	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/pulse(src)
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
-	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]-wielded")
+/obj/item/gun/ballistic/automatic/pulse/Destroy()
+	QDEL_NULL(underbarrel)
+	return ..()
 
-/obj/item/gun/ballistic/deadspace/twohanded/pulse/egov //Same situation as rending divet
+/obj/item/gun/ballistic/automatic/pulse/afterattack_secondary(atom/target, mob/living/user, flag, params)
+	underbarrel.afterattack(target, user, flag, params)
+	return SECONDARY_ATTACK_CONTINUE_CHAIN
+
+/obj/item/gun/ballistic/automatic/pulse/attackby(obj/item/A, mob/user, params)
+	if(isammocasing(A))
+		if(istype(A, underbarrel.magazine.ammo_type))
+			underbarrel.attack_self(user)
+			underbarrel.attackby(A, user, params)
+	else
+		..()
+
+/obj/item/gun/ballistic/automatic/pulse/egov //Same situation as rending divet
 	name = "Earthgov SWS Motorized Pulse Rifle"
 	desc = "The SWS Motorized Pulse Rifle is a military-grade, triple-barreled assault rifle, manufactured by Winchester Arms, is capable of a rapid rate of fire. \
 This variant is of standard earthgov issue, featuring the highest grade parts."
@@ -58,7 +75,7 @@ This variant is of standard earthgov issue, featuring the highest grade parts."
 	spread = 4
 	//tier_1_bonus = 0
 
-/obj/item/gun/ballistic/deadspace/twohanded/pulse/egov/Initialize(mapload)
+/obj/item/gun/ballistic/automatic/pulse/egov/Initialize(mapload)
 	magazine = new /obj/item/ammo_box/magazine/pulse/hv(src)
 	return ..()
 
@@ -126,7 +143,7 @@ Ammo casings for the mags
 	desc = "An ultra light impact grenade, for when riddling your foe with bullets doesn't quite do the trick"
 	icon = 'deadspace/icons/obj/projectiles.dmi'
 	icon_state = "bolter"
-	caliber = CALIBER_PULSE
+	caliber = CALIBER_PULSE_GRENADE
 	projectile_type = /obj/projectile/bullet/a84mm/pulse
 
 /obj/projectile/bullet/a84mm/pulse

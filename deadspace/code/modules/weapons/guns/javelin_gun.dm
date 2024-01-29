@@ -1,4 +1,4 @@
-/obj/item/gun/ballistic/deadspace/twohanded/javelin
+/obj/item/gun/ballistic/rifle/boltaction/harpoon/javelin
 	name = "T15 Javelin Gun"
 	desc = "a telemetric survey tool manufactured by Timson Tools, designed to fire titanium spikes or 'javelins' at high speeds with extreme accuracy and piercing power."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
@@ -11,33 +11,31 @@
 	empty_alarm = TRUE
 	mag_display = TRUE
 	show_bolt_icon = FALSE
-	weapon_weight = WEAPON_HEAVY
+	gun_flags = NO_AKIMBO
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/javelin
 	fire_delay = 1.5 SECONDS
 	can_suppress = FALSE
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
-	one_handed_penalty = 50
+	unwielded_spread_bonus = 50
 	recoil = 2
 	burst_size = 1
-	bolt_type = BOLT_TYPE_OPEN
+	bolt = /datum/gun_bolt/open
+	semi_auto = TRUE
 	actions_types = list()
 	fire_sound = 'deadspace/sound/weapons/guns/fire/jav_fire.ogg'
 	fire_sound_volume = 90
 	load_sound = 'deadspace/sound/weapons/guns/interaction/jav_magin.ogg'
 	eject_sound = 'deadspace/sound/weapons/guns/interaction/jav_magout.ogg'
 
-/obj/item/gun/ballistic/deadspace/twohanded/javelin/no_mag
+/obj/item/gun/ballistic/rifle/boltaction/harpoon/javelin/no_mag
 	spawnwithmagazine = FALSE
 
-/obj/item/gun/ballistic/deadspace/twohanded/javelin/Initialize(mapload)
+/obj/item/gun/ballistic/rifle/boltaction/harpoon/javelin/Initialize(mapload)
 	. = ..()
-	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
-	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 	AddElement(/datum/element/update_icon_updates_onmob)
-	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]wield")
 
-/obj/item/gun/ballistic/deadspace/twohanded/javelin/update_icon_state()
+/obj/item/gun/ballistic/rifle/boltaction/harpoon/javelin/update_icon_state()
 	. = ..()
 	inhand_icon_state = "[base_icon_state][wielded ? "wield" : "unwield"][magazine ? "mag":"nomag"]"
 

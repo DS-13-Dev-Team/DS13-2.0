@@ -15,7 +15,7 @@ DS SCL Shotgun
 	inhand_icon_state = "scl_shotgun-wielded"
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
-	weapon_weight = WEAPON_MEDIUM
+	gun_flags = NO_AKIMBO
 	mag_type = /obj/item/ammo_box/magazine/ds12g
 	can_suppress = FALSE
 	fire_delay = 10
@@ -28,14 +28,40 @@ DS SCL Shotgun
 	mag_display = TRUE
 	semi_auto = TRUE
 	internal_magazine = FALSE
-	tac_reloads = TRUE
+	//alt fire stuff
+	var/obj/item/gun/ballistic/revolver/grenadelauncher/scl_bola/underbarrel
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/scl_bola
+	desc = "A break-operated bola launcher for the SCL shotgun."
+	name = "SCL underbarrel bola launcher"
+	icon_state = "dshotgun_sawn"
+	inhand_icon_state = "gun"
+	mag_type = /obj/item/ammo_box/magazine/ds12g/bola
+	w_class = WEIGHT_CLASS_NORMAL
+	bolt = /datum/gun_bolt/no_bolt
+
+/obj/item/gun/ballistic/shotgun/scl_shotgun/Initialize(mapload)
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/pulse(src)
+	return ..()
+
+/obj/item/gun/ballistic/shotgun/scl_shotgun/Destroy()
+	QDEL_NULL(underbarrel)
+	return ..()
+
+/obj/item/gun/ballistic/shotgun/scl_shotgun/afterattack_secondary(atom/target, mob/living/user, flag, params)
+	underbarrel.afterattack(target, user, flag, params)
+	return SECONDARY_ATTACK_CONTINUE_CHAIN
+
+/obj/item/gun/ballistic/shotgun/scl_shotgun/attackby(obj/item/A, mob/user, params)
+	if(isammocasing(A))
+		if(istype(A, underbarrel.magazine.ammo_type))
+			underbarrel.attack_self(user)
+			underbarrel.attackby(A, user, params)
+	else
+		..()
 
 /obj/item/gun/ballistic/shotgun/scl_shotgun/no_mag
 	spawnwithmagazine = FALSE
-
-/obj/item/gun/ballistic/shotgun/scl_shotgun/bola/Initialize(mapload)
-	magazine = new /obj/item/ammo_box/magazine/ds12g/bola(src)
-	return ..()
 
 /**
 Magazines
@@ -47,13 +73,14 @@ Magazines
 	icon = 'deadspace/icons/obj/ammo.dmi'
 	icon_state = "shotgun_magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
-	caliber = CALIBER_SHOTGUN
+	caliber = CALIBER_12GAUGE
 	max_ammo = 7
 	multiple_sprites = AMMO_BOX_ONE_SPRITE
 
 /obj/item/ammo_box/magazine/ds12g/bola
 	name = "magazine SCL-shotgun bola"
 	ammo_type = /obj/item/ammo_casing/shotgun/bola
+	caliber = CALIBER_12GAUGE_BOLA
 
 /obj/item/ammo_box/magazine/ds12g/slug
 	name = "magazine SCL-shotgun slug"

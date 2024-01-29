@@ -134,7 +134,7 @@
 	new /obj/item/holosign_creator/security(src)
 	new /obj/item/reagent_containers/spray/pepper(src)
 	new /obj/item/clothing/suit/armor/vest/det_suit(src)
-	new /obj/item/gun/ballistic/deadspace/twohanded/seeker(src)
+	new /obj/item/gun/ballistic/automatic/sniper_rifle/seeker(src)
 	new /obj/item/ammo_box/magazine/seeker(src)
 	new /obj/item/ammo_box/magazine/seeker(src)
 	new /obj/item/ammo_box/magazine/seeker(src)

@@ -2,7 +2,7 @@
 Seeker Rifles
 */
 
-/obj/item/gun/ballistic/deadspace/twohanded/seeker //Based a bit on /obj/item/gun/ballistic/automatic/sniper_rifle
+/obj/item/gun/ballistic/automatic/sniper_rifle/seeker
 	name = "Seeker Rifle"
 	desc = "The Seeker Rifle is a suppressed riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
@@ -15,46 +15,27 @@ Seeker Rifles
 	inhand_icon_state = null
 	mag_display = FALSE
 	show_bolt_icon = FALSE
-	weapon_weight = WEAPON_HEAVY
-	w_class = WEIGHT_CLASS_BULKY
+	gun_flags = NO_AKIMBO
 	mag_type = /obj/item/ammo_box/magazine/seeker
 	fire_delay = 1.5 SECONDS
 	suppressed = TRUE
 	can_unsuppress = FALSE
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	block_chance = 10 //The seeker sucks quite a bit at blocking compared to other guns
-	one_handed_penalty = 50
-	recoil = 2
+	unwielded_spread_bonus = 50
 	burst_size = 1
-	bolt_type = BOLT_TYPE_OPEN
+	bolt = /datum/gun_bolt/open
 	actions_types = list()
-	//tier_1_bonus = 1 //Cut slashers some slack
 	fire_sound = 'sound/weapons/gun/sniper/shot.ogg'
 	fire_sound_volume = 90
 	load_sound = 'sound/weapons/gun/sniper/mag_insert.ogg'
 	eject_sound = 'sound/machines/eject.ogg'
 	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
 
-/obj/item/gun/ballistic/deadspace/twohanded/seeker/no_mag
+/obj/item/gun/ballistic/automatic/sniper_rifle/seeker/no_mag
 	spawnwithmagazine = FALSE
 
-//Scope is bugged. Wait until upstream gets merged in.
-/obj/item/gun/ballistic/deadspace/twohanded/seeker/Initialize(mapload)
-	. = ..()
-	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
-	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
-	AddComponent(/datum/component/scope, range_modifier = 2) //Scope component seems bugged, will need checking on
-
-	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=8, icon_wielded="[base_icon_state]-wielded")
-
-/obj/item/gun/ballistic/deadspace/twohanded/seeker/reset_semicd()
-	. = ..()
-	if(suppressed)
-		playsound(src, 'sound/machines/eject.ogg', 25, TRUE, ignore_walls = FALSE, extrarange = SILENCED_SOUND_EXTRARANGE, falloff_distance = 0)
-	else
-		playsound(src, 'sound/machines/eject.ogg', 50, TRUE)
-
-/obj/item/gun/ballistic/deadspace/twohanded/seeker/egov
+/obj/item/gun/ballistic/automatic/sniper_rifle/seeker/egov
 	name = "Earthgov Seeker Rifle"
 	desc = "The Earthgov Seeker Rifle is a riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
 	icon_state = "seeker" //Maybe get a new sprite for it in the future

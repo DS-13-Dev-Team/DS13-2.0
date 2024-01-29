@@ -4813,7 +4813,6 @@
 #include "deadspace\code\modules\vending\armory.dm"
 #include "deadspace\code\modules\weapons\guns\bullpup.dm"
 #include "deadspace\code\modules\weapons\guns\contactbeam.dm"
-#include "deadspace\code\modules\weapons\guns\deadspace.dm"
 #include "deadspace\code\modules\weapons\guns\detonator.dm"
 #include "deadspace\code\modules\weapons\guns\divet.dm"
 #include "deadspace\code\modules\weapons\guns\flamethrower.dm"
