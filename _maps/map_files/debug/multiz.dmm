@@ -4,7 +4,7 @@
 /area/space)
 "ab" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/cable/smart_cable/color/yellow,
+/obj/structure/cable,
 /turf/open/space,
 /area/space/nearstation)
 "ad" = (
