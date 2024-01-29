@@ -60,10 +60,10 @@
 	//And, if we had an x offset, we'll also strike there
 	animate(
 		necro,
-		transform=turn(matrix(), 35*SIGN(necro.x - target.x)),
-		pixel_y = cached_pixels_y - 8,
-		pixel_x = cached_pixels_x + 24*SIGN(necro.x - target.x),
-		time = 3,
+		transform = null,
+		pixel_y = cached_pixels_y,
+		pixel_x = cached_pixels_x,
+		time = 0.5 SECONDS,
 		easing = BACK_EASING
 	)
 
