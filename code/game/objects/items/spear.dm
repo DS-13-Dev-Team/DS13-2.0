@@ -27,7 +27,6 @@
 
 	var/war_cry = "AAAAARGH!!!"
 	var/icon_prefix = "spearglass"
-	var/wielded = FALSE
 
 /obj/item/spear/Initialize(mapload)
 	. = ..()
@@ -35,17 +34,6 @@
 	AddComponent(/datum/component/butchering, 100, 70) //decent in a pinch, but pretty bad.
 	AddComponent(/datum/component/jousting)
 	update_appearance()
-
-/obj/item/spear/proc/on_wield(obj/item/source, mob/user)
-	SIGNAL_HANDLER
-
-	wielded = TRUE
-
-/// triggered on unwield of two handed item
-/obj/item/spear/proc/on_unwield(obj/item/source, mob/user)
-	SIGNAL_HANDLER
-
-	wielded = FALSE
 
 /obj/item/spear/update_icon_state()
 	icon_state = "[icon_prefix]0"
