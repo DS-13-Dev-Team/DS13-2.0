@@ -19,25 +19,19 @@
 	/// Time when we can be forced to curl again
 	var/forced_curl_next = 0
 
-	//Replace these with something better if possible
-	var/next_attack_delay = 0
-	var/spec_attack_delay = 25
 
 /mob/living/carbon/human/necromorph/brute/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.brute_sounds[audio_type]), volume, vary, extra_range)
 
-//Brute gets his own UnarmedAttack, which is basically a extension of necro_attack with special flinging
+//Brute gets his own UnarmedAttack, which is basically a extension of attack_necro with special flinging
 /mob/living/carbon/human/necromorph/brute/UnarmedAttack(atom/A, proximity_flag, list/modifiers)
-	Brute_Attack(A)
-	changeNext_move(CLICK_CD_MELEE)
+	Brute_Attack(src, A, modifiers)
+	changeNext_move(25) //A little longer then CLICK_CD_RESIST, which is 20. If 25 is too long then switch it to that
 	return
 
 /mob/living/carbon/human/necromorph/brute/proc/Brute_Attack(mob/living/carbon/human/necromorph/brute/user, atom/target, modifiers)
 	if(!user.combat_mode)
 		return
-	if(world.time < user.next_attack_delay)
-		return
-	user.next_attack_delay = user.spec_attack_delay + world.time
 	user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
 	if(isliving(target) && get_turf(target) != get_turf(user))
 		var/mob/living/our_target = target
@@ -64,8 +58,9 @@
 		throw_y = clamp(throw_y, 1, world.maxy)
 
 		our_target.safe_throw_at(locate(throw_x, throw_y, our_target.z), throw_dist, 1, user, TRUE)
+	target.attack_necromorph(user) //We let attack_necro do the rest of the lifting
 
-	return target.attack_necromorph(user)
+	return
 
 /mob/living/carbon/human/necromorph/brute/proc/start_curl(forced)
 	if(curling)
