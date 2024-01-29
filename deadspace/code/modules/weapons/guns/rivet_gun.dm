@@ -10,7 +10,7 @@
 	mag_type = /obj/item/ammo_box/magazine/rivet
 	slot_flags = ITEM_SLOT_BELT|ITEM_SLOT_POCKETS
 	burst_size = 1
-	bolt_type = BOLT_TYPE_OPEN
+	bolt = /datum/gun_bolt/open
 	show_bolt_icon = FALSE
 	fire_sound= 'deadspace/sound/weapons/guns/fire/rivet_fire.ogg'
 	load_sound = 'deadspace/sound/weapons/guns/interaction/rivet_magin.ogg'

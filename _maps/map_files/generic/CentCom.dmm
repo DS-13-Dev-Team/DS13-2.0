@@ -941,7 +941,7 @@
 /turf/open/floor/carpet/black,
 /area/centcom/central_command_areas/holding)
 "cL" = (
-/obj/item/gun/energy/pulse/carbine/loyalpin,
+/obj/item/gun/energy/pulse/carbine,
 /obj/item/flashlight/seclite,
 /obj/structure/table/reinforced,
 /obj/machinery/airalarm/directional/south,

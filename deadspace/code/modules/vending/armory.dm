@@ -18,7 +18,7 @@
 		/obj/item/ammo_box/magazine/seeker = 12,
 	)
 	premium = list(
-		/obj/item/gun/ballistic/deadspace/twohanded/seeker = 1,
+		/obj/item/gun/ballistic/automatic/sniper_rifle/seeker = 1,
 		)
 	contraband = list(
 		/obj/item/clothing/under/misc/patriotsuit = 3,

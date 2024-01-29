@@ -11,14 +11,6 @@
 	attack_verb_simple = list("bash", "batter", "bludgeon", "whack")
 	hitsound = 'sound/weapons/smash.ogg'
 
-/obj/item/fireaxe/hugewrench/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=5, force_wielded=24, icon_wielded="[base_icon_state]1")
-
-/obj/item/fireaxe/hugewrench/update_icon_state()
-	icon_state = "[base_icon_state]0"
-	return ..()
-
 /obj/item/fireaxe/hugewrench/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] wrench [user.p_them()]self from head to toe! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return (BRUTELOSS)

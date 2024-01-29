@@ -75,6 +75,8 @@
 	return
 
 /mob/living/carbon/human/get_idcard(hand_first = TRUE)
+	RETURN_TYPE(/obj/item/card/id)
+
 	. = ..()
 	if(. && hand_first)
 		return
@@ -95,6 +97,7 @@
 		if(check_chunky_fingers())
 			balloon_alert(src, "fingers are too big!")
 			return FALSE
+
 	if(HAS_TRAIT(src, TRAIT_NOGUNS))
 		to_chat(src, span_warning("You can't bring yourself to use a ranged weapon!"))
 		return FALSE
@@ -142,14 +145,12 @@
 		if (preference.is_randomizable())
 			preference.apply_to_human(src, preference.create_random_value(preferences))
 
-/mob/living/carbon/human/can_smell(intensity)
+/mob/living/carbon/human/can_smell()
 	var/turf/T = get_turf(src)
 	if(!T)
 		return FALSE
-	if(stat != CONSCIOUS || failed_last_breath || wear_mask || (head && (head?.permeability_coefficient < 1)) || !T.unsafe_return_air()?.total_moles)
-		return FALSE
 
-	if(!(intensity > last_smell_intensity) && !COOLDOWN_FINISHED(src, smell_time))
+	if(stat || failed_last_breath || (wear_mask && wear_mask.body_parts_covered) || (head && (head?.permeability_coefficient < 1)) || !T.unsafe_return_air()?.total_moles)
 		return FALSE
 
 	return TRUE

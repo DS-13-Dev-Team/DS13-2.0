@@ -662,7 +662,7 @@
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
-/obj/item/gun/ballistic/deadspace/twohanded/pulse,
+/obj/item/gun/ballistic/automatic/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -744,7 +744,7 @@
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
-/obj/item/gun/ballistic/deadspace/twohanded/pulse,
+/obj/item/gun/ballistic/automatic/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -9507,7 +9507,7 @@
 /obj/structure/table/wood,
 /obj/item/ammo_box/magazine/javelin,
 /obj/item/ammo_box/magazine/javelin,
-/obj/item/gun/ballistic/deadspace/twohanded/javelin,
+/obj/item/gun/ballistic/rifle/boltaction/harpoon/javelin,
 /turf/open/floor/wood,
 /area/station/cargo/qm)
 "eaZ" = (
@@ -32159,7 +32159,7 @@
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
-/obj/item/gun/ballistic/deadspace/twohanded/pulse,
+/obj/item/gun/ballistic/automatic/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},

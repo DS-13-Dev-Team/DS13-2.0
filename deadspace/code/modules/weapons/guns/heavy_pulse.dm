@@ -14,10 +14,11 @@
 	w_class = WEIGHT_CLASS_BULKY
 	custom_materials = null
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
-	weapon_weight = WEAPON_HEAVY
+	gun_flags = NO_AKIMBO
 	spread = 12
+	unwielded_spread_bonus = 20
 	ammo_type = list(/obj/item/ammo_casing/energy/pulserifle)
-	cell_type = /obj/item/stock_parts/cell/high
+	cell_type = /obj/item/stock_parts/cell/pulse_heavy
 	item_flags = SLOWS_WHILE_IN_HAND
 	can_charge = FALSE
 	selfcharge = 1

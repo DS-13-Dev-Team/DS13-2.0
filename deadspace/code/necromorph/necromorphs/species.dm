@@ -99,10 +99,6 @@
 /datum/species/necromorph/random_name(gender,unique,lastname)
 	return "[name] [rand(1, 999)]"
 
-/datum/species/necromorph/spec_unarmedattack(mob/living/carbon/human/necromorph/user, atom/target, modifiers)
-	target.attack_necromorph(user, modifiers)
-	return TRUE
-
 /datum/species/necromorph/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/necromorph/H, forced = FALSE, spread_damage = FALSE, sharpness = NONE, attack_direction = null)
 	if(H.dodge_shield > 0)
 		// Calculate amount of the damage that was blocked by the shield

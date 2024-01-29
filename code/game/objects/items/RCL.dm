@@ -8,7 +8,7 @@
 	var/obj/item/stack/pipe_cleaner_coil/loaded
 	opacity = FALSE
 	force = 5 //Plastic is soft
-	throwforce =5
+	throwforce = 5
 	throw_speed = 1
 	throw_range = 7
 	w_class = WEIGHT_CLASS_NORMAL
@@ -25,22 +25,7 @@
 
 /obj/item/rcl/Initialize(mapload)
 	. = ..()
-	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
-	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
-	AddElement(/datum/element/update_icon_updates_onmob, ITEM_SLOT_HANDS)
-	AddComponent(/datum/component/two_handed)
-
-/// triggered on wield of two handed item
-/obj/item/rcl/proc/on_wield(obj/item/source, mob/user)
-	SIGNAL_HANDLER
-
-	active = TRUE
-
-/// triggered on unwield of two handed item
-/obj/item/rcl/proc/on_unwield(obj/item/source, mob/user)
-	SIGNAL_HANDLER
-
-	active = FALSE
+	update_appearance()
 
 /obj/item/rcl/screwdriver_act(mob/living/user, obj/item/tool)
 	if(!loaded)

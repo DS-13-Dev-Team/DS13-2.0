@@ -1,4 +1,8 @@
-//spec_unarmedattack
+//The primary attack, which goes directly into attack_necromorph
+/mob/living/carbon/human/necromorph/UnarmedAttack(atom/A, proximity_flag, list/modifiers)
+	A.attack_necromorph()
+	changeNext_move(CLICK_CD_MELEE)
+	return
 
 //The proc and backup rolled up in one.
 /atom/proc/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
@@ -20,7 +24,6 @@
 	visible_message(span_danger("[user.name] [armor_flag_to_strike_string(attack_flag)] [src]!"), \
 	span_userdanger("[user.name] [armor_flag_to_strike_string(attack_flag)] you!"), span_hear("You hear a [armor_flag_to_strike_string(attack_flag)] of the flesh!"), COMBAT_MESSAGE_RANGE, user)
 	to_chat(user, span_danger("You [armor_flag_to_strike_string(attack_flag)] [src]!"))
-	user.changeNext_move(CLICK_CD_MELEE) //So necros don't JoJo
 	apply_damage(dealt_damage, BRUTE, zone_attacked, armor_block)
 	log_combat(user, src, "attacked")
 
@@ -30,7 +33,6 @@
 						span_danger("[user] tries to hit you!"), span_hear("You hear a swoosh!"), null, user)
 		user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
 		user.do_attack_animation(src, user.attack_effect)
-		user.changeNext_move(CLICK_CD_MELEE)
 		playsound(loc, 'sound/weapons/slashmiss.ogg', 50, TRUE, -1)
 		return FALSE
 
@@ -55,7 +57,6 @@
 	span_userdanger("[user.name] [armor_flag_to_strike_string(attack_flag)] you!"), span_hear("You hear a [armor_flag_to_strike_string(attack_flag)] of the flesh!"), COMBAT_MESSAGE_RANGE, user)
 	to_chat(user, span_danger("You [armor_flag_to_strike_string(attack_flag)] [src]!"))
 	log_combat(user, src, "attacked")
-	user.changeNext_move(CLICK_CD_MELEE)
 	if(!dismembering_strike(user, user.zone_selected)) //Dismemberment successful
 		return TRUE
 	apply_damage(dealt_damage, BRUTE, affecting, armor_block)
