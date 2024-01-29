@@ -34,9 +34,9 @@ Pulse Rifles
 /obj/item/gun/ballistic/revolver/grenadelauncher/pulse
 	desc = "A break-operated grenade launcher for the pulse rifle."
 	name = "pulse underbarrel launcher"
-	icon_state = "dshotgun_sawn"
+	icon_state = "dshotgun_sawn" //WIP unless someone wants to replace it with something more accurate
 	inhand_icon_state = "gun"
-	mag_type = /obj/item/ammo_casing/caseless/rocket/pulse
+	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/pulse
 	fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_grenade.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	bolt = /datum/gun_bolt/no_bolt
@@ -109,6 +109,13 @@ Magazines
 	name = "pulse magazine (blank/practice)"
 	desc = "With a distinctive \"bell and stock\" design, pulse magazines can be inserted and removed from the Pulse Rifle with minimal effort and risk. This one contains practice rounds, used in training for its nonlethality."
 	ammo_type = /obj/item/ammo_casing/caseless/pulse/blank
+
+/obj/item/ammo_box/magazine/internal/grenadelauncher/pulse
+	name = "Pulse Underbarrel Internal Magazine"
+	desc = "Did someone take apart the pulse rifle just to get this thing?"
+	ammo_type = /obj/item/ammo_casing/caseless/rocket/pulse
+	caliber = CALIBER_PULSE_GRENADE
+	max_ammo = 2
 
 /**
 Ammo casings for the mags
