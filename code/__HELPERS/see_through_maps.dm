@@ -12,6 +12,8 @@
 #define SEE_THROUGH_MAP_BILLBOARD "billboard"
 ///Two rows of three wide, but offset one tile to the left because thats how shipping containers work
 #define SEE_THROUGH_MAP_SHIPPING_CONTAINER "shipping_container"
+///A 3x4 for the marker
+#define SEE_THROUGH_MAP_MARKER "marker"
 
 
 /**global statics for the see_through_component coordinate maps
