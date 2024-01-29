@@ -19,9 +19,6 @@ DS SCL Shotgun
 	mag_type = /obj/item/ammo_box/magazine/ds12g
 	can_suppress = FALSE
 	fire_delay = 10
-	//OLD firemodes = list(
-	//OLD	list(mode_name = "shotgun", fire_delay = 1 SECONDS),
-	//OLD	list(mode_name = "bolas", projectile_type = /obj/item/projectile/bullet/shotgun/bola, fire_sound = 'sound/weapons/bolathrow.ogg', fire_delay = 1 SECONDS))
 	fire_sound = 'sound/weapons/gun/shotgun/shot_alt.ogg'
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	empty_alarm = TRUE
@@ -34,14 +31,14 @@ DS SCL Shotgun
 /obj/item/gun/ballistic/revolver/grenadelauncher/scl_bola
 	desc = "A break-operated bola launcher for the SCL shotgun."
 	name = "SCL underbarrel bola launcher"
-	icon_state = "dshotgun_sawn"
+	icon_state = "dshotgun_sawn" //You won't normally see this sprite, unless a admin manually spawns it in
 	inhand_icon_state = "gun"
-	mag_type = /obj/item/ammo_box/magazine/ds12g/bola
+	mag_type = /obj/item/ammo_box/magazine/internal/bola
 	w_class = WEIGHT_CLASS_NORMAL
 	bolt = /datum/gun_bolt/no_bolt
 
 /obj/item/gun/ballistic/shotgun/scl_shotgun/Initialize(mapload)
-	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/pulse(src)
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/scl_bola(src)
 	return ..()
 
 /obj/item/gun/ballistic/shotgun/scl_shotgun/Destroy()
@@ -77,10 +74,11 @@ Magazines
 	max_ammo = 7
 	multiple_sprites = AMMO_BOX_ONE_SPRITE
 
-/obj/item/ammo_box/magazine/ds12g/bola
+/obj/item/ammo_box/magazine/internal/bola
 	name = "magazine SCL-shotgun bola"
 	ammo_type = /obj/item/ammo_casing/shotgun/bola
 	caliber = CALIBER_12GAUGE_BOLA
+	max_ammo = 4
 
 /obj/item/ammo_box/magazine/ds12g/slug
 	name = "magazine SCL-shotgun slug"
@@ -174,11 +172,11 @@ Projectiles for the ammo casings
 	ricochet_auto_aim_range = 1
 
 //Will do later
-// /obj/projectile/bullet/shotgun_bola/on_hit(atom/target, blocked = FALSE)
-// 	. = ..()
-// 	var/obj/item/restraints/legcuffs/bola/L = new (get_turf(src))
-// 	if(ishuman(target))
-// 		L.ensnare(target)
+/obj/projectile/bullet/shotgun_bola/on_hit(atom/target, blocked = FALSE)
+	. = ..()
+	var/obj/item/restraints/legcuffs/bola/L = new (get_turf(src))
+	if(ishuman(target))
+		L.ensnare(target)
 
 /**
 Projectiles effects

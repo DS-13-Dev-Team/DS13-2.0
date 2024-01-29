@@ -34,7 +34,7 @@ Pulse Rifles
 /obj/item/gun/ballistic/revolver/grenadelauncher/pulse
 	desc = "A break-operated grenade launcher for the pulse rifle."
 	name = "pulse underbarrel launcher"
-	icon_state = "dshotgun_sawn" //WIP unless someone wants to replace it with something more accurate
+	icon_state = "dshotgun_sawn" //You won't normally see this sprite, unless a admin manually spawns it in
 	inhand_icon_state = "gun"
 	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/pulse
 	fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_grenade.ogg'
