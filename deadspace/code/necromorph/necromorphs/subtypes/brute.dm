@@ -26,6 +26,47 @@
 /mob/living/carbon/human/necromorph/brute/play_necro_sound(audio_type, volume, vary, extra_range)
 	playsound(src, pick(GLOB.brute_sounds[audio_type]), volume, vary, extra_range)
 
+//Brute gets his own UnarmedAttack, which is basically a extension of necro_attack with special flinging
+/mob/living/carbon/human/necromorph/brute/UnarmedAttack(atom/A, proximity_flag, list/modifiers)
+	Brute_Attack(A)
+	changeNext_move(CLICK_CD_MELEE)
+	return
+
+/mob/living/carbon/human/necromorph/brute/proc/Brute_Attack(mob/living/carbon/human/necromorph/brute/user, atom/target, modifiers)
+	if(!user.combat_mode)
+		return
+	if(world.time < user.next_attack_delay)
+		return
+	user.next_attack_delay = user.spec_attack_delay + world.time
+	user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
+	if(isliving(target) && get_turf(target) != get_turf(user))
+		var/mob/living/our_target = target
+		var/throw_dir = pick(
+			user.dir,
+			turn(user.dir, 45),
+			turn(user.dir, -45),
+			) //Throwing them somewhere ahead of us
+		var/throw_dist = rand(2,5)
+
+		var/throw_x = our_target.x
+		if(throw_dir & WEST)
+			throw_x += throw_dist
+		else if(throw_dir & EAST)
+			throw_x -= throw_dist
+
+		var/throw_y = our_target.y
+		if(throw_dir & NORTH)
+			throw_y += throw_dist
+		else if(throw_dir & SOUTH)
+			throw_y -= throw_dist
+
+		throw_x = clamp(throw_x, 1, world.maxx)
+		throw_y = clamp(throw_y, 1, world.maxy)
+
+		our_target.safe_throw_at(locate(throw_x, throw_y, our_target.z), throw_dist, 1, user, TRUE)
+
+	return target.attack_necromorph(user)
+
 /mob/living/carbon/human/necromorph/brute/proc/start_curl(forced)
 	if(curling)
 		return
@@ -122,41 +163,6 @@
 
 /datum/species/necromorph/brute/get_deathgasp_sound(mob/living/carbon/human/H)
 	return 'deadspace/sound/effects/creatures/necromorph/brute/brute_death.ogg'
-
-/datum/species/necromorph/brute/spec_unarmedattack(mob/living/carbon/human/necromorph/brute/user, atom/target, modifiers)
-	if(!user.combat_mode)
-		return
-	if(world.time < user.next_attack_delay)
-		return
-	user.next_attack_delay = user.spec_attack_delay + world.time
-	user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
-	if(isliving(target) && get_turf(target) != get_turf(user))
-		var/mob/living/our_target = target
-		var/throw_dir = pick(
-			user.dir,
-			turn(user.dir, 45),
-			turn(user.dir, -45),
-			) //Throwing them somewhere ahead of us
-		var/throw_dist = rand(2,5)
-
-		var/throw_x = our_target.x
-		if(throw_dir & WEST)
-			throw_x += throw_dist
-		else if(throw_dir & EAST)
-			throw_x -= throw_dist
-
-		var/throw_y = our_target.y
-		if(throw_dir & NORTH)
-			throw_y += throw_dist
-		else if(throw_dir & SOUTH)
-			throw_y -= throw_dist
-
-		throw_x = clamp(throw_x, 1, world.maxx)
-		throw_y = clamp(throw_y, 1, world.maxy)
-
-		our_target.safe_throw_at(locate(throw_x, throw_y, our_target.z), throw_dist, 1, user, TRUE)
-
-	return ..()
 
 /datum/species/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/brute/H, forced, spread_damage, sharpness, attack_direction)
 	var/reduced = 0

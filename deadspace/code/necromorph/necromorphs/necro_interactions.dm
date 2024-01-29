@@ -18,7 +18,6 @@
 		dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper)
 		user.do_attack_animation(src, "smash")
 		user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
-		user.changeNext_move(CLICK_CD_MELEE) //So necros don't JoJo
 		attack_generic(user, dealt_damage, BRUTE, MELEE, TRUE)
 		return //Necro walls can be attacked by necros
 	else
@@ -153,7 +152,6 @@
 			dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper) + 5
 			user.do_attack_animation(src, "smash")
 			user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
-			user.changeNext_move(CLICK_CD_MELEE)
 			attack_generic(user, dealt_damage, BRUTE, PUNCTURE, TRUE)
 			return
 
@@ -162,7 +160,6 @@
 		dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper) + 55 //Weak shutters get smashed easily, blast doors take a while
 		user.do_attack_animation(src, "smash")
 		user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
-		user.changeNext_move(CLICK_CD_MELEE)
 		attack_generic(user, dealt_damage, BRUTE, PUNCTURE, TRUE)
 		return
 
@@ -181,7 +178,6 @@
 			dealt_damage = rand(user.melee_damage_lower, user.melee_damage_upper) + 8 //extra damage to overwhelm airlock damage deflection
 			user.do_attack_animation(src, "smash")
 			user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
-			user.changeNext_move(CLICK_CD_MELEE) //So necros don't JoJo
 			attack_generic(user, dealt_damage, BRUTE, PUNCTURE, TRUE)
 			return //Angry necro smash locked door
 		to_chat(user, span_warning("[src] refuses to budge!"))
