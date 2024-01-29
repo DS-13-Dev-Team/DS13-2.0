@@ -49,8 +49,6 @@
 /turf/open/space/openspace,
 /area/space/nearstation)
 "ao" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
 /turf/open/space,
 /area/space)
 "ap" = (
