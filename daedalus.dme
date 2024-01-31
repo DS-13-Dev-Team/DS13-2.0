@@ -4837,6 +4837,7 @@
 #include "deadspace\code\necromorph\abilities\dodge.dm"
 #include "deadspace\code\necromorph\abilities\explode.dm"
 #include "deadspace\code\necromorph\abilities\gallop.dm"
+#include "deadspace\code\necromorph\abilities\hide.dm"
 #include "deadspace\code\necromorph\abilities\leap.dm"
 #include "deadspace\code\necromorph\abilities\long_charge.dm"
 #include "deadspace\code\necromorph\abilities\regenerate.dm"
