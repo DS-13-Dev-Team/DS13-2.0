@@ -12,7 +12,7 @@ DS SCL Shotgun
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
-	inhand_icon_state = "scl_shotgun-wielded"
+	inhand_icon_state = null
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	gun_flags = NO_AKIMBO
@@ -20,6 +20,8 @@ DS SCL Shotgun
 	can_suppress = FALSE
 	fire_delay = 10
 	fire_sound = 'sound/weapons/gun/shotgun/shot_alt.ogg'
+	unwielded_spread_bonus = 40
+	unwielded_recoil = 5
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	empty_alarm = TRUE
 	mag_display = TRUE

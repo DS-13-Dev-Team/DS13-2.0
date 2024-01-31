@@ -9,7 +9,7 @@
 	icon_state = "heavypulserifle"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
-	inhand_icon_state = "heavypulserifle-wielded"
+	inhand_icon_state = null
 	display_empty = FALSE
 	w_class = WEIGHT_CLASS_BULKY
 	custom_materials = null
@@ -17,6 +17,7 @@
 	gun_flags = NO_AKIMBO
 	spread = 12
 	unwielded_spread_bonus = 20
+	unwielded_recoil = 4
 	ammo_type = list(/obj/item/ammo_casing/energy/pulserifle)
 	cell_type = /obj/item/stock_parts/cell/pulse_heavy
 	item_flags = SLOWS_WHILE_IN_HAND
