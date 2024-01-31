@@ -4881,6 +4881,7 @@
 #include "deadspace\code\necromorph\necromorphs\necro_interactions.dm"
 #include "deadspace\code\necromorph\necromorphs\necromorph.dm"
 #include "deadspace\code\necromorph\necromorphs\species.dm"
+#include "deadspace\code\necromorph\necromorphs\ai\ai_controller.dm"
 #include "deadspace\code\necromorph\necromorphs\subtypes\brute.dm"
 #include "deadspace\code\necromorph\necromorphs\subtypes\divider.dm"
 #include "deadspace\code\necromorph\necromorphs\subtypes\e_exploder.dm"
