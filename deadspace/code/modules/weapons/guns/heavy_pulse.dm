@@ -9,7 +9,7 @@
 	icon_state = "heavypulserifle"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
-	inhand_icon_state = "heavypulserifle-wielded"
+	inhand_icon_state = null
 	display_empty = FALSE
 	w_class = WEIGHT_CLASS_BULKY
 	custom_materials = null

@@ -9,6 +9,7 @@ Pulse Rifles
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "pulserifle"
 	base_icon_state = "pulserifle"
+	icon_state_wielded = "pulserifle-wielded"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
@@ -72,6 +73,8 @@ Pulse Rifles
 This variant is of standard earthgov issue, featuring the highest grade parts."
 	icon_state = "pulserifle_egov"
 	base_icon_state = "pulserifle_egov"
+	icon_state_wielded = "pulserifle_egov-wielded"
+	inhand_icon_state = null
 	projectile_damage_multiplier = 1.10
 	spread = 4
 	//tier_1_bonus = 0
