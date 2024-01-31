@@ -1,0 +1,6 @@
+author: MisterGrimm
+delete-after: true
+changes:
+  - rscadd: Implements the Hopper
+  - qol: Necromorph AI implemented, certain necros will now be AI controlled when
+      not player controlled.
