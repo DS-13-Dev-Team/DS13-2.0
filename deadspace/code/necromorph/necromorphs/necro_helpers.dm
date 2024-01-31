@@ -26,9 +26,7 @@
 	if(!nicknumber)
 		nicknumber = rand(1, 999)
 
-	name = "[initial(class.display_name)] ([nicknumber])"
-	real_name = name
-	update_name()
+	set_real_name(initial(class.display_name [nicknumber]))
 
 /mob/living/carbon/human/necromorph/proc/play_necro_sound(audio_type, volume, vary, extra_range)
 	CRASH("play_necro_sound() wasn't overriden")
