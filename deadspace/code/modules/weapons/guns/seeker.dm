@@ -23,6 +23,7 @@ Seeker Rifles
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	block_chance = 10 //The seeker sucks quite a bit at blocking compared to other guns
 	unwielded_spread_bonus = 50
+	unwielded_recoil = 6
 	burst_size = 1
 	bolt = /datum/gun_bolt/open
 	actions_types = list()

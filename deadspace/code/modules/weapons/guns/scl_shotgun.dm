@@ -20,6 +20,8 @@ DS SCL Shotgun
 	can_suppress = FALSE
 	fire_delay = 10
 	fire_sound = 'sound/weapons/gun/shotgun/shot_alt.ogg'
+	unwielded_spread_bonus = 40
+	unwielded_recoil = 5
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	empty_alarm = TRUE
 	mag_display = TRUE

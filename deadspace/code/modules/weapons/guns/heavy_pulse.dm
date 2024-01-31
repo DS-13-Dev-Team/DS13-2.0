@@ -17,6 +17,7 @@
 	gun_flags = NO_AKIMBO
 	spread = 12
 	unwielded_spread_bonus = 20
+	unwielded_recoil = 4
 	ammo_type = list(/obj/item/ammo_casing/energy/pulserifle)
 	cell_type = /obj/item/stock_parts/cell/pulse_heavy
 	item_flags = SLOWS_WHILE_IN_HAND

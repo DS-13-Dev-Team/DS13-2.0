@@ -25,6 +25,7 @@ Pulse Rifles
 	can_suppress = FALSE
 	spread = 5
 	unwielded_spread_bonus = 20
+	unwielded_recoil = 3
 	fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_shot.ogg'
 	load_sound = 'deadspace/sound/weapons/guns/interaction/pulse_magin.ogg'
 	eject_sound = 'deadspace/sound/weapons/guns/interaction/pulse_magout.ogg'
