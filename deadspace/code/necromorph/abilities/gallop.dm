@@ -2,11 +2,16 @@
 
 /datum/action/cooldown/necro/active/gallop
 	name = "Gallop"
-	desc = "Gives a huge burst of speed, but makes you vulnerable."
+	desc = "Gives a huge burst of speed, while making you vulnerable to crashing into objects."
 	cooldown_time = 12 SECONDS
 	duration_time = 7 SECONDS
 	activate_keybind = COMSIG_KB_NECROMORPH_ABILITY_GALLOP_DOWN
 	var/crash_count = 0
+
+//Worse version of leaper gallop, since hoppers practically move at the speed of sound when galloping
+/datum/action/cooldown/necro/active/gallop/hopper
+	cooldown_time = 15 SECONDS
+	duration_time = 2.5 SECONDS
 
 /datum/action/cooldown/necro/active/gallop/Activate(atom/target)
 	var/mob/living/carbon/human/necromorph/holder = owner
