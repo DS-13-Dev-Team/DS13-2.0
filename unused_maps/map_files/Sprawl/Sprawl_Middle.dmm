@@ -9684,9 +9684,9 @@
 "aOa" = (
 /obj/structure/guncase,
 /obj/machinery/light/directional/east,
-/obj/item/gun/ballistic/automatic/pulse,
-/obj/item/gun/ballistic/automatic/pulse,
-/obj/item/gun/ballistic/automatic/pulse,
+//obj/item/gun/ballistic/pulse,
+//obj/item/gun/ballistic/pulse,
+//obj/item/gun/ballistic/pulse,
 /obj/effect/turf_decal/delivery/red,
 /turf/open/floor/iron/smooth_large,
 /area/sprawl/civilian/sec/armory)
@@ -21643,8 +21643,8 @@
 "bLE" = (
 /obj/structure/rack/gunrack,
 /obj/effect/turf_decal/delivery/red,
-/obj/item/gun/ballistic/automatic/pulse,
-/obj/item/gun/ballistic/automatic/pulse,
+//obj/item/gun/ballistic/pulse,
+//obj/item/gun/ballistic/pulse,
 /turf/open/floor/iron/dark,
 /area/sprawl/civilian/command/armory_minor)
 "bLF" = (
