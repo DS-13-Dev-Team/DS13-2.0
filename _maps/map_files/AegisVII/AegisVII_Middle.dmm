@@ -662,7 +662,7 @@
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
-//obj/item/gun/ballistic/pulse,
+/obj/item/gun/ballistic/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -744,7 +744,7 @@
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
-//obj/item/gun/ballistic/pulse,
+/obj/item/gun/ballistic/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -32159,7 +32159,7 @@
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
-//obj/item/gun/ballistic/pulse,
+/obj/item/gun/ballistic/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},

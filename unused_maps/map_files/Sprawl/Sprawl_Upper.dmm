@@ -773,8 +773,8 @@
 /area/sprawl/civilian/command/upper/command_center_armory)
 "dv" = (
 /obj/structure/rack/gunrack,
-//obj/item/gun/ballistic/pulse,
-//obj/item/gun/ballistic/pulse,
+/obj/item/gun/ballistic/pulse,
+/obj/item/gun/ballistic/pulse,
 /turf/open/floor/iron/smooth_large,
 /area/sprawl/civilian/command/upper/command_center_armory)
 "dw" = (
