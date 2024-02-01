@@ -7,6 +7,7 @@
 	desc = "A colossal weapon capable of firing infinitely, but requiring a significant cooldown period. " //It is optimised for continuous fire, and will overheat more quickly if used in bursts."It is optimised for continuous fire, and will overheat more quickly if used in bursts."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "heavypulserifle"
+	icon_state_wielded = "heavypulserifle-wielded"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	inhand_icon_state = null
