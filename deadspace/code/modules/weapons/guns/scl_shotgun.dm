@@ -13,6 +13,7 @@ DS SCL Shotgun
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
+	worn_icon_state = null
 	inhand_icon_state = null
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
