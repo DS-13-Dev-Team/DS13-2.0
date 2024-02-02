@@ -9,8 +9,9 @@
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
 	worn_icon_state = null
-	empty_alarm = TRUE
+	empty_alarm = FALSE
 	mag_display = TRUE
+	internal_magazine = FALSE
 	show_bolt_icon = FALSE
 	gun_flags = NO_AKIMBO
 	w_class = WEIGHT_CLASS_BULKY
@@ -21,7 +22,7 @@
 	unwielded_spread_bonus = 50
 	recoil = 2
 	burst_size = 1
-	bolt = /datum/gun_bolt/open
+	bolt = /datum/gun_bolt/locking
 	semi_auto = TRUE
 	actions_types = list()
 	fire_sound = 'deadspace/sound/weapons/guns/fire/jav_fire.ogg'

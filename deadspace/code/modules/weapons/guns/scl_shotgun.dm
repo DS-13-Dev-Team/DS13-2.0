@@ -37,6 +37,7 @@ DS SCL Shotgun
 	name = "SCL underbarrel bola launcher"
 	icon_state = "dshotgun_sawn" //You won't normally see this sprite, unless a admin manually spawns it in
 	inhand_icon_state = "gun"
+	fire_sound = 'sound/weapons/bolathrow.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/bola
 	w_class = WEIGHT_CLASS_NORMAL
 	bolt = /datum/gun_bolt/no_bolt
@@ -156,6 +157,7 @@ Ammo casings for the mags
 	desc = "A shotgun casing that is somehow filled with a tightly packed bola, that expands once it leaves the barrel."
 	icon_state = "stunshell"
 	fire_sound = 'sound/weapons/bolathrow.ogg'
+	caliber = CALIBER_12GAUGE_BOLA
 	projectile_type = /obj/projectile/bullet/shotgun_bola
 
 /**
