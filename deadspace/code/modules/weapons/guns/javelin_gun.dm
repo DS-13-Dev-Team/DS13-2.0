@@ -9,7 +9,7 @@
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
 	worn_icon_state = null
-  empty_alarm = FALSE
+	empty_alarm = FALSE
 	mag_display = TRUE
 	internal_magazine = FALSE
 	show_bolt_icon = FALSE
