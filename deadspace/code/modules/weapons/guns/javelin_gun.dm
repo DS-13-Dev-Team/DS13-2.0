@@ -4,11 +4,11 @@
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "javelin"
 	inhand_icon_state = "javelinunwieldmag"
-	base_icon_state = "javelin"
 	icon_state_wielded = "javelinwield"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
+	worn_icon_state = null
 	empty_alarm = TRUE
 	mag_display = TRUE
 	show_bolt_icon = FALSE
