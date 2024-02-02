@@ -9,10 +9,12 @@ DS SCL Shotgun
 	The SCL Shotgun is magazine loaded and is effective at short range or for fugitive capture."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "scl_shotgun"
+	icon_state_wielded = "scl_shotgun-wielded"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
-	inhand_icon_state = "scl_shotgun-wielded"
+	worn_icon_state = null
+	inhand_icon_state = null
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	gun_flags = NO_AKIMBO
@@ -20,6 +22,8 @@ DS SCL Shotgun
 	can_suppress = FALSE
 	fire_delay = 10
 	fire_sound = 'sound/weapons/gun/shotgun/shot_alt.ogg'
+	unwielded_spread_bonus = 40
+	unwielded_recoil = 5
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	empty_alarm = TRUE
 	mag_display = TRUE

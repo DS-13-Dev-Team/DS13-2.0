@@ -2,16 +2,17 @@
 Pulse Rifles
 */
 
-/obj/item/gun/ballistic/automatic/pulse
+/obj/item/gun/ballistic/pulse
 	name = "SWS Motorized Pulse Rifle"
 	desc = "The SWS Motorized Pulse Rifle is a military-grade, triple-barreled assault rifle, manufactured by Winchester Arms, is capable of a rapid rate of fire. \
 			The Pulse Rifle is the standard-issue service rifle of the Earth Defense Force and is also common among corporate security officers. "
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "pulserifle"
-	base_icon_state = "pulserifle"
+	icon_state_wielded = "pulserifle-wielded"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
+	worn_icon_state = null
 	inhand_icon_state = null
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
@@ -25,6 +26,7 @@ Pulse Rifles
 	can_suppress = FALSE
 	spread = 5
 	unwielded_spread_bonus = 20
+	unwielded_recoil = 3
 	fire_sound = 'deadspace/sound/weapons/guns/fire/pulse_shot.ogg'
 	load_sound = 'deadspace/sound/weapons/guns/interaction/pulse_magin.ogg'
 	eject_sound = 'deadspace/sound/weapons/guns/interaction/pulse_magout.ogg'
@@ -41,23 +43,23 @@ Pulse Rifles
 	w_class = WEIGHT_CLASS_NORMAL
 	bolt = /datum/gun_bolt/no_bolt
 
-/obj/item/gun/ballistic/automatic/pulse/no_mag
+/obj/item/gun/ballistic/pulse/no_mag
 	spawnwithmagazine = FALSE
 
-/obj/item/gun/ballistic/automatic/pulse/Initialize(mapload)
+/obj/item/gun/ballistic/pulse/Initialize(mapload)
 	. = ..()
-	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/pulse(src)
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/pulse(src)
 
-/obj/item/gun/ballistic/automatic/pulse/Destroy()
+/obj/item/gun/ballistic/pulse/Destroy()
 	QDEL_NULL(underbarrel)
 	return ..()
 
-/obj/item/gun/ballistic/automatic/pulse/afterattack_secondary(atom/target, mob/living/user, flag, params)
+/obj/item/gun/ballistic/pulse/afterattack_secondary(atom/target, mob/living/user, flag, params)
 	underbarrel.afterattack(target, user, flag, params)
 	return SECONDARY_ATTACK_CONTINUE_CHAIN
 
-/obj/item/gun/ballistic/automatic/pulse/attackby(obj/item/A, mob/user, params)
+/obj/item/gun/ballistic/pulse/attackby(obj/item/A, mob/user, params)
 	if(isammocasing(A))
 		if(istype(A, underbarrel.magazine.ammo_type))
 			underbarrel.attack_self(user)
@@ -65,19 +67,21 @@ Pulse Rifles
 	else
 		..()
 
-/obj/item/gun/ballistic/automatic/pulse/egov //Same situation as rending divet
+/obj/item/gun/ballistic/pulse/egov //Same situation as rending divet
 	name = "Earthgov SWS Motorized Pulse Rifle"
 	desc = "The SWS Motorized Pulse Rifle is a military-grade, triple-barreled assault rifle, manufactured by Winchester Arms, is capable of a rapid rate of fire. \
 This variant is of standard earthgov issue, featuring the highest grade parts."
 	icon_state = "pulserifle_egov"
 	base_icon_state = "pulserifle_egov"
+	icon_state_wielded = "pulserifle_egov-wielded"
+	inhand_icon_state = null
 	projectile_damage_multiplier = 1.10
 	spread = 4
 	//tier_1_bonus = 0
 
-/obj/item/gun/ballistic/automatic/pulse/egov/Initialize(mapload)
+/obj/item/gun/ballistic/pulse/egov/Initialize(mapload)
+	. = ..()
 	magazine = new /obj/item/ammo_box/magazine/pulse/hv(src)
-	return ..()
 
 /**
 Magazines

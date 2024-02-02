@@ -3798,7 +3798,7 @@
 /area/mara17/interior/medium/armory)
 "lF" = (
 /obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/pulse,
+/obj/item/gun/ballistic/pulse,
 /obj/machinery/light/red/directional/south,
 /obj/item/gun/ballistic/shotgun/automatic/combat,
 /obj/effect/turf_decal/stripes/red/full,
@@ -3806,14 +3806,14 @@
 /area/mara17/interior/medium/armory)
 "lG" = (
 /obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/pulse,
+/obj/item/gun/ballistic/pulse,
 /obj/item/gun/ballistic/automatic/pistol/divet,
 /obj/effect/turf_decal/stripes/red/full,
 /turf/open/floor/deadspace/random/rivets,
 /area/mara17/interior/medium/armory)
 "lH" = (
 /obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/pulse,
+/obj/item/gun/ballistic/pulse,
 /obj/item/gun/ballistic/automatic/pistol/divet,
 /obj/machinery/camera/autoname/directional/south,
 /obj/effect/turf_decal/stripes/red/full,
@@ -4367,8 +4367,8 @@
 /area/mara17/interior/medium/research_breakroom)
 "nw" = (
 /obj/structure/rack/shelf,
-/obj/item/gun/ballistic/automatic/pulse,
-/obj/item/gun/ballistic/automatic/pulse,
+/obj/item/gun/ballistic/pulse,
+/obj/item/gun/ballistic/pulse,
 /obj/machinery/light/warm/directional/east,
 /turf/open/floor/deadspace/heavy,
 /area/mara17/interior/medium/sec_armory)

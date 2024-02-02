@@ -4,19 +4,26 @@
 
 /obj/item/gun/energy/pulse_heavy
 	name = "Heavy Pulse Rifle"
-	desc = "A colossal weapon capable of firing infinitely, but requiring a significant cooldown period. " //It is optimised for continuous fire, and will overheat more quickly if used in bursts."It is optimised for continuous fire, and will overheat more quickly if used in bursts."
+	desc = "A colossal weapon capable of firing infinitely, but requiring a significant cooldown period. "
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "heavypulserifle"
+	icon_state_wielded = "heavypulserifle-wielded"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
-	inhand_icon_state = "heavypulserifle-wielded"
+	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
+	worn_icon_state = "heavypulserifle"
+	inhand_icon_state = "heavypulserifle"
 	display_empty = FALSE
+	can_select = FALSE
+	automatic_charge_overlays = FALSE
+	charge_sections = null
 	w_class = WEIGHT_CLASS_BULKY
 	custom_materials = null
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	gun_flags = NO_AKIMBO
 	spread = 12
-	unwielded_spread_bonus = 20
+	unwielded_spread_bonus = 10
+	unwielded_recoil = 1
 	ammo_type = list(/obj/item/ammo_casing/energy/pulserifle)
 	cell_type = /obj/item/stock_parts/cell/pulse_heavy
 	item_flags = SLOWS_WHILE_IN_HAND
@@ -31,6 +38,10 @@
 /obj/item/gun/energy/pulse_heavy/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
+
+/obj/item/gun/energy/pulse_heavy/update_icon_state()
+	inhand_icon_state = wielded ? "heavypulserifle-wielded" : "heavypulserifle" //We need this or energy guns eat our face
+	return ..()
 
 /**
 Energy cell

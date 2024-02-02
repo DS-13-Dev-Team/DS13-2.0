@@ -7,11 +7,11 @@ Seeker Rifles
 	desc = "The Seeker Rifle is a suppressed riot control device that is meant for accuracy at long-range. Comes with a built-in scope."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "seeker"
-	base_icon_state = "seeker"
+	icon_state_wielded = "seeker-wielded"
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
-	worn_icon_state = "seeker"
+	worn_icon_state = null
 	inhand_icon_state = null
 	mag_display = FALSE
 	show_bolt_icon = FALSE
@@ -23,6 +23,7 @@ Seeker Rifles
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SUITSTORE
 	block_chance = 10 //The seeker sucks quite a bit at blocking compared to other guns
 	unwielded_spread_bonus = 50
+	unwielded_recoil = 6
 	burst_size = 1
 	bolt = /datum/gun_bolt/open
 	actions_types = list()

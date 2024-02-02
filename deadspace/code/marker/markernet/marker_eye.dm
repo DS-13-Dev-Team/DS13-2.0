@@ -298,7 +298,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		return
 	var/mob/camera/marker_signal/marker/camera = new /mob/camera/marker_signal/marker(get_turf(src), marker)
 	marker.camera_mob = camera
-	camera.real_name = camera.name
+	camera.set_real_name(camera.name)
 	camera.ckey = src.ckey
 	camera.change_psy_energy(psy_energy)
 	qdel(src)
@@ -340,7 +340,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	set category = "Necromorph"
 
 	var/mob/camera/marker_signal/signal = new /mob/camera/marker_signal(get_turf(src), marker)
-	signal.real_name = signal.name
+	signal.set_real_name(signal.name)
 	signal.ckey = src.ckey
 	signal.change_psy_energy(psy_energy)
 	qdel(src)
