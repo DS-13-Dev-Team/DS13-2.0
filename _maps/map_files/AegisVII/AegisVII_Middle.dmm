@@ -662,6 +662,8 @@
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_casing/caseless/rocket/pulse,
+/obj/item/ammo_casing/caseless/rocket/pulse,
 /obj/item/gun/ballistic/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
@@ -744,6 +746,8 @@
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
 /obj/item/ammo_box/magazine/pulse,
+/obj/item/ammo_casing/caseless/rocket/pulse,
+/obj/item/ammo_casing/caseless/rocket/pulse,
 /obj/item/gun/ballistic/pulse,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
@@ -9976,6 +9980,8 @@
 /obj/item/ammo_box/magazine/ds12g,
 /obj/item/ammo_box/magazine/ds12g,
 /obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_casing/shotgun/bola,
+/obj/item/ammo_casing/shotgun/bola,
 /obj/item/gun/ballistic/shotgun/scl_shotgun,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
@@ -18429,16 +18435,6 @@
 	dir = 8
 	},
 /area/station/hallway/primary/central)
-"kJE" = (
-/obj/structure/rack,
-/obj/item/ammo_box/magazine/ds12g,
-/obj/item/ammo_box/magazine/ds12g,
-/obj/item/ammo_box/magazine/ds12g,
-/obj/item/gun/ballistic/shotgun/scl_shotgun,
-/turf/open/floor/deadspace/random/slides{
-	dir = 4
-	},
-/area/station/ai_monitored/security/armory/upper)
 "kJI" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/office)
@@ -35738,10 +35734,12 @@
 /area/station/tcommsat/server)
 "yhN" = (
 /obj/structure/rack,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_box/magazine/ds12g,
+/obj/item/ammo_casing/shotgun/bola,
+/obj/item/ammo_casing/shotgun/bola,
 /obj/item/gun/ballistic/shotgun/scl_shotgun,
-/obj/item/ammo_box/magazine/ds12g,
-/obj/item/ammo_box/magazine/ds12g,
-/obj/item/ammo_box/magazine/ds12g,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
@@ -42258,7 +42256,7 @@ hQL
 nLy
 mcF
 aCY
-kJE
+yhN
 hif
 aGn
 aMd
