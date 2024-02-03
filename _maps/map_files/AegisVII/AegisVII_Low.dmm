@@ -205,12 +205,6 @@
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/fore/lesser)
-"cc" = (
-/obj/structure/bodycontainer/morgue{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/station/medical/morgue)
 "cf" = (
 /obj/machinery/light/small/maintenance/directional/east,
 /obj/effect/spawner/random/trash,
@@ -1920,10 +1914,6 @@
 /obj/effect/spawner/random/engineering/material,
 /turf/open/misc/asteroid,
 /area/aegis/surface)
-"ou" = (
-/obj/machinery/firealarm,
-/turf/closed/wall/r_wall,
-/area/station/medical/morgue)
 "ov" = (
 /obj/effect/turf_decal/box,
 /obj/structure/barricade/security,
@@ -3634,7 +3624,7 @@
 	dir = 1
 	},
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/plating,
+/turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
 "Fg" = (
 /obj/structure/punching_bag,
@@ -3683,10 +3673,6 @@
 /obj/structure/table/optable,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
-"FR" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/deadspace/grater,
-/area/station/medical/morgue)
 "FS" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -3986,7 +3972,8 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/warehouse)
 "JK" = (
-/turf/open/floor/deadspace/grater,
+/obj/machinery/firealarm/directional/north,
+/turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
 "JN" = (
 /obj/machinery/washing_machine,
@@ -4010,7 +3997,6 @@
 /area/station/maintenance/fore/lesser)
 "JZ" = (
 /obj/effect/decal/cleanable/blood,
-/obj/structure/bed/roller,
 /turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
 "Kb" = (
@@ -15570,10 +15556,10 @@ sf
 HI
 zF
 do
-zF
+HI
 sb
 sf
-cc
+do
 nG
 Cr
 Cr
@@ -15723,14 +15709,14 @@ jt
 oh
 nG
 QM
-zF
+jv
 HI
 ZF
 do
-zF
+HI
 sb
-zF
-cc
+jv
+do
 nG
 Cr
 Cr
@@ -15884,10 +15870,10 @@ Pn
 HI
 jv
 do
-zF
+HI
 sb
 sf
-cc
+do
 nG
 Cr
 Cr
@@ -16037,11 +16023,11 @@ FY
 Sf
 nG
 Kr
-zF
+jv
 HI
-FR
+Gw
 nG
-JK
+HI
 sb
 zF
 Fe
@@ -16193,7 +16179,7 @@ ph
 FY
 Sf
 nG
-HI
+JK
 HI
 HI
 HI
@@ -16201,7 +16187,7 @@ HI
 HI
 sb
 JZ
-nG
+Lz
 nG
 Cr
 Cr
@@ -16357,8 +16343,8 @@ hF
 hF
 hF
 fX
+HI
 Lz
-ou
 nG
 Cr
 Cr
@@ -16510,11 +16496,11 @@ nG
 Kr
 ZF
 ZQ
-FR
+Gw
 nG
-JK
+HI
 nh
-zF
+jv
 Fe
 nG
 Cr
@@ -16669,10 +16655,10 @@ zF
 ZQ
 zF
 do
-sf
+HI
 nh
 sf
-cc
+do
 nG
 Cr
 Cr
@@ -16822,14 +16808,14 @@ Ei
 Sf
 nG
 QM
-zF
+jv
 ZQ
-zF
+jv
 do
-zF
+HI
 nh
 sf
-cc
+do
 nG
 Cr
 Cr
@@ -16981,12 +16967,12 @@ nG
 QM
 sf
 ZQ
-zF
+jv
 do
-sf
+HI
 nh
 zF
-cc
+do
 nG
 Cr
 Cr
