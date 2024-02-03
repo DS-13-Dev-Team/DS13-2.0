@@ -17575,7 +17575,7 @@
 /area/mine/production)
 "jXI" = (
 /obj/machinery/firealarm/directional/west,
-/obj/structure/closet/secure_closet/chief_medical,
+/obj/structure/closet/secure_closet/ds/chief_medical,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/cmo)
 "jYe" = (
@@ -30300,7 +30300,7 @@
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
 "ubu" = (
-/obj/structure/closet/secure_closet/research_director,
+/obj/structure/closet/secure_closet/ds/research_director,
 /obj/effect/turf_decal/stripes/box,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/rd)
