@@ -258,6 +258,10 @@
 /obj/item/plate_shard/marker_shard,
 /turf/open/floor/deadspace/grater,
 /area/station/ai_monitored/security/armory)
+"cB" = (
+/obj/machinery/door/window/brigdoor/left/directional/north,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "cC" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/box,
@@ -379,12 +383,10 @@
 /area/station/medical/exam_room)
 "dt" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/brigdoor/left/directional{
-	dir = 4
-	},
 /obj/structure/cable,
 /obj/machinery/telephone/security,
 /obj/machinery/power/data_terminal,
+/obj/machinery/door/window/brigdoor/left/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/medical)
 "du" = (
@@ -406,10 +408,6 @@
 /obj/machinery/vending/coffee,
 /turf/open/floor/iron/dark,
 /area/station/security)
-"dx" = (
-/mob/living/simple_animal/hostile/bear/snow,
-/turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
 "dy" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/engineering/flashlight,
@@ -482,6 +480,9 @@
 /obj/structure/window/reinforced/spawner/north,
 /obj/structure/window/reinforced/spawner/east,
 /obj/effect/spawner/random/trash,
+/mob/living/carbon/human/species/monkey/angry{
+	name = "rabid monkey"
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "dY" = (
@@ -837,7 +838,7 @@
 /area/aegis/surface)
 "gh" = (
 /mob/living/simple_animal/hostile/cat_butcherer{
-	name = "Keener"
+	name = "Dr. Keener"
 	},
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/maintenance/fore/lesser)
@@ -2147,6 +2148,9 @@
 "qd" = (
 /obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/west,
+/mob/living/carbon/human/species/monkey/angry{
+	name = "rabid monkey"
+	},
 /turf/open/floor/iron/dark,
 /area/station/maintenance/fore/lesser)
 "qe" = (
@@ -2485,6 +2489,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/medical)
+"sE" = (
+/obj/structure/window/reinforced/spawner,
+/turf/open/floor/iron/dark,
+/area/station/maintenance/fore/lesser)
 "sF" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -3220,6 +3228,12 @@
 	},
 /turf/open/floor/deadspace/roller,
 /area/aegis/surface)
+"AP" = (
+/mob/living/carbon/human/species/monkey/angry{
+	name = "walter"
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "AR" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -3578,6 +3592,10 @@
 /obj/effect/spawner/random/food_or_drink/snack,
 /obj/effect/spawner/random/food_or_drink/snack,
 /turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
+"EL" = (
+/obj/machinery/door/window/brigdoor/left/directional/south,
+/turf/open/floor/iron/dark,
 /area/station/maintenance/fore/lesser)
 "ES" = (
 /obj/structure/cable,
@@ -4511,7 +4529,7 @@
 /area/station/maintenance/fore/lesser)
 "Pv" = (
 /obj/machinery/door/airlock/maintenance{
-	dir = 4
+	dir = 1
 	},
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
@@ -7366,7 +7384,7 @@ yA
 zp
 bf
 bf
-Wd
+kM
 bf
 bf
 bf
@@ -7998,7 +8016,7 @@ bf
 bf
 bf
 bf
-Wd
+kM
 bf
 bf
 bf
@@ -11151,7 +11169,7 @@ bf
 bf
 bf
 bf
-Wd
+kM
 bf
 bf
 bf
@@ -12381,7 +12399,7 @@ bf
 bf
 bf
 bf
-Wd
+kM
 bf
 bf
 bf
@@ -13490,7 +13508,7 @@ yA
 yA
 yA
 yA
-zp
+hN
 tT
 yG
 yG
@@ -16151,10 +16169,10 @@ bf
 yG
 bf
 hn
-ri
+cB
 ro
 hn
-rf
+sE
 hn
 uU
 zp
@@ -16309,9 +16327,9 @@ yG
 bf
 rf
 ri
-dx
+hn
 ro
-rf
+EL
 hn
 uU
 zp
@@ -22763,7 +22781,7 @@ hn
 bf
 Ya
 gk
-hn
+AP
 MP
 go
 bf
