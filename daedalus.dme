@@ -4734,6 +4734,7 @@
 #include "deadspace\code\marker\markernet\marker_net.dm"
 #include "deadspace\code\marker\markernet\marker_static.dm"
 #include "deadspace\code\mob\damage_procs.dm"
+#include "deadspace\code\modules\client\preferences.dm"
 #include "deadspace\code\modules\clothing\gloves\combat.dm"
 #include "deadspace\code\modules\clothing\head\helmet.dm"
 #include "deadspace\code\modules\clothing\head\hood.dm"
