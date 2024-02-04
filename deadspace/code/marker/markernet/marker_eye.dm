@@ -68,6 +68,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	if(marker)
 		marker.markernet.eyes -= src
 		marker.marker_signals -= src
+		marker.necroqueue -= src
 		marker = null
 	for(var/datum/markerchunk/chunk as anything in visibleChunks)
 		chunk.remove(src)
