@@ -458,6 +458,12 @@
 /obj/effect/spawner/random/deadspace/rig,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"dQ" = (
+/obj/structure/table,
+/obj/effect/spawner/random/maintenance/two,
+/obj/effect/spawner/random/deadspace/ammo,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "dR" = (
 /obj/structure/table,
 /obj/item/storage/medkit,
@@ -655,6 +661,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/trash,
 /obj/effect/spawner/random/maintenance,
+/obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "fd" = (
@@ -920,6 +927,7 @@
 /area/station/cargo/warehouse)
 "gX" = (
 /obj/structure/table,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "gY" = (
@@ -1538,6 +1546,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/clothing/gloves,
 /obj/effect/spawner/random/maintenance/two,
+/obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
 "le" = (
@@ -2361,6 +2370,7 @@
 /area/station/maintenance/fore/lesser)
 "rD" = (
 /obj/structure/table,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
 /turf/open/floor/deadspace/grater,
 /area/aegis/surface)
 "rG" = (
@@ -2473,6 +2483,10 @@
 	dir = 4
 	},
 /turf/open/floor/deadspace/hardwood,
+/area/station/maintenance/fore/lesser)
+"sA" = (
+/obj/effect/spawner/random/deadspace/ammo,
+/turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "sD" = (
 /obj/structure/stairs/north,
@@ -2590,6 +2604,7 @@
 /obj/effect/turf_decal/bot_white,
 /obj/effect/turf_decal/bot_white,
 /obj/effect/spawner/random/maintenance,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo)
 "ua" = (
@@ -2681,6 +2696,7 @@
 /area/station/cargo)
 "uR" = (
 /obj/structure/table/reinforced,
+/obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/maintenance/fore/lesser)
 "uU" = (
@@ -3041,6 +3057,7 @@
 "yJ" = (
 /obj/structure/table,
 /obj/item/clothing/head/welding/fancy,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "yO" = (
@@ -3269,6 +3286,12 @@
 /obj/item/storage/lunchbox/scaf,
 /turf/open/floor/deadspace/mono,
 /area/aegis/surface)
+"Br" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/engineering/tool,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "Bx" = (
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
@@ -3819,6 +3842,7 @@
 "HV" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/food_or_drink/snack,
+/obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "HW" = (
@@ -3971,6 +3995,12 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/warehouse)
+"JH" = (
+/obj/structure/rack,
+/obj/effect/spawner/random/maintenance/two,
+/obj/effect/spawner/random/deadspace/ammo,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "JK" = (
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/deadspace/medical,
@@ -4131,6 +4161,10 @@
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/lesser)
+"Lt" = (
+/obj/item/gun/ballistic/automatic/pistol/rivet,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "Lw" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/plating,
@@ -5053,6 +5087,11 @@
 "VK" = (
 /obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
+"VL" = (
+/obj/structure/table/reinforced,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
+/turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
 "VM" = (
 /obj/structure/closet/crate/wooden/toy,
@@ -7826,7 +7865,7 @@ yG
 yG
 bf
 QP
-hn
+Lt
 fP
 Or
 bf
@@ -8800,7 +8839,7 @@ zp
 bf
 LZ
 LZ
-LZ
+JH
 bf
 yG
 yG
@@ -10360,7 +10399,7 @@ zp
 yA
 zp
 uU
-LZ
+JH
 LZ
 LZ
 bf
@@ -11471,7 +11510,7 @@ eA
 hn
 hn
 bf
-Em
+VL
 sO
 GB
 bf
@@ -11746,7 +11785,7 @@ rA
 iX
 kF
 iX
-hn
+sA
 rA
 bf
 zp
@@ -14720,7 +14759,7 @@ yG
 yG
 bf
 Gk
-Gk
+dQ
 Gk
 hn
 bf
@@ -19611,7 +19650,7 @@ hn
 ju
 bf
 hn
-hn
+sA
 hn
 hn
 eA
@@ -19915,7 +19954,7 @@ nR
 bf
 aS
 hn
-hn
+sA
 hn
 bf
 bf
@@ -22888,7 +22927,7 @@ yG
 yG
 yG
 bf
-hn
+sA
 CT
 hn
 hn
@@ -23063,7 +23102,7 @@ hn
 hn
 bf
 hn
-bm
+Br
 hn
 bm
 hn
