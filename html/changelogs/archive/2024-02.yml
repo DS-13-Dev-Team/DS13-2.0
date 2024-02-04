@@ -19,3 +19,6 @@
   - rscadd: Added new particle effects for bullets impacting surfaces.
   - rscadd: Bullets are now illuminated.
   - rscadd: Bullets leave behind impact holes on most surfaces.
+2024-02-04:
+  blackwolf602:
+  - rscadd: bola and pulse grenade into the main armory
