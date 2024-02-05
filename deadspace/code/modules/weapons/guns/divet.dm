@@ -84,13 +84,13 @@ Magazines
 /obj/item/ammo_box/magazine/divet/extended
 	name = "divet magazine (extended)"
 	icon_state = "divet_ext_slug"
-	max_ammo = 21
+	max_ammo = 24
 	ammo_type = /obj/item/ammo_casing/divet/extended
 
 /obj/item/ammo_box/magazine/divet/extended/expanded
 	name = "divet magazine (expanded)"
 	icon_state = "divet_exp_slug"
-	max_ammo = 60
+	max_ammo = 48
 
 /obj/item/ammo_box/magazine/divet/blank
 	name = "divet magazine (blank/practice)"

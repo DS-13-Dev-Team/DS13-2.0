@@ -12608,9 +12608,6 @@
 "ggw" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/holopad,
-/mob/living/simple_animal/mouse/brown{
-	name = "Joe"
-	},
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
 "ggJ" = (

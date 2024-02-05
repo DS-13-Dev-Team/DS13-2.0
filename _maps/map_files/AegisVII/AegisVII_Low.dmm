@@ -373,6 +373,7 @@
 /area/station/medical/morgue)
 "ds" = (
 /obj/effect/turf_decal/box,
+/obj/item/reagent_containers/glass/beaker/synthflesh,
 /turf/open/floor/deadspace/mono,
 /area/station/medical/exam_room)
 "dt" = (
@@ -4623,6 +4624,7 @@
 "QE" = (
 /obj/effect/turf_decal/box,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/reagent_containers/glass/beaker/synthflesh,
 /turf/open/floor/deadspace/mono,
 /area/station/medical/exam_room)
 "QI" = (
