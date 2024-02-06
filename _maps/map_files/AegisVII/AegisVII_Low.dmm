@@ -205,12 +205,6 @@
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/fore/lesser)
-"cc" = (
-/obj/structure/bodycontainer/morgue{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/station/medical/morgue)
 "cf" = (
 /obj/machinery/light/small/maintenance/directional/east,
 /obj/effect/spawner/random/trash,
@@ -258,6 +252,10 @@
 /obj/item/plate_shard/marker_shard,
 /turf/open/floor/deadspace/grater,
 /area/station/ai_monitored/security/armory)
+"cB" = (
+/obj/machinery/door/window/brigdoor/left/directional/north,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "cC" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/turf_decal/box,
@@ -375,16 +373,15 @@
 /area/station/medical/morgue)
 "ds" = (
 /obj/effect/turf_decal/box,
+/obj/item/reagent_containers/glass/beaker/synthflesh,
 /turf/open/floor/deadspace/mono,
 /area/station/medical/exam_room)
 "dt" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/brigdoor/left/directional{
-	dir = 4
-	},
 /obj/structure/cable,
 /obj/machinery/telephone/security,
 /obj/machinery/power/data_terminal,
+/obj/machinery/door/window/brigdoor/left/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/medical)
 "du" = (
@@ -406,10 +403,6 @@
 /obj/machinery/vending/coffee,
 /turf/open/floor/iron/dark,
 /area/station/security)
-"dx" = (
-/mob/living/simple_animal/hostile/bear/snow,
-/turf/open/floor/plating,
-/area/station/maintenance/fore/lesser)
 "dy" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/engineering/flashlight,
@@ -466,6 +459,12 @@
 /obj/effect/spawner/random/deadspace/rig,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"dQ" = (
+/obj/structure/table,
+/obj/effect/spawner/random/maintenance/two,
+/obj/effect/spawner/random/deadspace/ammo,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "dR" = (
 /obj/structure/table,
 /obj/item/storage/medkit,
@@ -482,6 +481,9 @@
 /obj/structure/window/reinforced/spawner/north,
 /obj/structure/window/reinforced/spawner/east,
 /obj/effect/spawner/random/trash,
+/mob/living/carbon/human/species/monkey/angry{
+	name = "rabid monkey"
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "dY" = (
@@ -660,6 +662,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/trash,
 /obj/effect/spawner/random/maintenance,
+/obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "fd" = (
@@ -837,7 +840,7 @@
 /area/aegis/surface)
 "gh" = (
 /mob/living/simple_animal/hostile/cat_butcherer{
-	name = "Keener"
+	name = "Dr. Keener"
 	},
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/maintenance/fore/lesser)
@@ -925,6 +928,7 @@
 /area/station/cargo/warehouse)
 "gX" = (
 /obj/structure/table,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "gY" = (
@@ -1543,6 +1547,7 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/clothing/gloves,
 /obj/effect/spawner/random/maintenance/two,
+/obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
 "le" = (
@@ -1919,10 +1924,6 @@
 /obj/effect/spawner/random/engineering/material,
 /turf/open/misc/asteroid,
 /area/aegis/surface)
-"ou" = (
-/obj/machinery/firealarm,
-/turf/closed/wall/r_wall,
-/area/station/medical/morgue)
 "ov" = (
 /obj/effect/turf_decal/box,
 /obj/structure/barricade/security,
@@ -2147,6 +2148,9 @@
 "qd" = (
 /obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/west,
+/mob/living/carbon/human/species/monkey/angry{
+	name = "rabid monkey"
+	},
 /turf/open/floor/iron/dark,
 /area/station/maintenance/fore/lesser)
 "qe" = (
@@ -2367,6 +2371,7 @@
 /area/station/maintenance/fore/lesser)
 "rD" = (
 /obj/structure/table,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
 /turf/open/floor/deadspace/grater,
 /area/aegis/surface)
 "rG" = (
@@ -2480,11 +2485,19 @@
 	},
 /turf/open/floor/deadspace/hardwood,
 /area/station/maintenance/fore/lesser)
+"sA" = (
+/obj/effect/spawner/random/deadspace/ammo,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "sD" = (
 /obj/structure/stairs/north,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/medical)
+"sE" = (
+/obj/structure/window/reinforced/spawner,
+/turf/open/floor/iron/dark,
+/area/station/maintenance/fore/lesser)
 "sF" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -2592,6 +2605,7 @@
 /obj/effect/turf_decal/bot_white,
 /obj/effect/turf_decal/bot_white,
 /obj/effect/spawner/random/maintenance,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
 /turf/open/floor/deadspace/mono,
 /area/station/cargo)
 "ua" = (
@@ -2683,6 +2697,7 @@
 /area/station/cargo)
 "uR" = (
 /obj/structure/table/reinforced,
+/obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/maintenance/fore/lesser)
 "uU" = (
@@ -3043,6 +3058,7 @@
 "yJ" = (
 /obj/structure/table,
 /obj/item/clothing/head/welding/fancy,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "yO" = (
@@ -3220,6 +3236,12 @@
 	},
 /turf/open/floor/deadspace/roller,
 /area/aegis/surface)
+"AP" = (
+/mob/living/carbon/human/species/monkey/angry{
+	name = "walter"
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "AR" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -3265,6 +3287,12 @@
 /obj/item/storage/lunchbox/scaf,
 /turf/open/floor/deadspace/mono,
 /area/aegis/surface)
+"Br" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/engineering/tool,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "Bx" = (
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
@@ -3579,6 +3607,10 @@
 /obj/effect/spawner/random/food_or_drink/snack,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"EL" = (
+/obj/machinery/door/window/brigdoor/left/directional/south,
+/turf/open/floor/iron/dark,
+/area/station/maintenance/fore/lesser)
 "ES" = (
 /obj/structure/cable,
 /turf/open/floor/deadspace/mono,
@@ -3616,7 +3648,7 @@
 	dir = 1
 	},
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/plating,
+/turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
 "Fg" = (
 /obj/structure/punching_bag,
@@ -3665,10 +3697,6 @@
 /obj/structure/table/optable,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
-"FR" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/deadspace/grater,
-/area/station/medical/morgue)
 "FS" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -3815,6 +3843,7 @@
 "HV" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/food_or_drink/snack,
+/obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "HW" = (
@@ -3967,8 +3996,15 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/warehouse)
+"JH" = (
+/obj/structure/rack,
+/obj/effect/spawner/random/maintenance/two,
+/obj/effect/spawner/random/deadspace/ammo,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "JK" = (
-/turf/open/floor/deadspace/grater,
+/obj/machinery/firealarm/directional/north,
+/turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
 "JN" = (
 /obj/machinery/washing_machine,
@@ -3992,7 +4028,6 @@
 /area/station/maintenance/fore/lesser)
 "JZ" = (
 /obj/effect/decal/cleanable/blood,
-/obj/structure/bed/roller,
 /turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
 "Kb" = (
@@ -4127,6 +4162,10 @@
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/port/lesser)
+"Lt" = (
+/obj/item/gun/ballistic/automatic/pistol/rivet,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "Lw" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/plating,
@@ -4511,7 +4550,7 @@
 /area/station/maintenance/fore/lesser)
 "Pv" = (
 /obj/machinery/door/airlock/maintenance{
-	dir = 4
+	dir = 1
 	},
 /turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
@@ -4585,6 +4624,7 @@
 "QE" = (
 /obj/effect/turf_decal/box,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/reagent_containers/glass/beaker/synthflesh,
 /turf/open/floor/deadspace/mono,
 /area/station/medical/exam_room)
 "QI" = (
@@ -5049,6 +5089,11 @@
 "VK" = (
 /obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
+"VL" = (
+/obj/structure/table/reinforced,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
+/turf/open/floor/deadspace/grater,
 /area/station/maintenance/fore/lesser)
 "VM" = (
 /obj/structure/closet/crate/wooden/toy,
@@ -7366,7 +7411,7 @@ yA
 zp
 bf
 bf
-Wd
+kM
 bf
 bf
 bf
@@ -7822,7 +7867,7 @@ yG
 yG
 bf
 QP
-hn
+Lt
 fP
 Or
 bf
@@ -7998,7 +8043,7 @@ bf
 bf
 bf
 bf
-Wd
+kM
 bf
 bf
 bf
@@ -8796,7 +8841,7 @@ zp
 bf
 LZ
 LZ
-LZ
+JH
 bf
 yG
 yG
@@ -10356,7 +10401,7 @@ zp
 yA
 zp
 uU
-LZ
+JH
 LZ
 LZ
 bf
@@ -11151,7 +11196,7 @@ bf
 bf
 bf
 bf
-Wd
+kM
 bf
 bf
 bf
@@ -11467,7 +11512,7 @@ eA
 hn
 hn
 bf
-Em
+VL
 sO
 GB
 bf
@@ -11742,7 +11787,7 @@ rA
 iX
 kF
 iX
-hn
+sA
 rA
 bf
 zp
@@ -12381,7 +12426,7 @@ bf
 bf
 bf
 bf
-Wd
+kM
 bf
 bf
 bf
@@ -13490,7 +13535,7 @@ yA
 yA
 yA
 yA
-zp
+hN
 tT
 yG
 yG
@@ -14716,7 +14761,7 @@ yG
 yG
 bf
 Gk
-Gk
+dQ
 Gk
 hn
 bf
@@ -15552,10 +15597,10 @@ sf
 HI
 zF
 do
-zF
+HI
 sb
 sf
-cc
+do
 nG
 Cr
 Cr
@@ -15705,14 +15750,14 @@ jt
 oh
 nG
 QM
-zF
+jv
 HI
 ZF
 do
-zF
+HI
 sb
-zF
-cc
+jv
+do
 nG
 Cr
 Cr
@@ -15866,10 +15911,10 @@ Pn
 HI
 jv
 do
-zF
+HI
 sb
 sf
-cc
+do
 nG
 Cr
 Cr
@@ -16019,11 +16064,11 @@ FY
 Sf
 nG
 Kr
-zF
+jv
 HI
-FR
+Gw
 nG
-JK
+HI
 sb
 zF
 Fe
@@ -16151,10 +16196,10 @@ bf
 yG
 bf
 hn
-ri
+cB
 ro
 hn
-rf
+sE
 hn
 uU
 zp
@@ -16175,7 +16220,7 @@ ph
 FY
 Sf
 nG
-HI
+JK
 HI
 HI
 HI
@@ -16183,7 +16228,7 @@ HI
 HI
 sb
 JZ
-nG
+Lz
 nG
 Cr
 Cr
@@ -16309,9 +16354,9 @@ yG
 bf
 rf
 ri
-dx
+hn
 ro
-rf
+EL
 hn
 uU
 zp
@@ -16339,8 +16384,8 @@ hF
 hF
 hF
 fX
+HI
 Lz
-ou
 nG
 Cr
 Cr
@@ -16492,11 +16537,11 @@ nG
 Kr
 ZF
 ZQ
-FR
+Gw
 nG
-JK
+HI
 nh
-zF
+jv
 Fe
 nG
 Cr
@@ -16651,10 +16696,10 @@ zF
 ZQ
 zF
 do
-sf
+HI
 nh
 sf
-cc
+do
 nG
 Cr
 Cr
@@ -16804,14 +16849,14 @@ Ei
 Sf
 nG
 QM
-zF
+jv
 ZQ
-zF
+jv
 do
-zF
+HI
 nh
 sf
-cc
+do
 nG
 Cr
 Cr
@@ -16963,12 +17008,12 @@ nG
 QM
 sf
 ZQ
-zF
+jv
 do
-sf
+HI
 nh
 zF
-cc
+do
 nG
 Cr
 Cr
@@ -19607,7 +19652,7 @@ hn
 ju
 bf
 hn
-hn
+sA
 hn
 hn
 eA
@@ -19911,7 +19956,7 @@ nR
 bf
 aS
 hn
-hn
+sA
 hn
 bf
 bf
@@ -22763,7 +22808,7 @@ hn
 bf
 Ya
 gk
-hn
+AP
 MP
 go
 bf
@@ -22884,7 +22929,7 @@ yG
 yG
 yG
 bf
-hn
+sA
 CT
 hn
 hn
@@ -23059,7 +23104,7 @@ hn
 hn
 bf
 hn
-bm
+Br
 hn
 bm
 hn

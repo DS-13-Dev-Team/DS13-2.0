@@ -845,6 +845,7 @@
 /obj/effect/turf_decal/bot,
 /obj/item/clothing/gloves/color/fyellow,
 /obj/item/stack/cable_coil,
+/obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/deadspace/mono,
 /area/station/commons/storage/primary)
 "aon" = (
@@ -4504,9 +4505,6 @@
 "bfK" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/mob/living/simple_animal/parrot/poly{
-	name = "Joe"
-	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "bfL" = (
@@ -7243,6 +7241,7 @@
 	pixel_y = 5
 	},
 /obj/item/storage/box/lights/mixed,
+/obj/effect/spawner/random/deadspace/ammo,
 /turf/open/floor/deadspace/mono,
 /area/station/commons/storage/primary)
 "cou" = (
@@ -10023,6 +10022,14 @@
 	},
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
+"eqQ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/rack,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
+/turf/open/floor/plating,
+/area/station/hallway/secondary/exit)
 "eqR" = (
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/security/brig)
@@ -10763,6 +10770,7 @@
 "eXO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/newscaster/directional/west,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
 "eXW" = (
@@ -14941,6 +14949,12 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/greater)
+"hVj" = (
+/obj/structure/rack,
+/obj/effect/spawner/random/maintenance,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/aft)
 "hVv" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -17292,6 +17306,7 @@
 "jLw" = (
 /obj/structure/table,
 /obj/effect/spawner/random/maintenance,
+/obj/item/gun/ballistic/automatic/pistol/rivet,
 /turf/open/floor/plating,
 /area/station/commons/dorms/cryo)
 "jLE" = (
@@ -17575,7 +17590,7 @@
 /area/mine/production)
 "jXI" = (
 /obj/machinery/firealarm/directional/west,
-/obj/structure/closet/secure_closet/chief_medical,
+/obj/structure/closet/secure_closet/ds/chief_medical,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/cmo)
 "jYe" = (
@@ -30072,6 +30087,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/landmark/navigate_destination{
+	location = "Custodial Closet"
+	},
 /turf/open/floor/plating,
 /area/station/service/janitor)
 "tSM" = (
@@ -30300,7 +30318,7 @@
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
 "ubu" = (
-/obj/structure/closet/secure_closet/research_director,
+/obj/structure/closet/secure_closet/ds/research_director,
 /obj/effect/turf_decal/stripes/box,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/rd)
@@ -51480,7 +51498,7 @@ lod
 lod
 tKV
 ghS
-omQ
+hVj
 omQ
 xey
 dxN
@@ -52568,7 +52586,7 @@ nFR
 wns
 iOy
 vzL
-nJP
+eqQ
 kjS
 wJd
 eiK
