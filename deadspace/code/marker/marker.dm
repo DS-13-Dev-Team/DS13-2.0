@@ -60,10 +60,10 @@
 
 	src.log_talk(message, LOG_SAY)
 
-	for(var/mob/dead/observer/observer as anything in GLOB.current_observers_list)
-		if(!observer?.client?.prefs || !(observer.client.prefs.chat_toggles & CHAT_NECROMORPH))
+	for(var/mob/ghost as anything in GLOB.dead_mob_list)
+		if(!ghost.client?.prefs?.read_preference(/datum/preference/toggle/necro_chat))
 			continue
-		to_chat(observer, "[FOLLOW_LINK(observer, sender)] [message]")
+		to_chat(ghost, "[FOLLOW_LINK(ghost, sender)] [message]")
 
 	for(var/mob/camera/marker_signal/signal as anything in marker_signals)
 		to_chat(signal, message)

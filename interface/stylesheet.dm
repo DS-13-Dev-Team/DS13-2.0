@@ -199,4 +199,5 @@ h1.alert, h2.alert		{color: #000000;}
 .necromorph					{color: #800080; font-weight: bold;}
 .necrosignal				{color: #800080;}
 .necromarker				{color: #800080; font-weight: bold; font-size: 12px;}
+.brethrenmoon				{color: #9f0000; font-weight: bold;	font-size: 3;}
 </style>"}

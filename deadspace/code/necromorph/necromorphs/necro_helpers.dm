@@ -94,3 +94,29 @@
 
 	log_admin("[key_name(usr)] spawned [type_to_spawn] at [AREACOORD(usr)]")
 	SSblackbox.record_feedback("tally", "necro_spawn", 1, "Spawn Necromorph") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+///Send a message to a marker's entire hivemind as a Brethren Moon.
+///Basically the equivelent of answering a prayer or directly messaging as admin, just for the necro hivemind
+/client/proc/brethren_message(msg as text)
+	set category = "Admin.Fun"
+	set desc = "Send a message to the entire necromorph hive as a brethren moon."
+	set name = "Brethren Message"
+
+	if(!msg) //If we have no message we don't want to continue
+		return
+
+	if(!length(GLOB.necromorph_markers))
+		to_chat(src, span_warning("There are no markers!"))
+		return //Make sure there is a marker to actually send this to
+
+	var/obj/structure/marker/marker = tgui_input_list(src, "Pick a marker to send a hivemind message to.", "Brethren Message", GLOB.necromorph_markers)
+	if(QDELETED(marker))
+		return //On the off-chance the marker is destroyed before we send it
+
+	msg = trim(copytext_char(sanitize(msg), 1, MAX_MESSAGE_LEN))
+
+	msg = "<span class='brethrenmoon'>Brethren Moons : [msg]</span>"
+
+	marker.hive_mind_message(src, msg)
+
+	return TRUE
