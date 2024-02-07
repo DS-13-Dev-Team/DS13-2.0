@@ -1,5 +1,0 @@
-author: MisterGrimm
-delete-after: true
-changes:
-  - code_imp: Fixes necromorph chat preference to the modern version
-  - admin: Admins can talk to necro chat now
