@@ -4473,6 +4473,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/service/kitchen/coldroom)
 "cvu" = (
@@ -11738,6 +11739,9 @@
 /area/aegis/telecomms/high)
 "gHg" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/service/kitchen/coldroom)
 "gHM" = (
@@ -15292,9 +15296,6 @@
 /area/station/service/chapel)
 "iCZ" = (
 /obj/item/radio/intercom/directional/east,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 8
-	},
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/service/kitchen/coldroom)
 "iDl" = (
@@ -18496,10 +18497,8 @@
 /turf/open/misc/asteroid,
 /area/station/hallway/primary/fore)
 "khL" = (
-/obj/machinery/camera/motion/directional/west,
-/turf/open/floor/deadspace/random/slides{
-	dir = 1
-	},
+/obj/machinery/camera/motion/directional/east,
+/turf/open/floor/deadspace/random/slides,
 /area/station/security/brig)
 "khN" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
@@ -21883,6 +21882,10 @@
 "mdu" = (
 /turf/open/floor/iron/ported/lino,
 /area/station/service/chapel/funeral)
+"mdQ" = (
+/obj/machinery/camera/motion/directional/north,
+/turf/open/floor/deadspace/random/maint_center,
+/area/station/security/brig)
 "mdX" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 10
@@ -24494,9 +24497,10 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "nDq" = (
-/obj/machinery/camera/motion/directional/east,
-/turf/open/floor/deadspace/random/slides,
-/area/station/security/brig)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/dark/visible,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/kitchen_coldroom/freezerfloor,
+/area/station/service/kitchen/coldroom)
 "nDr" = (
 /obj/machinery/modular_computer/console/preset/engineering{
 	dir = 8
@@ -24856,7 +24860,6 @@
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "nPr" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/heat_exchanging/junction,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/service/kitchen/coldroom)
@@ -29109,10 +29112,11 @@
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "qii" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/dark/visible,
-/turf/open/floor/iron/kitchen_coldroom/freezerfloor,
-/area/station/service/kitchen/coldroom)
+/obj/machinery/camera/motion/directional/west,
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/station/security/brig)
 "qil" = (
 /obj/structure/sign/departments/psychology,
 /turf/closed/wall/r_wall,
@@ -31911,9 +31915,9 @@
 /turf/open/floor/iron/white,
 /area/station/maintenance/fore/lesser)
 "rMK" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/dark/visible,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/components/binary/pump/on,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/service/kitchen/coldroom)
 "rML" = (
@@ -33531,6 +33535,7 @@
 	pixel_y = 11
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/service/kitchen/coldroom)
 "sNL" = (
@@ -34078,10 +34083,6 @@
 /obj/structure/bed/roller,
 /turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
-"teB" = (
-/obj/machinery/camera/motion/directional/north,
-/turf/open/floor/deadspace/random/maint_center,
-/area/station/security/brig)
 "teC" = (
 /obj/effect/turf_decal/siding/white,
 /obj/machinery/iv_drip,
@@ -78984,7 +78985,7 @@ hEO
 hEO
 acb
 sNh
-ksD
+nDq
 gHg
 tHg
 acb
@@ -79298,7 +79299,7 @@ eEt
 qYZ
 fXZ
 rMK
-qii
+ksD
 nPr
 iyj
 acb
@@ -80403,7 +80404,7 @@ qbh
 qbh
 qbh
 reE
-khL
+qii
 qbh
 qbh
 mWE
@@ -82451,7 +82452,7 @@ qyr
 qyr
 qyr
 qyr
-teB
+mdQ
 imI
 qcT
 hnj
@@ -82919,7 +82920,7 @@ mWE
 qbh
 qbh
 kFF
-khL
+qii
 qHO
 qyr
 qVP
@@ -83229,7 +83230,7 @@ bNV
 bNV
 bNV
 bNV
-nDq
+khL
 bNV
 bNV
 mWE
