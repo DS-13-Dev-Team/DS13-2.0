@@ -22,3 +22,11 @@
 2024-02-04:
   blackwolf602:
   - rscadd: bola and pulse grenade into the main armory
+2024-02-07:
+  DTraitor:
+  - bugfix: Fixed necroqueue not working sometimes
+  MisterGrimm:
+  - code_imp: Fixes necromorph chat preference to the modern version
+  - admin: Admins can talk to necro chat now
+  blackwolf602:
+  - rscadd: monkeys instead of bear
