@@ -5,9 +5,7 @@
 		#include "map_files\debug\runtimestation.dmm"
 		#include "map_files\debug\multiz.dmm"
 		#include "map_files\Theseus\Theseus.dmm"
-		#include "map_files\AegisVII\AegisVII_Low.dmm"
-		#include "map_files\AegisVII\AegisVII_Middle.dmm"
-		#include "map_files\AegisVII\AegisVII_High.dmm"
+		#include "map_files\AegisVII\AegisVII.dmm"
 		#ifdef CIBUILDING
 			#include "templates.dm"
 		#endif
