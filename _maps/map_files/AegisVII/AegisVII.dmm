@@ -6061,7 +6061,6 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/atmos)
 "dsa" = (
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/rack/shelf,
 /obj/item/mod/control/pre_equipped/ds/pcsi,
 /obj/machinery/light/directional/west,
@@ -15644,6 +15643,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/camera/motion/directional/west,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/security/brig)
 "iLg" = (
@@ -18496,20 +18496,10 @@
 /turf/open/misc/asteroid,
 /area/station/hallway/primary/fore)
 "khL" = (
-/obj/machinery/door/airlock/security/glass{
-	id_tag = "outerbrig";
-	name = "P-Sec Brig";
-	req_access_txt = "63";
+/obj/machinery/camera/motion/directional/west,
+/turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "brig-entrance"
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/deadspace/random/golf_brown,
 /area/station/security/brig)
 "khN" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
@@ -24504,16 +24494,9 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "nDq" = (
-/obj/structure/rack,
-/obj/machinery/light/directional/south,
-/obj/item/ammo_box/magazine/ds12g,
-/obj/item/ammo_box/magazine/ds12g,
-/obj/item/ammo_box/magazine/ds12g,
-/obj/item/ammo_casing/shotgun/bola,
-/obj/item/ammo_casing/shotgun/bola,
-/obj/item/gun/ballistic/shotgun/scl_shotgun,
+/obj/machinery/camera/motion/directional/east,
 /turf/open/floor/deadspace/random/slides,
-/area/station/ai_monitored/security/armory)
+/area/station/security/brig)
 "nDr" = (
 /obj/machinery/modular_computer/console/preset/engineering{
 	dir = 8
@@ -28758,12 +28741,6 @@
 /area/station/command/heads_quarters/captain)
 "pXL" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/button/door/directional/south{
-	id = "armory";
-	name = "Armory Shutters";
-	req_access_txt = "3";
-	pixel_y = -28
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
@@ -30677,8 +30654,11 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
 "rbz" = (
-/turf/closed/indestructible/rock,
-/area/station/security/brig/upper)
+/obj/machinery/camera/motion/directional/north,
+/turf/open/floor/deadspace/random/slides{
+	dir = 8
+	},
+/area/station/security/brig)
 "rbD" = (
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/service/kitchen/coldroom)
@@ -32417,7 +32397,7 @@
 	id = "custodialshutters";
 	name = "Custodial Shutters"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/station/service/janitor)
 "sdY" = (
 /obj/structure/cable,
@@ -34098,6 +34078,10 @@
 /obj/structure/bed/roller,
 /turf/open/floor/deadspace/medical,
 /area/station/medical/morgue)
+"teB" = (
+/obj/machinery/camera/motion/directional/north,
+/turf/open/floor/deadspace/random/maint_center,
+/area/station/security/brig)
 "teC" = (
 /obj/effect/turf_decal/siding/white,
 /obj/machinery/iv_drip,
@@ -36170,9 +36154,7 @@
 "uqU" = (
 /obj/structure/rack/shelf,
 /obj/item/mod/control/pre_equipped/ds/pcsi,
-/obj/machinery/camera/motion/directional/north{
-	c_tag = "Armory - Internal"
-	},
+/obj/machinery/camera/motion/directional/west,
 /turf/open/floor/deadspace/random/slides{
 	dir = 1
 	},
@@ -37961,7 +37943,7 @@
 	name = "Custodial Shutters";
 	req_one_access = "26"
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/station/service/janitor)
 "vsr" = (
 /turf/closed/wall/r_wall,
@@ -40354,7 +40336,6 @@
 /area/mine/hydroponics)
 "wJx" = (
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
@@ -41602,8 +41583,6 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/landmark/navigate_destination{
 	location = "Custodial Closet"
 	},
@@ -80424,7 +80403,7 @@ qbh
 qbh
 qbh
 reE
-qbh
+khL
 qbh
 qbh
 mWE
@@ -81510,7 +81489,7 @@ pfG
 pfG
 pfG
 pfG
-khL
+kVf
 uSt
 kVO
 kVf
@@ -81849,7 +81828,7 @@ ngE
 qui
 ngE
 qdE
-nDq
+ngE
 qVv
 qVP
 qVP
@@ -82472,7 +82451,7 @@ qyr
 qyr
 qyr
 qyr
-qSo
+teB
 imI
 qcT
 hnj
@@ -82940,7 +82919,7 @@ mWE
 qbh
 qbh
 kFF
-qbh
+khL
 qHO
 qyr
 qVP
@@ -83084,7 +83063,7 @@ ifc
 jJH
 nGw
 qyr
-bHR
+rbz
 xLA
 mWE
 ejX
@@ -83250,7 +83229,7 @@ bNV
 bNV
 bNV
 bNV
-bNV
+nDq
 bNV
 bNV
 mWE
@@ -115446,8 +115425,8 @@ jfa
 jfa
 jfa
 jfa
-rbz
-rbz
+wuy
+wuy
 wuy
 wuy
 wuy
