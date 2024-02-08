@@ -18497,8 +18497,10 @@
 /turf/open/misc/asteroid,
 /area/station/hallway/primary/fore)
 "khL" = (
-/obj/machinery/camera/motion/directional/east,
-/turf/open/floor/deadspace/random/slides,
+/obj/machinery/camera/motion/directional/west,
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
 /area/station/security/brig)
 "khN" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
@@ -21882,10 +21884,6 @@
 "mdu" = (
 /turf/open/floor/iron/ported/lino,
 /area/station/service/chapel/funeral)
-"mdQ" = (
-/obj/machinery/camera/motion/directional/north,
-/turf/open/floor/deadspace/random/maint_center,
-/area/station/security/brig)
 "mdX" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 10
@@ -24497,10 +24495,11 @@
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "nDq" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/dark/visible,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/kitchen_coldroom/freezerfloor,
-/area/station/service/kitchen/coldroom)
+/obj/machinery/camera/motion/directional/north,
+/turf/open/floor/deadspace/random/slides{
+	dir = 8
+	},
+/area/station/security/brig)
 "nDr" = (
 /obj/machinery/modular_computer/console/preset/engineering{
 	dir = 8
@@ -29112,11 +29111,10 @@
 /turf/open/floor/iron/white,
 /area/station/security/medical)
 "qii" = (
-/obj/machinery/camera/motion/directional/west,
-/turf/open/floor/deadspace/random/slides{
-	dir = 1
-	},
-/area/station/security/brig)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/dark/visible,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/kitchen_coldroom/freezerfloor,
+/area/station/service/kitchen/coldroom)
 "qil" = (
 /obj/structure/sign/departments/psychology,
 /turf/closed/wall/r_wall,
@@ -30659,9 +30657,7 @@
 /area/station/service/hydroponics)
 "rbz" = (
 /obj/machinery/camera/motion/directional/north,
-/turf/open/floor/deadspace/random/slides{
-	dir = 8
-	},
+/turf/open/floor/deadspace/random/maint_center,
 /area/station/security/brig)
 "rbD" = (
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
@@ -37912,6 +37908,10 @@
 "vrC" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/lobby)
+"vrG" = (
+/obj/machinery/camera/motion/directional/east,
+/turf/open/floor/deadspace/random/slides,
+/area/station/security/brig)
 "vrN" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -37942,7 +37942,7 @@
 /obj/machinery/button/door/directional/north{
 	id = "custodialshutters";
 	name = "Custodial Shutters";
-	req_one_access = "26"
+	req_access_txt = "26"
 	},
 /turf/open/floor/plating,
 /area/station/service/janitor)
@@ -78985,7 +78985,7 @@ hEO
 hEO
 acb
 sNh
-nDq
+qii
 gHg
 tHg
 acb
@@ -80404,7 +80404,7 @@ qbh
 qbh
 qbh
 reE
-qii
+khL
 qbh
 qbh
 mWE
@@ -82452,7 +82452,7 @@ qyr
 qyr
 qyr
 qyr
-mdQ
+rbz
 imI
 qcT
 hnj
@@ -82920,7 +82920,7 @@ mWE
 qbh
 qbh
 kFF
-qii
+khL
 qHO
 qyr
 qVP
@@ -83064,7 +83064,7 @@ ifc
 jJH
 nGw
 qyr
-rbz
+nDq
 xLA
 mWE
 ejX
@@ -83230,7 +83230,7 @@ bNV
 bNV
 bNV
 bNV
-khL
+vrG
 bNV
 bNV
 mWE
