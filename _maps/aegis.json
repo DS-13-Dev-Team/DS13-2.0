@@ -4,9 +4,7 @@
     "map_name": "Aegis VII",
     "map_path": "map_files/AegisVII",
     "map_file": [
-		"AegisVII_Low.dmm",
-		"AegisVII_Middle.dmm",
-		"AegisVII_High.dmm"
+		"AegisVII.dmm"
 	],
     "space_ruin_levels": 0,
     "space_empty_levels": 0,
