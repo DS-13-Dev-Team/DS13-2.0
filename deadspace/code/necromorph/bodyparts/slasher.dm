@@ -6,7 +6,7 @@
 	max_damage = 200
 	px_x = 0
 	px_y = 0
-	wound_resistance = 10
+	wound_resistance = 5
 	biomass = 10
 
 /obj/item/bodypart/head/necromorph/slasher
@@ -17,7 +17,7 @@
 	max_damage = 200
 	px_x = 0
 	px_y = -8
-	wound_resistance = 5
+	wound_resistance = 0
 	biomass = 7
 	base_pixel_x = -5
 	base_pixel_y = -20
@@ -32,7 +32,7 @@
 	max_damage = 50
 	px_x = -6
 	px_y = 0
-	wound_resistance = 0
+	wound_resistance = -3
 	biomass = 2
 	base_pixel_x = -15
 	base_pixel_y = -15
@@ -47,7 +47,7 @@
 	max_damage = 50
 	px_x = 6
 	px_y = 0
-	wound_resistance = 0
+	wound_resistance = -3
 	biomass = 2
 	base_pixel_y = -15
 
@@ -61,7 +61,7 @@
 	max_damage = 50
 	px_x = -2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = -3
 	biomass = 2
 
 /obj/item/bodypart/leg/right/necromorph/slasher
@@ -74,5 +74,5 @@
 	max_damage = 50
 	px_x = 2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = -3
 	biomass = 2

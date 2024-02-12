@@ -4,6 +4,7 @@
 	icon_static = 'deadspace/icons/necromorphs/twitcher_oracle.dmi'
 	icon_state = "chest"
 	biomass = 36
+	wound_resistance = 10
 
 /obj/item/bodypart/head/necromorph/twitcher/enhanced
 	name = BODY_ZONE_HEAD
@@ -12,6 +13,7 @@
 	icon_state = "head"
 	max_damage = 200
 	biomass = 26
+	wound_resistance = 2
 	base_pixel_x = -10
 	base_pixel_y = -40
 
@@ -22,6 +24,7 @@
 	icon_state = "l_arm"
 	max_damage = 75
 	biomass = 16
+	wound_resistance = -1
 	base_pixel_x = -28
 	base_pixel_y = -17
 
@@ -32,6 +35,7 @@
 	icon_state = "l_arm"
 	max_damage = 75
 	biomass = 16
+	wound_resistance = -1
 	base_pixel_x = 0
 	base_pixel_y = 0
 
@@ -42,6 +46,7 @@
 	icon_state = "l_leg"
 	max_damage = 75
 	biomass = 16
+	wound_resistance = -1
 	base_pixel_x = -16
 
 /obj/item/bodypart/leg/right/necromorph/twitcher/enhanced
@@ -51,5 +56,6 @@
 	icon_state = "r_leg"
 	max_damage = 75
 	biomass = 16
+	wound_resistance = -1
 	base_pixel_x = 0
 	base_pixel_y = 0

@@ -46,7 +46,7 @@
 	max_health = 275
 	melee_damage_lower = 18
 	melee_damage_upper = 22
-	armor = list(BLUNT = 80, PUNCTURE = 60, SLASH = 10, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 75, FIRE = 0, ACID = 95)
+	armor = list(BLUNT = 80, PUNCTURE = 60, SLASH = 15, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 75, FIRE = 0, ACID = 95)
 	actions = list(
 		/datum/action/cooldown/necro/swing/hunter,
 		// /datum/action/cooldown/necro/taunt/hunter,

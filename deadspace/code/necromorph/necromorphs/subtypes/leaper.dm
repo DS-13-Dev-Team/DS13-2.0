@@ -33,7 +33,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 16
 	max_health = 110
-	armor = list(BLUNT = 55, PUNCTURE = 25, SLASH = 15, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 80)
+	armor = list(BLUNT = 50, PUNCTURE = 35, SLASH = 25, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 80)
 	actions = list(
 		/datum/action/cooldown/necro/charge/leaper,
 		/datum/action/cooldown/necro/swing/leaper,

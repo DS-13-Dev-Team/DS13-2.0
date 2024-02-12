@@ -19,7 +19,7 @@
 	melee_damage_lower = 18
 	melee_damage_upper = 22
 	max_health = 215
-	armor = list(BLUNT = 40, PUNCTURE = 55, SLASH = 15, LASER = 0, ENERGY = 0, BOMB = 15, BIO = 75, FIRE = 15, ACID = 95)
+	armor = list(BLUNT = 40, PUNCTURE = 60, SLASH = 25, LASER = 0, ENERGY = 0, BOMB = 15, BIO = 75, FIRE = 15, ACID = 95)
 	actions = list(
 		/datum/action/cooldown/necro/charge/slasher/enhanced,
 		/datum/action/cooldown/necro/dodge/enhanced,

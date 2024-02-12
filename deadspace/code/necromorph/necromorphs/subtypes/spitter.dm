@@ -17,7 +17,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 13
 	max_health = 90
-	armor = list(BLUNT = 40, PUNCTURE = 30, SLASH = 10, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 65, FIRE = 0, ACID = 90)
+	armor = list(BLUNT = 40, PUNCTURE = 45, SLASH = 20, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 65, FIRE = 0, ACID = 90)
 	actions = list(
 		/datum/action/cooldown/necro/shoot/spitter_snapshot,
 		/datum/action/cooldown/necro/shoot/spitter_longshot,

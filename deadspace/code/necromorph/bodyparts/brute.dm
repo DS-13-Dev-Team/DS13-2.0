@@ -6,7 +6,7 @@
 	max_damage = 400
 	px_x = 0
 	px_y = 0
-	wound_resistance = 10
+	wound_resistance = 30
 	biomass = 81
 
 /obj/item/bodypart/head/necromorph/brute
@@ -17,7 +17,7 @@
 	max_damage = 250
 	px_x = 0
 	px_y = -8
-	wound_resistance = 5
+	wound_resistance = 10
 	biomass = 15 //pea brain, not much biomass
 
 /obj/item/bodypart/arm/left/necromorph/brute
@@ -30,7 +30,7 @@
 	max_damage = 225
 	px_x = -6
 	px_y = 0
-	wound_resistance = 0
+	wound_resistance = 5
 	biomass = 21
 
 /obj/item/bodypart/arm/right/necromorph/brute
@@ -43,7 +43,7 @@
 	max_damage = 225
 	px_x = 6
 	px_y = 0
-	wound_resistance = 0
+	wound_resistance = 5
 	biomass = 21
 
 /obj/item/bodypart/leg/left/necromorph/brute
@@ -56,7 +56,7 @@
 	max_damage = 225
 	px_x = -2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = 5
 	biomass = 21
 
 /obj/item/bodypart/leg/right/necromorph/brute
@@ -69,5 +69,5 @@
 	max_damage = 225
 	px_x = 2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = 5
 	biomass = 21
