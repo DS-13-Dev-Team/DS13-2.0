@@ -12,6 +12,7 @@
 	name = "Snare"
 	button_icon_state = "snare"
 	place_structure = /obj/structure/necromorph/snare
+	can_place_in_sight = TRUE
 	cost = 40
 
 //This can stay empty, since we don't really need to change anything in the parent

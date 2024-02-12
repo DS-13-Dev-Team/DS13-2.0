@@ -6,7 +6,7 @@
 	var/cost = 0
 	var/image/template
 	var/obj/structure/necromorph/place_structure = /obj/structure/necromorph
-	var/can_place_in_sight = TRUE
+	var/can_place_in_sight = FALSE
 	var/marker_only = FALSE
 
 /datum/action/cooldown/necro/corruption/New(Target, original, cooldown)

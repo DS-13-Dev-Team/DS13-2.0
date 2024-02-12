@@ -13,4 +13,5 @@
 	name = "Bioluminescence"
 	button_icon_state = "bioluminescence"
 	place_structure = /obj/structure/necromorph/lamp
+	can_place_in_sight = TRUE
 	cost = 2
