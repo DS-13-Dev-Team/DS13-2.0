@@ -4,7 +4,7 @@
 #define IDLE 4
 
 // Amount of integrity lost and gained per second
-#define INTEGRITY_PER_SECOND 4
+#define INTEGRITY_PER_SECOND 3
 
 /obj/structure/corruption
 	name = ""
