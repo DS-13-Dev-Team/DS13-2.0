@@ -61,9 +61,11 @@
 
 ///The part where the maw grabs you, assuming all checks have passed
 /obj/structure/necromorph/maw/proc/maw_grab(atom/movable/AM)
-	src.buckle_mob(AM, FALSE, TRUE) //This comes wrapped with a standard buckle check
-	AM.visible_message(span_danger("\The [src] drags [AM] into itself!"), \
-	span_userdanger("\The [src] drags you into itself!"))
+	var/mob/living/L = AM
+	src.buckle_mob(L, FALSE, TRUE) //This comes wrapped with a standard buckle check
+	if(L.buckled) //We don't want it to throw this message if the buckle check didn't go through
+		L.visible_message(span_danger("\The [src] drags [L] into itself!"), \
+		span_userdanger("\The [src] drags you into itself!"))
 
 /obj/structure/necromorph/maw/proc/maw_push()
 	var/turf/T = get_turf(src)
@@ -183,7 +185,7 @@
 /obj/structure/necromorph/maw/user_unbuckle_mob(mob/living/buckled_mob, mob/user)
 	if(buckled_mob.buckled != src || !user.CanReach(buckled_mob))
 		return
-	var/time_to_unbuckle = (buckled_mob == user) ? 7 SECONDS : 5 SECONDS
+	var/time_to_unbuckle = (buckled_mob == user) ? 8 SECONDS : 6 SECONDS
 	if(!do_after_mob(
 		user, buckled_mob, time_to_unbuckle, IGNORE_HELD_ITEM|DO_PUBLIC, TRUE,
 		CALLBACK(src, PROC_REF(still_buckled), buckled_mob)
