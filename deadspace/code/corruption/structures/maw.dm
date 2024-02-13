@@ -1,4 +1,4 @@
-#define MAW_DAMAGE_PER_SECOND 2
+#define MAW_DAMAGE_PER_SECOND 1.5
 
 // Human biomass = their limbs
 /obj/structure/necromorph/maw
@@ -20,10 +20,50 @@
 	if(!marker)
 		return INITIALIZE_HINT_QDEL
 	marker.add_biomass_source(/datum/biomass_source/maw, src)
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = PROC_REF(maw_grabbing),
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
 
 /obj/structure/necromorph/maw/update_icon_state()
 	..()
 	icon_state = length(buckled_mobs) ? "maw_active" : "maw"
+
+///The signal handler that starts the process of grabbing
+/obj/structure/necromorph/maw/proc/maw_grabbing(datum/source, atom/movable/AM)
+	SIGNAL_HANDLER
+	if(AM == src)
+		return
+	if(!maw_can_grab(AM))
+		return //Don't try to grab
+
+	AM.visible_message(span_danger("\The [src] stretches out to grab [AM]!"), \
+	span_userdanger("\The [src] stretches out to grab you!"))
+
+	//Give the target time to run, then drag their ass to the shadowrealm if they are still there
+	addtimer(CALLBACK(src, PROC_REF(maw_grab), AM), 2 SECONDS)
+
+///General checker before maw grabs, buckling will do a second check if this goes through
+/obj/structure/necromorph/maw/proc/maw_can_grab(atom/movable/AM)
+	if(!isliving(AM))
+		return FALSE //So we don't accidentally grab things like structures and objects
+	if(issilicon(AM))
+		return FALSE //This is checked in buckling, but for our sanity we'll check it here first
+	var/mob/living/L = AM
+	if(isnecromorph(AM) && !(L.stat == DEAD))
+		return FALSE //We don't want living necros to be grabbed
+	if(L.movement_type & (FLYING|FLOATING))
+		return FALSE
+	if(L.buckled)
+		return FALSE //For sanity's sake it won't mess with stuff already buckled
+
+	return TRUE
+
+///The part where the maw grabs you, assuming all checks have passed
+/obj/structure/necromorph/maw/proc/maw_grab(atom/movable/AM)
+	src.buckle_mob(AM, FALSE, TRUE) //This comes wrapped with a standard buckle check
+	AM.visible_message(span_danger("\The [src] drags [AM] into itself!"), \
+	span_userdanger("\The [src] drags you into itself!"))
 
 /obj/structure/necromorph/maw/proc/maw_push()
 	var/turf/T = get_turf(src)
@@ -69,7 +109,7 @@
 		processing_biomass += part.biomass * 1.1
 		part.dismember(dismember_type = DROPLIMB_BLUNT, silent = TRUE)
 	else
-		processing_biomass += 0.1
+		processing_biomass += 0.02
 		// Damage shouldn't be above or equal to 80%
 		part.receive_damage(
 			min(
