@@ -1322,7 +1322,8 @@
 					/obj/item/stack/medical/bone_gel/twelve,
 					/obj/item/stack/medical/bone_gel/twelve,
 					/obj/item/vending_refill/medical,
-					/obj/item/vending_refill/drugs)
+					/obj/item/vending_refill/drugs,
+					/obj/item/vending_refill/chemicals)
 	crate_name = "medical supplies crate"
 
 /datum/supply_pack/medical/supplies/fill(obj/structure/closet/crate/C)
@@ -2940,11 +2941,12 @@
 
 /datum/supply_pack/vending/medical
 	name = "Medical Vending Crate"
-	desc = "Contains one NanoMed Plus refill, one NanoDrug Plus refill, and one wall-mounted NanoMed refill."
+	desc = "Contains one NanoMed Plus refill, one NanoDrug Plus refill, one wall-mounted NanoMed refill, and one Chemical Bazaar refill."
 	cost = CARGO_CRATE_VALUE * 5
 	contains = list(/obj/item/vending_refill/medical,
 					/obj/item/vending_refill/drugs,
-					/obj/item/vending_refill/wallmed)
+					/obj/item/vending_refill/wallmed,
+					/obj/item/vending_refill/chemicals)
 	crate_name = "medical vending crate"
 
 /datum/supply_pack/vending/ptech
