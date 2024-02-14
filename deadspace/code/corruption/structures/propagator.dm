@@ -13,5 +13,5 @@
 	name = "Propagator"
 	button_icon_state = "propagator"
 	place_structure = /obj/structure/necromorph/node/propagator
-	cost = 8
+	cost = 9
 	marker_only = TRUE
