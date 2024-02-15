@@ -12,7 +12,7 @@
 	force = 7
 	force_wielded = 14
 	throwforce = 15
-	throw_speed = 4
+	throw_speed = 1.5
 	block_chance = 20 //Doesn't get as much block as other twohanded due to makeshift creation
 	embedding = list("impact_pain_mult" = 2, "remove_pain_mult" = 4, "jostle_chance" = 2.5)
 	armor_penetration = 10

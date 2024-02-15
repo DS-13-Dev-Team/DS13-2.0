@@ -154,7 +154,7 @@
 
 	force = 10
 	throwforce = 5
-	throw_speed = 3
+	throw_speed = 1.5
 	throw_range = 5
 	stamina_damage = 5
 	stamina_cost = 5
@@ -198,7 +198,6 @@
 	block_chance = 10 //You could probably block with this in a emergency
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 9
-	throw_speed = 2
 	throw_range = 5
 	stamina_damage = 5
 	stamina_cost = 5
@@ -315,7 +314,6 @@
 	force = 12
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 6
-	throw_speed = 2
 	throw_range = 5
 	custom_materials = list(/datum/material/iron=8000, /datum/material/titanium=6000)
 	attack_verb_continuous = list("shears", "snips")
