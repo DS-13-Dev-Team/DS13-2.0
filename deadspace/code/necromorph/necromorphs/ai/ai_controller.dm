@@ -11,7 +11,7 @@
 	//I would give them more complex pathfinding, but im worried too many of them will bog down the server
 	ai_movement = /datum/ai_movement/basic_avoidance
 	idle_behavior = /datum/idle_behavior/idle_random_walk
-	movement_delay = 0.2 SECONDS
+	movement_delay = 0.25 SECONDS
 
 	//The planning part of the AI. Works from top to bottom in priority, works downward as it runs out of stuff to do
 	planning_subtrees = list(
@@ -36,7 +36,7 @@
 
 //We have to make our own attack behavior due to other attack behaviors using simplemob stuff
 /datum/ai_behavior/necro_attack
-	action_cooldown = 1 SECONDS
+	action_cooldown = 2 SECONDS
 	behavior_flags = AI_BEHAVIOR_REQUIRE_MOVEMENT
 
 /datum/ai_behavior/necro_attack/setup(datum/ai_controller/controller, target_key, targetting_datum_key, hiding_location_key)

@@ -6,7 +6,7 @@
 	max_damage = 200
 	px_x = 0
 	px_y = 0
-	wound_resistance = 10
+	wound_resistance = 15
 	biomass = 15
 
 /obj/item/bodypart/head/necromorph/exploder
@@ -17,7 +17,7 @@
 	max_damage = 200
 	px_x = 0
 	px_y = -8
-	wound_resistance = 5
+	wound_resistance = 0
 	biomass = 7.5
 	base_pixel_y = -30
 
@@ -77,7 +77,7 @@
 	max_damage = 50
 	px_x = 2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = -10
 	biomass = 5
 
 /obj/item/bodypart/leg/right/necromorph/exploder
@@ -92,6 +92,7 @@
 	icon_static = null //Since the leg is part of the chest sprite, we don't want a sprite ontop of the sprite
 	icon_state = null
 	max_damage = 60 //Bit stronger due to it being two limbs fused together
+	wound_resistance = -5
 	biomass = 0 //Handled in chest due to sprite funnies
 
 /obj/item/bodypart/leg/left/necromorph/exploder

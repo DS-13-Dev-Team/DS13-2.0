@@ -6,7 +6,7 @@
 	max_damage = 800
 	px_x = 0
 	px_y = 0
-	wound_resistance = 10
+	wound_resistance = 20
 
 /obj/item/bodypart/head/necromorph/ubermorph
 	name = BODY_ZONE_HEAD
@@ -16,7 +16,7 @@
 	max_damage = 150
 	px_x = 0
 	px_y = -8
-	wound_resistance = 5
+	wound_resistance = 0
 	base_pixel_x = -5
 	base_pixel_y = -45
 
@@ -30,7 +30,7 @@
 	max_damage = 175
 	px_x = -6
 	px_y = 0
-	wound_resistance = 0
+	wound_resistance = -5
 	base_pixel_x = -15
 	base_pixel_y = -20
 
@@ -44,7 +44,7 @@
 	max_damage = 175
 	px_x = 6
 	px_y = 0
-	wound_resistance = 0
+	wound_resistance = -5
 	base_pixel_y = -20
 
 /obj/item/bodypart/leg/left/necromorph/ubermorph
@@ -57,7 +57,7 @@
 	max_damage = 140
 	px_x = -2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = -5
 	base_pixel_x = -13
 
 /obj/item/bodypart/leg/right/necromorph/ubermorph
@@ -70,4 +70,4 @@
 	max_damage = 140
 	px_x = 2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = -5

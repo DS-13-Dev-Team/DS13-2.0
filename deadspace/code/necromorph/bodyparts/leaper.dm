@@ -5,6 +5,7 @@
 	icon_state = "chest"
 	max_damage = 200
 	biomass = 10
+	wound_resistance = 5
 	px_x = 0
 	px_y = 0
 
@@ -15,6 +16,7 @@
 	icon_state = "head"
 	max_damage = 65
 	biomass = 3
+	wound_resistance = 0
 	px_x = 0
 	px_y = -8
 	base_pixel_x = -12
@@ -31,6 +33,7 @@
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
 	biomass = 6
+	wound_resistance = -3
 	px_x = -2
 	px_y = 12
 
@@ -44,6 +47,7 @@
 	attack_verb_simple = list("claws", "stomp")
 	max_damage = 50
 	biomass = 6
+	wound_resistance = -3
 	px_x = 2
 	px_y = 12
 
@@ -64,6 +68,7 @@
 	force = 13 //You could probably use it like a knife or a whip if you are desperate
 	throwforce = 20 //It's practically a limp spear
 	biomass = 3.5 //The tail is practically a piece of flesh with a sharp bit at the end, not much biomass
+	wound_resistance = -10
 	sharpness = SHARP_POINTY
 	base_pixel_x = -26
 	base_pixel_y = -15
@@ -84,6 +89,7 @@
 	force = 13 //You could probably use it like a knife or a whip if you are desperate
 	throwforce = 15 //It's practically a limp spear
 	biomass = 3.5
+	wound_resistance = -10
 	sharpness = SHARP_POINTY
 	base_pixel_x = -26
 	base_pixel_y = -15

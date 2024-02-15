@@ -3,12 +3,12 @@
 	desc = "a telemetric survey tool manufactured by Timson Tools, designed to fire titanium spikes or 'javelins' at high speeds with extreme accuracy and piercing power."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "javelin"
-	inhand_icon_state = "javelinunwieldmag"
-	icon_state_wielded = "javelinwield"
+	icon_state_wielded = null
+	inhand_icon_state = null
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
-	worn_icon_state = null
+	worn_icon_state = "javelin"
 	empty_alarm = FALSE
 	mag_display = TRUE
 	internal_magazine = FALSE
@@ -39,7 +39,12 @@
 
 /obj/item/gun/ballistic/rifle/boltaction/harpoon/javelin/update_icon_state()
 	. = ..()
-	inhand_icon_state = "[base_icon_state][wielded ? "wield" : "unwield"][magazine ? "mag":"nomag"]"
+	icon_state = "[initial(icon_state)][wielded ? "_wielded" : ""]"
+	inhand_icon_state = "[initial(icon_state)][wielded ? "_wielded" : ""][magazine? "_mag" : ""]"
+
+/obj/item/gun/ballistic/rifle/boltaction/harpoon/javelin/update_overlays()
+	. = ..()
+	. += "javelin[magazine ? "_mag" : ""]"
 
 /**
 Magazines

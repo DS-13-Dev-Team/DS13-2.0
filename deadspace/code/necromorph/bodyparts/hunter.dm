@@ -6,7 +6,7 @@
 	max_damage = 400
 	px_x = 0
 	px_y = 0
-	wound_resistance = 10
+	wound_resistance = 20
 	biomass = 90 //Most biomass stored in chest due to regeneration
 
 /obj/item/bodypart/head/necromorph/hunter
@@ -17,7 +17,7 @@
 	max_damage = 100
 	px_x = 0
 	px_y = -8
-	wound_resistance = 5
+	wound_resistance = 0
 	biomass = 30
 	base_pixel_x = -5
 	base_pixel_y = -35
@@ -32,7 +32,7 @@
 	max_damage = 100
 	px_x = -6
 	px_y = 0
-	wound_resistance = 0
+	wound_resistance = -5
 	biomass = 20
 	base_pixel_x = -17
 	base_pixel_y = -22
@@ -47,7 +47,7 @@
 	max_damage = 100
 	px_x = 6
 	px_y = 0
-	wound_resistance = 0
+	wound_resistance = -5
 	biomass = 20
 	base_pixel_x = 5
 	base_pixel_y = -22
@@ -62,7 +62,7 @@
 	max_damage = 100
 	px_x = -2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = -5
 	biomass = 20
 	base_pixel_x = -10
 
@@ -76,5 +76,5 @@
 	max_damage = 100
 	px_x = 2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = -5
 	biomass = 20

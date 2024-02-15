@@ -9,11 +9,11 @@ DS SCL Shotgun
 	The SCL Shotgun is magazine loaded and is effective at short range or for fugitive capture."
 	icon = 'deadspace/icons/obj/weapons/ds13guns48x32.dmi'
 	icon_state = "scl_shotgun"
-	icon_state_wielded = "scl_shotgun-wielded"
+	icon_state_wielded = null
 	lefthand_file = 'deadspace/icons/mob/onmob/items/lefthand_guns.dmi'
 	righthand_file = 'deadspace/icons/mob/onmob/items/righthand_guns.dmi'
 	worn_icon = 'deadspace/icons/mob/onmob/back.dmi'
-	worn_icon_state = null
+	worn_icon_state = "scl_shotgun"
 	inhand_icon_state = null
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
@@ -49,6 +49,15 @@ DS SCL Shotgun
 /obj/item/gun/ballistic/shotgun/scl_shotgun/Destroy()
 	QDEL_NULL(underbarrel)
 	return ..()
+
+/obj/item/gun/ballistic/shotgun/scl_shotgun/update_icon_state()
+	. = ..()
+	icon_state = "[initial(icon_state)][wielded ? "_wielded" : ""]"
+	inhand_icon_state = "[initial(icon_state)][wielded ? "_wielded" : ""][magazine? "_mag" : ""]"
+
+/obj/item/gun/ballistic/shotgun/scl_shotgun/update_overlays()
+	. = ..()
+	. += "scl_shotgun[magazine ? "_mag" : ""]"
 
 /obj/item/gun/ballistic/shotgun/scl_shotgun/afterattack_secondary(atom/target, mob/living/user, flag, params)
 	underbarrel.afterattack(target, user, flag, params)
@@ -159,6 +168,7 @@ Ammo casings for the mags
 	fire_sound = 'sound/weapons/bolathrow.ogg'
 	caliber = CALIBER_12GAUGE_BOLA
 	projectile_type = /obj/projectile/bullet/shotgun_bola
+	affected_dynamic_lights = null //For some unknown reason this ammo glows?
 
 /**
 Projectiles for the ammo casings
@@ -176,6 +186,7 @@ Projectiles for the ammo casings
 	ricochets_max = 2
 	ricochet_chance = 80
 	ricochet_auto_aim_range = 1
+	light_system = NO_LIGHT_SUPPORT
 
 //Will do later
 /obj/projectile/bullet/shotgun_bola/on_hit(atom/target, blocked = FALSE)

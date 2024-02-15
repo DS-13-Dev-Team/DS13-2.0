@@ -6,7 +6,7 @@
 	max_damage = 200
 	px_x = 0
 	px_y = 0
-	wound_resistance = 10
+	wound_resistance = 20
 	biomass = 10
 
 /obj/item/bodypart/head/necromorph/exploder/enhanced
@@ -17,7 +17,7 @@
 	max_damage = 200
 	px_x = 0
 	px_y = -8
-	wound_resistance = 5
+	wound_resistance = 3
 	biomass = 9
 
 /obj/item/bodypart/arm/left/necromorph/exploder/enhanced
@@ -30,7 +30,7 @@
 	max_damage = 75
 	px_x = -2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = 1
 	biomass = 16 //The majority of biomass is in the arm, due to the much bigger explosion
 
 /obj/item/bodypart/arm/right/necromorph/exploder/enhanced
@@ -43,7 +43,7 @@
 	max_damage = 75
 	px_x = 2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = -6
 	biomass = 7
 
 /obj/item/bodypart/leg/right/necromorph/exploder/enhanced
@@ -59,6 +59,7 @@
 	icon_state = null
 	max_damage = 100
 	biomass = 0 //Handled in chest due to sprite funnies
+	wound_resistance = -3
 
 /obj/item/bodypart/leg/left/necromorph/exploder/enhanced
 	name = "nub"

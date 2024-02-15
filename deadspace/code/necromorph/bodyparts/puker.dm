@@ -6,7 +6,7 @@
 	max_damage = 200
 	px_x = 0
 	px_y = 0
-	wound_resistance = 10
+	wound_resistance = 5
 	biomass = 17.5
 
 /obj/item/bodypart/head/necromorph/puker
@@ -17,7 +17,7 @@
 	max_damage = 200
 	px_x = 0
 	px_y = -8
-	wound_resistance = 5
+	wound_resistance = 0
 	biomass = 15
 
 /obj/item/bodypart/arm/left/necromorph/puker
@@ -30,7 +30,7 @@
 	max_damage = 75
 	px_x = -6
 	px_y = 0
-	wound_resistance = 0
+	wound_resistance = -3
 	biomass = 7.5
 
 /obj/item/bodypart/arm/right/necromorph/puker
@@ -43,7 +43,7 @@
 	max_damage = 75
 	px_x = 6
 	px_y = 0
-	wound_resistance = 0
+	wound_resistance = -3
 	biomass = 7.5
 
 /obj/item/bodypart/leg/left/necromorph/puker
@@ -56,7 +56,7 @@
 	max_damage = 75
 	px_x = -2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = -3
 	biomass = 7.5
 
 /obj/item/bodypart/leg/right/necromorph/puker
@@ -69,5 +69,5 @@
 	max_damage = 75
 	px_x = 2
 	px_y = 12
-	wound_resistance = 0
+	wound_resistance = -3
 	biomass = 7.5
