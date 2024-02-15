@@ -58,7 +58,6 @@
 	force = 12
 	block_chance = 12 //You could use this to block in a emergency, maybe
 	w_class = WEIGHT_CLASS_NORMAL
-	throw_speed = 3
 	throw_range = 3
 	custom_materials = list(/datum/material/iron=70)
 	icon_state = "crowbar_large"
@@ -76,7 +75,7 @@
 	name = "old crowbar"
 	desc = "It's an old crowbar. Much larger than the pocket sized ones, carrying a lot more heft. They don't make 'em like they used to."
 	throwforce = 10
-	throw_speed = 2
+	throw_speed = 1.5
 
 /obj/item/crowbar/large/old/Initialize()
 	. = ..()

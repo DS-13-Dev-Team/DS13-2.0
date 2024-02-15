@@ -45,8 +45,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 /obj/structure/cable/Initialize(mapload)
 	. = ..()
 
-	GLOB.cable_list += src //add it to the global cable list
-	Connect_cable()
+	::cable_list += src //add it to the global cable list
 	AddElement(/datum/element/undertile, TRAIT_T_RAY_VISIBLE)
 	RegisterSignal(src, COMSIG_RAT_INTERACT, PROC_REF(on_rat_eat))
 	if(isturf(loc))
@@ -124,11 +123,8 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 					C.update_appearance()
 
 /obj/structure/cable/Destroy() // called when a cable is deleted
-	Disconnect_cable()
-
-	if(powernet)
-		cut_cable_from_powernet() // update the powernets
-	GLOB.cable_list -= src //remove it from global cable list
+	cut_cable_from_powernet() // update the powernets
+	::cable_list -= src //remove it from global cable list
 
 	return ..() // then go ahead and delete the cable
 
@@ -441,8 +437,8 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	throwforce = 0
 	w_class = WEIGHT_CLASS_SMALL
 
-	throw_speed = 3
 	throw_range = 5
+
 	stamina_damage = 5
 	stamina_cost = 5
 	stamina_critical_chance = 10
