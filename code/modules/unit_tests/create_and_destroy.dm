@@ -92,6 +92,8 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 	ignore += typesof(/obj/machinery/computer/holodeck)
 	//runtimes if not paired with a landmark
 	ignore += typesof(/obj/structure/industrial_lift)
+	//throws garbage to the log if it spawns without neighbors. It's a mapping helper anyways.
+	ignore += typesof(/obj/structure/cable/smart_cable)
 			// Throws a warning due to passing a zero-duration argument after mapload
 	ignore += typesof(/obj/effect/abstract/smell_holder)
 
