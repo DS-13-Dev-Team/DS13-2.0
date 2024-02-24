@@ -49,10 +49,8 @@
 /turf/open/space/openspace,
 /area/space/nearstation)
 "ao" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/cable/smart_cable/color/yellow,
-/turf/open/space/basic,
-/area/space/nearstation)
+/turf/open/space,
+/area/space)
 "ap" = (
 /obj/machinery/airalarm/directional/north{
 	locked = 0;
