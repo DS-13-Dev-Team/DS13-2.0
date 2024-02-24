@@ -187,3 +187,96 @@
 	icon_state = "slides_end"
 	rand_max = 6
 	rand_min = 0
+
+/turf/open/floor/deadspace/medbay
+	base_icon_state = "old"
+	icon_state = "old"
+	/// Used to define that maximum number of random variants a tile has
+	var/rand_max = 5
+	/// Used to define the minimum number of random variants a tile has
+	var/rand_min = 1
+
+/turf/open/floor/deadspace/medbay/Initialize(mapload)
+	.=..()
+	icon_state = "[initial(icon_state)][rand(rand_min,rand_max)]"
+
+/turf/open/floor/deadspace/medbay/v_leftside
+	base_icon_state = "v_leftside"
+	icon_state = "v_leftside"
+	rand_max = 1
+	rand_min = 0
+
+/turf/open/floor/deadspace/medbay/v_rightside
+	base_icon_state = "v_rightside"
+	icon_state = "v_rightside"
+	rand_max = 1
+	rand_min = 0
+
+/turf/open/floor/deadspace/medbay/h_leftside
+	base_icon_state = "h_leftside"
+	icon_state = "h_leftside"
+	rand_max = 1
+	rand_min = 0
+
+/turf/open/floor/deadspace/medbay/h_rightside
+	base_icon_state = "h_rightside"
+	icon_state = "h_rightside"
+	rand_max = 1
+	rand_min = 0
+
+/turf/open/floor/deadspace/med
+/turf/open/floor/deadspace/med/corner_exterior
+	base_icon_state = "corner_exterior"
+	icon_state = "corner_exterior"
+
+/turf/open/floor/deadspace/med/corner_interior
+	base_icon_state = "corner_interior"
+	icon_state = "corner_interior"
+
+/turf/open/floor/deadspace/med/medhallway
+	base_icon_state = "medhallway"
+	icon_state = "medhallway"
+
+/turf/open/floor/deadspace/med/medhallway_2
+	base_icon_state = "medhallway_2"
+	icon_state = "medhallway_2"
+
+/turf/open/floor/deadspace/med/hallway_corners
+	base_icon_state = "hallway_corners"
+	icon_state = "hallway_corners"
+
+/turf/open/floor/deadspace/med/medsolo
+	base_icon_state = "medsolo"
+	icon_state = "medsolo"
+
+/turf/open/floor/deadspace/med/l_medside
+	base_icon_state = "l_medside"
+	icon_state = "l_medside"
+
+/turf/open/floor/deadspace/med/r_medside
+	base_icon_state = "r_medside"
+	icon_state = "r_medside"
+
+/turf/open/floor/deadspace/med/med_plating
+	base_icon_state = "med_plating"
+	icon_state = "med_plating"
+
+/turf/open/floor/deadspace/med/hallway_small
+	base_icon_state = "hallway_small"
+	icon_state = "hallway_small"
+
+/turf/open/floor/deadspace/med/h_hallway_small
+	base_icon_state = "h_hallway_small"
+	icon_state = "h_hallway_small"
+
+/turf/open/floor/deadspace/med/white_medsolo
+	base_icon_state = "white_medsolo"
+	icon_state = "white_medsolo"
+
+/turf/open/floor/deadspace/med/triage_corners
+	base_icon_state = "triage_corners"
+	icon_state = "triage_corners"
+
+/turf/open/floor/deadspace/med/triage
+	base_icon_state = "triage"
+	icon_state = "triage"

@@ -4718,6 +4718,8 @@
 #include "deadspace\code\game\objects\structures\doors.dm"
 #include "deadspace\code\game\objects\structures\obstacles.dm"
 #include "deadspace\code\game\objects\structures\showcase.dm"
+#include "deadspace\code\game\objects\structures\bed_chairs\chairs.dm"
+#include "deadspace\code\game\objects\structures\bed_chairs\sofa.dm"
 #include "deadspace\code\game\objects\structures\crates_lockers\closets\crates\large.dm"
 #include "deadspace\code\game\objects\structures\crates_lockers\closets\secure\cargo.dm"
 #include "deadspace\code\game\objects\structures\crates_lockers\closets\secure\engineering.dm"

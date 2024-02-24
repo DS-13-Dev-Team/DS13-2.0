@@ -37,7 +37,7 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/forged_rig
+/obj/item/mod/control/pre_equipped/ds/forged
 	theme = /datum/mod_theme/deadspace/forged_rig
 	initial_modules = list(
 		/obj/item/mod/module/storage,

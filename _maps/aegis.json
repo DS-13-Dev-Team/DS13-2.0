@@ -46,9 +46,6 @@
     "minetype": "none",
     "blacklist_file": "lavaruinblacklist.txt",
     "job_changes": {
-		"assistant": {
-			"total_positions": 0
-		},
 		"shaft_miner": {
 			"total_positions": 100
 		},

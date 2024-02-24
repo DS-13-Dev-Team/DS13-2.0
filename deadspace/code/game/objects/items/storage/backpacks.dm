@@ -22,3 +22,7 @@
 	icon_state = "ds_civilian_rig_slim"
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	slowdown = 1
+
+/obj/item/storage/backpack/rig/inap
+	desc = "Resource Integrated Inap Gear."
+	icon_state = "inaprig"
