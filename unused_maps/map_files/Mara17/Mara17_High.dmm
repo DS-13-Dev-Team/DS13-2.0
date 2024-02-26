@@ -2551,7 +2551,6 @@
 /area/mara17/interior/upper/cargo)
 "ie" = (
 /obj/machinery/computer/apc_control,
-/obj/item/paper/fluff/smartwire_rant,
 /obj/structure/cable,
 /turf/open/floor/deadspace/grater,
 /area/mara17/interior/upper/enginieering)
