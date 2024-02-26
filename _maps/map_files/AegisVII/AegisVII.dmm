@@ -3898,6 +3898,7 @@
 "cbS" = (
 /obj/structure/closet/crate,
 /obj/item/stack/sheet/mineral/plasma/thirty,
+/obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "ccb" = (
@@ -28399,6 +28400,10 @@
 /obj/structure/railing,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/aegis/surface)
+"pIk" = (
+/obj/item/wallframe/apc,
+/turf/open/floor/plating,
+/area/station/maintenance/fore/lesser)
 "pIx" = (
 /turf/open/floor/deadspace/random/maint_left{
 	dir = 4
@@ -40371,7 +40376,6 @@
 /turf/open/floor/deadspace/random/maint_left,
 /area/station/security/courtroom)
 "wEi" = (
-/obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/closet/crate/freezer,
 /obj/structure/cable/smart_cable/color/yellow,
 /turf/open/floor/deadspace/grater,
@@ -52002,7 +52006,7 @@ lSX
 uUN
 cbS
 hWb
-ciq
+vIP
 cIP
 dlO
 byK
@@ -52158,8 +52162,8 @@ axf
 lSX
 byK
 trx
-ciq
-ciq
+vIP
+vIP
 vIP
 vIP
 byK
@@ -60643,7 +60647,7 @@ xqJ
 wva
 vLA
 dtr
-xqJ
+pIk
 xqJ
 ygU
 wva
