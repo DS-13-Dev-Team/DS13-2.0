@@ -489,6 +489,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "9"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "10"
+	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/sorting)
 "amN" = (
@@ -2273,6 +2276,9 @@
 	},
 /obj/structure/cable/yellow{
 	icon_state = "3"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1"
 	},
 /turf/open/misc/asteroid,
 /area/station/solars/port/fore)
@@ -5012,6 +5018,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+/obj/structure/cable/white{
+	icon_state = "6"
+	},
 /turf/open/floor/carpet/royalblack,
 /area/station/service/chapel/monastery)
 "cxx" = (
@@ -6918,6 +6927,9 @@
 /obj/structure/ladder/invincible,
 /obj/structure/disposalpipe/trunk/multiz{
 	dir = 1
+	},
+/obj/structure/cable/white{
+	icon_state = "9"
 	},
 /turf/open/floor/deadspace/mono,
 /area/station/service/chapel/monastery)
@@ -9126,6 +9138,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable/yellow{
 	icon_state = "3"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "9"
 	},
 /turf/open/floor/iron/white,
 /area/station/service/kitchen)
@@ -13009,6 +13024,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "6"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4"
+	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/hallway/secondary/service)
 "gKQ" = (
@@ -14564,7 +14582,9 @@
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/turf_decal/bot,
-/obj/structure/cable/smart_cable/color/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "4"
+	},
 /turf/open/floor/iron/white,
 /area/station/service/kitchen)
 "hxF" = (
@@ -16156,7 +16176,7 @@
 "ilk" = (
 /obj/machinery/power/smes,
 /obj/structure/cable/white{
-	icon_state = "16"
+	icon_state = "4"
 	},
 /turf/open/floor/deadspace/random/maint_left,
 /area/station/service/chapel/monastery)
@@ -16314,6 +16334,9 @@
 /area/station/security/brig)
 "ioE" = (
 /obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable/yellow{
+	icon_state = "2"
+	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/eva)
 "ipf" = (
@@ -18903,8 +18926,6 @@
 /area/station/cargo/warehouse/upper)
 "jwt" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable/yellow{
 	icon_state = "3"
 	},
@@ -19398,6 +19419,10 @@
 	c_tag = "Aft Starboard Solar Maintenance"
 	},
 /obj/structure/chair/stool/directional/south,
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = -7
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/solars/port/fore)
 "jKh" = (
@@ -20624,6 +20649,17 @@
 	},
 /turf/open/floor/plating,
 /area/station/cargo/qm)
+"kqi" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable/yellow{
+	icon_state = "12"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "9"
+	},
+/turf/open/floor/deadspace/random/rectangles,
+/area/mine/eva)
 "kqt" = (
 /obj/structure/table,
 /obj/item/storage/bag/sheetsnatcher,
@@ -21016,6 +21052,9 @@
 /area/station/security/brig)
 "kCt" = (
 /obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/cable/yellow{
+	icon_state = "1"
+	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/sorting)
 "kCF" = (
@@ -21355,8 +21394,6 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/medical/surgery/theatre)
 "kLy" = (
-/obj/structure/table/wood,
-/obj/machinery/telephone/cargo,
 /obj/machinery/requests_console/directional/east{
 	announcementConsole = 1;
 	department = "Quartermaster's Desk";
@@ -21368,6 +21405,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "1"
 	},
+/obj/structure/table/wood,
+/obj/machinery/telephone/cargo,
 /turf/open/floor/wood,
 /area/station/cargo/qm)
 "kLI" = (
@@ -22847,6 +22886,10 @@
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos)
+"lvH" = (
+/obj/item/electronics/apc,
+/turf/open/floor/deadspace/grater,
+/area/mine/hydroponics)
 "lwb" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/effect/spawner/random/trash,
@@ -24501,6 +24544,12 @@
 	},
 /turf/open/floor/plating,
 /area/station/engineering/engine_smes)
+"moK" = (
+/obj/structure/cable/yellow{
+	icon_state = "10"
+	},
+/turf/open/floor/deadspace/random/maint_center,
+/area/station/service/chapel/monastery)
 "moS" = (
 /obj/structure/table/wood/fancy/cyan,
 /obj/item/folder{
@@ -26741,6 +26790,10 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
+"nzv" = (
+/obj/item/stock_parts/cell/high,
+/turf/open/floor/deadspace/grater,
+/area/mine/hydroponics)
 "nzy" = (
 /obj/machinery/atmospherics/components/unary/heat_exchanger{
 	dir = 4
@@ -27904,14 +27957,9 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/main)
 "odB" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/white{
-	icon_state = "132"
-	},
-/turf/open/floor/carpet/royalblack,
-/area/station/service/chapel/monastery)
+/obj/item/wallframe/apc,
+/turf/open/floor/deadspace/grater,
+/area/mine/hydroponics)
 "odK" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood,
@@ -28803,9 +28851,11 @@
 /turf/open/misc/asteroid,
 /area/aegis/surface)
 "ozr" = (
-/obj/machinery/power/apc/auto_name/directional/south,
-/turf/open/floor/deadspace/grater,
-/area/mine/hydroponics)
+/obj/structure/cable/yellow{
+	icon_state = "3"
+	},
+/turf/open/floor/deadspace/random/rectangles,
+/area/mine/eva)
 "ozw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -29122,6 +29172,9 @@
 /obj/item/stock_parts/cell,
 /obj/item/stack/cable_coil,
 /obj/item/assembly/igniter,
+/obj/structure/cable/yellow{
+	icon_state = "8"
+	},
 /turf/open/floor/iron/white,
 /area/station/science/lobby)
 "oJI" = (
@@ -29626,10 +29679,10 @@
 /area/aegis/mining)
 "oXp" = (
 /obj/machinery/light/small/directional/east,
-/obj/machinery/power/smes,
 /obj/structure/cable/yellow{
 	icon_state = "8"
 	},
+/obj/machinery/power/smes,
 /turf/open/floor/plating,
 /area/station/maintenance/solars/port/fore)
 "oXu" = (
@@ -29688,6 +29741,9 @@
 "oYE" = (
 /obj/structure/cable/yellow{
 	icon_state = "6"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "10"
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/solars/port/fore)
@@ -31984,6 +32040,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "3"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "5"
+	},
 /turf/open/floor/iron/white,
 /area/station/science/lobby)
 "qgt" = (
@@ -33280,6 +33339,10 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/lobby)
+"qNQ" = (
+/obj/item/stack/cable_coil/cut,
+/turf/open/misc/asteroid,
+/area/aegis/surface)
 "qOa" = (
 /obj/structure/table,
 /turf/open/floor/deadspace/bathroom,
@@ -34692,10 +34755,10 @@
 "rBk" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/yellow{
-	icon_state = "40"
+	icon_state = "12"
 	},
 /obj/structure/cable/white{
-	icon_state = "144"
+	icon_state = "3"
 	},
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/service/chapel/monastery)
@@ -36209,7 +36272,7 @@
 /obj/machinery/light/small/maintenance/directional/south,
 /obj/structure/cable/multiz,
 /obj/structure/cable/yellow{
-	icon_state = "64"
+	icon_state = "1"
 	},
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/service/chapel/monastery)
@@ -40681,6 +40744,10 @@
 	},
 /turf/open/floor/deadspace/random/maint_left,
 /area/station/service/chapel/monastery)
+"uQc" = (
+/obj/item/stack/cable_coil/cut,
+/turf/open/misc/asteroid,
+/area/station/solars/port/fore)
 "uQf" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -43986,10 +44053,11 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/mine/storage)
 "wAN" = (
+/obj/structure/cable/yellow{
+	icon_state = "4"
+	},
 /obj/machinery/power/solar_control{
-	dir = 1;
-	id = "starboardsolar";
-	name = "Starboard Quarter Solar Control"
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/solars/port/fore)
@@ -55475,8 +55543,8 @@ uoP
 trm
 mNO
 mNO
-odB
-trm
+kWh
+moK
 ssE
 jxc
 jgq
@@ -93601,8 +93669,8 @@ jBo
 oYE
 tLC
 ruE
+ruE
 ieM
-rqy
 rqy
 rqy
 eAg
@@ -93757,7 +93825,7 @@ aQr
 oXp
 cuI
 sIt
-rqy
+qNQ
 rqy
 rqy
 rqy
@@ -94700,7 +94768,7 @@ xdC
 qxy
 xdC
 xdC
-cWn
+uQc
 cWn
 pjz
 pjz
@@ -95327,7 +95395,7 @@ rqy
 rqy
 rqy
 rqy
-rqy
+qNQ
 rqy
 iHy
 skX
@@ -95800,7 +95868,7 @@ pPU
 pPU
 bPy
 rqy
-rqy
+qNQ
 rqy
 rqy
 rqy
@@ -95960,7 +96028,7 @@ rqy
 rqy
 rqy
 rqy
-rqy
+qNQ
 qxy
 qbl
 akZ
@@ -97056,7 +97124,7 @@ qxy
 xdC
 xdC
 cWn
-cWn
+uQc
 pjz
 pjz
 qxy
@@ -99095,7 +99163,7 @@ vmk
 vmk
 vmk
 qVP
-qVP
+rqy
 rfo
 rfo
 qVP
@@ -99401,12 +99469,12 @@ fnQ
 vNo
 ekT
 knS
-vNo
+lvH
 vNo
 rpH
 vNo
 vNo
-ozr
+vNo
 vmk
 qVP
 rqy
@@ -99562,7 +99630,7 @@ vNo
 lqL
 vNo
 vNo
-vNo
+odB
 vNo
 vmk
 koO
@@ -100031,7 +100099,7 @@ fnQ
 knS
 vNo
 vNo
-vNo
+nzv
 beo
 xZO
 lPd
@@ -103236,9 +103304,9 @@ qVP
 qVP
 cEn
 ioE
-dOB
-dOB
-wcc
+ozr
+ozr
+kqi
 dOB
 cEn
 jIo
