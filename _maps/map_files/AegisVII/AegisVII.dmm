@@ -10765,7 +10765,6 @@
 	},
 /area/station/hallway/primary/fore)
 "fWv" = (
-/obj/machinery/computer/piratepad_control/civilian,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/lobby)
 "fXn" = (
@@ -20569,7 +20568,6 @@
 /turf/open/floor/deadspace/mono,
 /area/station/medical/exam_room)
 "liT" = (
-/obj/machinery/piratepad/civilian,
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/lobby)
@@ -23442,7 +23440,6 @@
 /area/mine/production)
 "mRr" = (
 /obj/structure/table,
-/obj/item/detective_scanner,
 /turf/open/floor/deadspace/bathroom,
 /area/station/medical/morgue)
 "mRL" = (
@@ -38931,10 +38928,6 @@
 /obj/item/stack/spacecash/c20{
 	pixel_x = -2;
 	pixel_y = 4
-	},
-/obj/item/stack/spacecash/c50{
-	pixel_x = 2;
-	pixel_y = 7
 	},
 /turf/open/floor/carpet/red,
 /area/station/commons/lounge)
