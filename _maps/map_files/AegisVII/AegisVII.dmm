@@ -1327,6 +1327,7 @@
 /obj/structure/table/wood,
 /obj/effect/spawner/random/entertainment/cigarette_pack,
 /obj/effect/spawner/random/entertainment/lighter,
+/obj/item/storage/briefcase/crimekit,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "aLW" = (
@@ -6705,12 +6706,12 @@
 /turf/open/floor/deadspace/random/maint_center,
 /area/mine/storage)
 "dIM" = (
-/obj/item/camera_film,
-/obj/item/camera_film,
-/obj/item/camera_film,
 /obj/structure/table/wood,
 /obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/item/paper_bin,
+/obj/item/folder/red,
+/obj/item/stamp/law,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "dIR" = (
@@ -10037,11 +10038,12 @@
 /turf/open/floor/deadspace/mono,
 /area/station/hallway/primary/port)
 "fzN" = (
-/obj/item/paper_bin,
 /obj/structure/table/wood,
 /obj/structure/cable/smart_cable/color/yellow,
-/obj/item/stamp/law,
-/obj/item/folder/red,
+/obj/machinery/computer/security/wooden_tv{
+	pixel_x = 3;
+	pixel_y = 2
+	},
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "fAI" = (
@@ -10764,9 +10766,6 @@
 	dir = 8
 	},
 /area/station/hallway/primary/fore)
-"fWv" = (
-/turf/open/floor/deadspace/random/rectangles,
-/area/station/cargo/lobby)
 "fXn" = (
 /obj/structure/chair/office,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -11325,7 +11324,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable/smart_cable/color/yellow,
 /obj/effect/turf_decal/box,
-/obj/structure/closet/secure_closet/ds/detective,
+/obj/machinery/microscope,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "goK" = (
@@ -17245,6 +17244,9 @@
 /obj/item/hand_labeler,
 /obj/item/camera/detective,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/camera_film,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "jth" = (
@@ -22626,7 +22628,8 @@
 /area/station/service/janitor)
 "msH" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/wiki/detective,
+/obj/item/storage/box/fingerprints,
+/obj/item/storage/evidence,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "msK" = (
@@ -22727,6 +22730,7 @@
 "mvL" = (
 /obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/closet/secure_closet/ds/detective,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "mvU" = (
@@ -23438,10 +23442,6 @@
 	dir = 8
 	},
 /area/mine/production)
-"mRr" = (
-/obj/structure/table,
-/turf/open/floor/deadspace/bathroom,
-/area/station/medical/morgue)
 "mRL" = (
 /obj/machinery/sleeper{
 	icon_state = "sleeper";
@@ -23991,6 +23991,7 @@
 "nhO" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/gloves,
+/obj/item/book/manual/wiki/detective,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "nhU" = (
@@ -27968,12 +27969,8 @@
 	id = "forensic_shutters";
 	name = "Privacy Shutters"
 	},
-/obj/structure/table/wood,
-/obj/machinery/computer/security/wooden_tv{
-	pixel_x = 3;
-	pixel_y = 2
-	},
 /obj/structure/cable/smart_cable/color/yellow,
+/obj/machinery/dna_analyzer,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "pvL" = (
@@ -35660,8 +35657,8 @@
 /area/station/cargo)
 "tUg" = (
 /obj/item/storage/box/evidence,
-/obj/item/storage/box/evidence,
 /obj/structure/table/wood,
+/obj/item/storage/box/swabs,
 /turf/open/floor/deadspace/mono,
 /area/station/security/detectives_office)
 "tUB" = (
@@ -36980,7 +36977,6 @@
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server)
 "uGc" = (
-/obj/structure/table/reinforced,
 /obj/structure/table/wood,
 /obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/power/data_terminal,
@@ -55502,7 +55498,7 @@ qWI
 dIS
 pwR
 pwR
-mRr
+qOa
 qWI
 qVP
 qVP
@@ -92055,7 +92051,7 @@ uMl
 oyI
 hZj
 ayy
-fWv
+emH
 emH
 qDb
 iae
