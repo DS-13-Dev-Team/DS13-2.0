@@ -59,10 +59,10 @@
 	else
 		. += span_warning("It has no power cell!")
 
-/obj/item/defibrillator/fire_act(exposed_temperature, exposed_volume)
+/obj/item/defibrillator/fire_act(exposed_temperature, exposed_volume, turf/adjacent)
 	. = ..()
 	if(paddles?.loc == src)
-		paddles.fire_act(exposed_temperature, exposed_volume)
+		paddles.fire_act(exposed_temperature, exposed_volume, adjacent)
 
 /obj/item/defibrillator/extinguish()
 	. = ..()
@@ -360,10 +360,10 @@
 	. = ..()
 	check_range()
 
-/obj/item/shockpaddles/fire_act(exposed_temperature, exposed_volume)
+/obj/item/shockpaddles/fire_act(exposed_temperature, exposed_volume, turf/adjacent)
 	. = ..()
 	if((req_defib && defib) && loc != defib)
-		defib.fire_act(exposed_temperature, exposed_volume)
+		defib.fire_act(exposed_temperature, exposed_volume, adjacent)
 
 /obj/item/shockpaddles/proc/check_range()
 	SIGNAL_HANDLER
@@ -474,7 +474,7 @@
 		return
 
 	if(H.stat != DEAD)
-		H.notify_ghost_cloning("Your heart is being defibrillated!")
+		H.notify_ghost_revival("Your heart is being defibrillated!")
 		H.grab_ghost() // Shove them back in their body.
 
 	do_help(H, user)
