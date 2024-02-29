@@ -28,7 +28,7 @@
 	limb_id = SPECIES_NECROMORPH_LEAPER
 	icon_static = 'deadspace/icons/necromorphs/leaper.dmi'
 	icon_state = "l_arm"
-	bodypart_flags = BP_NO_PAIN | BP_IS_MOVEMENT_LIMB | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_IS_GRABBY_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
 	max_damage = 50
@@ -42,7 +42,7 @@
 	limb_id = SPECIES_NECROMORPH_LEAPER
 	icon_static = 'deadspace/icons/necromorphs/leaper.dmi'
 	icon_state = "r_arm"
-	bodypart_flags = BP_NO_PAIN | BP_IS_MOVEMENT_LIMB | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_IS_GRABBY_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	attack_verb_continuous = list("claws", "stomps")
 	attack_verb_simple = list("claws", "stomp")
 	max_damage = 50
@@ -61,7 +61,7 @@
 	icon_state = "r_leg" //Bodyparts are picky about dmi state names not lining up with the body_zone
 	body_zone = BODY_ZONE_R_LEG
 	plaintext_zone = "right tail"
-	bodypart_flags = BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED
+	bodypart_flags = (BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	attack_verb_continuous = list("stabs", "slices")
 	attack_verb_simple = list("stabs", "slices")
 	max_damage = 35
@@ -82,7 +82,7 @@
 	icon_state = "l_leg" //Bodyparts are picky about dmi state names not lining up with the body_zone
 	body_zone = BODY_ZONE_L_LEG
 	plaintext_zone = "left tail"
-	bodypart_flags = BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED
+	bodypart_flags = (BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	attack_verb_continuous = list("stabs", "slices")
 	attack_verb_simple = list("stabs", "slices")
 	max_damage = 35

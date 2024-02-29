@@ -128,7 +128,6 @@
 	new /obj/item/mod/control/pre_equipped/ds/marksman(src)
 	new /obj/item/storage/box/evidence(src)
 	new /obj/item/radio/headset/headset_sec(src)
-	new /obj/item/detective_scanner(src)
 	new /obj/item/storage/belt/holster/ds/security/full(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/holosign_creator/security(src)

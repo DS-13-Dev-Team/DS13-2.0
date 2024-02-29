@@ -3,7 +3,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_CHEST & ~(BP_HAS_BONES|BP_HAS_ARTERY)
+	bodypart_flags = (BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "chest"
 	interaction_flags_item = NONE //So you don't pick it up
@@ -24,7 +24,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_HEAD & ~(BP_HAS_BONES|BP_HAS_ARTERY)
+	bodypart_flags = (BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "head"
 	interaction_flags_item = NONE
@@ -57,7 +57,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_NO_PAIN | BP_IS_GRABBY_LIMB | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_arm"
 	interaction_flags_item = NONE
@@ -90,7 +90,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_NO_PAIN | BP_IS_GRABBY_LIMB | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_arm"
 	interaction_flags_item = NONE
@@ -123,7 +123,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_LEGS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "l_leg"
 	interaction_flags_item = NONE
@@ -156,7 +156,7 @@
 	bodytype = BODYTYPE_NECROMORPH|BODYTYPE_ORGANIC
 	limb_id = SPECIES_NECROMORPH
 	should_draw_greyscale = FALSE
-	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_LEGS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/base_necromorph.dmi'
 	icon_state = "r_leg"
 	interaction_flags_item = NONE
