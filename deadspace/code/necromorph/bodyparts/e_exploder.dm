@@ -51,7 +51,6 @@
 	desc = "Two legs fused together to form a thick, meaty stalk."
 	plaintext_zone = "fused legs"
 	limb_id = SPECIES_NECROMORPH_EXPLODER_ENHANCED
-	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_LEGS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
 	dismemberable = FALSE
 	can_be_disabled = TRUE
 	disable_threshold = 1

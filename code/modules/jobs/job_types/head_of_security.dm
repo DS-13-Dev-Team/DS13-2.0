@@ -63,7 +63,7 @@
 	uniform = /obj/item/clothing/under/rank/security/ds_cseco
 	suit = /obj/item/clothing/suit/toggle/cseco
 	backpack_contents = list(
-		/obj/item/evidencebag = 1,
+		/obj/item/storage/evidencebag = 1,
 		)
 	belt = /obj/item/modular_computer/tablet/pda/heads/hos
 	ears = /obj/item/radio/headset/heads/hos/alt

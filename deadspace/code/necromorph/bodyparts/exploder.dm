@@ -25,7 +25,7 @@
 /obj/item/bodypart/arm/left/necromorph/exploder
 	name = "yellow pustule"
 	limb_id = SPECIES_NECROMORPH_EXPLODER
-	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "l_arm"
 	interaction_flags_item = INTERACT_ITEM_ATTACK_HAND_PICKUP //We want to be able to pick up and throw the pustle
@@ -69,7 +69,7 @@
 /obj/item/bodypart/arm/right/necromorph/exploder
 	name = "right arm"
 	limb_id = SPECIES_NECROMORPH_EXPLODER
-	bodypart_flags = BP_IS_MOVEMENT_LIMB | BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_IS_GRABBY_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "r_arm"
 	attack_verb_continuous = list("kicks", "stomps")
@@ -85,7 +85,7 @@
 	desc = "Two legs fused together to form a thick, meaty stalk."
 	plaintext_zone = "fused legs"
 	limb_id = SPECIES_NECROMORPH_EXPLODER
-	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_LEGS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	dismemberable = FALSE //Technically this is actually a part of the chest, so we don't want this to come off
 	can_be_disabled = TRUE //We do however, want humans to be able to immobilize the exploder
 	disable_threshold = 1
@@ -100,7 +100,7 @@
 	desc = "The fleshy remains of a leg that was fused together. This is useless."
 	plaintext_zone = "leg nub"
 	limb_id = SPECIES_NECROMORPH_EXPLODER
-	bodypart_flags = BP_NO_PAIN //We don't want this to have anything, as it's just a nub to hide the "X IS MISSING" examine text
+	bodypart_flags = (BP_NO_PAIN) //We don't want this to have anything, as it's just a nub to hide the "X IS MISSING" examine text
 	dismemberable = FALSE
 	can_be_disabled = FALSE
 	is_pseudopart = TRUE //This will prevent the limb from having standard functions
