@@ -409,7 +409,6 @@
 
 	if(human_user.dna.species.grab(human_user, src, human_user.mind.martial_art, params))
 		human_user.changeNext_move(CLICK_CD_MELEE)
-		human_user.animate_interact(src, INTERACT_GRAB)
 		return TRUE
 
 	return ..()
@@ -531,6 +530,10 @@
 	plane = CLICKCATCHER_PLANE
 	mouse_opacity = MOUSE_OPACITY_OPAQUE
 	screen_loc = "CENTER"
+
+/atom/movable/screen/click_catcher/can_usr_use(mob/user)
+	return TRUE // Owned by a client, not a mob. It's all safe anyways.
+
 
 #define MAX_SAFE_BYOND_ICON_SCALE_TILES (MAX_SAFE_BYOND_ICON_SCALE_PX / world.icon_size)
 #define MAX_SAFE_BYOND_ICON_SCALE_PX (33 * 32) //Not using world.icon_size on purpose.

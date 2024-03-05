@@ -64,7 +64,7 @@
 	LAZYNULL(papers)
 	update_appearance()
 
-/obj/item/paper_bin/fire_act(exposed_temperature, exposed_volume)
+/obj/item/paper_bin/fire_act(exposed_temperature, exposed_volume, turf/adjacent)
 	if(LAZYLEN(papers))
 		LAZYNULL(papers)
 		update_appearance()
@@ -191,7 +191,6 @@
 /obj/item/paper_bin/bundlenatural/Initialize(mapload)
 	binding_cable = new /obj/item/stack/cable_coil(src, 2)
 	binding_cable.color = COLOR_ORANGE_BROWN
-	binding_cable.cable_color = "brown"
 	binding_cable.desc += " Non-natural."
 	return ..()
 
@@ -213,7 +212,7 @@
 	dump_contents()
 	return ..()
 
-/obj/item/paper_bin/bundlenatural/fire_act(exposed_temperature, exposed_volume)
+/obj/item/paper_bin/bundlenatural/fire_act(exposed_temperature, exposed_volume, turf/adjacent)
 	qdel(src)
 
 /obj/item/paper_bin/bundlenatural/attackby(obj/item/W, mob/user)

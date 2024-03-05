@@ -71,6 +71,15 @@
 	/// Signal controlling this necromorph at the moment
 	var/mob/camera/marker_signal/controlling
 
+///Blood of the necro, pretty vile stuff.
+/datum/blood/necromorph //TODO : Make necro blood give necro toxin status on injection
+	name = "X"
+	color = rgb(94, 44, 4)
+
+//This is where necros get their blood type
+/datum/species/necromorph/get_random_blood_type()
+	return /datum/blood/necromorph
+
 /obj/item/food/meat/slab/human/mutant/necro
 //	icon_state = "necromeat"
 	desc = "Eating it doesn't sound like a good idea."

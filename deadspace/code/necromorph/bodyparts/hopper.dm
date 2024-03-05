@@ -24,7 +24,7 @@
 /obj/item/bodypart/leg/left/necromorph/leaper/hopper
 	name = "left arm"
 	limb_id = SPECIES_NECROMORPH_LEAPER_HOPPER
-	bodypart_flags = BP_NO_PAIN | BP_IS_MOVEMENT_LIMB | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_IS_GRABBY_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/leaper_hopper.dmi'
 	icon_state = "l_leg"
 	body_part = LEG_LEFT
@@ -37,7 +37,7 @@
 /obj/item/bodypart/leg/right/necromorph/leaper/hopper
 	name = "right arm"
 	limb_id = SPECIES_NECROMORPH_LEAPER_HOPPER
-	bodypart_flags = BP_NO_PAIN | BP_IS_MOVEMENT_LIMB | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_IS_GRABBY_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/leaper_hopper.dmi'
 	icon_state = "r_leg"
 	max_damage = 25
@@ -49,7 +49,7 @@
 /obj/item/bodypart/arm/right/necromorph/leaper/hopper
 	name = "tail"
 	limb_id = SPECIES_NECROMORPH_LEAPER_HOPPER
-	bodypart_flags = BP_NO_PAIN | STOCK_BP_FLAGS_ARMS & ~(BP_HAS_BONES|BP_HAS_TENDON|BP_HAS_ARTERY)
+	bodypart_flags = (BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/leaper_hopper.dmi'
 	icon_state = "r_arm"
 	max_damage = 10
@@ -60,7 +60,7 @@
 	name = "malformed tail"
 	desc = "A tail that appears to not have grown correctly, it appears useless."
 	limb_id = SPECIES_NECROMORPH_LEAPER_HOPPER
-	bodypart_flags = BP_NO_PAIN
+	bodypart_flags = (BP_NO_PAIN)
 	dismemberable = FALSE
 	icon_static = null
 	icon_state = null

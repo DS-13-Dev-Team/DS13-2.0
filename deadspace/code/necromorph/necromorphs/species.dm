@@ -4,7 +4,7 @@
 	id = SPECIES_NECROMORPH
 	//There is no way to become it. Period.
 	changesource_flags = NONE
-	exotic_bloodtype = "X"
+	//For blood please go to necro_defines
 	sexes = FALSE
 	bodytype = BODYTYPE_HUMANOID|BODYTYPE_ORGANIC|BODYTYPE_NECROMORPH
 
