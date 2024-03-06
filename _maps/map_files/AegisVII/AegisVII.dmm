@@ -2638,6 +2638,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "5"
 	},
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/hallway/primary/central)
 "boB" = (
@@ -3296,6 +3299,9 @@
 /area/station/service/chapel/monastery)
 "bET" = (
 /obj/effect/decal/cleanable/generic,
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/hallway/primary/central)
 "bEY" = (
@@ -5852,6 +5858,15 @@
 "cRu" = (
 /turf/closed/wall/r_wall,
 /area/station/medical/medbay/aft)
+"cRC" = (
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/turf/open/floor/deadspace/random/maint_right,
+/area/station/hallway/primary/central)
 "cRV" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -11714,8 +11729,11 @@
 	},
 /area/station/hallway/primary/fore)
 "fWv" = (
-/turf/open/floor/deadspace/random/rectangles,
-/area/station/cargo/lobby)
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/central)
 "fXn" = (
 /obj/structure/chair/office,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -14622,6 +14640,9 @@
 /turf/open/floor/iron/white,
 /area/station/medical/surgery)
 "hyN" = (
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 6
 	},
@@ -25619,8 +25640,11 @@
 	},
 /area/mine/production)
 "mRr" = (
-/turf/open/floor/deadspace/bathroom,
-/area/station/medical/morgue)
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/turf/open/floor/iron/norn,
+/area/station/hallway/primary/central)
 "mRL" = (
 /obj/machinery/sleeper{
 	icon_state = "sleeper";
@@ -27704,6 +27728,15 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/security/courtroom)
+"nWe" = (
+/obj/effect/floor_decal/ds/spline/fancy/wood{
+	dir = 8
+	},
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/turf/open/floor/carpet/red,
+/area/station/service/chapel)
 "nWI" = (
 /obj/effect/floor_decal/ds/spline/fancy/wood{
 	dir = 4
@@ -31633,6 +31666,9 @@
 /obj/structure/cable/smart_cable/color/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
 /turf/open/floor/iron/dark/corner,
 /area/station/hallway/primary/central)
 "pWp" = (
@@ -36276,6 +36312,13 @@
 	},
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/service/chapel/monastery)
+"ssR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/turf/open/floor/iron/norn,
+/area/station/hallway/primary/central)
 "ssV" = (
 /turf/open/floor/plating,
 /area/station/science/robotics/lab)
@@ -37803,6 +37846,12 @@
 /obj/structure/window/reinforced/spawner/west,
 /turf/open/floor/grass,
 /area/station/hallway/primary/port)
+"tkj" = (
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/turf/open/floor/deadspace/random/maint_center,
+/area/station/hallway/primary/central)
 "tkF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -40503,6 +40552,18 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/solars/port/fore)
+"uGX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/smart_cable/color/yellow,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/turf/open/floor/iron/dark/side,
+/area/station/hallway/primary/central)
 "uHB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -40680,6 +40741,21 @@
 	},
 /turf/open/floor/iron/ported/lino,
 /area/station/service/chapel/monastery)
+"uNt" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable/yellow{
+	icon_state = "3"
+	},
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/turf/open/floor/deadspace/random/maint_right,
+/area/station/hallway/primary/central)
 "uNu" = (
 /obj/structure/tank_dispenser,
 /obj/machinery/light/directional/north,
@@ -45739,6 +45815,13 @@
 	},
 /turf/open/floor/stone,
 /area/aegis/surface)
+"xsd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/statue/gold/hop{
+	name = "statue of an Enigma"
+	},
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/central)
 "xse" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/purple/visible{
 	dir = 8
@@ -85077,10 +85160,10 @@ wpl
 lAe
 eoM
 cja
-wUC
+mRr
 pWn
 hyN
-czV
+fWv
 czV
 cZj
 nRa
@@ -85236,7 +85319,7 @@ eoM
 pkX
 sMm
 dtW
-czV
+fWv
 afl
 wUC
 cZj
@@ -85391,10 +85474,10 @@ wpl
 wpl
 eoM
 hje
-sMm
-dtW
-idZ
-wUC
+ssR
+uGX
+xsd
+mRr
 uYn
 ptX
 ugt
@@ -85542,7 +85625,7 @@ iCX
 ybU
 iCX
 ybU
-iCX
+nWe
 cnV
 iCX
 vQr
@@ -85705,10 +85788,10 @@ pRu
 xtR
 lrp
 bJz
-bJz
+tkj
 akR
 bJz
-bJz
+tkj
 hbv
 dBd
 vDX
@@ -85862,10 +85945,10 @@ aSD
 eKE
 crM
 xrC
-xrC
+uNt
 bok
 bET
-wEZ
+cRC
 mbl
 mop
 xMx
@@ -86019,10 +86102,10 @@ ioi
 wpl
 eoM
 wWt
-wUC
+mRr
 dtW
 czV
-wUC
+mRr
 azd
 leq
 iBJ
