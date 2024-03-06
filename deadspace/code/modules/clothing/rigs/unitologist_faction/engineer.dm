@@ -1,16 +1,14 @@
-/datum/mod_theme/deadspace/engineer_advanced_unitologist
+/datum/mod_theme/deadspace/advanced_engineer_unitologist
 	name = "advanced unitologist engineer"
 	desc = "Exclusive only to to the Unitologists who contributed over 400k Credits to the Church."
-	default_skin = "engineer_advanced_unitologist"
+	default_skin = "advanced_engineer_unitologist"
 	armor = list(BLUNT = 50, PUNCTURE = 40, SLASH = 50, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
-	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
-	siemens_coefficient = 0
 	complexity_max = 25
 
 	skins = list(
-		"engineer_advanced_unitologist" = list(
+		"advanced_engineer_unitologist" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
 				UNSEALED_CLOTHING = SNUG_FIT,
@@ -37,8 +35,8 @@
 		),
 	)
 
-/obj/item/mod/control/pre_equipped/ds/engineer_advanced_unitologist
-	theme = /datum/mod_theme/deadspace/engineer_advanced_unitologist
+/obj/item/mod/control/pre_equipped/ds/advanced_engineer_unitologist
+	theme = /datum/mod_theme/deadspace/advanced_engineer_unitologist
 	starting_frequency = MODLINK_FREQ_SYNDICATE
 	initial_modules = list(
 		/obj/item/mod/module/storage/syndicate,
