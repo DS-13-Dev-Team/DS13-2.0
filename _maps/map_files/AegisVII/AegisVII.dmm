@@ -18911,7 +18911,7 @@
 	},
 /obj/structure/displaycase/trophy{
 	desc = "A display case containing an unitologist engineering rig";
-	start_showpiece_type = /obj/item/mod/control/pre_equipped/ds/engineer_advanced_unitologist
+	start_showpiece_type = /obj/item/mod/control/pre_equipped/ds/advanced_engineer_unitologist
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/royalblue,
