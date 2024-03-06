@@ -343,16 +343,6 @@
 /obj/effect/spawner/random/trash/soap,
 /turf/open/floor/deadspace/bathroom,
 /area/mine/production)
-"akw" = (
-/obj/machinery/cryopod{
-	dir = 4
-	},
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable/yellow{
-	icon_state = "2"
-	},
-/turf/open/floor/iron/showroomfloor,
-/area/station/medical/cryo)
 "akB" = (
 /obj/machinery/light/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -4243,11 +4233,8 @@
 /obj/machinery/cryopod{
 	dir = 4
 	},
-/obj/structure/cable/yellow{
-	icon_state = "5"
-	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/medical/cryo)
+/area/station/security/brig/upper)
 "ccX" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -6929,7 +6916,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/medical/cryo)
+/area/station/security/brig/upper)
 "dAe" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -16372,11 +16359,8 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "iud" = (
-/obj/structure/cable/yellow{
-	icon_state = "10"
-	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/medical/cryo)
+/area/station/security/brig/upper)
 "iup" = (
 /turf/closed/wall,
 /area/station/command/heads_quarters/cmo)
@@ -22560,11 +22544,8 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Cryosleep Bay"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "3"
-	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/medical/cryo)
+/area/station/security/brig/upper)
 "loO" = (
 /obj/structure/rack,
 /obj/item/toy/plush/beeplushie,
@@ -38177,7 +38158,7 @@
 	pixel_y = 28
 	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/medical/cryo)
+/area/station/security/brig/upper)
 "tyX" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -116360,9 +116341,9 @@ kZg
 uSd
 rXE
 pyk
-akw
 ccN
-cFv
+ccN
+bnn
 xkv
 vPL
 wuT
@@ -116520,8 +116501,8 @@ pyk
 tyV
 iud
 loA
-idt
-vVU
+xQj
+wVE
 xQj
 grS
 grS
@@ -116676,7 +116657,7 @@ rXE
 pyk
 dzY
 dzY
-cFv
+bnn
 eDR
 wVE
 xQj
