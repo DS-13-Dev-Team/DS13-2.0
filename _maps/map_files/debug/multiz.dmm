@@ -1005,6 +1005,9 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron,
 /area/station/engineering/storage)
+"fi" = (
+/turf/closed/indestructible/rock,
+/area/aegis/surface)
 "fo" = (
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 8
@@ -32470,9 +32473,9 @@ dn
 cN
 jT
 dn
-dn
-dn
-dn
+fi
+fi
+fi
 Zv
 In
 jD
@@ -32727,9 +32730,9 @@ EF
 VB
 Hk
 dn
-dn
-dn
-dn
+fi
+fi
+fi
 dn
 sm
 Tf
@@ -32984,9 +32987,9 @@ dn
 dn
 dn
 dn
-dn
-dn
-dn
+fi
+fi
+fi
 qx
 CP
 Pm
@@ -33241,9 +33244,9 @@ dn
 dn
 dn
 dn
-dn
-dn
-dn
+fi
+fi
+fi
 dn
 dn
 dn
