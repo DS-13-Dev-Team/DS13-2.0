@@ -225,6 +225,7 @@
 	rand_min = 0
 
 /turf/open/floor/deadspace/med
+
 /turf/open/floor/deadspace/med/corner_exterior
 	base_icon_state = "corner_exterior"
 	icon_state = "corner_exterior"
@@ -242,8 +243,20 @@
 	icon_state = "medhallway_2"
 
 /turf/open/floor/deadspace/med/hallway_corners
-	base_icon_state = "hallway_corners"
-	icon_state = "hallway_corners"
+	base_icon_state = "medhallway_corners"
+	icon_state = "medhallway_corners"
+
+/turf/open/floor/deadspace/med/hallway_corners_2
+	base_icon_state = "medhallway_corners_2"
+	icon_state = "medhallway_corners_2"
+
+/turf/open/floor/deadspace/med/side_med_corners
+	base_icon_state = "side_med_corners"
+	icon_state = "side_med_corners"
+
+/turf/open/floor/deadspace/med/side_med
+	base_icon_state = "side_med"
+	icon_state = "side_med"
 
 /turf/open/floor/deadspace/med/medsolo
 	base_icon_state = "medsolo"
@@ -280,3 +293,15 @@
 /turf/open/floor/deadspace/med/triage
 	base_icon_state = "triage"
 	icon_state = "triage"
+
+/turf/open/floor/deadspace/med/triage_internalcorners
+	base_icon_state = "triage_internalcorners"
+	icon_state = "triage_internalcorners"
+
+/turf/open/floor/deadspace/med/triage_sides
+	base_icon_state = "triage_sides"
+	icon_state = "triage_sides"
+
+/turf/open/floor/deadspace/med/triage_white
+	base_icon_state = "triage_white"
+	icon_state = "triage_white"
