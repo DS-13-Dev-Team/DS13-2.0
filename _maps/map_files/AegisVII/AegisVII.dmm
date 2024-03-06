@@ -1541,7 +1541,6 @@
 /turf/open/floor/deadspace/med/medsolo,
 /area/station/medical/medbay/central)
 "aPd" = (
-/obj/machinery/light/directional/north,
 /obj/structure/railing,
 /turf/open/floor/deadspace/random/tech,
 /area/station/hallway/primary/central/aft)
@@ -2638,6 +2637,11 @@
 	},
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/hallway/primary/central)
+"bow" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/deadspace/med/triage_white,
+/area/station/medical/morgue)
 "boB" = (
 /obj/item/flashlight/lantern,
 /turf/open/floor/plating,
@@ -5177,6 +5181,13 @@
 	},
 /turf/open/floor/deadspace/med/medsolo,
 /area/station/medical/medbay/central)
+"cBn" = (
+/obj/structure/bodycontainer/morgue{
+	dir = 2
+	},
+/obj/machinery/airalarm/directional/north,
+/turf/open/floor/deadspace/med/white_medsolo,
+/area/station/medical/morgue)
 "cBD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -5811,12 +5822,11 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/atmos/storage/gas)
 "cSl" = (
-/obj/structure/bodycontainer/morgue{
-	dir = 1
+/obj/structure/chair/sofa/bench/left{
+	dir = 4
 	},
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/deadspace/med/white_medsolo,
-/area/station/medical/morgue)
+/turf/open/floor/deadspace/random/rectangles,
+/area/station/hallway/primary/central/aft)
 "cSt" = (
 /obj/structure/cable/yellow{
 	icon_state = "3"
@@ -8476,6 +8486,9 @@
 /turf/closed/wall/r_wall,
 /area/station/hallway/primary/central)
 "eoV" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
 /turf/open/floor/deadspace/med/triage_white,
 /area/station/medical/morgue)
 "eoW" = (
@@ -15260,10 +15273,9 @@
 /turf/open/floor/carpet/red,
 /area/station/medical/psychology)
 "hTB" = (
-/obj/structure/bodycontainer/morgue{
-	dir = 1
-	},
-/turf/open/floor/deadspace/med/white_medsolo,
+/obj/effect/turf_decal/box/white,
+/obj/structure/closet/body_bag,
+/turf/open/floor/deadspace/med/triage_white,
 /area/station/medical/morgue)
 "hTF" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
@@ -18398,11 +18410,11 @@
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/sorting)
 "jpm" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/deadspace/med/medhallway{
-	dir = 8
+/obj/structure/bodycontainer/morgue{
+	dir = 1
 	},
-/area/station/medical/medbay/aft)
+/turf/open/floor/deadspace/med/white_medsolo,
+/area/station/medical/morgue)
 "jpv" = (
 /obj/item/reagent_containers/glass/bucket,
 /obj/structure/mopbucket,
@@ -19848,6 +19860,11 @@
 "jZu" = (
 /turf/closed/wall/r_wall,
 /area/aegis/telecomms/high)
+"kaf" = (
+/turf/open/floor/deadspace/random/tech{
+	dir = 1
+	},
+/area/station/hallway/primary/central/aft)
 "kap" = (
 /obj/effect/spawner/random/trash/food_packaging,
 /turf/open/misc/asteroid,
@@ -24247,8 +24264,8 @@
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/medbay/central)
 "mob" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/box/white,
+/obj/effect/mapping_helpers/dead_body_placer,
 /turf/open/floor/deadspace/med/triage_white,
 /area/station/medical/morgue)
 "mod" = (
@@ -26844,8 +26861,9 @@
 /turf/open/floor/deadspace/mono,
 /area/station/commons/dorms/barracks/male)
 "nGm" = (
-/obj/effect/turf_decal/box/white,
-/obj/effect/mapping_helpers/dead_body_placer,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
 /turf/open/floor/deadspace/med/triage_white,
 /area/station/medical/morgue)
 "nGw" = (
@@ -28300,7 +28318,7 @@
 "ors" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/deadspace/med/medsolo,
+/turf/open/floor/deadspace/med/med_plating,
 /area/station/medical/medbay/aft)
 "ort" = (
 /obj/machinery/atmospherics/components/binary/circulator/cold,
@@ -28427,7 +28445,6 @@
 /turf/open/floor/engine,
 /area/station/command/heads_quarters/rd)
 "ovu" = (
-/obj/structure/closet/body_bag,
 /obj/effect/turf_decal/box/white,
 /turf/open/floor/deadspace/med/triage_white,
 /area/station/medical/morgue)
@@ -30699,10 +30716,11 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/service/janitor)
 "pDX" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 4
+/obj/structure/bodycontainer/morgue{
+	dir = 1
 	},
-/turf/open/floor/deadspace/med/triage_white,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/morgue)
 "pEb" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -32009,8 +32027,8 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "qli" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/med/triage_white,
 /area/station/medical/morgue)
 "qln" = (
@@ -33822,10 +33840,8 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/science/misc_lab)
 "rjP" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/deadspace/med/med_plating,
-/area/station/medical/medbay/aft)
+/turf/open/floor/deadspace/med/triage_white,
+/area/station/medical/morgue)
 "rkf" = (
 /obj/machinery/light/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -34537,11 +34553,10 @@
 /turf/open/floor/wood,
 /area/station/medical/psychology)
 "rCD" = (
-/obj/machinery/light/directional/west,
-/obj/structure/table,
-/turf/open/floor/deadspace/random/slides{
-	dir = 1
+/obj/structure/chair/sofa/bench/right{
+	dir = 4
 	},
+/turf/open/floor/deadspace/random/rectangles,
 /area/station/hallway/primary/central/aft)
 "rCI" = (
 /obj/structure/cable/yellow{
@@ -37296,10 +37311,11 @@
 /turf/open/floor/plating,
 /area/station/security/courtroom)
 "teA" = (
-/obj/effect/turf_decal/box/white,
-/obj/structure/closet/body_bag,
-/turf/open/floor/deadspace/med/triage_white,
-/area/station/medical/morgue)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/deadspace/med/medhallway{
+	dir = 8
+	},
+/area/station/medical/medbay/aft)
 "teC" = (
 /obj/machinery/iv_drip,
 /obj/machinery/iv_drip,
@@ -39338,6 +39354,7 @@
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/chemistry)
 "umi" = (
+/obj/structure/closet/body_bag,
 /obj/effect/turf_decal/box/white,
 /turf/open/floor/deadspace/med/triage_white,
 /area/station/medical/morgue)
@@ -42144,12 +42161,9 @@
 /turf/open/floor/plating,
 /area/station/service/hydroponics)
 "vJm" = (
-/obj/structure/bodycontainer/morgue{
-	dir = 2
-	},
-/obj/machinery/airalarm/directional/north,
-/turf/open/floor/deadspace/med/white_medsolo,
-/area/station/medical/morgue)
+/obj/machinery/light/directional/north,
+/turf/open/floor/deadspace/random/tech,
+/area/station/hallway/primary/central/aft)
 "vJD" = (
 /obj/machinery/door/airlock/medical{
 	name = "Medical Storage";
@@ -46658,11 +46672,10 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/service/hydroponics)
 "ycZ" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
-	dir = 8
-	},
-/turf/open/floor/deadspace/med/triage_white,
-/area/station/medical/morgue)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/deadspace/med/medsolo,
+/area/station/medical/medbay/aft)
 "ydh" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/deadspace/grater,
@@ -56841,12 +56854,12 @@ qVP
 qWI
 ofx
 aXp
-eoV
-eoV
-eoV
-eoV
-umi
-cSl
+rjP
+rjP
+rjP
+rjP
+ovu
+pDX
 qWI
 qVP
 wuy
@@ -56997,13 +57010,13 @@ cRu
 cRu
 qWI
 utT
-teA
-eoV
-umi
 hTB
-eoV
-teA
+rjP
+ovu
+jpm
+rjP
 hTB
+jpm
 qWI
 qVP
 wuy
@@ -57154,13 +57167,13 @@ bYW
 gbm
 qWI
 utT
-nGm
-eoV
-ovu
-hTB
-eoV
-nGm
-hTB
+mob
+rjP
+umi
+jpm
+rjP
+mob
+jpm
 qWI
 qVP
 wuy
@@ -57307,17 +57320,17 @@ qVP
 cRu
 xUe
 gHU
-rjP
+ors
 gGN
 qWI
 utT
 eFL
-eoV
-nGm
+rjP
+mob
+jpm
+rjP
 hTB
-eoV
-teA
-hTB
+jpm
 qWI
 qVP
 wuy
@@ -57464,17 +57477,17 @@ qVP
 cRu
 xUe
 sqv
-rjP
+ors
 gGN
 qWI
 ofx
-nGm
-eoV
+mob
+rjP
 cgY
 qWI
-eoV
-umi
-cSl
+rjP
+ovu
+pDX
 qWI
 qVP
 wuy
@@ -57621,15 +57634,15 @@ qVP
 cRu
 xUe
 sqv
-ors
+ycZ
 gGN
 qWI
 oFr
+rjP
+rjP
+rjP
+rjP
 eoV
-eoV
-eoV
-eoV
-pDX
 fSj
 prv
 qWI
@@ -57784,10 +57797,10 @@ mNS
 vQc
 aXf
 ovv
+bow
+bow
 qli
-qli
-mob
-eoV
+rjP
 prv
 qWI
 qVP
@@ -57939,13 +57952,13 @@ uCR
 gpV
 qWI
 buK
-umi
+ovu
 jTf
 cgY
 qWI
-ycZ
 nGm
-cSl
+mob
+pDX
 qWI
 qVP
 wuy
@@ -58096,13 +58109,13 @@ glT
 bGQ
 qWI
 utT
-umi
+ovu
 jTf
-umi
+ovu
+jpm
+rjP
 hTB
-eoV
-teA
-hTB
+jpm
 qWI
 qVP
 wuy
@@ -58253,13 +58266,13 @@ xEw
 gGN
 qWI
 utT
-nGm
+mob
 jTf
-nGm
+mob
+jpm
+rjP
 hTB
-eoV
-teA
-hTB
+jpm
 qWI
 qVP
 wuy
@@ -58409,14 +58422,14 @@ vkM
 uCR
 cXW
 qWI
-vJm
-teA
+cBn
+hTB
 jTf
-nGm
-hTB
-eoV
-umi
-hTB
+mob
+jpm
+rjP
+ovu
+jpm
 qWI
 qVP
 wuy
@@ -58567,13 +58580,13 @@ tTv
 gGN
 qWI
 ofx
-umi
+ovu
 gwy
 pbI
 ktX
 aaa
-umi
-cSl
+ovu
+pDX
 qWI
 qVP
 wuy
@@ -59034,7 +59047,7 @@ iWJ
 rQv
 yjT
 mxi
-jpm
+teA
 jcv
 qWI
 pVI
@@ -118186,11 +118199,11 @@ wuy
 wuy
 wuy
 wuy
-wuy
-qMo
+bPH
 vUp
 bVd
 mlU
+cSl
 rCD
 pag
 kOf
@@ -118343,9 +118356,9 @@ wuy
 wuy
 wuy
 wuy
-wuy
-qMo
+bPH
 ozw
+jTp
 jTp
 jTp
 jTp
@@ -118500,9 +118513,9 @@ wuy
 wuy
 wuy
 wuy
-wuy
-qMo
+bPH
 ozw
+jTp
 jTp
 jTp
 jTp
@@ -118657,8 +118670,8 @@ wuy
 wuy
 wuy
 wuy
-wuy
-qMo
+bPH
+jTp
 hYB
 dHP
 dHP
@@ -118814,8 +118827,8 @@ wuy
 wuy
 wuy
 wuy
-wuy
-qMo
+bPH
+xRH
 srf
 aFG
 aFG
@@ -118971,8 +118984,8 @@ wuy
 wuy
 wuy
 wuy
-wuy
-qMo
+bPH
+kaf
 bcD
 aFG
 aFG
@@ -119128,8 +119141,8 @@ wuy
 wuy
 wuy
 wuy
-wuy
-qMo
+bPH
+vJm
 aPd
 aFG
 aFG
@@ -119285,8 +119298,8 @@ wuy
 wuy
 wuy
 wuy
-wuy
-qMo
+bPH
+iIS
 oLa
 aFG
 aFG
@@ -119442,8 +119455,8 @@ wuy
 wuy
 wuy
 wuy
-wuy
-qMo
+bPH
+jTp
 mDg
 oTc
 oTc
@@ -119599,9 +119612,9 @@ wuy
 wuy
 wuy
 wuy
-wuy
-qMo
+bPH
 nKT
+xRH
 tuS
 xRH
 dgx
@@ -119756,7 +119769,7 @@ wuy
 wuy
 wuy
 wuy
-wuy
+bPH
 qMo
 qMo
 qMo
