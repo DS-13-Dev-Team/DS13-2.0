@@ -26,23 +26,4 @@
 			qdel(E)
 	return TRUE
 
-/obj/item/wallframe/apc/attackby(obj/O, mob/user, params)
-	if(istype(O, /obj/item/bodypart/arm/left/robot) || istype(O, /obj/item/bodypart/arm/right/robot))
-		to_chat(user, span_notice("You add [O] to [src]."))
-		qdel(O)
-		qdel(src)
-		user.put_in_hands(new /obj/item/bot_assembly/scavbot)
-	if(istype(O, /obj/item/assembly/prox_sensor))
-		to_chat(user, span_notice("You add [O] to [src]."))
-		qdel(O)
-		qdel(src)
-		user.put_in_hands(new /obj/item/bot_assembly/janibot)
-	if(istype(O, /obj/item/bodypart/leg/right/robot))
-		to_chat(user, span_notice("You add [O] to [src]."))
-		qdel(O)
-		qdel(src)
-		user.put_in_hands(new /obj/item/bot_assembly/cargobot)
-	else
-		..()
-
 

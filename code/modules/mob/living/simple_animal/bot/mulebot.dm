@@ -12,6 +12,7 @@
 /mob/living/simple_animal/bot/mulebot
 	name = "\improper MULEbot"
 	desc = "A Multiple Utility Load Effector bot."
+	icon = 'deadspace/icons/mob/dsbots48x48.dmi'
 	icon_state = "mulebot0"
 	density = TRUE
 	move_resist = MOVE_FORCE_STRONG
@@ -780,6 +781,7 @@
 /mob/living/simple_animal/bot/mulebot/paranormal//allows ghosts only unless hacked to actually be useful
 	name = "\improper GHOULbot"
 	desc = "A rather ghastly looking... Multiple Utility Load Effector bot? It only seems to accept paranormal forces, and for this reason is fucking useless."
+	icon = 'icons/mob/aibots.dmi'
 	icon_state = "paranormalmulebot0"
 	base_icon = "paranormalmulebot"
 
