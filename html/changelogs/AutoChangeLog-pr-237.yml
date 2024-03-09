@@ -1,0 +1,8 @@
+author: blackwolf602
+delete-after: true
+changes:
+  - rscadd: Bot sprites, no more snowflack mostly....
+  - bugfix: scav bot laws updated
+  - bugfix: scav assembly fixed
+  - bugfix: Removed rocks blocking dorms
+  - bugfix: tile icons
