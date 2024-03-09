@@ -12677,7 +12677,6 @@
 /area/station/engineering/main)
 "gBk" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/item/bot_assembly/cargobot,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/science/robotics/lab)
 "gBm" = (
@@ -22947,7 +22946,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/item/bot_assembly/janibot,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable/yellow{
