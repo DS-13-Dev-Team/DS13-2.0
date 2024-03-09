@@ -37273,7 +37273,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "12"
 	},
-/turf/closed/wall,
+/turf/open/floor/plating,
 /area/station/commons/dorms/cryo)
 "sXH" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
