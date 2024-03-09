@@ -799,7 +799,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/closed/indestructible/rock,
+/turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks/male)
 "aur" = (
 /obj/structure/disposalpipe/segment,
@@ -2070,10 +2070,7 @@
 	},
 /area/station/hallway/primary/starboard)
 "bbl" = (
-/mob/living/simple_animal/bot/cleanbot/janibot{
-	name = "Doctor Scrubs";
-	real_name = "Doctor Scrubs"
-	},
+/mob/living/simple_animal/bot/cleanbot/medbay,
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/treatment_center)
 "bbn" = (
@@ -6187,7 +6184,9 @@
 	name = "Cabin 6"
 	},
 /obj/machinery/door/firedoor,
-/turf/closed/wall,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks/female)
 "dcl" = (
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -12678,7 +12677,6 @@
 /area/station/engineering/main)
 "gBk" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/item/bot_assembly/cargobot,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/science/robotics/lab)
 "gBm" = (
@@ -14365,15 +14363,6 @@
 	dir = 8
 	},
 /area/station/hallway/primary/starboard)
-"hvg" = (
-/mob/living/simple_animal/bot/mulebot/cargobot{
-	dir = 8;
-	name = "Antique Cargobot";
-	real_name = "Antique Cargobot";
-	desc = "A diagram of an ancient fourlegged, delivery bot."
-	},
-/turf/open/misc/asteroid,
-/area/station/hallway/primary/fore)
 "hvp" = (
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/table/reinforced,
@@ -19301,11 +19290,7 @@
 	freq = 1400;
 	location = "QM #2"
 	},
-/mob/living/simple_animal/bot/mulebot/cargobot{
-	dir = 4;
-	name = "Sir Haul's a lot";
-	real_name = "Sir Haul's a lot"
-	},
+/mob/living/simple_animal/bot/mulebot,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "jKR" = (
@@ -21229,6 +21214,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks/male)
 "kKh" = (
@@ -22960,7 +22946,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/item/bot_assembly/janibot,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable/yellow{
@@ -22983,6 +22968,8 @@
 	name = "Cabin 4"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks/male)
 "lBi" = (
@@ -23687,6 +23674,7 @@
 /area/station/service/library)
 "lTz" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/commons/dorms/barracks/male)
 "lTI" = (
@@ -34878,11 +34866,7 @@
 	freq = 1400;
 	location = "QM #1"
 	},
-/mob/living/simple_animal/bot/mulebot/cargobot{
-	dir = 4;
-	name = "Crusher";
-	real_name = "Crusher"
-	},
+/mob/living/simple_animal/bot/mulebot,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "rIu" = (
@@ -37369,7 +37353,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/closed/wall,
+/turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks/male)
 "sYE" = (
 /turf/closed/wall,
@@ -42416,9 +42400,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
 "vKF" = (
-/mob/living/simple_animal/bot/cleanbot/janibot{
-	name = "Defective Janibot"
-	},
+/mob/living/simple_animal/bot/cleanbot,
 /turf/open/misc/asteroid,
 /area/aegis/surface)
 "vKM" = (
@@ -80255,7 +80237,7 @@ kiQ
 ofA
 nmp
 iCc
-iCc
+kNX
 ofA
 iCc
 jJc
@@ -80412,7 +80394,7 @@ xRF
 aHO
 aHO
 aHO
-aHO
+pMm
 aHO
 aHO
 dYf
@@ -80726,7 +80708,7 @@ aHO
 aHO
 aHO
 aHO
-xRF
+pMm
 aHO
 iAm
 dYf
@@ -83224,7 +83206,7 @@ dsJ
 dsJ
 dsJ
 dsJ
-dsJ
+scn
 dsJ
 roS
 azp
@@ -83381,7 +83363,7 @@ fLv
 tQU
 fLv
 fLv
-fLv
+wvP
 tQU
 dPF
 tIu
@@ -91245,7 +91227,7 @@ ewR
 jlM
 yig
 kOI
-hvg
+kOI
 khG
 kOI
 aeQ
