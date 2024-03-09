@@ -5,12 +5,18 @@
 	name = "\improper Cleanbot"
 	desc = "A little cleaning robot, he looks so excited!"
 	icon = 'icons/mob/aibots.dmi'
+	held_lh = 'deadspace/icons/mob/pets_held_lh.dmi'
+	held_rh = 'deadspace/icons/mob/pets_held_rh.dmi'
+	held_state = "cleanbot"
+	held_type = /obj/item/mob_holder/janibot
 	icon_state = "cleanbot0"
 	pass_flags = PASSMOB | PASSFLAPS
+	mob_size = MOB_SIZE_SMALL
 	density = FALSE
 	anchored = FALSE
 	health = 25
 	maxHealth = 25
+
 
 	maints_access_required = list(ACCESS_ROBOTICS, ACCESS_JANITOR)
 	radio_key = /obj/item/encryptionkey/headset_service
