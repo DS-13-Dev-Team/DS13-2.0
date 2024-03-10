@@ -5566,19 +5566,18 @@
 /turf/open/misc/beach/sand/coastline_t,
 /area/station/hallway/primary/port)
 "cKI" = (
-/obj/structure/sign/directions/engineering{
+/obj/structure/sign/directions/evac{
+	dir = 4;
+	pixel_y = 22
+	},
+/obj/structure/sign/directions/supply{
+	dir = 4;
+	pixel_y = 28
+	},
+/obj/structure/sign/directions/science{
 	dir = 4;
 	pixel_y = 34
 	},
-/obj/structure/sign/directions/medical{
-	pixel_y = 28;
-	dir = 4
-	},
-/obj/structure/sign/directions/security{
-	dir = 8;
-	pixel_y = 22
-	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/deadspace/random/maint_left{
 	dir = 4
 	},
@@ -22537,6 +22536,22 @@
 /obj/structure/flora/rock/icy,
 /turf/open/misc/ironsand,
 /area/station/science/lab)
+"loa" = (
+/obj/structure/sign/directions/security{
+	dir = 8;
+	pixel_y = 22
+	},
+/obj/structure/sign/directions/medical{
+	pixel_y = 28
+	},
+/obj/structure/sign/directions/engineering{
+	dir = 4;
+	pixel_y = 34
+	},
+/turf/open/floor/deadspace/random/maint_left{
+	dir = 4
+	},
+/area/station/hallway/primary/fore)
 "lob" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -25365,7 +25380,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "3"
 	},
-/turf/open/floor/deadspace/medical,
+/turf/open/floor/deadspace/med/triage_white,
 /area/station/medical/morgue)
 "mNX" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/monitored/carbon_input{
@@ -42881,18 +42896,6 @@
 /turf/open/floor/iron/grimy,
 /area/station/tcommsat/computer)
 "vVQ" = (
-/obj/structure/sign/directions/supply{
-	dir = 4;
-	pixel_y = 28
-	},
-/obj/structure/sign/directions/science{
-	dir = 4;
-	pixel_y = 34
-	},
-/obj/structure/sign/directions/evac{
-	dir = 4;
-	pixel_y = 22
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/multiz/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/multiz/scrubbers/hidden/layer2,
@@ -42900,6 +42903,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2"
 	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/random/maint_left{
 	dir = 4
 	},
@@ -86988,7 +86992,7 @@ jlM
 bze
 vPM
 vPM
-vPM
+cgw
 vPM
 bze
 mty
@@ -87302,7 +87306,7 @@ jlM
 bQx
 nKJ
 nKJ
-dWV
+nKJ
 nKJ
 bQx
 bPG
@@ -87462,7 +87466,7 @@ wSb
 wSb
 wSb
 wSb
-cKI
+rzT
 gDA
 jlM
 eZs
@@ -88401,7 +88405,7 @@ jlM
 bze
 vPM
 vPM
-cgw
+vPM
 vPM
 bze
 kBN
@@ -88715,7 +88719,7 @@ jlM
 bQx
 nKJ
 nKJ
-nKJ
+dWV
 nKJ
 bQx
 bPG
@@ -88875,7 +88879,7 @@ jcd
 jcd
 jcd
 jcd
-bPG
+loa
 gDA
 jlM
 ohS
@@ -89032,7 +89036,7 @@ aOh
 sks
 oIb
 jcd
-bPG
+cKI
 bSP
 fsl
 gRf
