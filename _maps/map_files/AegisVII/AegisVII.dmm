@@ -11163,6 +11163,7 @@
 /area/station/commons/lounge)
 "fLs" = (
 /obj/structure/table/reinforced,
+/obj/item/storage/box/firingpins,
 /turf/open/floor/deadspace/random/slides_end,
 /area/station/ai_monitored/security/armory)
 "fLv" = (
