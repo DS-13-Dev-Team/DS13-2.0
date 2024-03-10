@@ -3276,6 +3276,11 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/maintenance/starboard/upper)
+"bEr" = (
+/obj/structure/stairs/north,
+/obj/machinery/light/directional/north,
+/turf/open/floor/deadspace/mono,
+/area/station/medical/medbay/aft)
 "bEB" = (
 /obj/machinery/light/small/maintenance/directional/west,
 /obj/structure/showcase/machinery/signal_decrypter,
@@ -20037,15 +20042,13 @@
 /area/station/maintenance/fore/lesser)
 "keX" = (
 /obj/structure/table,
-/obj/machinery/telephone/service{
-	friendly_name = "Pharmacy";
-	placard_name = "Medical PBX"
-	},
 /obj/machinery/power/data_terminal,
 /obj/machinery/newscaster/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/item/storage/medkit/surgery,
+/obj/item/storage/medkit/surgery,
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/pharmacy)
 "kfp" = (
@@ -46032,6 +46035,14 @@
 /area/station/service/hydroponics)
 "xCy" = (
 /obj/machinery/firealarm/directional/south,
+/obj/structure/rack,
+/obj/item/bodybag/stasis{
+	pixel_y = 12
+	},
+/obj/item/bodybag/stasis{
+	pixel_y = 6
+	},
+/obj/item/bodybag/stasis,
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/pharmacy)
 "xCG" = (
@@ -57663,7 +57674,7 @@ qVP
 qVP
 qVP
 cRu
-xUe
+bEr
 sqv
 ors
 gGN
