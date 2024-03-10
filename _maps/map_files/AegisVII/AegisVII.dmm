@@ -13754,6 +13754,12 @@
 	dir = 1
 	},
 /area/station/security/checkpoint/customs)
+"hfn" = (
+/mob/living/simple_animal/bot/mulebot{
+	dir = 4
+	},
+/turf/open/misc/asteroid,
+/area/station/hallway/primary/fore)
 "hfx" = (
 /obj/machinery/door/airlock/research{
 	name = "Aegis Science"
@@ -19295,7 +19301,9 @@
 	freq = 1400;
 	location = "QM #2"
 	},
-/mob/living/simple_animal/bot/mulebot,
+/mob/living/simple_animal/bot/mulebot{
+	dir = 4
+	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "jKR" = (
@@ -34012,11 +34020,8 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "rkZ" = (
-/mob/living/simple_animal/drone/classic/scavbot{
-	dir = 4;
-	name = "Antique Scavenger bot";
-	real_name = "Antique Scavenger bot";
-	desc = "A diagram of an ancient Scavanger bot that was common place for for areas technicians and larger robots cannot go."
+/mob/living/simple_animal/bot/mulebot{
+	dir = 8
 	},
 /turf/open/misc/asteroid,
 /area/station/hallway/primary/fore)
@@ -34885,7 +34890,9 @@
 	freq = 1400;
 	location = "QM #1"
 	},
-/mob/living/simple_animal/bot/mulebot,
+/mob/living/simple_animal/bot/mulebot{
+	dir = 4
+	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/storage)
 "rIu" = (
@@ -37275,7 +37282,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "12"
 	},
-/turf/closed/wall,
+/turf/open/floor/plating,
 /area/station/commons/dorms/cryo)
 "sXH" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -91241,7 +91248,7 @@ bPG
 ewR
 jlM
 yig
-kOI
+hfn
 kOI
 khG
 kOI
