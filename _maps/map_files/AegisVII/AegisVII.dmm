@@ -895,7 +895,7 @@
 /area/station/maintenance/fore/lesser)
 "avQ" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/catwalk_floor,
+/turf/open/openspace,
 /area/station/command/bridge)
 "avY" = (
 /obj/structure/closet/secure_closet/ds/miner,
@@ -3610,6 +3610,10 @@
 	dir = 8
 	},
 /area/station/hallway/primary/fore)
+"bMK" = (
+/obj/item/storage/toolbox/mechanical,
+/turf/open/misc/asteroid,
+/area/aegis/surface)
 "bMU" = (
 /obj/machinery/light/directional/north,
 /obj/structure/chair/comfy/shuttle,
@@ -4678,8 +4682,10 @@
 /turf/open/floor/carpet/red,
 /area/station/service/chapel)
 "coa" = (
-/obj/machinery/light/small/maintenance/directional/south,
-/turf/open/floor/catwalk_floor/iron_dark,
+/obj/effect/turf_decal/trimline/yellow/filled/corner{
+	dir = 8
+	},
+/turf/open/floor/plating,
 /area/aegis/surface)
 "cog" = (
 /obj/machinery/light/directional/south,
@@ -4691,9 +4697,7 @@
 	req_access = list()
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/iron/dark/side{
-	dir = 4
-	},
+/turf/open/floor/deadspace/medbay/h_rightside,
 /area/station/medical/medbay/lobby)
 "cov" = (
 /obj/machinery/light/small/directional/south,
@@ -6018,6 +6022,10 @@
 	},
 /turf/open/floor/plating,
 /area/station/commons/dorms/cryo)
+"cUD" = (
+/obj/machinery/light/directional/north,
+/turf/open/openspace,
+/area/station/command/bridge)
 "cUN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -12745,6 +12753,7 @@
 /obj/structure/chair/sofa/bench/corner{
 	dir = 8
 	},
+/obj/item/kirbyplants,
 /turf/open/floor/iron/dark/side{
 	dir = 6
 	},
@@ -13310,9 +13319,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "3"
 	},
-/turf/open/floor/iron/dark/side{
-	dir = 8
-	},
+/turf/open/floor/deadspace/medbay/h_rightside,
 /area/station/medical/medbay/lobby)
 "gRg" = (
 /obj/machinery/light/directional/south,
@@ -15644,6 +15651,7 @@
 /obj/structure/chair/sofa/bench/corner{
 	dir = 1
 	},
+/obj/item/kirbyplants,
 /turf/open/floor/iron/dark/side{
 	dir = 10
 	},
@@ -25430,12 +25438,6 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/asteroid,
 /area/aegis/surface)
-"mKc" = (
-/obj/effect/turf_decal/trimline/yellow/filled/corner{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/aegis/surface)
 "mKE" = (
 /obj/item/cigbutt,
 /obj/structure/table/reinforced,
@@ -25852,6 +25854,7 @@
 /area/station/security/lockers)
 "mVu" = (
 /obj/structure/chair/sofa/bench/corner,
+/obj/item/kirbyplants,
 /turf/open/floor/iron/dark/side{
 	dir = 5
 	},
@@ -27926,6 +27929,11 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningdock/cafeteria)
+"nYr" = (
+/obj/machinery/camera/autoname/directional/east,
+/obj/machinery/light/directional/east,
+/turf/open/floor/deadspace/random/slides,
+/area/station/hallway/primary/central/aft)
 "nYK" = (
 /obj/machinery/door/poddoor{
 	name = "Underground Cargo Door";
@@ -29740,6 +29748,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/random/maint_left,
 /area/station/hallway/primary/central)
+"oUe" = (
+/obj/machinery/light/directional/east,
+/turf/open/openspace,
+/area/station/command/bridge)
 "oUk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -32789,10 +32801,9 @@
 /turf/open/floor/deadspace/mono,
 /area/station/cargo/warehouse/upper)
 "qts" = (
-/obj/machinery/camera/autoname/directional/east,
-/obj/machinery/light/directional/east,
-/turf/open/floor/deadspace/random/slides,
-/area/station/hallway/primary/central/aft)
+/obj/machinery/light/small/maintenance/directional/south,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/aegis/surface)
 "qtB" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -42214,6 +42225,7 @@
 /obj/structure/chair/sofa/bench/corner{
 	dir = 4
 	},
+/obj/item/kirbyplants,
 /turf/open/floor/iron/dark/side{
 	dir = 9
 	},
@@ -45735,10 +45747,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/engineering/monitoring)
-"xji" = (
-/obj/machinery/light/directional/north,
-/turf/open/floor/catwalk_floor,
-/area/station/command/bridge)
 "xjr" = (
 /obj/item/cultivator,
 /obj/item/crowbar,
@@ -64848,7 +64856,7 @@ udW
 bDz
 caI
 eSR
-mKc
+coa
 mrc
 caI
 hbR
@@ -69738,7 +69746,7 @@ hbR
 hbR
 hbR
 hbR
-hbR
+qVP
 qVP
 qVP
 caI
@@ -69894,8 +69902,8 @@ hbR
 hbR
 hbR
 hbR
-hbR
-hbR
+qVP
+qVP
 rqy
 bDz
 rqy
@@ -70051,7 +70059,7 @@ hbR
 hbR
 hbR
 hbR
-hbR
+qVP
 tuc
 rqy
 rqy
@@ -70208,8 +70216,8 @@ hbR
 hbR
 hbR
 hbR
-hbR
-hbR
+qVP
+qVP
 rqy
 rqy
 rqy
@@ -70365,7 +70373,7 @@ hbR
 hbR
 hbR
 hbR
-hbR
+qVP
 rqy
 rqy
 rqy
@@ -70522,8 +70530,8 @@ hbR
 hbR
 hbR
 hbR
-hbR
-hbR
+qVP
+qVP
 bDz
 rqy
 rqy
@@ -70679,7 +70687,7 @@ hbR
 hbR
 hbR
 hbR
-hbR
+qVP
 rqy
 rqy
 rqy
@@ -70836,7 +70844,7 @@ hbR
 hbR
 hbR
 hbR
-hbR
+qVP
 bDz
 rqy
 bDz
@@ -70993,7 +71001,7 @@ hbR
 hbR
 hbR
 hbR
-hbR
+qVP
 bDz
 rqy
 rqy
@@ -71150,8 +71158,8 @@ hbR
 hbR
 hbR
 hbR
-hbR
-hbR
+qVP
+qVP
 rqy
 rqy
 rqy
@@ -71307,7 +71315,7 @@ hbR
 hbR
 hbR
 hbR
-hbR
+qVP
 tuc
 bDz
 rqy
@@ -71464,8 +71472,8 @@ hbR
 hbR
 hbR
 hbR
-hbR
-hbR
+qVP
+qVP
 bDz
 rqy
 bDz
@@ -71621,7 +71629,7 @@ hbR
 hbR
 hbR
 hbR
-hbR
+qVP
 rqy
 rqy
 rqy
@@ -71778,8 +71786,8 @@ hbR
 hbR
 hbR
 hbR
-hbR
-hbR
+qVP
+qVP
 bDz
 rqy
 tuc
@@ -71935,8 +71943,8 @@ hbR
 hbR
 hbR
 hbR
-hbR
-hbR
+qVP
+qVP
 rqy
 rqy
 rqy
@@ -72093,7 +72101,7 @@ hbR
 hbR
 hbR
 hbR
-hbR
+qVP
 qVP
 qVP
 qVP
@@ -74432,7 +74440,7 @@ hbR
 caI
 bDz
 udW
-coa
+qts
 kWK
 kWK
 kWK
@@ -96904,7 +96912,7 @@ qVP
 rqy
 rqy
 rqy
-qVP
+rqy
 qVP
 qVP
 qVP
@@ -97061,7 +97069,7 @@ qVP
 qVP
 rqy
 rqy
-qVP
+rqy
 qVP
 qVP
 qVP
@@ -97218,8 +97226,8 @@ qVP
 qVP
 rqy
 rqy
-qVP
-qVP
+rqy
+rqy
 qVP
 qVP
 qVP
@@ -97375,9 +97383,9 @@ qVP
 qVP
 rqy
 rqy
-qVP
-qVP
-qVP
+rqy
+rqy
+rqy
 qVP
 qVP
 qVP
@@ -97530,12 +97538,12 @@ pvL
 trT
 qVP
 qVP
+caI
+vAV
 rqy
 rqy
-qVP
-qVP
-qVP
-qVP
+iNH
+caI
 qVP
 qVP
 qVP
@@ -98476,7 +98484,7 @@ mEu
 shR
 qVP
 rqy
-rqy
+iAw
 tuc
 tuc
 qVP
@@ -98632,8 +98640,8 @@ llB
 lhy
 shR
 qVP
-rqy
-tuc
+iAw
+iAw
 tuc
 rqy
 qVP
@@ -98790,7 +98798,7 @@ shR
 shR
 rqy
 tuc
-tuc
+iAw
 tuc
 rqy
 qVP
@@ -98947,7 +98955,7 @@ qVP
 qVP
 rqy
 tuc
-tuc
+iAw
 rqy
 rqy
 qVP
@@ -99103,7 +99111,7 @@ qVP
 qVP
 qVP
 rqy
-tuc
+iAw
 rqy
 rqy
 qVP
@@ -99416,9 +99424,9 @@ qVP
 qVP
 qVP
 qVP
-qVP
-qVP
-qVP
+rqy
+tuc
+rqy
 qVP
 qVP
 qVP
@@ -99573,9 +99581,9 @@ qVP
 qVP
 qVP
 qVP
-qVP
-qVP
-qVP
+iAw
+tuc
+iAw
 qVP
 qVP
 qVP
@@ -99730,9 +99738,9 @@ qVP
 qVP
 qVP
 qVP
-qVP
-qVP
-qVP
+rqy
+tuc
+rqy
 qVP
 qVP
 qVP
@@ -99887,9 +99895,9 @@ qVP
 qVP
 qVP
 qVP
-qVP
-qVP
-qVP
+rqy
+iAw
+rqy
 qVP
 qVP
 qVP
@@ -100044,9 +100052,9 @@ qVP
 qVP
 qVP
 qVP
-qVP
-qVP
-qVP
+rqy
+tuc
+rqy
 qVP
 qVP
 qVP
@@ -100514,7 +100522,7 @@ dyV
 qVP
 qVP
 rqy
-rqy
+iAw
 tuc
 tuc
 rqy
@@ -100674,7 +100682,7 @@ rqy
 rqy
 tuc
 rqy
-rqy
+iAw
 rqy
 qVP
 qVP
@@ -100829,8 +100837,8 @@ qVP
 rqy
 rqy
 rqy
-tuc
-rqy
+iAw
+iAw
 tuc
 rqy
 qVP
@@ -100987,7 +100995,7 @@ vAV
 rqy
 rqy
 rqy
-rqy
+iAw
 iNH
 caI
 qVP
@@ -101293,7 +101301,7 @@ qVP
 qVP
 qVP
 qVP
-rqy
+qVP
 rqy
 rqy
 rqy
@@ -101450,7 +101458,7 @@ qVP
 qVP
 qVP
 qVP
-iAw
+qVP
 rqy
 rqy
 rqy
@@ -101607,16 +101615,16 @@ qVP
 qVP
 qVP
 qVP
+qVP
+rqy
+iAw
+rqy
+rqy
+rqy
+rqy
 iAw
 iAw
 iAw
-rqy
-rqy
-rqy
-rqy
-rqy
-rqy
-rqy
 rqy
 rqy
 qVP
@@ -101764,8 +101772,8 @@ qVP
 qVP
 qVP
 qVP
-iAw
-iAw
+qVP
+rqy
 iAw
 iAw
 rqy
@@ -101921,7 +101929,7 @@ qVP
 qVP
 qVP
 qVP
-rqy
+qVP
 rqy
 rqy
 iAw
@@ -102078,7 +102086,7 @@ qVP
 qVP
 qVP
 qVP
-rqy
+qVP
 rqy
 rqy
 iAw
@@ -102235,11 +102243,11 @@ qVP
 qVP
 qVP
 qVP
+qVP
 rqy
 rqy
-rqy
-rqy
-rqy
+iAw
+iAw
 rqy
 tuc
 tuc
@@ -102392,10 +102400,10 @@ qVP
 qVP
 qVP
 qVP
+qVP
 rqy
 rqy
-rqy
-tuc
+iAw
 tuc
 tuc
 rqy
@@ -102549,8 +102557,8 @@ qVP
 qVP
 qVP
 qVP
-tuc
-tuc
+qVP
+qVP
 tuc
 rqy
 rqy
@@ -104755,7 +104763,7 @@ rqy
 rqy
 rqy
 rqy
-rqy
+bMK
 qVP
 qVP
 qVP
@@ -116333,17 +116341,17 @@ iFB
 xsR
 ong
 ong
-ong
+avQ
 ong
 ong
 ong
 vQo
-avQ
+yll
 hOp
 ong
 ong
 ong
-ong
+avQ
 ong
 ong
 uDQ
@@ -116645,7 +116653,7 @@ fvj
 sXH
 agh
 xsR
-ong
+cUD
 ong
 ong
 ong
@@ -117430,7 +117438,7 @@ xmD
 sXH
 hdR
 xsR
-xji
+yll
 yll
 yll
 yll
@@ -118215,7 +118223,7 @@ lob
 aol
 agh
 xsR
-ong
+cUD
 ong
 ong
 ong
@@ -118531,7 +118539,7 @@ ihh
 xsR
 ong
 ong
-ong
+oUe
 ong
 ong
 ong
@@ -118541,7 +118549,7 @@ bfv
 ong
 ong
 ong
-ong
+oUe
 ong
 ong
 uDQ
@@ -120260,7 +120268,7 @@ xRH
 xRH
 dgx
 ePI
-qts
+nYr
 xRH
 xRH
 kPH
