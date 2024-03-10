@@ -3276,6 +3276,11 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/maintenance/starboard/upper)
+"bEr" = (
+/obj/structure/stairs/north,
+/obj/machinery/light/directional/north,
+/turf/open/floor/deadspace/mono,
+/area/station/medical/medbay/aft)
 "bEB" = (
 /obj/machinery/light/small/maintenance/directional/west,
 /obj/structure/showcase/machinery/signal_decrypter,
@@ -5566,19 +5571,18 @@
 /turf/open/misc/beach/sand/coastline_t,
 /area/station/hallway/primary/port)
 "cKI" = (
-/obj/structure/sign/directions/engineering{
+/obj/structure/sign/directions/evac{
+	dir = 4;
+	pixel_y = 22
+	},
+/obj/structure/sign/directions/supply{
+	dir = 4;
+	pixel_y = 28
+	},
+/obj/structure/sign/directions/science{
 	dir = 4;
 	pixel_y = 34
 	},
-/obj/structure/sign/directions/medical{
-	pixel_y = 28;
-	dir = 4
-	},
-/obj/structure/sign/directions/security{
-	dir = 8;
-	pixel_y = 22
-	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/deadspace/random/maint_left{
 	dir = 4
 	},
@@ -11159,6 +11163,7 @@
 /area/station/commons/lounge)
 "fLs" = (
 /obj/structure/table/reinforced,
+/obj/item/storage/box/firingpins,
 /turf/open/floor/deadspace/random/slides_end,
 /area/station/ai_monitored/security/armory)
 "fLv" = (
@@ -19557,7 +19562,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/white,
+/turf/open/floor/deadspace/med/triage,
 /area/station/medical/surgery/theatre)
 "jQV" = (
 /obj/structure/weightmachine/stacklifter,
@@ -20046,15 +20051,13 @@
 /area/station/maintenance/fore/lesser)
 "keX" = (
 /obj/structure/table,
-/obj/machinery/telephone/service{
-	friendly_name = "Pharmacy";
-	placard_name = "Medical PBX"
-	},
 /obj/machinery/power/data_terminal,
 /obj/machinery/newscaster/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/item/storage/medkit/surgery,
+/obj/item/storage/medkit/surgery,
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/pharmacy)
 "kfp" = (
@@ -22109,6 +22112,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/deadspace/med/triage_sides{
 	dir = 8
 	},
@@ -22544,6 +22548,22 @@
 /obj/structure/flora/rock/icy,
 /turf/open/misc/ironsand,
 /area/station/science/lab)
+"loa" = (
+/obj/structure/sign/directions/security{
+	dir = 8;
+	pixel_y = 22
+	},
+/obj/structure/sign/directions/medical{
+	pixel_y = 28
+	},
+/obj/structure/sign/directions/engineering{
+	dir = 4;
+	pixel_y = 34
+	},
+/turf/open/floor/deadspace/random/maint_left{
+	dir = 4
+	},
+/area/station/hallway/primary/fore)
 "lob" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -25372,7 +25392,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "3"
 	},
-/turf/open/floor/deadspace/medical,
+/turf/open/floor/deadspace/med/triage_white,
 /area/station/medical/morgue)
 "mNX" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/monitored/carbon_input{
@@ -26114,7 +26134,6 @@
 /area/station/medical/exam_room)
 "ngP" = (
 /obj/structure/table/glass/plasmaglass,
-/obj/item/storage/backpack/rig/inap,
 /obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/west,
 /turf/open/floor/deadspace/med/med_plating,
@@ -35103,9 +35122,9 @@
 	},
 /area/station/hallway/primary/fore)
 "rMY" = (
-/obj/machinery/firealarm/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/defibrillator_mount/directional/north,
 /turf/open/floor/deadspace/med/triage_corners{
 	dir = 4
 	},
@@ -35354,7 +35373,6 @@
 	color = "#9FED58"
 	},
 /obj/item/radio/intercom/directional/east,
-/obj/machinery/defibrillator_mount/directional/north,
 /turf/open/floor/deadspace/med/triage_corners{
 	dir = 8
 	},
@@ -42889,18 +42907,6 @@
 /turf/open/floor/iron/grimy,
 /area/station/tcommsat/computer)
 "vVQ" = (
-/obj/structure/sign/directions/supply{
-	dir = 4;
-	pixel_y = 28
-	},
-/obj/structure/sign/directions/science{
-	dir = 4;
-	pixel_y = 34
-	},
-/obj/structure/sign/directions/evac{
-	dir = 4;
-	pixel_y = 22
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/multiz/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/multiz/scrubbers/hidden/layer2,
@@ -42908,6 +42914,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2"
 	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/deadspace/random/maint_left{
 	dir = 4
 	},
@@ -46036,6 +46043,14 @@
 /area/station/service/hydroponics)
 "xCy" = (
 /obj/machinery/firealarm/directional/south,
+/obj/structure/rack,
+/obj/item/bodybag/stasis{
+	pixel_y = 12
+	},
+/obj/item/bodybag/stasis{
+	pixel_y = 6
+	},
+/obj/item/bodybag/stasis,
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/pharmacy)
 "xCG" = (
@@ -57667,7 +57682,7 @@ qVP
 qVP
 qVP
 cRu
-xUe
+bEr
 sqv
 ors
 gGN
@@ -86996,7 +87011,7 @@ jlM
 bze
 vPM
 vPM
-vPM
+cgw
 vPM
 bze
 mty
@@ -87310,7 +87325,7 @@ jlM
 bQx
 nKJ
 nKJ
-dWV
+nKJ
 nKJ
 bQx
 bPG
@@ -87470,7 +87485,7 @@ wSb
 wSb
 wSb
 wSb
-cKI
+rzT
 gDA
 jlM
 eZs
@@ -88409,7 +88424,7 @@ jlM
 bze
 vPM
 vPM
-cgw
+vPM
 vPM
 bze
 kBN
@@ -88723,7 +88738,7 @@ jlM
 bQx
 nKJ
 nKJ
-nKJ
+dWV
 nKJ
 bQx
 bPG
@@ -88883,7 +88898,7 @@ jcd
 jcd
 jcd
 jcd
-bPG
+loa
 gDA
 jlM
 ohS
@@ -89040,7 +89055,7 @@ aOh
 sks
 oIb
 jcd
-bPG
+cKI
 bSP
 fsl
 gRf
