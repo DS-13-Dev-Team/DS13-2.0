@@ -19549,7 +19549,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/white,
+/turf/open/floor/deadspace/med/triage,
 /area/station/medical/surgery/theatre)
 "jQV" = (
 /obj/structure/weightmachine/stacklifter,
@@ -22101,6 +22101,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/deadspace/med/triage_sides{
 	dir = 8
 	},
@@ -26106,7 +26107,6 @@
 /area/station/medical/exam_room)
 "ngP" = (
 /obj/structure/table/glass/plasmaglass,
-/obj/item/storage/backpack/rig/inap,
 /obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/west,
 /turf/open/floor/deadspace/med/med_plating,
@@ -35096,9 +35096,9 @@
 	},
 /area/station/hallway/primary/fore)
 "rMY" = (
-/obj/machinery/firealarm/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/defibrillator_mount/directional/north,
 /turf/open/floor/deadspace/med/triage_corners{
 	dir = 4
 	},
@@ -35347,7 +35347,6 @@
 	color = "#9FED58"
 	},
 /obj/item/radio/intercom/directional/east,
-/obj/machinery/defibrillator_mount/directional/north,
 /turf/open/floor/deadspace/med/triage_corners{
 	dir = 8
 	},
