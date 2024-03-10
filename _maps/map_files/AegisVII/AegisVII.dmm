@@ -429,6 +429,7 @@
 /area/mine/production)
 "all" = (
 /obj/machinery/light/small/directional/north,
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/engine,
 /area/station/science/misc_lab/range)
 "alq" = (
@@ -2188,6 +2189,10 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/service/chapel)
+"bdJ" = (
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/deadspace/random/rectangles,
+/area/station/cargo/miningdock/oresilo)
 "bdN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2526,6 +2531,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/server)
+"bmj" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/deadspace/random/slides{
+	dir = 8
+	},
+/area/station/hallway/secondary/command)
 "bmx" = (
 /obj/machinery/conveyor{
 	id = "Lower Marker Conveyor"
@@ -4655,6 +4666,7 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "cpC" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/deadspace/random/maint_left{
 	dir = 4
 	},
@@ -11310,6 +11322,7 @@
 /area/station/service/bar)
 "fOy" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
 	},
@@ -12947,6 +12960,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/ported/lino,
 /area/station/commons/dorms/barracks/female)
+"gLx" = (
+/obj/structure/cable/yellow{
+	icon_state = "3"
+	},
+/obj/structure/extinguisher_cabinet/directional/east,
+/turf/open/floor/deadspace/random/slides,
+/area/station/hallway/secondary/exit/departure_lounge)
 "gMl" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -15309,6 +15329,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/lobby)
 "hTa" = (
@@ -16992,6 +17013,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/deadspace/random/maint_left{
 	dir = 4
 	},
@@ -17368,6 +17390,12 @@
 	},
 /turf/open/misc/asteroid,
 /area/station/solars/port/fore)
+"iOx" = (
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/iron/dark/side{
+	dir = 8
+	},
+/area/station/hallway/primary/starboard)
 "iPb" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -18034,6 +18062,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hop)
+"jgT" = (
+/obj/structure/extinguisher_cabinet/directional/east,
+/turf/open/floor/deadspace/med/r_medside,
+/area/station/medical/medbay/central)
 "jha" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 4
@@ -19224,6 +19256,7 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/commons/storage/tools)
 "jIP" = (
@@ -19966,6 +19999,10 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/main)
+"kcf" = (
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/deadspace/med/l_medside,
+/area/station/medical/medbay/central)
 "kcj" = (
 /obj/structure/table,
 /obj/item/storage/box/bodybags,
@@ -22275,6 +22312,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/cargo/lobby)
 "lhH" = (
@@ -22970,6 +23008,12 @@
 /obj/machinery/chem_heater,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/station/maintenance/fore/lesser)
+"lAA" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/deadspace/random/slides{
+	dir = 8
+	},
+/area/station/security/brig)
 "lAK" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -25215,6 +25259,12 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/misc/asteroid,
 /area/aegis/surface)
+"mKc" = (
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/station/hallway/primary/central/aft)
 "mKE" = (
 /obj/item/cigbutt,
 /obj/structure/table/reinforced,
@@ -26079,6 +26129,12 @@
 "ney" = (
 /turf/closed/wall,
 /area/mine/storage)
+"neS" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/iron/dark/side{
+	dir = 1
+	},
+/area/station/hallway/primary/starboard)
 "nfc" = (
 /obj/effect/landmark{
 	name = "ShuttleRepairPart"
@@ -26960,6 +27016,11 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
+"nDy" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/extinguisher_cabinet/directional/east,
+/turf/open/floor/deadspace/random/rectangles,
+/area/station/cargo/storage)
 "nDA" = (
 /turf/open/floor/iron/dark,
 /area/station/security/interrogation)
@@ -27552,6 +27613,7 @@
 /area/station/maintenance/fore/lesser)
 "nVa" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/deadspace/random/slides,
 /area/station/hallway/primary/central/aft)
 "nVj" = (
@@ -28596,6 +28658,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/deadspace/random/rectangles,
 /area/mine/lobby)
 "ovV" = (
@@ -28958,6 +29021,10 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/heads_quarters/ce)
+"oGo" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/deadspace/random/rectangles,
+/area/station/cargo/miningoffice)
 "oGx" = (
 /turf/open/floor/deadspace/random/slides{
 	dir = 8
@@ -29815,6 +29882,12 @@
 	dir = 8
 	},
 /area/station/security/checkpoint/science)
+"pcH" = (
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/deadspace/random/slides{
+	dir = 1
+	},
+/area/station/hallway/secondary/exit/departure_lounge)
 "pcX" = (
 /obj/structure/railing{
 	dir = 6
@@ -31309,6 +31382,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/deadspace/random/slides,
 /area/station/security/brig)
 "pOK" = (
@@ -34129,6 +34203,10 @@
 	dir = 1
 	},
 /area/aegis/hanger)
+"rmF" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/deadspace/med/side_med,
+/area/station/medical/medbay/central)
 "rmW" = (
 /obj/effect/decal/cleanable/blood,
 /obj/item/storage/book/bible/unitology,
@@ -34559,6 +34637,7 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 6
 	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "rzc" = (
@@ -34849,6 +34928,7 @@
 /turf/open/floor/iron/dark,
 /area/station/science/server)
 "rHx" = (
+/obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/white,
 /area/station/science/misc_lab)
 "rHS" = (
@@ -35305,6 +35385,12 @@
 /obj/effect/spawner/random/deadspace/rig/scaf,
 /turf/open/floor/deadspace/mono,
 /area/aegis/surface)
+"rTq" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/deadspace/random/maint_left{
+	dir = 4
+	},
+/area/station/hallway/primary/fore)
 "rTI" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Shuttle Bay"
@@ -35561,6 +35647,12 @@
 /obj/structure/chair/wood,
 /turf/open/floor/wood,
 /area/station/maintenance/fore/lesser)
+"sbJ" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/deadspace/random/maint_left{
+	dir = 4
+	},
+/area/station/hallway/primary/port)
 "sbW" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/deadspace/bathroom,
@@ -37026,6 +37118,7 @@
 "sRJ" = (
 /obj/machinery/camera/autoname/directional/east,
 /obj/machinery/airalarm/directional/south,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/deadspace/random/slides{
 	dir = 4
 	},
@@ -37730,6 +37823,13 @@
 	},
 /turf/open/misc/ironsand,
 /area/aegis/surface)
+"tkP" = (
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/iron/white,
+/area/station/science/research)
 "tkZ" = (
 /obj/item/stack/rods,
 /turf/open/floor/deadspace/grater,
@@ -41235,6 +41335,10 @@
 /obj/structure/chair/sofa/bench/right,
 /turf/open/floor/deadspace/random/maint_left,
 /area/station/hallway/primary/central)
+"ved" = (
+/obj/structure/extinguisher_cabinet/directional/east,
+/turf/open/floor/deadspace/random/slides,
+/area/station/security/brig)
 "veo" = (
 /turf/closed/wall,
 /area/station/commons/dorms/barracks/male)
@@ -42055,6 +42159,12 @@
 /obj/machinery/autolathe,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/maintenance/port/lesser)
+"vAt" = (
+/obj/structure/extinguisher_cabinet/directional/south,
+/turf/open/floor/deadspace/random/maint_right{
+	dir = 8
+	},
+/area/station/hallway/primary/fore)
 "vAI" = (
 /obj/structure/window/reinforced/spawner/west,
 /turf/open/floor/grass,
@@ -42157,6 +42267,10 @@
 "vDQ" = (
 /turf/closed/wall,
 /area/aegis/hanger)
+"vDR" = (
+/obj/structure/closet/firecloset/full,
+/turf/open/floor/deadspace/random/rectangles,
+/area/mine/eva)
 "vDX" = (
 /obj/item/statuebust,
 /obj/effect/landmark/observer_start,
@@ -42897,6 +43011,7 @@
 /obj/structure/chair/sofa/bench/left{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/hallway/primary/central)
 "vUT" = (
@@ -43576,6 +43691,7 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/atmos)
 "wpD" = (
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/deadspace/med/corner_interior{
 	dir = 1
 	},
@@ -81676,7 +81792,7 @@ bau
 lYR
 foz
 npi
-itM
+sbJ
 iwy
 gQw
 uoA
@@ -85003,7 +85119,7 @@ bNV
 mWE
 bNV
 bNV
-bNV
+ved
 daa
 xZi
 qVP
@@ -85305,7 +85421,7 @@ qyr
 qyr
 qyr
 qyr
-bHR
+lAA
 xfk
 aKG
 tWq
@@ -89230,7 +89346,7 @@ mEk
 beN
 pxO
 beN
-beN
+jgT
 oqn
 mNu
 beN
@@ -89369,7 +89485,7 @@ vEo
 mXs
 mYP
 jcd
-bPG
+rTq
 gDA
 jlM
 pEr
@@ -89876,7 +89992,7 @@ xyB
 moU
 eVM
 xyB
-xyB
+kcf
 xyB
 xyB
 bAQ
@@ -90336,7 +90452,7 @@ iup
 iup
 iup
 iup
-enP
+rmF
 bPk
 qZi
 rKf
@@ -91432,7 +91548,7 @@ yjk
 yjk
 yjk
 yjk
-yjk
+tkP
 yjk
 mSl
 yjk
@@ -91881,7 +91997,7 @@ sLa
 nWd
 utw
 bZu
-bPG
+rTq
 fVy
 iGp
 uIz
@@ -94395,7 +94511,7 @@ nke
 psZ
 bPG
 fVy
-jlM
+vAt
 wZK
 etG
 mHG
@@ -95636,7 +95752,7 @@ iJv
 iJv
 xhK
 bvr
-iJv
+pcH
 iJv
 iPb
 iJv
@@ -95962,7 +96078,7 @@ dxn
 ayy
 vux
 qSB
-uMl
+iOx
 uMl
 kuI
 xcg
@@ -97211,7 +97327,7 @@ fal
 heH
 mLN
 njj
-bev
+neS
 jlu
 sAo
 izk
@@ -97832,7 +97948,7 @@ jfn
 iel
 hKR
 cpt
-rCI
+gLx
 qgU
 rCI
 rCI
@@ -98186,7 +98302,7 @@ swv
 pYT
 icC
 icC
-icC
+nDy
 sJV
 icC
 icC
@@ -99103,7 +99219,7 @@ qVP
 qVP
 qVP
 rnx
-hvQ
+oGo
 nuf
 hvQ
 hvQ
@@ -101472,7 +101588,7 @@ bLY
 aRF
 kqt
 vCd
-xZf
+bdJ
 agb
 kHT
 qVP
@@ -102722,7 +102838,7 @@ xEP
 dOB
 dOB
 wcc
-dOB
+vDR
 cEn
 kVv
 omd
@@ -103664,7 +103780,7 @@ xEP
 dOB
 dOB
 obv
-dOB
+vDR
 cEn
 kVv
 omd
@@ -118749,7 +118865,7 @@ agX
 cdo
 qiP
 tPF
-kGY
+bmj
 kZg
 aTj
 rXE
@@ -119217,7 +119333,7 @@ iIS
 iIS
 qSL
 oxZ
-iIS
+mKc
 vYb
 iIK
 hQd
