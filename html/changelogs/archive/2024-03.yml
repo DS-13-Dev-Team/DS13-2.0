@@ -20,3 +20,8 @@
   - bugfix: scav assembly fixed
   - bugfix: Removed rocks blocking dorms
   - bugfix: tile icons
+2024-03-11:
+  blackwolf602:
+  - rscadd: inap rig icons
+  - rscadd: Firing pins to armory in case
+  - bugfix: missing icons
