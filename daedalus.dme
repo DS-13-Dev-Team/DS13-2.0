@@ -4662,6 +4662,7 @@
 #include "deadspace\code\_global_vars\lists\sounds_summary.dm"
 #include "deadspace\code\_onclick\hud\rendering\plane_master.dm"
 #include "deadspace\code\_subsystems\corruption.dm"
+#include "deadspace\code\_subsystems\redbot.dm"
 #include "deadspace\code\animations\animation_library.dm"
 #include "deadspace\code\antagonists\egov_agent.dm"
 #include "deadspace\code\antagonists\unitologist.dm"
