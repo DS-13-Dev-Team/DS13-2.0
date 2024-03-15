@@ -32729,10 +32729,6 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/hallway/primary/central)
-"rdq" = (
-/obj/structure/lattice/catwalk,
-/turf/open/water,
-/area/station/maintenance/port/lesser)
 "rdv" = (
 /obj/machinery/telecomms/server/presets/service,
 /obj/machinery/light/small/directional/south,
@@ -33120,10 +33116,6 @@
 /obj/effect/spawner/random/food_or_drink/snack,
 /obj/effect/spawner/random/food_or_drink/snack,
 /turf/open/floor/plating,
-/area/station/maintenance/port/lesser)
-"rrS" = (
-/turf/open/water,
-/turf/closed/wall,
 /area/station/maintenance/port/lesser)
 "rsq" = (
 /obj/structure/window/reinforced/spawner/west,
@@ -53838,11 +53830,11 @@ tpe
 mhR
 mhR
 gdb
-rrS
-rrS
+vDj
+vDj
 iRv
-rrS
-rrS
+vDj
+vDj
 alm
 mhR
 mhR
@@ -54466,11 +54458,11 @@ tpe
 mhR
 mhR
 gdb
-rrS
-rrS
+vDj
+vDj
 iRv
-rrS
-rrS
+vDj
+vDj
 alm
 mhR
 mhR
@@ -62652,7 +62644,7 @@ lpo
 vDj
 tpe
 mhR
-rdq
+kDd
 tpe
 iRv
 iRv
