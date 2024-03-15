@@ -15,6 +15,7 @@
 	force = 14
 	throwforce = 7
 	throw_range = 5
+	block_chance = 10 //You could use this to block in a emergency, maybe
 
 	stamina_damage = 35
 	stamina_cost = 12
@@ -64,7 +65,6 @@
 	name = "compact crowbar"
 	desc = "A small steel crowbar."
 	force = 10
-	block_chance = 12 //You could use this to block in a emergency, maybe
 	w_class = WEIGHT_CLASS_SMALL
 	throw_range = 7
 	custom_materials = list(/datum/material/iron=50)
