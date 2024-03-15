@@ -130,7 +130,8 @@
 	return cached_flat_icon
 
 /obj/item/card/id/get_examine_string(mob/user, thats = FALSE)
-	return "[icon2html(get_cached_flat_icon(), user)] [thats? "That's ":""][get_examine_name(user)]"
+	var/that_string = gender == PLURAL ? "Those are " : "That is "
+	return "[icon2html(get_cached_flat_icon(), user)] [thats ? that_string :""][get_examine_name(user)]"
 
 /**
  * Helper proc, checks whether the ID card can hold any given set of wildcards.
@@ -458,9 +459,7 @@
 	. = ..()
 	. += "<a href='?src=\ref[src];look_at_id=1'>\[Look at ID\]</a>"
 	if(registered_account)
-		. += "The account linked to the ID belongs to '[registered_account.account_holder]' and reports a balance of [registered_account.account_balance] cr."
-		if(registered_account.account_holder == user.real_name)
-			. += span_boldnotice("If you lose this ID card, you can reclaim your account by Alt-Clicking a blank ID card while holding it and entering your account ID number.")
+		. += span_notice("The account linked to the ID belongs to '[registered_account.account_holder]' and reports a balance of [registered_account.account_balance] cr.")
 
 	if(HAS_TRAIT(user, TRAIT_ID_APPRAISER))
 		. += HAS_TRAIT(src, TRAIT_JOB_FIRST_ID_CARD) ? span_boldnotice("Hmm... yes, this ID was issued from Central Command!") : span_boldnotice("This ID was created in this sector, not by Central Command.")

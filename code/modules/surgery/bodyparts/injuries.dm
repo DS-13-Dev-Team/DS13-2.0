@@ -65,12 +65,23 @@
 	SEND_SIGNAL(C, COMSIG_CARBON_BREAK_BONE, src)
 	return TRUE
 
+/obj/item/bodypart/arm/apply_bone_break(mob/living/carbon/C)
+	. = ..()
+	if(!.)
+		return
+
+	if(C.legcuffed && prob(25))
+		C.remove_legcuffs(C.drop_location(), silent = TRUE)
+
 /obj/item/bodypart/leg/apply_bone_break(mob/living/carbon/C)
 	. = ..()
 	if(!.)
 		return
 
 	C.apply_status_effect(/datum/status_effect/limp)
+
+	if(C.handcuffed && prob(25))
+		C.remove_handcuffs(C.drop_location(), silent = TRUE)
 
 /obj/item/bodypart/proc/heal_bones()
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -226,11 +237,16 @@
 
 	var/smol_threshold = minimum_break_damage * 0.4
 	var/beeg_threshold = minimum_break_damage * 0.6
+	// Clamp it to the largest that the wound can be
+	beeg_threshold = min(beeg_threshold, incision.damage_list[1])
+
 	if(!(incision.autoheal_cutoff == 0)) //not clean incision
 		smol_threshold *= 1.5
 		beeg_threshold = max(beeg_threshold, min(beeg_threshold * 1.5, incision.damage_list[1])) //wounds can't achieve bigger
+
 	if(incision.damage >= smol_threshold) //smol incision
 		. = SURGERY_OPEN
+
 	if(incision.damage >= beeg_threshold) //beeg incision
 		. = SURGERY_RETRACTED
 		if(encased && (bodypart_flags & BP_BROKEN_BONES))
