@@ -32731,7 +32731,6 @@
 /area/station/hallway/primary/central)
 "rdq" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
 /turf/open/water,
 /area/station/maintenance/port/lesser)
 "rdv" = (
