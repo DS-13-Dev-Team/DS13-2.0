@@ -11,3 +11,17 @@
   - rscadd: ATM!
   - rscadd: Medical bay respite and slight rearrangement
   - rscadd: normal walls vs all reinforcements
+2024-03-10:
+  Ketrai:
+  - imageadd: Brute Drip
+  blackwolf602:
+  - rscadd: Bot sprites, no more snowflack mostly....
+  - bugfix: scav bot laws updated
+  - bugfix: scav assembly fixed
+  - bugfix: Removed rocks blocking dorms
+  - bugfix: tile icons
+2024-03-11:
+  blackwolf602:
+  - rscadd: inap rig icons
+  - rscadd: Firing pins to armory in case
+  - bugfix: missing icons
