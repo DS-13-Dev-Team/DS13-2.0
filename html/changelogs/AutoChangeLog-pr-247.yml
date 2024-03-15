@@ -1,0 +1,17 @@
+author: MisterGrimm
+delete-after: true
+changes:
+  - qol: Necro AI now tries to escape when stuck in/on something
+  - qol: Booze and Chem dispenser default cartridges now start larger
+  - qol: Corruption creep is no longer clickable, and can be clicked through. Does
+      not effect corruption structures
+  - balance: Maw grabbing time extended from 2 seconds to 3
+  - balance: Snare stun reduced from 2 seconds to 1, reduced knockdown from 7 seconds
+      to 5
+  - balance: Hopper ability to run through mobs is now attached to the Hide ability.
+      Can only run through mobs when Hide is active
+  - balance: Necro acid status damage reduced from 3 to 2
+  - bugfix: Signals can build near mobs as long as they aren't a player
+  - bugfix: False Noise now has spam protection
+  - bugfix: Necro charge no longer runs infinitely if necro misses the target
+  - bugfix: Unitologist knife can no longer fit in any slot
