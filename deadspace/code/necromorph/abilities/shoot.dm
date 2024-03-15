@@ -85,7 +85,7 @@
 /datum/status_effect/bioacid/tick()
 	linked_alert.icon_state = "bioacid"
 	var/armor = owner.run_armor_check(attack_flag = ACID, silent = TRUE)
-	owner.apply_damage(3, BURN, blocked = armor, spread_damage = TRUE)
+	owner.apply_damage(2, BURN, blocked = armor, spread_damage = TRUE)
 
 /datum/status_effect/bioacid/get_examine_text()
 	return span_warning("[owner.p_they(TRUE)] [owner.p_are()] covered in sizzling acid!")
