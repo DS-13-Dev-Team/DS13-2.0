@@ -139,6 +139,9 @@
 	if(++valid_steps_taken <= max_steps_buildup)
 		charger.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/necro_charge, TRUE, -CHARGE_SPEED(src))
 
+	if(valid_steps_taken >= 15) //Sanity check so necros don't charge until they hit something if they miss a target
+		SSmove_manager.stop_looping(owner)
+
 	//Light shake with each step
 	shake_camera(source, 1.5, 0.5)
 

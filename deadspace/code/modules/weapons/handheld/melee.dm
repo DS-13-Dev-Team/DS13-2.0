@@ -8,5 +8,5 @@
 	worn_icon_state = "unitology_ritual_blade"
 	worn_icon = 'deadspace/icons/obj/clothing/belt_overlays.dmi'
 	desc = "A clean, pristine blade used for spiritual and religious purposes"
-	slot_flags = list (ITEM_SLOT_POCKETS, ITEM_SLOT_BELT)
+	slot_flags = ITEM_SLOT_POCKETS | ITEM_SLOT_BELT
 	block_chance = 22 //Surprisingly good at blocking

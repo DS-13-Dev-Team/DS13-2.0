@@ -3,7 +3,7 @@
 	necro_species = /datum/species/necromorph/leaper/hopper
 	//Hoppers get their own AI for when they aren't being player controlled
 	ai_controller = /datum/ai_controller/necromorph
-	pass_flags = PASSTABLE | PASSMOB | PASSFLAPS
+	pass_flags = PASSTABLE | PASSFLAPS
 	pixel_x = 0
 	pixel_y = 0
 	base_pixel_x = 0

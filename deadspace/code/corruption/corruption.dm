@@ -13,6 +13,7 @@
 	icon_state = "corruption-1"
 	base_icon_state = "corruption"
 	layer = NECROMORPH_CORRUPTION_LAYER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT //Corruption can be clicked through
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = SMOOTH_GROUP_NECROMORPHS
 	canSmoothWith = SMOOTH_GROUP_NECROMORPHS + SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_WALLS
@@ -22,7 +23,6 @@
 	//Smallest alpha we can get in on_integrity_change()
 	alpha = 20
 	resistance_flags = UNACIDABLE
-	obj_flags = CAN_BE_HIT
 	pass_flags = PASSTABLE | PASSGRILLE
 	interaction_flags_atom = NONE
 	/// Node that keeps us alive
@@ -252,7 +252,7 @@
 			START_PROCESSING(SScorruption, src)
 		else if(new_integrity >= max_integrity)
 			update_spread_state()
-	alpha = clamp(255*new_integrity/max_integrity, 20, 215)
+	alpha = clamp(255*new_integrity/max_integrity, 20, 185)
 
 // Doesn't do any safety checks, make sure to do them first
 /obj/structure/corruption/proc/set_master(datum/corruption_node/new_master)
@@ -275,15 +275,7 @@
 	new_master.marker.markernet.addVisionSource(src, VISION_SOURCE_RANGE)
 
 /obj/structure/corruption/play_attack_sound(damage_amount, damage_type, damage_flag)
-	switch(damage_type)
-		if(BRUTE)
-			if(damage_amount)
-				playsound(loc, 'sound/effects/attackblob.ogg', 100, TRUE)
-			else
-				playsound(src, 'sound/weapons/tap.ogg', 50, TRUE)
-		if(BURN)
-			if(damage_amount)
-				playsound(loc, 'sound/items/welder.ogg', 100, TRUE)
+	return
 
 /obj/structure/corruption/run_atom_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
 	switch(damage_type)
