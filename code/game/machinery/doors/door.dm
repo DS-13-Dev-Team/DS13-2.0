@@ -17,7 +17,6 @@ DEFINE_INTERACTABLE(/obj/machinery/door)
 	can_atmos_pass = CANPASS_PROC
 	flags_1 = PREVENT_CLICK_UNDER_1
 	receive_ricochet_chance_mod = 0.8
-	damage_deflection = 10
 
 	interaction_flags_atom = INTERACT_ATOM_UI_INTERACT | INTERACT_ATOM_NO_FINGERPRINT_ATTACK_HAND
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
@@ -143,10 +142,7 @@ DEFINE_INTERACTABLE(/obj/machinery/door)
 /obj/machinery/door/examine(mob/user)
 	. = ..()
 	if(red_alert_access)
-		if(SSsecurity_level.current_level >= SEC_LEVEL_RED)
-			. += span_notice("Due to a security threat, its access requirements have been lifted!")
-		else
-			. += span_notice("In the event of a red alert, its access requirements will automatically lift.")
+		. += span_notice("In the event of a red alert, its access requirements will automatically lift.")
 	. += span_notice("Its maintenance panel is [panel_open ? "open" : "<b>screwed</b> in place"].")
 
 /obj/machinery/door/add_context(atom/source, list/context, obj/item/held_item, mob/user)
@@ -361,13 +357,16 @@ DEFINE_INTERACTABLE(/obj/machinery/door)
 	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/door/attackby(obj/item/I, mob/living/user, params)
-	if(!user.combat_mode && istype(I, /obj/item/fireaxe))
+	if((I.item_flags & NOBLUDGEON) || user.combat_mode)
+		return ..()
+
+	if(istype(I, /obj/item/fireaxe))
 		try_to_crowbar(I, user, FALSE)
 		return TRUE
-	else if(I.item_flags & NOBLUDGEON || user.combat_mode)
-		return ..()
-	else if(try_to_activate_door(user, attackedby = I))
+
+	if(try_to_activate_door(user, attackedby = I))
 		return TRUE
+
 	return ..()
 
 /obj/machinery/door/welder_act_secondary(mob/living/user, obj/item/tool)

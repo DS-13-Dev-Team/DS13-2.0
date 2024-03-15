@@ -104,8 +104,8 @@
 		name = dryname
 		desc = drydesc
 		reagents.remove_all_type(/datum/reagent/blood, INFINITY)
-		var/temp_color = ReadHSV(RGBtoHSV(color || COLOR_WHITE))
-		color = HSVtoRGB(hsv(temp_color[1], temp_color[2], max(temp_color[3] - 100, 0)))
+		var/list/temp_color = rgb2hsv(color || COLOR_WHITE)
+		color = hsv2rgb(temp_color[1], temp_color[2], max(temp_color[3] - 100, 0))
 		qdel(GetComponent(/datum/component/smell))
 		if(spook_factor)
 			AddComponent(/datum/component/spook_factor, spook_factor)
@@ -449,11 +449,11 @@
 	if(!shoe_types.len)
 		return
 
-	. += "You recognise the footprints as belonging to:"
+	. += span_notice("You recognise the footprints as belonging to:")
 	for(var/sole in shoe_types)
 		var/obj/item/clothing/item = sole
 		var/article = initial(item.gender) == PLURAL ? "Some" : "A"
-		. += "[icon2html(initial(item.icon), user, initial(item.icon_state))] [article] <B>[initial(item.name)]</B>."
+		. += span_notice("* [icon2html(initial(item.icon), user, initial(item.icon_state))] [article] <B>[initial(item.name)]</B>.")
 
 /obj/effect/decal/cleanable/blood/footprints/can_merge_into(obj/effect/decal/cleanable/blood/C)
 	if(blood_color != C.blood_color || blood_print != C.blood_print) //We only replace footprints of the same type as us

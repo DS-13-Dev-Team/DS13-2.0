@@ -45,9 +45,10 @@
 	. = ..()
 	if(!(resistance_flags & INDESTRUCTIBLE))
 		if(resistance_flags & ON_FIRE)
-			. += span_warning("It's on fire!")
+			. += span_alert("FIRE!!")
 		if(broken)
-			. += span_notice("It appears to be broken.")
+			. += span_alert("It appears to be broken.")
+
 		var/examine_status = examine_status(user)
 		if(examine_status)
 			. += examine_status
@@ -91,7 +92,7 @@
 		var/obj/O = highest
 		if(!O.uses_integrity)
 			return
-		O.take_damage(80 * levels)
+		O.take_damage(10 * levels)
 
 	if(ismob(highest))
 		var/mob/living/L = highest
