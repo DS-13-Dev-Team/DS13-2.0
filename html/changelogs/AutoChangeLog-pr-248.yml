@@ -1,6 +1,0 @@
-author: blackwolf602
-delete-after: true
-changes:
-  - rscadd: Reworks the sewer
-  - rscadd: legacy standard engineer rig
-  - bugfix: tiles
