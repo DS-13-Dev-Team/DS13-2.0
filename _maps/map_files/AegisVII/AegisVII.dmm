@@ -19166,7 +19166,6 @@
 /obj/machinery/camera/directional/south{
 	c_tag = "Science Hallway - South"
 	},
-/obj/machinery/power/apc/auto_name/directional/south,
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -25315,6 +25314,9 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/norn,
 /area/station/hallway/primary/starboard)
+"nkt" = (
+/turf/closed/wall/r_wall,
+/area/station/science/misc_lab)
 "nkC" = (
 /obj/machinery/firealarm/directional/north,
 /obj/machinery/light/directional/north,
@@ -25879,9 +25881,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable/yellow{
 	icon_state = "12"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "9"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "10"
@@ -27294,11 +27293,13 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/security/brig/upper)
 "olk" = (
-/obj/effect/landmark/start/geneticist,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable/yellow{
+	icon_state = "8"
+	},
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "olE" = (
@@ -27481,6 +27482,9 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/cable/yellow{
+	icon_state = "5"
+	},
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "ori" = (
@@ -31106,6 +31110,11 @@
 	},
 /turf/open/floor/plating,
 /area/station/cargo/warehouse/upper)
+"qfz" = (
+/obj/effect/turf_decal/trimline/purple/filled/line,
+/obj/structure/extinguisher_cabinet/directional/south,
+/turf/open/floor/iron/white,
+/area/station/science/research)
 "qfE" = (
 /obj/machinery/door/window/right/directional/south,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -38371,7 +38380,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 6
 	},
-/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "udH" = (
@@ -43717,6 +43725,10 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
+/obj/effect/landmark/start/geneticist,
+/obj/structure/cable/yellow{
+	icon_state = "6"
+	},
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "wSf" = (
@@ -44217,7 +44229,7 @@
 "xeG" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable/yellow{
-	icon_state = "3"
+	icon_state = "9"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -91841,7 +91853,7 @@ afr
 kLD
 vOY
 tJQ
-dKZ
+qfz
 tdh
 uoC
 wqe
@@ -92470,7 +92482,7 @@ vwJ
 vwJ
 vFJ
 vwJ
-tuX
+nkt
 uDf
 vMW
 qrt
@@ -92627,7 +92639,7 @@ aki
 bcE
 qkV
 lZc
-uCm
+ogK
 kPw
 bhr
 tas
@@ -92784,7 +92796,7 @@ eDO
 kDo
 qqF
 kRL
-uCm
+ogK
 sbK
 vcv
 pnl
