@@ -41,7 +41,7 @@
 	span_userdanger("\The [src] stretches out to grab you!"))
 
 	//Give the target time to run, then drag their ass to the shadowrealm if they are still there
-	addtimer(CALLBACK(src, PROC_REF(maw_grab), AM), 2 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(maw_grab), AM), 3 SECONDS)
 
 ///General checker before maw grabs, buckling will do a second check if this goes through
 /obj/structure/necromorph/maw/proc/maw_can_grab(atom/movable/AM)

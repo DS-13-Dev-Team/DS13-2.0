@@ -1,6 +1,52 @@
 2024-03-01:
   pitaden:
   - bugfix: plasma sprites now change with stack size
+2024-03-03:
+  Kapu1178:
+  - rscadd: ALL reagents now have a codex entry
+  - balance: Changed plasma vaporization temperature from 323K to 519K (Plasma will
+      ignite at this temperature!)
+  - balance: Reduced heat produced by Dexalin reaction.
+  - bugfix: Codex searches prioritize results where the query was found in the name
+      again.
+  - qol: Improved readability of reagent codex entries with multiple reactions.
+  - qol: Added plasma ignition temperature to the codex.
+  - rscadd: Engineers start with insulated gloves.
+  - rscadd: You can now click-drag items on tables to shuffles them around.
+  - rscadd: Added many new codex entries.
+  - tweak: Cleaned up a ton of examine text to remove meta information.
+  - tweak: Extinguisher cabinets can now be opened/closed with right click, in addition
+      to alt click.
+  - balance: Crowbars are now normal sized objects (up from small).
+  - bugfix: Vox players with Leg Scutes no longer crash the server.
+  pitaden:
+  - qol: reactions in the codex now show if they're exothermic/endothermic
+2024-03-05:
+  Kapu1178:
+  - rscadd: Items now autogenerate codex information.
+  - qol: Improved grammar of examine text.
+  - bugfix: Admins can use equip outfit on IPCs.
+  - bugfix: Vox blood, like, works.
+  - bugfix: Retract Skin surgery works correctly on heads.
+  - qol: Brain Revival surgery can now be done with most reagent containers, and only
+      requires 5 units.
+  - qol: Stripping is now able to be performed any time, unless you are in an aggressive
+      grab and dont have combat mode turned on. In this case, you will attempt a fireman
+      carry.
+  - bugfix: Tables function correctly again. Notably, operating tables will turn off
+      their vitals monitor if the patient leaves the table.
+  - balance: Nicotine addiction builds 50% as fast as it used to.
+  - balance: Many objects that were previously borderline indestructible to players
+      are now destructible. Most notably, Airlocks and Firedoors can now be destroyed
+      with weapons as strong as a wrench. It will take a while though.
+  - balance: Firedoor health reduced substantially.
+  - rscadd: You can now shimmy through airlock assemblies by clicking on them with
+      an empty hand.
+2024-03-06:
+  Kapu1178:
+  - bugfix: Addictive reagents scale with the amount of reagent consumed properly.
+  - bugfix: IPCs can no longer get addicted to substances.
+  - bugfix: Rescaled alcohol effects
 2024-03-07:
   blackwolf602:
   - rscadd: Inap rig
@@ -25,3 +71,36 @@
   - rscadd: inap rig icons
   - rscadd: Firing pins to armory in case
   - bugfix: missing icons
+2024-03-12:
+  Kapu1178:
+  - bugfix: Neck-level grabs correctly move the victim.
+  - bugfix: You can no longer move neck-level grab victims off your tile.
+  - bugfix: Mobs buckled to a grabbed object now inherit the offset
+  - qol: Cleaned up how repositioning grabbed movables works.
+  - bugfix: Two-handed items function better.
+  - bugfix: Fixed a sound not playing from fabricators.
+  - bugfix: Cleanbots no longer get stuck spraying acid on specific blood decals.
+  - bugfix: The monochrome ghost vision pref actually works (lol).
+2024-03-13:
+  Kapu1178:
+  - bugfix: Handcuffs no longer immobilize you.
+2024-03-16:
+  MisterGrimm:
+  - qol: Necro AI now tries to escape when stuck in/on something
+  - qol: Booze and Chem dispenser default cartridges now start larger
+  - qol: Corruption creep is no longer clickable, and can be clicked through. Does
+      not effect corruption structures
+  - balance: Maw grabbing time extended from 2 seconds to 3
+  - balance: Snare stun reduced from 2 seconds to 1, reduced knockdown from 7 seconds
+      to 5
+  - balance: Hopper ability to run through mobs is now attached to the Hide ability.
+      Can only run through mobs when Hide is active
+  - balance: Necro acid status damage reduced from 3 to 2
+  - bugfix: Signals can build near mobs as long as they aren't a player
+  - bugfix: False Noise now has spam protection
+  - bugfix: Necro charge no longer runs infinitely if necro misses the target
+  - bugfix: Unitologist knife can no longer fit in any slot
+  blackwolf602:
+  - rscadd: Reworks the sewer
+  - rscadd: legacy standard engineer rig
+  - bugfix: tiles

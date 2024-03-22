@@ -92,6 +92,6 @@
 			return "Turf is obstructed!"
 	if(!can_place_in_sight)
 		for(var/mob/living/living in viewers(world.view, turf_loc))
-			if(!isnecromorph(living) && (living.stat < UNCONSCIOUS) && !HAS_TRAIT(living, TRAIT_BLIND))
-				return "Turf is in sight of a living creature!"
+			if((!isnecromorph(living) && living.ckey) && (living.stat < UNCONSCIOUS) && !HAS_TRAIT(living, TRAIT_BLIND))
+				return "Turf is in sight of a sentient creature!"
 	return

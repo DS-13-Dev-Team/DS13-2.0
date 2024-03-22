@@ -88,11 +88,6 @@
 	mask = /obj/item/clothing/mask/breath
 	r_hand = /obj/item/tank/internals/plasmaman/belt/full
 
-/datum/outfit/job/engineer/gloved
-	name = "Station Engineer (Gloves)"
-
-	gloves = /obj/item/clothing/gloves/color/yellow
-
 /datum/outfit/job/engineer/mod
 	name = "Station Engineer (MODsuit)"
 

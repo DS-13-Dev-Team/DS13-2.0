@@ -10,7 +10,6 @@
 	taste_description = "bitterness"
 	chemical_flags = REAGENT_IGNORE_MOB_SIZE
 	abstract_type = /datum/reagent/medicine
-	show_in_codex = TRUE
 
 /datum/reagent/medicine/adminordrazine //An OP chemical for admins
 	name = "Adminordrazine"
@@ -441,7 +440,7 @@
 
 	holder.remove_reagent(/datum/reagent/toxin/mindbreaker, 5)
 
-	C.adjustToxLoss(5 * removed, updating_health = FALSE) // It used to be incredibly deadly due to an oversight. Not anymore!
+	C.adjustToxLoss(3 * removed, updating_health = FALSE) // It used to be incredibly deadly due to an oversight. Not anymore!
 	APPLY_CHEM_EFFECT(C, CE_PAINKILLER, 20)
 	APPLY_CHEM_EFFECT(C, CE_STIMULANT, 10)
 	return TRUE

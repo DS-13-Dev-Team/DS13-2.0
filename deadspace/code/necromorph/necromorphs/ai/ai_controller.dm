@@ -1,4 +1,4 @@
-//The brains of the ai controlled necromorphs
+///The brains of the ai controlled necromorphs, meant for human based necromorphs.
 /datum/ai_controller/necromorph
 	//List of sub actions a AI can do, mutates actions based on planning to do different stuff
 	blackboard = list(
@@ -10,14 +10,15 @@
 
 	//I would give them more complex pathfinding, but im worried too many of them will bog down the server
 	ai_movement = /datum/ai_movement/basic_avoidance
-	idle_behavior = /datum/idle_behavior/idle_random_walk
+	idle_behavior = /datum/idle_behavior/idle_random_walk/necromorph
 	movement_delay = 0.25 SECONDS
 
 	//The planning part of the AI. Works from top to bottom in priority, works downward as it runs out of stuff to do
 	planning_subtrees = list(
+		/datum/ai_planning_subtree/escape_confinement,
 		/datum/ai_planning_subtree/simple_find_target,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree/necro,
-	)
+	) //TODO : Make a subtree for necros attacking objects to get to the target
 
 /datum/ai_controller/necromorph/TryPossessPawn(atom/new_pawn)
 	if(!isliving(new_pawn))
@@ -30,6 +31,10 @@
 	if(IS_DEAD_OR_INCAP(living_pawn))
 		return FALSE
 	return ..()
+
+/datum/idle_behavior/idle_random_walk/necromorph
+	///Chance that the mob random walks per second
+	walk_chance = 40
 
 /datum/ai_planning_subtree/basic_melee_attack_subtree/necro
 	melee_attack_behavior = /datum/ai_behavior/necro_attack
@@ -67,3 +72,23 @@
 	. = ..()
 	if(!succeeded)
 		controller.blackboard -= target_key
+
+//Planner for if the necro gets stuck and needs to go crazy to get out
+/datum/ai_planning_subtree/escape_confinement/SelectBehaviors(datum/ai_controller/controller, delta_time)
+	var/mob/living/carbon/human/necro = controller.pawn
+	if(necro.buckled || (!isturf(necro.loc) && necro.loc != null)) //Buckled or in something? Panic
+		controller.queue_behavior(/datum/ai_behavior/escape_confinement)
+		return SUBTREE_RETURN_FINISH_PLANNING //Don't do anything else until you get unstuck
+
+/datum/ai_behavior/escape_confinement
+	action_cooldown = 1.5 SECONDS
+	behavior_flags = NONE
+
+/datum/ai_behavior/escape_confinement/perform(delta_time, datum/ai_controller/controller)
+	. = ..()
+	var/mob/living/carbon/human/necro = controller.pawn
+	var/atom/A = necro.loc
+	if(necro.buckled)
+		necro.UnarmedAttack(necro.buckled)
+	if(!isturf(A) && A != null) //Am I in something?
+		necro.UnarmedAttack(A) //MICHAEL, DON'T LEAVE ME HERE!

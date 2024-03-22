@@ -146,6 +146,10 @@
 		/obj/item/mod/module/rad_protection,
 	)
 
+/obj/item/mod/skin_applier/standard_legacy
+	skin = "legacy_standard_engineer"
+	compatible_theme = /datum/mod_theme/deadspace/standard_engineer
+
 /obj/item/mod/skin_applier/standard_anodized
 	skin = "standard_engineer_anodized"
 	compatible_theme = /datum/mod_theme/deadspace/standard_engineer
