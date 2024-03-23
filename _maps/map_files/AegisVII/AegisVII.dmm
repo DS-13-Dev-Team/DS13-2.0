@@ -38099,7 +38099,9 @@
 /area/station/command/bridge)
 "tPZ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/table,
+/obj/machinery/modular_computer/console/preset/cargochat/service{
+	dir = 4
+	},
 /turf/open/floor/deadspace/mono,
 /area/station/hallway/secondary/service)
 "tQe" = (
@@ -43180,7 +43182,7 @@
 /turf/open/floor/iron/dark/side,
 /area/station/science/lab)
 "wwr" = (
-/obj/machinery/modular_computer/console/preset/cargochat/engineering,
+/obj/machinery/computer/cargo/request,
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
 	dir = 10
 	},
