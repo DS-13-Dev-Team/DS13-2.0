@@ -305,3 +305,6 @@
 /turf/open/floor/deadspace/med/triage_white
 	base_icon_state = "triage_white"
 	icon_state = "triage_white"
+
+/turf/open/floor/deadspace/grating
+	icon_state = "tramgrating"

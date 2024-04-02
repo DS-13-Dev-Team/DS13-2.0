@@ -110,9 +110,9 @@
 /area/space)
 "fG" = (
 /obj/structure/industrial_lift/tram/ds/corner{
-	dir = 6
+	dir = 9
 	},
-/turf/open/space/basic,
+/turf/open/openspace,
 /area/space)
 "fH" = (
 /turf/open/floor/deadspace/random/slides{
@@ -125,10 +125,9 @@
 	},
 /area/space)
 "fO" = (
-/obj/structure/industrial_lift/tram/ds/corner{
-	dir = 5
-	},
-/turf/open/space/basic,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/industrial_lift/tram/ds,
+/turf/open/openspace,
 /area/space)
 "fY" = (
 /obj/structure/railing{
@@ -210,6 +209,15 @@
 /obj/structure/stairs/west,
 /turf/open/space/basic,
 /area/space)
+"jt" = (
+/obj/structure/industrial_lift/tram/ds/corner{
+	dir = 6
+	},
+/obj/structure/table,
+/obj/effect/spawner/random/engineering/tool,
+/obj/effect/spawner/random/engineering/tool,
+/turf/open/openspace,
+/area/space)
 "ka" = (
 /turf/open/floor/catwalk_floor,
 /area/space)
@@ -238,6 +246,11 @@
 /turf/open/floor/iron/smooth_corner{
 	dir = 1
 	},
+/area/space)
+"lm" = (
+/obj/structure/industrial_lift/tram/ds,
+/obj/effect/landmark/lift_id,
+/turf/open/openspace,
 /area/space)
 "lo" = (
 /obj/structure/railing,
@@ -302,13 +315,21 @@
 /area/space)
 "oe" = (
 /obj/structure/industrial_lift/tram/ds/corner,
-/turf/open/space/basic,
+/turf/open/openspace,
+/area/space)
+"om" = (
+/obj/structure/industrial_lift/tram/ds/corner{
+	dir = 5
+	},
+/obj/structure/closet/firecloset,
+/turf/open/openspace,
 /area/space)
 "oP" = (
 /obj/structure/industrial_lift/tram/ds/corner{
 	dir = 1
 	},
-/turf/open/space/basic,
+/obj/structure/chair/sofa/bench,
+/turf/open/openspace,
 /area/space)
 "pu" = (
 /obj/structure/railing{
@@ -348,9 +369,10 @@
 	},
 /area/space)
 "ry" = (
-/obj/structure/industrial_lift/tram/ds,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/space/basic,
+/obj/structure/industrial_lift/tram/ds/corner{
+	dir = 10
+	},
+/turf/open/openspace,
 /area/space)
 "rF" = (
 /obj/machinery/door/firedoor,
@@ -462,6 +484,14 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/space)
+"xm" = (
+/obj/structure/industrial_lift/tram/ds/corner{
+	dir = 10
+	},
+/obj/structure/table,
+/obj/effect/spawner/random/engineering/toolbox,
+/turf/open/openspace,
+/area/space)
 "xV" = (
 /obj/structure/railing{
 	dir = 6
@@ -490,9 +520,9 @@
 /area/space)
 "zE" = (
 /obj/structure/industrial_lift/tram/ds/corner{
-	dir = 8
+	dir = 5
 	},
-/turf/open/space/basic,
+/turf/open/openspace,
 /area/space)
 "Ao" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
@@ -509,9 +539,9 @@
 /area/space)
 "Ay" = (
 /obj/structure/industrial_lift/tram/ds/corner{
-	dir = 4
+	dir = 8
 	},
-/turf/open/space/basic,
+/turf/open/openspace,
 /area/space)
 "AG" = (
 /turf/open/floor/iron/smooth_edge,
@@ -539,10 +569,11 @@
 /turf/open/floor/iron/white,
 /area/space)
 "CF" = (
-/obj/structure/industrial_lift/tram/ds/corner{
-	dir = 10
+/obj/structure/industrial_lift/tram/ds/corner,
+/obj/structure/chair/sofa/bench{
+	dir = 1
 	},
-/turf/open/space/basic,
+/turf/open/openspace,
 /area/space)
 "CP" = (
 /obj/structure/railing{
@@ -694,6 +725,12 @@
 	},
 /turf/open/openspace,
 /area/space)
+"JF" = (
+/obj/structure/industrial_lift/tram/ds/corner{
+	dir = 4
+	},
+/turf/open/openspace,
+/area/space)
 "Kc" = (
 /obj/structure/fluff/tram_rail{
 	dir = 1
@@ -728,14 +765,21 @@
 /area/space)
 "KH" = (
 /obj/structure/industrial_lift/tram/ds/corner{
-	dir = 9
+	dir = 1
 	},
-/turf/open/space/basic,
+/turf/open/openspace,
 /area/space)
 "Lh" = (
 /obj/structure/railing{
 	dir = 5
 	},
+/turf/open/openspace,
+/area/space)
+"Lr" = (
+/obj/structure/industrial_lift/tram/ds/corner{
+	dir = 9
+	},
+/obj/structure/closet/emcloset,
 /turf/open/openspace,
 /area/space)
 "LO" = (
@@ -760,7 +804,7 @@
 /area/space)
 "Mo" = (
 /obj/structure/industrial_lift/tram/ds,
-/turf/open/space/basic,
+/turf/open/openspace,
 /area/space)
 "Mx" = (
 /obj/item/kirbyplants/random,
@@ -992,13 +1036,19 @@
 "Xd" = (
 /turf/open/floor/deadspace/random/rectangles,
 /area/space)
+"Xq" = (
+/obj/structure/industrial_lift/tram/ds/corner{
+	dir = 6
+	},
+/turf/open/openspace,
+/area/space)
 "XJ" = (
 /obj/structure/industrial_lift/tram/ds,
 /obj/machinery/computer/tram_controls{
 	dir = 8;
 	specific_lift_id = "tram_hilbert"
 	},
-/turf/open/space/basic,
+/turf/open/openspace,
 /area/space)
 "Yy" = (
 /obj/structure/railing{
@@ -42889,11 +42939,11 @@ Iy
 Iy
 Iy
 Iy
-Iy
-Iy
-Iy
-Iy
-Iy
+do
+fO
+fO
+fO
+do
 Iy
 Iy
 Iy
@@ -43061,11 +43111,11 @@ Iy
 Iy
 Iy
 Iy
-Iy
-Iy
-Iy
-Iy
-Iy
+do
+Lr
+Ay
+xm
+do
 Iy
 Iy
 Iy
@@ -43234,9 +43284,9 @@ Iy
 Iy
 Iy
 do
-do
-do
-do
+om
+Mo
+jt
 do
 Iy
 Iy
@@ -43406,9 +43456,9 @@ Iy
 Iy
 Iy
 do
-KH
-zE
-CF
+do
+Mo
+do
 do
 Iy
 Iy
@@ -43577,11 +43627,11 @@ Iy
 Iy
 Iy
 Iy
-ry
+do
 oP
 Mo
-oe
-ry
+CF
+do
 Iy
 Iy
 Iy
@@ -43749,11 +43799,11 @@ Iy
 Iy
 Iy
 Iy
-ry
+do
 oP
 Mo
-oe
-ry
+CF
+do
 Iy
 Iy
 Iy
@@ -43922,7 +43972,7 @@ Iy
 Iy
 Iy
 do
-oP
+KH
 Mo
 oe
 do
@@ -44093,11 +44143,11 @@ Iy
 Iy
 Iy
 Iy
-TV
-oP
-Mo
-oe
 td
+KH
+lm
+oe
+TV
 Iy
 Iy
 Iy
@@ -44265,11 +44315,11 @@ Iy
 Iy
 Iy
 Iy
-tt
-oP
+VO
+KH
 XJ
 oe
-VO
+tt
 Iy
 Iy
 Iy
@@ -44438,7 +44488,7 @@ Iy
 Iy
 Iy
 do
-oP
+KH
 Mo
 oe
 do
@@ -44609,11 +44659,11 @@ Iy
 Iy
 Iy
 Iy
-ry
+do
 oP
 Mo
-oe
-ry
+CF
+do
 Iy
 Iy
 Iy
@@ -44781,11 +44831,11 @@ Iy
 Iy
 Iy
 Iy
-ry
+do
 oP
 Mo
-oe
-ry
+CF
+do
 Iy
 Iy
 Iy
@@ -44954,9 +45004,9 @@ Iy
 Iy
 Iy
 do
-fO
-Ay
-fG
+do
+Mo
+do
 do
 Iy
 Iy
@@ -45126,9 +45176,9 @@ Iy
 Iy
 Iy
 do
-do
-do
-do
+fG
+Mo
+ry
 do
 Iy
 Iy
@@ -45297,11 +45347,11 @@ Iy
 Iy
 Iy
 Iy
-Iy
-Iy
-Iy
-Iy
-Iy
+do
+zE
+JF
+Xq
+do
 Iy
 Iy
 Iy
@@ -45469,11 +45519,11 @@ Iy
 Iy
 Iy
 Iy
-Iy
-Iy
-Iy
-Iy
-Iy
+do
+fO
+fO
+fO
+do
 Iy
 Iy
 Iy
