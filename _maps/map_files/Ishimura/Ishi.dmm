@@ -1044,10 +1044,7 @@
 /area/space)
 "XJ" = (
 /obj/structure/industrial_lift/tram/ds,
-/obj/machinery/computer/tram_controls{
-	dir = 8;
-	specific_lift_id = "tram_hilbert"
-	},
+/obj/machinery/computer/tram_controls/ds,
 /turf/open/openspace,
 /area/space)
 "Yy" = (
