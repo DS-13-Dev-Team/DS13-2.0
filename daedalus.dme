@@ -4822,6 +4822,7 @@
 #include "deadspace\code\modules\effects\cec_posters.dm"
 #include "deadspace\code\modules\effects\cec_signs.dm"
 #include "deadspace\code\modules\effects\scaf_posters.dm"
+#include "deadspace\code\modules\industrial_lift\industrial_lift.dm"
 #include "deadspace\code\modules\mob\living\inhand_holder.dm"
 #include "deadspace\code\modules\mob\living\simple_animal\drones_as_items.dm"
 #include "deadspace\code\modules\mob\living\simple_animal\friendly\drone\amongusflash.dm"
