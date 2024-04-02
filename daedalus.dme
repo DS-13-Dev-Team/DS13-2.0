@@ -4702,6 +4702,7 @@
 #include "deadspace\code\game\sprawl_holodisks.dm"
 #include "deadspace\code\game\turf.dm"
 #include "deadspace\code\game\gamemodes\containment\containment.dm"
+#include "deadspace\code\game\machinery\doors.dm"
 #include "deadspace\code\game\objects\items\shard.dm"
 #include "deadspace\code\game\objects\items\storage\backpacks.dm"
 #include "deadspace\code\game\objects\items\storage\book.dm"

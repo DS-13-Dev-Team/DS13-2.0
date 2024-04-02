@@ -382,6 +382,11 @@
 /obj/structure/railing/corner,
 /turf/open/floor/iron/dark,
 /area/space)
+"sx" = (
+/obj/structure/industrial_lift/tram/ds/warning,
+/obj/machinery/door/airlock/tram,
+/turf/open/space/basic,
+/area/space)
 "sP" = (
 /obj/structure/railing{
 	dir = 1
@@ -394,8 +399,9 @@
 /area/space)
 "td" = (
 /obj/structure/industrial_lift/tram/ds/warning{
-	dir = 4
+	dir = 8
 	},
+/obj/machinery/door/airlock/tram,
 /turf/open/space/basic,
 /area/space)
 "tn" = (
@@ -408,10 +414,9 @@
 /turf/open/floor/deadspace/medical,
 /area/space)
 "tt" = (
-/obj/structure/industrial_lift/tram/ds/warning{
-	dir = 1
-	},
-/turf/open/space/basic,
+/obj/structure/industrial_lift/tram/ds,
+/obj/machinery/door/airlock/tram,
+/turf/open/openspace,
 /area/space)
 "tz" = (
 /obj/structure/railing,
@@ -650,6 +655,13 @@
 	dir = 9
 	},
 /turf/open/openspace,
+/area/space)
+"Ha" = (
+/obj/structure/industrial_lift/tram/ds/warning{
+	dir = 4
+	},
+/obj/machinery/door/airlock/tram,
+/turf/open/space/basic,
 /area/space)
 "Hd" = (
 /obj/structure/railing/corner{
@@ -982,7 +994,10 @@
 /turf/open/floor/iron/smooth_large,
 /area/space)
 "TV" = (
-/obj/structure/industrial_lift/tram/ds/warning,
+/obj/structure/industrial_lift/tram/ds/warning{
+	dir = 1
+	},
+/obj/machinery/door/airlock/tram,
 /turf/open/space/basic,
 /area/space)
 "UQ" = (
@@ -1011,10 +1026,9 @@
 /turf/open/floor/iron/dark,
 /area/space)
 "VO" = (
-/obj/structure/industrial_lift/tram/ds/warning{
-	dir = 8
+/turf/open/floor/deadspace/tram/grating{
+	dir = 4
 	},
-/turf/open/space/basic,
 /area/space)
 "VZ" = (
 /obj/effect/landmark/tram/left_part/hilbert,
@@ -42768,11 +42782,11 @@ Iy
 Iy
 Iy
 Iy
-Iy
-Iy
-Iy
-Iy
-Iy
+do
+fO
+fO
+fO
+do
 Iy
 Iy
 Iy
@@ -42941,9 +42955,9 @@ Iy
 Iy
 Iy
 do
-fO
-fO
-fO
+Lr
+Ay
+xm
 do
 Iy
 Iy
@@ -43113,9 +43127,9 @@ Iy
 Iy
 Iy
 do
-Lr
-Ay
-xm
+om
+Mo
+jt
 do
 Iy
 Iy
@@ -43285,9 +43299,9 @@ Iy
 Iy
 Iy
 do
-om
-Mo
-jt
+do
+tt
+do
 do
 Iy
 Iy
@@ -43457,9 +43471,9 @@ Iy
 Iy
 Iy
 do
-do
+oP
 Mo
-do
+CF
 do
 Iy
 Iy
@@ -43470,7 +43484,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -43642,7 +43656,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -43801,9 +43815,9 @@ Iy
 Iy
 Iy
 do
-oP
+KH
 Mo
-CF
+oe
 do
 Iy
 Iy
@@ -43814,7 +43828,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -43972,11 +43986,11 @@ Iy
 Iy
 Iy
 Iy
-do
+Ha
 KH
-Mo
+lm
 oe
-do
+sx
 Iy
 Iy
 Iy
@@ -43986,7 +44000,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -44146,7 +44160,7 @@ Iy
 Iy
 td
 KH
-lm
+XJ
 oe
 TV
 Iy
@@ -44158,7 +44172,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -44316,11 +44330,11 @@ Iy
 Iy
 Iy
 Iy
-VO
+do
 KH
-XJ
+Mo
 oe
-tt
+do
 Iy
 Iy
 Iy
@@ -44330,7 +44344,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -44489,9 +44503,9 @@ Iy
 Iy
 Iy
 do
-KH
+oP
 Mo
-oe
+CF
 do
 Iy
 Iy
@@ -44502,7 +44516,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -44674,7 +44688,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -44833,9 +44847,9 @@ Iy
 Iy
 Iy
 do
-oP
-Mo
-CF
+do
+tt
+do
 do
 Iy
 Iy
@@ -44846,7 +44860,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -45005,9 +45019,9 @@ Iy
 Iy
 Iy
 do
-do
+fG
 Mo
-do
+ry
 do
 Iy
 Iy
@@ -45018,7 +45032,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -45177,9 +45191,9 @@ Iy
 Iy
 Iy
 do
-fG
-Mo
-ry
+zE
+JF
+Xq
 do
 Iy
 Iy
@@ -45190,7 +45204,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -45349,9 +45363,9 @@ Iy
 Iy
 Iy
 do
-zE
-JF
-Xq
+fO
+fO
+fO
 do
 Iy
 Iy
@@ -45362,7 +45376,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -45520,11 +45534,11 @@ Iy
 Iy
 Iy
 Iy
-do
-fO
-fO
-fO
-do
+Iy
+Iy
+Iy
+Iy
+Iy
 Iy
 Iy
 Iy
@@ -45534,7 +45548,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -45706,7 +45720,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -45878,7 +45892,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -46050,7 +46064,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -46222,7 +46236,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -46394,7 +46408,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -46566,7 +46580,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -46738,7 +46752,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -46910,7 +46924,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -47082,7 +47096,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -47254,7 +47268,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -47426,7 +47440,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -47598,7 +47612,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -47770,7 +47784,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -47942,7 +47956,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -48114,7 +48128,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -48286,7 +48300,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -48458,7 +48472,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -48630,7 +48644,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -48802,7 +48816,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -48974,7 +48988,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -49146,7 +49160,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -49318,7 +49332,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -49490,7 +49504,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -49662,7 +49676,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -49834,7 +49848,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -50006,7 +50020,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -50178,7 +50192,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -50350,7 +50364,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -50522,7 +50536,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -50694,7 +50708,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -50866,7 +50880,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -51038,7 +51052,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -51210,7 +51224,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -51382,7 +51396,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -51554,7 +51568,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -51726,7 +51740,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -51898,7 +51912,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -52070,7 +52084,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -52242,7 +52256,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -52414,7 +52428,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -52586,7 +52600,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -52758,7 +52772,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -52930,7 +52944,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -53102,7 +53116,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -53274,7 +53288,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -53446,7 +53460,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -53618,7 +53632,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -53790,7 +53804,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -53962,7 +53976,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -54134,7 +54148,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -54306,7 +54320,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -54478,7 +54492,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -54650,7 +54664,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -54822,7 +54836,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -54994,7 +55008,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -55166,7 +55180,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -55338,7 +55352,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -55510,7 +55524,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -55682,7 +55696,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -55854,7 +55868,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -56026,7 +56040,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -56198,7 +56212,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -56370,7 +56384,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -56542,7 +56556,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -56714,7 +56728,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -56886,7 +56900,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -57058,7 +57072,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -57230,7 +57244,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -57402,7 +57416,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -57574,7 +57588,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -57746,7 +57760,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -57918,7 +57932,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -58090,7 +58104,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -58262,7 +58276,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -58434,7 +58448,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -58606,7 +58620,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -58778,7 +58792,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -58950,7 +58964,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -59122,7 +59136,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -59294,7 +59308,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -59466,7 +59480,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -59638,7 +59652,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -59810,7 +59824,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -59982,7 +59996,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -60154,7 +60168,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -60326,7 +60340,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -60498,7 +60512,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -60670,7 +60684,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -60842,7 +60856,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -61014,7 +61028,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -61186,7 +61200,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -61358,7 +61372,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -61530,7 +61544,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -61702,7 +61716,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -61874,7 +61888,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -62046,7 +62060,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -62218,7 +62232,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -62390,7 +62404,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -62562,7 +62576,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -62734,7 +62748,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -62906,7 +62920,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -63078,7 +63092,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -63250,7 +63264,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -63422,7 +63436,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -63594,7 +63608,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -63766,7 +63780,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -63938,7 +63952,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -64110,7 +64124,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -64282,7 +64296,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -64454,7 +64468,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -64626,7 +64640,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -64798,7 +64812,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -64970,7 +64984,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -65142,7 +65156,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -65314,7 +65328,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -65486,7 +65500,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -65658,7 +65672,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -65830,7 +65844,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -66002,7 +66016,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -66174,7 +66188,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -66346,7 +66360,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
@@ -66518,7 +66532,7 @@ gk
 EF
 EF
 ar
-EF
+VO
 SK
 EF
 EF
@@ -66690,7 +66704,7 @@ gk
 EF
 EF
 ob
-EF
+VO
 UW
 EF
 EF
