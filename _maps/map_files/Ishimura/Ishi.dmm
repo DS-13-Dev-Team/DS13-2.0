@@ -522,6 +522,8 @@
 /obj/structure/industrial_lift/tram/ds/corner{
 	dir = 5
 	},
+/obj/structure/closet/crate/large/ds/green_horizontal,
+/obj/effect/turf_decal/box,
 /turf/open/openspace,
 /area/space)
 "Ao" = (
@@ -1040,6 +1042,8 @@
 /obj/structure/industrial_lift/tram/ds/corner{
 	dir = 6
 	},
+/obj/structure/closet/crate/large/ds,
+/obj/effect/turf_decal/box,
 /turf/open/openspace,
 /area/space)
 "XJ" = (
