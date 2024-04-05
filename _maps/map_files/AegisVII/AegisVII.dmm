@@ -2279,7 +2279,6 @@
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
 /obj/item/paper/monitorkey,
-/obj/effect/turf_decal/tile/neutral/half/contrasted,
 /obj/item/clothing/glasses/meson,
 /obj/item/lighter,
 /turf/open/floor/deadspace/random/rectangles,
@@ -2343,19 +2342,6 @@
 /obj/machinery/telecomms/server/presets/command,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/station/tcommsat/server)
-"bld" = (
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable/yellow{
-	icon_state = "12"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "10"
-	},
-/turf/open/floor/deadspace/random/rectangles,
-/area/station/command/heads_quarters/ce)
 "bll" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
@@ -3571,9 +3557,6 @@
 /area/station/command/bridge)
 "bPQ" = (
 /obj/structure/table/reinforced,
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
-	dir = 8
-	},
 /obj/machinery/fax_machine,
 /obj/machinery/power/data_terminal,
 /turf/open/floor/deadspace/random/rectangles,
@@ -6846,7 +6829,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "dyv" = (
-/obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/holopad,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/heads_quarters/ce)
@@ -11506,7 +11488,6 @@
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/high,
 /obj/item/stack/cable_coil/red,
-/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/heads_quarters/ce)
 "ggI" = (
@@ -12827,7 +12808,6 @@
 	dir = 1;
 	pixel_y = 3
 	},
-/obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/heads_quarters/ce)
 "gOs" = (
@@ -13793,9 +13773,6 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/break_room)
 "hlP" = (
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable/yellow{
 	icon_state = "12"
@@ -16664,18 +16641,9 @@
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/cryo)
 "iJM" = (
-/obj/structure/window/reinforced/spawner/east,
-/obj/structure/window/reinforced/spawner/west,
-/obj/machinery/button/door{
-	id = "sm_core_vent";
-	name = "Core Vent Control";
-	pixel_y = 6
-	},
-/obj/structure/table/reinforced,
-/obj/machinery/door/window/brigdoor/right/directional/north{
-	name = "Engine Emergency Systems";
-	req_access_txt = "56"
-	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/rack,
+/obj/item/disk/holodisk/ds13/ce,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "iJW" = (
@@ -18283,9 +18251,6 @@
 	pixel_y = 7
 	},
 /obj/item/pen,
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
-	dir = 4
-	},
 /obj/machinery/power/data_terminal,
 /obj/machinery/telephone/command,
 /obj/structure/cable/yellow{
@@ -18701,7 +18666,6 @@
 /obj/item/folder/yellow,
 /obj/item/stamp/ce,
 /obj/item/reagent_containers/pill/kelotane,
-/obj/effect/turf_decal/tile/neutral/half/contrasted,
 /obj/item/computer_hardware/hard_drive/role/atmos,
 /obj/item/computer_hardware/hard_drive/role/engineering,
 /obj/item/computer_hardware/hard_drive/role/engineering,
@@ -32820,9 +32784,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "qWc" = (
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable/yellow{
 	icon_state = "12"
@@ -33108,7 +33069,6 @@
 /obj/structure/rack,
 /obj/item/mod/control/pre_equipped/ds/intermediate_engineer,
 /obj/item/mod/control/pre_equipped/ds/intermediate_engineer,
-/obj/item/disk/holodisk/ds13/ce,
 /obj/structure/cable/yellow{
 	icon_state = "3"
 	},
@@ -43388,9 +43348,6 @@
 "wDi" = (
 /obj/structure/table/reinforced,
 /obj/item/flashlight/lamp,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/heads_quarters/ce)
 "wDn" = (
@@ -90482,7 +90439,7 @@ tSV
 fjT
 wDi
 bPQ
-bld
+qWc
 rfZ
 mVo
 xVC

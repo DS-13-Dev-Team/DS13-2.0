@@ -82,22 +82,6 @@
 	base_icon_state = "cable_end"
 	icon_state = "cable_end"
 
-/turf/open/floor/deadspace/tram
-	base_icon_state = "trammiddle"
-	icon_state = "trammiddle"
-
-/turf/open/floor/deadspace/tram/grating
-	base_icon_state = "tramgrating"
-	icon_state = "tramgrating"
-
-/turf/open/floor/deadspace/tram/corner
-	base_icon_state = "tramcorner"
-	icon_state = "tramcorner"
-
-/turf/open/floor/deadspace/tram/warning
-	base_icon_state = "tramwarning"
-	icon_state = "tramwarning"
-
 /turf/open/floor/deadspace/random
 	base_icon_state = "old"
 	icon_state = "old"
