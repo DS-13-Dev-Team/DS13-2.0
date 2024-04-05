@@ -43,3 +43,7 @@ endmap
 map aegis
 	votable
 endmap
+
+map ishi
+	votable
+endmap
