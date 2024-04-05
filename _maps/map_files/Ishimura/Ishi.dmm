@@ -60,6 +60,18 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/gravity_generator)
+"av" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/industrial_lift/tram/ds,
+/turf/open/floor/deadspace/grating{
+	dir = 4
+	},
+/area/station/maintenance/tram)
 "aw" = (
 /obj/machinery/holopad,
 /turf/open/floor/deadspace/random/rectangles,
@@ -745,7 +757,9 @@
 	dir = 4
 	},
 /obj/structure/industrial_lift/tram/ds,
-/obj/structure/fluff/tram_rail/anchor,
+/obj/structure/fluff/tram_rail/anchor{
+	dir = 1
+	},
 /turf/open/openspace,
 /area/station/maintenance/tram)
 "fm" = (
@@ -1184,18 +1198,6 @@
 	},
 /turf/open/openspace,
 /area/space)
-"hy" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 8
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
-	},
-/obj/structure/industrial_lift/tram/ds,
-/turf/open/floor/deadspace/grating{
-	dir = 4
-	},
-/area/station/maintenance/tram)
 "hz" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/deadspace/random/rectangles,
@@ -3101,9 +3103,7 @@
 	dir = 4
 	},
 /obj/structure/industrial_lift/tram/ds,
-/obj/structure/fluff/tram_rail/anchor{
-	dir = 1
-	},
+/obj/structure/fluff/tram_rail/anchor,
 /turf/open/openspace,
 /area/station/maintenance/tram)
 "ui" = (
@@ -54217,9 +54217,9 @@ Zd
 gk
 jJ
 do
-fk
-hy
 ud
+av
+fk
 do
 jJ
 lo
