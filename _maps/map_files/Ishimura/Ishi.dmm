@@ -60,18 +60,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/gravity_generator)
-"av" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 8
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
-	},
-/obj/structure/industrial_lift/tram/ds,
-/turf/open/floor/deadspace/grating{
-	dir = 4
-	},
-/area/station/maintenance/tram)
 "aw" = (
 /obj/machinery/holopad,
 /turf/open/floor/deadspace/random/rectangles,
@@ -94,21 +82,6 @@
 	icon_state = "3"
 	},
 /turf/open/floor/deadspace/random/rectangles,
-/area/space)
-"aL" = (
-/obj/structure/fluff/tram_rail,
-/obj/structure/window/reinforced/survival_pod{
-	dir = 8
-	},
-/obj/structure/window/reinforced/survival_pod,
-/obj/structure/shuttle/engine/propulsion/in_wall/tram{
-	dir = 8;
-	pixel_x = -32
-	},
-/obj/structure/industrial_lift/tram{
-	icon_state = "titanium_purple"
-	},
-/turf/open/openspace,
 /area/space)
 "aN" = (
 /obj/structure/chair/office{
@@ -377,18 +350,6 @@
 /obj/machinery/light_switch/directional/north,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/main)
-"cX" = (
-/obj/structure/fluff/tram_rail{
-	dir = 1
-	},
-/obj/machinery/door/window/survival_pod{
-	dir = 1
-	},
-/obj/structure/industrial_lift/tram{
-	icon_state = "titanium_white"
-	},
-/turf/open/openspace,
-/area/space)
 "dd" = (
 /obj/machinery/atmospherics/pipe/smart/simple/pink/visible{
 	dir = 5
@@ -757,9 +718,7 @@
 	dir = 4
 	},
 /obj/structure/industrial_lift/tram/ds,
-/obj/structure/fluff/tram_rail/anchor{
-	dir = 1
-	},
+/obj/structure/fluff/tram_rail/anchor,
 /turf/open/openspace,
 /area/station/maintenance/tram)
 "fm" = (
@@ -1179,25 +1138,6 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/command/heads_quarters/ce)
-"hu" = (
-/obj/structure/fluff/tram_rail{
-	dir = 1
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 8
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 1
-	},
-/obj/structure/shuttle/engine/propulsion/in_wall/tram{
-	dir = 8;
-	pixel_x = -32
-	},
-/obj/structure/industrial_lift/tram{
-	icon_state = "titanium_purple"
-	},
-/turf/open/openspace,
-/area/space)
 "hz" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/deadspace/random/rectangles,
@@ -1347,11 +1287,15 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
-/obj/structure/industrial_lift/tram{
-	icon_state = "titanium_white"
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/industrial_lift/tram/ds,
+/obj/structure/fluff/tram_rail/anchor{
+	dir = 1
 	},
 /turf/open/openspace,
-/area/space)
+/area/station/maintenance/tram)
 "iu" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -1883,20 +1827,17 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/space)
 "mr" = (
-/obj/effect/landmark/tram/middle_part/hilbert,
-/obj/machinery/light/floor/has_bulb{
-	bulb_colour = "#deefff";
-	bulb_power = 0.6
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
 	},
-/obj/machinery/computer/tram_controls{
-	dir = 8;
-	specific_lift_id = "tram_hilbert"
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
 	},
-/obj/structure/industrial_lift/tram{
-	icon_state = "titanium_white"
+/obj/structure/industrial_lift/tram/ds,
+/turf/open/floor/deadspace/grating{
+	dir = 4
 	},
-/turf/open/openspace,
-/area/space)
+/area/station/maintenance/tram)
 "ms" = (
 /obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
 	dir = 4
@@ -2056,16 +1997,6 @@
 /obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/storage/tech)
-"nm" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
-	},
-/obj/structure/industrial_lift/tram{
-	icon_state = "titanium_white"
-	},
-/obj/effect/landmark/lift_id/hilbert,
-/turf/open/openspace,
-/area/space)
 "no" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 9
@@ -3095,17 +3026,6 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/space)
-"ud" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 8
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
-	},
-/obj/structure/industrial_lift/tram/ds,
-/obj/structure/fluff/tram_rail/anchor,
-/turf/open/openspace,
-/area/station/maintenance/tram)
 "ui" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
@@ -5342,14 +5262,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/gravity_generator)
-"IF" = (
-/obj/structure/fluff/tram_rail,
-/obj/machinery/door/window/survival_pod,
-/obj/structure/industrial_lift/tram{
-	icon_state = "titanium_white"
-	},
-/turf/open/openspace,
-/area/space)
 "IG" = (
 /obj/machinery/door/firedoor,
 /turf/open/floor/deadspace/hardwood/alt,
@@ -5517,25 +5429,6 @@
 "Kb" = (
 /turf/open/floor/plating,
 /area/station/engineering/main)
-"Kc" = (
-/obj/structure/fluff/tram_rail{
-	dir = 1
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 1
-	},
-/obj/structure/shuttle/engine/propulsion/in_wall/tram{
-	dir = 4;
-	pixel_x = 32
-	},
-/obj/structure/industrial_lift/tram{
-	icon_state = "titanium_purple"
-	},
-/turf/open/openspace,
-/area/space)
 "Kd" = (
 /obj/structure/railing{
 	dir = 8
@@ -6399,21 +6292,6 @@
 /obj/item/multitool,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/storage/tech)
-"Pt" = (
-/obj/structure/fluff/tram_rail,
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
-	},
-/obj/structure/window/reinforced/survival_pod,
-/obj/structure/shuttle/engine/propulsion/in_wall/tram{
-	dir = 4;
-	pixel_x = 32
-	},
-/obj/structure/industrial_lift/tram{
-	icon_state = "titanium_purple"
-	},
-/turf/open/openspace,
-/area/space)
 "Pu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
 	dir = 1
@@ -52112,11 +51990,11 @@ Iy
 Iy
 Iy
 Iy
-EF
-EF
-EF
-EF
-EF
+Iy
+Iy
+Iy
+Iy
+Iy
 Iy
 Iy
 Iy
@@ -52284,11 +52162,11 @@ Iy
 Iy
 Iy
 Iy
-EF
-hu
-iq
-aL
-EF
+Iy
+Iy
+Iy
+Iy
+Iy
 Iy
 Iy
 Iy
@@ -52456,11 +52334,11 @@ Iy
 Iy
 Iy
 Iy
-EF
-cX
-mr
-IF
-EF
+Iy
+Iy
+Iy
+Iy
+Iy
 Iy
 Iy
 Iy
@@ -52628,11 +52506,11 @@ Iy
 Iy
 Iy
 Iy
-EF
-Kc
-nm
-Pt
-EF
+Iy
+Iy
+Iy
+Iy
+Iy
 Iy
 Iy
 Iy
@@ -52800,11 +52678,11 @@ Iy
 Iy
 Iy
 Iy
-EF
-EF
-EF
-EF
-EF
+Iy
+Iy
+Iy
+Iy
+Iy
 Iy
 Iy
 Iy
@@ -54217,9 +54095,9 @@ Zd
 gk
 jJ
 do
-ud
-av
 fk
+mr
+iq
 do
 jJ
 lo
