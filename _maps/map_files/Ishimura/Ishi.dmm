@@ -2351,14 +2351,6 @@
 	},
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
-"qW" = (
-/obj/docking_port/stationary/random{
-	id = "pod_4_lavaland";
-	name = "lavaland";
-	dir = 2
-	},
-/turf/open/space/basic,
-/area/space)
 "qY" = (
 /obj/machinery/ntnet_relay,
 /turf/open/floor/circuit/green/telecomms/mainframe,
@@ -3864,13 +3856,6 @@
 /obj/machinery/telecomms/receiver/preset_left,
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/station/tcommsat/server)
-"AB" = (
-/obj/docking_port/stationary/random{
-	id = "pod_4_lavaland";
-	name = "lavaland"
-	},
-/turf/open/space/basic,
-/area/space)
 "AC" = (
 /obj/machinery/disposal/bin,
 /turf/open/floor/deadspace/random/rectangles,
@@ -59712,7 +59697,7 @@ Iy
 Iy
 Iy
 Iy
-AB
+Iy
 Iy
 Iy
 Iy
@@ -59774,7 +59759,7 @@ jK
 Iy
 Iy
 Iy
-qW
+Iy
 Iy
 Iy
 Iy
@@ -60228,7 +60213,7 @@ Iy
 Iy
 Iy
 Iy
-AB
+Iy
 Iy
 Iy
 Iy
@@ -60290,7 +60275,7 @@ jK
 Iy
 Iy
 Iy
-qW
+Iy
 Iy
 Iy
 Iy
@@ -63840,7 +63825,7 @@ Iy
 Iy
 Iy
 Iy
-AB
+Iy
 Iy
 Iy
 Iy
@@ -63902,7 +63887,7 @@ jK
 Iy
 Iy
 Iy
-qW
+Iy
 Iy
 Iy
 Iy
@@ -64356,7 +64341,7 @@ Iy
 Iy
 Iy
 Iy
-AB
+Iy
 Iy
 Iy
 Iy
@@ -64418,7 +64403,7 @@ jK
 Iy
 Iy
 Iy
-qW
+Iy
 Iy
 Iy
 Iy
