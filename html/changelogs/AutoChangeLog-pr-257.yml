@@ -1,0 +1,4 @@
+author: Anormalcar
+delete-after: true
+changes:
+  - bugfix: Necromorphs can pull and grab again.
