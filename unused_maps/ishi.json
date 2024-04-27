@@ -1,36 +1,31 @@
 {
 	"allow_custom_shuttles": false,
-    "version": 1,
-    "map_name": "Aegis VII",
-    "map_path": "map_files/AegisVII",
-    "map_file": "AegisVII.dmm",
-    "space_ruin_levels": 0,
+	"version": 1,
+	"map_name": "USG Ishimura",
+	"map_path": "map_files/Ishimura",
+	"map_file": "Ishi.dmm",
+	"space_ruin_levels": 0,
     "space_empty_levels": 0,
-    "planetary": 1,
-    "shuttles": {
+	"shuttles": {
         "cargo": "cargo_aegis",
         "emergency": "emergency_aegis1"
     },
     "traits": [
-        {
-            "Up": 1,
-            "Linkage": "Cross",
-            "Gravity": true,
-            "Baseturf": "/turf/open/openspace"
-        },
-        {
-            "Up": 1,
-            "Down": -1,
-            "Linkage": "Cross",
-            "Gravity": true,
-            "Baseturf": "/turf/open/openspace"
-        },
-        {
-            "Down": -1,
-            "Linkage": "Cross",
-            "Gravity": true,
-            "Baseturf": "/turf/open/misc/asteroid"
-        }
+		{
+			"Up": 1,
+			"Linkage": "Cross"
+		},
+		{
+			"Up": 1,
+			"Down": -1,
+			"Baseturf": "/turf/open/space/openspace",
+			"Linkage": "Cross"
+		},
+		{
+			"Down": -1,
+			"Baseturf": "/turf/open/space/openspace",
+			"Linkage": "Cross"
+		}
     ],
     "minetype": "none",
     "blacklist_file": "lavaruinblacklist.txt",
