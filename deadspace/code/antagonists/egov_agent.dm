@@ -1,7 +1,7 @@
 /datum/antagonist/egov_agent
 	name = "\improper EarthGov Agent"
 	roundend_category = "earthgov agents"
-	typecache_datum_blacklist = list(/datum/antagonist/unitologist)
+	typecache_datum_blacklist = list(/datum/antagonist/zealot)
 	job_rank = ROLE_EARTHGOV_AGENT
 	antag_memory = "You are a well-trained agent of the government of Earth, sent to spy on the illegal planet cracking operation in the Cygnus system. In addition, you are investigating a lead that the Church of Unitology has infiltrated the crew. It is your assignment to report back to your superiors, investigate the situation surrounding the Church, and protect the interests of Earth at all cost."
 	hud_icon = 'deadspace/icons/mob/huds/antag_hud.dmi'
