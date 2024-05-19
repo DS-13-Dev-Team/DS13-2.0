@@ -279,7 +279,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 
 	return TRUE
 
-/mob/camera/marker_signal/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods = list(), atom/sound_loc)
+/mob/camera/marker_signal/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods = list(), atom/sound_loc, message_range)
 	. = ..()
 	// Create map text prior to modifying message for goonchat
 	if (client?.prefs.read_preference(/datum/preference/toggle/enable_runechat) && (client.prefs.read_preference(/datum/preference/toggle/enable_runechat_non_mobs) || ismob(speaker)))
