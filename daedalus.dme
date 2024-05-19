@@ -4647,8 +4647,6 @@
 #include "deadspace\code\__DEFINES\signals.dm"
 #include "deadspace\code\__DEFINES\traits.dm"
 #include "deadspace\code\__DEFINES\visualnet.dm"
-#include "deadspace\code\__HELPERS\math.dm"
-#include "deadspace\code\__HELPERS\matrices.dm"
 #include "deadspace\code\__HELPERS\mobs.dm"
 #include "deadspace\code\_global_vars\lists\necromorph_sounds.dm"
 #include "deadspace\code\_global_vars\lists\sounds_summary.dm"
