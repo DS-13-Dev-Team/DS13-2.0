@@ -5,6 +5,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	icon = 'icons/turf/floors.dmi'
 	vis_flags = VIS_INHERIT_ID | VIS_INHERIT_PLANE// Important for interaction with and visualization of openspace.
 	luminosity = 1
+	explosion_block = 1
 
 	// baseturfs can be either a list or a single turf type.
 	// In class definition like here it should always be a single type.
@@ -34,7 +35,8 @@ GLOBAL_LIST_EMPTY(station_turfs)
 
 	/// For the station blueprints, images of objects eg: pipes
 	var/tmp/list/image/blueprint_data
-	var/tmp/list/explosion_throw_details
+	/// Contains the throw range for explosions. You won't need this, stop looking at it.
+	var/tmp/explosion_throw_details
 
 	///Lazylist of movable atoms providing opacity sources.
 	var/tmp/list/atom/movable/opacity_sources
@@ -357,6 +359,15 @@ GLOBAL_LIST_EMPTY(station_turfs)
 
 	return FALSE
 
+/turf/attackby_secondary(obj/item/weapon, mob/user, params)
+	. = ..()
+	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
+		return
+
+	if(weapon.sharpness && try_graffiti(user, weapon))
+		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+
 //There's a lot of QDELETED() calls here if someone can figure out how to optimize this but not runtime when something gets deleted by a Bump/CanPass/Cross call, lemme know or go ahead and fix this mess - kevinz000
 /// Test if a movable can enter this turf. Send no_side_effects = TRUE to prevent bumping.
 /turf/Enter(atom/movable/mover, no_side_effects = FALSE)
@@ -536,20 +547,6 @@ GLOBAL_LIST_EMPTY(station_turfs)
 
 /turf/proc/is_shielded()
 	return
-
-/turf/contents_explosion(severity, target)
-	for(var/thing in contents)
-		var/atom/movable/movable_thing = thing
-		if(QDELETED(movable_thing))
-			continue
-		switch(severity)
-			if(EXPLODE_DEVASTATE)
-				SSexplosions.high_mov_atom += movable_thing
-			if(EXPLODE_HEAVY)
-				SSexplosions.med_mov_atom += movable_thing
-			if(EXPLODE_LIGHT)
-				SSexplosions.low_mov_atom += movable_thing
-
 
 /turf/narsie_act(force, ignore_mobs, probability = 20)
 	. = (prob(probability) || force)
@@ -742,3 +739,43 @@ GLOBAL_LIST_EMPTY(station_turfs)
 /// Allows for reactions to an area change without inherently requiring change_area() be called (I hate maploading)
 /turf/proc/on_change_area(area/old_area, area/new_area)
 	transfer_area_lighting(old_area, new_area)
+
+//A check to see if graffiti should happen
+/turf/proc/try_graffiti(mob/vandal, obj/item/tool)
+
+	if(!tool.sharpness)
+		return FALSE
+
+	if(!vandal.canUseTopic(src, USE_CLOSE) || !vandal.is_holding(tool))
+		return FALSE
+
+	if(HAS_TRAIT_FROM(src, TRAIT_NOT_ENGRAVABLE, INNATE_TRAIT))
+		to_chat(vandal, span_warning("[src] cannot be engraved!"))
+		return FALSE
+
+	if(HAS_TRAIT_FROM(src, TRAIT_NOT_ENGRAVABLE, TRAIT_GENERIC))
+		to_chat(vandal, span_warning("[src] already has an engraving."))
+		return FALSE
+
+	var/message = stripped_input(vandal, "Enter a message to engrave.", "Engraving", null ,64, TRUE)
+	if(!message)
+		return FALSE
+	if(is_ic_filtered_for_pdas(message))
+		REPORT_CHAT_FILTER_TO_USER(vandal, message)
+
+	if(!vandal.canUseTopic(src, USE_CLOSE) || !vandal.is_holding(tool))
+		return TRUE
+
+	vandal.visible_message(span_warning("\The [vandal] begins carving something into \the [src]."))
+
+	if(!do_after(vandal, src, max(2 SECONDS, length(message)), DO_PUBLIC, display = tool))
+		return TRUE
+
+	if(!vandal.canUseTopic(src, USE_CLOSE) || !vandal.is_holding(tool))
+		return TRUE
+	vandal.visible_message(span_obviousnotice("[vandal] carves some graffiti into [src]."))
+	log_graffiti(message, vandal)
+	AddComponent(/datum/component/engraved, message, TRUE)
+
+
+	return TRUE

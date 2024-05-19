@@ -43,7 +43,7 @@ Striking a noncultist, however, will tear their flesh."}
 
 	return FALSE
 
-/obj/item/melee/cultblade/dagger/block_feedback(mob/living/carbon/human/wielder, attack_text, attack_type, attack_type, do_message = TRUE, do_sound = TRUE)
+/obj/item/melee/cultblade/dagger/block_feedback(mob/living/carbon/human/wielder, attack_text, attack_type, do_message = TRUE, do_sound = TRUE)
 	if(do_message)
 		wielder.visible_message(span_danger("[wielder] parries [attack_text] with [src]!"))
 		return ..(do_message = FALSE)
@@ -1054,19 +1054,19 @@ Striking a noncultist, however, will tear their flesh."}
 				var/mob/living/simple_animal/hostile/illusion/M = new(owner.loc)
 				M.faction = list("cult")
 				M.Copy_Parent(owner, 70, 10, 5)
-				M.move_to_delay = owner.cached_multiplicative_slowdown
+				M.move_to_delay = owner.movement_delay
 			else
 				var/mob/living/simple_animal/hostile/illusion/escape/E = new(owner.loc)
 				E.Copy_Parent(owner, 70, 10)
 				E.GiveTarget(owner)
-				E.Goto(owner, owner.cached_multiplicative_slowdown, E.minimum_distance)
+				E.Goto(owner, owner.movement_delay, E.minimum_distance)
 	else
 		if(prob(50))
 			var/mob/living/simple_animal/hostile/illusion/H = new(owner.loc)
 			H.Copy_Parent(owner, 100, 20, 5)
 			H.faction = list("cult")
 			H.GiveTarget(owner)
-			H.move_to_delay = owner.cached_multiplicative_slowdown
+			H.move_to_delay = owner.movement_delay
 			to_chat(owner, span_danger("<b>[src] betrays you!</b>"))
 		return FALSE
 

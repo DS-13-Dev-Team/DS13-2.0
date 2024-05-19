@@ -505,8 +505,9 @@
 		return
 
 	set_health(round(maxHealth - getBrainLoss(), DAMAGE_PRECISION))
+	update_damage_hud()
+	update_health_hud()
 	update_stat()
-	med_hud_set_health()
 	SEND_SIGNAL(src, COMSIG_CARBON_HEALTH_UPDATE)
 
 /mob/living/carbon/on_stamina_update()
@@ -550,7 +551,7 @@
 		if(!isnull(E.lighting_alpha))
 			lighting_alpha = E.lighting_alpha
 
-	if(client.eye != src)
+	if(client.eye && client.eye != src)
 		var/atom/A = client.eye
 		if(A.update_remote_sight(src)) //returns 1 if we override all other sight updates.
 			return
@@ -774,17 +775,14 @@
 /mob/living/carbon/update_stat()
 	if(status_flags & GODMODE)
 		return
+
 	if(stat != DEAD)
 		if(HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 			set_stat(UNCONSCIOUS)
 		else
 			set_stat(CONSCIOUS)
 
-	update_damage_hud()
-	update_health_hud()
-	update_stamina_hud()
 	med_hud_set_status()
-
 
 //called when we get cuffed/uncuffed
 /mob/living/carbon/proc/update_handcuffed()
@@ -1253,17 +1251,22 @@
 /mob/living/carbon/proc/check_signables_state()
 	var/obj/item/bodypart/left_arm = get_bodypart(BODY_ZONE_L_ARM)
 	var/obj/item/bodypart/right_arm = get_bodypart(BODY_ZONE_R_ARM)
+
 	var/empty_indexes = get_empty_held_indexes()
 	var/exit_right = (!right_arm || right_arm.bodypart_disabled)
 	var/exit_left = (!left_arm || left_arm.bodypart_disabled)
 	if(length(empty_indexes) == 0 || (length(empty_indexes) < 2 && (exit_left || exit_right)))//All existing hands full, can't sign
 		return SIGN_HANDS_FULL // These aren't booleans
+
 	if(exit_left && exit_right)//Can't sign with no arms!
 		return SIGN_ARMLESS
+
 	if(handcuffed) // Cuffed, usually will show visual effort to sign
 		return SIGN_CUFFED
+
 	if(HAS_TRAIT(src, TRAIT_HANDS_BLOCKED) || HAS_TRAIT(src, TRAIT_EMOTEMUTE))
 		return SIGN_TRAIT_BLOCKED
+
 	if(length(empty_indexes) == 1 || exit_left || exit_right) // One arm gone
 		return SIGN_ONE_HAND
 
@@ -1422,11 +1425,13 @@
 		else
 			visible_message("\The [src] twitches a bit as \his heart restarts!")
 
-		shock_stage = min(shock_stage, 100) // 120 is the point at which the heart stops.
+		shock_stage = min(shock_stage, SHOCK_AMT_FOR_FIBRILLATION - 25)
 
-		if(getOxyLoss() >= 75)
-			setOxyLoss(75)
+		// Clamp oxy loss to 70 for 200 health mobs. This is a 0.65 modifier for blood oxygenation.
+		if(getOxyLoss() >= maxHealth * 0.35)
+			setOxyLoss(maxHealth * 0.35)
 
+		COOLDOWN_START(heart, arrhythmia_grace_period, 10 SECONDS)
 		heart.Restart()
 		heart.handle_pulse()
 		return TRUE

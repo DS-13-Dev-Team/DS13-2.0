@@ -57,6 +57,8 @@
 
 #define MODE_CUSTOM_SAY_ERASE_INPUT "erase_input"
 
+#define MODE_NO_QUOTE "no_quote"
+
 #define MODE_NECROMORPH "necromorph_hive"
 
 //Spans. Robot speech, italics, etc. Applied in compose_message().
@@ -76,7 +78,11 @@
 #define REDUCE_RANGE (1<<1)
 #define NOPASS (1<<2)
 
-//Eavesdropping
+/// Range to hear normal messages
+#define MESSAGE_RANGE 7
+/// Range to hear whispers normally
+#define WHISPER_RANGE 1
+/// Additional range to partially hear whispers
 #define EAVESDROP_EXTRA_RANGE 1 //how much past the specified message_range does the message get starred, whispering only
 
 /// How close intercoms can be for radio code use

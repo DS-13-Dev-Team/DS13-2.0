@@ -83,6 +83,9 @@ GLOBAL_LIST_EMPTY(markers_signals)
 		client.images += chunk.active_masks
 	marker.markernet.visibility(src)
 
+/mob/camera/marker_signal/broadcast_examine(atom/examined)
+	return //Signals arent real you are just hallucinating
+
 /mob/camera/marker_signal/process(delta_time)
 	change_psy_energy(psy_energy_generation*delta_time)
 
