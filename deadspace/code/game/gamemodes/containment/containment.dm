@@ -8,6 +8,7 @@
 
 ///Attempts to select players for special roles the mode might have.
 /datum/game_mode/containment/pre_setup()
+	..()
 	setup_marker()
 	get_antag_candidates()
 	return TRUE
@@ -124,12 +125,7 @@
 	return
 
 /datum/game_mode/containment/check_finished(force_ending)
-	if(!SSticker.setup_done)
-		return FALSE
-	if(SSshuttle.emergency && (SSshuttle.emergency.mode == SHUTTLE_ENDGAME))
-		return TRUE
-	if(GLOB.station_was_nuked)
-		return TRUE
+	..()
 	if(force_ending)
 		return TRUE
 
