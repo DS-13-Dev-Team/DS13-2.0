@@ -84,13 +84,13 @@
 		for(var/mob/living/living in T)
 			living.Knockdown(3 SECONDS)
 		if(isclosedturf(T))
-			SSexplosions.medturf += T
+			EX_ACT(T, EXPLODE_HEAVY)
 		else
-			SSexplosions.lowturf += T
+			EX_ACT(T, EXPLODE_LIGHT)
 			for(var/atom/A in T)
 				//We dont want brute to destroy this stuff
 				if(!istype(A, /obj/machinery/atmospherics/pipe) && !istype(A, /obj/structure/cable) && !istype(A, /obj/structure/disposalpipe))
-					SSexplosions.med_mov_atom += A
+					EX_ACT(A, EXPLODE_HEAVY)
 
 	sleep(1)
 	playsound(target, 'deadspace/sound/weapons/heavysmash.ogg', 100, 1, 20,20)
