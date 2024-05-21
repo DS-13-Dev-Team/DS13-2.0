@@ -19,7 +19,7 @@
 #define ROLE_TRAITOR "Traitor"
 #define ROLE_WIZARD "Wizard"
 #define ROLE_EARTHGOV_AGENT "EarthGov Agent"
-#define ROLE_UNITOLOGIST_ZEALOT "Unitologist Zealot"
+#define ROLE_ZEALOT "Unitologist Zealot"
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -106,7 +106,7 @@
 GLOBAL_LIST_INIT(special_roles, list(
 	// Roundstart
 	ROLE_EARTHGOV_AGENT = 0,
-	ROLE_UNITOLOGIST_ZEALOT = 0,
+	ROLE_ZEALOT = 0,
 	ROLE_BROTHER = 0,
 	ROLE_CHANGELING = 0,
 	ROLE_CLOWN_OPERATIVE = 14,

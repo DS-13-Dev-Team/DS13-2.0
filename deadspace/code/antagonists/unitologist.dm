@@ -2,7 +2,7 @@
 	name = "\improper Unitologist Zealot"
 	roundend_category = "untiologists zealots"
 	typecache_datum_blacklist = list(/datum/antagonist/egov_agent)
-	job_rank = ROLE_UNITOLOGIST_ZEALOT
+	job_rank = ROLE_ZEALOT
 	antag_memory = "You are a zealot of Unitology, one of firm belief in convergence and be made whole, willing to do anything in pursuit of your beliefs. It is your assignment to make the Crew see the light, and submit to convergence, one way or the other. You have been blessed with a psychic connection created by the <b>marker</b>, and must serve the marker's will at all costs."
 	hud_icon = 'deadspace/icons/mob/huds/antag_hud.dmi'
 	antag_hud_name = "untiologist"

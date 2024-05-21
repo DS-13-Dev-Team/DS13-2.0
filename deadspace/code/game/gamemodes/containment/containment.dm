@@ -21,7 +21,7 @@
 	)
 
 	var/list/antag_weight_map = list(
-		ROLE_UNITOLOGIST_ZEALOT = CONTAINMENT_WEIGHT_ZEALOT/*,
+		ROLE_ZEALOT = CONTAINMENT_WEIGHT_ZEALOT/*,
 		ROLE_UNITOLOGIST = CONTAINMENT_WEIGHT_UNITOLOGIST*/
 	)
 
@@ -33,40 +33,25 @@
 /datum/game_mode/containment/pre_setup()
 	. = ..()
 	setup_marker()
-	get_antag_candidates()
 
-/datum/game_mode/containment/proc/setup_marker()
-	if(!length(GLOB.possible_marker_locations))
-		log_mapping("No /obj/effect/marker_location was placed on the map!")
-		return
-	//Just it for now
-	var/turf/location = pick(GLOB.possible_marker_locations)
-	main_marker = new /obj/structure/marker(location)
-	addtimer(CALLBACK(src, PROC_REF(activate_marker)), rand(25 MINUTES, 40 MINUTES))
+	if(length(SSticker.ready_players) < 5) //If we have less then 5 players it won't pick antags
+		return TRUE
 
-//Add a win message here perhaps?
-/datum/game_mode/containment/proc/marker_destroyed(obj/structure/marker/destroyed)
-	if(destroyed == main_marker)
-		main_marker = null
-
-/datum/game_mode/containment/proc/get_antag_candidates()
 	var/list/antag_pool = list()
-	var/list/earthgov_pool = list()
 
 	var/number_of_antags = max(1, round(length(SSticker.ready_players) * CONTAINMENT_ANTAG_COEFF))
 	var/number_of_egov = max(1, round(length(SSticker.ready_players) * 0.05)) //Should only have more then 1 Egov at 50 players
-
 	//Setup a list of antags to try to spawn
 	while(number_of_antags)
 		antag_pool[pick_weight(antag_weight_map)] += 1
 		number_of_antags--
 
 	while(number_of_egov)
-		earthgov_pool[ROLE_EARTHGOV_AGENT] += 1
+		antag_pool[ROLE_EARTHGOV_AGENT] += 1
 		number_of_egov--
 
 	var/list/role_to_players_map = list(
-		ROLE_UNITOLOGIST_ZEALOT = list(),
+		ROLE_ZEALOT = list(),
 		ROLE_EARTHGOV_AGENT = list()/*,
 		ROLE_UNITOLOGIST = list()*/
 	)
@@ -84,18 +69,18 @@
 				role_to_players_map[role] += candidate_player
 				continue
 
-	if(earthgov_pool[ROLE_EARTHGOV_AGENT])
-		for(var/i in 1 to earthgov_pool[ROLE_EARTHGOV_AGENT])
+	if(antag_pool[ROLE_EARTHGOV_AGENT]) //We want earthgov to be checked first, since there are not many of them
+		for(var/i in 1 to antag_pool[ROLE_EARTHGOV_AGENT])
 			if(!length(role_to_players_map[ROLE_EARTHGOV_AGENT]))
 				break
 			var/mob/M = pick_n_take(role_to_players_map[ROLE_EARTHGOV_AGENT])
 			select_antagonist(M.mind, /datum/antagonist/egov_agent)
 
-	if(antag_pool[ROLE_UNITOLOGIST_ZEALOT])
-		for(var/i in 1 to antag_pool[ROLE_UNITOLOGIST_ZEALOT])
-			if(!length(role_to_players_map[ROLE_UNITOLOGIST_ZEALOT]))
+	if(antag_pool[ROLE_ZEALOT])
+		for(var/i in 1 to antag_pool[ROLE_ZEALOT])
+			if(!length(role_to_players_map[ROLE_ZEALOT]))
 				break
-			var/mob/M = pick_n_take(role_to_players_map[ROLE_UNITOLOGIST_ZEALOT])
+			var/mob/M = pick_n_take(role_to_players_map[ROLE_ZEALOT])
 			select_antagonist(M.mind, /datum/antagonist/zealot)
 
 	/*if(antag_pool[ROLE_UNITOLOGIST])
@@ -104,6 +89,20 @@
 				break
 			var/mob/M = pick_n_take(role_to_players_map[ROLE_UNITOLOGIST])
 			select_antagonist(M.mind, /datum/antagonist/unitologist)*/
+
+/datum/game_mode/containment/proc/setup_marker()
+	if(!length(GLOB.possible_marker_locations))
+		log_mapping("No /obj/effect/marker_location was placed on the map!")
+		return
+	//Just it for now
+	var/turf/location = pick(GLOB.possible_marker_locations)
+	main_marker = new /obj/structure/marker(location)
+	addtimer(CALLBACK(src, PROC_REF(activate_marker)), rand(25 MINUTES, 40 MINUTES))
+
+//Add a win message here perhaps?
+/datum/game_mode/containment/proc/marker_destroyed(obj/structure/marker/destroyed)
+	if(destroyed == main_marker)
+		main_marker = null
 
 /datum/game_mode/containment/proc/activate_marker()
 	main_marker?.activate()
