@@ -3149,6 +3149,10 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/medical/surgery/theatre)
+"bFm" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/deadspace/grater,
+/area/station/cargo/warehouse)
 "bFo" = (
 /obj/structure/cable/yellow{
 	icon_state = "12"
@@ -4662,6 +4666,7 @@
 /area/station/hallway/secondary/exit)
 "csi" = (
 /obj/machinery/newscaster/directional/west,
+/obj/machinery/recharge_station,
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/medbay/central)
 "csy" = (
@@ -7296,6 +7301,10 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/pharmacy)
+"dKD" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/deadspace/mono,
+/area/station/commons/storage/primary)
 "dKE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable/yellow{
@@ -7504,6 +7513,7 @@
 /area/station/engineering/atmos)
 "dQh" = (
 /obj/machinery/light/directional/east,
+/obj/machinery/recharge_station,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/atmos/storage/gas)
 "dQl" = (
@@ -10062,6 +10072,12 @@
 /area/station/tcommsat/server)
 "fpX" = (
 /obj/structure/table,
+/obj/machinery/syndicatebomb/training,
+/obj/item/screwdriver{
+	pixel_x = -2;
+	pixel_y = 10
+	},
+/obj/item/wirecutters,
 /turf/open/floor/deadspace/mono,
 /area/station/security/range)
 "fqq" = (
@@ -13412,6 +13428,7 @@
 /area/station/medical/surgery)
 "hbo" = (
 /obj/machinery/light/small/maintenance/directional/west,
+/obj/machinery/recharge_station,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/upper)
 "hbt" = (
@@ -24845,6 +24862,10 @@
 	},
 /turf/open/floor/deadspace/bathroom,
 /area/station/command/heads_quarters/captain/private)
+"mUt" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/deadspace/grater,
+/area/station/cargo/warehouse/upper)
 "mUx" = (
 /obj/structure/chair/sofa/bench/corner,
 /obj/item/kirbyplants,
@@ -31947,6 +31968,12 @@
 /obj/effect/spawner/random/entertainment/money_large,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo)
+"qzt" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/deadspace/random/slides{
+	dir = 8
+	},
+/area/mine/production)
 "qzu" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -33477,14 +33504,8 @@
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hop)
 "rvF" = (
-/obj/structure/table,
 /obj/machinery/newscaster/directional/east,
-/obj/machinery/syndicatebomb/training,
-/obj/item/screwdriver{
-	pixel_x = -2;
-	pixel_y = 10
-	},
-/obj/item/wirecutters,
+/obj/machinery/recharge_station,
 /turf/open/floor/deadspace/mono,
 /area/station/security/lockers)
 "rwa" = (
@@ -37587,6 +37608,10 @@
 	},
 /turf/open/floor/carpet/red,
 /area/station/service/chapel)
+"tCQ" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/deadspace/mono,
+/area/station/cargo)
 "tCS" = (
 /obj/machinery/atmospherics/pipe/smart/simple/purple/visible{
 	dir = 5
@@ -38993,6 +39018,10 @@
 /obj/structure/window/reinforced/spawner/north,
 /turf/open/misc/asteroid,
 /area/station/cargo/miningdock/oresilo)
+"urC" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/deadspace/random/rectangles,
+/area/station/engineering/storage_shared)
 "urF" = (
 /obj/structure/rack,
 /turf/open/floor/deadspace/grater,
@@ -45000,6 +45029,10 @@
 "xua" = (
 /turf/closed/wall,
 /area/station/engineering/atmos/storage/gas)
+"xuj" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/greater)
 "xun" = (
 /obj/structure/cable/yellow{
 	icon_state = "3"
@@ -66791,7 +66824,7 @@ dBD
 dBD
 dBD
 gBE
-hQl
+tCQ
 iJz
 eFu
 cdt
@@ -77442,8 +77475,8 @@ dwW
 pZU
 tDR
 mgG
-mgG
-mgG
+bFm
+bFm
 rzZ
 tDR
 cfB
@@ -79341,7 +79374,7 @@ daR
 wKL
 aeC
 ucZ
-rMR
+dKD
 cvV
 gaC
 dfq
@@ -88870,7 +88903,7 @@ sKm
 ets
 wGL
 qPf
-glk
+urC
 fmV
 hBa
 vJz
@@ -98002,7 +98035,7 @@ dBD
 dBD
 bkb
 bkb
-gbq
+xuj
 gbq
 lJH
 lwC
@@ -101309,7 +101342,7 @@ kpD
 fIc
 kpD
 ucB
-sWJ
+qzt
 rWJ
 bno
 rWJ
@@ -101623,7 +101656,7 @@ kpD
 jCa
 kpD
 ucB
-sWJ
+qzt
 rWJ
 doW
 rWJ
@@ -106630,8 +106663,8 @@ xGC
 kCR
 kCR
 tXd
-qXZ
-qXZ
+mUt
+mUt
 tXd
 mKi
 wbx
