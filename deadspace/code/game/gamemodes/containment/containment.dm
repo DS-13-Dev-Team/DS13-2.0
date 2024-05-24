@@ -1,16 +1,95 @@
-//Still a lot of things to do
+//#define CONTAINMENT_WEIGHT_UNITOLOGIST 100 //Uncomment when we have psuedo antag unitologists
+#define CONTAINMENT_WEIGHT_ZEALOT 75
+
+//What percentage of our population can become antags
+#define CONTAINMENT_ANTAG_COEFF 0.15
+
 /datum/game_mode/containment
+	name = "Containment"
+	weight = GAMEMODE_WEIGHT_COMMON
+	min_pop = 0
+	required_enemies = 0
+	force_pre_setup_check = TRUE
+	restricted_jobs = list(JOB_CYBORG, JOB_AI)
+	protected_jobs = list(
+		JOB_SECURITY_OFFICER,
+		JOB_WARDEN,
+		JOB_HEAD_OF_PERSONNEL,
+		JOB_SECURITY_MARSHAL,
+		JOB_CAPTAIN,
+		JOB_CHIEF_ENGINEER,
+		JOB_MEDICAL_DIRECTOR
+	)
+
+	var/list/antag_weight_map = list(
+		ROLE_ZEALOT = CONTAINMENT_WEIGHT_ZEALOT/*,
+		ROLE_UNITOLOGIST = CONTAINMENT_WEIGHT_UNITOLOGIST*/
+	)
+
 	var/obj/structure/marker/main_marker
 	var/minimum_round_crew = 2
 	var/minimum_alive_percentage = 0.1 //0.1 = 10%
-	var/list/assigned_egov
-	var/list/assigned_untiologists
 
 ///Attempts to select players for special roles the mode might have.
 /datum/game_mode/containment/pre_setup()
+	. = ..()
 	setup_marker()
-	get_antag_candidates()
-	return TRUE
+
+	if(length(SSticker.ready_players) < 5) //If we have less then 5 players it won't pick antags
+		return TRUE
+
+	var/list/antag_pool = list()
+
+	var/number_of_antags = max(1, round(length(SSticker.ready_players) * CONTAINMENT_ANTAG_COEFF))
+	var/number_of_egov = max(1, round(length(SSticker.ready_players) * 0.05)) //Should only have more then 1 Egov at 50 players
+	//Setup a list of antags to try to spawn
+	while(number_of_antags)
+		antag_pool[pick_weight(antag_weight_map)] += 1
+		number_of_antags--
+
+	while(number_of_egov)
+		antag_pool[ROLE_EARTHGOV_AGENT] += 1
+		number_of_egov--
+
+	var/list/role_to_players_map = list(
+		ROLE_ZEALOT = list(),
+		ROLE_EARTHGOV_AGENT = list()/*,
+		ROLE_UNITOLOGIST = list()*/
+	)
+
+	//Filter out our possible_antags list
+	for(var/mob/dead/new_player/candidate_player in possible_antags)
+		var/client/candidate_client = GET_CLIENT(candidate_player)
+
+		for(var/role in antag_pool)
+			if (is_banned_from(candidate_player.ckey, list(role, ROLE_SYNDICATE)))
+				continue
+
+			var/list/antag_prefs = candidate_client.prefs.read_preference(/datum/preference/blob/antagonists)
+			if(antag_prefs[role])
+				role_to_players_map[role] += candidate_player
+				continue
+
+	if(antag_pool[ROLE_EARTHGOV_AGENT]) //We want earthgov to be checked first, since there are not many of them
+		for(var/i in 1 to antag_pool[ROLE_EARTHGOV_AGENT])
+			if(!length(role_to_players_map[ROLE_EARTHGOV_AGENT]))
+				break
+			var/mob/M = pick_n_take(role_to_players_map[ROLE_EARTHGOV_AGENT])
+			select_antagonist(M.mind, /datum/antagonist/egov_agent)
+
+	if(antag_pool[ROLE_ZEALOT])
+		for(var/i in 1 to antag_pool[ROLE_ZEALOT])
+			if(!length(role_to_players_map[ROLE_ZEALOT]))
+				break
+			var/mob/M = pick_n_take(role_to_players_map[ROLE_ZEALOT])
+			select_antagonist(M.mind, /datum/antagonist/zealot)
+
+	/*if(antag_pool[ROLE_UNITOLOGIST])
+		for(var/i in 1 to antag_pool[ROLE_UNITOLOGIST])
+			if(!length(role_to_players_map[ROLE_UNITOLOGIST]))
+				break
+			var/mob/M = pick_n_take(role_to_players_map[ROLE_UNITOLOGIST])
+			select_antagonist(M.mind, /datum/antagonist/unitologist)*/
 
 /datum/game_mode/containment/proc/setup_marker()
 	if(!length(GLOB.possible_marker_locations))
@@ -26,86 +105,12 @@
 	if(destroyed == main_marker)
 		main_marker = null
 
-/datum/game_mode/containment/proc/get_antag_candidates()
-	var/list/egov_candidates = list()
-	var/list/untiology_candidates = list()
-	var/ready_pop = 0
-
-	for(var/mob/dead/new_player/candidate_player as anything in GLOB.new_player_list)
-		var/client/candidate_client = GET_CLIENT(candidate_player)
-		if (!candidate_client || !candidate_player.mind) // Are they connected?
-			continue
-
-		if(candidate_player.ready != PLAYER_READY_TO_PLAY || !candidate_player.mind || !candidate_player.check_preferences())
-			continue
-
-		++ready_pop
-
-		if(candidate_player.mind.special_role) // We really don't want to give antag to an antag.
-			continue
-
-		var/list/client_antags = candidate_client.prefs.read_preference(/datum/preference/blob/antagonists)
-
-		if(client_antags[ROLE_EARTHGOV_AGENT] && !is_banned_from(candidate_player.ckey, ROLE_EARTHGOV_AGENT))
-			egov_candidates += candidate_player
-
-		if(client_antags[ROLE_UNITOLOGIST_ZEALOT] && !is_banned_from(candidate_player.ckey, ROLE_UNITOLOGIST_ZEALOT))
-			untiology_candidates += candidate_player
-
-	var/list/restricted_roles = list(
-		JOB_AI,
-		JOB_CYBORG,
-	)
-	if(CONFIG_GET(flag/protect_roles_from_antagonist))
-		restricted_roles += list(
-			JOB_CAPTAIN,
-			JOB_DETECTIVE,
-			JOB_HEAD_OF_SECURITY,
-			JOB_PRISONER,
-			JOB_SECURITY_OFFICER,
-			JOB_WARDEN,
-		)
-	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
-		restricted_roles += JOB_ASSISTANT
-
-	var/antag_count = ready_pop / 6
-	assigned_egov = list()
-	assigned_untiologists = list()
-
-	for (var/i = 1 to antag_count)
-		if(length(egov_candidates) <= 0)
-			break
-		var/mob/dead/new_player/M = pick_n_take(egov_candidates)
-		assigned_egov += M.mind
-		M.mind.special_role = ROLE_EARTHGOV_AGENT
-		M.mind.restricted_roles = restricted_roles
-		GLOB.pre_setup_antags += M.mind
-
-	for (var/i = 1 to antag_count)
-		if(length(untiology_candidates) <= 0)
-			break
-		var/mob/dead/new_player/M = pick_n_take(untiology_candidates)
-		assigned_untiologists += M.mind
-		M.mind.special_role = ROLE_UNITOLOGIST_ZEALOT
-		M.mind.restricted_roles = restricted_roles
-		GLOB.pre_setup_antags += M.mind
-
 /datum/game_mode/containment/proc/activate_marker()
 	main_marker?.activate()
 
 /datum/game_mode/containment/post_setup(report)
 	if(!CONFIG_GET(flag/no_intercept_report))
 		addtimer(CALLBACK(src, PROC_REF(announce_marker)), rand(1 MINUTES, 3 MINUTES))
-
-	for(var/datum/mind/mind as anything in assigned_egov)
-		mind.add_antag_datum(/datum/antagonist/egov_agent)
-		GLOB.pre_setup_antags -= mind
-	assigned_egov = null
-
-	for(var/datum/mind/mind as anything in assigned_untiologists)
-		mind.add_antag_datum(/datum/antagonist/unitologist)
-		GLOB.pre_setup_antags -= mind
-	assigned_untiologists = null
 
 	return ..()
 
@@ -124,12 +129,7 @@
 	return
 
 /datum/game_mode/containment/check_finished(force_ending)
-	if(!SSticker.setup_done)
-		return FALSE
-	if(SSshuttle.emergency && (SSshuttle.emergency.mode == SHUTTLE_ENDGAME))
-		return TRUE
-	if(GLOB.station_was_nuked)
-		return TRUE
+	. = ..()
 	if(force_ending)
 		return TRUE
 
@@ -145,6 +145,8 @@
 		if(!(alive.ckey in GLOB.joined_player_list))
 			continue
 		if(alive.client.is_afk())
+			continue
+		if(isnecromorph(alive)) //So we don't count necromorphs
 			continue
 		var/turf/location = get_turf(alive)
 		if(!location || !SSmapping.level_trait(location.z, ZTRAIT_STATION))

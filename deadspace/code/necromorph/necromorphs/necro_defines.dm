@@ -91,7 +91,7 @@
 /datum/language_holder/necro_talk
 	understood_languages = list(/datum/language/necro = list(LANGUAGE_MIND))
 	spoken_languages = list(/datum/language/necro = list(LANGUAGE_MIND))
-	omnitongue = TRUE
+	bypass_speaking_limitations = TRUE
 
 /datum/language/necro
 	name = "Necromorph"

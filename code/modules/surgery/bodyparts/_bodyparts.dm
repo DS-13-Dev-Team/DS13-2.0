@@ -95,8 +95,10 @@
 	var/brute_ratio = 0
 	///The % of current_damage that is burn
 	var/burn_ratio = 0
-	/// How much pain this limb is applying.
-	VAR_PRIVATE/pain = 0
+	/// How much pain is on this limb from wounds.
+	VAR_PRIVATE/wound_pain = 0
+	/// How much temporary pain is on this limb
+	VAR_PRIVATE/temporary_pain = 0
 	///The minimum damage a part must have before it's bones may break. Defaults to max_damage * BODYPART_MINIMUM_BREAK_MOD
 	var/minimum_break_damage = 0
 	/// Bleed multiplier
@@ -479,8 +481,10 @@
 /obj/item/bodypart/proc/on_life(delta_time, times_fired, stam_heal)
 	SHOULD_CALL_PARENT(TRUE)
 	if(owner.stat != DEAD)
-		pain = max(pain - (owner.body_position == LYING_DOWN ? 3 : 1), 0)
 		. |= wound_life()
+		if(temporary_pain)
+			temporary_pain = owner.body_position == LYING_DOWN ? max(0, temporary_pain - 3) : max(0, temporary_pain - 1)
+			. |= BODYPART_LIFE_UPDATE_HEALTH_HUD
 	. |= update_germs()
 
 /obj/item/bodypart/proc/wound_life()
@@ -497,6 +501,7 @@
 		// wounds can disappear after 10 minutes at the earliest
 		if(W.damage <= 0 && W.created + (10 MINUTES) <= world.time)
 			qdel(W)
+			stack_trace("Wound with zero health collected")
 			continue
 			// let the GC handle the deletion of the wound
 
@@ -578,14 +583,12 @@
 				return update_damage() || .
 	#endif
 
+	if(can_break_bones || can_jostle_bones)
+		brute -= damage_internal_organs(round(brute/2, DAMAGE_PRECISION), null, sharpness) // Absorb some brute damage
+		burn -= damage_internal_organs(null, round(burn/2, DAMAGE_PRECISION))
 
 	//blunt damage is gud at fracturing
 	if(brute && (can_break_bones || can_jostle_bones))
-		if(LAZYLEN(contained_organs))
-			brute -= damage_internal_organs(round(brute/2, DAMAGE_PRECISION), null, sharpness) // Absorb some brute damage
-			if(!IS_ORGANIC_LIMB(src))
-				burn -= damage_internal_organs(null, round(burn/2, DAMAGE_PRECISION))
-
 		if((bodypart_flags & BP_BROKEN_BONES) && can_jostle_bones)
 			jostle_bones(brute)
 		else if(can_break_bones && (brute_dam + brute > minimum_break_damage) && prob((brute_dam + brute * (1 + !sharpness)) * BODYPART_BONES_BREAK_CHANCE_MOD))
@@ -614,7 +617,9 @@
 		create_wound(WOUND_BURN, burn, update_damage = FALSE)
 
 	//Initial pain spike
-	owner?.apply_pain(0.8*burn + 0.6*brute, body_zone, updating_health = FALSE)
+	if(owner)
+		var/pain_reduction = CHEM_EFFECT_MAGNITUDE(owner, CE_PAINKILLER) / length(owner.bodyparts)
+		owner?.notify_pain(getPain() - pain_reduction)
 
 	if(owner && total > 15 && prob(total*4) && !(bodypart_flags & BP_NO_PAIN))
 		owner.bloodstream.add_reagent(/datum/reagent/medicine/epinephrine, round(total/10))
@@ -630,7 +635,7 @@
 
 		if(disturbed)
 			to_chat(owner, span_warning("Ow! Your burns were disturbed."))
-			owner.apply_pain(0.5*burn, body_zone, updating_health = FALSE)
+			owner.apply_pain(0.2*burn, body_zone, updating_health = FALSE)
 
 		if(owner && can_break_bones && istype(src, /obj/item/bodypart/head) && (bodypart_flags & BP_HAS_BLOOD) && sharpness == NONE && (owner.stat == CONSCIOUS) && owner.has_mouth())
 			if(prob(8) && owner.bleed(5))
@@ -759,9 +764,12 @@
 /obj/item/bodypart/proc/update_damage()
 	var/old_brute = brute_dam
 	var/old_burn = burn_dam
+	var/old_pain = wound_pain
+
 	real_wound_count = 0
 	brute_dam = 0
 	burn_dam = 0
+	wound_pain = 0
 
 	//update damage counts
 	for(var/datum/wound/W as anything in wounds)
@@ -774,12 +782,16 @@
 		else
 			brute_dam += W.damage
 
+		wound_pain += W.damage * W.pain_factor
 		real_wound_count += W.amount
 
 	current_damage = round(brute_dam + burn_dam, DAMAGE_PRECISION)
 	burn_dam = round(burn_dam, DAMAGE_PRECISION)
 	brute_dam = round(brute_dam, DAMAGE_PRECISION)
+	wound_pain = min(round(wound_pain, DAMAGE_PRECISION), max_damage)
+
 	var/limb_loss_threshold = max_damage
+
 	brute_ratio = brute_dam / (limb_loss_threshold * 2)
 	burn_ratio = burn_dam / (limb_loss_threshold * 2)
 
@@ -792,6 +804,9 @@
 
 	if(old_brute != brute_dam || old_burn != burn_dam)
 		. |= BODYPART_LIFE_UPDATE_HEALTH
+
+	if(old_pain != wound_pain)
+		. |= BODYPART_LIFE_UPDATE_HEALTH_HUD
 
 	if(.)
 		refresh_bleed_rate()

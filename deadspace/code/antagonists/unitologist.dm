@@ -1,8 +1,8 @@
-/datum/antagonist/unitologist
+/datum/antagonist/zealot
 	name = "\improper Unitologist Zealot"
 	roundend_category = "untiologists zealots"
 	typecache_datum_blacklist = list(/datum/antagonist/egov_agent)
-	job_rank = ROLE_UNITOLOGIST_ZEALOT
+	job_rank = ROLE_ZEALOT
 	antag_memory = "You are a zealot of Unitology, one of firm belief in convergence and be made whole, willing to do anything in pursuit of your beliefs. It is your assignment to make the Crew see the light, and submit to convergence, one way or the other. You have been blessed with a psychic connection created by the <b>marker</b>, and must serve the marker's will at all costs."
 	hud_icon = 'deadspace/icons/mob/huds/antag_hud.dmi'
 	antag_hud_name = "untiologist"
@@ -13,23 +13,23 @@
 	preview_outfit = /datum/outfit/job/assistant
 	var/datum/team/unitologists_team/team
 
-/datum/antagonist/unitologist/greet()
+/datum/antagonist/zealot/greet()
 	. = ..()
 	to_chat(owner, span_boldannounce("You feel a psychic link between you and the Marker."))
-	to_chat(owner, span_boldannounce("You feel like you will server it at all costs."))
+	to_chat(owner, span_boldannounce("You must serve it at all costs."))
 	owner.announce_objectives()
 
-/datum/antagonist/unitologist/on_gain()
+/datum/antagonist/zealot/on_gain()
 	make_objectives()
 	. = ..()
 
-/datum/antagonist/unitologist/proc/make_objectives()
+/datum/antagonist/zealot/proc/make_objectives()
 	if(team)
 		objectives |= team.objectives
 
-/datum/antagonist/unitologist/create_team(datum/team/unitologists_team/new_team)
+/datum/antagonist/zealot/create_team(datum/team/unitologists_team/new_team)
 	if(!new_team)
-		for(var/datum/antagonist/unitologist/agent in GLOB.antagonists)
+		for(var/datum/antagonist/zealot/agent in GLOB.antagonists)
 			if(!agent.owner)
 				continue
 			if(agent.team)
@@ -41,11 +41,11 @@
 		stack_trace("Wrong team type passed to [type] initialization.")
 	team = new_team
 
-/datum/antagonist/unitologist/get_team()
+/datum/antagonist/zealot/get_team()
 	return team
 
-/datum/antagonist/unitologist/apply_innate_effects(mob/living/mob_override)
-	add_team_hud(mob_override || owner.current, /datum/antagonist/unitologist)
+/datum/antagonist/zealot/apply_innate_effects(mob/living/mob_override)
+	add_team_hud(mob_override || owner.current, /datum/antagonist/zealot)
 
 /datum/team/unitologists_team
 	name = "unitologists zealots"

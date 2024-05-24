@@ -87,6 +87,6 @@
 		owner.remove_movespeed_modifier(/datum/movespeed_modifier/gallop)
 
 /datum/movespeed_modifier/gallop
-	multiplicative_slowdown = -2.5
+	slowdown = -2.5
 
 #undef GALLOP_CRASH_LIMIT

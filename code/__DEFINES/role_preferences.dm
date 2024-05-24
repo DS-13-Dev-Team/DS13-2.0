@@ -19,7 +19,7 @@
 #define ROLE_TRAITOR "Traitor"
 #define ROLE_WIZARD "Wizard"
 #define ROLE_EARTHGOV_AGENT "EarthGov Agent"
-#define ROLE_UNITOLOGIST_ZEALOT "Unitologist Zealot"
+#define ROLE_ZEALOT "Unitologist Zealot"
 
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
@@ -89,7 +89,6 @@
 #define ROLE_SYNDICATE_CYBERSUN "Cybersun Space Syndicate" //Ghost role syndi from Forgottenship ruin
 #define ROLE_SYNDICATE_CYBERSUN_CAPTAIN "Cybersun Space Syndicate Captain" //Forgottenship captain syndie
 #define ROLE_HEADSLUG_CHANGELING "Headslug Changeling"
-#define ROLE_SPACE_PIRATE "Space Pirate"
 #define ROLE_ANCIENT_CREW "Ancient Crew"
 #define ROLE_SPACE_DOCTOR "Space Doctor"
 #define ROLE_SPACE_BARTENDER "Space Bartender"
@@ -107,7 +106,7 @@
 GLOBAL_LIST_INIT(special_roles, list(
 	// Roundstart
 	ROLE_EARTHGOV_AGENT = 0,
-	ROLE_UNITOLOGIST_ZEALOT = 0,
+	ROLE_ZEALOT = 0,
 	ROLE_BROTHER = 0,
 	ROLE_CHANGELING = 0,
 	ROLE_CLOWN_OPERATIVE = 14,
