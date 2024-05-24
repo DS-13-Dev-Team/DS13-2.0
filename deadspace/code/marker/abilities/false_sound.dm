@@ -1,6 +1,6 @@
 /datum/action/cooldown/necro/psy/false_sound
 	name = "False Sound"
-	desc = "A context sensitive spell which does different things depending on the target. Interfaces with machines, moves items, messes with computers and office appliances."
+	desc = " Generates realistic auditory illusions, including ambient noises or necromorph sounds. Effective for distraction, deception, or stealth."
 	button_icon_state = "false_sound"
 	cost = 100
 	cooldown_time = 2 MINUTES
