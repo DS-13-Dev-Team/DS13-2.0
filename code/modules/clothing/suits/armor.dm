@@ -11,7 +11,7 @@
 	equip_delay_other = 40
 	max_integrity = 250
 	resistance_flags = NONE
-	armor = list(BLUNT = 35, PUNCTURE = 10, SLASH = 50, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
+	armor = list(BLUNT = 45, PUNCTURE = 10, SLASH = 60, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
 
 /obj/item/clothing/suit/armor/Initialize(mapload)
 	. = ..()
@@ -26,7 +26,7 @@
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION //need to do these
-	armor = list(BLUNT = 35, PUNCTURE = 20, SLASH = 35, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
+	armor = list(BLUNT = 45, PUNCTURE = 20, SLASH = 45, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
 
 /obj/item/clothing/suit/armor/vest/sec
 	name = "martian armor vest"
@@ -39,7 +39,7 @@
 	desc = "A thick, flexible kevlar vest. Keeps your chest protected from stabbings and shootings, but it won't do much against blunt force."
 	icon_state = "armoralt"
 	inhand_icon_state = "armoralt"
-	armor = list(BLUNT = 15, PUNCTURE = 40, SLASH = 10, LASER = 30, ENERGY = 30, BOMB = 10, BIO = 0, FIRE = 50, ACID = 50)
+	armor = list(BLUNT = 25, PUNCTURE = 40, SLASH = 20, LASER = 30, ENERGY = 30, BOMB = 10, BIO = 0, FIRE = 50, ACID = 50)
 
 /obj/item/clothing/suit/armor/vest/marine
 	name = "tactical armor vest"
@@ -55,7 +55,7 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_VOX_VARIATION | CLOTHING_TESHARI_VARIATION
 
 
-	armor = list(BLUNT = 50, PUNCTURE = 20, SLASH = 70, LASER = 30, ENERGY = 25, BOMB = 50, BIO = 100, FIRE = 40, ACID = 50)
+	armor = list(BLUNT = 60, PUNCTURE = 20, SLASH = 80, LASER = 30, ENERGY = 25, BOMB = 50, BIO = 100, FIRE = 40, ACID = 50)
 
 /obj/item/clothing/suit/armor/vest/marine/security
 	name = "large tactical armor vest"
@@ -97,7 +97,7 @@
 	icon_state = "hos"
 	inhand_icon_state = "greatcoat"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list(BLUNT = 20, PUNCTURE = 0, SLASH = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 70, ACID = 90)
+	armor = list(BLUNT = 30, PUNCTURE = 0, SLASH = 40, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 70, ACID = 90)
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	strip_delay = 80
@@ -156,7 +156,7 @@
 	icon_state = "capcarapace"
 	inhand_icon_state = "armor"
 	body_parts_covered = CHEST|GROIN
-	armor = list(BLUNT = 50, PUNCTURE = 20, SLASH = 70, LASER = 50, ENERGY = 50, BOMB = 25, BIO = 0, FIRE = 100, ACID = 90)
+	armor = list(BLUNT = 60, PUNCTURE = 20, SLASH = 80, LASER = 50, ENERGY = 50, BOMB = 25, BIO = 0, FIRE = 100, ACID = 90)
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
 	supports_variations_flags = NONE
@@ -187,7 +187,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor = list(BLUNT = 50, PUNCTURE = 10, SLASH = 50, LASER = 10, ENERGY = 10, BOMB = 0, BIO = 0, FIRE = 80, ACID = 80)
+	armor = list(BLUNT = 60, PUNCTURE = 10, SLASH = 60, LASER = 10, ENERGY = 10, BOMB = 0, BIO = 0, FIRE = 80, ACID = 80)
 	clothing_flags = BLOCKS_SHOVE_KNOCKDOWN
 	strip_delay = 80
 	equip_delay_other = 60
@@ -199,7 +199,7 @@
 	icon_state = "bonearmor"
 	inhand_icon_state = "bonearmor"
 	blood_overlay_type = "armor"
-	armor = list(BLUNT = 35, PUNCTURE = 25, SLASH = 0, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
+	armor = list(BLUNT = 45, PUNCTURE = 25, SLASH = 10, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 
 /obj/item/clothing/suit/armor/bulletproof
@@ -208,7 +208,7 @@
 	icon_state = "bulletproof"
 	inhand_icon_state = "armor"
 	blood_overlay_type = "armor"
-	armor = list(BLUNT = 15, PUNCTURE = 60, SLASH = 25, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 50, ACID = 50)
+	armor = list(BLUNT = 25, PUNCTURE = 60, SLASH = 35, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, FIRE = 50, ACID = 50)
 	strip_delay = 70
 	equip_delay_other = 50
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
@@ -222,7 +222,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	cold_protection = CHEST|GROIN|ARMS
 	heat_protection = CHEST|GROIN|ARMS
-	armor = list(BLUNT = 10, PUNCTURE = 10, SLASH = 0, LASER = 60, ENERGY = 60, BOMB = 0, BIO = 0, FIRE = 100, ACID = 100)
+	armor = list(BLUNT = 20, PUNCTURE = 10, SLASH = 10, LASER = 60, ENERGY = 60, BOMB = 0, BIO = 0, FIRE = 100, ACID = 100)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	var/hit_reflect_chance = 50
 
@@ -236,7 +236,7 @@
 	name = "private investigator's armor vest"
 	desc = "An armored vest with a private investigator's badge on it."
 	icon_state = "detective-armor"
-	armor = list(BLUNT = 20, PUNCTURE = 30, SLASH = 10, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
+	armor = list(BLUNT = 30, PUNCTURE = 30, SLASH = 20, LASER = 20, ENERGY = 30, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
 	resistance_flags = FLAMMABLE
 	dog_fashion = null
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
@@ -250,7 +250,7 @@
 	desc = "This vest appears to be made of of highly flexible materials that absorb impacts with ease."
 	icon_state = "infiltrator"
 	inhand_icon_state = "infiltrator"
-	armor = list(BLUNT = 40, PUNCTURE = 40, SLASH = 0, LASER = 30, ENERGY = 40, BOMB = 70, BIO = 0, FIRE = 100, ACID = 100)
+	armor = list(BLUNT = 50, PUNCTURE = 40, SLASH = 10, LASER = 30, ENERGY = 40, BOMB = 70, BIO = 0, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	strip_delay = 80
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
@@ -260,7 +260,7 @@
 	desc = "A tactical suit first developed in a joint effort by the defunct IS-ERI and Mars Executive Outcomes in 2321 for military operations. It has a minor slowdown, but offers decent protection."
 	icon_state = "heavy"
 	inhand_icon_state = "swat_suit"
-	armor = list(BLUNT = 40, PUNCTURE = 20, SLASH = 60, LASER = 30, ENERGY = 40, BOMB = 50, BIO = 90, FIRE = 100, ACID = 100)
+	armor = list(BLUNT = 50, PUNCTURE = 20, SLASH = 70, LASER = 30, ENERGY = 40, BOMB = 50, BIO = 90, FIRE = 100, ACID = 100)
 	strip_delay = 120
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	clothing_flags = THICKMATERIAL
