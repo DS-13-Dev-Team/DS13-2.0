@@ -221,7 +221,7 @@
 	desc = "Designed to quickly reload revolvers."
 	id = "a357"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 100)
+	materials = list(/datum/material/iron = 450)
 	build_path = /obj/item/ammo_box/a357
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
