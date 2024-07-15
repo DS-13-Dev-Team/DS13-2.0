@@ -231,7 +231,7 @@
 	desc = "High caliber armor piercing shells designed for use in the Seeker Rifle."
 	id = "seeker"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 400)
+	materials = list(/datum/material/iron = 2500)
 	build_path = /obj/item/ammo_box/magazine/seeker
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
