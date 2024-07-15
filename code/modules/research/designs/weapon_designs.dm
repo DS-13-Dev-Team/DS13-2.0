@@ -275,7 +275,7 @@
 	desc = "A pulse rocket"
 	id = "pulse_rocket"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 10000)
+	materials = list(/datum/material/iron = 500, /datum/material/plasma = 1500, /datum/material/uranium = 1000)
 	build_path = /obj/item/ammo_casing/caseless/rocket/pulse
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
