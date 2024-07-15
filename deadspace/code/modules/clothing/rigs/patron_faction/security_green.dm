@@ -3,7 +3,7 @@
 	name = "security greene"
 	desc = "A lightweight and flexible armored rig suit used by earthgov, Urban camo with an inbuilt Bomber Jacket (for the rizz).."
 	default_skin = "greenrig"
-	armor = list(BLUNT = 37.5, PUNCTURE = 35, SLASH = 35, LASER = 20, ENERGY = 15, BOMB = 37.5, BIO = 100, FIRE = 60, ACID = 60)
+	armor = list(BLUNT = 47.5, PUNCTURE = 35, SLASH = 45, LASER = 20, ENERGY = 15, BOMB = 37.5, BIO = 100, FIRE = 60, ACID = 60)
 	siemens_coefficient = 0
 
 	skins = list(

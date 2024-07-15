@@ -2,7 +2,7 @@
 	name = "advanced unitologist engineer"
 	desc = "Exclusive only to to the Unitologists who contributed over 400k Credits to the Church."
 	default_skin = "advanced_engineer_unitologist"
-	armor = list(BLUNT = 50, PUNCTURE = 40, SLASH = 50, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 100)
+	armor = list(BLUNT = 60, PUNCTURE = 40, SLASH = 60, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	complexity_max = 25

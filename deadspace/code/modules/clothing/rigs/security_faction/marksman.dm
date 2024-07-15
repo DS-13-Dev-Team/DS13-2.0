@@ -2,7 +2,7 @@
 	name = "marksman"
 	desc = "A RIG designed for usage by a vessel's or other facility's forensics specialist."
 	default_skin = "marksman"
-	armor = list(BLUNT = 15, PUNCTURE = 30, SLASH = 30, LASER = 20, ENERGY = 15, BOMB = 15, BIO = 100, FIRE = 20, ACID = 50)
+	armor = list(BLUNT = 25, PUNCTURE = 30, SLASH = 40, LASER = 20, ENERGY = 15, BOMB = 15, BIO = 100, FIRE = 20, ACID = 50)
 	siemens_coefficient = 0
 
 	skins = list(

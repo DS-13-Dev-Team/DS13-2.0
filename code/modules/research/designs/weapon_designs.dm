@@ -70,57 +70,7 @@
 	build_path = /obj/item/melee/cleric_mace
 	category = list("Imported")
 
-//Pistol magazines
-
-/datum/design/m10mm
-	name = "8-round pistol magazine (10mm Auto)"
-	desc = "A gun magazine."
-	id = "m10mm"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 300)
-	build_path = /obj/item/ammo_box/magazine/m10mm
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-/datum/design/m45
-	name = "8-round pistol magazine (.45 ACP)"
-	desc = "A gun magazine"
-	id = "m45"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 300)
-	build_path = /obj/item/ammo_box/magazine/m45
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-/datum/design/m9mm
-	name = "8-round pistol magazine (9x19mm)"
-	desc = "A gun magazine"
-	id = "m9mm"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 300)
-	build_path = /obj/item/ammo_box/magazine/m9mm
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-/datum/design/m9mm_aps
-	name = "15-round pistol magazine (9x19mm)"
-	desc = "A gun magazine"
-	id = "m9mm_aps"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 350)
-	build_path = /obj/item/ammo_box/magazine/m9mm_aps
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-/datum/design/m50
-	name = "7-round pistol magazine (.50 AE)"
-	desc = "A gun magazine"
-	id = "m50"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 300)
-	build_path = /obj/item/ammo_box/magazine/m50
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
+//Divet magazines
 
 /datum/design/divet
 	name = "Divet magazine (pistol slug)"
@@ -172,159 +122,165 @@
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
 
-//lmg
-	
-/datum/design/mm712x82
-	name = "Box magazine (7.12x82mm)"
-	desc = "A light machinegun magazine"
-	id = "mm712x82"
+//SCL shotgun
+
+/datum/design/ds12g/beanbag
+	name = "Magazine SCL-shotgun beanbag"
+	desc = "A shotgun magazine"
+	id = "ds12g_beanbag"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 400)
-	build_path = /obj/item/ammo_box/magazine/mm712x82
+	materials = list(/datum/material/iron = 150)
+	build_path = /obj/item/ammo_box/magazine/ds12g/beanbag
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
 
-/datum/design/mm712x82_rub
-	name = "Box magazine (Rubber 7.12x82mm)"
-	desc = "A light machinegun magazine"
-	id = "mm712x82_rub"
+/datum/design/ds12g/rb
+	name = "Magazine SCL-shotgun rubbershot"
+	desc = "A shotgun magazine"
+	id = "ds12g_rb"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 350)
-	build_path = /obj/item/ammo_box/magazine/mm712x82/bouncy
+	materials = list(/datum/material/iron = 200)
+	build_path = /obj/item/ammo_box/magazine/ds12g/rb
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
 
-//Rifle
-
-/datum/design/m10mm_rifle
-	name = "10-round magazine (10mm Auto)"
-	desc = "A well-worn magazine fitted for the surplus rifle."
-	id = "m10mm_rifle"
+/datum/design/ds12g/stunslug //Idk what's their difference so i added both
+	name = "Magazine SCL-shotgun stunslug"
+	desc = "A shotgun magazine"
+	id = "ds12g_stunslug"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 350)
-	build_path = /obj/item/ammo_box/magazine/m10mm/rifle
+	materials = list(/datum/material/iron = 250)
+	build_path = /obj/item/ammo_box/magazine/ds12g/stunslug
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
 
-/datum/design/m556
-	name = "30-round magazine (5.56x45mm)"
-	desc = "A well-worn magazine fitted for the surplus rifle."
-	id = "m556"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 350)
-	build_path = /obj/item/ammo_box/magazine/m556
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-//SMG
-
-/datum/design/wt550m9
-	name = "20-round magazine (4.6x30mm)"
-	desc = "A WT magazine."
-	id = "wt550m9"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 350)
-	build_path = /obj/item/ammo_box/magazine/wt550m9
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-/datum/design/plastikov9mm
-	name = "50-round magazine (9x19mm)"
-	desc = "A plastikov magazine."
-	id = "plastikov9mm"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 450)
-	build_path = /obj/item/ammo_box/magazine/plastikov9mm
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-/datum/design/uzim9mm
-	name = "32-round magazine (9x19mm)"
-	desc = "A UZI magazine."
-	id = "uzim9mm"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 350)
-	build_path = /obj/item/ammo_box/magazine/uzim9mm
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-/datum/design/smgm9mm
-	name = "21-round magazine (9x19mm)"
-	desc = "A SMG magazine."
-	id = "smgm9mm"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 350)
-	build_path = /obj/item/ammo_box/magazine/smgm9mm
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-/datum/design/smgm45
-	name = "24-round magazine (.45 ACP)"
-	desc = "A SMG magazine."
-	id = "smgm45"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 350)
-	build_path = /obj/item/ammo_box/magazine/smgm45
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-/datum/design/tommygunm45
-	name = "50-round drum magazine (.45 ACP)"
-	desc = "A tommygun magazine."
-	id = "tommygunm45"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 400)
-	build_path = /obj/item/ammo_box/magazine/tommygunm45
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
-// Misc guns
-
-/datum/design/m12g
-	name = "Shotgun magazine (12g buckshot slugs)"
-	desc = "A shotgun magazine."
-	id = "m12g"
+/datum/design/ds12g/slug
+	name = "Magazine SCL-shotgun slug"
+	desc = "A shotgun magazine"
+	id = "ds12g_slug"
 	build_type = FABRICATOR
 	materials = list(/datum/material/iron = 300)
-	build_path = /obj/item/ammo_box/magazine/m12g
+	build_path = /obj/item/ammo_box/magazine/ds12g/slug
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
 
-/datum/design/sniper_rounds
-	name = "6-round magazine (.50 BMG)"
-	desc = "A sniper magazine."
-	id = "sniper_rounds"
+/datum/design/ds12g/pulseslug
+	name = "Magazine SCL-shotgun pulseslug"
+	desc = "A shotgun magazine"
+	id = "ds12g_pulseslug"
 	build_type = FABRICATOR
 	materials = list(/datum/material/iron = 300)
-	build_path = /obj/item/ammo_box/magazine/sniper_rounds
+	build_path = /obj/item/ammo_box/magazine/ds12g/pulseslug
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
 
-/datum/design/recharge
-	name = "Power pack"
-	desc = "A rechargeable, detachable battery that serves as a magazine for laser rifles."
-	id = "recharge"
+/datum/design/ds12g
+	name = "Magazine SCL-shotgun buckshot"
+	desc = "A shotgun magazine"
+	id = "ds12g"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 1000, /datum/material/silver = 10)
-	build_path = /obj/item/ammo_box/magazine/recharge
+	materials = list(/datum/material/iron = 350)
+	build_path = /obj/item/ammo_box/magazine/ds12g
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
 
-/* These ones don't have build_path and materials so you were unable to craft them but recipe was showed
-/datum/design/rubbershot/sec
-	name = "Rubber Slug"
-	id = "sec_rshot"
+
+
+/datum/design/pulse_heavy
+	name = "Heavy Pulse Rifle power cell"
+	desc = "A heavy power pack designed for use with the Heavy Pulse Rifle."
+	id = "pulse_heavy"
 	build_type = FABRICATOR
+	materials = list(/datum/material/iron = 9000, /datum/material/silver = 900)
+	build_path = /obj/item/stock_parts/cell/pulse_heavy
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
 
-/datum/design/beanbag_slug/sec
-	name = "Beanbag Slug"
-	id = "sec_beanbag_slug"
+/datum/design/javelin
+	name = "Javelin rack"
+	desc = "A set of javelins for the T15 Javelin Gun."
+	id = "javelin"
 	build_type = FABRICATOR
+	materials = list(/datum/material/iron = 1000)
+	build_path = /obj/item/ammo_box/magazine/javelin
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-*/
+
+/datum/design/pulse
+	name = "Pulse magazine (standard)"
+	desc = "With a distinctive \"bell and stock\" design, pulse magazines can be inserted and removed from the Pulse Rifle with minimal effort and risk."
+	id = "pulse"
+	build_type = FABRICATOR
+	materials = list(/datum/material/iron = 1000, /datum/material/silver = 100)
+	build_path = /obj/item/ammo_box/magazine/pulse
+	category = list(DCAT_AMMO)
+	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
+
+/datum/design/a357
+	name = "Speed loader (.357)"
+	desc = "Designed to quickly reload revolvers."
+	id = "a357"
+	build_type = FABRICATOR
+	materials = list(/datum/material/iron = 100)
+	build_path = /obj/item/ammo_box/a357
+	category = list(DCAT_AMMO)
+	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
+
+/datum/design/seeker
+	name = "Seeker shells"
+	desc = "High caliber armor piercing shells designed for use in the Seeker Rifle."
+	id = "seeker"
+	build_type = FABRICATOR
+	materials = list(/datum/material/iron = 400)
+	build_path = /obj/item/ammo_box/magazine/seeker
+	category = list(DCAT_AMMO)
+	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
+
+//Rivet
+
+/datum/design/rivet_gun
+	name = "711-MarkCL Rivet Gun"
+	desc = "The latest refinement from Timson Tools' long line of friendly tools."
+	id = "rivet_gun"
+	build_type = FABRICATOR
+	materials = list(/datum/material/iron = 10000)
+	build_path = /obj/item/gun/ballistic/automatic/pistol/rivet
+	category = list(DCAT_WEAPON)
+	mapload_design_flags = DESIGN_FAB_ENGINEERING | DESIGN_FAB_OMNI //Weapon is weapon, even it's an engineers' weapon
+
+/datum/design/rivet
+	name = "Rivet magazine"
+	desc = "A rivet magazine"
+	id = "rivet_gun"
+	build_type = FABRICATOR
+	materials = list(/datum/material/iron = 300)
+	build_path = /obj/item/ammo_box/magazine/rivet
+	category = list(DCAT_AMMO)
+	mapload_design_flags = DESIGN_FAB_ENGINEERING | DESIGN_FAB_OMNI
+
+//Underbarrel
+
+/datum/design/shotgun_bola
+	name = "Bola"
+	desc = "A shotgun bola"
+	id = "shotgun_bola"
+	build_type = FABRICATOR
+	materials = list(/datum/material/iron = 300)
+	build_path = /obj/projectile/bullet/shotgun_bola
+	category = list(DCAT_AMMO)
+	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
+
+/datum/design/pulse_rocket
+	name = "Rocket"
+	desc = "A pulse rocket"
+	id = "pulse_rocket"
+	build_type = FABRICATOR
+	materials = list(/datum/material/iron = 10000)
+	build_path = /obj/item/ammo_casing/caseless/rocket/pulse
+	category = list(DCAT_AMMO)
+	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
+
+//Other things
 
 /datum/design/stunrevolver
 	name = "Tesla Cannon Part Kit"
@@ -336,22 +292,22 @@
 	category = list(DCAT_WEAPON)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
 
-/datum/design/nuclear_gun
-	name = "Advanced Energy Gun Part Kit"
-	desc = "The kit for an energy gun with an experimental miniaturized reactor."
-	id = "nuclear_gun"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 10000, /datum/material/glass = 2000, /datum/material/uranium = 3000, /datum/material/titanium = 1000)
-	build_path = /obj/item/weaponcrafting/gunkit/nuclear
-	category = list(DCAT_WEAPON)
-	mapload_design_flags = DESIGN_FAB_SECURITY	| DESIGN_FAB_OMNI
-
 /datum/design/stunshell
 	name = "Stun Shell"
 	desc = "A stunning shell for a shotgun."
 	id = "stunshell"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 200)
+	materials = list(/datum/material/iron = 50)
 	build_path = /obj/item/ammo_casing/shotgun/stunslug
+	category = list(DCAT_AMMO)
+	mapload_design_flags = DESIGN_FAB_SECURITY
+
+/datum/design/shell
+	name = "Shotgun shell"
+	desc = "A shell for a shotgun."
+	id = "stunshell"
+	build_type = FABRICATOR
+	materials = list(/datum/material/iron = 100)
+	build_path = /obj/item/ammo_casing/shotgun
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY

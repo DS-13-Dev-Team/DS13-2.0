@@ -2,7 +2,7 @@
 	name = "advanced soldier"
 	desc = "A military-grade RIG that was issued to the Earth Defense Force personnel."
 	default_skin = "adv_soldier"
-	armor = list(BLUNT = 50, PUNCTURE = 50, SLASH = 45, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 35)
+	armor = list(BLUNT = 60, PUNCTURE = 50, SLASH = 55, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 100, ACID = 35)
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
