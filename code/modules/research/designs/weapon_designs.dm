@@ -211,7 +211,7 @@
 	desc = "With a distinctive \"bell and stock\" design, pulse magazines can be inserted and removed from the Pulse Rifle with minimal effort and risk."
 	id = "pulse"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 1000, /datum/material/silver = 100)
+	materials = list(/datum/material/iron = 1000)
 	build_path = /obj/item/ammo_box/magazine/pulse
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
