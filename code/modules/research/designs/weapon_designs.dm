@@ -253,7 +253,7 @@
 	desc = "A rivet magazine"
 	id = "rivet_gun"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 300)
+	materials = list(/datum/material/iron = 200)
 	build_path = /obj/item/ammo_box/magazine/rivet
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_ENGINEERING | DESIGN_FAB_OMNI
