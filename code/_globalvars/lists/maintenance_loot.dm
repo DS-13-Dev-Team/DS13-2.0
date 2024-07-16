@@ -339,6 +339,7 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 		//ammo
 		/obj/item/ammo_box/magazine/seeker = 1,
 		/obj/item/ammo_box/magazine/ds12g/slug = 1,
+		/obj/item/ammo_box/magazine/ds12g = 1,
 		/obj/item/ammo_box/magazine/pulse = 1,
 		) = 1,
 

@@ -201,7 +201,7 @@
 	desc = "With a distinctive \"bell and stock\" design, pulse magazines can be inserted and removed from the Pulse Rifle with minimal effort and risk."
 	id = "pulse"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 1000, /datum/material/silver = 100)
+	materials = list(/datum/material/iron = 1000)
 	build_path = /obj/item/ammo_box/magazine/pulse
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
@@ -211,7 +211,7 @@
 	desc = "Designed to quickly reload revolvers."
 	id = "a357"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 100)
+	materials = list(/datum/material/iron = 450)
 	build_path = /obj/item/ammo_box/a357
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
@@ -221,7 +221,7 @@
 	desc = "High caliber armor piercing shells designed for use in the Seeker Rifle."
 	id = "seeker"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 400)
+	materials = list(/datum/material/iron = 2500)
 	build_path = /obj/item/ammo_box/magazine/seeker
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
@@ -243,7 +243,7 @@
 	desc = "A rivet magazine"
 	id = "rivet_gun"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 300)
+	materials = list(/datum/material/iron = 200)
 	build_path = /obj/item/ammo_box/magazine/rivet
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_ENGINEERING | DESIGN_FAB_OMNI
@@ -265,7 +265,7 @@
 	desc = "A pulse rocket"
 	id = "pulse_rocket"
 	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 10000)
+	materials = list(/datum/material/iron = 500, /datum/material/plasma = 1500, /datum/material/uranium = 1000)
 	build_path = /obj/item/ammo_casing/caseless/rocket/pulse
 	category = list(DCAT_AMMO)
 	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
