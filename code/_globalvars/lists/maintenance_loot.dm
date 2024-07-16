@@ -156,7 +156,6 @@ GLOBAL_LIST_INIT(common_loot, list( //common: basic items
 
 		//weapons, ammo and similar things
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/gun/ballistic/automatic/pistol/rivet = 1,
 		/obj/item/ammo_box/magazine/rivet = 1,
 		) = 1,
 	))
@@ -175,8 +174,6 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 		/obj/item/roller = 1,
 		/obj/item/spear = 1,
 		/obj/item/weldingtool/largetank = 1,
-		/obj/item/gun/ballistic/automatic/pistol/divet/rb = 1,
-		/obj/item/gun/ballistic/automatic/pistol/divet/no_mag = 1,
 		) = 8,
 
 	list(//equipment
@@ -276,6 +273,9 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 	list(//weapons and ammo
 		/obj/item/gun/ballistic/rifle/boltaction/harpoon/javelin/no_mag = 1,
 		/obj/item/ammo_box/magazine/javelin = 1,
+		/obj/item/gun/ballistic/automatic/pistol/rivet = 1,
+		/obj/item/gun/ballistic/automatic/pistol/divet/rb = 1,
+		/obj/item/gun/ballistic/automatic/pistol/divet/no_mag = 1,
 		) = 1,
 	list(//data disks for lathes
 		/obj/item/disk/data/hyper/preloaded/fabricator/engineering = 1,

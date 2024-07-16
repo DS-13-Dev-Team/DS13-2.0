@@ -186,16 +186,6 @@
 
 
 
-/datum/design/pulse_heavy
-	name = "Heavy Pulse Rifle power cell"
-	desc = "A heavy power pack designed for use with the Heavy Pulse Rifle."
-	id = "pulse_heavy"
-	build_type = FABRICATOR
-	materials = list(/datum/material/iron = 9000, /datum/material/silver = 900)
-	build_path = /obj/item/stock_parts/cell/pulse_heavy
-	category = list(DCAT_AMMO)
-	mapload_design_flags = DESIGN_FAB_SECURITY | DESIGN_FAB_OMNI
-
 /datum/design/javelin
 	name = "Javelin rack"
 	desc = "A set of javelins for the T15 Javelin Gun."
