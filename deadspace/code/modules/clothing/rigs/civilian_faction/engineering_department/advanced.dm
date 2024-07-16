@@ -2,7 +2,7 @@
 	name = "advanced engineer"
 	desc = "Exclusive only to upper class engineers who have passed rigorous training and performed multiple repairs in hostile environments."
 	default_skin = "advanced_engineer"
-	armor = list(BLUNT = 55, PUNCTURE = 40, SLASH = 50, LASER = 50, ENERGY = 50, BOMB = 55, BIO = 100, FIRE = 100, ACID = 50)
+	armor = list(BLUNT = 65, PUNCTURE = 40, SLASH = 60, LASER = 50, ENERGY = 50, BOMB = 55, BIO = 100, FIRE = 100, ACID = 50)
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT

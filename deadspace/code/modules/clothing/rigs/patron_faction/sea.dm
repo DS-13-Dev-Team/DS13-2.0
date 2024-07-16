@@ -4,7 +4,7 @@
 	desc = "The heavy-duty diving RIG is the standard among CEC deep sea mining operations. \
 	It's plating has been reinforced to withstand extreme undersea pressures and concussive forces."
 	default_skin = "heavy_diving"
-	armor = list(BLUNT = 55, PUNCTURE = 45, SLASH = 50, LASER = 50, ENERGY = 50, BOMB = 55, BIO = 100, FIRE = 100, ACID = 60)
+	armor = list(BLUNT = 65, PUNCTURE = 45, SLASH = 60, LASER = 50, ENERGY = 50, BOMB = 55, BIO = 100, FIRE = 100, ACID = 60)
 	resistance_flags = FIRE_PROOF|ACID_PROOF
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT

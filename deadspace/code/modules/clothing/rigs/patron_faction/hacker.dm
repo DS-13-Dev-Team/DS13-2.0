@@ -3,7 +3,7 @@
 	name = "hacker"
 	desc = "A lightweight suit cobbled together from civilian parts, with some high end tech hidden within, suprisngly not illegal."
 	default_skin = "hacker"
-	armor = list(BLUNT = 10, PUNCTURE = 5, SLASH = 5, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, FIRE = 15, ACID = 15)
+	armor = list(BLUNT = 20, PUNCTURE = 5, SLASH = 15, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, FIRE = 15, ACID = 15)
 	max_heat_protection_temperature = 0
 	min_cold_protection_temperature = 0
 

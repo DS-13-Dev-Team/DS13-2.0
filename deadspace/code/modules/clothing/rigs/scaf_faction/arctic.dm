@@ -2,7 +2,7 @@
 	name = "arctic survival"
 	desc = "A standard-issue Sovereign Colonies RIG used for exploring harsh environments, woven with classified S.C.A.F. synthetic fibers that insulate the body from extreme cold and hypothermic conditions."
 	default_skin = "arctic_survival"
-	armor = list(BLUNT = 37.5, PUNCTURE = 30, SLASH = 37.5, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 30)
+	armor = list(BLUNT = 47.5, PUNCTURE = 30, SLASH = 47.5, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 30)
 	resistance_flags = FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT

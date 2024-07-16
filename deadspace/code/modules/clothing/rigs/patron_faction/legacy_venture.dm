@@ -3,7 +3,7 @@
 	name = "legacy venture"
 	desc = "A rig worn by a legendary hero of the Resource Wars, passed down from Father to Son, and then retrofitted with newer features of current rigs."
 	default_skin = "ventureblack"
-	armor = list(BLUNT = 37.5, PUNCTURE = 30, SLASH = 37.5, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 40)
+	armor = list(BLUNT = 47.5, PUNCTURE = 30, SLASH = 47.5, LASER = 37.5, ENERGY = 37.5, BOMB = 37.5, BIO = 100, FIRE = 100, ACID = 40)
 	resistance_flags = FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0

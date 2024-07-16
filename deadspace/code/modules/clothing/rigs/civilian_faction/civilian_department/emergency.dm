@@ -2,7 +2,7 @@
 	name = "EVA"
 	desc = "A light, emergency rig for use by non-qualified personnel in the case of emergency decompression."
 	default_skin = "emergency"
-	armor = list(BLUNT = 10, PUNCTURE = 5, SLASH = 5, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, FIRE = 30, ACID = 30)
+	armor = list(BLUNT = 20, PUNCTURE = 5, SLASH = 15, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, FIRE = 30, ACID = 30)
 
 	skins = list(
 		"emergency" = list(
