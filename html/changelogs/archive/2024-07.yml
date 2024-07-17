@@ -1,6 +1,5 @@
-author: SiuDuM
-delete-after: true
-changes:
+2024-07-17:
+  SiuDuM:
   - rscadd: added more ammo to omni and sec craftlists
   - rscadd: rigs, two guns and disks with designs for fabs were added to maintloot
   - rscdel: removed uncraftable beanbug and rubber slugs from omni and sec craftlists
