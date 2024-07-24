@@ -2779,12 +2779,8 @@
 /turf/open/floor/deadspace/med/triage_corners,
 /area/station/security/medical)
 "bwu" = (
-/mob/living/simple_animal/hostile/rat,
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/open/misc/asteroid,
-/area/aegis/surface)
+/turf/open/floor/plating/deadspace,
+/area/station/maintenance/port/lesser)
 "bwG" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/chief_medical_officer,
@@ -4560,7 +4556,7 @@
 /obj/machinery/door/airlock/maintenance{
 	dir = 1
 	},
-/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/crude,
 /turf/open/floor/iron,
 /area/station/maintenance/port/lesser)
 "cqf" = (
@@ -5484,7 +5480,7 @@
 	dir = 1;
 	name = "Abandoned Apiary"
 	},
-/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/crude,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "cPx" = (
@@ -5817,6 +5813,10 @@
 	},
 /turf/open/floor/deadspace/medbay/v_leftside,
 /area/station/medical/medbay/central)
+"cWG" = (
+/obj/machinery/portable_atmospherics/pump,
+/turf/open/floor/plating/deadspace,
+/area/station/maintenance/port/lesser)
 "cXb" = (
 /obj/structure/cable/yellow{
 	icon_state = "3"
@@ -8277,6 +8277,12 @@
 /obj/structure/chair/stool/directional/south,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
+"eos" = (
+/obj/structure/rack,
+/obj/structure/rack,
+/obj/effect/spawner/random/maintenance/two,
+/turf/open/floor/plating/deadspace,
+/area/station/maintenance/port/lesser)
 "eow" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/deadspace/random/rectangles,
@@ -9871,6 +9877,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
+"flD" = (
+/obj/machinery/portable_atmospherics/scrubber,
+/turf/open/floor/plating/deadspace,
+/area/station/maintenance/port/lesser)
 "flP" = (
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_x = -2;
@@ -13281,6 +13291,10 @@
 	},
 /turf/open/floor/iron/ported/techfloor_grid,
 /area/station/engineering/supermatter/room)
+"gYo" = (
+/obj/effect/spawner/random/decoration/glowstick,
+/turf/open/misc/asteroid,
+/area/aegis/surface)
 "gYr" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/open/floor/iron/ported/lino,
@@ -17564,6 +17578,11 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/tcommsat/server)
+"jhr" = (
+/obj/structure/rack,
+/obj/effect/spawner/random/maintenance/two,
+/turf/open/floor/plating/deadspace,
+/area/station/maintenance/port/lesser)
 "jhF" = (
 /obj/machinery/door/airlock/security{
 	name = "Security Checkpoint #2";
@@ -19336,6 +19355,10 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos)
+"kgn" = (
+/obj/effect/marker_location,
+/turf/open/floor/pod,
+/area/station/maintenance/port/lesser)
 "kgq" = (
 /obj/structure/window/reinforced/spawner/east,
 /obj/machinery/computer/atmos_control/nitrogen_tank{
@@ -20049,6 +20072,10 @@
 	},
 /turf/open/misc/asteroid,
 /area/aegis/surface)
+"kyT" = (
+/obj/machinery/portable_atmospherics/pump,
+/turf/open/floor/pod,
+/area/station/maintenance/port/lesser)
 "kzd" = (
 /obj/structure/sign/poster/official/moth_meth{
 	pixel_y = 32
@@ -22113,6 +22140,10 @@
 	},
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/security/courtroom)
+"lyY" = (
+/obj/machinery/icecream_vat,
+/turf/open/misc/asteroid,
+/area/aegis/surface)
 "lyZ" = (
 /obj/structure/table,
 /obj/item/clipboard,
@@ -26428,8 +26459,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "nNO" = (
-/obj/effect/spawner/random/decoration/glowstick,
-/obj/structure/lattice/catwalk,
+/obj/effect/mapping_helpers/dead_body_placer,
 /turf/open/misc/asteroid,
 /area/aegis/surface)
 "nNP" = (
@@ -26515,6 +26545,12 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/deadspace/random/maint_right,
 /area/station/commons/dorms/barracks/male)
+"nQs" = (
+/mob/living/carbon/human/species/monkey/angry{
+	name = "rabid monkey"
+	},
+/turf/open/floor/iron,
+/area/station/maintenance/port/lesser)
 "nQt" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/east,
@@ -27424,6 +27460,12 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/service/hydroponics/upper)
+"olU" = (
+/obj/effect/mapping_helpers/dead_body_placer,
+/turf/open/floor/deadspace/random/slides{
+	dir = 8
+	},
+/area/aegis/surface)
 "olW" = (
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/deadspace/random/slides{
@@ -29124,6 +29166,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/security/courtroom)
+"pbz" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/iron,
+/area/aegis/surface)
 "pbL" = (
 /obj/item/clothing/neck/petcollar,
 /obj/structure/rack,
@@ -31941,7 +31987,7 @@
 /area/station/security/checkpoint/science)
 "qyT" = (
 /obj/structure/door_assembly/door_assembly_mai,
-/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/crude,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "qza" = (
@@ -33116,6 +33162,10 @@
 	dir = 8
 	},
 /area/station/hallway/primary/aft)
+"rgj" = (
+/obj/machinery/portable_atmospherics/scrubber,
+/turf/open/floor/pod,
+/area/station/maintenance/port/lesser)
 "rgy" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -33907,6 +33957,10 @@
 	},
 /turf/open/floor/deadspace/heavy,
 /area/station/commons/locker)
+"rDA" = (
+/obj/effect/marker_location,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/aegis/mining)
 "rDD" = (
 /obj/machinery/light/directional/north,
 /obj/structure/table,
@@ -34004,6 +34058,10 @@
 	dir = 8
 	},
 /area/station/hallway/primary/aft)
+"rGe" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/misc/ironsand,
+/area/aegis/surface)
 "rGi" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/techstorage/security_all,
@@ -35022,6 +35080,10 @@
 "ski" = (
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/break_room)
+"skj" = (
+/obj/effect/marker_location,
+/turf/open/misc/asteroid,
+/area/aegis/surface)
 "skx" = (
 /obj/structure/disposalpipe/junction/flip{
 	dir = 4
@@ -35842,6 +35904,12 @@
 	},
 /turf/open/floor/iron/norn,
 /area/station/hallway/primary/central)
+"sFk" = (
+/mob/living/carbon/human/species/monkey/angry{
+	name = "rabid monkey"
+	},
+/turf/open/misc/ironsand,
+/area/aegis/surface)
 "sFu" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -39602,6 +39670,9 @@
 "uIk" = (
 /turf/open/floor/deadspace/cable,
 /area/station/hallway/secondary/exit/departure_lounge)
+"uIr" = (
+/turf/open/floor/pod,
+/area/station/maintenance/port/lesser)
 "uII" = (
 /obj/structure/dresser,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
@@ -41889,7 +41960,7 @@
 /obj/machinery/door/airlock/maintenance{
 	dir = 1
 	},
-/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/crude,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
 "vNi" = (
@@ -47781,15 +47852,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+vDj
+vDj
+vDj
+vDj
+vDj
+vDj
+vDj
+vDj
 dBD
 dBD
 dBD
@@ -47938,15 +48009,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+jhr
+bwu
+bwu
+bwu
+bwu
+bwu
+jhr
+vDj
 dBD
 dBD
 dBD
@@ -48095,15 +48166,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+bwu
+bwu
+uIr
+uIr
+uIr
+bwu
+jhr
+vDj
 dBD
 dBD
 dBD
@@ -48252,15 +48323,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+bwu
+bwu
+uIr
+kgn
+uIr
+bwu
+bwu
+vDj
 dBD
 dBD
 dBD
@@ -48409,15 +48480,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+bwu
+bwu
+uIr
+uIr
+uIr
+bwu
+eos
+vDj
 dBD
 dBD
 dBD
@@ -48566,15 +48637,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+jhr
+bwu
+bwu
+bwu
+bwu
+bwu
+jhr
+vDj
 dBD
 dBD
 dBD
@@ -48723,15 +48794,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+vDj
+vDj
+vDj
+vNd
+vDj
+vDj
+vDj
+vDj
 dBD
 dBD
 dBD
@@ -48880,15 +48951,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+jhr
+jhr
+bwu
+bwu
+bwu
+kyT
+cWG
+vDj
 dBD
 dBD
 dBD
@@ -49037,15 +49108,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+bwu
+uIr
+bwu
+uIr
+bwu
+cWG
+cWG
+vDj
 dBD
 dBD
 dBD
@@ -49194,15 +49265,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+bwu
+uIr
+bwu
+bwu
+bwu
+bwu
+uIr
+vDj
 dBD
 dBD
 dBD
@@ -49351,15 +49422,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+flD
+flD
+bwu
+uIr
+uIr
+bwu
+uIr
+vDj
 dBD
 dBD
 dBD
@@ -49508,15 +49579,15 @@ dBD
 dBD
 dBD
 dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
-dBD
+vDj
+rgj
+rgj
+bwu
+bwu
+bwu
+jhr
+jhr
+vDj
 dBD
 dBD
 dBD
@@ -49669,7 +49740,7 @@ vDj
 vDj
 vDj
 vDj
-vDj
+cqe
 vDj
 vDj
 vDj
@@ -59759,7 +59830,7 @@ tpe
 tpe
 tpe
 tpe
-tpe
+nQs
 tpe
 tpe
 tpe
@@ -61338,9 +61409,9 @@ dBD
 dBD
 dBD
 dBD
-kCR
-kCR
-kCR
+gdU
+gdU
+gdU
 dBD
 dBD
 dBD
@@ -69813,14 +69884,14 @@ dBD
 dBD
 dBD
 kCR
-kCR
+nNO
 kCR
 cwJ
-bwu
+tIH
 kCR
 gbR
 qFN
-kCR
+nNO
 kCR
 dBD
 dBD
@@ -69973,7 +70044,7 @@ gdV
 kCR
 kCR
 kCR
-tIH
+kCR
 kCR
 gbR
 kCR
@@ -70131,7 +70202,7 @@ kCR
 vln
 cwJ
 kCR
-oON
+kCR
 kCR
 vln
 cwJ
@@ -70287,9 +70358,9 @@ dBD
 kCR
 vln
 qFN
-oON
 kCR
-nNO
+skj
+kCR
 vln
 tha
 kCR
@@ -70440,11 +70511,11 @@ dBD
 dBD
 dBD
 dBD
-qFN
+rGe
 kCR
 qFN
 cwJ
-tIH
+kCR
 kCR
 duT
 kCR
@@ -70599,15 +70670,15 @@ dBD
 dBD
 dBD
 gdV
-vln
+olU
 kCR
 tIH
-kCR
+gYo
 duT
 vln
 kCR
 kCR
-kCR
+lyY
 dBD
 dBD
 dBD
@@ -71072,7 +71143,7 @@ dBD
 kCR
 kCR
 kCR
-kCR
+nNO
 kCR
 gdV
 kCR
@@ -72485,9 +72556,9 @@ dBD
 dBD
 dBD
 dBD
-kCR
-kCR
-wlJ
+gdU
+gdU
+pbz
 qjS
 dBD
 dBD
@@ -73419,7 +73490,7 @@ kCR
 wlJ
 kCR
 kCR
-qFN
+sFk
 qFN
 wlJ
 wlJ
@@ -81624,7 +81695,7 @@ wRB
 wRB
 cCm
 cCm
-wQs
+cCm
 cCm
 cCm
 cCm
@@ -81782,7 +81853,7 @@ mxi
 cCm
 cCm
 cCm
-cCm
+rDA
 cCm
 cCm
 iDx
@@ -82877,7 +82948,7 @@ dBD
 pjW
 mZl
 cCm
-cCm
+wQs
 cCm
 cCm
 cCm
