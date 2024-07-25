@@ -4,7 +4,7 @@
 /obj/structure/necromorph/maw
 	name = "maw"
 	desc = "A disgusting mass of throbbing flesh and gnashing teeth, it looks like something out of a nightmare."
-	desc_controls = "Click-drag a body onto the maw to begin biomass consumption."
+	desc_controls = "Drag a body onto the maw to begin biomass consumption. Will grab the living if they step on it."
 	icon = 'deadspace/icons/effects/corruption.dmi'
 	icon_state = "maw"
 	density = FALSE

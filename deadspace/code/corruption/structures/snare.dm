@@ -1,5 +1,7 @@
 /obj/structure/necromorph/snare
 	name = "snare"
+	desc = "A coiling looped biomass that twists and trips anything that comes too close."
+	desc_controls = "Tripping only occurs when running or sprinting, walk to avoid being tripped."
 	icon = 'deadspace/icons/effects/corruption.dmi'
 	icon_state = "snare"
 	max_integrity = 50
