@@ -158,6 +158,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "burning",
 		to_chat(user, span_danger("[src] slips out of your hand and hits your head."))
 		user.take_bodypart_damage(10)
 		user.Unconscious(40 SECONDS)
+		user.drop_all_held_items()
 		return
 
 	if (!user.mind || !user.mind.holy_role)

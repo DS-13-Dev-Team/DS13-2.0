@@ -334,6 +334,7 @@
 	if(pushed_mob.loc != loc) //Something prevented the tabling
 		return
 	pushed_mob.Knockdown(30)
+	pushed_mob.drop_all_held_items()
 	pushed_mob.apply_damage(10, BRUTE)
 	pushed_mob.stamina.adjust(-40)
 	if(user.mind?.martial_art.smashes_tables && user.mind?.martial_art.can_use(user))
@@ -352,6 +353,7 @@
 	pushed_mob.apply_damage(30, BRUTE, BODY_ZONE_HEAD, blocked)
 	if (prob(30 * ((100-blocked)/100)))
 		pushed_mob.Knockdown(10 SECONDS)
+		pushed_mob.drop_all_held_items()
 
 	pushed_mob.stamina.adjust(-60)
 	take_damage(50)

@@ -170,6 +170,7 @@
 			span_userdanger("[source] tramples you onto the ground!")
 			)
 		target.Knockdown(6)
+		target.drop_all_held_items()
 	else
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)

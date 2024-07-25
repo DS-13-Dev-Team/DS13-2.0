@@ -78,6 +78,8 @@
 	adjustBruteLoss((levels * 5) ** 1.5)
 	Knockdown(levels * 5 SECONDS)
 	Stun(levels * 2 SECONDS)
+	if(prob(levels * 20))
+		drop_all_held_items()
 	return TRUE
 
 //Generic Bump(). Override MobBump() and ObjBump() instead of this.

@@ -21,6 +21,7 @@
 		if (body_position == STANDING_UP)
 			if (prob(5))
 				Unconscious(40)
+				drop_all_held_items()
 				playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, TRUE, -1)
 				log_combat(user, src, "pushed")
 				visible_message(span_danger("[user] pushes [src] down!"), \

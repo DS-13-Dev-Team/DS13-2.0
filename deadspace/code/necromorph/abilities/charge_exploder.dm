@@ -43,3 +43,4 @@
 		source.visible_message(span_danger("[source] smashes into [target]!"))
 		shake_camera(source, 4, 3)
 		source.Knockdown(20)
+		source.drop_all_held_items()

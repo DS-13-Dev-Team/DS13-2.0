@@ -155,6 +155,7 @@
 /obj/item/soulstone/attack(mob/living/carbon/human/M, mob/living/user)
 	if(!role_check(user))
 		user.Unconscious(100)
+		user.drop_all_held_items()
 		to_chat(user, span_userdanger("Your body is wracked with debilitating pain!"))
 		return
 	if(spent)
@@ -181,6 +182,7 @@
 		return
 	if(!role_check(user))
 		user.Unconscious(100)
+		user.drop_all_held_items()
 		to_chat(user, span_userdanger("Your body is wracked with debilitating pain!"))
 		return
 	if(theme == THEME_HOLY && IS_CULTIST(user))
@@ -223,6 +225,7 @@
 		return
 	if(!role_check(user))
 		user.Unconscious(10 SECONDS)
+		user.drop_all_held_items()
 		to_chat(user, span_userdanger("Your body is wracked with debilitating pain!"))
 		return
 

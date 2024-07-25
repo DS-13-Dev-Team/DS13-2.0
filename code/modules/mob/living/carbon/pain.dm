@@ -227,6 +227,7 @@
 	if((shock_stage > SHOCK_TIER_6 && prob(2)) || shock_stage == SHOCK_TIER_6)
 		if (stat == CONSCIOUS)
 			pain_message(pick("You black out.", "I feel like I could die any moment now.", "I can't go on anymore."), shock_stage - CHEM_EFFECT_MAGNITUDE(src, CE_PAINKILLER)/3)
+			drop_all_held_items()
 			Unconscious(10 SECONDS)
 			return // We'll be generous
 
@@ -234,6 +235,7 @@
 		if(shock_stage == SHOCK_TIER_7)
 			visible_message("<b>[src]</b> falls limp!")
 		Unconscious(20 SECONDS)
+		drop_all_held_items()
 
 	if(message)
 		pain_message(message, shock_stage - CHEM_EFFECT_MAGNITUDE(src, CE_PAINKILLER)/3)
@@ -267,6 +269,7 @@
 			)
 			log_health(src, "Passed out due to excessive pain: [pain] | Threshold: [pain_passout]")
 		Unconscious(10 SECONDS)
+		drop_all_held_items()
 		return
 
 	if(stat != CONSCIOUS)

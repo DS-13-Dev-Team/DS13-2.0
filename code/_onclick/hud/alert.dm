@@ -387,6 +387,7 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 	to_chat(rube, span_userdanger("[all_caps_for_emphasis]"))
 	playsound(offerer, 'sound/weapons/thudswoosh.ogg', 100, TRUE, 1)
 	rube.Knockdown(1 SECONDS)
+	rube.drop_all_held_items()
 	qdel(src)
 
 /// If someone examine_more's the offerer while they're trying to pull a too-slow, it'll tip them off to the offerer's trickster ways

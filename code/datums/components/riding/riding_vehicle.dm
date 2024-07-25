@@ -49,6 +49,7 @@
 			user.visible_message(span_danger("[user] falls off \the [vehicle_parent]."),\
 			span_danger("You slip off \the [vehicle_parent] as your body slumps!"))
 			user.Stun(3 SECONDS)
+			user.drop_all_held_items()
 
 		if(COOLDOWN_FINISHED(src, message_cooldown))
 			to_chat(user, span_warning("You cannot operate \the [vehicle_parent] right now!"))

@@ -51,6 +51,7 @@
 			if(DT_PROB(2, delta_time))
 				to_chat(affected_mob, span_danger("You feel a stabbing pain in your head!"))
 				affected_mob.Unconscious(40)
+				affected_mob.drop_all_held_items()
 			if(DT_PROB(2, delta_time))
 				to_chat(affected_mob, span_danger("Your stomach churns."))
 			if(restcure && affected_mob.body_position == LYING_DOWN && DT_PROB(10, delta_time))

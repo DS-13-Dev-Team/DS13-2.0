@@ -92,6 +92,7 @@
 		span_hear("You hear something crack and explode in gore.")
 		)
 	jedi.Stun(3 SECONDS)
+	jedi.drop_all_held_items()
 	new /obj/effect/gibspawner/generic(get_turf(jedi), jedi)
 	jedi.apply_damage(30, BRUTE, BODY_ZONE_HEAD)
 	if(QDELETED(jedi))

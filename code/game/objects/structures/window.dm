@@ -463,6 +463,7 @@
 			if(BODY_ZONE_HEAD, BODY_ZONE_CHEST)
 				if(prob(50 * ((100 - blocked/100))))
 					affecting_mob.Knockdown(4 SECONDS)
+					affecting_mob.drop_all_held_items()
 			if(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
 				if(prob(50 * ((100 - blocked/100))))
 					var/side = def_zone == BODY_ZONE_L_ARM ? LEFT_HANDS : RIGHT_HANDS

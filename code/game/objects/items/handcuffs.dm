@@ -450,6 +450,7 @@
 		C.equip_to_slot(src, ITEM_SLOT_LEGCUFFED)
 		SSblackbox.record_feedback("tally", "handcuffs", 1, type)
 		C.Knockdown(knockdown)
+		C.drop_all_held_items()
 		playsound(src, 'sound/effects/snap.ogg', 50, TRUE)
 
 /**

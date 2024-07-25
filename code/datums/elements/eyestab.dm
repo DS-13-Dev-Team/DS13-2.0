@@ -103,6 +103,7 @@
 		target.adjust_blurriness(10)
 		target.Unconscious(20)
 		target.Paralyze(40)
+		target.drop_all_held_items()
 
 	if (prob(eyes.damage - EYESTAB_BLEEDING_THRESHOLD + 1))
 		target.become_blind(EYE_DAMAGE)

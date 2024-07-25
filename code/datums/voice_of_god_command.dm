@@ -131,6 +131,7 @@ GLOBAL_LIST_INIT(voice_of_god_commands, init_voice_of_god_commands())
 /datum/voice_of_god_command/knockdown/execute(list/listeners, mob/living/user, power_multiplier = 1, message)
 	for(var/mob/living/target as anything in listeners)
 		target.Knockdown(4 SECONDS * power_multiplier)
+		target.drop_all_held_items()
 
 /// This command stops the listeners from moving.
 /datum/voice_of_god_command/immobilize

@@ -110,6 +110,8 @@
 			take_bodypart_damage(10 + 5 * extra_speed, check_armor = TRUE)
 			victim.Knockdown(0.1 SECONDS)
 			Paralyze(2 SECONDS)
+			victim.drop_all_held_items()
+			drop_all_held_items() //Nobody wins, everyone fights
 			visible_message(span_danger("[src] crashes into [victim][extra_speed ? " really hard" : ""], knocking them both over!"),\
 				span_userdanger("You violently crash into [victim][extra_speed ? " extra hard" : ""]!"))
 		playsound(src, SFX_PUNCH ,50,TRUE)
@@ -520,6 +522,7 @@
 		ADD_TRAIT(src, TRAIT_NO_SPRINT, STAMINA)
 	if((stam < max * STAMINA_STUN_THRESHOLD_MODIFIER) && !is_stam_stunned && stat == CONSCIOUS)
 		stamina_stun()
+		drop_all_held_items()
 	if(is_exhausted && (stam > max * STAMINA_EXHAUSTION_RECOVERY_THRESHOLD_MODIFIER))
 		REMOVE_TRAIT(src, TRAIT_EXHAUSTED, STAMINA)
 		REMOVE_TRAIT(src, TRAIT_NO_SPRINT, STAMINA)

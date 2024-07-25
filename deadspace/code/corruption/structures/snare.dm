@@ -8,7 +8,7 @@
 
 /obj/structure/necromorph/snare/Initialize(mapload)
 	.=..()
-	AddComponent(/datum/component/slippery/necro, 5 SECONDS, NO_SLIP_WHEN_WALKING|SLIDE|GALOSHES_DONT_HELP, null, 1 SECONDS)
+	AddComponent(/datum/component/slippery/necro, 5 SECONDS, NO_SLIP_WHEN_WALKING|SLIDE|GALOSHES_DONT_HELP)
 
 /datum/action/cooldown/necro/corruption/snare
 	name = "Snare"
