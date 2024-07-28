@@ -4723,6 +4723,7 @@
 #include "deadspace\code\marker\abilities\meddle.dm"
 #include "deadspace\code\marker\abilities\psy_ability.dm"
 #include "deadspace\code\marker\abilities\psychic_tracer.dm"
+#include "deadspace\code\marker\abilities\regenerate.dm"
 #include "deadspace\code\marker\abilities\scry.dm"
 #include "deadspace\code\marker\abilities\whisper.dm"
 #include "deadspace\code\marker\markernet\marker_chunk.dm"
