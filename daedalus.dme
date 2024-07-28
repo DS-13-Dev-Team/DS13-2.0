@@ -4719,6 +4719,7 @@
 #include "deadspace\code\marker\abilities\false_sound.dm"
 #include "deadspace\code\marker\abilities\flicker.dm"
 #include "deadspace\code\marker\abilities\flicker_mass.dm"
+#include "deadspace\code\marker\abilities\lock.dm"
 #include "deadspace\code\marker\abilities\meddle.dm"
 #include "deadspace\code\marker\abilities\psy_ability.dm"
 #include "deadspace\code\marker\abilities\psychic_tracer.dm"
