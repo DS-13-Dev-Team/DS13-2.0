@@ -22,7 +22,7 @@
 	var/shake_interval = 0.5 SECONDS
 
 /datum/action/cooldown/necro/psy/regeneration/PreActivate(mob/living/target)
-	if(!istype(target, /mob/living/carbon/human/necromorph))
+	if(!isnecromorph(target))
 		to_chat(owner, span_notice("You cannot regenerate non-necromorphs!"))
 		return FALSE
 	for(var/turf/neraby as anything in RANGE_TURFS(1, target))
