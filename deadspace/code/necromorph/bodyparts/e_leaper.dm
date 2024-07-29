@@ -12,7 +12,7 @@
 	limb_id = SPECIES_NECROMORPH_LEAPER_ENHANCED
 	icon_static = 'deadspace/icons/necromorphs/leaper_enhanced.dmi'
 	icon_state = "head"
-	max_damage = 100
+	max_damage = 45
 	biomass = 10
 	wound_resistance = 2
 
@@ -23,7 +23,7 @@
 	icon_state = "l_arm"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 75
+	max_damage = 55
 	biomass = 15
 	wound_resistance = -1
 
@@ -33,7 +33,7 @@
 	icon_state = "r_arm"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 75
+	max_damage = 55
 	biomass = 15
 	wound_resistance = -1
 
@@ -42,7 +42,7 @@
 	limb_id = SPECIES_NECROMORPH_LEAPER_ENHANCED
 	icon_static = 'deadspace/icons/necromorphs/leaper_enhanced.dmi'
 	icon_state = "r_leg"
-	max_damage = 65
+	max_damage = 40
 	force = 20 //A surprisingly effective weapon if used in a emergency
 	throwforce = 30 //You could really hurt someone with this
 	biomass = 5
@@ -53,7 +53,7 @@
 	limb_id = SPECIES_NECROMORPH_LEAPER_ENHANCED
 	icon_static = 'deadspace/icons/necromorphs/leaper_enhanced.dmi'
 	icon_state = "l_leg"
-	max_damage = 65
+	max_damage = 40
 	force = 20 //A surprisingly effective weapon if used in a emergency
 	throwforce = 30 //You could really hurt someone with this
 	biomass = 5

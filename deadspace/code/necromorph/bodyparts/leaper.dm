@@ -14,7 +14,7 @@
 	limb_id = SPECIES_NECROMORPH_LEAPER
 	icon_static = 'deadspace/icons/necromorphs/leaper.dmi'
 	icon_state = "head"
-	max_damage = 65
+	max_damage = 30
 	biomass = 3
 	wound_resistance = 0
 	px_x = 0
@@ -31,7 +31,7 @@
 	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_IS_GRABBY_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 50
+	max_damage = 35
 	biomass = 6
 	wound_resistance = -3
 	px_x = -2
@@ -45,7 +45,7 @@
 	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_IS_GRABBY_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	attack_verb_continuous = list("claws", "stomps")
 	attack_verb_simple = list("claws", "stomp")
-	max_damage = 50
+	max_damage = 35
 	biomass = 6
 	wound_resistance = -3
 	px_x = 2
@@ -64,7 +64,7 @@
 	bodypart_flags = (BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	attack_verb_continuous = list("stabs", "slices")
 	attack_verb_simple = list("stabs", "slices")
-	max_damage = 35
+	max_damage = 25
 	force = 13 //You could probably use it like a knife or a whip if you are desperate
 	throwforce = 20 //It's practically a limp spear
 	biomass = 3.5 //The tail is practically a piece of flesh with a sharp bit at the end, not much biomass
@@ -85,7 +85,7 @@
 	bodypart_flags = (BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	attack_verb_continuous = list("stabs", "slices")
 	attack_verb_simple = list("stabs", "slices")
-	max_damage = 35
+	max_damage = 25
 	force = 13 //You could probably use it like a knife or a whip if you are desperate
 	throwforce = 15 //It's practically a limp spear
 	biomass = 3.5
