@@ -4713,6 +4713,7 @@
 #include "deadspace\code\marker\marker.dm"
 #include "deadspace\code\marker\marker_defines.dm"
 #include "deadspace\code\marker\abilities\absorb.dm"
+#include "deadspace\code\marker\abilities\biohazard_lockdown.dm"
 #include "deadspace\code\marker\abilities\bloody_rune.dm"
 #include "deadspace\code\marker\abilities\bloody_scrawl.dm"
 #include "deadspace\code\marker\abilities\blowout.dm"
