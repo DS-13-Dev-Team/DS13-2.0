@@ -47,8 +47,8 @@
 	DELAY 20;"}
 
 /obj/item/disk/holodisk/ds13/sm
-	name = "CEC - IMPORTANT MESSAGE FOR SM TECH"
-	desc = "A videolog from corporate, you should really put this in the holopad"
+	name = "CEC - IMPORTANT INSTRUCTIONS ON SUPERMATTER SETUP"
+	desc = "A super important video log from corporate about basic supermatter safety and operation, it looks a bit singed."
 	icon = 'deadspace/icons/obj/epad.dmi'
 	icon_state = "epad_work"
 	preset_image_type = /datum/preset_holoimage/head_of_personnel
@@ -61,19 +61,25 @@
 	DELAY 14
 	SAY I've been asked by corporate to make this Vid-Log to remind you how to properly do your job.
 	DELAY 40
-	SAY First step to setting up the sm is to turn on all fo the piping.
+	SAY The first step to setting up the sm is to turn on the "hot return secondary cooling" digital valve.
 	DELAY 35
-	SAY The other 2 pipes should be near the head exchange and should be turned on.
+	SAY Next is to turn on the two pipes called the "unit head" pumps, make sure the pressure is maxed out.
 	DELAY 35
-	SAY Once this has been done add a total of 4 hydrogen canisters, two for the hot loop, two for the cold loop.
+	SAY Once this has been done add four hydrogen canisters to the hot loop, which is the green pipes.
 	DELAY 35
-	SAY Lastly turn on the emitter till the Mev/3 level hits 300.
+	SAY Next, add the two carbon dioxide canisters to the cold loop, which is the cyan pipes.
 	DELAY 35
-	SAY Once it hits 300Mev/3 turn of the emitter.
+	SAY Lastly turn on the emitter, and give the supermatter four to six shots with the emitter.
+	DELAY 35
+	SAY Make sure to turn off the emitter after giving the supermatter the right amount of shots.
+	DELAY 35
+	SAY In a emergency you can add more CO2 to the cold loop, or in a dire emergency you can flood the hot loop with N20.
+	DELAY 35
+	SAY Please refer to your CE or someone of significant qualification if these do not stabilize the supermatter.
 	DELAY 35
 	SAY Congratulations you have completed your mandatory sm training, and are ready to set up the SM.
 	DELAY 35
-	SAY good luck!
+	SAY good luck! And remember, only you can prevent supermatter detonation!
 	DELAY 20;"}
 
 //***Grave mounds.
