@@ -21,8 +21,12 @@
 	var/atom/target_atom
 
 /datum/action/cooldown/necro/charge/PreActivate(atom/target)
+	var/mob/living/carbon/human/necromorph/charger = owner
 	var/turf/T = get_turf(target)
 	if(!T)
+		return FALSE
+	if(charger.resting)
+		to_chat(charger, span_notice("You cannot charge while on the floor!"))
 		return FALSE
 	if(!ishuman(target))
 		for(var/mob/living/carbon/human/hummie in view(1, T))
