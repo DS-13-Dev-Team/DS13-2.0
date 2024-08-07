@@ -187,6 +187,7 @@
 
 	if(armor < 0.5 && target.can_head_trauma_ko() && prob(damage))
 		target.Unconscious(20 SECONDS)
+		target.drop_all_held_items()
 		target.visible_message(span_danger("\The [target] collapses, now fast asleep."))
 
 	playsound(attacker.loc, "swing_hit", 25, 1, -1)

@@ -205,6 +205,7 @@
 		if(!living_source)
 			return
 		living_source.Stun(6, ignore_canstun = TRUE)
+		living_source.drop_all_held_items()
 		return
 
 	var/mob/living/living_target = target
@@ -212,10 +213,12 @@
 		var/mob/living/carbon/human/human_target = living_target
 		if(human_target.check_shields(source, 0, "the [source.name]", attack_type = LEAP_ATTACK) && living_source)
 			living_source.Stun(6, ignore_canstun = TRUE)
+			living_source.drop_all_held_items()
 			return
 
 	living_target.visible_message(span_danger("[source] charges on [living_target]!"), span_userdanger("[source] charges into you!"))
 	living_target.Knockdown(6)
+	living_target.drop_all_held_items()
 
 /datum/action/cooldown/mob_cooldown/charge/triple_charge
 	name = "Triple Charge"

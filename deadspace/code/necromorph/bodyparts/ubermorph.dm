@@ -13,7 +13,7 @@
 	limb_id = SPECIES_NECROMORPH_UBERMORPH
 	icon_static = 'deadspace/icons/necromorphs/ubermorph.dmi'
 	icon_state = "head"
-	max_damage = 150
+	max_damage = 60
 	px_x = 0
 	px_y = -8
 	wound_resistance = 0
@@ -27,7 +27,7 @@
 	icon_state = "l_arm"
 	attack_verb_continuous = list("slashes", "stabs")
 	attack_verb_simple = list("slash", "stab")
-	max_damage = 175
+	max_damage = 90
 	px_x = -6
 	px_y = 0
 	wound_resistance = -5
@@ -41,7 +41,7 @@
 	icon_state = "r_arm"
 	attack_verb_continuous = list("slashes", "stabs")
 	attack_verb_simple = list("slash", "stab")
-	max_damage = 175
+	max_damage = 90
 	px_x = 6
 	px_y = 0
 	wound_resistance = -5
@@ -54,7 +54,7 @@
 	icon_state = "l_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 140
+	max_damage = 90
 	px_x = -2
 	px_y = 12
 	wound_resistance = -5
@@ -67,7 +67,7 @@
 	icon_state = "r_leg"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 140
+	max_damage = 90
 	px_x = 2
 	px_y = 12
 	wound_resistance = -5

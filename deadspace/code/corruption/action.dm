@@ -86,6 +86,8 @@
 		return "Turf isn't corrupted!"
 	if(locate(/obj/structure/necromorph) in turf_loc)
 		return "There is another necromorph structure on this turf!"
+	if(locate(/obj/structure/necromorph) in range(1, turf_loc))
+		return "Too close to another necromorph structure!"
 	//Remove this loop if it causes too much lag when hovering over a pile of items
 	for(var/atom/movable/movable as anything in turf_loc)
 		if(movable.density)

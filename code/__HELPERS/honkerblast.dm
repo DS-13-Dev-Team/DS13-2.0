@@ -21,6 +21,7 @@
 	for(var/mob/living/carbon/victim in severely_honked)
 		victim.Unconscious(40)
 		victim.Stun(100)
+		victim.drop_all_held_items()
 		victim.adjust_timed_status_effect(30 SECONDS, /datum/status_effect/speech/stutter)
 		victim.set_timed_status_effect(1000 SECONDS, /datum/status_effect/jitter, only_if_higher = TRUE)
 		var/obj/item/organ/ears/ears = victim.getorganslot(ORGAN_SLOT_EARS)
@@ -34,6 +35,7 @@
 	for(var/mob/living/carbon/victim in properly_honked)
 		victim.Paralyze(20)
 		victim.Stun(50)
+		victim.drop_all_held_items()
 		victim.set_timed_status_effect(500 SECONDS, /datum/status_effect/jitter, only_if_higher = TRUE)
 		var/obj/item/organ/ears/ears = victim.getorganslot(ORGAN_SLOT_EARS)
 		ears?.adjustEarDamage(7, 10)
@@ -41,6 +43,7 @@
 
 	for(var/mob/living/carbon/victim in lightly_honked)
 		victim.Knockdown(20)
+		victim.drop_all_held_items()
 		victim.set_timed_status_effect(200 SECONDS, /datum/status_effect/jitter, only_if_higher = TRUE)
 		var/obj/item/organ/ears/ears = victim.getorganslot(ORGAN_SLOT_EARS)
 		ears?.adjustEarDamage(4, 5)

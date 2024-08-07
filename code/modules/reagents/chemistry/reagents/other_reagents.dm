@@ -153,6 +153,7 @@
 			if(prob(10))
 				C.visible_message(span_danger("[C] starts having a seizure!"), span_userdanger("You have a seizure!"))
 				C.Unconscious(12 SECONDS)
+				C.drop_all_held_items()
 				to_chat(C, "<span class='cultlarge'>[pick("Your blood is your bond - you are nothing without it", "Do not forget your place", \
 				"All that power, and you still fail?", "If you cannot scour this poison, I shall scour your meager life!")].</span>")
 
@@ -160,6 +161,7 @@
 		if(IS_CULTIST(C))
 			C.mind.remove_antag_datum(/datum/antagonist/cult)
 			C.Unconscious(10 SECONDS)
+			C.drop_all_held_items()
 		C.remove_status_effect(/datum/status_effect/jitter)
 		C.remove_status_effect(/datum/status_effect/speech/stutter)
 		holder.remove_reagent(type, volume) // maybe this is a little too perfect and a max() cap on the statuses would be better??

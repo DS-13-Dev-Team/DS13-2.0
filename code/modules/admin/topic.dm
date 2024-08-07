@@ -600,6 +600,7 @@
 			L.dropItemToGround(I, TRUE)
 
 		L.Unconscious(100)
+		L.drop_all_held_items()
 		sleep(5)
 		L.forceMove(pick(GLOB.tdome1))
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), L, span_adminnotice("You have been sent to the Thunderdome.")), 5 SECONDS)
@@ -626,6 +627,7 @@
 			L.dropItemToGround(I, TRUE)
 
 		L.Unconscious(100)
+		L.drop_all_held_items()
 		sleep(5)
 		L.forceMove(pick(GLOB.tdome2))
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), L, span_adminnotice("You have been sent to the Thunderdome.")), 5 SECONDS)
@@ -649,6 +651,7 @@
 		var/mob/living/L = M
 
 		L.Unconscious(100)
+		L.drop_all_held_items()
 		sleep(5)
 		L.forceMove(pick(GLOB.tdomeadmin))
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), L, span_adminnotice("You have been sent to the Thunderdome.")), 5 SECONDS)
@@ -679,6 +682,7 @@
 			observer.equip_to_slot_or_del(new /obj/item/clothing/under/suit/black(observer), ITEM_SLOT_ICLOTHING)
 			observer.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(observer), ITEM_SLOT_FEET)
 		L.Unconscious(100)
+		L.drop_all_held_items()
 		sleep(5)
 		L.forceMove(pick(GLOB.tdomeobserve))
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), L, span_adminnotice("You have been sent to the Thunderdome.")), 5 SECONDS)

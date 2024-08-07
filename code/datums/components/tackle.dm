@@ -200,6 +200,7 @@
 			target.Paralyze(5)
 			user.Knockdown(10)
 			target.Knockdown(20)
+			target.drop_all_held_items()
 
 		if(3 to 4) // really good hit, the target is definitely worse off here. Without positive modifiers, this is as good a tackle as you can land
 			user.visible_message(span_warning("[user] lands an expert [tackle_word] on [target], knocking [target.p_them()] down hard while landing on [user.p_their()] feet with a passive grip!"), span_userdanger("You land an expert [tackle_word] on [target], knocking [target.p_them()] down hard while landing on your feet with a passive grip!"), ignored_mobs = target)
@@ -211,6 +212,7 @@
 			target.stamina.adjust(-40)
 			target.Paralyze(5)
 			target.Knockdown(30)
+			target.drop_all_held_items()
 			S.try_make_grab(target, /datum/grab/normal/aggressive)
 
 		if(5 to INFINITY) // absolutely BODIED
@@ -223,6 +225,7 @@
 			target.stamina.adjust(-40)
 			target.Paralyze(5)
 			target.Knockdown(30)
+			target.drop_all_held_items()
 			S.try_make_grab(target, /datum/grab/normal/aggressive)
 
 	return COMPONENT_MOVABLE_IMPACT_FLIP_HITPUSH
@@ -408,6 +411,7 @@
 			user.stamina.adjust(-30)
 			user.adjustBruteLoss(30)
 			user.Unconscious(100)
+			user.drop_all_held_items()
 			user.gain_trauma_type(BRAIN_TRAUMA_MILD)
 			user.playsound_local(get_turf(user), 'sound/weapons/flashbang.ogg', 100, TRUE, 8)
 			shake_camera(user, 6, 6)

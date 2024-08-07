@@ -14,7 +14,7 @@
 	limb_id = SPECIES_NECROMORPH_EXPLODER_ENHANCED
 	icon_static = 'deadspace/icons/necromorphs/exploder/exploder_enhanced.dmi'
 	icon_state = "head"
-	max_damage = 200
+	max_damage = 35
 	px_x = 0
 	px_y = -8
 	wound_resistance = 3
@@ -27,7 +27,7 @@
 	icon_state = "l_arm"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 75
+	max_damage = 60
 	px_x = -2
 	px_y = 12
 	wound_resistance = 1
@@ -40,7 +40,7 @@
 	icon_state = "r_arm"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 75
+	max_damage = 55
 	px_x = 2
 	px_y = 12
 	wound_resistance = -6
@@ -56,7 +56,7 @@
 	disable_threshold = 1
 	icon_static = null
 	icon_state = null
-	max_damage = 100
+	max_damage = 70
 	biomass = 0 //Handled in chest due to sprite funnies
 	wound_resistance = -3
 
@@ -71,6 +71,6 @@
 	is_pseudopart = TRUE
 	icon_static = null
 	icon_state = null
-	max_damage = 200
+	max_damage = 20
 	biomass = 0
 

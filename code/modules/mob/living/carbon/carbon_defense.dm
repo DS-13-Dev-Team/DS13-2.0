@@ -276,6 +276,7 @@
 				return
 
 		target.Knockdown(SHOVE_KNOCKDOWN_SOLID)
+		target.drop_all_held_items()
 		target.visible_message(
 			span_danger("<b>[name]</b> shoves <b>[target.name]</b>, knocking [target.p_them()] down!"),
 			span_userdanger("You're knocked down from a shove by [name]!"),

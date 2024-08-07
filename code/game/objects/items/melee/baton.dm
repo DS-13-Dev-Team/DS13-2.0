@@ -321,6 +321,7 @@
 	var/trait_check = HAS_TRAIT(target, TRAIT_STUNRESISTANCE)
 	var/disable_duration =  knockdown_time * (trait_check ? 0.1 : 1)
 	target.Knockdown(disable_duration)
+	target.drop_all_held_items()
 	additional_effects_non_cyborg(target)
 	return TRUE
 

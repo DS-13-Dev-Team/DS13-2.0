@@ -133,6 +133,7 @@
 		var/blocked = L.run_armor_check(BODY_ZONE_HEAD, BLUNT)
 		if (prob(30 * ((100 - blocked)/100)))
 			L.Knockdown(10 SECONDS)
+			L.drop_all_held_items()
 		L.apply_damage(8, BRUTE, BODY_ZONE_HEAD)
 	else
 		if (get_turf(L) == get_turf(src))

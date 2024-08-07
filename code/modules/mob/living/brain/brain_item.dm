@@ -318,6 +318,7 @@
 				log_health(owner, "Passed out due to poor blood oxygenation, random chance.")
 				to_chat(owner, span_warning("You feel extremely [pick("dizzy","woozy","faint")]..."))
 				owner.Unconscious(rand(1,3) SECONDS)
+				owner.drop_all_held_items()
 
 		if(BLOOD_CIRC_SURVIVE to BLOOD_CIRC_BAD)
 			owner.blur_eyes(6)
@@ -328,6 +329,7 @@
 			if(owner.stat == CONSCIOUS && prob(15))
 				log_health(owner, "Passed out due to poor blood oxygenation, random chance.")
 				owner.Unconscious(rand(3,5) SECONDS)
+				owner.drop_all_held_items()
 				to_chat(owner, span_warning("You feel extremely [pick("dizzy","woozy","faint")]..."))
 
 		if(-(INFINITY) to BLOOD_VOLUME_SURVIVE) // Also see heart.dm, being below this point puts you into cardiac arrest.
@@ -397,6 +399,7 @@
 		if(owner.body_position == STANDING_UP)
 			to_chat(owner, span_danger("You black out!"))
 		owner.Unconscious(5 SECOND)
+		owner.drop_all_held_items()
 
 /obj/item/organ/brain/applyOrganDamage(damage_amount, maximum, silent, updating_health = TRUE)
 	updating_health = FALSE // Brainloss isn't apart of tox loss, so never update health here.

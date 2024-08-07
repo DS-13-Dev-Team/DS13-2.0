@@ -513,6 +513,7 @@
 			span_userdanger("[user] touches [M] with [src]!"))
 	M.stamina.adjust(-60)
 	M.Knockdown(75)
+	M.drop_all_held_items()
 	M.set_timed_status_effect(100 SECONDS, /datum/status_effect/jitter, only_if_higher = TRUE)
 	M.apply_status_effect(/datum/status_effect/convulsing)
 	playsound(src,  'sound/machines/defib_zap.ogg', 50, TRUE, -1)
@@ -611,6 +612,7 @@
 	H.apply_damage(5, BURN, BODY_ZONE_CHEST)
 	do_success() //Deduct charge
 	H.Knockdown(15 SECONDS)
+	H.drop_all_held_items()
 
 	// Braindead
 	if(H.stat == DEAD)

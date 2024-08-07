@@ -59,6 +59,7 @@
 		if (isliving(target))
 			var/mob/living/fresh_meat = target
 			fresh_meat.Knockdown(knockdown_time)
+			fresh_meat.drop_all_held_items()
 			return
 		//TODO: keep the chain beamed to A
 		//TODO: needs a callback to delete the chain

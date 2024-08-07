@@ -5,7 +5,7 @@
 /datum/game_mode/revolution
 	name = "Revolution"
 
-	weight = GAMEMODE_WEIGHT_EPIC
+	weight = GAMEMODE_WEIGHT_NEVER
 	min_pop = 25
 
 	//Atleast 1 of any head.

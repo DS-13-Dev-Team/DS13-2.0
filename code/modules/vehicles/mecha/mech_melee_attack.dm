@@ -70,6 +70,7 @@
 			if(BRUTE)
 				if(mecha_attacker.force > 35) // durand and other heavy mechas
 					Unconscious(20)
+					drop_all_held_items()
 				else if(mecha_attacker.force > 20 && !IsKnockdown()) // lightweight mechas like gygax
 					Knockdown(40)
 				selected_zone.receive_damage(dmg, 0, updating_health = TRUE)

@@ -248,6 +248,7 @@
 			playsound(loc, 'sound/weapons/pierce.ogg', 25, TRUE, -1)
 			if (src.IsKnockdown() && !src.IsParalyzed())
 				Paralyze(40)
+				drop_all_held_items()
 				log_combat(user, src, "pinned")
 				visible_message(span_danger("[user] pins [src] down!"), \
 								span_userdanger("[user] pins you down!"), span_hear("You hear shuffling and a muffled groan!"), null, user)
@@ -440,6 +441,7 @@
 				throw_at(throw_target, 200, 4)
 				damage_clothes(400 - bomb_armor, BRUTE, BOMB)
 				Unconscious(15 SECONDS) //short amount of time for follow up attacks against elusive enemies like wizards
+				drop_all_held_items()
 
 		if (EXPLODE_HEAVY)
 			brute_loss = 60
@@ -455,6 +457,7 @@
 
 			if(prob(70))
 				Unconscious(10 SECONDS) //short amount of time for follow up attacks against elusive enemies like wizards
+				drop_all_held_items()
 			Knockdown(200 - (bomb_armor * 1.6)) //between ~4 and ~20 seconds of knockdown depending on bomb armor
 
 		if(EXPLODE_LIGHT)

@@ -13,6 +13,7 @@
 	if(DT_PROB(0.5 * GET_MUTATION_SYNCHRONIZER(src), delta_time) && owner.stat == CONSCIOUS)
 		owner.visible_message(span_danger("[owner] starts having a seizure!"), span_userdanger("You have a seizure!"))
 		owner.Unconscious(200 * GET_MUTATION_POWER(src))
+		owner.drop_all_held_items()
 		owner.set_timed_status_effect(2000 SECONDS * GET_MUTATION_POWER(src), /datum/status_effect/jitter)
 		addtimer(CALLBACK(src, PROC_REF(jitter_less)), 90)
 
@@ -424,3 +425,4 @@
 		return //remove the 'edge' cases
 	to_chat(owner, span_danger("You trip over your own feet."))
 	owner.Knockdown(30)
+	owner.drop_all_held_items()

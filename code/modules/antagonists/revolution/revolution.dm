@@ -293,6 +293,7 @@
 	if(iscarbon(owner.current) && deconverter != DECONVERTER_REVS_WIN)
 		var/mob/living/carbon/C = owner.current
 		C.Unconscious(100)
+		C.drop_all_held_items()
 	deconversion_reason = deconverter
 	owner.remove_antag_datum(type)
 

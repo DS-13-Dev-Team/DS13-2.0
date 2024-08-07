@@ -38,6 +38,7 @@
 	duffel_victim.Immobilize(5 SECONDS)
 	duffel_victim.apply_damage(80, STAMINA)
 	duffel_victim.Knockdown(5 SECONDS)
+	duffel_victim.drop_all_held_items()
 
 	// If someone's already cursed, don't try to give them another
 	if(HAS_TRAIT(duffel_victim, TRAIT_DUFFEL_CURSE_PROOF))

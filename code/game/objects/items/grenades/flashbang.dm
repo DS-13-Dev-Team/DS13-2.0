@@ -37,6 +37,7 @@
 	if(!distance || loc == living_mob || loc == living_mob.loc) //Stop allahu akbarring rooms with this.
 		living_mob.Paralyze(20)
 		living_mob.Knockdown(200)
+		living_mob.drop_all_held_items()
 		living_mob.soundbang_act(1, 200, 10, 15)
 	else
 		if(distance <= 1) // Adds more stun as to not prime n' pull (#45381)
@@ -104,6 +105,7 @@
 	if(!distance || loc == living_mob || loc == living_mob.loc)
 		living_mob.Paralyze(20)
 		living_mob.Knockdown(200)
+		living_mob.drop_all_held_items()
 		living_mob.soundbang_act(1, 200, 10, 15)
 		if(living_mob.apply_damages(10, 10))
 			to_chat(living_mob, span_userdanger("The blast from \the [src] bruises and burns you!"))

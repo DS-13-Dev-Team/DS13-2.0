@@ -3,7 +3,7 @@
 /// Chance to reduce paralysis duration passed here
 #define PAIN_THRESHOLD_REDUCE_PARALYSIS 10
 /// Stage at
-#define SHOCK_MIN_PAIN_TO_BEGIN 30
+#define SHOCK_MIN_PAIN_TO_BEGIN 40
 
 /// Maximum shock stage value
 #define SHOCK_MAXIMUM 160
@@ -20,7 +20,7 @@
 #define SHOCK_AMT_FOR_FIBRILLATION 120
 
 /// The amount of pain where the mob is rendered unconscious
-#define PAIN_AMT_PASSOUT (200)
+#define PAIN_AMT_PASSOUT (220)
 
 /// The amount of pain where movement slowdown beings
 #define PAIN_AMT_BEGIN_SLOWDOWN (PAIN_AMT_PASSOUT * 0.075)

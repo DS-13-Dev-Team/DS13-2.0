@@ -45,6 +45,7 @@
 	if(!distance || loc == living_mob || loc == living_mob.loc)
 		living_mob.Paralyze(10)
 		living_mob.Knockdown(100)
+		living_mob.drop_all_held_items()
 		to_chat(living_mob, span_hypnophrase("The sound echoes in your brain..."))
 		living_mob.hallucination += 50
 	else

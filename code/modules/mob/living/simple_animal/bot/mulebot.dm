@@ -665,6 +665,7 @@
 		if(iscyborg(L))
 			visible_message(span_danger("[src] bumps into [L]!"))
 		else if(L.Knockdown(8 SECONDS))
+			L.drop_all_held_items()
 			log_combat(src, L, "knocked down")
 			visible_message(span_danger("[src] knocks over [L]!"))
 	return ..()

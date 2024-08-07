@@ -58,6 +58,7 @@
 		D.apply_damage(10, A.get_attack_type(), BODY_ZONE_HEAD)
 		D.stamina.adjust(-40)
 		D.Knockdown(40)
+		D.drop_all_held_items()
 		D.visible_message(span_warning("[A] kicks [D] in the head, sending them face first into the floor!"), \
 					span_userdanger("You are kicked in the head by [A], sending you crashing to the floor!"), span_hear("You hear a sickening sound of flesh hitting flesh!"), COMBAT_MESSAGE_RANGE, A)
 	else

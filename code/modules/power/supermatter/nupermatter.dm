@@ -270,6 +270,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter)
 			continue
 
 		mob.Knockdown(DETONATION_MOB_CONCUSSION)
+		mob.drop_all_held_items()
 		to_chat(mob, span_danger("An invisible force slams you against the ground!"))
 
 	qdel(src)

@@ -180,6 +180,7 @@
 	if(!sterile)
 		M.take_bodypart_damage(strength,0) //done here so that humans in helmets take damage
 		M.Unconscious(MAX_IMPREGNATION_TIME/0.3) //something like 25 ticks = 20 seconds with the default settings
+		M.drop_all_held_items()
 
 	GoIdle() //so it doesn't jump the people that tear it off
 

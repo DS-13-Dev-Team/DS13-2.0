@@ -156,7 +156,7 @@
 	worn_icon_state = "beaker"
 	custom_materials = list(/datum/material/glass=500)
 	fill_icon_thresholds = list(0, 1, 20, 40, 60, 80, 100)
-	possible_transfer_amounts = list(5, 10, 15, 20, 25, 30, 60)
+	possible_transfer_amounts = list(1, 5, 10, 15, 20, 25, 30, 60)
 	volume = 60
 
 /obj/item/reagent_containers/glass/beaker/Initialize(mapload)
@@ -221,7 +221,7 @@
 	custom_materials = list(/datum/material/glass = 5000, /datum/material/plasma = 3000, /datum/material/diamond = 1000, /datum/material/bluespace = 1000)
 	volume = 300
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,20,25,30,50,100,300)
+	possible_transfer_amounts = list(1,5,10,15,20,25,30,50,100,300)
 
 /obj/item/reagent_containers/glass/beaker/cryoxadone
 	list_reagents = list(/datum/reagent/medicine/cryoxadone = 30)

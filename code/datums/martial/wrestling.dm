@@ -137,6 +137,7 @@ If you make a derivative work from this code, you must include this notification
 	D.setDir(get_dir(D, A))
 
 	D.Stun(80)
+	D.drop_all_held_items()
 	D.visible_message(span_danger("[A] starts spinning around with [D]!"), \
 					span_userdanger("You're spun around by [A]!"), span_hear("You hear aggressive shuffling!"), null, A)
 	to_chat(A, span_danger("You start spinning around with [D]!"))
@@ -344,6 +345,7 @@ If you make a derivative work from this code, you must include this notification
 		D.adjustBruteLoss(rand(10,20))
 		playsound(A.loc, SFX_SWING_HIT, 50, TRUE)
 		D.Unconscious(20)
+		D.drop_all_held_items()
 	log_combat(A, D, "headbutted")
 
 /datum/martial_art/wrestling/proc/kick(mob/living/A, mob/living/D)

@@ -1,12 +1,14 @@
 /obj/structure/necromorph/snare
 	name = "snare"
+	desc = "A coiling looped biomass that twists and trips anything that comes too close."
+	desc_controls = "Tripping only occurs when running or sprinting, walk to avoid being tripped."
 	icon = 'deadspace/icons/effects/corruption.dmi'
 	icon_state = "snare"
 	max_integrity = 50
 
 /obj/structure/necromorph/snare/Initialize(mapload)
 	.=..()
-	AddComponent(/datum/component/slippery/necro, 5 SECONDS, NO_SLIP_WHEN_WALKING|SLIDE|GALOSHES_DONT_HELP, null, 1 SECONDS)
+	AddComponent(/datum/component/slippery/necro, 5 SECONDS, NO_SLIP_WHEN_WALKING|SLIDE|GALOSHES_DONT_HELP)
 
 /datum/action/cooldown/necro/corruption/snare
 	name = "Snare"
@@ -22,10 +24,4 @@
 /datum/component/slippery/necro/Slip(datum/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	if(isnecromorph(arrived)) //The entire reason we made a child component, ain't it nasty?
 		return
-	if(arrived == parent)
-		return
-	if(!isliving(arrived))
-		return
-	var/mob/living/victim = arrived
-	if(!(victim.movement_type & FLYING) && victim.slip(knockdown_time, parent, lube_flags, paralyze_time, force_drop_items) && callback)
-		callback.Invoke(victim)
+	..()

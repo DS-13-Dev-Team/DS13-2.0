@@ -146,12 +146,14 @@
 		unbuckle_mob(disabled)
 		disabled.throw_at(throw_target, 2, 3)
 		disabled.Knockdown(100)
+		disabled.drop_all_held_items()
 		disabled.stamina.adjust(-40)
 		if(isliving(A))
 			var/mob/living/ramtarget = A
 			throw_target = get_edge_target_turf(ramtarget, pick(GLOB.cardinals))
 			ramtarget.throw_at(throw_target, 2, 3)
 			ramtarget.Knockdown(80)
+			ramtarget.drop_all_held_items()
 			ramtarget.stamina.adjust(-35)
 			visible_message(span_danger("[src] crashes into [ramtarget], sending [disabled] and [ramtarget] flying!"))
 		else

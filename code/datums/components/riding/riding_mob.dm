@@ -67,6 +67,7 @@
 					span_warning("You fall off of [living_parent]!"))
 	rider.Paralyze(1 SECONDS)
 	rider.Knockdown(4 SECONDS)
+	rider.drop_all_held_items()
 	living_parent.unbuckle_mob(rider)
 
 /datum/component/riding/creature/vehicle_mob_buckle(datum/source, mob/living/rider, force = FALSE)
@@ -224,6 +225,7 @@
 		human_parent.unbuckle_mob(rider)
 		rider.Paralyze(1 SECONDS)
 		rider.Knockdown(4 SECONDS)
+		rider.drop_all_held_items()
 		human_parent.visible_message(span_danger("[rider] topples off of [human_parent] as they both fall to the ground!"), \
 					span_warning("You fall to the ground, bringing [rider] with you!"), span_hear("You hear two consecutive thuds."), COMBAT_MESSAGE_RANGE, ignored_mobs=rider)
 		to_chat(rider, span_danger("[human_parent] falls to the ground, bringing you with [human_parent.p_them()]!"))

@@ -14,7 +14,7 @@
 	limb_id = SPECIES_NECROMORPH_LEAPER_HOPPER
 	icon_static = 'deadspace/icons/necromorphs/leaper_hopper.dmi'
 	icon_state = "head"
-	max_damage = 50
+	max_damage = 15
 	px_x = 0
 	px_y = -8
 	wound_resistance = -5
@@ -28,7 +28,7 @@
 	icon_static = 'deadspace/icons/necromorphs/leaper_hopper.dmi'
 	icon_state = "l_leg"
 	body_part = LEG_LEFT
-	max_damage = 25
+	max_damage = 15
 	px_x = -2
 	px_y = 12
 	wound_resistance = -10
@@ -40,7 +40,7 @@
 	bodypart_flags = (BP_IS_MOVEMENT_LIMB | BP_IS_GRABBY_LIMB | BP_NO_PAIN | BP_HAS_BLOOD | BP_CAN_BE_DISLOCATED)
 	icon_static = 'deadspace/icons/necromorphs/leaper_hopper.dmi'
 	icon_state = "r_leg"
-	max_damage = 25
+	max_damage = 15
 	px_x = 2
 	px_y = 12
 	wound_resistance = -10
@@ -62,8 +62,9 @@
 	limb_id = SPECIES_NECROMORPH_LEAPER_HOPPER
 	bodypart_flags = (BP_NO_PAIN)
 	dismemberable = FALSE
+	is_pseudopart = TRUE
 	icon_static = null
 	icon_state = null
-	max_damage = 50
+	max_damage = 10
 	biomass = 1
 

@@ -54,6 +54,7 @@
 	if(get_dist(victim, caster) < stun_radius)
 		victim.AdjustKnockdown(3 SECONDS)
 		victim.AdjustParalyzed(0.5 SECONDS)
+		victim.drop_all_held_items()
 
 	// Otherwise, they take a few steps closer
 	for(var/i in 1 to 3)

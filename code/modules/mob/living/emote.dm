@@ -83,6 +83,7 @@
 	if(. && isliving(user))
 		var/mob/living/L = user
 		L.Unconscious(40)
+		L.drop_all_held_items()
 
 /datum/emote/living/cough
 	key = "cough"

@@ -8,7 +8,7 @@
 
 /datum/game_mode/mixed
 	name = "Mixed"
-	weight = GAMEMODE_WEIGHT_COMMON
+	weight = GAMEMODE_WEIGHT_NEVER
 	restricted_jobs = list(JOB_CYBORG, JOB_AI)
 	protected_jobs = list(
 		JOB_SECURITY_OFFICER,
