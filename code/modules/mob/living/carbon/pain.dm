@@ -168,11 +168,11 @@
 	if(status_flags & GODMODE)
 		return
 
-	if(HAS_TRAIT(src, TRAIT_FAKEDEATH))
-		return
-
 	if(HAS_TRAIT(src, TRAIT_NO_PAINSHOCK))
 		shock_stage = 0
+		return
+
+	if(HAS_TRAIT(src, TRAIT_FAKEDEATH))
 		return
 
 	var/heart_attack_gaming = undergoing_cardiac_arrest()
