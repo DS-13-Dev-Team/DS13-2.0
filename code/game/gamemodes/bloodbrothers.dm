@@ -6,7 +6,7 @@
 /datum/game_mode/brothers
 	name = "Blood Brothers"
 
-	weight = GAMEMODE_WEIGHT_RARE
+	weight = GAMEMODE_WEIGHT_NEVER
 	required_enemies = BROTHER_MINIMUM_TEAM_SIZE
 
 	restricted_jobs = list(JOB_CYBORG, JOB_AI)

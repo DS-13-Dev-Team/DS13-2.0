@@ -4,7 +4,7 @@
 /datum/game_mode/nuclear_emergency
 	name = "Nuclear Emergency"
 
-	weight = GAMEMODE_WEIGHT_EPIC
+	weight = GAMEMODE_WEIGHT_NEVER
 	restricted_jobs = list(
 		JOB_CAPTAIN,
 		JOB_SECURITY_MARSHAL,
