@@ -364,8 +364,8 @@
 //////////////////////////////////// Other goon stuff ///////////////////////////////////////////
 
 /datum/chemical_reaction/acetone
-	results = list(/datum/reagent/acetone = 3)
-	required_reagents = list(/datum/reagent/fuel/oil = 1, /datum/reagent/fuel = 1, /datum/reagent/oxygen = 1)
+	results = list(/datum/reagent/acetone = 10)
+	required_reagents = list(/datum/reagent/carbon = 3, /datum/reagent/hydrogen = 6, /datum/reagent/oxygen = 1)
 
 /datum/chemical_reaction/oil
 	results = list(/datum/reagent/fuel/oil = 3)
