@@ -1,0 +1,24 @@
+author: MisterGrimm
+delete-after: true
+changes:
+  - rscadd: Adds some 1.0 signal abilities
+  - rscadd: Adds RIG-less riglink neck piece to loadout
+  - rscadd: Adds initial implementation of the lasting damage mechanic
+  - rscdel: Removed unnecessary blood types from blood crates
+  - qol: Added more marker spawn locations
+  - qol: SM guide hologram has been updated
+  - qol: Adds control_desc to snares, explaining how to avoid slipping on them
+  - qol: Necromorphs break lights on the first hit
+  - balance: Tweaked what kind of slipping and knockdown methods will make you drop
+      items
+  - balance: Replaces majority of ladders with stairs
+  - balance: Necromorph dismember resistance lowered significantly
+  - balance: Necromorph structures now check minimum distance between each other
+  - balance: Acetone is now chemically accurate, no more oil recipe back and forth
+  - balance: Hunter now takes lasting damage into account when reviving
+  - bugfix: Necros are no longer affected by pain shock
+  - bugfix: Necromorphs can no longer charge while resting
+  - bugfix: Credits no longer dox signals ckey
+  - bugfix: Nests can no longer produce more necromorphs then available through signal
+      shenanigans
+  - code_imp: Gamemode code as been unforced
