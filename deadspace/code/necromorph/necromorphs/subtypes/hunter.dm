@@ -12,25 +12,20 @@
 	playsound(src, pick(GLOB.hunter_sounds[audio_type]), volume, vary, extra_range)
 
 /mob/living/carbon/human/necromorph/hunter/handle_death_check()
-	var/total_burn = 0
-	var/total_brute = 0
-	for(var/obj/item/bodypart/BP as anything in bodyparts) //hardcoded to streamline things a bit
-		total_brute += BP.brute_dam
-		total_burn += BP.burn_dam
+	var/total_burn = getFireLoss()
+	var/total_brute = getBruteLoss()
 
-	var/damage = getOxyLoss() + getToxLoss() - getCloneLoss() - total_burn - total_brute
+	var/damage = total_burn + total_brute
 	if(damage >= maxHealth)
-		if(total_burn >= (initial(maxHealth) * 0.5))
+		if(total_burn >= (initial(maxHealth)))
 			return TRUE
 
 		if(getLastingDamage() >= initial(maxHealth))
 			return TRUE
 
-		if(!HAS_TRAIT(src, TRAIT_DEATHCOMA))
-			ADD_TRAIT(src, TRAIT_DEATHCOMA, src)
-			AddComponent(/datum/component/regenerate, duration = 8.6 SECONDS, heal_amount = 100, max_limbs = 5, lasting_damage_heal = 35, burn_heal_mult = 0.01)
-			addtimer(TRAIT_CALLBACK_REMOVE(src, TRAIT_DEATHCOMA, src), 8.6 SECONDS)
-			play_necro_sound(SOUND_DEATH, VOLUME_HIGH)
+		if(!IsParalyzed())
+			apply_status_effect(/datum/status_effect/incapacitating/paralyzed, 8.6 SECONDS)
+			AddComponent(/datum/component/regenerate, duration_time = 8.6 SECONDS, max_limbs = 5, heal_amount = 100, lasting_damage_heal = 35, burn_heal_mult = 0.1)
 		return FALSE
 	return FALSE
 
@@ -83,9 +78,9 @@
 		'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_shout_long_3.ogg',
 	)
 
-/datum/species/necromorph/hunter/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/H, forced, spread_damage, sharpness, attack_direction)
+/datum/species/necromorph/hunter/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/hunter/H, forced, spread_damage, sharpness, attack_direction)
 	if(H.health - damage <= 0)
-		return H.handle_death_check()
+		H.handle_death_check()
 	. = ..()
 
 /datum/action/cooldown/necro/regenerate/hunter
