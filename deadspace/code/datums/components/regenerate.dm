@@ -7,7 +7,7 @@
 	/// How much health is restored
 	var/heal_amount = 40
 	/// How much lasting damage is healed
-	var/lasting_damage_heal = 0
+	var/lasting_damage_heal = 20
 	/// When a limb is replaced, the mob suffers lasting damage equal to the limb's health * this value
 	var/limb_lasting_damage = 0
 	/// When lasting_damage is healed, the marker transfers biomass to the mob, equal to the damage healed * this value
