@@ -40,6 +40,8 @@
 
 	// At this point the limb has been removed from it's parent mob.
 	limb_owner.apply_pain(60, body_zone, "OH GOD MY [uppertext(plaintext_zone)]!!!", TRUE)
+	if(isnecromorph(limb_owner)) //We lose the damage to HP when we dismember, so add some lasting damage to necros
+		limb_owner.adjustLastingDamage(current_damage / 1.5)
 	drop_limb()
 
 	limb_owner.update_equipment_speed_mods() // Update in case speed affecting item unequipped by dismemberment

@@ -3,11 +3,11 @@
 
 /mob/living/proc/adjustLastingDamage(amount)
 	lasting_damage += amount
-	health = min(health, getAdjustedMaxHealth())
+	setMaxHealth(floor(getAdjustedMaxHealth()))
 	updatehealth()
 
 /mob/living/proc/getLastingDamage()
 	return lasting_damage
 
 /mob/living/proc/getAdjustedMaxHealth()
-	return (MAX_LIVING_HEALTH - getLastingDamage())
+	return max(1, (initial(maxHealth) - getLastingDamage()))
