@@ -4,6 +4,7 @@
 #define ARM_SWING_RANGE_HUNTER	3
 
 /mob/living/carbon/human/necromorph/hunter
+	maxHealth = 275
 	class = /datum/necro_class/hunter
 	necro_species = /datum/species/necromorph/hunter
 
@@ -43,7 +44,6 @@
 	tier = 3
 	biomass_cost = 400
 	biomass_spent_required = 1200
-	max_health = 275
 	melee_damage_lower = 18
 	melee_damage_upper = 22
 	armor = list(BLUNT = 80, PUNCTURE = 60, SLASH = 15, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 75, FIRE = 0, ACID = 95)

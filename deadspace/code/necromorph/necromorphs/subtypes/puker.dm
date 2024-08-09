@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/puker
+	maxHealth = 125
 	class = /datum/necro_class/puker
 	necro_species = /datum/species/necromorph/puker
 
@@ -16,7 +17,6 @@
 	biomass_spent_required = 680
 	melee_damage_lower = 7
 	melee_damage_upper = 10
-	max_health = 125
 	armor = list(BLUNT = 50, PUNCTURE = 50, SLASH = 20, LASER = 0, ENERGY = 0, BOMB = 5, BIO = 75, FIRE = 10, ACID = 100)
 	actions = list(
 		/datum/action/cooldown/necro/shoot/puker_snapshot,

@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/exploder/enhanced
+	maxHealth = 200
 	class = /datum/necro_class/exploder/enhanced
 	necro_species = /datum/species/necromorph/exploder/enhanced
 	bodyparts = list(
@@ -22,7 +23,6 @@
 	tier = 2
 	melee_damage_lower = 10
 	melee_damage_upper = 16
-	max_health = 200
 	biomass_cost = 165
 	biomass_spent_required = 850
 	armor = list(BLUNT = 40, PUNCTURE = 40, SLASH = 15, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 70, FIRE = 25, ACID = 100)

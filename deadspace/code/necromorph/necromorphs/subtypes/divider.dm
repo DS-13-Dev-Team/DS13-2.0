@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/divider
+	maxHealth = 300
 	class = /datum/necro_class/divider
 	necro_species = /datum/species/necromorph/divider
 	pixel_x = -8
@@ -14,7 +15,6 @@
 	necromorph_type_path = /mob/living/carbon/human/necromorph/divider
 	melee_damage_lower = 10
 	melee_damage_upper = 16
-	max_health = 300
 	actions = list(
 	)
 	minimap_icon = "divider"

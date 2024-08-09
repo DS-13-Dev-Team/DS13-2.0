@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/spitter
+	maxHealth = 90
 	class = /datum/necro_class/spitter
 	necro_species = /datum/species/necromorph/spitter
 
@@ -16,7 +17,6 @@
 	biomass_spent_required = 0
 	melee_damage_lower = 10
 	melee_damage_upper = 13
-	max_health = 90
 	armor = list(BLUNT = 40, PUNCTURE = 45, SLASH = 20, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 65, FIRE = 0, ACID = 90)
 	actions = list(
 		/datum/action/cooldown/necro/shoot/spitter_snapshot,

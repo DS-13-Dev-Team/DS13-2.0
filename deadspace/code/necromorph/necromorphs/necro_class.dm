@@ -23,9 +23,6 @@
 
 	var/armour_penetration = 0
 
-	///Maximum health a necromorph has.
-	var/max_health = 100
-
 	///see_in_dark value while consicious
 	var/conscious_see_in_dark = 8
 	///see_in_dark value while unconscious
@@ -65,8 +62,6 @@
 	necro.melee_damage_lower = melee_damage_lower
 
 	necro.armour_penetration = armour_penetration
-
-	necro.setMaxHealth(max_health)
 
 	necro.conscious_see_in_dark = conscious_see_in_dark
 

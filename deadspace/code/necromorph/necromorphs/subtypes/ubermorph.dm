@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/ubermorph
+	maxHealth = INFINITY
 	class = /datum/necro_class/ubermorph
 	necro_species = /datum/species/necromorph/ubermorph
 
@@ -21,7 +22,6 @@
 	biomass_spent_required = 2000
 	melee_damage_lower = 10
 	melee_damage_upper = 25
-	max_health = INFINITY
 	implemented = TRUE
 	armor = list(BLUNT = 75, PUNCTURE = 75, SLASH = 30, LASER = 10, ENERGY = 15, BOMB = 25, BIO = 100, FIRE = 80, ACID = 100)
 	actions = list(

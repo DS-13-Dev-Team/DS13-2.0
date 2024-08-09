@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/infector
+	maxHealth = 90
 	class = /datum/necro_class/infector
 	necro_species = /datum/species/necromorph/infector
 
@@ -12,7 +13,6 @@
 	necromorph_type_path = /mob/living/carbon/human/necromorph/infector
 	melee_damage_lower = 10
 	melee_damage_upper = 16
-	max_health = 90
 	actions = list(
 	)
 	minimap_icon = "infector"

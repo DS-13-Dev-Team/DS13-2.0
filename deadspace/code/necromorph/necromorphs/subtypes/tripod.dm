@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/tripod
+	maxHealth = 475
 	class = /datum/necro_class/tripod
 	necro_species = /datum/species/necromorph/tripod
 	pixel_x = -54
@@ -14,7 +15,6 @@
 	necromorph_type_path = /mob/living/carbon/human/necromorph/tripod
 	melee_damage_lower = 10
 	melee_damage_upper = 16
-	max_health = 475
 	actions = list(
 	)
 	minimap_icon = "tripod"

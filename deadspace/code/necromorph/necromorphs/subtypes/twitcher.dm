@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/twitcher
+	maxHealth = 175
 	class = /datum/necro_class/twitcher
 	necro_species = /datum/species/necromorph/twitcher
 	pixel_x = -8
@@ -25,7 +26,6 @@
 	biomass_spent_required = 850
 	melee_damage_lower = 10
 	melee_damage_upper = 16
-	max_health = 175
 	armor = list(BLUNT = 45, PUNCTURE = 55, SLASH = 30, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 80)
 	actions = list(
 		/datum/action/cooldown/necro/shout,

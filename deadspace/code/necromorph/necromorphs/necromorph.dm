@@ -12,7 +12,6 @@
 	marker_master.add_necro(src)
 	var/datum/necro_class/temp = marker_master.necro_classes[class]
 	temp.load_data(src)
-	set_health(temp.max_health)
 
 /mob/living/carbon/human/necromorph/Destroy()
 	evacuate()

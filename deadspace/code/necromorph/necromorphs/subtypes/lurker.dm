@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/lurker
+	maxHealth = 65
 	class = /datum/necro_class/lurker
 	necro_species = /datum/species/necromorph/lurker
 	pixel_x = -16
@@ -14,7 +15,6 @@
 	necromorph_type_path = /mob/living/carbon/human/necromorph/lurker
 	melee_damage_lower = 10
 	melee_damage_upper = 16
-	max_health = 65
 	actions = list(
 	)
 	minimap_icon = "lurker"
