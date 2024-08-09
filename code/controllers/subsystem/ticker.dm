@@ -230,7 +230,6 @@ SUBSYSTEM_DEF(ticker)
 		var/mob/dead/new_player/player = i
 		if(player.ready == PLAYER_READY_TO_PLAY && player.mind && player.check_preferences())
 			ready_players.Add(player)
-	mode = new /datum/game_mode/containment
 
 	// Set up gamemode, divide up jobs.
 	if(!initialize_gamemode())

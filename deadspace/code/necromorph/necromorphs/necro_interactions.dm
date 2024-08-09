@@ -124,6 +124,11 @@
 	log_combat(user, src, "dusted")
 	return
 
+/obj/machinery/light/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
+	if(!user.combat_mode)
+		return
+	break_light_tube()
+
 //Atmos based
 /obj/machinery/atmospherics/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers)
 	if(!user.combat_mode) //So it doesn't spam this while fighting

@@ -4,7 +4,7 @@
 /datum/game_mode/bloodcult
 	name = "Blood Cult"
 
-	weight = GAMEMODE_WEIGHT_EPIC
+	weight = GAMEMODE_WEIGHT_NEVER
 	min_pop = 30
 	required_enemies = 2
 

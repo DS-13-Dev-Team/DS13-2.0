@@ -4,7 +4,7 @@
 /datum/game_mode/heretic
 	name = "Heretic"
 
-	weight = GAMEMODE_WEIGHT_RARE
+	weight = GAMEMODE_WEIGHT_NEVER
 	restricted_jobs = list(JOB_CYBORG, JOB_AI)
 	protected_jobs = list(
 		JOB_SECURITY_OFFICER,

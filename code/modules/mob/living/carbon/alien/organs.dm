@@ -117,11 +117,13 @@
 		to_chat(owner, span_danger("You are struck with overwhelming agony! You feel confused, and your connection to the hivemind is severed."))
 		owner.emote("agony")
 		owner.Stun(200) //Actually just slows them down a bit.
+		owner.drop_all_held_items()
 
 	else if(ishuman(owner)) //Humans, being more fragile, are more overwhelmed by the mental backlash.
 		to_chat(owner, span_danger("You feel a splitting pain in your head, and are struck with a wave of nausea. You cannot hear the hivemind anymore!"))
 		owner.emote("pain")
 		owner.Paralyze(100)
+		owner.drop_all_held_items()
 
 	owner.adjust_timed_status_effect(1 MINUTES, /datum/status_effect/jitter)
 	owner.adjust_timed_status_effect(30 SECONDS, /datum/status_effect/confusion)

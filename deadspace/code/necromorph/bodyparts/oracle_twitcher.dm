@@ -11,7 +11,7 @@
 	limb_id = SPECIES_NECROMORPH_TWITCHER_ORACLE
 	icon_static = 'deadspace/icons/necromorphs/twitcher_oracle.dmi'
 	icon_state = "head"
-	max_damage = 200
+	max_damage = 45
 	biomass = 26
 	wound_resistance = 2
 	base_pixel_x = -10
@@ -22,7 +22,7 @@
 	limb_id = SPECIES_NECROMORPH_TWITCHER_ORACLE
 	icon_static = 'deadspace/icons/necromorphs/twitcher_oracle.dmi'
 	icon_state = "l_arm"
-	max_damage = 75
+	max_damage = 45
 	biomass = 16
 	wound_resistance = -1
 	base_pixel_x = -28
@@ -33,7 +33,7 @@
 	limb_id = SPECIES_NECROMORPH_TWITCHER_ORACLE
 	icon_static = 'deadspace/icons/necromorphs/twitcher_oracle.dmi'
 	icon_state = "l_arm"
-	max_damage = 75
+	max_damage = 45
 	biomass = 16
 	wound_resistance = -1
 	base_pixel_x = 0
@@ -44,7 +44,7 @@
 	limb_id = SPECIES_NECROMORPH_TWITCHER_ORACLE
 	icon_static = 'deadspace/icons/necromorphs/twitcher_oracle.dmi'
 	icon_state = "l_leg"
-	max_damage = 75
+	max_damage = 55
 	biomass = 16
 	wound_resistance = -1
 	base_pixel_x = -16
@@ -54,7 +54,7 @@
 	limb_id = SPECIES_NECROMORPH_TWITCHER_ORACLE
 	icon_static = 'deadspace/icons/necromorphs/twitcher_oracle.dmi'
 	icon_state = "r_leg"
-	max_damage = 75
+	max_damage = 55
 	biomass = 16
 	wound_resistance = -1
 	base_pixel_x = 0

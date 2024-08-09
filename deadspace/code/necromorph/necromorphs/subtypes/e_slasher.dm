@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/slasher/enhanced
+	maxHealth = 215
 	class = /datum/necro_class/slasher/enhanced
 	necro_species = /datum/species/necromorph/slasher/enhanced
 	pixel_x = -8
@@ -18,7 +19,6 @@
 	biomass_spent_required = 680
 	melee_damage_lower = 18
 	melee_damage_upper = 22
-	max_health = 215
 	armor = list(BLUNT = 40, PUNCTURE = 60, SLASH = 25, LASER = 0, ENERGY = 0, BOMB = 15, BIO = 75, FIRE = 15, ACID = 95)
 	actions = list(
 		/datum/action/cooldown/necro/charge/slasher/enhanced,

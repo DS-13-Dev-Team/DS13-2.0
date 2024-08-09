@@ -55,6 +55,7 @@
 		if(is_enhanced(source)) //You really don't want to be bodied by the enhanced leaper
 			victim.Knockdown(25)
 			victim.take_overall_damage(15)
+			victim.drop_all_held_items()
 		else
 			victim.Knockdown(20)
 			victim.take_overall_damage(5)

@@ -183,6 +183,7 @@
 		if(prob(30))
 			M.Stun(200)
 			M.Unconscious(80)
+			M.drop_all_held_items()
 		else
 			M.set_timed_status_effect(1000 SECONDS, /datum/status_effect/jitter, only_if_higher = TRUE)
 

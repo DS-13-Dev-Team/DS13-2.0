@@ -92,6 +92,7 @@
 	playsound(get_turf(attacker), 'sound/effects/hit_kick.ogg', 50, TRUE, -1)
 	defender.stamina.adjust(-1 * rand(20, 30))
 	defender.Knockdown(60)
+	defender.drop_all_held_items()
 	log_combat(attacker, defender, "leg sweeped")
 	return TRUE
 

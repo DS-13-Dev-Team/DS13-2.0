@@ -14,7 +14,7 @@
 	limb_id = SPECIES_NECROMORPH_EXPLODER
 	icon_static = 'deadspace/icons/necromorphs/exploder/exploder.dmi'
 	icon_state = "head"
-	max_damage = 200
+	max_damage = 25
 	px_x = 0
 	px_y = -8
 	wound_resistance = 0
@@ -32,7 +32,7 @@
 	w_class = WEIGHT_CLASS_BULKY //But we don't want to store it
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 50
+	max_damage = 40
 	px_x = -2
 	px_y = 12
 	wound_resistance = 0
@@ -74,7 +74,7 @@
 	icon_state = "r_arm"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 50
+	max_damage = 30
 	px_x = 2
 	px_y = 12
 	wound_resistance = -10
@@ -91,7 +91,7 @@
 	disable_threshold = 1
 	icon_static = null //Since the leg is part of the chest sprite, we don't want a sprite ontop of the sprite
 	icon_state = null
-	max_damage = 60 //Bit stronger due to it being two limbs fused together
+	max_damage = 40 //Bit stronger due to it being two limbs fused together
 	wound_resistance = -5
 	biomass = 0 //Handled in chest due to sprite funnies
 
@@ -106,5 +106,5 @@
 	is_pseudopart = TRUE //This will prevent the limb from having standard functions
 	icon_static = null
 	icon_state = null
-	max_damage = 150
+	max_damage = 20
 	biomass = 0 //Just a nub, not worth anything

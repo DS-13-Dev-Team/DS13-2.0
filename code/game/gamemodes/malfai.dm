@@ -1,7 +1,7 @@
 /datum/game_mode/malf
 	name = "Malfunctioning AI"
 
-	weight = GAMEMODE_WEIGHT_EPIC
+	weight = GAMEMODE_WEIGHT_NEVER
 	exclusive_roles = list(JOB_AI)
 
 	antag_datum = /datum/antagonist/malf_ai

@@ -123,6 +123,7 @@ In all, this is a lot like the monkey code. /N
 			take_overall_damage(30,0)
 			if(prob(50))
 				Unconscious(20)
+				drop_all_held_items()
 			if(ears)
 				ears.adjustEarDamage(15,60)
 

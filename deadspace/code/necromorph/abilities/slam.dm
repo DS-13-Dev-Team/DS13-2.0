@@ -83,6 +83,7 @@
 			continue
 		for(var/mob/living/living in T)
 			living.Knockdown(3 SECONDS)
+			living.drop_all_held_items()
 		if(isclosedturf(T))
 			EX_ACT(T, EXPLODE_HEAVY)
 		else

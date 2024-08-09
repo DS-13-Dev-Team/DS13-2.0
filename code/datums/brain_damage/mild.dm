@@ -96,6 +96,7 @@
 			if(11)
 				to_chat(owner, span_warning("You faint."))
 				owner.Unconscious(80)
+				owner.drop_all_held_items()
 
 	..()
 

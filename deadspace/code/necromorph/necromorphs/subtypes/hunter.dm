@@ -4,6 +4,7 @@
 #define ARM_SWING_RANGE_HUNTER	3
 
 /mob/living/carbon/human/necromorph/hunter
+	maxHealth = 275
 	class = /datum/necro_class/hunter
 	necro_species = /datum/species/necromorph/hunter
 
@@ -19,16 +20,16 @@
 
 	var/damage = getOxyLoss() + getToxLoss() - getCloneLoss() - total_burn - total_brute
 	if(damage >= maxHealth)
-		if(total_burn >= (maxHealth * 0.5))
+		if(total_burn >= (initial(maxHealth) * 0.5))
 			return TRUE
 
-		if(getLastingDamage() >= maxHealth)
+		if(getLastingDamage() >= initial(maxHealth))
 			return TRUE
 
-		if(!HAS_TRAIT(src, TRAIT_FAKEDEATH))
-			ADD_TRAIT(src, TRAIT_FAKEDEATH, src)
+		if(!HAS_TRAIT(src, TRAIT_DEATHCOMA))
+			ADD_TRAIT(src, TRAIT_DEATHCOMA, src)
 			AddComponent(/datum/component/regenerate, duration = 8.6 SECONDS, heal_amount = 100, max_limbs = 5, lasting_damage_heal = 35, burn_heal_mult = 0.01)
-			addtimer(TRAIT_CALLBACK_REMOVE(src, TRAIT_FAKEDEATH, src), 8.6 SECONDS)
+			addtimer(TRAIT_CALLBACK_REMOVE(src, TRAIT_DEATHCOMA, src), 8.6 SECONDS)
 			play_necro_sound(SOUND_DEATH, VOLUME_HIGH)
 		return FALSE
 	return FALSE
@@ -43,7 +44,6 @@
 	tier = 3
 	biomass_cost = 400
 	biomass_spent_required = 1200
-	max_health = 275
 	melee_damage_lower = 18
 	melee_damage_upper = 22
 	armor = list(BLUNT = 80, PUNCTURE = 60, SLASH = 15, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 75, FIRE = 0, ACID = 95)

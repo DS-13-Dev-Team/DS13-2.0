@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/leaper/enhanced
+	maxHealth = 195
 	class = /datum/necro_class/leaper/enhanced
 	necro_species = /datum/species/necromorph/leaper/enhanced
 	pixel_x = -16
@@ -28,7 +29,6 @@
 	biomass_spent_required = 680
 	melee_damage_lower = 18
 	melee_damage_upper = 22
-	max_health = 195
 	armor = list(BLUNT = 65, PUNCTURE = 45, SLASH = 30, LASER = 0, ENERGY = 0, BOMB = 15, BIO = 65, FIRE = 20, ACID = 95)
 	actions = list(
 		/datum/action/cooldown/necro/charge/leaper/enhanced,

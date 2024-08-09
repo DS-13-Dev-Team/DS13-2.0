@@ -78,7 +78,7 @@ GLOBAL_LIST_EMPTY(markers_signals)
 	. = ..()
 	if(!. || !client)
 		return FALSE
-	name = "[initial(name)]([client.key])"
+	name = "[pick(GLOB.ing_verbs)] [initial(name)]" //TODO : Switch out changeling name list with our own custom list
 	for(var/datum/markerchunk/chunk as anything in visibleChunks)
 		client.images += chunk.active_masks
 	marker.markernet.visibility(src)

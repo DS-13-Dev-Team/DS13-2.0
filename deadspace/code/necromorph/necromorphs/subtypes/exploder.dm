@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/exploder
+	maxHealth = 100
 	class = /datum/necro_class/exploder
 	necro_species = /datum/species/necromorph/exploder
 	bodyparts = list(
@@ -26,7 +27,6 @@
 	biomass_spent_required = 0
 	melee_damage_lower = 4
 	melee_damage_upper = 8
-	max_health = 100
 	armor = list(BLUNT = 25, PUNCTURE = 30, SLASH = 5, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 65, FIRE = 0, ACID = 100)
 	actions = list(
 		/datum/action/cooldown/necro/shout,

@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/twitcher/enhanced
+	maxHealth = 210
 	class = /datum/necro_class/twitcher/enhanced
 	necro_species = /datum/species/necromorph/twitcher/enhanced
 	pixel_x = -8
@@ -16,7 +17,6 @@
 	biomass_spent_required = 1200
 	melee_damage_lower = 18
 	melee_damage_upper = 22
-	max_health = 210
 	armor = list(BLUNT = 50, PUNCTURE = 60, SLASH = 35, LASER = 0, ENERGY = 0, BOMB = 5, BIO = 65, FIRE = 25, ACID = 95)
 	minimap_icon = "otwitcher"
 	implemented = TRUE

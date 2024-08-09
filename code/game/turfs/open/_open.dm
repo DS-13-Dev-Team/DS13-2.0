@@ -169,6 +169,8 @@
 		slipper.Knockdown(knockdown_amount)
 		slipper.Paralyze(paralyze_amount)
 		slipper.release_all_grabs()
+		if(paralyze_amount >= 1 SECOND)
+			slipper.drop_all_held_items()
 
 	if(buckled_obj)
 		buckled_obj.unbuckle_mob(slipper)

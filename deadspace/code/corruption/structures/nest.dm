@@ -69,7 +69,7 @@
 			to_chat(user, span_notice("Wait [timeleft(timer_id)/(1 SECONDS)] seconds before the nest produces [initial(spawning_necromorph.display_name)]"))
 			return
 		if(tgui_alert(user, "Are you sure you want to possess [initial(spawning_necromorph.display_name)]", "Nest", list("Yes", "No")) == "Yes")
-			if(QDELING(src) || available_necromorphs < 0)
+			if(QDELING(src) || available_necromorphs == 0)
 				return
 			var/type_to_spawn = initial(spawning_necromorph.necromorph_type_path)
 			available_necromorphs--

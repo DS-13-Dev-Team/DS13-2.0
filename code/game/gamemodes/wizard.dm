@@ -4,7 +4,7 @@
 /datum/game_mode/wizard
 	name = "Wizard"
 
-	weight = GAMEMODE_WEIGHT_LEGENDARY
+	weight = GAMEMODE_WEIGHT_NEVER
 
 	antag_datum = /datum/antagonist/wizard
 	antag_flag = ROLE_WIZARD

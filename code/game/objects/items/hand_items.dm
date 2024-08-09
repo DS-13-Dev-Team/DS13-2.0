@@ -67,6 +67,7 @@
 	owner.do_attack_animation(owner)
 	owner.stamina.adjust(-100)
 	owner.Knockdown(10)
+	owner.drop_all_held_items()
 	qdel(src)
 
 /// Stage 3B: We face our reckoning (unless we moved away or they're incapacitated)
@@ -96,6 +97,7 @@
 		to_chat(sucker, span_userdanger("[owner] bops you incredibly hard with [owner.p_their()] [src.name], sending you flying!"))
 		sucker.stamina.adjust(-50)
 		sucker.Knockdown(50)
+		sucker.drop_all_held_items()
 		log_combat(owner, sucker, "bopped", src.name, "(setup- Hulk)")
 		var/atom/throw_target = get_edge_target_turf(sucker, owner.dir)
 		sucker.throw_at(throw_target, 6, 3, owner)

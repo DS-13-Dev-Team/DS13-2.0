@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/infector/enhanced
+	maxHealth = 185
 	class = /datum/necro_class/infector/enhanced
 	necro_species = /datum/species/necromorph/infector/enhanced
 
@@ -12,7 +13,6 @@
 	necromorph_type_path = /mob/living/carbon/human/necromorph/infector/enhanced
 	melee_damage_lower = 10
 	melee_damage_upper = 16
-	max_health = 185
 	actions = list(
 	)
 	minimap_icon = "e_infector"

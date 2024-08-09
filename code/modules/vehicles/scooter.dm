@@ -107,12 +107,14 @@
 			rider.updatehealth()
 		visible_message(span_danger("[src] crashes into [bumped_thing], sending [rider] flying!"))
 		rider.Paralyze(8 SECONDS)
+		rider.drop_all_held_items()
 		if(iscarbon(bumped_thing))
 			var/mob/living/carbon/victim = bumped_thing
 			var/grinding_mulitipler = 1
 			if(grinding)
 				grinding_mulitipler = 2
 			victim.Knockdown(4 * grinding_mulitipler SECONDS)
+			victim.drop_all_held_items()
 	else
 		var/backdir = turn(dir, 180)
 		step(src, backdir)

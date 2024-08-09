@@ -97,6 +97,7 @@
 		to_chat(A, span_danger("You lock [D] into a restraining position!"))
 		D.stamina.adjust(-20)
 		D.Stun(100)
+		D.drop_all_held_items()
 		restraining = TRUE
 		addtimer(VARSET_CALLBACK(src, restraining, FALSE), 50, TIMER_UNIQUE)
 		return TRUE

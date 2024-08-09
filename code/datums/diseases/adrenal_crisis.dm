@@ -26,6 +26,7 @@
 		if(2)
 			if(DT_PROB(5, delta_time))
 				affected_mob.Unconscious(40)
+				affected_mob.drop_all_held_items()
 
 			if(DT_PROB(10, delta_time))
 				affected_mob.adjust_timed_status_effect(14 SECONDS, /datum/status_effect/speech/slurring/drunk)

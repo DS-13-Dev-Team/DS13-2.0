@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/leaper
+	maxHealth = 110
 	class = /datum/necro_class/leaper
 	necro_species = /datum/species/necromorph/leaper
 	pixel_x = -16
@@ -32,7 +33,6 @@
 	biomass_spent_required = 0
 	melee_damage_lower = 10
 	melee_damage_upper = 16
-	max_health = 110
 	armor = list(BLUNT = 50, PUNCTURE = 35, SLASH = 25, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 80)
 	actions = list(
 		/datum/action/cooldown/necro/charge/leaper,

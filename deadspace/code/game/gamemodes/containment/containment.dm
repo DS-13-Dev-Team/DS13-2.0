@@ -7,6 +7,7 @@
 /datum/game_mode/containment
 	name = "Containment"
 	weight = GAMEMODE_WEIGHT_COMMON
+	votable = TRUE
 	min_pop = 0
 	required_enemies = 0
 	force_pre_setup_check = TRUE

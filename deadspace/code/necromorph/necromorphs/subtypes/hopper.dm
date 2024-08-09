@@ -1,4 +1,5 @@
 /mob/living/carbon/human/necromorph/leaper/hopper
+	maxHealth = 65
 	class = /datum/necro_class/leaper/hopper
 	necro_species = /datum/species/necromorph/leaper/hopper
 	//Hoppers get their own AI for when they aren't being player controlled
@@ -35,7 +36,6 @@
 	biomass_spent_required = 0
 	melee_damage_lower = 6
 	melee_damage_upper = 10
-	max_health = 65
 	//Hoppers have really low health, but for balance purposes can tank bullets quite well.
 	armor = list(BLUNT = 25, PUNCTURE = 30, SLASH = 10, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 50, FIRE = 0, ACID = 80)
 	actions = list(

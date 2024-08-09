@@ -96,6 +96,7 @@
 		var/mob/living/flippy_mcgee = user
 		if(prob(20))
 			flippy_mcgee.Knockdown(1 SECONDS)
+			flippy_mcgee.drop_all_held_items()
 			flippy_mcgee.visible_message(
 				span_notice("[flippy_mcgee] attempts to do a flip and falls over, what a doofus!"),
 				span_notice("You attempt to do a flip while still off balance from the last flip and fall down!")
