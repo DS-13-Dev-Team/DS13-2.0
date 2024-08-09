@@ -20,16 +20,16 @@
 
 	var/damage = getOxyLoss() + getToxLoss() - getCloneLoss() - total_burn - total_brute
 	if(damage >= maxHealth)
-		if(total_burn >= (maxHealth * 0.5))
+		if(total_burn >= (initial(maxHealth) * 0.5))
 			return TRUE
 
-		if(getLastingDamage() >= maxHealth)
+		if(getLastingDamage() >= initial(maxHealth))
 			return TRUE
 
-		if(!HAS_TRAIT(src, TRAIT_FAKEDEATH))
-			ADD_TRAIT(src, TRAIT_FAKEDEATH, src)
+		if(!HAS_TRAIT(src, TRAIT_DEATHCOMA))
+			ADD_TRAIT(src, TRAIT_DEATHCOMA, src)
 			AddComponent(/datum/component/regenerate, duration = 8.6 SECONDS, heal_amount = 100, max_limbs = 5, lasting_damage_heal = 35, burn_heal_mult = 0.01)
-			addtimer(TRAIT_CALLBACK_REMOVE(src, TRAIT_FAKEDEATH, src), 8.6 SECONDS)
+			addtimer(TRAIT_CALLBACK_REMOVE(src, TRAIT_DEATHCOMA, src), 8.6 SECONDS)
 			play_necro_sound(SOUND_DEATH, VOLUME_HIGH)
 		return FALSE
 	return FALSE
