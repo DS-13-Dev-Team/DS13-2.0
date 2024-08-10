@@ -1,6 +1,5 @@
-author: MisterGrimm
-delete-after: true
-changes:
+2024-08-10:
+  MisterGrimm:
   - rscadd: Adds some 1.0 signal abilities
   - rscadd: Adds RIG-less riglink neck piece to loadout
   - rscadd: Adds initial implementation of the lasting damage mechanic
