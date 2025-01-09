@@ -4,6 +4,9 @@
 	speech_span = SPAN_ROBOT
 	var/obj_flags = CAN_BE_HIT
 
+	/// Extra examine line to describe controls, such as right-clicking, left-clicking, etc.
+	var/desc_controls
+
 	var/damtype = BRUTE
 	var/force = 0
 
@@ -252,6 +255,11 @@
 						return
 					log_admin("[key_name(usr)] deleted all objects of type or subtype of [O_type] ([i] objects deleted) ")
 					message_admins(span_notice("[key_name(usr)] deleted all objects of type or subtype of [O_type] ([i] objects deleted) "))
+
+/obj/examine(mob/user)
+	. = ..()
+	if(desc_controls)
+		. += span_notice(desc_controls)
 
 /obj/AltClick(mob/user)
 	. = ..()
