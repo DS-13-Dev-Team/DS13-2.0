@@ -219,7 +219,7 @@
 
 /obj/item/banner/command/Initialize(mapload)
 	. = ..()
-	job_loyalties = DEPARTMENT_BITFLAG_HEADS
+	job_loyalties = DEPARTMENT_BITFLAG_COMMAND
 
 /obj/item/banner/command/mundane
 	inspiration_available = FALSE

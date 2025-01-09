@@ -811,10 +811,10 @@ SUBSYSTEM_DEF(job)
 		if(player.stat == DEAD || !player.mind?.assigned_role)
 			continue
 
-		if(management_only && (player.mind.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_MANAGEMENT))
+		if(management_only && (player.mind.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND))
 			. += player.mind
 
-		else if ((player.mind.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMPANY_LEADER))
+		else if ((player.mind.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND))
 			. += player.mind
 
 ////////////////////////////
@@ -965,9 +965,6 @@ SUBSYSTEM_DEF(job)
 
 /// Finds a captain first a foremost. Returns success or failure
 /datum/controller/subsystem/job/proc/assign_captain()
-	if(!CONFIG_GET(flag/require_captain))
-		JobDebug("Captain not required by config, skipping Assign Captain")
-		return TRUE
 
 	if(GLOB.is_debug_server && BYPASS_JOB_LIMITS_WHEN_DEBUGGING)
 		JobDebug("Captain not required due to debug status, skipping Assign Captain")
