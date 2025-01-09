@@ -34,7 +34,6 @@
 #define JOB_CAPTAIN "Captain"
 #define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
 #define JOB_SECURITY_MARSHAL "Security Marshal"
-#define JOB_RESEARCH_DIRECTOR "Research Director"
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
 #define JOB_MEDICAL_DIRECTOR "Medical Director"
 //Silicon
@@ -57,10 +56,6 @@
 #define JOB_PARAMEDIC "Paramedic"
 #define JOB_CHEMIST "Chemist"
 #define JOB_VIROLOGIST "Virologist"
-//Science
-#define JOB_SCIENTIST "Scientist"
-#define JOB_ROBOTICIST "Roboticist"
-#define JOB_GENETICIST "Geneticist"
 //Supply
 #define JOB_QUARTERMASTER "Quartermaster"
 #define JOB_DECKHAND "Deckhand"
@@ -71,7 +66,6 @@
 #define JOB_COOK "Cook"
 #define JOB_JANITOR "Janitor"
 #define JOB_CLOWN "Clown"
-#define JOB_MIME "Mime"
 #define JOB_ARCHIVIST "Archivist"
 #define JOB_LAWYER "Lawyer"
 #define JOB_CHAPLAIN "Chaplain"
@@ -133,15 +127,19 @@
 #define JOB_CREW_MEMBER (1<<3)
 /// Whether this job can be joined through the new_player menu.
 #define JOB_NEW_PLAYER_JOINABLE (1<<4)
-/// Whether this job appears in bold in the job menu.
-#define JOB_BOLD_SELECT_TEXT (1<<5)
 /// Reopens this position if we lose the player at roundstart.
-#define JOB_REOPEN_ON_ROUNDSTART_LOSS (1<<6)
+#define JOB_REOPEN_ON_ROUNDSTART_LOSS (1<<5)
 /// If the player with this job can have quirks assigned to him or not. Relevant for new player joinable jobs and roundstart antags.
-#define JOB_ASSIGN_QUIRKS (1<<7)
+#define JOB_ASSIGN_QUIRKS (1<<6)
 /// Whether this job can be an intern.
-#define JOB_CAN_BE_INTERN (1<<8)
-
+#define JOB_CAN_BE_INTERN (1<<7)
 
 #define FACTION_NONE "None"
 #define FACTION_STATION "Station"
+
+/// Spawn point is always fixed.
+#define JOBSPAWN_FORCE_FIXED 0
+/// Spawn point prefers a fixed spawnpoint, but can be a latejoin one.
+#define JOBSPAWN_ALLOW_RANDOM 1
+/// Spawn point is always a random spawnpoint.
+#define JOBSPAWN_FORCE_RANDOM 2

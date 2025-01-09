@@ -2,7 +2,7 @@
 
 //say based modes like binary are in living/say.dm
 
-#define RADIO_CHANNEL_COMMON "Common"
+#define RADIO_CHANNEL_COMMON "Local"
 #define RADIO_KEY_COMMON ";"
 
 #define RADIO_CHANNEL_SECURITY "Security"

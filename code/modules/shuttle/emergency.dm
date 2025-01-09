@@ -97,7 +97,7 @@
 		to_chat(user, span_warning("You don't have an ID."))
 		return
 
-	if(!(ACCESS_HEADS in ID.access))
+	if(!(ACCESS_MANAGEMENT in ID.access))
 		to_chat(user, span_warning("The access level of your card is not high enough."))
 		return
 
@@ -198,7 +198,7 @@
 		attempt_hijack_stage(user)
 
 /obj/machinery/computer/emergency_shuttle/proc/attempt_hijack_stage(mob/living/user)
-	if(!user.CanReach(src))
+	if(!IsReachableBy(user))
 		return
 	if(!user?.mind?.get_hijack_speed())
 		to_chat(user, span_warning("You manage to open a user-mode shell on [src], and hundreds of lines of debugging output fly through your vision. It is probably best to leave this alone."))

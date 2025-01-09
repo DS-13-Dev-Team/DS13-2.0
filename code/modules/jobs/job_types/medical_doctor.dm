@@ -19,16 +19,14 @@
 	outfits = list(
 		"Default" = list(
 			SPECIES_HUMAN = /datum/outfit/job/doctor,
-			SPECIES_PLASMAMAN = /datum/outfit/job/doctor/plasmaman,
 		),
 	)
 
 	paycheck = PAYCHECK_MEDIUM
-	paycheck_department = ACCOUNT_STATION_MASTER
+	paycheck_department = ACCOUNT_MED
 
 	liver_traits = list(TRAIT_MEDICAL_METABOLISM)
 
-	bounty_types = CIV_JOB_MED
 	departments_list = list(
 		/datum/job_department/medical,
 		)
@@ -64,17 +62,8 @@
 	chameleon_extras = /obj/item/gun/syringe
 	skillchips = list(/obj/item/skillchip/entrails_reader)
 
-/datum/outfit/job/doctor/plasmaman
-	name = "Medical Doctor (Plasmaman)"
-
-	uniform = /obj/item/clothing/under/plasmaman/medical
-	gloves = /obj/item/clothing/gloves/color/plasmaman/white
-	head = /obj/item/clothing/head/helmet/space/plasmaman/medical
-	mask = /obj/item/clothing/mask/breath
-	r_hand = /obj/item/tank/internals/plasmaman/belt/full
-
 /datum/outfit/job/doctor/mod
-	name = "Medical Doctor (MODsuit)"
+	name = JOB_MEDICAL_DOCTOR + " (MODsuit)"
 
 	suit_store = /obj/item/tank/internals/oxygen
 	back = /obj/item/mod/control/pre_equipped/medical

@@ -24,6 +24,9 @@ DEFINE_INTERACTABLE(/obj/item)
 	///Items can by default thrown up to 10 tiles by TK users
 	tk_throw_range = 10
 
+	/// The mob this item is being worn or held by.
+	var/tmp/mob/living/equipped_to
+
 	/// This var exists as a weird proxy "owner" ref
 	/// It's used in a few places. Stop using it, and optimially replace all uses please
 	var/tmp/obj/item/master = null
@@ -158,6 +161,8 @@ DEFINE_INTERACTABLE(/obj/item)
 	var/weak_against_armor = null
 	///What objects the suit storage can store
 	var/list/allowed = null
+	/// Flags for equipping/unequipping items, only applies to self manipulation.
+	var/equip_self_flags = EQUIP_ALLOW_MOVEMENT | EQUIP_SLOWDOWN
 	///In deciseconds, how long an item takes to equip; counts only for normal clothing slots, not pockets etc.
 	var/equip_delay_self = 0
 	///In deciseconds, how long an item takes to put on another person
@@ -237,6 +242,9 @@ DEFINE_INTERACTABLE(/obj/item)
 
 	/// The baseline chance to block **ANY** attack, projectiles included
 	var/block_chance = 0
+	/// The angle infront of the defender that is a valid block range.
+	var/block_angle = 45 // Infront and infront + sides, but not direct sides
+
 	/// The type of effect to create on a successful block
 	var/obj/effect/temp_visual/block_effect = /obj/effect/temp_visual/block
 
@@ -298,9 +306,9 @@ DEFINE_INTERACTABLE(/obj/item)
 	// This var exists as a weird proxy "owner" ref
 	// It's used in a few places. Stop using it, and optimially replace all uses please
 	master = null
-	if(ismob(loc))
-		var/mob/m = loc
-		m.temporarilyRemoveItemFromInventory(src, TRUE)
+
+	if(equipped_to)
+		equipped_to.temporarilyRemoveItemFromInventory(src, TRUE)
 
 	// Handle cleaning up our actions list
 	for(var/datum/action/action as anything in actions)
@@ -320,6 +328,26 @@ DEFINE_INTERACTABLE(/obj/item)
 			id.show(usr)
 		return TRUE
 
+	if(href_list["examine"])
+		var/atom_to_view_check = src
+		if(equipped_to)
+			atom_to_view_check = equipped_to
+
+		if(!atom_to_view_check && isidcard(src) && istype(loc, /obj/item/storage/wallet))
+			var/obj/item/storage/wallet/W = loc
+			if(W.is_open)
+				atom_to_view_check = W
+				if(ismob(W.loc))
+					atom_to_view_check = W.loc
+
+		var/list/user_view = view(usr)
+		if(!(atom_to_view_check in user_view))
+			to_chat(usr, span_warning("I can no longer see that item."))
+			return TRUE
+
+		usr.run_examinate(src, TRUE)
+		return TRUE
+
 /obj/item/update_icon_state()
 	if(wielded && icon_state_wielded)
 		icon_state = icon_state_wielded
@@ -328,6 +356,24 @@ DEFINE_INTERACTABLE(/obj/item)
 /obj/item/add_blood_DNA(list/dna)
 	. = ..()
 	update_slot_icon()
+
+/obj/item/examine_properties(mob/user)
+	. = ..()
+
+	switch(w_class)
+		if(WEIGHT_CLASS_TINY)
+			. += PROPERTY_TINY
+		if(WEIGHT_CLASS_SMALL)
+			. += PROPERTY_SMALL
+		if(WEIGHT_CLASS_BULKY)
+			. += PROPERTY_BULKY
+		if(WEIGHT_CLASS_HUGE)
+			. += PROPERTY_HUGE
+		if(WEIGHT_CLASS_GIGANTIC)
+			. += PROPERTY_GIGANTIC
+
+	if(slot_flags)
+		. += PROPERTY_WEARABLE
 
 /obj/item/get_mechanics_info()
 	. = ..()
@@ -410,11 +456,10 @@ DEFINE_INTERACTABLE(/obj/item)
 
 	LAZYADD(actions, action)
 	RegisterSignal(action, COMSIG_PARENT_QDELETING, PROC_REF(on_action_deleted))
-	if(ismob(loc))
+	if(equipped_to)
 		// We're being held or are equipped by someone while adding an action?
 		// Then they should also probably be granted the action, given it's in a correct slot
-		var/mob/holder = loc
-		give_item_action(action, holder, holder.get_slot_by_item(src))
+		give_item_action(action, equipped_to, equipped_to.get_slot_by_item(src))
 
 	return action
 
@@ -631,7 +676,7 @@ DEFINE_INTERACTABLE(/obj/item)
 		return
 
 	//If the item is in a storage item, take it out
-	loc.atom_storage?.attempt_remove(src, user.loc, silent = TRUE)
+	loc.atom_storage?.attempt_remove(src, user.loc, silent = TRUE, user = src)
 	if(QDELETED(src)) //moving it out of the storage to the floor destroyed it.
 		return
 
@@ -681,7 +726,13 @@ DEFINE_INTERACTABLE(/obj/item)
 	var/sig_return = SEND_SIGNAL(src, COMSIG_ITEM_CHECK_BLOCK)
 	var/block_result = sig_return & COMPONENT_CHECK_BLOCK_BLOCKED
 
-	block_result ||= prob(get_block_chance(wielder, hitby, damage, attack_type, armor_penetration))
+	var/attack_armor_pen = 0
+	if(isitem(hitby))
+		var/obj/item/hitby_item = hitby
+		attack_armor_pen = hitby_item.armor_penetration
+
+	if(!block_result && can_block_attack(wielder, hitby, attack_type))
+		block_result = prob(get_block_chance(wielder, hitby, damage, attack_type, attack_armor_pen))
 
 	var/list/reaction_args = args.Copy()
 	if(block_result)
@@ -697,6 +748,17 @@ DEFINE_INTERACTABLE(/obj/item)
 		block_feedback(wielder, attack_text, attack_type, do_message = TRUE, do_sound = TRUE)
 
 	return block_result
+
+/// Checks if this item can block an incoming attack.
+/obj/item/proc/can_block_attack(mob/living/carbon/human/wielder, atom/movable/hitby, attack_type)
+	if(wielder.body_position == LYING_DOWN)
+		return TRUE
+
+	var/angle = get_relative_attack_angle(wielder, hitby)
+	if(angle <= block_angle)
+		return TRUE
+
+	return FALSE
 
 /// Returns a number to feed into prob() to determine if the attack was blocked.
 /obj/item/proc/get_block_chance(mob/living/carbon/human/wielder, atom/movable/hitby, damage, attack_type, armor_penetration)
@@ -721,7 +783,7 @@ DEFINE_INTERACTABLE(/obj/item)
 
 	if(block_effect)
 		var/obj/effect/effect = new block_effect()
-		wielder.vis_contents += effect
+		wielder.add_viscontents(effect)
 
 /// Plays the block sound effect
 /obj/item/proc/play_block_sound(mob/living/carbon/human/wielder, attack_type)
@@ -743,7 +805,7 @@ DEFINE_INTERACTABLE(/obj/item)
 	return ITALICS | REDUCE_RANGE
 
 /// Called when a mob drops an item.
-/obj/item/proc/dropped(mob/user, silent = FALSE)
+/obj/item/proc/unequipped(mob/user, silent = FALSE)
 	SHOULD_CALL_PARENT(TRUE)
 
 	if(wielded)
@@ -757,13 +819,16 @@ DEFINE_INTERACTABLE(/obj/item)
 		qdel(src)
 
 	item_flags &= ~IN_INVENTORY
-	SEND_SIGNAL(src, COMSIG_ITEM_DROPPED, user)
+	equipped_to = null
+	SEND_SIGNAL(src, COMSIG_ITEM_UNEQUIPPED, user)
 
 	if(!silent)
 		playsound(src, drop_sound, DROP_SOUND_VOLUME, ignore_walls = FALSE)
 
-	user?.update_equipment_speed_mods()
-	user?.update_mouse_pointer()
+	if(!QDELETED(user))
+		if(slowdown)
+			user.update_equipment_speed_mods()
+		user.update_mouse_pointer()
 
 /// called just as an item is picked up (loc is not yet changed)
 /obj/item/proc/pickup(mob/user)
@@ -782,8 +847,9 @@ DEFINE_INTERACTABLE(/obj/item)
  * This separation exists to prevent things like the monkey sentience helmet from
  * polling ghosts while it's just being equipped as a visual preview for a dummy.
  */
-/obj/item/proc/visual_equipped(mob/user, slot, initial = FALSE)
-	return
+/obj/item/proc/visual_equipped(mob/living/user, slot, initial = FALSE)
+	SHOULD_CALL_PARENT(TRUE)
+	user.update_slots_for_item(src, slot)
 
 /**
  * Called after an item is placed in an equipment slot.
@@ -797,7 +863,7 @@ DEFINE_INTERACTABLE(/obj/item)
  */
 /obj/item/proc/equipped(mob/user, slot, initial = FALSE)
 	SHOULD_CALL_PARENT(TRUE)
-	visual_equipped(user, slot, initial)
+
 	SEND_SIGNAL(src, COMSIG_ITEM_EQUIPPED, user, slot)
 	SEND_SIGNAL(user, COMSIG_MOB_EQUIPPED_ITEM, src, slot)
 
@@ -807,6 +873,7 @@ DEFINE_INTERACTABLE(/obj/item)
 				stack_trace("[user] failed to wield a twohanded item.")
 				spawn(0)
 					user.dropItemToGround(src)
+
 	else if(wielded)
 		unwield(user, FALSE)
 
@@ -815,13 +882,17 @@ DEFINE_INTERACTABLE(/obj/item)
 		give_item_action(action, user, slot)
 
 	item_flags |= IN_INVENTORY
+	equipped_to = user
+
 	if(!initial)
 		if(equip_sound && (slot_flags & slot))
 			playsound(src, equip_sound, EQUIP_SOUND_VOLUME, TRUE, ignore_walls = FALSE)
 		else if(slot == ITEM_SLOT_HANDS)
 			playsound(src, pickup_sound, PICKUP_SOUND_VOLUME, ignore_walls = FALSE)
 
-	user.update_equipment_speed_mods()
+	if(slowdown)
+		user.update_equipment_speed_mods()
+	visual_equipped(user, slot, initial)
 
 /// Gives one of our item actions to a mob, when equipped to a certain slot
 /obj/item/proc/give_item_action(datum/action/action, mob/to_who, slot)
@@ -1050,10 +1121,10 @@ DEFINE_INTERACTABLE(/obj/item)
 	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', icon_state_to_use)
 
 /obj/item/proc/update_slot_icon()
-	if(!ismob(loc))
+	if(!equipped_to)
 		return
-	var/mob/owner = loc
-	owner.update_clothing(slot_flags | ITEM_SLOT_HANDS)
+
+	equipped_to.update_clothing(slot_flags | ITEM_SLOT_HANDS)
 
 ///Returns the temperature of src. If you want to know if an item is hot use this proc.
 /obj/item/proc/get_temperature()
@@ -1202,7 +1273,7 @@ DEFINE_INTERACTABLE(/obj/item)
 		if(35 to INFINITY)
 			return "This will take the wind out of your sails."
 
-/obj/item/proc/tooltipContent(list/url_mappings)
+/obj/item/proc/tooltipContent()
 	RETURN_TYPE(/list)
 	. = list()
 	. += desc
@@ -1210,14 +1281,14 @@ DEFINE_INTERACTABLE(/obj/item)
 		return
 	. += "<hr>"
 	if(item_flags & FORCE_STRING_OVERRIDE)
-		. += "<img src='[url_mappings["attack.png"]]'>Lethality: [force_string]<br>"
+		. += "<img src='attack.png'>Lethality: [force_string]<br>"
 	else
-		. += "<img src='[url_mappings["attack.png"]]'>Lethality: [force2text()], type: [damagetype2text()]<br>"
-	. += "<img src='[url_mappings["stamina.png"]]'>Stamina: [staminadamage2text()]<br>"
-	. += "<img src='[url_mappings["stamcost.png"]]'>Stamina Cost: [staminacost2text()]<br>"
+		. += "<img src='attack.png'>Lethality: [force2text()], type: [damagetype2text()]<br>"
+	. += "<img src='stamina.png'>Stamina: [staminadamage2text()]<br>"
+	. += "<img src='stamcost.png'>Stamina Cost: [staminacost2text()]<br>"
 
 /obj/item/proc/openTip(location, control, params, user)
-	var/content = jointext(tooltipContent(get_asset_datum(/datum/asset/simple/namespaced/common).get_url_mappings()), "")
+	var/content = jointext(tooltipContent(), "")
 	openToolTip(user,src,params,title = name,content = content,theme = "")
 
 /obj/item/MouseEntered(location, control, params)
@@ -1292,6 +1363,16 @@ DEFINE_INTERACTABLE(/obj/item)
 
 	delay *= toolspeed * skill_modifier
 
+	if(delay && iscarbon(user) && user.stats.cooldown_finished("use_tool")) // Fuck borgs!!!
+		var/datum/roll_result/result = user.stat_roll(7, /datum/rpg_skill/handicraft)
+		switch(result.outcome)
+			if(CRIT_SUCCESS)
+				result.do_skill_sound(user)
+				to_chat(user, result.create_tooltip("A swift execution. A job well done."))
+				delay = delay * 0.25
+
+
+		user.stats.set_cooldown("use_tool", max(delay, 10 SECONDS))
 
 	// Play tool sound at the beginning of tool usage.
 	play_tool_sound(target, volume)
@@ -1355,18 +1436,8 @@ DEFINE_INTERACTABLE(/obj/item)
 	return 0
 
 /obj/item/doMove(atom/destination)
-	if (ismob(loc))
-		var/mob/M = loc
-		var/hand_index = M.get_held_index_of_item(src)
-		if(hand_index)
-			M.held_items[hand_index] = null
-			M.update_held_items()
-			if(M.client)
-				M.client.screen -= src
-			layer = initial(layer)
-			plane = initial(plane)
-			appearance_flags &= ~NO_CLIENT_COLOR
-			dropped(M, FALSE)
+	if (equipped_to)
+		equipped_to.temporarilyRemoveItemFromInventory(src, TRUE)
 	return ..()
 
 /obj/item/proc/embedded(obj/item/bodypart/part)
@@ -1563,9 +1634,11 @@ DEFINE_INTERACTABLE(/obj/item)
 /obj/item/wash(clean_types)
 	. = ..()
 
-	if(ismob(loc))
-		var/mob/mob_loc = loc
-		mob_loc.regenerate_icons()
+	if(equipped_to)
+		if(equipped_to.is_holding(src))
+			equipped_to.update_held_items()
+		else
+			equipped_to.update_clothing()
 
 /// Called on [/datum/element/openspace_item_click_handler/proc/on_afterattack]. Check the relative file for information.
 /obj/item/proc/handle_openspace_click(turf/target, mob/user, proximity_flag, click_parameters)
@@ -1824,3 +1897,7 @@ DEFINE_INTERACTABLE(/obj/item)
 	center["x"] = text2num(center["x"])
 	center["y"] = text2num(center["y"])
 	return center
+
+/// Returns TRUE if the passed mob can interact with this item's storage via pickpocketing.
+/obj/item/proc/can_pickpocket(mob/living/user)
+	return FALSE

@@ -110,6 +110,8 @@
 
 	///Command report cooldown
 	COOLDOWN_DECLARE(command_report_cd)
+	/// An image to add to client.images so the AI player can see their own eye sprite.
+	var/image/sense_of_self
 
 /mob/living/silicon/ai/Initialize(mapload, datum/ai_laws/L, mob/target_ai)
 	. = ..()
@@ -605,8 +607,8 @@
 				if("Station Member")
 					var/list/personnel_list = list()
 
-					for(var/datum/data/record/record_datum in GLOB.data_core.locked)//Look in data core locked.
-						personnel_list["[record_datum.fields["name"]]: [record_datum.fields["rank"]]"] = record_datum.fields["character_appearance"]//Pull names, rank, and image.
+					for(var/datum/data/record/record_datum in SSdatacore.get_records(DATACORE_RECORDS_LOCKED))//Look in data core locked.
+						personnel_list["[record_datum.fields[DATACORE_NAME]]: [record_datum.fields[DATACORE_RANK]]"] = record_datum.fields[DATACORE_APPEARANCE]//Pull names, rank, and image.
 
 					if(!length(personnel_list))
 						tgui_alert(usr,"No suitable records found. Aborting.")
@@ -870,32 +872,42 @@
 /mob/living/silicon/ai/reset_perspective(atom/new_eye)
 	if(camera_light_on)
 		light_cameras()
+
 	if(istype(new_eye, /obj/machinery/camera))
 		current = new_eye
-	if(client)
-		if(ismovable(new_eye))
-			if(new_eye != GLOB.ai_camera_room_landmark)
-				end_multicam()
-			client.perspective = EYE_PERSPECTIVE
-			client.eye = new_eye
-		else
+
+	if(!client)
+		return
+
+	client.images -= sense_of_self
+
+	if(ismovable(new_eye))
+		if(new_eye != GLOB.ai_camera_room_landmark)
 			end_multicam()
-			if(isturf(loc))
-				if(eyeobj)
-					client.eye = eyeobj
-					client.perspective = EYE_PERSPECTIVE
-				else
-					client.eye = client.mob
-					client.perspective = MOB_PERSPECTIVE
-			else
+		client.perspective = EYE_PERSPECTIVE
+		client.eye = new_eye
+
+	else
+		end_multicam()
+		if(isturf(loc))
+			if(eyeobj)
+				client.eye = eyeobj
 				client.perspective = EYE_PERSPECTIVE
-				client.eye = loc
-		update_sight()
-		if(client.eye != src)
-			var/atom/AT = client.eye
-			AT.get_remote_view_fullscreens(src)
+				client.images += sense_of_self
+			else
+				client.eye = client.mob
+				client.perspective = MOB_PERSPECTIVE
 		else
-			clear_fullscreen("remote_view", 0)
+			client.perspective = EYE_PERSPECTIVE
+			client.eye = loc
+
+	update_sight()
+
+	if(client.eye != src)
+		var/atom/AT = client.eye
+		AT.get_remote_view_fullscreens(src)
+	else
+		clear_fullscreen("remote_view", 0)
 
 /mob/living/silicon/ai/revive(full_heal = FALSE, admin_revive = FALSE)
 	. = ..()

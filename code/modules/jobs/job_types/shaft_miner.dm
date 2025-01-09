@@ -5,7 +5,7 @@
 	faction = FACTION_STATION
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the quartermaster and the head of personnel"
+	supervisors = "the quartermaster"
 	selection_color = "#15381b"
 	exp_granted_type = EXP_TYPE_CREW
 
@@ -18,14 +18,12 @@
 	outfits = list(
 		"Default" = list(
 			SPECIES_HUMAN = /datum/outfit/job/miner,
-			SPECIES_PLASMAMAN = /datum/outfit/job/miner/plasmaman,
 		),
 	)
 
 	paycheck = PAYCHECK_MEDIUM
-	paycheck_department = ACCOUNT_STATION_MASTER
+	paycheck_department = ACCOUNT_CAR
 
-	bounty_types = CIV_JOB_MINE
 	departments_list = list(
 		/datum/job_department/cargo,
 		)
@@ -55,15 +53,6 @@
 	r_pocket = /obj/item/storage/bag/ore //causes issues if spawned in backpack
 
 	box = /obj/item/storage/box/survival/mining
-
-/datum/outfit/job/miner/plasmaman
-	name = "Shaft Miner (Plasmaman)"
-
-	uniform = /obj/item/clothing/under/plasmaman/mining
-	gloves = /obj/item/clothing/gloves/color/plasmaman/explorer
-	head = /obj/item/clothing/head/helmet/space/plasmaman/mining
-	mask = /obj/item/clothing/mask/breath
-	r_hand = /obj/item/tank/internals/plasmaman/belt/full
 
 /datum/outfit/job/miner/equipped
 	name = "Shaft Miner (Equipment)"

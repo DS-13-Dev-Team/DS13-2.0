@@ -21,16 +21,14 @@
 	outfits = list(
 		"Default" = list(
 			SPECIES_HUMAN = /datum/outfit/job/chemist,
-			SPECIES_PLASMAMAN = /datum/outfit/job/chemist/plasmaman,
 		),
 	)
 
 	paycheck = PAYCHECK_MEDIUM
-	paycheck_department = ACCOUNT_STATION_MASTER
+	paycheck_department = ACCOUNT_MED
 
 	liver_traits = list(TRAIT_MEDICAL_METABOLISM)
 
-	bounty_types = CIV_JOB_CHEM
 	departments_list = list(
 		/datum/job_department/medical,
 	)
@@ -59,12 +57,3 @@
 
 	box = /obj/item/storage/box/survival/medical
 	chameleon_extras = /obj/item/gun/syringe
-
-/datum/outfit/job/chemist/plasmaman
-	name = "Chemist (Plasmaman)"
-
-	uniform = /obj/item/clothing/under/plasmaman/chemist
-	gloves = /obj/item/clothing/gloves/color/plasmaman/white
-	head = /obj/item/clothing/head/helmet/space/plasmaman/chemist
-	mask = /obj/item/clothing/mask/breath
-	r_hand = /obj/item/tank/internals/plasmaman/belt/full

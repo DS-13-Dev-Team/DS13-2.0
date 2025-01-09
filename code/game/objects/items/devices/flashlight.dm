@@ -313,9 +313,8 @@
 	on = FALSE
 	force = initial(src.force)
 	damtype = initial(src.damtype)
-	if(ismob(loc))
-		var/mob/U = loc
-		update_brightness(U)
+	if(equipped_to)
+		update_brightness(equipped_to)
 	else
 		update_brightness(null)
 
@@ -462,7 +461,7 @@
 /obj/item/flashlight/glowstick
 	name = "glowstick"
 	desc = "A military-grade glowstick."
-	custom_price = PAYCHECK_PRISONER
+	custom_price = PAYCHECK_ASSISTANT * 0.6
 	w_class = WEIGHT_CLASS_SMALL
 	light_outer_range = 4
 	light_system = OVERLAY_LIGHT

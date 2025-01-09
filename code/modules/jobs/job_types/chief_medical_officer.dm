@@ -26,21 +26,18 @@
 	outfits = list(
 		"Default" = list(
 			SPECIES_HUMAN = /datum/outfit/job/cmo,
-			SPECIES_PLASMAMAN = /datum/outfit/job/cmo/plasmaman,
 		),
 	)
 
 	departments_list = list(
 		/datum/job_department/medical,
 		/datum/job_department/command,
-		)
+	)
 
 	paycheck = PAYCHECK_COMMAND
-	paycheck_department = ACCOUNT_STATION_MASTER
+	paycheck_department = ACCOUNT_MED
 
 	liver_traits = list(TRAIT_MEDICAL_METABOLISM, TRAIT_ROYAL_METABOLISM)
-
-	bounty_types = CIV_JOB_MED
 
 	mail_goodies = list(
 		/obj/effect/spawner/random/medical/organs = 10,
@@ -50,7 +47,7 @@
 	)
 	family_heirlooms = list(/obj/item/storage/medkit/ancient/heirloom)
 	rpg_title = "High Cleric"
-	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
+	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 
 	voice_of_god_power = 1.4 //Command staff has authority
 
@@ -83,15 +80,6 @@
 		/obj/item/stamp/cmo,
 		)
 	skillchips = list(/obj/item/skillchip/entrails_reader)
-
-/datum/outfit/job/cmo/plasmaman
-	name = "Medical Director (Plasmaman)"
-
-	uniform = /obj/item/clothing/under/plasmaman/chief_medical_officer
-	gloves = /obj/item/clothing/gloves/color/plasmaman/white
-	head = /obj/item/clothing/head/helmet/space/plasmaman/chief_medical_officer
-	mask = /obj/item/clothing/mask/breath
-	r_hand = /obj/item/tank/internals/plasmaman/belt/full
 
 /datum/outfit/job/cmo/mod
 	name = "Medical Director (MODsuit)"
