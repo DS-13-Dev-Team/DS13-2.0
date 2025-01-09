@@ -164,7 +164,7 @@ SUBSYSTEM_DEF(credits)
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(H.stat == DEAD)
 			continue
-		if(H.mind.assigned_role?.departments_bitflags & DEPARTMENT_BITFLAG_COMPANY_LEADER)
+		if(H.mind.assigned_role?.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND)
 			heads_of_staff += H
 
 	for(var/mob/living/carbon/human/H as anything in heads_of_staff)

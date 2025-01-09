@@ -294,7 +294,7 @@ SUBSYSTEM_DEF(job)
 			JobDebug("GRJ skipping overflow role, Player: [player], Job: [job]")
 			continue
 
-		if(job.departments_bitflags & DEPARTMENT_BITFLAG_COMPANY_LEADER) //If you want a leadership position, select it!
+		if(job.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND) //If you want a leadership position, select it!
 			JobDebug("GRJ skipping leadership role, Player: [player], Job: [job]")
 			continue
 
@@ -531,21 +531,6 @@ SUBSYSTEM_DEF(job)
 				return FALSE //Living on the edge, the forced antagonist couldn't be assigned to overflow role (bans, client age) - just reroll
 
 	JobDebug("DO, Ending handle unrejectable unassigned")
-
-	if(!(GLOB.is_debug_server && BYPASS_JOB_LIMITS_WHEN_DEBUGGING))
-		if(CONFIG_GET(flag/require_departments_staffed))
-			JobDebug("DO, ensuring that all departments have atleast one player.")
-
-			var/we_fucked = FALSE
-			for(var/path in department_has_atleast_one_player)
-				if(department_has_atleast_one_player[path] == FALSE)
-					JobDebug("DO, [path] does not have any players, aborting.")
-					we_fucked = TRUE
-
-			if(we_fucked)
-				return FALSE
-
-			JobDebug("DO, all departments have atleast one player.")
 
 	JobDebug("All divide occupations tasks completed.")
 	JobDebug("---------------------------------------------------")
@@ -841,10 +826,10 @@ SUBSYSTEM_DEF(job)
 		if(!player.mind?.assigned_role)
 			continue
 
-		if(management_only && (player.mind.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_MANAGEMENT))
+		if(management_only && (player.mind.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND))
 			. += player.mind
 
-		else if ((player.mind.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMPANY_LEADER))
+		else if ((player.mind.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND))
 			. += player.mind
 
 /////////////////////////////////
@@ -856,7 +841,7 @@ SUBSYSTEM_DEF(job)
 		if(!player.mind?.assigned_role)
 			continue
 
-		if(player.mind.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_MANAGEMENT)
+		if(player.mind.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND)
 			. += player.mind
 
 //////////////////////////////////////////////
@@ -935,8 +920,8 @@ SUBSYSTEM_DEF(job)
 	var/obj/item/id_slot = new_captain.get_item_by_slot(ITEM_SLOT_ID)
 	if(id_slot)
 		var/obj/item/card/id/id_card = id_slot.GetID(TRUE) || locate() in id_slot
-		if(id_card && !(ACCESS_MANAGEMENT in id_card.access))
-			id_card.add_wildcards(list(ACCESS_MANAGEMENT), mode=FORCE_ADD_ALL)
+		if(id_card && !(ACCESS_HEADS in id_card.access))
+			id_card.add_wildcards(list(ACCESS_HEADS), mode=FORCE_ADD_ALL)
 
 	assigned_captain = TRUE
 

@@ -124,7 +124,7 @@
 		return FALSE
 	var/head_check = 0
 	for(var/mob/player in GLOB.alive_player_list)
-		if (player.mind.assigned_role.departments_bitflags & (DEPARTMENT_BITFLAG_COMPANY_LEADER))
+		if (player.mind.assigned_role.departments_bitflags & (DEPARTMENT_BITFLAG_COMMAND))
 			head_check++
 
 	return (head_check >= required_heads_of_staff)

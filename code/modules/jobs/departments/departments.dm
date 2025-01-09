@@ -141,7 +141,7 @@
 	exclude_from_latejoin = TRUE
 
 /datum/job_department/company_leader
-	department_name = DEPARTMENT_COMPANY_LEADER
-	department_bitflags = DEPARTMENT_BITFLAG_COMPANY_LEADER
+	department_name = DEPARTMENT_COMMAND
+	department_bitflags = DEPARTMENT_BITFLAG_COMMAND
 	exclude_from_latejoin = TRUE
 	is_not_real_department = TRUE

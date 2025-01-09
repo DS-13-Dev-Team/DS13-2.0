@@ -193,10 +193,10 @@
 			continue
 		//removes heads of staff from being targets from non heads of staff assassinations, and vice versa
 		if(heads_of_staff)
-			if(!(possible_target.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMPANY_LEADER))
+			if(!(possible_target.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND))
 				continue
 		else
-			if((possible_target.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMPANY_LEADER))
+			if((possible_target.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND))
 				continue
 
 		possible_targets += possible_target

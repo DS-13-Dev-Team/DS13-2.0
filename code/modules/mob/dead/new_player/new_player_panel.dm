@@ -465,7 +465,7 @@
 				continue
 
 			var/command_bold = ""
-			if(job_datum.departments_bitflags & DEPARTMENT_BITFLAG_COMPANY_LEADER)
+			if(job_datum.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND)
 				command_bold = " command"
 
 			if(job_datum in SSjob.prioritized_jobs)
