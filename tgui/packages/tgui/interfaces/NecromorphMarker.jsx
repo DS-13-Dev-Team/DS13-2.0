@@ -1,6 +1,6 @@
-import { useBackend, useLocalState } from "../backend";
-import { AnimatedNumber, Box, Button, ProgressBar, Section, Slider, Stack } from "../components";
-import { Window } from "../layouts";
+import { useBackend, useLocalState } from '../backend';
+import { AnimatedNumber, Box, Button, ProgressBar, Section, Slider, Stack } from '../components';
+import { Window } from '../layouts';
 
 export const NecromorphMarker = (props, context) => {
   const { act, data } = useBackend(context);
@@ -110,12 +110,6 @@ export const NecromorphDisplay = (props, context) => {
   return (
     <Stack>
       <Stack.Item>
-        <Box
-          className={
-            "MarkerIconFrame necromorphs"+sprites[chosenNecromorph.name.replace(/[^a-zA-Z0-9]/g, '')]+" "
-          +chosenNecromorph.name.replace(/[^a-zA-Z0-9]/g, '')
-          }
-        />
       </Stack.Item>
       <Stack.Item>
         <Box bold>
