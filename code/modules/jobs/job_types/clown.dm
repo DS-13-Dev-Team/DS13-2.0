@@ -6,6 +6,9 @@
 	spawn_positions = 2
 	exp_granted_type = EXP_TYPE_CREW
 
+	//Who knows where the funny man will appear from next
+	spawn_logic = JOBSPAWN_FORCE_RANDOM
+
 	employers = list(
 		/datum/employer/cec,
 		/datum/employer/eg,

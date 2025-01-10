@@ -11,6 +11,9 @@ Assistant
 	spawn_positions = 5
 	exp_granted_type = EXP_TYPE_CREW
 
+	//The cockroaches of the station
+	spawn_logic = JOBSPAWN_FORCE_RANDOM
+
 	employers = list(
 		/datum/employer/cec,
 		/datum/employer/eg,
