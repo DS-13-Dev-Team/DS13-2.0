@@ -1,7 +1,7 @@
-import { round } from "../../common/math";
-import { useBackend } from "../backend";
-import { Button, Divider, Stack } from "../components";
-import { Window } from "../layouts";
+import { round } from '../../common/math';
+import { useBackend } from '../backend';
+import { Button, Divider, Stack } from '../components';
+import { Window } from '../layouts';
 
 export const PreySightings = (props, context) => {
   const { act, data } = useBackend(context);
