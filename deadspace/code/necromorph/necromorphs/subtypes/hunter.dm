@@ -29,6 +29,11 @@
 		return FALSE
 	return FALSE
 
+/mob/living/carbon/human/necromorph/hunter/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/hunter/H, forced, spread_damage, sharpness, attack_direction, attacking_item)
+	if(H.health - damage <= 0)
+		H.handle_death_check()
+	. = ..()
+
 /datum/necro_class/hunter
 	display_name = "Hunter"
 	desc = "A rapidly regenerating vanguard, designed to lead the charge, suffer a glorious death, then get back up and do it again. \
@@ -77,11 +82,6 @@
 		'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_pain_6.ogg',
 		'deadspace/sound/effects/creatures/necromorph/ubermorph/ubermorph_shout_long_3.ogg',
 	)
-
-/datum/species/necromorph/hunter/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/hunter/H, forced, spread_damage, sharpness, attack_direction)
-	if(H.health - damage <= 0)
-		H.handle_death_check()
-	. = ..()
 
 /datum/action/cooldown/necro/regenerate/hunter
 	cooldown_time = 30 SECONDS

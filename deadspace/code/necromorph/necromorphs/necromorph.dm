@@ -26,7 +26,16 @@
 /mob/living/carbon/human/necromorph/update_worn_gloves()
 	return
 
-/mob/living/carbon/human/necromorph/updatehealth()
+//This had to be moved from species due to code improvements
+/mob/living/carbon/human/necromorph/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/necromorph/H, forced = FALSE, spread_damage = FALSE, sharpness = NONE, attack_direction = null, attacking_item)
+	if(H.dodge_shield > 0)
+		// Calculate amount of the damage that was blocked by the shield
+		var/dodged_damage = min(H.dodge_shield, damage, damage * (100 - blocked) / 100)
+		H.reduce_shield(dodged_damage)
+		blocked += (dodged_damage / damage) * 100
+	return ..()
+
+/mob/living/carbon/human/necromorph/updatehealth(cause_of_death)
 	if(status_flags & GODMODE)
 		return
 
@@ -56,7 +65,7 @@
 			see_in_dark = unconscious_see_in_dark
 	//Otherwise we are dead and see_in_dark was handled in parent call
 
-/mob/living/carbon/human/necromorph/death(gibbed)
+/mob/living/carbon/human/necromorph/death(gibbed, cause_of_death = "Unknown")
 	if(stat == DEAD)
 		return
 	stop_sound_channel(CHANNEL_HEARTBEAT)
@@ -70,8 +79,6 @@
 	if(!gibbed)
 		INVOKE_ASYNC(src, PROC_REF(emote), "deathgasp")
 	reagents.end_metabolization(src)
-
-	add_memory_in_range(src, 7, MEMORY_DEATH, list(DETAIL_PROTAGONIST = src), story_value = STORY_VALUE_MEH, memory_flags = MEMORY_CHECK_BLIND_AND_DEAF)
 
 	set_stat(DEAD)
 	unset_machine()

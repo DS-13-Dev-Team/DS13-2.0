@@ -18,7 +18,7 @@
 	var/mob/living/carbon/human/necromorph/source = owner
 	cached_pass_flags = source.pass_flags
 
-	var/real_dist = max(1, get_dist_euclidian(source, charge_target))
+	var/real_dist = max(1, get_dist_euclidean(source, charge_target))
 	animate(source, pixel_x = ((charge_target.x - source.x)/real_dist), pixel_y = ((charge_target.y - source.y)/real_dist), time = 1.5 SECONDS, easing = BACK_EASING, flags = ANIMATION_PARALLEL|ANIMATION_RELATIVE)
 	animate(pixel_x = source.base_pixel_x, pixel_y = source.base_pixel_y, time = 0.3 SECONDS)
 

@@ -96,6 +96,27 @@
 	forced_curl = FALSE
 	stop_curl()
 
+//Switched from species to mob due to code improvements
+/mob/living/carbon/human/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/brute/H, forced, spread_damage, sharpness, attack_direction, attacking_item)
+	var/reduced = 0
+	switch(turn(attack_direction, dir2angle(H.dir)))
+		if(NORTH)
+			reduced = damage * ((100-H.armor_front)/100)
+		if(NORTHEAST, NORTHWEST)
+			reduced = damage * ((100-((H.armor_front+H.armor_flank)/2))/100)
+		if(EAST, WEST)
+			reduced = damage * ((100-H.armor_flank)/100)
+		if(SOUTHEAST, SOUTHWEST)
+			reduced = damage * ((100-(H.armor_flank/2))/100)
+		if(SOUTH)
+			INVOKE_ASYNC(H, TYPE_PROC_REF(/mob/living/carbon/human/necromorph/brute, start_curl), TRUE)
+			to_chat(H, span_danger("You reflexively curl up in panic"))
+			return ..()
+	if(H.curling)
+		reduced *= H.curl_armor_mult
+	blocked += reduced
+	return ..()
+
 /datum/necro_class/brute
 	display_name = "Brute"
 	desc = "A powerful linebreaker and assault specialist, the brute can smash through almost any obstacle, and its tough \
@@ -158,26 +179,6 @@
 
 /datum/species/necromorph/brute/get_deathgasp_sound(mob/living/carbon/human/H)
 	return 'deadspace/sound/effects/creatures/necromorph/brute/brute_death.ogg'
-
-/datum/species/necromorph/brute/apply_damage(damage, damagetype, def_zone, blocked, mob/living/carbon/human/necromorph/brute/H, forced, spread_damage, sharpness, attack_direction)
-	var/reduced = 0
-	switch(turn(attack_direction, dir2angle(H.dir)))
-		if(NORTH)
-			reduced = damage * ((100-H.armor_front)/100)
-		if(NORTHEAST, NORTHWEST)
-			reduced = damage * ((100-((H.armor_front+H.armor_flank)/2))/100)
-		if(EAST, WEST)
-			reduced = damage * ((100-H.armor_flank)/100)
-		if(SOUTHEAST, SOUTHWEST)
-			reduced = damage * ((100-(H.armor_flank/2))/100)
-		if(SOUTH)
-			INVOKE_ASYNC(H, TYPE_PROC_REF(/mob/living/carbon/human/necromorph/brute, start_curl), TRUE)
-			to_chat(H, span_danger("You reflexively curl up in panic"))
-			return ..()
-	if(H.curling)
-		reduced *= H.curl_armor_mult
-	blocked += reduced
-	return ..()
 
 #define WINDUP_TIME 1.25 SECONDS
 

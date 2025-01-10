@@ -8,10 +8,8 @@
 		BB_VISION_RANGE = 9,
 	)
 
-	//I would give them more complex pathfinding, but im worried too many of them will bog down the server
-	ai_movement = /datum/ai_movement/basic_avoidance
-	idle_behavior = /datum/idle_behavior/idle_random_walk/necromorph
-	movement_delay = 0.25 SECONDS
+	//Hopefully giving them jps doesn't backfire
+	ai_movement = /datum/ai_movement/jps
 
 	//The planning part of the AI. Works from top to bottom in priority, works downward as it runs out of stuff to do
 	planning_subtrees = list(
@@ -31,10 +29,6 @@
 	if(IS_DEAD_OR_INCAP(living_pawn))
 		return FALSE
 	return ..()
-
-/datum/idle_behavior/idle_random_walk/necromorph
-	///Chance that the mob random walks per second
-	walk_chance = 40
 
 /datum/ai_planning_subtree/basic_melee_attack_subtree/necro
 	melee_attack_behavior = /datum/ai_behavior/necro_attack

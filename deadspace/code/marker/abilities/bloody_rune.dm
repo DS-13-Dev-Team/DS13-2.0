@@ -29,7 +29,7 @@ GLOBAL_LIST_EMPTY(necro_runes)
 	mergeable_decal = FALSE
 	var/used_overlays = ""
 
-/obj/effect/decal/cleanable/necro_rune/Initialize(mapload, list/datum/disease/diseases, colour, fade_in)
+/obj/effect/decal/cleanable/necro_rune/Initialize(mapload, colour, fade_in)
 	. = ..()
 	icon_state = "rune-[rand(1, 5)]"
 	if(colour)
