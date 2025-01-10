@@ -9,7 +9,7 @@
 	siemens_coefficient = 0
 	complexity_max = 25
 
-	skins = list(
+	variants = list(
 		"advanced_engineer" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
@@ -127,12 +127,9 @@
 
 /obj/item/mod/skin_applier/advanced_anodized
 	skin = "advanced_engineer_anodized"
-	compatible_theme = /datum/mod_theme/deadspace/advanced_engineer
 
 /obj/item/mod/skin_applier/advanced_burnished
 	skin = "advanced_engineer_burnished"
-	compatible_theme = /datum/mod_theme/deadspace/advanced_engineer
 
 /obj/item/mod/skin_applier/advanced_forged
 	skin = "advanced_engineer_forged"
-	compatible_theme = /datum/mod_theme/deadspace/advanced_engineer

@@ -9,7 +9,7 @@
 	siemens_coefficient = 0
 	complexity_max = 30
 
-	skins = list(
+	variants = list(
 		"flesh" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,

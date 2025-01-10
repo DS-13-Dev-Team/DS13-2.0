@@ -9,7 +9,7 @@
 	siemens_coefficient = 0
 	complexity_max = 20
 
-	skins = list(
+	variants = list(
 		"intermediate_cowboy" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,

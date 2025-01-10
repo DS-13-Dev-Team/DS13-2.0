@@ -6,7 +6,7 @@
 	default_skin = "civlian"
 	armor = list(BLUNT = 10, PUNCTURE = 5, SLASH = 20, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 0, FIRE = 25, ACID = 25)
 
-	skins = list(
+	variants = list(
 		"slim" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = NECK_LAYER,

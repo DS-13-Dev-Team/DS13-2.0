@@ -11,7 +11,7 @@
 	siemens_coefficient = 0
 	complexity_max = 25
 
-	skins = list(
+	variants = list(
 		"heavy_diving" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
@@ -66,7 +66,7 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 	complexity_max = 25
 
 
-	skins = list(
+	variants = list(
 		"elite_diving" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
@@ -120,7 +120,7 @@ It's flexible reinforcements allow it to withstand extreme undersea pressures wh
 	siemens_coefficient = 0
 	complexity_max = 25
 
-	skins = list(
+	variants = list(
 		"strange" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,

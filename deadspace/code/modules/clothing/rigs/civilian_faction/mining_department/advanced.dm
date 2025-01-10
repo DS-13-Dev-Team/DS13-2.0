@@ -9,7 +9,7 @@
 	siemens_coefficient = 0
 	complexity_max = 25
 
-	skins = list(
+	variants = list(
 		"advanced_miner" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,

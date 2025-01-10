@@ -8,7 +8,7 @@
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	siemens_coefficient = 0
 
-	skins = list(
+	variants = list(
 		"scaf_elite" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,

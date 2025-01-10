@@ -4,7 +4,7 @@
 	default_skin = "med"
 	armor = list(BLUNT = 35, PUNCTURE = 10, SLASH = 25, LASER = 25, ENERGY = 10, BOMB = 25, BIO = 100, FIRE = 25, ACID = 70)
 
-	skins = list(
+	variants = list(
 		"med" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,

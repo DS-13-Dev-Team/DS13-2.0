@@ -6,7 +6,7 @@
 	armor = list(BLUNT = 40, PUNCTURE = 10, SLASH = 25, LASER = 25, ENERGY = 10, BOMB = 30, BIO = 100, FIRE = 40, ACID = 80)
 	complexity_max = 20
 
-	skins = list(
+	variants = list(
 		"med" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,

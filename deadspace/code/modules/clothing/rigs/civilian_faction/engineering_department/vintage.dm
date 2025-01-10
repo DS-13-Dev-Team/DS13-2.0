@@ -9,7 +9,7 @@
 	siemens_coefficient = 0
 	complexity_max = 25
 
-	skins = list(
+	variants = list(
 		"vintage" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
@@ -77,4 +77,3 @@
 
 /obj/item/mod/skin_applier/heavy_vintage
 	skin = "heavy_vintage"
-	compatible_theme = /datum/mod_theme/deadspace/vintage

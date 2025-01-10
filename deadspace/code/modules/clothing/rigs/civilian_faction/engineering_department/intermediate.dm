@@ -8,7 +8,7 @@
 	siemens_coefficient = 0
 	complexity_max = 20
 
-	skins = list(
+	variants = list(
 		"intermediate_engineer" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
@@ -125,12 +125,9 @@
 
 /obj/item/mod/skin_applier/intermediate_anodized
 	skin = "intermediate_engineer_anodized"
-	compatible_theme = /datum/mod_theme/deadspace/intermediate_engineer
 
 /obj/item/mod/skin_applier/intermediate_burnished
 	skin = "intermediate_engineer_burnished"
-	compatible_theme = /datum/mod_theme/deadspace/intermediate_engineer
 
 /obj/item/mod/skin_applier/intermediate_forged
 	skin = "intermediate_engineer_forged"
-	compatible_theme = /datum/mod_theme/deadspace/intermediate_engineer

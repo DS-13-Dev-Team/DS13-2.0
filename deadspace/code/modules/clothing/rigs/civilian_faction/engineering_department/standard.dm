@@ -7,7 +7,7 @@
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
 
-	skins = list(
+	variants = list(
 		"standard_engineer" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
@@ -148,16 +148,12 @@
 
 /obj/item/mod/skin_applier/standard_legacy
 	skin = "legacy_standard_engineer"
-	compatible_theme = /datum/mod_theme/deadspace/standard_engineer
 
 /obj/item/mod/skin_applier/standard_anodized
 	skin = "standard_engineer_anodized"
-	compatible_theme = /datum/mod_theme/deadspace/standard_engineer
 
 /obj/item/mod/skin_applier/standard_burnished
 	skin = "standard_engineer_burnished"
-	compatible_theme = /datum/mod_theme/deadspace/standard_engineer
 
 /obj/item/mod/skin_applier/standard_forged
 	skin = "standard_engineer_forged"
-	compatible_theme = /datum/mod_theme/deadspace/standard_engineer

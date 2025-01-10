@@ -7,7 +7,7 @@
 	atom_flags = PREVENT_CONTENTS_EXPLOSION_1
 	complexity_max = 25
 
-	skins = list(
+	variants = list(
 		"advanced_engineer_unitologist" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,

@@ -5,7 +5,7 @@
 	armor = list(BLUNT = 25, PUNCTURE = 30, SLASH = 40, LASER = 20, ENERGY = 15, BOMB = 15, BIO = 100, FIRE = 20, ACID = 50)
 	siemens_coefficient = 0
 
-	skins = list(
+	variants = list(
 		"marksman" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,

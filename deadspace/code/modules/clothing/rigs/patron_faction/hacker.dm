@@ -7,7 +7,7 @@
 	max_heat_protection_temperature = 0
 	min_cold_protection_temperature = 0
 
-	skins = list(
+	variants = list(
 		"hacker" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,

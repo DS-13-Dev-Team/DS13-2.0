@@ -4,7 +4,7 @@
 	default_skin = "clown"
 	armor = list(BLUNT = 20, PUNCTURE = 5, SLASH = 15, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, FIRE = 30, ACID = 30)
 
-	skins = list(
+	variants = list(
 		"clown" = list(
 			HELMET_FLAGS = list(
 				UNSEALED_LAYER = WOUND_LAYER,
