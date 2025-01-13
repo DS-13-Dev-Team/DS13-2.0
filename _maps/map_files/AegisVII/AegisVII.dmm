@@ -5541,11 +5541,6 @@
 	},
 /turf/open/floor/deadspace/mono,
 /area/mine/hydroponics)
-"cOl" = (
-/obj/structure/overfloor_catwalk/iron_dark,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/space/basic,
-/area/station/service/hydroponics)
 "cOQ" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/deadspace/random/golf_brown,
@@ -16673,8 +16668,7 @@
 "iGt" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/overfloor_catwalk/iron_dark,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/station/service/hydroponics)
 "iGu" = (
 /obj/structure/closet{
@@ -44650,6 +44644,7 @@
 /obj/effect/landmark/start/botanist,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/plating,
 /area/station/service/hydroponics)
 "wXw" = (
 /obj/item/target,
@@ -82408,7 +82403,7 @@ fgh
 hbD
 aAD
 hbD
-cOl
+wRI
 hbD
 aAD
 bVd
