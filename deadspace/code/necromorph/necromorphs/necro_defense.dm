@@ -28,7 +28,7 @@
 	log_combat(user, src, "attacked")
 
 /mob/living/carbon/human/attack_necromorph(mob/living/carbon/human/necromorph/user, list/modifiers, dealt_damage)
-	if(check_shields(user, 0, "the [user.name]"))
+	if(check_block(user, 0, "the [user.name]"))
 		visible_message(span_danger("[user] tries to hit [src]!"), \
 						span_danger("[user] tries to hit you!"), span_hear("You hear a swoosh!"), null, user)
 		user.play_necro_sound(SOUND_ATTACK, VOLUME_MID, 1, 3)
@@ -71,7 +71,7 @@
 	skipcatch = TRUE
 	.=..()
 
-/mob/living/carbon/human/necromorph/adjustToxLoss(amount, updating_health = TRUE, forced = FALSE)
+/mob/living/carbon/human/necromorph/adjustToxLoss(amount, updating_health = TRUE, forced = FALSE, cause_of_death = "Systemic organ failure")
 	return FALSE
 
 /mob/living/carbon/human/necromorph/setStaminaLoss(amount, updating_health = 1)

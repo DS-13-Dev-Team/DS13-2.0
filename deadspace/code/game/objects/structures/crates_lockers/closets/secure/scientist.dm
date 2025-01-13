@@ -9,7 +9,6 @@
 	new /obj/item/clothing/suit/hooded/ds(src)
 	new /obj/item/storage/bag/garment/research_director(src)
 	new /obj/item/computer_hardware/hard_drive/role/rd(src)
-	new /obj/item/radio/headset/heads/rd(src)
 	new /obj/item/megaphone/command(src)
 	new /obj/item/storage/lockbox/medal/sci(src)
 	new /obj/item/assembly/flash/handheld(src)

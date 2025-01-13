@@ -344,6 +344,7 @@
 	if(num_heads < 2) // They won't get major sacrifice, so bump up minor sacrifice a bit
 		sac_objective.target_amount += 2
 		sac_objective.update_explanation_text()
+
 	objectives += sac_objective
 
 	if(num_heads >= 2)

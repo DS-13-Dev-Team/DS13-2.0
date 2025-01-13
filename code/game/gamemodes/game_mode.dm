@@ -246,6 +246,7 @@
 			continue
 		if(!include_command && job.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND)
 			continue
+
 		job.current_positions = max(job.current_positions - 1, 0)
 		reopened_jobs += quitter.job
 

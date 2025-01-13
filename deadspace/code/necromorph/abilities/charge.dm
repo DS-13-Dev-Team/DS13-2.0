@@ -162,7 +162,7 @@
 	if(isliving(target))
 		if(ishuman(target))
 			var/mob/living/carbon/human/human_target = target
-			if(human_target.check_shields(source, 0, "the [source.name]", attack_type = LEAP_ATTACK))
+			if(human_target.check_block(source, 0, "the [source.name]", attack_type = LEAP_ATTACK))
 				source.Stun(6)
 				shake_camera(source, 4, 3)
 				shake_camera(target, 2, 1)

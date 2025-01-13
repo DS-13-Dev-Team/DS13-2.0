@@ -88,7 +88,7 @@
 		stages[i] = list()
 
 	for(var/turf/T as anything in RANGE_TURFS(range, our_loc)-our_loc)
-		if(get_dist_euclidian(our_loc, T) > range)
+		if(get_dist_euclidean(our_loc, T) > range)
 			continue
 		var/angle_to_turf = SIMPLIFY_DEGREES(ATAN2(T.x - our_loc.x, T.y - our_loc.y))
 		if(smallest_angle > biggest_angle)

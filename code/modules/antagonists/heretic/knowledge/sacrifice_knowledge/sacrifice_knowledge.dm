@@ -188,7 +188,7 @@
 
 	to_chat(user, span_hypnophrase("Your patrons accepts your offer."))
 
-	if(sacrifice.mind?.assigned_role?.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND)
+	if(sacrifice.mind?.assigned_role?.departments_bitflags & (DEPARTMENT_BITFLAG_COMMAND))
 		heretic_datum.knowledge_points++
 		heretic_datum.high_value_sacrifices++
 

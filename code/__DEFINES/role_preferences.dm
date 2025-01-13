@@ -18,6 +18,7 @@
 #define ROLE_THIEF "Thief"
 #define ROLE_TRAITOR "Traitor"
 #define ROLE_WIZARD "Wizard"
+#define ROLE_FLOCK "Flock"
 #define ROLE_EARTHGOV_AGENT "EarthGov Agent"
 #define ROLE_ZEALOT "Unitologist Zealot"
 

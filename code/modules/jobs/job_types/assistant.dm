@@ -5,12 +5,14 @@ Assistant
 */
 /datum/job/assistant
 	title = JOB_ASSISTANT
-	description = "Get your space legs, assist people, ask the HoP to give you a job."
+	description = "The everyman, an essential component to station life."
 	faction = FACTION_STATION
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "absolutely everyone"
 	exp_granted_type = EXP_TYPE_CREW
+
+	//The cockroaches of the station
+	spawn_logic = JOBSPAWN_FORCE_RANDOM
 
 	employers = list(
 		/datum/employer/cec,
@@ -21,13 +23,14 @@ Assistant
 	outfits = list(
 		"Default" = list(
 			SPECIES_HUMAN = /datum/outfit/job/assistant,
-			SPECIES_PLASMAMAN = /datum/outfit/job/assistant/plasmaman,
 		),
 	)
 
 	paycheck = PAYCHECK_ASSISTANT // Get a job. Job reassignment changes your paycheck now. Get over it.
 
-	department_for_prefs = /datum/job_department/assistant
+	departments_list = list(
+		/datum/job_department/assistant,
+	)
 
 	family_heirlooms = list(/obj/item/storage/toolbox/mechanical/old/heirloom, /obj/item/clothing/gloves/cut/heirloom)
 
@@ -51,18 +54,6 @@ Assistant
 /datum/outfit/job/assistant/pre_equip(mob/living/carbon/human/target)
 	..()
 	give_jumpsuit(target)
-
-/datum/outfit/job/assistant/plasmaman
-	name = "Assistant (Plasmaman)"
-	uniform = /obj/item/clothing/under/plasmaman
-	gloves = /obj/item/clothing/gloves/color/plasmaman
-	head = /obj/item/clothing/head/helmet/space/plasmaman
-	mask = /obj/item/clothing/mask/breath
-	r_hand = /obj/item/tank/internals/plasmaman/belt/full
-
-/datum/outfit/job/assistant/plasmaman/pre_equip(mob/living/carbon/human/target)
-	uniform = /obj/item/clothing/under/plasmaman
-	return
 
 /datum/outfit/job/assistant/proc/give_jumpsuit(mob/living/carbon/human/target)
 	if(uniform != initial(uniform)) //Loadout editted, let them have what the new uniform is.

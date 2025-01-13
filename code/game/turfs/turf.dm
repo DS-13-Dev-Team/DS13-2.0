@@ -117,8 +117,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 
 	// by default, vis_contents is inherited from the turf that was here before
 	if(length(vis_contents))
-		vis_contents.len = 0
-
+		cut_viscontents()
 	assemble_baseturfs()
 
 	if(length(contents))
@@ -133,12 +132,9 @@ GLOBAL_LIST_EMPTY(station_turfs)
 
 	QUEUE_SMOOTH(src)
 
-	// visibilityChanged() will never hit any path with side effects during mapload
-	if (!mapload)
-		visibilityChanged()
-		if(length(contents))
-			for(var/atom/movable/AM as anything in src)
-				Entered(AM, null)
+	if (!mapload && length(contents))
+		for(var/atom/movable/AM as anything in src)
+			Entered(AM, null)
 
 	var/area/our_area = loc
 	if(!our_area.luminosity && always_lit) //Only provide your own lighting if the area doesn't for you
@@ -147,7 +143,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	if (z_flags & Z_MIMIC_BELOW)
 		setup_zmimic(mapload)
 
-	if (light_power && light_outer_range)
+	if (light_power && light_outer_range && light_system == COMPLEX_LIGHT)
 		update_light()
 
 	if (opacity)
@@ -180,8 +176,8 @@ GLOBAL_LIST_EMPTY(station_turfs)
 			qdel(A)
 		return
 
-	visibilityChanged()
-	QDEL_LIST(blueprint_data)
+	if(blueprint_data)
+		QDEL_LIST(blueprint_data)
 	initialized = FALSE
 
 	///ZAS THINGS
@@ -198,7 +194,8 @@ GLOBAL_LIST_EMPTY(station_turfs)
 		GLOB.station_turfs += src
 	#endif
 
-	vis_contents.len = 0
+	if(length(vis_contents))
+		cut_viscontents()
 
 /// WARNING WARNING
 /// Turfs DO NOT lose their signals when they get replaced, REMEMBER THIS
@@ -690,19 +687,20 @@ GLOBAL_LIST_EMPTY(station_turfs)
  * Returns adjacent turfs to this turf that are reachable, in all cardinal directions
  *
  * Arguments:
- * * caller: The movable, if one exists, being used for mobility checks to see what tiles it can reach
+ * * invoker: The movable, if one exists, being used for mobility checks to see what tiles it can reach
  * * ID: An ID card that decides if we can gain access to doors that would otherwise block a turf
  * * simulated_only: Do we only worry about turfs with simulated atmos, most notably things that aren't space?
  * * no_id: When true, doors with public access will count as impassible
 */
-/turf/proc/reachableAdjacentTurfs(atom/movable/caller, ID, simulated_only, no_id = FALSE)
+/turf/proc/reachableAdjacentTurfs(atom/movable/invoker, list/access, simulated_only, no_id = FALSE)
 	. = list()
 
+	var/datum/can_pass_info/pass_info = new(invoker, access, no_id)
 	for(var/iter_dir in GLOB.cardinals)
 		var/turf/turf_to_check = get_step(src,iter_dir)
 		if(!turf_to_check || (simulated_only && isspaceturf(turf_to_check)))
 			continue
-		if(turf_to_check.density || LinkBlockedWithAccess(turf_to_check, caller, ID, no_id = no_id))
+		if(turf_to_check.density || LinkBlockedWithAccess(turf_to_check, pass_info))
 			continue
 		. += turf_to_check
 
@@ -714,6 +712,15 @@ GLOBAL_LIST_EMPTY(station_turfs)
 
 /turf/proc/TakeTemperature(temp)
 	temperature += temp
+
+/// Sets underfloor accessibility
+/turf/proc/update_underfloor_accessibility()
+	underfloor_accessibility = initial(underfloor_accessibility)
+	if(underfloor_accessibility == UNDERFLOOR_HIDDEN)
+		return
+
+	if(locate(/obj/structure/overfloor_catwalk) in src)
+		underfloor_accessibility = UNDERFLOOR_INTERACTABLE
 
 /turf/proc/is_below_sound_pressure()
 	var/datum/gas_mixture/GM = unsafe_return_air()

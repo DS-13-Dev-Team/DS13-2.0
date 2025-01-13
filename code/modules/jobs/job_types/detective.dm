@@ -6,7 +6,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "nobody"
-	selection_color = "#22201e"
 	minimal_player_age = 7
 	exp_requirements = 300
 	exp_required_type = EXP_TYPE_CREW
@@ -23,16 +22,14 @@
 			SPECIES_HUMAN = /datum/outfit/job/detective,
 			SPECIES_TESHARI = /datum/outfit/job/detective,
 			SPECIES_VOX = /datum/outfit/job/detective,
-			SPECIES_PLASMAMAN = /datum/outfit/job/detective/plasmaman,
 		),
 	)
 
 	departments_list = list(
 		/datum/job_department/service,
-		)
+	)
 
 	paycheck = PAYCHECK_MEDIUM
-	paycheck_department = ACCOUNT_STATION_MASTER
 
 	liver_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
 
@@ -73,16 +70,6 @@
 		/obj/item/gun/ballistic/revolver/detective,
 		)
 
-
-/datum/outfit/job/detective/plasmaman
-	name = JOB_DETECTIVE + " (Plasmaman)"
-
-	uniform = /obj/item/clothing/under/plasmaman/enviroslacks
-	gloves = /obj/item/clothing/gloves/color/plasmaman/white
-	head = /obj/item/clothing/head/helmet/space/plasmaman/white
-	mask = /obj/item/clothing/mask/breath
-	r_hand = /obj/item/tank/internals/plasmaman/belt/full
-
 /datum/outfit/job/detective/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	var/obj/item/clothing/mask/cigarette/cig = H.wear_mask
@@ -100,10 +87,3 @@
 	gloves = /obj/item/clothing/gloves/color/latex
 	head = /obj/item/clothing/head/flatcap
 	shoes = /obj/item/clothing/shoes/laceup
-
-/datum/outfit/job/detective/forensic/plasmaman
-	name = "Forensic Technician (Plasmaman)"
-
-	uniform = /obj/item/clothing/under/plasmaman/enviroslacks
-	gloves = /obj/item/clothing/gloves/color/plasmaman/white
-	head = /obj/item/clothing/head/helmet/space/plasmaman/white

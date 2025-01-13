@@ -1,6 +1,7 @@
 /datum/employer
 	var/name = ""
 	var/short_name = ""
+	var/creator_info = ""
 
 /datum/employer/cec
 	name = "Concordance Extraction Corporation"
@@ -17,3 +18,4 @@
 /datum/employer/none
 	name = "None"
 	short_name = "None"
+	creator_info = "The lone wolf. Solumn wonderer. Average joe."

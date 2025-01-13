@@ -84,6 +84,8 @@
 	name = "crude plank barricade"
 	desc = "This space is blocked off by a crude assortment of planks."
 	icon_state = "woodenbarricade-old"
+	//Crude barricades should be over closed doors, but below shutters and blast doors
+	layer = ABOVE_OBJ_LAYER
 	drop_amount = 1
 	max_integrity = 50
 	proj_pass_rate = 65

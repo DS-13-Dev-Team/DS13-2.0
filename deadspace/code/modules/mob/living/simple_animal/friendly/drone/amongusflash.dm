@@ -7,7 +7,7 @@
 	picked = TRUE
 	health = 120
 	maxHealth = 120
-	speed = -1
+	move_delay_modifier = -1
 	initial_language_holder = /datum/language_holder/synthetic
 	laws = \
 	"1. Sus.\n"

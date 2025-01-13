@@ -16,6 +16,9 @@
 	liked_food = NONE
 	disliked_food = NONE
 	toxic_food = NONE
+	//Heat and cold does not traditionally affect necros, but fire can still hurt them
+	heat_discomfort_level = INFINITY
+	cold_discomfort_level = -(INFINITY)
 	///We don't process reagents
 	reagent_flags = NONE
 	no_equip = list(
@@ -97,14 +100,6 @@
 
 /datum/species/necromorph/random_name(gender,unique,lastname)
 	return "[name] [rand(1, 999)]"
-
-/datum/species/necromorph/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/necromorph/H, forced = FALSE, spread_damage = FALSE, sharpness = NONE, attack_direction = null)
-	if(H.dodge_shield > 0)
-		// Calculate amount of the damage that was blocked by the shield
-		var/dodged_damage = min(H.dodge_shield, damage, damage * (100 - blocked) / 100)
-		H.reduce_shield(dodged_damage)
-		blocked += (dodged_damage / damage) * 100
-	return ..()
 
 //Does animations for regenerating a limb
 /datum/species/necromorph/proc/regenerate_limb(mob/living/carbon/human/necromorph/H, limb, duration)

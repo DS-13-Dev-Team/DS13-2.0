@@ -50,10 +50,6 @@
 	dust_anim = "dust-m"
 	gib_anim = "gibbed-m"
 
-	payday_modifier = 1.5
-
-
-
 /datum/species/monkey/random_name(gender,unique,lastname)
 	var/randname = "monkey ([rand(1,999)])"
 
@@ -87,18 +83,6 @@
 		'sound/creatures/monkey/monkey_screech_5.ogg',
 		'sound/creatures/monkey/monkey_screech_6.ogg',
 		'sound/creatures/monkey/monkey_screech_7.ogg',
-	)
-
-/datum/species/monkey/get_species_description()
-	return "Monkeys are a type of primate that exist between humans and animals on the evolutionary chain. \
-		Every year, on Monkey Day, Nanotrasen shows their respect for the little guys by allowing them to roam the station freely."
-
-/datum/species/monkey/get_species_lore()
-	return list(
-		"Monkeys are commonly used as test subjects on board Space Station Thirteen. \
-		But what if... for one day... the Monkeys were allowed to be the scientists? \
-		What experiments would they come up it? Would they (stereotypically) be related to bananas somehow? \
-		There's only one way to find out.",
 	)
 
 /datum/species/monkey/create_pref_unique_perks()
