@@ -16,6 +16,9 @@
 	liked_food = NONE
 	disliked_food = NONE
 	toxic_food = NONE
+	//Heat and cold does not traditionally affect necros, but fire can still hurt them
+	heat_discomfort_level = INFINITY
+	cold_discomfort_level = -(INFINITY)
 	///We don't process reagents
 	reagent_flags = NONE
 	no_equip = list(

@@ -132,7 +132,7 @@
 	var/adjacent = get_dist(user, src) <= 1
 	if(stat != CONSCIOUS || (HAS_TRAIT(src, TRAIT_FAKEDEATH)))
 		if(!adjacent)
-			. += span_alert("[t_He] is not moving.")
+			. += span_alert("[t_He] [t_is] not moving.")
 		else
 			if(stat == UNCONSCIOUS && !HAS_TRAIT(src, TRAIT_FAKEDEATH))
 				. += span_notice("[t_He] [t_is] unconsious.")
