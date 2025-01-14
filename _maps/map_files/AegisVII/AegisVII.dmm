@@ -2595,7 +2595,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "3"
 	},
-/obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/iron/ported/lino,
 /area/station/service/chapel/funeral)
 "bqt" = (
 /obj/machinery/light/directional/south,
@@ -2854,6 +2854,7 @@
 "byk" = (
 /obj/effect/mob_spawn/corpse/human/miner,
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/plating,
 /area/aegis/mining)
 "byl" = (
 /obj/machinery/door/poddoor/shutters{
@@ -2951,12 +2952,6 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/commons/storage/primary)
-"bBw" = (
-/obj/machinery/door/airlock{
-	name = "Bathroom"
-	},
-/turf/closed/wall,
-/area/station/commons/dorms/barracks/female)
 "bBH" = (
 /obj/structure/chair{
 	dir = 8
@@ -3655,6 +3650,7 @@
 "bQD" = (
 /obj/effect/landmark/pestspawn,
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/plating,
 /area/aegis/mining)
 "bQI" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
@@ -4188,7 +4184,8 @@
 /obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
-/obj/structure/overfloor_catwalk/iron_dark,
+/obj/structure/lattice,
+/turf/open/openspace,
 /area/aegis/surface)
 "cef" = (
 /obj/effect/landmark{
@@ -8320,6 +8317,7 @@
 	icon_state = "9"
 	},
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/openspace,
 /area/station/service/chapel/funeral)
 "enr" = (
 /obj/structure/cable/yellow{
@@ -8416,6 +8414,7 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/corpse/human/miner,
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/plating,
 /area/aegis/mining)
 "epL" = (
 /obj/structure/table,
@@ -10377,6 +10376,7 @@
 /obj/effect/spawner/random/vending/snackvend,
 /obj/machinery/light/small/directional/east,
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/plating,
 /area/aegis/mining)
 "fto" = (
 /obj/effect/turf_decal/box,
@@ -12369,6 +12369,7 @@
 	pixel_x = -11
 	},
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/openspace,
 /area/station/service/chapel/funeral)
 "gBT" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -13319,7 +13320,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "12"
 	},
-/obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/plating,
 /area/station/maintenance/starboard/central)
 "gUV" = (
 /obj/machinery/door/airlock{
@@ -13840,6 +13841,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/deadspace/random/maint_center,
 /area/station/security/checkpoint/customs)
 "hhr" = (
 /turf/closed/wall,
@@ -15727,6 +15729,7 @@
 /area/station/command/heads_quarters/hos)
 "ijc" = (
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/plating,
 /area/aegis/mining)
 "ijj" = (
 /obj/structure/table,
@@ -15770,12 +15773,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
-"ike" = (
-/obj/machinery/door/airlock{
-	name = "Bathroom"
-	},
-/turf/closed/wall,
-/area/station/commons/dorms/barracks/male)
 "ikn" = (
 /obj/machinery/atmospherics/pipe/bridge_pipe/yellow/visible,
 /obj/machinery/atmospherics/pipe/smart/simple/pink/visible{
@@ -17921,7 +17918,7 @@
 /obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
-/obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/openspace,
 /area/aegis/surface)
 "jnF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -18210,6 +18207,7 @@
 "juq" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/deadspace/grater,
 /area/aegis/mining)
 "juE" = (
 /obj/effect/decal/cleanable/generic,
@@ -22267,6 +22265,7 @@
 	icon_state = "12"
 	},
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/deadspace/random/maint_center,
 /area/station/security/checkpoint/customs)
 "lwY" = (
 /obj/machinery/power/apc/auto_name/directional/south,
@@ -26270,6 +26269,7 @@
 "nCB" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/plating,
 /area/aegis/mining)
 "nCH" = (
 /obj/structure/closet/firecloset,
@@ -26481,6 +26481,7 @@
 	icon_state = "2"
 	},
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/deadspace/random/maint_center,
 /area/station/security/checkpoint/customs)
 "nHr" = (
 /turf/open/floor/deadspace/random/slides{
@@ -31992,12 +31993,6 @@
 	},
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/cargo/sorting)
-"qqh" = (
-/obj/machinery/conveyor{
-	id = "Storage Upper"
-	},
-/turf/open/floor/plating,
-/area/aegis/surface)
 "qqt" = (
 /obj/structure/closet/firecloset,
 /obj/effect/turf_decal/bot,
@@ -35085,6 +35080,7 @@
 "rZt" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/floor/deadspace/grater,
 /area/aegis/mining)
 "rZF" = (
 /obj/machinery/light/small/directional/north,
@@ -38502,6 +38498,7 @@
 	icon_state = "6"
 	},
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/openspace,
 /area/station/service/chapel/funeral)
 "tPR" = (
 /obj/item/clothing/suit/xenos,
@@ -40961,6 +40958,7 @@
 /obj/item/reagent_containers/spray/cleaner,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/openspace,
 /area/station/service/chapel/funeral)
 "vfU" = (
 /obj/structure/chair/stool/bar/directional/north,
@@ -44293,11 +44291,10 @@
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/engineering/main)
 "wOs" = (
-/obj/structure/lattice,
 /obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
-/turf/open/floor/plating,
+/turf/open/misc/asteroid,
 /area/aegis/surface)
 "wOy" = (
 /obj/structure/table,
@@ -46801,6 +46798,7 @@
 	icon_state = "2"
 	},
 /obj/structure/overfloor_catwalk/iron_dark,
+/turf/open/openspace,
 /area/station/service/chapel/funeral)
 "xXl" = (
 /obj/machinery/door/window/left/directional/west{
@@ -75286,7 +75284,7 @@ pnM
 dBD
 dBD
 dBD
-dBD
+qjS
 dBD
 dBD
 dBD
@@ -75608,7 +75606,7 @@ dBD
 dBD
 dBD
 dBD
-kCR
+qjS
 kCR
 kCR
 kCR
@@ -75930,7 +75928,7 @@ kCR
 kCR
 kCR
 kCR
-kCR
+qjS
 kCR
 kCR
 kCR
@@ -77186,7 +77184,7 @@ kCR
 kCR
 kCR
 kCR
-kCR
+qjS
 kCR
 kCR
 kCR
@@ -80518,9 +80516,9 @@ rMR
 mzN
 eMD
 bJB
-cvV
-cvV
-cvV
+mzN
+mzN
+mzN
 dfq
 dBD
 dBD
@@ -81581,7 +81579,7 @@ tBi
 eHz
 gqY
 rQa
-ike
+rBy
 uWf
 mkC
 uWf
@@ -82209,7 +82207,7 @@ uJn
 eHz
 rxH
 nEa
-bBw
+cUY
 piu
 rSh
 piu
@@ -106076,7 +106074,7 @@ kCR
 kCR
 dBD
 dBD
-xNw
+dBD
 dBD
 dBD
 dBD
@@ -106232,8 +106230,8 @@ kCR
 kCR
 xNw
 xNw
-xNw
-xNw
+dBD
+dBD
 dBD
 dBD
 dBD
@@ -107962,7 +107960,7 @@ jnE
 jnE
 jnE
 wOs
-qqh
+wOs
 nFQ
 dNu
 dNu
