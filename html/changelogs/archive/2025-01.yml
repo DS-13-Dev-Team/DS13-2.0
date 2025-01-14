@@ -6,3 +6,7 @@
   - qol: You can now use the Use In Hand keybind to wield/unwield paddles (Restoring
       old behavior).
   - bugfix: Fixed a bug relating to defibrillators and phone handsets.
+2025-01-14:
+  Kapu1178:
+  - tweak: Cyborgs spawn on the station.
+  - qol: AI can now see their own eye.
