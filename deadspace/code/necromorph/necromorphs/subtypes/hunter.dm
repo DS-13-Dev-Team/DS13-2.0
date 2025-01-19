@@ -52,6 +52,7 @@
 		/datum/action/cooldown/necro/swing/hunter,
 		// /datum/action/cooldown/necro/taunt/hunter,
 		/datum/action/cooldown/necro/regenerate/hunter,
+		/datum/action/innate/sense,
 		/datum/action/cooldown/necro/shout,
 	)
 	minimap_icon = "hunter"
