@@ -14,6 +14,7 @@
 
 	necro_spawn_atoms += src
 	AddComponent(AddComponent(/datum/component/seethrough, SEE_THROUGH_MAP_MARKER))
+	soundloop = new(src, FALSE)
 	START_PROCESSING(SSobj, src)
 
 /obj/structure/marker/Destroy()
@@ -31,6 +32,7 @@
 	marker_signals = null
 	QDEL_LIST(unwhole)
 	QDEL_NULL(markernet)
+	QDEL_NULL(soundloop)
 	.=..()
 
 /obj/structure/marker/update_icon_state()
@@ -113,6 +115,12 @@
 			ability.Grant(eye)
 	new /datum/corruption_node/atom/marker(src, src)
 	update_icon(UPDATE_ICON_STATE)
+	light_power = 1
+	light_inner_range = 2
+	light_outer_range = 10
+	light_color = "#EC3232"
+	update_light()
+	soundloop.start()
 
 /obj/structure/marker/can_see_marker()
 	return RANGE_TURFS(12, src)
