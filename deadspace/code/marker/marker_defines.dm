@@ -55,5 +55,5 @@ GLOBAL_LIST_EMPTY(necromorph_markers)
 	volume = 50
 	ignore_walls = FALSE
 	extra_range = 20
-	falloff_exponent = 10
-	falloff_distance = 6
+	falloff_exponent = 5
+	falloff_distance = 8
