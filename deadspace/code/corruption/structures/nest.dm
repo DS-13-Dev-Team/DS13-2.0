@@ -9,6 +9,10 @@
 	base_pixel_x = -16
 	pixel_y = -16
 	base_pixel_y = -16
+	light_power = 0.5
+	light_inner_range = 1
+	light_outer_range = 3
+	light_color = "#bcb10d"
 	///Type, not a reference
 	var/datum/necro_class/spawning_necromorph
 	var/biomass_spent = 0
