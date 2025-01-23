@@ -108,7 +108,7 @@
 /datum/reagent/medicine/inaprovaline/affect_blood(mob/living/carbon/C, removed)
 	APPLY_CHEM_EFFECT(C, CE_STABLE, 1)
 	APPLY_CHEM_EFFECT(C, CE_PAINKILLER, 40)
-	C.adjustBruteLoss(-0.5 * removed, updating_health = FALSE)
+	C.adjustBruteLoss(-2 * removed, updating_health = FALSE) //This is effectively 0.2 heal due to metab
 
 /datum/reagent/medicine/inaprovaline/overdose_start(mob/living/carbon/C)
 	C.add_movespeed_modifier(/datum/movespeed_modifier/inaprovaline)
@@ -120,9 +120,8 @@
 	. = ..()
 	if(prob(5))
 		C.set_slurring_if_lower(10 SECONDS)
-	if(prob(2))
-		C.drowsyness = max(C.drowsyness, 5)
-	C.adjustOrganLoss(ORGAN_SLOT_EYES, 1.5, updating_health = FALSE)
+	C.adjustOrganLoss(ORGAN_SLOT_EYES, 0.2, updating_health = FALSE)
+	APPLY_CHEM_EFFECT(C, CE_PAINKILLER, 80) //Im invincible! ...Why do I feel funny?
 
 /datum/reagent/medicine/bicaridine
 	name = "Bicaridine"
