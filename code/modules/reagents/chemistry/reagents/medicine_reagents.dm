@@ -122,7 +122,7 @@
 		C.set_slurring_if_lower(10 SECONDS)
 	if(prob(2))
 		C.drowsyness = max(C.drowsyness, 5)
-	C.adjustOrganLoss(ORGAN_SLOT_EYES, 2.5 * removed, updating_health = FALSE)
+	C.adjustOrganLoss(ORGAN_SLOT_EYES, 1.5, updating_health = FALSE)
 
 /datum/reagent/medicine/bicaridine
 	name = "Bicaridine"
