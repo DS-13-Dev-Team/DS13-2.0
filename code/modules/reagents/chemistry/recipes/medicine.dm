@@ -1,7 +1,7 @@
 
 /datum/chemical_reaction/inaprovaline
 	results = list(/datum/reagent/medicine/inaprovaline = 3)
-	required_reagents = list(/datum/reagent/acetone = 1, /datum/reagent/carbon = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/phenol = 1)
+	required_reagents = list(/datum/reagent/acetone = 1, /datum/reagent/carbon = 1, /datum/reagent/medicine/morphine = 1)
 
 /datum/chemical_reaction/dylovene
 	results = list(/datum/reagent/medicine/dylovene = 3)
