@@ -17,7 +17,10 @@
 		new /obj/structure/corruption(loc, node)
 	else
 		corrupt.set_master(node)
-
+		//Checks the area for idle corruption, and forces it to check it's surroundings again
+		for(var/obj/structure/corruption/spreader in range(3, corrupt))
+			if(spreader.state == 4) //4 is IDLE
+				spreader.update_dirs_to_spread()
 /obj/structure/necromorph/node/update_signals(atom/old_loc, turf/new_loc)
 	if(old_loc)
 		UnregisterSignal(old_loc, list(COMSIG_TURF_NECRO_UNCORRUPTED))
