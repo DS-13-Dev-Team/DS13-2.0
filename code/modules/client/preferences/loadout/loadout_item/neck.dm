@@ -80,4 +80,4 @@
 	path = /obj/item/clothing/neck/tie/horrible
 
 /datum/loadout_item/neck/link_scryer
-	path = /obj/item/clothing/neck/link_scryer
+	path = /obj/item/clothing/neck/link_scryer/loaded
