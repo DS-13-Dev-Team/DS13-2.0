@@ -10,3 +10,33 @@
   Kapu1178:
   - tweak: Cyborgs spawn on the station.
   - qol: AI can now see their own eye.
+2025-01-29:
+  MisterGrimm:
+  - rscadd: Added "Riot Control" armory where the empty security room by the Morgue
+      used to be
+  - qol: Sense overhauled to work better
+  - qol: Harvester and Maw switched to new sprites
+  - qol: Marker, Harvester, and Nests glow now
+  - qol: Marker has a spooky soundloop again
+  - qol: Necromorphs slowly heal brute on corruption again
+  - qol: Cysts check if a target is conscious before shooting, reducing necro friendly
+      fire.
+  - qol: Caltrop element checks for robotic bodytype now, instead of if the target
+      can feel pain
+  - balance: Base biomass income reduced from 0.5 to 0.3
+  - balance: Atmos objects no longer give biomass
+  - balance: Scry glow removed by popular vote
+  - balance: Inaprovaline partially buffed to 1.0 standards, added nasty OD to compensate
+  - balance: Morphine now required to make Inaprovaline
+  - balance: Inaprovaline OD reduced to 45 units
+  - balance: Laying bleed resistance increased to 50%
+  - bugfix: Necromorphs take damage again
+  - bugfix: Signals now delete themselves on player ghosting
+  - bugfix: Necro corruption no longer breaks when destroyed
+  - bugfix: Marker static hides runechat bubbles now
+  - bugfix: Necromorphs can no longer take objects out of storage containers
+  - bugfix: Duplicate Acetone recipe removed
+  - bugfix: Morphine & Acetone recipe conflict fixed
+  - bugfix: Rats no longer drop both a mob body and a edible rat at the same time
+  - bugfix: Too many map fixes to specify
+  - bugfix: Replaces modlink scryer in loadout with loaded version
