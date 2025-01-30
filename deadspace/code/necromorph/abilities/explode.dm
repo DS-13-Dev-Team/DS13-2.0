@@ -7,9 +7,9 @@
 ///If the exploder doesn't have the pustule they can't explode.
 ///This is nested into normal combat abilities so we don't have to define this proc in every single exploder variant ability
 /datum/action/cooldown/necro/proc/can_explode(/mob/living/carbon/human/necromorph/exploder/user)
-	var/mob/living/carbon/human/necromorph/exploder/user = owner
+	var/mob/living/carbon/human/necromorph/exploder/pustle = owner
 	.=FALSE
-	var/obj/item/bodypart/arm/left/PU = user.get_bodypart(BODY_ZONE_L_ARM)
+	var/obj/item/bodypart/arm/left/PU = pustle.get_bodypart(BODY_ZONE_L_ARM)
 	if(!PU || PU.is_stump)
 		return
 
