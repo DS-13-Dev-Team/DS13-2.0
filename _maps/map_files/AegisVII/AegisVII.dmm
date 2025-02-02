@@ -3993,6 +3993,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
+/obj/structure/cable/yellow{
+	icon_state = "9"
+	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/starboard)
 "bYZ" = (
@@ -8041,6 +8044,9 @@
 "eeL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable/yellow{
+	icon_state = "6"
+	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/starboard)
 "eeP" = (
@@ -11314,6 +11320,9 @@
 /turf/open/floor/deadspace/med/white_medsolo,
 /area/station/medical/exam_room)
 "fWG" = (
+/obj/structure/cable/yellow{
+	icon_state = "9"
+	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/starboard)
 "fWJ" = (
@@ -16313,7 +16322,6 @@
 /obj/item/food/grown/pumpkin{
 	pixel_y = 5
 	},
-/obj/machinery/camera/autoname/directional/east,
 /obj/structure/table/glass,
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -16639,7 +16647,8 @@
 /obj/item/taperecorder,
 /obj/machinery/camera/directional/east{
 	c_tag = "Interrogation room";
-	network = list("interrogation")
+	network = list("interrogation");
+	dir = 8
 	},
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/dark,
@@ -18248,6 +18257,9 @@
 "jvu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "12"
 	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/starboard)
@@ -25212,6 +25224,12 @@
 "mWg" = (
 /turf/closed/wall/r_wall,
 /area/station/science/robotics/mechbay)
+"mWt" = (
+/obj/structure/cable/yellow{
+	icon_state = "6"
+	},
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/starboard)
 "mWF" = (
 /obj/structure/closet/secure_closet/ds/warden,
 /obj/machinery/door/window/brigdoor{
@@ -26715,6 +26733,9 @@
 /area/aegis/hanger)
 "nNx" = (
 /obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable/yellow{
+	icon_state = "2"
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -28690,6 +28711,20 @@
 /obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden,
 /turf/open/floor/plating,
 /area/station/engineering/atmos/storage/gas)
+"oIz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable/yellow{
+	icon_state = "10"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "9"
+	},
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/starboard)
 "oIA" = (
 /obj/machinery/door/airlock/hydroponics/glass{
 	name = "Hydroponics";
@@ -32653,6 +32688,9 @@
 "qGa" = (
 /obj/machinery/seed_extractor,
 /obj/effect/turf_decal/stripes/line,
+/obj/machinery/camera/autoname/directional/east{
+	dir = 9
+	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/service/hydroponics)
 "qGn" = (
@@ -35459,6 +35497,9 @@
 /obj/structure/disposalpipe/junction/flip{
 	dir = 4
 	},
+/obj/structure/cable/yellow{
+	icon_state = "12"
+	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/starboard)
 "skz" = (
@@ -35563,6 +35604,15 @@
 	},
 /turf/open/floor/deadspace/random/maint_center,
 /area/station/security/courtroom)
+"smG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "12"
+	},
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/starboard)
 "smJ" = (
 /obj/structure/railing{
 	dir = 5
@@ -41573,6 +41623,9 @@
 /area/station/engineering/break_room)
 "vue" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable/yellow{
+	icon_state = "3"
+	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/starboard)
 "vul" = (
@@ -44538,6 +44591,12 @@
 /obj/machinery/chem_dispenser,
 /turf/open/floor/deadspace/grater,
 /area/aegis/surface)
+"wUf" = (
+/obj/structure/cable/yellow{
+	icon_state = "12"
+	},
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/starboard)
 "wUl" = (
 /obj/effect/spawner/structure/window/reinforced/grille,
 /turf/open/floor/plating,
@@ -96220,7 +96279,7 @@ tYr
 nZc
 eeL
 vue
-mtd
+oIz
 grX
 vSb
 lfA
@@ -96374,7 +96433,7 @@ lfA
 cLP
 vvF
 wdW
-fWG
+mWt
 fWG
 lfA
 lfA
@@ -96531,7 +96590,7 @@ lfA
 neT
 vvF
 dHF
-fWG
+wUf
 lfA
 lfA
 lfA
@@ -96688,7 +96747,7 @@ lfA
 jrD
 atG
 pUC
-fWG
+wUf
 lfA
 lfA
 nkf
@@ -96845,7 +96904,7 @@ wgy
 wgy
 qUH
 wgy
-sNF
+smG
 wZc
 lfA
 jDV
