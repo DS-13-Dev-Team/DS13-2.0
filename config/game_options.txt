@@ -6,7 +6,7 @@ DAMAGE_MULTIPLIER 1
 ## REVIVAL ###
 
 ## whether pod plants work or not
-REVIVAL_POD_PLANTS
+#REVIVAL_POD_PLANTS
 
 ## OOC DURING ROUND ###
 ## Comment this out if you want OOC to be automatically disabled during the round, it will be enabled during the lobby and after the round end results.
@@ -30,9 +30,9 @@ COMMENDATION_PERCENT_POLL 0.05
 ## To speed things up make the number negative, to slow things down, make the number positive.
 
 ## These modify the run/walk speed of all mobs before the mob-specific modifiers are applied.
-RUN_DELAY 4
-WALK_DELAY 6
-SPRINT_DELAY 2
+RUN_DELAY 3
+WALK_DELAY 4
+SPRINT_DELAY 2.4
 
 ## The variables below affect the movement of specific mob types. THIS AFFECTS ALL SUBTYPES OF THE TYPE YOU CHOOSE!
 ## Entries completely override all subtypes. Later entries have precedence over earlier entries.
