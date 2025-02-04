@@ -10,7 +10,8 @@
 
 	employers = list(
 		/datum/employer/cec,
-		/datum/employer/uni
+		/datum/employer/uni,
+		/datum/employer/none
 	)
 
 	outfits = list(

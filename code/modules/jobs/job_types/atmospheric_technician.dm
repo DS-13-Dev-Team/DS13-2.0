@@ -32,6 +32,7 @@
 		/datum/employer/cec,
 		/datum/employer/eg,
 		/datum/employer/uni,
+		/datum/employer/none
 	)
 
 	family_heirlooms = list(/obj/item/lighter, /obj/item/lighter/greyscale, /obj/item/storage/box/matches)

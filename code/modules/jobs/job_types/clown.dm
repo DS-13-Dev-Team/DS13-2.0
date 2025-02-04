@@ -13,6 +13,7 @@
 		/datum/employer/cec,
 		/datum/employer/eg,
 		/datum/employer/uni,
+		/datum/employer/none
 	)
 
 	alt_titles = list(JOB_CLOWN, "Mime")
