@@ -2932,7 +2932,6 @@
 /obj/item/shovel/spade,
 /obj/item/wrench,
 /obj/item/reagent_containers/glass/bucket,
-/obj/item/cultivator,
 /obj/item/wirecutters,
 /obj/item/crowbar,
 /turf/open/floor/deadspace/mono,
@@ -4191,13 +4190,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/engineering/engine_smes)
-"cdX" = (
-/obj/machinery/conveyor{
-	id = "Storage Upper"
-	},
-/obj/structure/lattice,
-/turf/open/openspace,
-/area/aegis/surface)
 "cef" = (
 /obj/effect/landmark{
 	name = "ShuttleRepairPart"
@@ -4604,7 +4596,6 @@
 /area/station/maintenance/starboard/aft)
 "cpd" = (
 /obj/structure/table/glass,
-/obj/item/secateurs,
 /turf/open/floor/deadspace/mono,
 /area/station/service/hydroponics)
 "cpg" = (
@@ -6393,6 +6384,17 @@
 	},
 /turf/open/floor/wood,
 /area/station/medical/psychology)
+"djp" = (
+/obj/machinery/computer/security/telescreen/interrogation{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/machinery/airalarm/directional/east,
+/turf/open/floor/iron/grimy,
+/area/station/security/interrogation)
 "djs" = (
 /turf/closed/wall,
 /area/station/service/kitchen)
@@ -13044,8 +13046,7 @@
 	pixel_x = 5;
 	pixel_y = -1
 	},
-/obj/machinery/light/small/directional/east,
-/obj/machinery/airalarm/directional/east,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/iron/grimy,
 /area/station/security/interrogation)
 "gQl" = (
@@ -16645,12 +16646,10 @@
 "iFn" = (
 /obj/structure/table,
 /obj/item/taperecorder,
-/obj/machinery/camera/directional/east{
+/obj/machinery/camera/motion/directional/west{
 	c_tag = "Interrogation room";
-	network = list("interrogation");
-	dir = 8
+	network = list("interrogation")
 	},
-/obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/interrogation)
 "iFr" = (
@@ -17926,11 +17925,10 @@
 /turf/open/misc/asteroid,
 /area/aegis/surface)
 "jnE" = (
-/obj/structure/lattice,
 /obj/machinery/conveyor{
 	id = "Storage Upper"
 	},
-/turf/open/openspace,
+/turf/open/floor/deadspace/grater,
 /area/aegis/surface)
 "jnF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -20036,9 +20034,7 @@
 "ktp" = (
 /obj/item/reagent_containers/glass/bucket,
 /obj/structure/rack,
-/obj/item/cultivator,
 /obj/item/shovel/spade,
-/obj/item/secateurs,
 /turf/open/floor/deadspace/mono,
 /area/station/service/hydroponics)
 "ktr" = (
@@ -20129,6 +20125,7 @@
 "kvH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/interrogation)
 "kvI" = (
@@ -21236,7 +21233,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/greater)
 "kYb" = (
-/obj/item/cultivator,
 /obj/item/crowbar,
 /obj/item/plant_analyzer,
 /obj/item/reagent_containers/glass/bucket,
@@ -27897,6 +27893,10 @@
 "opW" = (
 /turf/closed/wall,
 /area/station/maintenance/fore/greater)
+"oqi" = (
+/obj/item/stack/overfloor_catwalk/iron_dark,
+/turf/closed/mineral/random/aegis,
+/area/aegis/surface)
 "oqt" = (
 /obj/structure/table,
 /obj/machinery/telephone/research,
@@ -29433,7 +29433,6 @@
 /turf/open/floor/carpet/red,
 /area/station/service/chapel)
 "pab" = (
-/obj/item/cultivator,
 /obj/item/crowbar,
 /obj/item/plant_analyzer,
 /obj/item/reagent_containers/glass/bucket,
@@ -32688,9 +32687,7 @@
 "qGa" = (
 /obj/machinery/seed_extractor,
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/camera/autoname/directional/east{
-	dir = 9
-	},
+/obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/service/hydroponics)
 "qGn" = (
@@ -84529,7 +84526,7 @@ vkf
 dOG
 xhg
 jxd
-mWK
+djp
 sXb
 kLn
 twY
@@ -108021,9 +108018,9 @@ kBt
 wCj
 wYF
 rzx
-cdX
-cdX
-cdX
+jnE
+jnE
+jnE
 jnE
 jnE
 jnE
@@ -108781,7 +108778,7 @@ xNw
 xNw
 kCR
 dBD
-dBD
+oqi
 kCR
 kCR
 dBD
