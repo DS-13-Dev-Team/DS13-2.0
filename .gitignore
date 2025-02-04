@@ -216,5 +216,3 @@ codex.db
 codex.db-shm
 codex.db-wal
 config/admins.txt
-
-config/
