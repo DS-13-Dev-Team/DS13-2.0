@@ -1,0 +1,6 @@
+author: pugman899
+delete-after: true
+changes:
+  - bugfix: unwired APC
+  - bugfix: interrogation camera off wall and floating
+  - bugfix: botany camera off wall and floating
