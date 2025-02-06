@@ -436,11 +436,6 @@ SUBSYSTEM_DEF(job)
 	JobDebug("DO, Assigning Priority Positions: [length(dynamic_forced_occupations)]")
 	assign_priority_positions()
 
-	. = assign_captain()
-	if(!.)
-		SSticker.mode.setup_error += "Failed to assign captain. See JobDebug for more information."
-		return FALSE
-
 	//People who wants to be the overflow role, sure, go on.
 	JobDebug("DO, Running Overflow Check 1")
 	var/datum/job/overflow_datum = GetJobType(overflow_role)
@@ -981,44 +976,6 @@ SUBSYSTEM_DEF(job)
 		// Eligibility checks already carried out as part of the dynamic ruleset trim_candidates proc.area
 		// However no guarantee of game state between then and now, so don't skip eligibility checks on AssignRole.
 		AssignRole(new_player, GetJob(dynamic_forced_occupations[new_player]))
-
-/// Finds a captain first a foremost. Returns success or failure
-/datum/controller/subsystem/job/proc/assign_captain()
-
-	if(GLOB.is_debug_server && BYPASS_JOB_LIMITS_WHEN_DEBUGGING)
-		JobDebug("Captain not required due to debug status, skipping Assign Captain")
-		return TRUE
-
-	JobDebug("DO, Finding captain")
-	var/datum/job/captain_job = GetJobType(/datum/job/captain)
-	for(var/level in level_order)
-		var/list/candidates = FindOccupationCandidates(captain_job, level)
-		if(!candidates.len)
-			continue
-
-		var/mob/dead/new_player/candidate = pick(candidates)
-		// Eligibility checks done as part of FindOccupationCandidates.
-		if(AssignRole(candidate, captain_job, do_eligibility_checks = FALSE))
-			JobDebug("Assign Captain: Found captain.")
-			return TRUE
-
-	JobDebug("Assign Captain: Nobody signed up for captain. Pulling from users signed up for Command.")
-
-	// Okay nobody is signed up for captain, let's try something more drastic.
-	var/datum/job_department/management = get_department_type(/datum/job_department/command)
-	for(var/datum/job/management_job as anything in management.department_jobs)
-		for(var/level in level_order)
-			var/list/candidates = FindOccupationCandidates(management_job, level)
-			if(!candidates.len)
-				continue
-
-			for(var/mob/dead/new_player/candidate as anything in candidates)
-				if(AssignRole(candidate, captain_job))
-					JobDebug("Assign Captain: Found captain from pool of management roles.")
-					return TRUE
-
-	JobDebug("Assign Captain: Failed, no captain was found. DivideOccupations aborted.")
-	return FALSE
 
 /// Takes a job priority #define such as JP_LOW and gets its string representation for logging.
 /datum/controller/subsystem/job/proc/job_priority_level_to_string(priority)
