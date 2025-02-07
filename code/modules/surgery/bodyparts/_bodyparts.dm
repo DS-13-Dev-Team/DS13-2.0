@@ -1079,7 +1079,7 @@
 		cached_bleed_rate += 0.5
 
 	if(check_artery() & CHECKARTERY_SEVERED)
-		cached_bleed_rate += 4
+		cached_bleed_rate += 3
 
 	for(var/obj/item/embeddies in embedded_objects)
 		if(!embeddies.isEmbedHarmless())
