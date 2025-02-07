@@ -50,6 +50,6 @@
 	return TRUE
 
 /datum/action/cooldown/necro/psy/Activate(atom/target)
-	var/mob/camera/marker_signal/caller = owner
-	caller.change_psy_energy(-cost)
+	var/mob/camera/marker_signal/called = owner
+	called.change_psy_energy(-cost)
 	..()

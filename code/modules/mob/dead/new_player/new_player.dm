@@ -269,7 +269,6 @@
 /mob/dead/new_player/Move()
 	return 0
 
-
 /mob/dead/new_player/proc/close_spawn_windows()
 	src << browse(null, "window=playersetup")
 	src << browse(null, "window=latechoices") //closes late choices window (Hey numbnuts go make this tgui)
@@ -290,7 +289,7 @@
 	var/write_pref = FALSE
 	for(var/job_name in job_priority)
 		var/datum/job/J = SSjob.GetJob(job_name)
-		if(!(employer_path in J.employers))
+		if(isnull(J) || !(employer_path in J.employers))
 			job_priority -= job_name
 			write_pref = TRUE
 

@@ -39,47 +39,32 @@ Include =
 Exclude = AUTOADMIN
 Edit =
 
-Name = Moderator
-Include = ADMIN
+Name = Trial Staff
+Include = @ ADMIN SPAWN VAREDIT BAN
 Exclude =
 Edit =
 
-Name = Admin Candidate
+Name = Staff
+Include = @ STEALTH SOUND DEBUG POSSESS POLL BUILD SERVER FUN
+Exclude =
+Edit =
+
+Name = Dev Staff
 Include = @
 Exclude =
 Edit =
 
-Name = Trial Admin
-Include = @ SPAWN VAREDIT BAN
+Name = Head Staff
+Include = @ DBRANKS PERMISSIONS
 Exclude =
 Edit =
-
-Name = Badmin
-Include = @ POSSESS POLL BUILD SERVER FUN
-Exclude =
-Edit =
-
-Name = Game Admin
-Include = @ STEALTH SOUND DEBUG
-Exclude =
-Edit =
-
-Name = Game Master
-Include = EVERYTHING
-Exclude =
-Edit = EVERYTHING
-
-Name = Lazy Master
-Include = EVERYTHING
-Exclude = AUTOADMIN
-Edit = EVERYTHING
 
 Name = Host
 Include = EVERYTHING
 Exclude =
 Edit = EVERYTHING
 
-Name = Coder
-Include = DEBUG VAREDIT SERVER SPAWN POLL
-Exclude = AUTOADMIN
-Edit =
+Name = External Support
+Include = EVERYTHING
+Exclude =
+Edit = EVERYTHING

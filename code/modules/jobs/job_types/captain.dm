@@ -21,12 +21,12 @@
 		/datum/employer/cec,
 		/datum/employer/eg,
 		/datum/employer/uni,
+		/datum/employer/none
 	)
 
 	outfits = list(
 		"Default" = list(
 			SPECIES_HUMAN = /datum/outfit/job/captain,
-			SPECIES_PLASMAMAN = /datum/outfit/job/captain/plasmaman,
 		),
 	)
 
@@ -50,7 +50,7 @@
 		/obj/item/toy/captainsaid/collector = 20
 	)
 
-	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
+	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 	rpg_title = "Star Duke"
 
 	voice_of_god_power = 1.4 //Command staff has authority
@@ -108,15 +108,6 @@
 	if(!celestial_charter)
 		return
 	celestial_charter.name_type = special_charter
-
-/datum/outfit/job/captain/plasmaman
-	name = "Captain (Plasmaman)"
-
-	uniform = /obj/item/clothing/under/plasmaman/captain
-	gloves = /obj/item/clothing/gloves/color/captain
-	head = /obj/item/clothing/head/helmet/space/plasmaman/captain
-	mask = /obj/item/clothing/mask/breath
-	r_hand = /obj/item/tank/internals/plasmaman/belt/full
 
 /datum/outfit/job/captain/mod
 	name = "Captain (MODsuit)"

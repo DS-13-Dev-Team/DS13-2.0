@@ -35,12 +35,15 @@
 			continue
 
 		var/datum/plant/plant_datum = new path
-		var/species= plant_datum.species
+		var/species = plant_datum.species
 		var/icon_file = plant_datum.growing_icon
 
 		if(isnull(plant_datum.growing_icon))
 			TEST_FAIL("[plant_datum.type] has no growing icon.")
 			continue
+
+		if(isnull(species))
+			TEST_FAIL("[plant_datum.type] has no species.")
 
 		if(!icon_exists(icon_file, plant_datum.icon_dead))
 			TEST_FAIL("[plant_datum.type] is missing a dead state.")

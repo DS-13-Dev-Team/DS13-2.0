@@ -11,11 +11,11 @@
 	marker_flags = SIGNAL_ABILITY_POST_ACTIVATION
 
 /datum/action/cooldown/necro/psy/scry/Activate(atom/target)
-	var/mob/camera/marker_signal/caller = owner
+	var/mob/camera/marker_signal/called = owner
 	var/turf/target_turf = get_turf(target)
 	if(target_turf)
 		..()
-		new /obj/effect/temp_visual/scry(target_turf, caller.marker.markernet)
+		new /obj/effect/temp_visual/scry(target_turf, called.marker.markernet)
 		return TRUE
 
 /obj/effect/temp_visual/scry
@@ -43,5 +43,5 @@
 
 //This just is a roundabout way for the master signal to add to the survivor list mid-round
 /datum/action/cooldown/necro/psy/sense/Activate(atom/target)
-	var/mob/camera/marker_signal/caller = owner
-	caller.marker.sense_survivors()
+	var/mob/camera/marker_signal/called = owner
+	called.marker.sense_survivors()

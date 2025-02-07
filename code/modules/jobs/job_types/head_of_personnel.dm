@@ -22,12 +22,12 @@
 		/datum/employer/cec,
 		/datum/employer/eg,
 		/datum/employer/uni,
+		/datum/employer/none
 	)
 
 	outfits = list(
 		"Default" = list(
 			SPECIES_HUMAN = /datum/outfit/job/hop,
-			SPECIES_PLASMAMAN = /datum/outfit/job/hop/plasmaman,
 		),
 	)
 
@@ -38,7 +38,6 @@
 
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_STATION_MASTER
-	bounty_types = CIV_JOB_RANDOM
 
 	liver_traits = list(TRAIT_ROYAL_METABOLISM)
 
@@ -49,7 +48,7 @@
 
 	family_heirlooms = list(/obj/item/reagent_containers/food/drinks/trophy/silver_cup)
 	rpg_title = "Guild Questgiver"
-	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
+	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 
 	voice_of_god_power = 1.4 //Command staff has authority
 
@@ -79,15 +78,6 @@
 		/obj/item/gun/energy/e_gun,
 		/obj/item/stamp/hop,
 		)
-
-/datum/outfit/job/hop/plasmaman
-	name = "Head of Personnel (Plasmaman)"
-
-	uniform = /obj/item/clothing/under/plasmaman/head_of_personnel
-	gloves = /obj/item/clothing/gloves/color/plasmaman/head_of_personnel
-	head = /obj/item/clothing/head/helmet/space/plasmaman/head_of_personnel
-	mask = /obj/item/clothing/mask/breath
-	r_hand = /obj/item/tank/internals/plasmaman/belt/full
 
 /datum/outfit/job/hop/pre_equip(mob/living/carbon/human/H)
 	..()

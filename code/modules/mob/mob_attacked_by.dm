@@ -10,8 +10,7 @@
 		// Can't hit a bodypart that doesn't exist!
 		var/obj/item/bodypart/affecting = get_bodypart(target_zone)
 		if (!affecting || affecting.is_stump)
-			to_chat(attacker, span_danger("[p_they(TRUE)] do not have a [parse_zone(target_zone)]!"))
-			return MOB_ATTACKEDBY_FAIL
+			target_zone = hit_zone
 
 		// If we aren't being hit by ourself, roll for accuracy.
 		if(attacker != src)

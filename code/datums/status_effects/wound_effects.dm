@@ -121,7 +121,7 @@
 	if(leg.bodypart_flags & BP_NO_PAIN)
 		return
 
-	owner.apply_pain(40, leg, "A terrible pain shoots through your [leg.plaintext_zone].", TRUE)
+	owner.apply_pain(30, leg, "A terrible pain shoots through your [leg.plaintext_zone].", TRUE)
 
 /datum/status_effect/limp/proc/update_limp()
 	SIGNAL_HANDLER
