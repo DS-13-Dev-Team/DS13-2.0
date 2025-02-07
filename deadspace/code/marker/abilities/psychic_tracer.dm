@@ -13,9 +13,9 @@
 	return ..()
 
 /datum/action/cooldown/necro/psy/psychic_tracer/Activate(mob/living/target)
-	var/mob/camera/marker_signal/caller = owner
+	var/mob/camera/marker_signal/called = owner
 	..()
-	var/datum/markernet/visualnet = caller.marker.markernet
+	var/datum/markernet/visualnet = called.marker.markernet
 	visualnet.addVisionSource(target, VISION_SOURCE_VIEW, TRUE)
 	addtimer(CALLBACK(visualnet, /datum/markernet/proc/removeVisionSource, target), 5 MINUTES, TIMER_UNIQUE|TIMER_OVERRIDE)
 	return TRUE

@@ -577,7 +577,6 @@
 			if(spillover > 0)
 				burn = max(burn - spillover, 0)
 
-	var/can_dismember = modifiers & DAMAGE_CAN_DISMEMBER
 	var/can_jostle_bones = modifiers & DAMAGE_CAN_JOSTLE_BONES
 	var/can_break_bones = modifiers & DAMAGE_CAN_FRACTURE
 
@@ -585,6 +584,7 @@
 	/*
 	// DISMEMBERMENT - Doesn't happen during unit tests due to fucking up damage.
 	*/
+	var/can_dismember = modifiers & DAMAGE_CAN_DISMEMBER
 	if(owner && can_dismember)
 		var/total_damage = brute_dam + burn_dam + burn + brute + spillover
 		if(total_damage >= max_damage * LIMB_DISMEMBERMENT_PERCENT)
