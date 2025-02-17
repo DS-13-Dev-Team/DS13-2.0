@@ -128,4 +128,3 @@
 	ears = /obj/item/radio/headset/headset_srv
 
 	chameleon_extras = /obj/item/stamp/chap
-	skillchips = list(/obj/item/skillchip/entrails_reader)
