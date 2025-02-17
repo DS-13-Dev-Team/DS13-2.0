@@ -1,0 +1,15 @@
+2025-02-06:
+  pugman899:
+  - bugfix: unwired APC
+  - bugfix: interrogation camera off wall and floating
+  - bugfix: botany camera off wall and floating
+2025-02-08:
+  MisterGrimm:
+  - rscdel: The round no longer checks for a captain before the round starts
+  - qol: Gave the "none" employer option to most jobs
+  - balance: Reduced artery and general bloodloss by 25% each
+  - balance: Slightly reduced some pain effects, shouldn't be that noticable
+  - bugfix: Head outfits are back to DS version
+  - bugfix: Bloody Runes no longer give nonexistent blood DNA trail for forensics
+  - bugfix: Targeting a limb that does not exist no longer prevents you from attacking
+      it
