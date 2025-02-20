@@ -4865,6 +4865,8 @@
 #include "deadspace\code\game\sprawl_areas.dm"
 #include "deadspace\code\game\sprawl_holodisks.dm"
 #include "deadspace\code\game\turf.dm"
+#include "deadspace\code\game\gamemodes\antagonist_selector\earthgov.dm"
+#include "deadspace\code\game\gamemodes\antagonist_selector\zealot.dm"
 #include "deadspace\code\game\gamemodes\containment\containment.dm"
 #include "deadspace\code\game\machinery\doors.dm"
 #include "deadspace\code\game\objects\items\shard.dm"
