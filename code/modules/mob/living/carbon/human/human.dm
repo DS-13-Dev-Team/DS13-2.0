@@ -92,6 +92,12 @@
 			. += "Chemical Storage: [changeling.chem_charges]/[changeling.total_chem_storage]"
 			. += "Absorbed DNA: [changeling.absorbed_count]"
 
+		var/datum/antagonist/vampire/vampire = mind.has_antag_datum(/datum/antagonist/vampire)
+		if(vampire)
+			. += ""
+			. += "State: [vampire.get_thirst_stage_string()]"
+			. += "Thirst: [vampire.thirst_level.has_points()]/[vampire.thirst_level.get_max_points()]"
+
 /mob/living/carbon/human/reset_perspective(atom/new_eye, force_reset = FALSE)
 	if(dna?.species?.prevent_perspective_change && !force_reset) // This is in case a species needs to prevent perspective changes in certain cases, like Dullahans preventing perspective changes when they're looking through their head.
 		update_fullscreen()
@@ -815,7 +821,11 @@
 		if(HM.quality != POSITIVE)
 			dna.remove_mutation(HM.name)
 	set_coretemperature(get_body_temp_normal(apply_change=FALSE))
-	return ..()
+
+	. = ..()
+	for(var/obj/item/bodypart/BP as anything in bodyparts)
+		for(var/datum/wound/W as anything in BP.wounds)
+			qdel(W)
 
 /mob/living/carbon/human/vomit(lost_nutrition = 10, blood = FALSE, stun = TRUE, distance = 1, message = TRUE, vomit_type = VOMIT_TOXIC, harm = TRUE, force = FALSE, purge_ratio = 0.1)
 	if(blood && (NOBLOOD in dna.species.species_traits) && !HAS_TRAIT(src, TRAIT_TOXINLOVER))
@@ -1218,8 +1228,8 @@
 		)
 	else
 		visible_message(
-			span_warning("The [W.desc] on [src]'s [W.parent.plaintext_zone] widens with a nasty ripping noise."),
-			span_warning("The [W.desc] on your [W.parent.plaintext_zone] widens with a nasty ripping noise."),
+			span_warning("The [W.desc] on [src]'s [W.wound_location()] widens with a nasty ripping noise."),
+			span_warning("The [W.desc] on your [W.wound_location()] widens with a nasty ripping noise."),
 			span_hear("You hear a nasty ripping noise, as if flesh is being torn apart."),
 			COMBAT_MESSAGE_RANGE,
 		)

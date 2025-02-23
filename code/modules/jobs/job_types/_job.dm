@@ -112,6 +112,9 @@ GLOBAL_LIST_INIT(job_display_order, list(
 	///Lazylist of traits added to the liver of the mob assigned this job (used for the classic "cops heal from donuts" reaction, among others)
 	var/list/liver_traits = null
 
+	/// Lazylist of language types to grant.
+	var/list/languages = null
+
 	/// Goodies that can be received via the mail system.
 	// this is a weighted list.
 	/// Keep the _job definition for this empty and use /obj/item/mail to define general gifts.
@@ -205,6 +208,9 @@ GLOBAL_LIST_INIT(job_display_order, list(
 	if(liver)
 		for(var/trait in liver_traits)
 			ADD_TRAIT(liver, trait, JOB_TRAIT)
+
+	for(var/language_path in languages)
+		spawned.grant_language(language_path, source = LANGUAGE_MIND)
 
 	if(!ishuman(spawned))
 		return
@@ -318,10 +324,10 @@ GLOBAL_LIST_INIT(job_display_order, list(
 	uniform = /obj/item/clothing/under/color/grey
 	id = /obj/item/card/id/advanced
 	ears = /obj/item/radio/headset
-	belt = /obj/item/modular_computer/tablet/pda
 	back = /obj/item/storage/backpack
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	box = /obj/item/storage/box/survival
+	belt = /obj/item/modular_computer/tablet/pda
 
 	id_in_wallet = TRUE
 	preload = TRUE // These are used by the prefs ui, and also just kinda could use the extra help at roundstart
@@ -606,9 +612,15 @@ GLOBAL_LIST_INIT(job_display_order, list(
 
 /// Called by SSjob when a player joins the round as this job.
 /datum/job/proc/on_join_message(client/C, job_title_pref)
-	var/job_header = "<u><span style='font-size: 200%'>You are the <span style='color:[selection_color]'>[job_title_pref]</span></span></u>."
+	var/completed_title = "<span style='color:[selection_color]'>[job_title_pref]</span>"
+	var/prefix
+	if(spawn_positions == 1)
+		prefix = "the"
+	else
+		prefix = (uppertext(title[1]) in GLOB.vowels_upper) ? "an" : "a"
 
-	var/job_info = list("<br><br>[description]")
+	var/job_header = "<div style='font-size: 200%;text-align: center'>You are [prefix] [completed_title]</div>"
+	var/job_info = list("<hr>[description]")
 
 	if(supervisors)
 		job_info += "<br><br>As the <span style='color:[selection_color]'>[job_title_pref == title ? job_title_pref : "[job_title_pref] ([title])"]</span> \

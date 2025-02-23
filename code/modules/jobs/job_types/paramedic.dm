@@ -54,10 +54,10 @@
 	id_trim = /datum/id_trim/job/paramedic
 	uniform = /obj/item/clothing/under/rank/medical/ds_med
 	suit = /obj/item/clothing/suit/toggle/labcoat/paramedic
-	suit_store = /obj/item/flashlight/pen/paramedic
 	backpack_contents = list(
 		/obj/item/roller = 1,
 		/obj/item/bodybag/stasis = 1,
+		/obj/item/pager/aether,
 	)
 	belt = /obj/item/storage/belt/medical/paramedic
 	ears = /obj/item/radio/headset/headset_med

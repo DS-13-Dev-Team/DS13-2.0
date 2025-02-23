@@ -1,30 +1,30 @@
 /// Chance to drop your held item passed here
-#define PAIN_THRESHOLD_DROP_ITEM 50
+#define PAIN_THRESHOLD_DROP_ITEM 80
 /// Chance to reduce paralysis duration passed here
 #define PAIN_THRESHOLD_REDUCE_PARALYSIS 10
 /// Stage at
 #define SHOCK_MIN_PAIN_TO_BEGIN 40
 
 /// Maximum shock stage value
-#define SHOCK_MAXIMUM 160
+#define SHOCK_MAXIMUM 180
 
-#define SHOCK_TIER_1 10
-#define SHOCK_TIER_2 30
-#define SHOCK_TIER_3 40
-#define SHOCK_TIER_4 60
-#define SHOCK_TIER_5 80
-#define SHOCK_TIER_6 120
-#define SHOCK_TIER_7 150
+#define SHOCK_TIER_1 35
+#define SHOCK_TIER_2 55
+#define SHOCK_TIER_3 70
+#define SHOCK_TIER_4 85
+#define SHOCK_TIER_5 100
+#define SHOCK_TIER_6 140
+#define SHOCK_TIER_7 170
 
 /// The amount of shock required for someone to be elligible for shock-induced fibrillation
-#define SHOCK_AMT_FOR_FIBRILLATION 120
+#define SHOCK_AMT_FOR_FIBRILLATION 100
 
 /// The amount of pain where the mob is rendered unconscious
-#define PAIN_AMT_PASSOUT (220)
+#define PAIN_AMT_PASSOUT (300)
 
 /// The amount of pain where movement slowdown beings
 #define PAIN_AMT_BEGIN_SLOWDOWN (PAIN_AMT_PASSOUT * 0.075)
-#define PAIN_MAX_SLOWDOWN 5
+#define PAIN_MAX_SLOWDOWN 3
 
 #define PAIN_AMT_LOW (PAIN_AMT_PASSOUT * 0.05)
 #define PAIN_AMT_MEDIUM (PAIN_AMT_PASSOUT * 0.35)

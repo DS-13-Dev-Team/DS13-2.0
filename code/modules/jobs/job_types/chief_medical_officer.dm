@@ -68,7 +68,6 @@
 		/obj/item/assembly/flash/handheld
 	)
 	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
-	suit_store = /obj/item/flashlight/pen/paramedic
 	belt = /obj/item/modular_computer/tablet/pda/heads/cmo
 	ears = /obj/item/radio/headset/heads/cmo
 	shoes = /obj/item/clothing/shoes/sneakers/blue
@@ -80,7 +79,6 @@
 		/obj/item/gun/syringe,
 		/obj/item/stamp/cmo,
 		)
-	skillchips = list(/obj/item/skillchip/entrails_reader)
 
 /datum/outfit/job/cmo/mod
 	name = "Medical Director (MODsuit)"
@@ -89,7 +87,6 @@
 	back = /obj/item/mod/control/pre_equipped/rescue
 	suit = null
 	mask = /obj/item/clothing/mask/breath/medical
-	r_pocket = /obj/item/flashlight/pen/paramedic
 	internals_slot = ITEM_SLOT_SUITSTORE
 	backpack_contents = null
 	box = null
