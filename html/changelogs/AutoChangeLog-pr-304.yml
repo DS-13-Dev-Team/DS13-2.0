@@ -1,0 +1,5 @@
+author: MisterGrimm
+delete-after: true
+changes:
+  - rscdel: Removed gunflipping due to conflicting gameplay
+  - balance: Painshock nerfed to be more tolerable
