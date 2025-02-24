@@ -13,3 +13,7 @@
   - bugfix: Bloody Runes no longer give nonexistent blood DNA trail for forensics
   - bugfix: Targeting a limb that does not exist no longer prevents you from attacking
       it
+2025-02-24:
+  MisterGrimm:
+  - rscdel: Removed gunflipping due to conflicting gameplay
+  - balance: Painshock nerfed to be more tolerable
