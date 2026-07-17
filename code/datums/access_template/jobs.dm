@@ -270,6 +270,17 @@
 	template_access = list(ACCESS_CAPTAIN, ACCESS_CHANGE_IDS)
 	job = /datum/job/head_of_personnel
 
+/datum/access_template/job/bridge_ensign
+	assignment = JOB_BRIDGE_ENSIGN
+	intern_alt_name = JOB_BRIDGE_ENSIGN + "-in-Training"
+	template_state = "trim_headofpersonnel"
+	sechud_icon_state = SECHUD_HEAD_OF_PERSONNEL
+	extra_access = list()
+	minimal_access = list(ACCESS_COURT, ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_RC_ANNOUNCE, ACCESS_COURT, ACCESS_KEYCARD_AUTH, ACCESS_MANAGEMENT, ACCESS_CHANGE_IDS, ACCESS_TELEPORTER)
+	config_job = "bridge_ensign"
+	template_access = list(ACCESS_CAPTAIN, ACCESS_CHANGE_IDS)
+	job = /datum/job/bridge_ensign
+
 /datum/access_template/job/head_of_security
 	assignment = JOB_SECURITY_MARSHAL
 	intern_alt_name = JOB_SECURITY_MARSHAL + "-in-Training"

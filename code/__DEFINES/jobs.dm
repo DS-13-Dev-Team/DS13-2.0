@@ -36,6 +36,7 @@
 #define JOB_SECURITY_MARSHAL "Security Marshal"
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
 #define JOB_MEDICAL_DIRECTOR "Medical Director"
+#define JOB_BRIDGE_ENSIGN "Bridge Ensign"
 //Silicon
 #define JOB_AI "AI"
 #define JOB_CYBORG "Cyborg"
