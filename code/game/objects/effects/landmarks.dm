@@ -167,6 +167,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = JOB_CAPTAIN
 	icon_state = JOB_CAPTAIN
 
+/obj/effect/landmark/start/bridge_ensign
+	name = JOB_BRIDGE_ENSIGN
+	icon_state = JOB_BRIDGE_ENSIGN
+
 /obj/effect/landmark/start/detective
 	name = JOB_DETECTIVE
 	icon_state = JOB_DETECTIVE

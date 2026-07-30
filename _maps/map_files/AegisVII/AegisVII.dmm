@@ -1997,6 +1997,11 @@
 "bbr" = (
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/upper)
+"bbZ" = (
+/obj/structure/overfloor_catwalk,
+/obj/effect/landmark/start/bridge_ensign,
+/turf/open/openspace,
+/area/station/command/bridge)
 "bcd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -8455,9 +8460,6 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable/yellow{
-	icon_state = "10"
-	},
 /turf/open/floor/deadspace/hardwood,
 /area/station/command/heads_quarters/hop)
 "eqT" = (
@@ -12627,6 +12629,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "12"
 	},
+/obj/effect/landmark/start/bridge_ensign,
 /turf/open/floor/deadspace/random/golf_brown,
 /area/station/command/bridge)
 "gHG" = (
@@ -23945,6 +23948,13 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron/ported/techfloor,
 /area/station/engineering/supermatter/room)
+"mqB" = (
+/obj/structure/chair/office{
+	dir = 8
+	},
+/obj/effect/landmark/start/bridge_ensign,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/command/bridge)
 "mqT" = (
 /obj/machinery/light_switch/directional/west,
 /turf/open/floor/carpet/red,
@@ -39875,6 +39885,13 @@
 	},
 /turf/open/floor/deadspace/random/rectangles,
 /area/station/service/hydroponics)
+"uBi" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/obj/effect/landmark/start/bridge_ensign,
+/turf/open/floor/deadspace/random/golf_brown,
+/area/station/command/bridge)
 "uBo" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
 /obj/machinery/light/small/maintenance/directional/east,
@@ -116994,7 +117011,7 @@ usd
 gki
 wEU
 xmJ
-lHh
+mqB
 lHh
 bPL
 uBq
@@ -117140,7 +117157,7 @@ shV
 shV
 shV
 shV
-shV
+bbZ
 shV
 shV
 shV
@@ -117309,7 +117326,7 @@ cog
 lVZ
 xmJ
 rjR
-rjR
+uBi
 bPL
 uBq
 kDO
